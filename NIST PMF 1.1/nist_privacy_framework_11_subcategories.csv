@@ -1,0 +1,18 @@
+subcategory_id,category_id,function_id,subcategory_name,subcategory_type,v11_updates
+ID.IM-P1,ID.IM-P,ID-P,Systems/products/services that process data are inventoried including AI systems,Inventory,Explicit inclusion of AI systems in inventory
+ID.IM-P8,ID.IM-P,ID-P,Data processing is mapped throughout the data lifecycle including AI model training and inference,Mapping,AI model training and inference lifecycle mapping
+ID.RA-P3,ID.RA-P,ID-P,Potential problematic data actions including AI-specific privacy risks are identified,Risk Assessment,"AI-specific privacy risk identification (data reconstruction, bias, etc.)"
+ID.DE-P1,ID.DE-P,ID-P,AI supply chain and data processing ecosystem privacy risks are identified,Ecosystem Risk,New focus on AI supply chain privacy risks
+GV.PO-P1,GV.PO-P,GV-P,Organizational privacy values and policies are established including AI governance principles,Policy,"Standalone privacy governance, AI governance integration"
+GV.RM-P2,GV.RM-P,GV-P,Organizational risk tolerance is determined including AI privacy risk thresholds,Risk Management,AI-specific privacy risk tolerance frameworks
+GV.AT-P1,GV.AT-P,GV-P,The workforce is informed and trained on privacy responsibilities including AI privacy risks,Training,AI privacy training and awareness programs
+GV.OV-P1,GV.OV-P,GV-P,Senior leadership provides oversight and accountability for privacy and AI governance decisions,Oversight,New subcategory for enhanced organizational accountability
+CT.DM-P1,CT.DM-P,CT-P,Data elements can be accessed for review including AI-generated insights,Data Management,AI-generated data and insights accessibility
+CT.DP-P1,CT.DP-P,CT-P,Data are processed to limit observability and linkability using privacy-preserving AI techniques,Privacy Enhancement,"Privacy-preserving AI techniques (differential privacy, federated learning)"
+CT.PO-P1,CT.PO-P,CT-P,Data processing policies address AI system controls and individual empowerment,Policy,AI-specific data processing controls and policies
+CM.AW-P1,CM.AW-P,CM-P,Mechanisms for communicating data processing including AI system operations are established,Communication,AI transparency and explainability communication requirements
+CM.AW-P7,CM.AW-P,CM-P,Impacted individuals are notified about privacy breaches including AI-related incidents,Notification,AI-related privacy incident notification
+CM.PO-P1,CM.PO-P,CM-P,Communication policies address AI transparency and stakeholder engagement requirements,Policy,AI transparency policies and stakeholder communication
+PR.AC-P1,PR.AC-P,PR-P,Identities and credentials are managed for authorized access to AI systems and data,Access Control,AI system access control aligned with CSF 2.0
+PR.DS-P1,PR.DS-P,PR-P,Data-at-rest are protected including AI training datasets and model parameters,Data Security,AI training data and model protection
+PR.PT-P1,PR.PT-P,PR-P,AI-aware protective technologies safeguard data processing and prevent privacy attacks,Protective Technology,AI-aware protective technologies for privacy attack prevention
