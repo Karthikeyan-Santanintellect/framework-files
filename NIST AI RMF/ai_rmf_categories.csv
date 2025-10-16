@@ -1,0 +1,20 @@
+Category,Category_ID,Function_ID
+Organizational AI Risk Awareness and Training,GV.AT,GV
+AI Governance and Oversight,GV.GV,GV
+Management and Monitoring of AI Risks,GV.MT,GV
+AI Risk Management,GV.RM,GV
+AI Strategy,GV.ST,GV
+Multi-Stakeholder Engagement,GV.MS,GV
+AI System Context,MP.AI,MP
+AI System Categorization,MP.CT,MP
+Benefits and Costs,MP.BC,MP
+Impacts,MP.IM,MP
+AI Risks,MP.RK,MP
+Assessment and Assurance,MS.AA,MS
+Information Integrity,MS.IN,MS
+AI System Monitoring,MS.MN,MS
+Risk Tracking,MS.RT,MS
+Risk Mitigation,MG.RM,MG
+Incident Response,MG.IR,MG
+Oversight,MG.OV,MG
+Implementation,MG.IM,MG

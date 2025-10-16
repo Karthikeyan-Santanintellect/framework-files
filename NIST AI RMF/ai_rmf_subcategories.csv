@@ -1,0 +1,78 @@
+Subcategory_ID,Subcategory,Category_ID,Function_ID
+GV.AT-01,"Organizational policies, processes, procedures, and practices across the AI lifecycle are in place to address risks related to the design, development, deployment, use, and operation of AI systems",GV.AT,GV
+GV.AT-02,"Personnel roles and responsibilities, and their level of training, are defined and documented to enable appropriate assignment of responsibility and accountability for AI systems",GV.AT,GV
+GV.AT-03,"Personnel and third parties involved in the design, development, deployment, use, operation, or assessment of AI systems are provided with training on AI risks and how to manage them",GV.AT,GV
+GV.GV-01,"Policies and procedures are in place to address AI risks and benefits to individuals, groups, organizations, communities, society, and the environment",GV.GV,GV
+GV.GV-02,"Structures, processes, and resources are in place to address AI risks to individuals, groups, organizations, communities, society, and the environment throughout the AI lifecycle",GV.GV,GV
+GV.GV-03,"Organizational processes address AI risks and benefits to individuals, groups, organizations, communities, society, and the environment in the decision-making process for when to deploy AI systems",GV.GV,GV
+GV.GV-04,Organizational processes for the transparent and accountable use of AI throughout the AI lifecycle are implemented,GV.GV,GV
+GV.MT-01,"Senior organizational leaders take responsibility for decisions about risks associated with AI systems, and their oversight extends beyond those directly involved in AI system development, deployment, and use",GV.MT,GV
+GV.MT-02,"Organizational practices related to policies, procedures, and processes for AI systems are periodically reviewed and updated",GV.MT,GV
+GV.MT-03,"AI system performance and impacts, including impacts on individuals, groups, communities, organizations, and society, are monitored and reviewed on an ongoing basis",GV.MT,GV
+GV.MT-04,"Mechanisms are in place for the workforce, operators, AI designers and developers, and practitioners to report incidents and concerns related to AI systems",GV.MT,GV
+GV.RM-01,"Appropriate methods and processes are established to map, measure, and manage AI risks and related impacts",GV.RM,GV
+GV.RM-02,Organizational risk tolerance for AI systems is determined and communicated,GV.RM,GV
+GV.RM-03,Practices and personnel are in place to facilitate regular engagement with relevant AI actors and to maintain awareness about existing and emerging AI-related risks,GV.RM,GV
+GV.ST-01,Organizational mission and relevant legal and regulatory requirements related to AI are understood and documented,GV.ST,GV
+GV.ST-02,Organizational objectives and practices for AI risk management are communicated across the organization,GV.ST,GV
+GV.ST-03,"Organizational practices and procedures for utilizing technology, systems, hardware, and software development are aligned with trustworthy AI principles",GV.ST,GV
+GV.MS-01,Mechanisms are in place to seek feedback from those directly affected by an AI system or representative groups,GV.MS,GV
+GV.MS-02,"Processes are in place for third parties (e.g., AI system developers, vendors) to report incidents, submit feedback, and seek redress",GV.MS,GV
+GV.MS-03,Processes are in place for external reporting to relevant stakeholders about AI systems and their impacts,GV.MS,GV
+GV.MS-04,Organizational teams are committed to regularly considering input and implementing feedback from those external to the team that makes decisions about the AI system,GV.MS,GV
+MP.AI-01,"The intended purpose, objective, and set of tasks, the contexts in which an AI system will be deployed, and relevant organizational policies are established and documented",MP.AI,MP
+MP.AI-02,"Interdependencies and interactions between AI systems, system components, data, and human activities are identified, including upstream data sources and downstream uses",MP.AI,MP
+MP.AI-03,"Information about the AI system (e.g., current stage in the AI lifecycle, properties, model architecture) is characterized and documented",MP.AI,MP
+MP.AI-04,"Information about data used in developing or operating the AI system is documented, including data sources, data processing, data ownership, and data access controls",MP.AI,MP
+MP.AI-05,"The AI deployment environment is characterized and documented, including operations infrastructure, integration with existing systems, deployment platforms, and human-AI configurations",MP.AI,MP
+MP.CT-01,"AI system tasks and methods are characterized based on their type, complexity, and other relevant characteristics",MP.CT,MP
+MP.CT-02,"AI systems are categorized based on the risks and potential impacts they pose to individuals, groups, organizations, communities, society, and the environment",MP.CT,MP
+MP.CT-03,AI system categorization is documented and managed as an organizational asset throughout the AI lifecycle,MP.CT,MP
+MP.BC-01,"Benefits, costs, and impacts of the AI system are understood and documented",MP.BC,MP
+MP.BC-02,"Benefits, costs, and impacts of the AI system to individuals, groups, communities, organizations, and society are documented and balanced with appropriate context",MP.BC,MP
+MP.BC-03,"Processes are in place to assess the costs of AI system failure, the acceptable levels and methods for human appeal or fallback to existing systems",MP.BC,MP
+MP.BC-04,Responsible parties and decision rights are identified for determining when an AI system should not be deployed or discontinued,MP.BC,MP
+MP.IM-01,"Likelihood and magnitude of each identified impact to individuals, groups, communities, organizations, and society are categorized and prioritized",MP.IM,MP
+MP.IM-02,"Potential for negative impacts to individuals, groups, communities, organizations, and society, including disparate impacts, is considered and documented",MP.IM,MP
+MP.IM-03,"Positive and beneficial uses of the AI system, along with potential positive impacts to individuals, groups, communities, organizations, and society, are documented",MP.IM,MP
+MP.RK-01,"Potential risks and impacts of AI systems are identified and documented, including those related to the misuse of the AI system",MP.RK,MP
+MP.RK-02,Characteristics of trustworthy AI and organizational risk tolerance are taken into account when considering risk of an AI system,MP.RK,MP
+MP.RK-03,Risk tracking approaches are considered and developed to account for long-term and systemic impacts of AI systems,MP.RK,MP
+MS.AA-01,"Approaches for measuring and monitoring risks and impacts of AI systems are established, maintained, and applied",MS.AA,MS
+MS.AA-02,"AI system performance and impacts, including risks and unintended outcomes, are regularly assessed through manual and automated means",MS.AA,MS
+MS.AA-03,AI systems are regularly monitored and evaluated using metrics that are representative of organizational values and goals,MS.AA,MS
+MS.AA-04,Processes and procedures are followed to measure the performance of AI system components in the context of the intended use and against defined metrics,MS.AA,MS
+MS.AA-05,Results from independent evaluation and assessment of AI systems are documented and included in decisions about their trustworthiness,MS.AA,MS
+MS.AA-06,Testing processes are in place and are informed by representative AI actors throughout the AI lifecycle,MS.AA,MS
+MS.IN-01,"Data used in development or operation of AI systems is assessed for quality, representativeness, and relevance",MS.IN,MS
+MS.IN-02,Data used in the development or operation of AI systems are assessed for potential biases,MS.IN,MS
+MS.IN-03,Data provenance is tracked and documented throughout the AI lifecycle,MS.IN,MS
+MS.IN-04,Processes are followed to enhance representativeness and relevance of data in AI systems,MS.IN,MS
+MS.MN-01,Processes and personnel are in place to regularly monitor AI system performance and impacts,MS.MN,MS
+MS.MN-02,Processes are in place for human monitoring of deployed AI systems to detect and respond to changes in performance or impacts,MS.MN,MS
+MS.MN-03,"Processes are in place to track and document data provenance, including data source origins, data transformations, and any modifications made to the data",MS.MN,MS
+MS.RT-01,Approaches are in place for regularly tracking incidents that emerge after deployment of AI systems,MS.RT,MS
+MS.RT-02,Feedback process is in place to capture AI system errors or impacts of AI systems on relevant entities,MS.RT,MS
+MS.RT-03,Organizational practices are in place for tracking and documenting errors and implementing corrections to AI system output,MS.RT,MS
+MS.RT-04,"Risks and impacts from AI systems are regularly tracked, documented, and updated to inform risk management",MS.RT,MS
+MG.RM-01,Approaches are put in place to track and address identified risks over time,MG.RM,MG
+MG.RM-02,Strategies are developed to address situations where there is insufficient time or resources to assess and manage risks through typical organizational processes,MG.RM,MG
+MG.RM-03,Processes are established to identify potential for unintended consequences of AI use and capabilities for taking appropriate actions when risks exceed threshold,MG.RM,MG
+MG.RM-04,"Processes are established to document and track incidents, errors, and unintended outcomes associated with AI systems",MG.RM,MG
+MG.RM-05,Risk controls are implemented and documented to mitigate identified risks,MG.RM,MG
+MG.IR-01,Plans for responding to AI incidents and performance anomalies are developed and implemented,MG.IR,MG
+MG.IR-02,Procedures for responding to AI system incidents or anomalies are followed when they occur,MG.IR,MG
+MG.IR-03,Lessons learned through managing and responding to AI incidents are documented and incorporated into organizational practices,MG.IR,MG
+MG.IR-04,Processes are in place to coordinate between relevant AI actors who provide input throughout the AI incident response process,MG.IR,MG
+MG.OV-01,Mechanisms and processes are in place for periodic human oversight of deployed AI systems,MG.OV,MG
+MG.OV-02,Mechanisms and processes are in place for AI actors to periodically review AI system documentation and reports,MG.OV,MG
+MG.OV-03,"Mechanisms and processes are in place to document decisions about when and how to use human-AI configurations, and the appropriate level of human involvement in AI system decisions",MG.OV,MG
+MG.OV-04,Organizational policies are in place to facilitate the meaningful involvement of human beings throughout the AI lifecycle,MG.OV,MG
+MG.OV-05,Mechanisms and processes are in place for humans to appeal or challenge AI system decisions when appropriate,MG.OV,MG
+MG.OV-06,Training and awareness programs are implemented to support operators and end users who interact with AI systems,MG.OV,MG
+MG.IM-01,Approaches and resources are in place to manage AI risks and impacts,MG.IM,MG
+MG.IM-02,"Organizational practices are in place to manage impacts to individuals, groups, communities, organizations, and society",MG.IM,MG
+MG.IM-03,Resources are in place to manage AI risks on an ongoing basis,MG.IM,MG
+MG.IM-04,Mechanisms are in place to prioritize deployment of AI systems based on ongoing risk assessments,MG.IM,MG
+MG.IM-05,Organizational policies are in place to facilitate responsible AI system implementation,MG.IM,MG
+MG.IM-06,Processes are in place for the regular review of AI system implementations to identify and address evolving risks,MG.IM,MG
