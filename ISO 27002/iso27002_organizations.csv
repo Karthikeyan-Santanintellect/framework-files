@@ -1,0 +1,4 @@
+org_id,org_name,industry,size,employees,iso27001_certified,certification_date,next_audit_date
+ORG_TECH_001,TechCorp Industries,Technology,Large,5000,Yes,2023-06-15,2026-06-15
+ORG_HEALTH_002,MediCare Systems,Healthcare,Medium,1500,In Progress,,
+ORG_FIN_003,SecureBank Ltd,Financial Services,Large,3200,Yes,2022-11-20,2025-11-20
