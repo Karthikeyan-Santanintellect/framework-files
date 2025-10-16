@@ -1,0 +1,5 @@
+category_id,category_name,control_range,control_count,description
+organisational,Organisational Controls,5.1-5.37,37,Organisational Controls - 37 controls in range 5.1-5.37
+people,People Controls,6.1-6.8,8,People Controls - 8 controls in range 6.1-6.8
+physical,Physical Controls,7.1-7.14,14,Physical Controls - 14 controls in range 7.1-7.14
+technological,Technological Controls,8.1-8.34,34,Technological Controls - 34 controls in range 8.1-8.34
