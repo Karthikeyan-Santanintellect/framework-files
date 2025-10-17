@@ -1,0 +1,7 @@
+Function_Code,Function_Description,Function
+GV,"The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored",GOVERN
+ID,The organization's current cybersecurity risks are understood,IDENTIFY
+PR,Safeguards to manage the organization's cybersecurity risks are used,PROTECT
+DE,Possible cybersecurity attacks and compromises are found and analyzed,DETECT
+RS,Actions regarding a detected cybersecurity incident are taken,RESPOND
+RC,Assets and operations affected by a cybersecurity incident are restored,RECOVER
