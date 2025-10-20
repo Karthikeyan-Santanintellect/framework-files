@@ -1,0 +1,6 @@
+role_id,role_title,role_description,key_responsibilities_count,involvement_steps_count,role_type,decision_authority
+authorizing_official,Authorizing Official (AO),Senior executive responsible for authorizing system operation,5,4,Executive,Yes
+system_owner,System Owner,"Individual responsible for system development, procurement, and maintenance",5,5,Technical,No
+information_system_security_officer,Information System Security Officer (ISSO),Individual responsible for system security throughout system lifecycle,5,4,Technical,No
+security_control_assessor,Security Control Assessor (SCA),Individual responsible for conducting security control assessments,5,2,Technical,No
+common_control_provider,Common Control Provider,Individual responsible for implementing common controls,5,4,Technical,No

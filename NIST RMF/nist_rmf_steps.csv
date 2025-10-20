@@ -1,0 +1,8 @@
+step_id,step_number,step_name,objective,key_activities_count,primary_roles_count,deliverables_count,is_new_in_rev2,step_description
+1_prepare,1,Prepare,Establish context and priorities for managing security and privacy risks,7,3,3,True,RMF Step 1: Prepare - Establish context and priorities for managing security and privacy risks
+2_categorize,2,Categorize,Categorize systems and information based on impact analysis,5,3,2,False,RMF Step 2: Categorize - Categorize systems and information based on impact analysis
+3_select,3,Select,Select appropriate security controls based on system categorization,5,3,3,False,RMF Step 3: Select - Select appropriate security controls based on system categorization
+4_implement,4,Implement,Implement security controls and document implementation,5,3,3,False,RMF Step 4: Implement - Implement security controls and document implementation
+5_assess,5,Assess,Assess security controls to determine effectiveness,5,3,3,False,RMF Step 5: Assess - Assess security controls to determine effectiveness
+6_authorize,6,Authorize,Make risk-based decision to authorize system operation,5,3,3,False,RMF Step 6: Authorize - Make risk-based decision to authorize system operation
+7_monitor,7,Monitor,Continuously monitor security posture and maintain situational awareness,5,3,3,False,RMF Step 7: Monitor - Continuously monitor security posture and maintain situational awareness

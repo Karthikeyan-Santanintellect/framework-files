@@ -1,0 +1,21 @@
+family_id,family_name,control_count,family_description,control_category,nist_publication
+AC,Access Control,25,"Controls related to system access, user privileges, and authorization",Technical,NIST SP 800-53 Rev 5
+AT,Awareness and Training,6,"Security awareness, education, and training programs",Operational,NIST SP 800-53 Rev 5
+AU,Audit and Accountability,16,"Event logging, monitoring, and audit trail management",Technical,NIST SP 800-53 Rev 5
+CA,"Assessment, Authorization, and Monitoring",9,Continuous monitoring and authorization activities,Management,NIST SP 800-53 Rev 5
+CM,Configuration Management,14,System configuration control and management,Management,NIST SP 800-53 Rev 5
+CP,Contingency Planning,13,Business continuity and disaster recovery planning,Operational,NIST SP 800-53 Rev 5
+IA,Identification and Authentication,12,User and device identification and authentication,Technical,NIST SP 800-53 Rev 5
+IR,Incident Response,10,"Security incident detection, response, and recovery",Operational,NIST SP 800-53 Rev 5
+MA,Maintenance,7,System maintenance and support activities,Operational,NIST SP 800-53 Rev 5
+MP,Media Protection,8,Protection and sanitization of system media,Operational,NIST SP 800-53 Rev 5
+PE,Physical and Environmental Protection,20,Physical security and environmental controls,Operational,NIST SP 800-53 Rev 5
+PL,Planning,11,Security and privacy planning activities,Management,NIST SP 800-53 Rev 5
+PM,Program Management,33,Organization-level security program management,Management,NIST SP 800-53 Rev 5
+PS,Personnel Security,9,"Personnel screening, training, and termination procedures",Operational,NIST SP 800-53 Rev 5
+PT,PII Processing and Transparency,8,Privacy controls for personally identifiable information,Management,NIST SP 800-53 Rev 5
+RA,Risk Assessment,10,"Risk identification, analysis, and assessment activities",Management,NIST SP 800-53 Rev 5
+SA,System and Services Acquisition,23,System development and acquisition security,Management,NIST SP 800-53 Rev 5
+SC,System and Communications Protection,51,System and network security controls,Technical,NIST SP 800-53 Rev 5
+SI,System and Information Integrity,23,"System monitoring, malware protection, and integrity",Technical,NIST SP 800-53 Rev 5
+SR,Supply Chain Risk Management,12,Supply chain security and risk management,Management,NIST SP 800-53 Rev 5
