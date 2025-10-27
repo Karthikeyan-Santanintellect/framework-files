@@ -1,0 +1,81 @@
+hipaa_id,csf_subcategory_id,mapping_type,confidence,rationale,source_doc,source_section,source_page,created_date,created_by
+HIPAA-164.308(a)(1)(ii)(A),ID.RA-01,direct,High,Both require identification and assessment of vulnerabilities and risks to information assets,NIST SP 800-66r2,Appendix D,105,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(A),ID.RA-04,direct,High,Risk analysis requires assessment of potential impacts and likelihoods of threats,NIST SP 800-66r2,Appendix D,105,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(A),ID.RA-05,direct,High,Risk analysis outcomes inform risk response prioritization,NIST SP 800-66r2,Appendix D,105,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(B),GV.RM-03,direct,High,Risk management requires integration into enterprise risk management processes,NIST SP 800-66r2,Appendix D,105,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(B),ID.RA-06,direct,High,"Both require selection, prioritization, and tracking of risk responses",NIST SP 800-66r2,Appendix D,105,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(B),GV.RM-04,partial,High,Risk management strategy includes establishing risk response options,NIST SP 800-66r2,5.1.1,30,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(C),GV.RR-04,direct,High,Both require cybersecurity to be included in human resources practices including sanctions,NIST SP 800-66r2,5.1.1,32,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(C),GV.PO-01,partial,Medium,Sanction policy is part of organizational cybersecurity policy enforcement,NIST SP 800-66r2,5.1.1,32,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(D),DE.CM-01,direct,High,Both require monitoring of system activity through audit logs to find adverse events,NIST SP 800-66r2,5.1.1,33,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(D),DE.AE-02,direct,High,Review of system activity logs enables analysis of potentially adverse events,NIST SP 800-66r2,5.1.1,33,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(1)(ii)(D),PR.PS-04,partial,High,Requires log records to be generated for continuous monitoring,NIST SP 800-66r2,5.3.2,69,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(2),GV.RR-02,direct,High,"Both require establishment of roles, responsibilities, and authorities for cybersecurity",NIST SP 800-66r2,5.1.2,35,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(2),GV.RR-01,partial,High,Security official represents organizational leadership accountability for security risk,NIST SP 800-66r2,5.1.2,35,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3),PR.AA-05,direct,High,"Both require access permissions to be defined, managed, and enforced following least privilege",NIST SP 800-66r2,5.1.3,36,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3),GV.RR-04,partial,High,Workforce security is part of HR practices for cybersecurity,NIST SP 800-66r2,5.1.3,36,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3)(ii)(A),PR.AA-05,direct,High,Authorization procedures ensure appropriate access control,NIST SP 800-66r2,5.1.3,37,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3)(ii)(A),GV.RR-02,partial,Medium,Supervision is part of establishing roles and responsibilities,NIST SP 800-66r2,5.1.3,37,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3)(ii)(B),PR.AA-05,direct,High,Clearance procedures ensure workforce access appropriateness,NIST SP 800-66r2,5.1.3,37,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3)(ii)(C),PR.AA-01,direct,High,Both require management of user identities and credentials throughout lifecycle including termination,NIST SP 800-66r2,5.1.3,37,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(3)(ii)(C),GV.RR-04,partial,High,Termination is part of HR cybersecurity practices,NIST SP 800-66r2,5.1.3,37,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(4),PR.AA-05,direct,High,Both require policies for authorizing access based on principles of least privilege,NIST SP 800-66r2,5.1.4,38,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(4),GV.PO-01,partial,High,Access management policy is part of cybersecurity policy,NIST SP 800-66r2,5.1.4,38,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(4)(ii)(B),PR.AA-05,direct,High,Both require procedures for granting and enforcing access authorizations,NIST SP 800-66r2,5.1.4,39,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(4)(ii)(C),PR.AA-05,direct,High,"Both require procedures to establish, document, review and modify user access rights",NIST SP 800-66r2,5.1.4,40,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(4)(ii)(C),PR.AA-01,partial,High,Access management includes identity and credential management,NIST SP 800-66r2,5.1.4,40,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5),PR.AT-01,direct,High,Both require personnel awareness and training on cybersecurity risks,NIST SP 800-66r2,5.1.5,41,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5),PR.AT-02,direct,High,Training program should address specialized roles with security responsibilities,NIST SP 800-66r2,5.1.5,41,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5)(ii)(B),PR.PS-05,direct,High,Both require prevention of unauthorized software installation and execution,NIST SP 800-66r2,5.1.5,42,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5)(ii)(B),DE.CM-09,partial,High,Malware detection requires monitoring computing hardware and software,NIST SP 800-66r2,5.1.5,42,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5)(ii)(C),DE.CM-03,direct,High,Both require monitoring personnel activity including login attempts,NIST SP 800-66r2,5.1.5,42,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5)(ii)(D),PR.AA-01,direct,High,Password management is part of identity and credential management,NIST SP 800-66r2,5.1.5,43,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(5)(ii)(D),PR.AA-03,partial,High,Passwords are authentication mechanisms,NIST SP 800-66r2,5.1.5,43,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6),RS.MA-01,direct,High,Both require incident response plan execution when incidents are declared,NIST SP 800-66r2,5.1.6,44,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6),ID.IM-04,partial,High,"Incident response plans must be established, communicated, and maintained",NIST SP 800-66r2,5.1.6,44,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6)(ii),RS.MA-02,direct,High,Both require incident report triage and validation,NIST SP 800-66r2,5.1.6,45,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6)(ii),RS.AN-03,direct,High,Both require analysis to establish what took place and root cause,NIST SP 800-66r2,5.1.6,45,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6)(ii),RS.MI-01,direct,High,Mitigation of harmful effects requires incident containment,NIST SP 800-66r2,5.1.6,45,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6)(ii),RS.CO-02,direct,High,Both require notification of stakeholders about incidents,NIST SP 800-66r2,5.1.6,46,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(6)(ii),RS.AN-06,partial,High,Documentation of incidents requires recording investigation actions,NIST SP 800-66r2,5.1.6,46,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7),PR.IR-03,direct,High,Both require mechanisms to achieve resilience in adverse situations,NIST SP 800-66r2,5.1.7,47,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7),RC.RP-01,direct,High,Contingency plan execution supports recovery from incidents,NIST SP 800-66r2,5.1.7,47,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(A),PR.DS-11,direct,High,"Both require backups of data to be created, protected, maintained, and tested",NIST SP 800-66r2,5.1.7,48,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(A),RC.RP-03,partial,High,Backup integrity must be verified before restoration,NIST SP 800-66r2,5.1.7,48,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(B),RC.RP-01,direct,High,Both require recovery plan execution to restore operations,NIST SP 800-66r2,5.1.7,49,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(B),RC.RP-05,direct,High,Both require restoration and verification of systems and services,NIST SP 800-66r2,5.1.7,49,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(C),PR.IR-03,direct,High,Emergency operations require resilience mechanisms,NIST SP 800-66r2,5.1.7,49,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(C),RC.RP-04,partial,High,Critical functions and risk management inform post-incident operations,NIST SP 800-66r2,5.1.7,49,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(7)(ii)(D),ID.IM-02,direct,High,Both require improvements from security tests and exercises,NIST SP 800-66r2,5.1.7,50,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(8),GV.OV-03,direct,High,Both require evaluation and review of cybersecurity risk management performance,NIST SP 800-66r2,5.1.8,51,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(a)(8),ID.IM-01,partial,High,Evaluation identifies improvements from assessments,NIST SP 800-66r2,5.1.8,51,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(b)(1),GV.SC-02,direct,High,Both require cybersecurity roles and responsibilities with suppliers/partners to be established,NIST SP 800-66r2,5.1.9,54,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.308(b)(1),GV.SC-05,direct,High,Both require cybersecurity requirements to be integrated into contracts with third parties,NIST SP 800-66r2,5.1.9,54,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(a)(1),PR.AA-06,direct,High,"Both require physical access to assets to be managed, monitored, and enforced",NIST SP 800-66r2,5.2.1,56,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(a)(1),PR.IR-02,partial,Medium,Facility protections help protect technology infrastructure from environmental threats,NIST SP 800-66r2,5.2.1,56,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(b),PR.PS-01,direct,High,Both require configuration management practices for workstations,NIST SP 800-66r2,5.2.2,59,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(b),GV.PO-01,partial,Medium,Workstation use policies are part of cybersecurity policy,NIST SP 800-66r2,5.2.2,59,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(c),PR.AA-06,direct,High,Physical safeguards restrict workstation access to authorized users,NIST SP 800-66r2,5.2.3,61,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(d)(2)(i),ID.AM-08,direct,High,"Both require systems, hardware, software, and data to be managed throughout life cycles including disposal",NIST SP 800-66r2,5.2.4,63,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(d)(2)(i),PR.DS-01,partial,High,Proper disposal protects confidentiality of data-at-rest,NIST SP 800-66r2,5.2.4,63,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.310(d)(2)(ii),ID.AM-08,direct,High,Media sanitization is part of lifecycle management,NIST SP 800-66r2,5.2.4,64,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(a)(1),PR.AA-05,direct,High,Both require technical access controls to enforce least privilege,NIST SP 800-66r2,5.3.1,65,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(a)(1),PR.AA-01,partial,High,Access control requires identity and credential management,NIST SP 800-66r2,5.3.1,65,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(a)(2)(i),PR.AA-01,direct,High,Both require unique identification for users and services,NIST SP 800-66r2,5.3.1,66,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(a)(2)(i),PR.AA-03,partial,High,Unique identification supports authentication,NIST SP 800-66r2,5.3.1,66,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(a)(2)(ii),PR.AA-05,direct,High,Emergency access procedures are part of access control policy,NIST SP 800-66r2,5.3.1,67,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(a)(2)(iv),PR.DS-01,direct,High,Both address encryption to protect confidentiality of data-at-rest,NIST SP 800-66r2,5.3.1,68,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(b),PR.PS-04,direct,High,Both require log records to be generated for continuous monitoring,NIST SP 800-66r2,5.3.2,69,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(b),DE.CM-01,direct,High,Audit controls enable monitoring of networks and systems for adverse events,NIST SP 800-66r2,5.3.2,69,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(b),DE.CM-03,direct,High,Audit logs monitor personnel activity and technology usage,NIST SP 800-66r2,5.3.2,69,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(c)(1),PR.DS-01,direct,High,Both require protection of data integrity,NIST SP 800-66r2,5.3.3,71,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(c)(2),PR.DS-01,direct,High,Electronic mechanisms verify data has not been improperly altered,NIST SP 800-66r2,5.3.3,72,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(d),PR.AA-03,direct,High,Both require authentication of users and services,NIST SP 800-66r2,5.3.4,73,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(d),PR.AA-02,partial,High,Authentication requires identity proofing and binding to credentials,NIST SP 800-66r2,5.3.4,73,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(e)(1),PR.DS-02,direct,High,Both require protection of confidentiality and integrity of data-in-transit,NIST SP 800-66r2,5.3.5,75,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(e)(1),PR.IR-01,partial,Medium,Network protection helps secure data transmission,NIST SP 800-66r2,5.3.5,75,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(e)(2)(i),PR.DS-02,direct,High,Both ensure transmitted data is not improperly modified,NIST SP 800-66r2,5.3.5,76,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.312(e)(2)(ii),PR.DS-02,direct,High,Encryption protects data-in-transit confidentiality,NIST SP 800-66r2,5.3.5,76,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.316(a),GV.PO-01,direct,High,Both require cybersecurity policy to be established and enforced,NIST SP 800-66r2,5.5.1,81,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.316(b)(1),GV.PO-01,partial,High,Documentation supports policy implementation,NIST SP 800-66r2,5.5.2,83,2025-10-26T04:03:19.059645,System_Automated_Mapping
+HIPAA-164.316(b)(1),ID.IM-03,partial,Medium,Documentation of operational processes supports improvement identification,NIST SP 800-66r2,5.5.2,83,2025-10-26T04:03:19.059645,System_Automated_Mapping
