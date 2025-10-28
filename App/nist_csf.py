@@ -76,7 +76,7 @@ MERGE (c)-[:CONTAINS]->(s);
 import os
 import time
 import logging
-from app import Neo4jConnect
+from App.app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

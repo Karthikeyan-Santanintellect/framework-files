@@ -27,10 +27,12 @@ class Neo4jConnect:
                 return str(e)
 
     def query(self, query, parameters=None, others=None):
-        with self.driver.session() as session:
-            if others:
-                result = session.run(query, **others)
-            else:
-                result = session.run(query)
-            return [record.data() for record in result]
-        
+        try:
+            with self.driver.session() as session:
+                if others:
+                    result = session.run(query, **others)
+                else:
+                    result = session.run(query)
+                return [record.data() for record in result]
+        except Exception as e:
+            return str(e)
