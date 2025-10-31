@@ -1,0 +1,157 @@
+id,control_id,name,category_id,category_name,description
+HITRUST-00.a,00.a,Information Security Management Program,HITRUST-CAT-0,Information Security Management Program,Information Security Management Program
+HITRUST-01.a,01.a,Access Control Policy,HITRUST-CAT-1,Access Control,Access Control Policy
+HITRUST-01.b,01.b,User Registration,HITRUST-CAT-1,Access Control,User Registration
+HITRUST-01.c,01.c,Privilege Management,HITRUST-CAT-1,Access Control,Privilege Management
+HITRUST-01.d,01.d,User Password Management,HITRUST-CAT-1,Access Control,User Password Management
+HITRUST-01.e,01.e,Review of User Access Rights,HITRUST-CAT-1,Access Control,Review of User Access Rights
+HITRUST-01.f,01.f,Password Use,HITRUST-CAT-1,Access Control,Password Use
+HITRUST-01.g,01.g,Unattended User Equipment,HITRUST-CAT-1,Access Control,Unattended User Equipment
+HITRUST-01.h,01.h,Clear Desk and Clear Screen Policy,HITRUST-CAT-1,Access Control,Clear Desk and Clear Screen Policy
+HITRUST-01.i,01.i,Policy on the Use of Network Services,HITRUST-CAT-1,Access Control,Policy on the Use of Network Services
+HITRUST-01.j,01.j,User Authentication for External Connections,HITRUST-CAT-1,Access Control,User Authentication for External Connections
+HITRUST-01.k,01.k,Equipment Identification in Networks,HITRUST-CAT-1,Access Control,Equipment Identification in Networks
+HITRUST-01.l,01.l,Remote Diagnostic and Configuration Port Protection,HITRUST-CAT-1,Access Control,Remote Diagnostic and Configuration Port Protection
+HITRUST-01.m,01.m,Segregation in Networks,HITRUST-CAT-1,Access Control,Segregation in Networks
+HITRUST-01.n,01.n,Network Connection Control,HITRUST-CAT-1,Access Control,Network Connection Control
+HITRUST-01.o,01.o,Network Routing Control,HITRUST-CAT-1,Access Control,Network Routing Control
+HITRUST-01.p,01.p,Secure Log-on Procedures,HITRUST-CAT-1,Access Control,Secure Log-on Procedures
+HITRUST-01.q,01.q,User Identification and Authentication,HITRUST-CAT-1,Access Control,User Identification and Authentication
+HITRUST-01.r,01.r,Password Management System,HITRUST-CAT-1,Access Control,Password Management System
+HITRUST-01.s,01.s,Use of System Utilities,HITRUST-CAT-1,Access Control,Use of System Utilities
+HITRUST-01.t,01.t,Session Time-out,HITRUST-CAT-1,Access Control,Session Time-out
+HITRUST-01.u,01.u,Information Access Restriction,HITRUST-CAT-1,Access Control,Information Access Restriction
+HITRUST-01.v,01.v,Limitation of Connection Time,HITRUST-CAT-1,Access Control,Limitation of Connection Time
+HITRUST-01.w,01.w,Sensitive System Isolation,HITRUST-CAT-1,Access Control,Sensitive System Isolation
+HITRUST-01.x,01.x,Mobile Computing and Communications,HITRUST-CAT-1,Access Control,Mobile Computing and Communications
+HITRUST-01.y,01.y,Teleworking,HITRUST-CAT-1,Access Control,Teleworking
+HITRUST-02.a,02.a,Roles and Responsibilities,HITRUST-CAT-2,Human Resources Security,Roles and Responsibilities
+HITRUST-02.b,02.b,Screening,HITRUST-CAT-2,Human Resources Security,Screening
+HITRUST-02.c,02.c,Terms and Conditions of Employment,HITRUST-CAT-2,Human Resources Security,Terms and Conditions of Employment
+HITRUST-02.d,02.d,Management Responsibilities,HITRUST-CAT-2,Human Resources Security,Management Responsibilities
+HITRUST-02.e,02.e,"Information Security Awareness, Education, and Training",HITRUST-CAT-2,Human Resources Security,"Information Security Awareness, Education, and Training"
+HITRUST-02.f,02.f,Disciplinary Process,HITRUST-CAT-2,Human Resources Security,Disciplinary Process
+HITRUST-02.g,02.g,Termination Responsibilities,HITRUST-CAT-2,Human Resources Security,Termination Responsibilities
+HITRUST-02.h,02.h,Return of Assets,HITRUST-CAT-2,Human Resources Security,Return of Assets
+HITRUST-02.i,02.i,Removal of Access Rights,HITRUST-CAT-2,Human Resources Security,Removal of Access Rights
+HITRUST-03.a,03.a,Risk Management Program Development,HITRUST-CAT-3,Risk Management,Risk Management Program Development
+HITRUST-03.b,03.b,Performing Risk Assessments,HITRUST-CAT-3,Risk Management,Performing Risk Assessments
+HITRUST-03.c,03.c,Risk Mitigation,HITRUST-CAT-3,Risk Management,Risk Mitigation
+HITRUST-03.d,03.d,Risk Evaluation,HITRUST-CAT-3,Risk Management,Risk Evaluation
+HITRUST-04.a,04.a,Information Security Policy Document,HITRUST-CAT-4,Security Policy,Information Security Policy Document
+HITRUST-04.b,04.b,Review of Information Security Policy,HITRUST-CAT-4,Security Policy,Review of Information Security Policy
+HITRUST-05.a,05.a,Information Security Roles and Responsibilities,HITRUST-CAT-5,Organization of Information Security,Information Security Roles and Responsibilities
+HITRUST-05.b,05.b,Segregation of Duties,HITRUST-CAT-5,Organization of Information Security,Segregation of Duties
+HITRUST-05.c,05.c,Contact with Authorities,HITRUST-CAT-5,Organization of Information Security,Contact with Authorities
+HITRUST-05.d,05.d,Contact with Special Interest Groups,HITRUST-CAT-5,Organization of Information Security,Contact with Special Interest Groups
+HITRUST-05.e,05.e,Information Security in Project Management,HITRUST-CAT-5,Organization of Information Security,Information Security in Project Management
+HITRUST-05.f,05.f,Identification of Risks from Third Party Access,HITRUST-CAT-5,Organization of Information Security,Identification of Risks from Third Party Access
+HITRUST-05.g,05.g,Addressing Security in Third Party Agreements,HITRUST-CAT-5,Organization of Information Security,Addressing Security in Third Party Agreements
+HITRUST-05.h,05.h,Third Party Service Delivery Management,HITRUST-CAT-5,Organization of Information Security,Third Party Service Delivery Management
+HITRUST-05.i,05.i,Addressing Security when Dealing with Customers,HITRUST-CAT-5,Organization of Information Security,Addressing Security when Dealing with Customers
+HITRUST-05.j,05.j,Information Security Requirements in Contracts,HITRUST-CAT-5,Organization of Information Security,Information Security Requirements in Contracts
+HITRUST-05.k,05.k,Managing Changes to Third Party Services,HITRUST-CAT-5,Organization of Information Security,Managing Changes to Third Party Services
+HITRUST-06.a,06.a,Identification of Applicable Legislation,HITRUST-CAT-6,Compliance,Identification of Applicable Legislation
+HITRUST-06.b,06.b,Intellectual Property Rights (IPR),HITRUST-CAT-6,Compliance,Intellectual Property Rights (IPR)
+HITRUST-06.c,06.c,Protection of Organizational Records,HITRUST-CAT-6,Compliance,Protection of Organizational Records
+HITRUST-06.d,06.d,Data Protection and Privacy of Covered Information,HITRUST-CAT-6,Compliance,Data Protection and Privacy of Covered Information
+HITRUST-06.e,06.e,Prevention of Misuse of Information Processing Facilities,HITRUST-CAT-6,Compliance,Prevention of Misuse of Information Processing Facilities
+HITRUST-06.f,06.f,Regulation of Cryptographic Controls,HITRUST-CAT-6,Compliance,Regulation of Cryptographic Controls
+HITRUST-06.g,06.g,Compliance with Security Policies and Standards,HITRUST-CAT-6,Compliance,Compliance with Security Policies and Standards
+HITRUST-06.h,06.h,Technical Compliance Checking,HITRUST-CAT-6,Compliance,Technical Compliance Checking
+HITRUST-06.i,06.i,Information Systems Audit Controls,HITRUST-CAT-6,Compliance,Information Systems Audit Controls
+HITRUST-06.j,06.j,Protection of Information Systems Audit Tools,HITRUST-CAT-6,Compliance,Protection of Information Systems Audit Tools
+HITRUST-07.a,07.a,Inventory of Assets,HITRUST-CAT-7,Asset Management,Inventory of Assets
+HITRUST-07.b,07.b,Ownership of Assets,HITRUST-CAT-7,Asset Management,Ownership of Assets
+HITRUST-07.c,07.c,Acceptable Use of Assets,HITRUST-CAT-7,Asset Management,Acceptable Use of Assets
+HITRUST-07.d,07.d,Classification Guidelines,HITRUST-CAT-7,Asset Management,Classification Guidelines
+HITRUST-07.e,07.e,Information Labeling and Handling,HITRUST-CAT-7,Asset Management,Information Labeling and Handling
+HITRUST-08.a,08.a,Physical Security Perimeter,HITRUST-CAT-8,Physical and Environmental Security,Physical Security Perimeter
+HITRUST-08.b,08.b,Physical Entry Controls,HITRUST-CAT-8,Physical and Environmental Security,Physical Entry Controls
+HITRUST-08.c,08.c,"Securing Offices, Rooms and Facilities",HITRUST-CAT-8,Physical and Environmental Security,"Securing Offices, Rooms and Facilities"
+HITRUST-08.d,08.d,Working in Secure Areas,HITRUST-CAT-8,Physical and Environmental Security,Working in Secure Areas
+HITRUST-08.e,08.e,"Public Access, Delivery and Loading Areas",HITRUST-CAT-8,Physical and Environmental Security,"Public Access, Delivery and Loading Areas"
+HITRUST-08.f,08.f,Equipment Siting and Protection,HITRUST-CAT-8,Physical and Environmental Security,Equipment Siting and Protection
+HITRUST-08.g,08.g,Supporting Utilities,HITRUST-CAT-8,Physical and Environmental Security,Supporting Utilities
+HITRUST-08.h,08.h,Cabling Security,HITRUST-CAT-8,Physical and Environmental Security,Cabling Security
+HITRUST-08.i,08.i,Equipment Maintenance,HITRUST-CAT-8,Physical and Environmental Security,Equipment Maintenance
+HITRUST-08.j,08.j,Secure Disposal or Re-use of Equipment,HITRUST-CAT-8,Physical and Environmental Security,Secure Disposal or Re-use of Equipment
+HITRUST-08.k,08.k,Removal of Property,HITRUST-CAT-8,Physical and Environmental Security,Removal of Property
+HITRUST-08.l,08.l,Security of Equipment Off-Premises,HITRUST-CAT-8,Physical and Environmental Security,Security of Equipment Off-Premises
+HITRUST-08.m,08.m,Unattended User Equipment,HITRUST-CAT-8,Physical and Environmental Security,Unattended User Equipment
+HITRUST-09.a,09.a,Documented Operating Procedures,HITRUST-CAT-9,Communications and Operations Management,Documented Operating Procedures
+HITRUST-09.b,09.b,Change Management,HITRUST-CAT-9,Communications and Operations Management,Change Management
+HITRUST-09.c,09.c,Segregation of Duties,HITRUST-CAT-9,Communications and Operations Management,Segregation of Duties
+HITRUST-09.d,09.d,Separation of Development and Production Facilities,HITRUST-CAT-9,Communications and Operations Management,Separation of Development and Production Facilities
+HITRUST-09.e,09.e,Service Delivery,HITRUST-CAT-9,Communications and Operations Management,Service Delivery
+HITRUST-09.f,09.f,Monitoring and Review of Third Party Services,HITRUST-CAT-9,Communications and Operations Management,Monitoring and Review of Third Party Services
+HITRUST-09.g,09.g,Managing Changes to Third Party Services,HITRUST-CAT-9,Communications and Operations Management,Managing Changes to Third Party Services
+HITRUST-09.h,09.h,Capacity Planning,HITRUST-CAT-9,Communications and Operations Management,Capacity Planning
+HITRUST-09.i,09.i,System Acceptance,HITRUST-CAT-9,Communications and Operations Management,System Acceptance
+HITRUST-09.j,09.j,Protection Against Malicious Code,HITRUST-CAT-9,Communications and Operations Management,Protection Against Malicious Code
+HITRUST-09.k,09.k,Controls Against Mobile Code,HITRUST-CAT-9,Communications and Operations Management,Controls Against Mobile Code
+HITRUST-09.l,09.l,Information Backup,HITRUST-CAT-9,Communications and Operations Management,Information Backup
+HITRUST-09.m,09.m,Operator Logs,HITRUST-CAT-9,Communications and Operations Management,Operator Logs
+HITRUST-09.n,09.n,Fault Logging,HITRUST-CAT-9,Communications and Operations Management,Fault Logging
+HITRUST-09.o,09.o,Clock Synchronization,HITRUST-CAT-9,Communications and Operations Management,Clock Synchronization
+HITRUST-09.p,09.p,System Monitoring and Performance Tracking,HITRUST-CAT-9,Communications and Operations Management,System Monitoring and Performance Tracking
+HITRUST-09.q,09.q,Network Management,HITRUST-CAT-9,Communications and Operations Management,Network Management
+HITRUST-09.r,09.r,Exchange of Sensitive Information,HITRUST-CAT-9,Communications and Operations Management,Exchange of Sensitive Information
+HITRUST-09.s,09.s,Electronic Messaging,HITRUST-CAT-9,Communications and Operations Management,Electronic Messaging
+HITRUST-09.t,09.t,Handling of Removable Media,HITRUST-CAT-9,Communications and Operations Management,Handling of Removable Media
+HITRUST-09.u,09.u,Disposal of Media,HITRUST-CAT-9,Communications and Operations Management,Disposal of Media
+HITRUST-09.v,09.v,Patch Management and Updates,HITRUST-CAT-9,Communications and Operations Management,Patch Management and Updates
+HITRUST-09.w,09.w,Installation of Software on User Equipment,HITRUST-CAT-9,Communications and Operations Management,Installation of Software on User Equipment
+HITRUST-09.x,09.x,Monitoring Third Party Connections,HITRUST-CAT-9,Communications and Operations Management,Monitoring Third Party Connections
+HITRUST-09.y,09.y,Segregation of Information Services,HITRUST-CAT-9,Communications and Operations Management,Segregation of Information Services
+HITRUST-09.z,09.z,System Hardening,HITRUST-CAT-9,Communications and Operations Management,System Hardening
+HITRUST-09.aa,09.aa,Information Retention and Archiving,HITRUST-CAT-9,Communications and Operations Management,Information Retention and Archiving
+HITRUST-09.ab,09.ab,Destruction of Information,HITRUST-CAT-9,Communications and Operations Management,Destruction of Information
+HITRUST-09.ac,09.ac,Data Leakage Prevention,HITRUST-CAT-9,Communications and Operations Management,Data Leakage Prevention
+HITRUST-09.ad,09.ad,Baseline Configuration and Standards,HITRUST-CAT-9,Communications and Operations Management,Baseline Configuration and Standards
+HITRUST-09.ae,09.ae,Monitoring Physical Access,HITRUST-CAT-9,Communications and Operations Management,Monitoring Physical Access
+HITRUST-09.af,09.af,Secure Configuration Management,HITRUST-CAT-9,Communications and Operations Management,Secure Configuration Management
+HITRUST-10.a,10.a,Security Requirements of Information Systems,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Security Requirements of Information Systems
+HITRUST-10.b,10.b,Securing Application Services on Public Networks,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Securing Application Services on Public Networks
+HITRUST-10.c,10.c,Protecting Application Services Transactions,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Protecting Application Services Transactions
+HITRUST-10.d,10.d,Policy on Use of Cryptographic Controls,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Policy on Use of Cryptographic Controls
+HITRUST-10.e,10.e,Encryption,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Encryption
+HITRUST-10.f,10.f,Management of Encryption Keys,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Management of Encryption Keys
+HITRUST-10.g,10.g,Control of Operational Software,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Control of Operational Software
+HITRUST-10.h,10.h,Protection of System Test Data,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Protection of System Test Data
+HITRUST-10.i,10.i,Access Control to Program Source Code,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Access Control to Program Source Code
+HITRUST-10.j,10.j,Change Control Procedures,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Change Control Procedures
+HITRUST-10.k,10.k,Technical Review of Operating System Changes,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Technical Review of Operating System Changes
+HITRUST-10.l,10.l,Restrictions on Changes to Software Packages,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Restrictions on Changes to Software Packages
+HITRUST-10.m,10.m,Covert Channels and Trojan Code,HITRUST-CAT-10,"Information Systems Acquisition, Development and Maintenance",Covert Channels and Trojan Code
+HITRUST-11.a,11.a,Reporting Information Security Events,HITRUST-CAT-11,Information Security Incident Management,Reporting Information Security Events
+HITRUST-11.b,11.b,Reporting Security Weaknesses,HITRUST-CAT-11,Information Security Incident Management,Reporting Security Weaknesses
+HITRUST-11.c,11.c,Responsibilities and Procedures,HITRUST-CAT-11,Information Security Incident Management,Responsibilities and Procedures
+HITRUST-11.d,11.d,Learning from Information Security Incidents,HITRUST-CAT-11,Information Security Incident Management,Learning from Information Security Incidents
+HITRUST-11.e,11.e,Collection of Evidence,HITRUST-CAT-11,Information Security Incident Management,Collection of Evidence
+HITRUST-12.a,12.a,Including Information Security in the Business Continuity Process,HITRUST-CAT-12,Business Continuity Management,Including Information Security in the Business Continuity Process
+HITRUST-12.b,12.b,Business Continuity and Risk Assessment,HITRUST-CAT-12,Business Continuity Management,Business Continuity and Risk Assessment
+HITRUST-12.c,12.c,Developing and Implementing Continuity Plans,HITRUST-CAT-12,Business Continuity Management,Developing and Implementing Continuity Plans
+HITRUST-12.d,12.d,Business Continuity Planning Framework,HITRUST-CAT-12,Business Continuity Management,Business Continuity Planning Framework
+HITRUST-12.e,12.e,"Testing, Maintaining and Re-assessing Business Continuity Plans",HITRUST-CAT-12,Business Continuity Management,"Testing, Maintaining and Re-assessing Business Continuity Plans"
+HITRUST-13.a,13.a,Consent and Choice,HITRUST-CAT-13,Privacy Practices,Consent and Choice
+HITRUST-13.b,13.b,Purpose Specification and Minimization,HITRUST-CAT-13,Privacy Practices,Purpose Specification and Minimization
+HITRUST-13.c,13.c,Collection Limitation,HITRUST-CAT-13,Privacy Practices,Collection Limitation
+HITRUST-13.d,13.d,Information Quality,HITRUST-CAT-13,Privacy Practices,Information Quality
+HITRUST-13.e,13.e,Individual Participation and Access,HITRUST-CAT-13,Privacy Practices,Individual Participation and Access
+HITRUST-13.f,13.f,Accountability,HITRUST-CAT-13,Privacy Practices,Accountability
+HITRUST-13.g,13.g,Privacy Notice,HITRUST-CAT-13,Privacy Practices,Privacy Notice
+HITRUST-13.h,13.h,Data Retention and Disposal,HITRUST-CAT-13,Privacy Practices,Data Retention and Disposal
+HITRUST-13.i,13.i,Privacy Impact Assessment,HITRUST-CAT-13,Privacy Practices,Privacy Impact Assessment
+HITRUST-13.j,13.j,De-identification of Personal Information,HITRUST-CAT-13,Privacy Practices,De-identification of Personal Information
+HITRUST-13.k,13.k,Disclosure to Third Parties,HITRUST-CAT-13,Privacy Practices,Disclosure to Third Parties
+HITRUST-13.l,13.l,Privacy Monitoring and Enforcement,HITRUST-CAT-13,Privacy Practices,Privacy Monitoring and Enforcement
+HITRUST-13.m,13.m,Sensitive Personal Information Protection,HITRUST-CAT-13,Privacy Practices,Sensitive Personal Information Protection
+HITRUST-13.n,13.n,Cross-Border Data Transfers,HITRUST-CAT-13,Privacy Practices,Cross-Border Data Transfers
+HITRUST-13.o,13.o,Privacy by Design,HITRUST-CAT-13,Privacy Practices,Privacy by Design
+HITRUST-13.p,13.p,Right to be Forgotten,HITRUST-CAT-13,Privacy Practices,Right to be Forgotten
+HITRUST-13.q,13.q,Data Breach Notification,HITRUST-CAT-13,Privacy Practices,Data Breach Notification
+HITRUST-13.r,13.r,Privacy Policy and Transparency,HITRUST-CAT-13,Privacy Practices,Privacy Policy and Transparency
+HITRUST-13.s,13.s,Automated Decision Making,HITRUST-CAT-13,Privacy Practices,Automated Decision Making
+HITRUST-13.t,13.t,Data Minimization and Purpose Limitation,HITRUST-CAT-13,Privacy Practices,Data Minimization and Purpose Limitation
+HITRUST-13.u,13.u,Privacy Training and Awareness,HITRUST-CAT-13,Privacy Practices,Privacy Training and Awareness

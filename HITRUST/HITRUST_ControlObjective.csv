@@ -1,0 +1,157 @@
+id,control_id,text
+HITRUST-00.a-OBJ,HITRUST-00.a,Implementing and managing an Information Security Management Program
+HITRUST-01.a-OBJ,HITRUST-01.a,To control access to information assets and business processes according to business and security needs
+HITRUST-01.b-OBJ,HITRUST-01.b,To ensure that authorized users are provided access to systems and services and unauthorized access is prevented
+HITRUST-01.c-OBJ,HITRUST-01.c,To prevent unauthorized access and compromise of information systems through management of privileged access
+HITRUST-01.d-OBJ,HITRUST-01.d,To ensure proper password allocation and management prevents unauthorized access
+HITRUST-01.e-OBJ,HITRUST-01.e,To maintain appropriate access rights and prevent accumulation of excessive privileges
+HITRUST-01.f-OBJ,HITRUST-01.f,To maintain security of passwords through proper use by users
+HITRUST-01.g-OBJ,HITRUST-01.g,To prevent unauthorized access to information through unattended equipment
+HITRUST-01.h-OBJ,HITRUST-01.h,"To reduce risk of unauthorized access, loss or damage to information during and outside normal working hours"
+HITRUST-01.i-OBJ,HITRUST-01.i,To ensure user access to network services is properly authorized
+HITRUST-01.j-OBJ,HITRUST-01.j,To prevent unauthorized remote access to information systems
+HITRUST-01.k-OBJ,HITRUST-01.k,To control network connections and prevent unauthorized access
+HITRUST-01.l-OBJ,HITRUST-01.l,To prevent unauthorized remote access to information systems and networks
+HITRUST-01.m-OBJ,HITRUST-01.m,To prevent unauthorized access and protect network services and information
+HITRUST-01.n-OBJ,HITRUST-01.n,To prevent unauthorized network connections that could compromise security
+HITRUST-01.o-OBJ,HITRUST-01.o,To ensure security of information in networks and protection of connected services
+HITRUST-01.p-OBJ,HITRUST-01.p,To prevent unauthorized access to information systems
+HITRUST-01.q-OBJ,HITRUST-01.q,To prevent unauthorized user access and compromised user IDs
+HITRUST-01.r-OBJ,HITRUST-01.r,To ensure system passwords are managed effectively and securely
+HITRUST-01.s-OBJ,HITRUST-01.s,To prevent potential misuse or compromise of systems and information
+HITRUST-01.t-OBJ,HITRUST-01.t,To reduce the risk of unauthorized access to information through unattended sessions
+HITRUST-01.u-OBJ,HITRUST-01.u,To prevent unauthorized access to application information and functions
+HITRUST-01.v-OBJ,HITRUST-01.v,To provide additional security for high-risk applications
+HITRUST-01.w-OBJ,HITRUST-01.w,"To reduce opportunity for unauthorized modification, loss or disclosure of sensitive information"
+HITRUST-01.x-OBJ,HITRUST-01.x,To ensure information security when using mobile computing and communication facilities
+HITRUST-01.y-OBJ,HITRUST-01.y,"To protect information accessed, processed or stored at teleworking sites"
+HITRUST-02.a-OBJ,HITRUST-02.a,"To ensure that employees, contractors and third-party users understand their responsibilities"
+HITRUST-02.b-OBJ,HITRUST-02.b,To verify that candidates for employment are suitable and qualified for their roles
+HITRUST-02.c-OBJ,HITRUST-02.c,"To ensure employees, contractors and third-party users are aware of and fulfill their security responsibilities"
+HITRUST-02.d-OBJ,HITRUST-02.d,"To ensure that employees, contractors and third-party users are aware of information security threats"
+HITRUST-02.e-OBJ,HITRUST-02.e,To ensure that employees are aware of information security threats and concerns and are equipped to support organizational security policy
+HITRUST-02.f-OBJ,HITRUST-02.f,To address information security breaches effectively and deter future incidents
+HITRUST-02.g-OBJ,HITRUST-02.g,"To ensure that employees, contractors and third-party users exit the organization or change employment in an orderly manner"
+HITRUST-02.h-OBJ,HITRUST-02.h,"To ensure that all employees, contractors and third-party users return all organizational assets in their possession"
+HITRUST-02.i-OBJ,HITRUST-02.i,To ensure that access rights are removed appropriately upon termination
+HITRUST-03.a-OBJ,HITRUST-03.a,To ensure risks to the organization's information and information processing facilities are managed
+HITRUST-03.b-OBJ,HITRUST-03.b,"To systematically identify, analyze and evaluate information security risks"
+HITRUST-03.c-OBJ,HITRUST-03.c,To reduce risks to an acceptable level
+HITRUST-03.d-OBJ,HITRUST-03.d,To monitor and review the risk management process
+HITRUST-04.a-OBJ,HITRUST-04.a,To provide management direction and support for information security
+HITRUST-04.b-OBJ,HITRUST-04.b,"To ensure the information security policy remains suitable, adequate and effective"
+HITRUST-05.a-OBJ,HITRUST-05.a,To establish a management framework to initiate and control the implementation and operation of information security
+HITRUST-05.b-OBJ,HITRUST-05.b,To reduce opportunities for unauthorized modification or misuse of information or services
+HITRUST-05.c-OBJ,HITRUST-05.c,To maintain appropriate contacts with relevant authorities
+HITRUST-05.d-OBJ,HITRUST-05.d,To maintain awareness of best practice and stay up to date with security information
+HITRUST-05.e-OBJ,HITRUST-05.e,To ensure that information security is designed and implemented within IS projects
+HITRUST-05.f-OBJ,HITRUST-05.f,To maintain the security of the organization's information and information processing facilities
+HITRUST-05.g-OBJ,HITRUST-05.g,To ensure protection of the organization's assets that are accessible by third parties
+HITRUST-05.h-OBJ,HITRUST-05.h,To maintain an agreed level of information security and service delivery in line with third party agreements
+HITRUST-05.i-OBJ,HITRUST-05.i,To protect organizational assets that are accessible by customers
+HITRUST-05.j-OBJ,HITRUST-05.j,To satisfy security requirements in outsourcing contracts
+HITRUST-05.k-OBJ,HITRUST-05.k,To maintain information security and service delivery in line with third party agreements
+HITRUST-06.a-OBJ,HITRUST-06.a,"To avoid breaches of any law, statutory, regulatory or contractual obligations"
+HITRUST-06.b-OBJ,HITRUST-06.b,To ensure compliance with legal restrictions on the use of material which may be protected by intellectual property rights
+HITRUST-06.c-OBJ,HITRUST-06.c,"To protect important records from loss, destruction and falsification"
+HITRUST-06.d-OBJ,HITRUST-06.d,To ensure compliance with data protection and privacy legislation and regulations
+HITRUST-06.e-OBJ,HITRUST-06.e,To deter users from using information processing facilities for unauthorized purposes
+HITRUST-06.f-OBJ,HITRUST-06.f,"To comply with relevant agreements, laws and regulations"
+HITRUST-06.g-OBJ,HITRUST-06.g,To ensure compliance of systems with organizational security policies and standards
+HITRUST-06.h-OBJ,HITRUST-06.h,To ensure that systems are technically compliant with security standards
+HITRUST-06.i-OBJ,HITRUST-06.i,To maximize the effectiveness and minimize interference to/from the information systems audit process
+HITRUST-06.j-OBJ,HITRUST-06.j,To prevent misuse of or compromise to information systems audit tools
+HITRUST-07.a-OBJ,HITRUST-07.a,To identify organizational assets and define appropriate protection responsibilities
+HITRUST-07.b-OBJ,HITRUST-07.b,To ensure that information receives an appropriate level of protection
+HITRUST-07.c-OBJ,HITRUST-07.c,"To prevent unauthorized disclosure, modification, removal or destruction of assets"
+HITRUST-07.d-OBJ,HITRUST-07.d,To ensure that information receives an appropriate level of protection
+HITRUST-07.e-OBJ,HITRUST-07.e,To ensure that information receives an appropriate level of protection
+HITRUST-08.a-OBJ,HITRUST-08.a,"To prevent unauthorized physical access, damage and interference to the organization's premises and information"
+HITRUST-08.b-OBJ,HITRUST-08.b,To prevent unauthorized physical access to facilities
+HITRUST-08.c-OBJ,HITRUST-08.c,"To prevent loss, damage, theft or compromise of assets and interruption to the organization's activities"
+HITRUST-08.d-OBJ,HITRUST-08.d,"To prevent unauthorized physical access, damage and interference to information and information processing facilities"
+HITRUST-08.e-OBJ,HITRUST-08.e,To prevent unauthorized access to premises
+HITRUST-08.f-OBJ,HITRUST-08.f,"To prevent loss, damage, theft or compromise of assets and interruption to the organization's activities"
+HITRUST-08.g-OBJ,HITRUST-08.g,To prevent loss or damage to assets and interruption to the organization's activities
+HITRUST-08.h-OBJ,HITRUST-08.h,"To prevent interception, interference or damage to information services"
+HITRUST-08.i-OBJ,HITRUST-08.i,To ensure the continuing availability and integrity of information processing facilities
+HITRUST-08.j-OBJ,HITRUST-08.j,To prevent information leakage
+HITRUST-08.k-OBJ,HITRUST-08.k,To prevent unauthorized removal of assets
+HITRUST-08.l-OBJ,HITRUST-08.l,To ensure the security of equipment and assets off-premises
+HITRUST-08.m-OBJ,HITRUST-08.m,To prevent unauthorized access to information
+HITRUST-09.a-OBJ,HITRUST-09.a,To ensure the correct and secure operation of information processing facilities
+HITRUST-09.b-OBJ,HITRUST-09.b,To prevent system disruptions
+HITRUST-09.c-OBJ,HITRUST-09.c,To reduce the opportunities for unauthorized or unintentional modification or misuse of the organization's assets
+HITRUST-09.d-OBJ,HITRUST-09.d,To reduce the risk of unauthorized access or changes to operational systems
+HITRUST-09.e-OBJ,HITRUST-09.e,"To ensure that security controls, service definitions and delivery levels included in third party service delivery agreement are implemented, operated and maintained"
+HITRUST-09.f-OBJ,HITRUST-09.f,To maintain an agreed level of information security and service delivery
+HITRUST-09.g-OBJ,HITRUST-09.g,To ensure that changes to the provision of services do not compromise information security
+HITRUST-09.h-OBJ,HITRUST-09.h,To reduce the risk of system overload
+HITRUST-09.i-OBJ,HITRUST-09.i,To ensure that new information systems meet the organization's requirements
+HITRUST-09.j-OBJ,HITRUST-09.j,To protect the integrity of software and information
+HITRUST-09.k-OBJ,HITRUST-09.k,To ensure that mobile code is authorized before use
+HITRUST-09.l-OBJ,HITRUST-09.l,To maintain the integrity and availability of information and information processing facilities
+HITRUST-09.m-OBJ,HITRUST-09.m,To record events and generate evidence
+HITRUST-09.n-OBJ,HITRUST-09.n,To minimize the impact of information processing incidents and malfunctions
+HITRUST-09.o-OBJ,HITRUST-09.o,To ensure the accuracy of audit logs
+HITRUST-09.p-OBJ,HITRUST-09.p,To ensure optimal system performance and early detection of anomalies
+HITRUST-09.q-OBJ,HITRUST-09.q,To maintain network security and integrity
+HITRUST-09.r-OBJ,HITRUST-09.r,To prevent unauthorized access to sensitive information during transmission
+HITRUST-09.s-OBJ,HITRUST-09.s,To ensure secure electronic messaging
+HITRUST-09.t-OBJ,HITRUST-09.t,To prevent unauthorized access to information on removable media
+HITRUST-09.u-OBJ,HITRUST-09.u,To prevent unauthorized access to information before disposal
+HITRUST-09.v-OBJ,HITRUST-09.v,To maintain system security by addressing vulnerabilities
+HITRUST-09.w-OBJ,HITRUST-09.w,To prevent installation of unauthorized software
+HITRUST-09.x-OBJ,HITRUST-09.x,To ensure security of connections with third parties
+HITRUST-09.y-OBJ,HITRUST-09.y,To protect information services from interference
+HITRUST-09.z-OBJ,HITRUST-09.z,To reduce vulnerability to attacks
+HITRUST-09.aa-OBJ,HITRUST-09.aa,To maintain information accessibility and compliance
+HITRUST-09.ab-OBJ,HITRUST-09.ab,To ensure secure destruction of confidential information
+HITRUST-09.ac-OBJ,HITRUST-09.ac,To prevent unauthorized disclosure of sensitive information
+HITRUST-09.ad-OBJ,HITRUST-09.ad,To maintain consistent security configurations across systems
+HITRUST-09.ae-OBJ,HITRUST-09.ae,To detect unauthorized physical access to facilities
+HITRUST-09.af-OBJ,HITRUST-09.af,To maintain security of system configurations
+HITRUST-10.a-OBJ,HITRUST-10.a,To ensure that security is built into information systems
+HITRUST-10.b-OBJ,HITRUST-10.b,To protect information involved in application services passing over public networks
+HITRUST-10.c-OBJ,HITRUST-10.c,"To prevent errors, loss, unauthorized modification or misuse of information in applications"
+HITRUST-10.d-OBJ,HITRUST-10.d,"To protect the confidentiality, authenticity or integrity of information"
+HITRUST-10.e-OBJ,HITRUST-10.e,To protect the confidentiality of sensitive or critical information
+HITRUST-10.f-OBJ,HITRUST-10.f,"To protect the confidentiality, authenticity or integrity of information"
+HITRUST-10.g-OBJ,HITRUST-10.g,To protect the integrity of operational systems
+HITRUST-10.h-OBJ,HITRUST-10.h,To ensure the protection of data used for testing
+HITRUST-10.i-OBJ,HITRUST-10.i,To prevent unauthorized access to program source code
+HITRUST-10.j-OBJ,HITRUST-10.j,To minimize the corruption of information systems
+HITRUST-10.k-OBJ,HITRUST-10.k,To ensure that disruptions to business are minimized
+HITRUST-10.l-OBJ,HITRUST-10.l,To minimize the risk of corruption of information systems
+HITRUST-10.m-OBJ,HITRUST-10.m,To detect unauthorized activities
+HITRUST-11.a-OBJ,HITRUST-11.a,To ensure information security events and weaknesses are communicated in a manner allowing timely corrective action
+HITRUST-11.b-OBJ,HITRUST-11.b,To ensure information security events and weaknesses are communicated in a manner allowing timely corrective action
+HITRUST-11.c-OBJ,HITRUST-11.c,To ensure a consistent and effective approach to the management of information security incidents
+HITRUST-11.d-OBJ,HITRUST-11.d,To reduce the likelihood or impact of future incidents
+HITRUST-11.e-OBJ,HITRUST-11.e,To ensure that evidence is collected in a manner that makes it acceptable in court
+HITRUST-12.a-OBJ,HITRUST-12.a,To counteract interruptions to business activities and to protect critical business processes from effects of major failures
+HITRUST-12.b-OBJ,HITRUST-12.b,To identify events that can cause interruptions to business processes
+HITRUST-12.c-OBJ,HITRUST-12.c,To maintain or restore operations and ensure availability of information at the required level and in the required time scales
+HITRUST-12.d-OBJ,HITRUST-12.d,To maintain a single framework of business continuity plans
+HITRUST-12.e-OBJ,HITRUST-12.e,To ensure that business continuity plans remain valid and effective
+HITRUST-13.a-OBJ,HITRUST-13.a,"To provide individuals with appropriate notice and choice regarding the collection, use, disclosure and retention of their personal information"
+HITRUST-13.b-OBJ,HITRUST-13.b,"To ensure personal information is collected, used, retained and disclosed only for specific, explicit and legitimate purposes"
+HITRUST-13.c-OBJ,HITRUST-13.c,To ensure the amount of personal information collected is limited
+HITRUST-13.d-OBJ,HITRUST-13.d,"To ensure that personal information is accurate, complete, current and relevant"
+HITRUST-13.e-OBJ,HITRUST-13.e,To provide individuals with access to their personal information and the ability to have it corrected or deleted
+HITRUST-13.f-OBJ,HITRUST-13.f,To demonstrate the organization is accountable for complying with measures which give effect to privacy principles
+HITRUST-13.g-OBJ,HITRUST-13.g,To provide individuals with transparent notice regarding privacy practices
+HITRUST-13.h-OBJ,HITRUST-13.h,To ensure personal information is retained and disposed of appropriately
+HITRUST-13.i-OBJ,HITRUST-13.i,To identify and assess privacy risks
+HITRUST-13.j-OBJ,HITRUST-13.j,To protect privacy when personal information is no longer needed
+HITRUST-13.k-OBJ,HITRUST-13.k,To ensure appropriate handling of personal information by third parties
+HITRUST-13.l-OBJ,HITRUST-13.l,To ensure ongoing compliance with privacy requirements
+HITRUST-13.m-OBJ,HITRUST-13.m,To provide heightened protection for sensitive personal information
+HITRUST-13.n-OBJ,HITRUST-13.n,To ensure compliance when transferring personal information across borders
+HITRUST-13.o-OBJ,HITRUST-13.o,To integrate privacy considerations into system and process design
+HITRUST-13.p-OBJ,HITRUST-13.p,To provide individuals with the ability to request deletion of their personal information
+HITRUST-13.q-OBJ,HITRUST-13.q,To ensure timely notification of personal information breaches
+HITRUST-13.r-OBJ,HITRUST-13.r,To maintain transparent and accessible privacy policies
+HITRUST-13.s-OBJ,HITRUST-13.s,To protect individuals from harmful automated decision making
+HITRUST-13.t-OBJ,HITRUST-13.t,To ensure only necessary personal information is collected and used
+HITRUST-13.u-OBJ,HITRUST-13.u,To ensure all personnel understand privacy requirements

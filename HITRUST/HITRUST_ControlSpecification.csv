@@ -1,0 +1,157 @@
+id,control_id,text
+HITRUST-00.a-SPEC,HITRUST-00.a,"Establish, implement, maintain and continually improve an information security management program, including necessary policies, procedures, guidelines, and associated resources and controls, managed with a risk-based approach, to manage and protect information assets."
+HITRUST-01.a-SPEC,HITRUST-01.a,"An access control policy shall be established, documented, and reviewed based on business and information security requirements."
+HITRUST-01.b-SPEC,HITRUST-01.b,A formal user registration and de-registration procedure shall be implemented to enable assignment of access rights.
+HITRUST-01.c-SPEC,HITRUST-01.c,The allocation and use of privileges shall be restricted and controlled.
+HITRUST-01.d-SPEC,HITRUST-01.d,The allocation of passwords shall be controlled through a formal management process.
+HITRUST-01.e-SPEC,HITRUST-01.e,Asset owners shall review users' access rights at regular intervals.
+HITRUST-01.f-SPEC,HITRUST-01.f,Users shall be required to follow good security practices in the selection and use of passwords.
+HITRUST-01.g-SPEC,HITRUST-01.g,Users shall ensure that unattended equipment has appropriate protection.
+HITRUST-01.h-SPEC,HITRUST-01.h,A clear desk policy for papers and removable storage media and a clear screen policy for information processing facilities shall be adopted.
+HITRUST-01.i-SPEC,HITRUST-01.i,A policy shall be established concerning the use of network services.
+HITRUST-01.j-SPEC,HITRUST-01.j,Appropriate authentication methods shall be used to control access by remote users.
+HITRUST-01.k-SPEC,HITRUST-01.k,Automatic equipment identification shall be considered as a means to authenticate connections.
+HITRUST-01.l-SPEC,HITRUST-01.l,Physical and logical access to diagnostic and configuration ports shall be controlled.
+HITRUST-01.m-SPEC,HITRUST-01.m,"Groups of information services, users, and information systems shall be segregated on networks."
+HITRUST-01.n-SPEC,HITRUST-01.n,"For shared networks, especially those extending across the organization's boundaries, the capability of users to connect to the network shall be restricted."
+HITRUST-01.o-SPEC,HITRUST-01.o,Routing controls shall be implemented for networks to ensure that computer connections and information flows do not breach the access control policy.
+HITRUST-01.p-SPEC,HITRUST-01.p,Access to operating systems shall be controlled by a secure log-on procedure.
+HITRUST-01.q-SPEC,HITRUST-01.q,All users shall have a unique identifier (user ID) for their personal and sole use.
+HITRUST-01.r-SPEC,HITRUST-01.r,Systems for managing passwords shall be interactive and shall ensure quality passwords.
+HITRUST-01.s-SPEC,HITRUST-01.s,The use of utility programs that might be capable of overriding system and application controls shall be restricted and tightly controlled.
+HITRUST-01.t-SPEC,HITRUST-01.t,Inactive sessions shall shut down after a defined period of inactivity.
+HITRUST-01.u-SPEC,HITRUST-01.u,Access to information and application system functions by users and support personnel shall be restricted in accordance with the defined access control policy.
+HITRUST-01.v-SPEC,HITRUST-01.v,Restrictions on connection times shall be used to provide additional security for high-risk applications.
+HITRUST-01.w-SPEC,HITRUST-01.w,Sensitive systems shall have a dedicated (isolated) computing environment.
+HITRUST-01.x-SPEC,HITRUST-01.x,A formal policy and appropriate security measures shall be adopted to protect against the risks of using mobile computing.
+HITRUST-01.y-SPEC,HITRUST-01.y,"Policy, operational plans and procedures shall be developed and implemented for teleworking activities."
+HITRUST-02.a-SPEC,HITRUST-02.a,"Security roles and responsibilities of employees, contractors and third-party users shall be defined and documented."
+HITRUST-02.b-SPEC,HITRUST-02.b,"Background verification checks on all candidates for employment, contractors, and third-party users shall be carried out."
+HITRUST-02.c-SPEC,HITRUST-02.c,"Employees, contractors and third-party users shall agree and sign the terms and conditions of their employment contract."
+HITRUST-02.d-SPEC,HITRUST-02.d,"Management shall require employees, contractors and third-party users to apply security in accordance with the established policies."
+HITRUST-02.e-SPEC,HITRUST-02.e,"All employees and, where relevant, contractors and third-party users shall receive appropriate awareness training."
+HITRUST-02.f-SPEC,HITRUST-02.f,There shall be a formal disciplinary process for employees who have committed a security breach.
+HITRUST-02.g-SPEC,HITRUST-02.g,Responsibilities for performing employment termination or change of employment shall be clearly defined and assigned.
+HITRUST-02.h-SPEC,HITRUST-02.h,"All employees, contractors and third-party users shall return all of the organizational assets in their possession upon termination."
+HITRUST-02.i-SPEC,HITRUST-02.i,"The access rights of all employees, contractors and third-party users to information and information processing facilities shall be removed upon termination."
+HITRUST-03.a-SPEC,HITRUST-03.a,"A risk management program shall be developed and maintained that includes processes for risk assessment, risk treatment, risk acceptance and communication of risk."
+HITRUST-03.b-SPEC,HITRUST-03.b,"Risk assessments shall identify, quantify, and prioritize risks against criteria for risk acceptance and objectives relevant to the organization."
+HITRUST-03.c-SPEC,HITRUST-03.c,Risk mitigation strategies and plans shall be developed and implemented to achieve and maintain an approved level of residual risk.
+HITRUST-03.d-SPEC,HITRUST-03.d,The effectiveness of risk assessments and risk treatment shall be evaluated at planned intervals.
+HITRUST-04.a-SPEC,HITRUST-04.a,"An information security policy shall be defined, approved by management, published and communicated to all relevant employees and external parties."
+HITRUST-04.b-SPEC,HITRUST-04.b,The information security policy shall be reviewed at planned intervals or if significant changes occur.
+HITRUST-05.a-SPEC,HITRUST-05.a,All information security responsibilities shall be defined and allocated.
+HITRUST-05.b-SPEC,HITRUST-05.b,Conflicting duties and areas of responsibility shall be segregated.
+HITRUST-05.c-SPEC,HITRUST-05.c,Appropriate contacts with relevant authorities shall be maintained.
+HITRUST-05.d-SPEC,HITRUST-05.d,Appropriate contacts with special interest groups or other specialist security forums shall be maintained.
+HITRUST-05.e-SPEC,HITRUST-05.e,Information security shall be addressed in project management.
+HITRUST-05.f-SPEC,HITRUST-05.f,Risks to the organization's information and information processing facilities from business processes involving external parties shall be identified.
+HITRUST-05.g-SPEC,HITRUST-05.g,All identified security requirements shall be addressed before granting third parties access to the organization's assets.
+HITRUST-05.h-SPEC,HITRUST-05.h,"Organizations shall monitor and review third party services, reports and records produced by the third party organization."
+HITRUST-05.i-SPEC,HITRUST-05.i,All identified security requirements shall be addressed before giving customers access to the organization's assets or information.
+HITRUST-05.j-SPEC,HITRUST-05.j,"Agreements with third parties involving accessing, processing, communicating or managing the organization's information or information processing facilities shall include requirements to address information security concerns."
+HITRUST-05.k-SPEC,HITRUST-05.k,"Changes to the provision of services, including maintaining and improving existing information security policies, procedures and controls, shall be managed."
+HITRUST-06.a-SPEC,HITRUST-06.a,"All relevant legislative, statutory, regulatory and contractual requirements and the organization's approach to meet these requirements shall be explicitly identified."
+HITRUST-06.b-SPEC,HITRUST-06.b,"Appropriate procedures shall be implemented to ensure compliance with legislative, regulatory and contractual requirements on the use of material in respect of intellectual property rights."
+HITRUST-06.c-SPEC,HITRUST-06.c,"Important records shall be protected from loss, destruction and falsification."
+HITRUST-06.d-SPEC,HITRUST-06.d,Data protection and privacy shall be ensured as required by relevant legislation and regulations.
+HITRUST-06.e-SPEC,HITRUST-06.e,Users shall be deterred from using information processing facilities for unauthorized purposes.
+HITRUST-06.f-SPEC,HITRUST-06.f,"Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations."
+HITRUST-06.g-SPEC,HITRUST-06.g,Managers shall ensure that all security procedures within their area of responsibility are carried out correctly to achieve compliance with security policies and standards.
+HITRUST-06.h-SPEC,HITRUST-06.h,Information systems shall be regularly checked for compliance with security implementation standards.
+HITRUST-06.i-SPEC,HITRUST-06.i,Audit requirements and activities involving checks on operational systems shall be carefully planned and agreed to minimize the risk of disruptions to business processes.
+HITRUST-06.j-SPEC,HITRUST-06.j,Access to information systems audit tools shall be protected to prevent any possible misuse or compromise.
+HITRUST-07.a-SPEC,HITRUST-07.a,All assets shall be clearly identified and an inventory of all important assets drawn up and maintained.
+HITRUST-07.b-SPEC,HITRUST-07.b,All information and assets associated with information processing facilities shall be owned by a designated part of the organization.
+HITRUST-07.c-SPEC,HITRUST-07.c,"Rules for the acceptable use of information and assets associated with information processing facilities shall be identified, documented and implemented."
+HITRUST-07.d-SPEC,HITRUST-07.d,"Information shall be classified in terms of its value, legal requirements, sensitivity and criticality to the organization."
+HITRUST-07.e-SPEC,HITRUST-07.e,An appropriate set of procedures for information labeling and handling shall be developed and implemented.
+HITRUST-08.a-SPEC,HITRUST-08.a,Security perimeters shall be used to protect areas that contain information and information processing facilities.
+HITRUST-08.b-SPEC,HITRUST-08.b,Secure areas shall be protected by appropriate entry controls to ensure that only authorized personnel are allowed access.
+HITRUST-08.c-SPEC,HITRUST-08.c,"Physical security for offices, rooms and facilities shall be designed and applied."
+HITRUST-08.d-SPEC,HITRUST-08.d,Physical protection and guidelines for working in secure areas shall be designed and applied.
+HITRUST-08.e-SPEC,HITRUST-08.e,Access points such as delivery and loading areas and other points where unauthorized persons may enter the premises shall be controlled.
+HITRUST-08.f-SPEC,HITRUST-08.f,Equipment shall be sited and protected to reduce the risks from environmental threats and hazards.
+HITRUST-08.g-SPEC,HITRUST-08.g,Equipment shall be protected from power failures and other disruptions caused by failures in supporting utilities.
+HITRUST-08.h-SPEC,HITRUST-08.h,Power and telecommunications cabling carrying data or supporting information services shall be protected from interception or damage.
+HITRUST-08.i-SPEC,HITRUST-08.i,Equipment shall be correctly maintained to ensure its continued availability and integrity.
+HITRUST-08.j-SPEC,HITRUST-08.j,All items of equipment containing storage media shall be checked to ensure that any sensitive data and licensed software has been removed or securely overwritten.
+HITRUST-08.k-SPEC,HITRUST-08.k,"Equipment, information or software shall not be taken off-site without prior authorization."
+HITRUST-08.l-SPEC,HITRUST-08.l,Security shall be applied to off-site equipment taking into account the different risks of working outside the organization's premises.
+HITRUST-08.m-SPEC,HITRUST-08.m,Users shall ensure that unattended equipment has appropriate protection.
+HITRUST-09.a-SPEC,HITRUST-09.a,"Operating procedures shall be documented, maintained and made available to all users who need them."
+HITRUST-09.b-SPEC,HITRUST-09.b,Changes to information processing facilities and systems shall be controlled.
+HITRUST-09.c-SPEC,HITRUST-09.c,Duties and areas of responsibility shall be segregated to reduce opportunities for unauthorized or unintentional modification or misuse of the organization's assets.
+HITRUST-09.d-SPEC,HITRUST-09.d,Development and production facilities shall be separated to reduce the risks of unauthorized access or changes to the operational system.
+HITRUST-09.e-SPEC,HITRUST-09.e,"Organizations shall ensure that the security controls, service definitions and delivery levels included in the third party service delivery agreement are implemented, operated and maintained."
+HITRUST-09.f-SPEC,HITRUST-09.f,"The services, reports and records provided by the third party shall be regularly monitored and reviewed."
+HITRUST-09.g-SPEC,HITRUST-09.g,"Changes to the provision of services, including maintaining and improving existing information security policies, procedures and controls, shall be managed."
+HITRUST-09.h-SPEC,HITRUST-09.h,The use of resources shall be monitored and tuned and projections made of future capacity requirements.
+HITRUST-09.i-SPEC,HITRUST-09.i,"Acceptance criteria for new information systems, upgrades and new versions shall be established and suitable tests of the system carried out prior to acceptance."
+HITRUST-09.j-SPEC,HITRUST-09.j,"Detection, prevention and recovery controls to protect against malicious code and appropriate user awareness procedures shall be implemented."
+HITRUST-09.k-SPEC,HITRUST-09.k,"Where the use of mobile code is authorized, the configuration shall ensure that mobile code operates according to a clearly defined security policy."
+HITRUST-09.l-SPEC,HITRUST-09.l,Backup copies of information and software shall be taken and tested regularly in accordance with the agreed backup policy.
+HITRUST-09.m-SPEC,HITRUST-09.m,Operator logs shall be maintained to record activities.
+HITRUST-09.n-SPEC,HITRUST-09.n,"Faults shall be logged, analyzed and appropriate action taken."
+HITRUST-09.o-SPEC,HITRUST-09.o,The clocks of all relevant information processing systems within an organization or security domain shall be synchronized with an agreed accurate time source.
+HITRUST-09.p-SPEC,HITRUST-09.p,System performance and activity shall be continuously monitored with alerts configured for anomalous behavior.
+HITRUST-09.q-SPEC,HITRUST-09.q,Network resources shall be managed to optimize availability and performance.
+HITRUST-09.r-SPEC,HITRUST-09.r,Policies and procedures shall be developed for the secure exchange of sensitive information.
+HITRUST-09.s-SPEC,HITRUST-09.s,Electronic messaging facilities shall be protected to prevent information leakage and maintain data integrity.
+HITRUST-09.t-SPEC,HITRUST-09.t,Removable information storage media shall be handled in accordance with the organization's classification scheme.
+HITRUST-09.u-SPEC,HITRUST-09.u,All items of storage media shall be securely disposed of when no longer required.
+HITRUST-09.v-SPEC,HITRUST-09.v,Patches and updates shall be applied to systems in a timely manner following testing and approval.
+HITRUST-09.w-SPEC,HITRUST-09.w,Policies shall prohibit the installation of unauthorized software on user equipment.
+HITRUST-09.x-SPEC,HITRUST-09.x,Connections and information exchanges with third parties shall be monitored and controlled.
+HITRUST-09.y-SPEC,HITRUST-09.y,Information processing facilities and services shall be segregated based on criticality and sensitivity.
+HITRUST-09.z-SPEC,HITRUST-09.z,Information systems shall be hardened by removing unnecessary services and disabling unnecessary ports.
+HITRUST-09.aa-SPEC,HITRUST-09.aa,"Information shall be retained and archived in accordance with legal, regulatory and business requirements."
+HITRUST-09.ab-SPEC,HITRUST-09.ab,Information shall be securely destroyed when no longer required using approved techniques.
+HITRUST-09.ac-SPEC,HITRUST-09.ac,Data leakage prevention controls shall be implemented to monitor and prevent unauthorized disclosure of sensitive information.
+HITRUST-09.ad-SPEC,HITRUST-09.ad,Baseline configurations and standards shall be defined and implemented for all information systems.
+HITRUST-09.ae-SPEC,HITRUST-09.ae,Physical access to information processing facilities shall be monitored and recorded.
+HITRUST-09.af-SPEC,HITRUST-09.af,Configurations of information systems shall be securely managed and controlled.
+HITRUST-10.a-SPEC,HITRUST-10.a,Security requirements shall be identified and agreed prior to the development and/or implementation of information systems.
+HITRUST-10.b-SPEC,HITRUST-10.b,"Information involved in application services passing over public networks shall be protected from fraudulent activity, contract dispute and unauthorized disclosure and modification."
+HITRUST-10.c-SPEC,HITRUST-10.c,Information involved in electronic transactions shall be appropriately secured.
+HITRUST-10.d-SPEC,HITRUST-10.d,A policy on the use of cryptographic controls for protection of information shall be developed and implemented.
+HITRUST-10.e-SPEC,HITRUST-10.e,Encryption shall be used to protect the confidentiality of sensitive information.
+HITRUST-10.f-SPEC,HITRUST-10.f,Key management shall be in place to support the organization's use of cryptographic techniques.
+HITRUST-10.g-SPEC,HITRUST-10.g,There shall be procedures in place to control the installation of software on operational systems.
+HITRUST-10.h-SPEC,HITRUST-10.h,"Test data shall be selected carefully, and protected and controlled."
+HITRUST-10.i-SPEC,HITRUST-10.i,Access to program source code shall be restricted.
+HITRUST-10.j-SPEC,HITRUST-10.j,The implementation of changes shall be controlled by the use of formal change control procedures.
+HITRUST-10.k-SPEC,HITRUST-10.k,"When operating systems are changed, business-critical applications shall be reviewed and tested."
+HITRUST-10.l-SPEC,HITRUST-10.l,Modifications to software packages shall be discouraged and limited to necessary changes.
+HITRUST-10.m-SPEC,HITRUST-10.m,Organizations shall minimize the opportunities for insertion of covert channels or Trojan code into systems.
+HITRUST-11.a-SPEC,HITRUST-11.a,Information security events shall be reported through appropriate management channels as quickly as possible.
+HITRUST-11.b-SPEC,HITRUST-11.b,"All employees, contractors and third-party users of information systems and services shall be required to note and report any observed or suspected security weaknesses."
+HITRUST-11.c-SPEC,HITRUST-11.c,"Management responsibilities and procedures shall be established to ensure a quick, effective and orderly response to information security incidents."
+HITRUST-11.d-SPEC,HITRUST-11.d,"There shall be mechanisms in place to enable the types, volumes and costs of information security incidents to be quantified and monitored."
+HITRUST-11.e-SPEC,HITRUST-11.e,"Where a follow-up action against a person or organization involves legal action, evidence shall be collected, retained and presented."
+HITRUST-12.a-SPEC,HITRUST-12.a,A managed process shall be developed and maintained for business continuity throughout the organization.
+HITRUST-12.b-SPEC,HITRUST-12.b,"Events that can cause interruptions to business processes shall be identified, along with the probability and impact of such interruptions."
+HITRUST-12.c-SPEC,HITRUST-12.c,Plans shall be developed and implemented to maintain or restore operations and ensure availability of information.
+HITRUST-12.d-SPEC,HITRUST-12.d,A single framework of business continuity plans shall be maintained to ensure all plans are consistent.
+HITRUST-12.e-SPEC,HITRUST-12.e,Business continuity plans shall be tested and updated regularly to ensure they are up to date and effective.
+HITRUST-13.a-SPEC,HITRUST-13.a,"Organizations shall provide individuals with clear, prominent, easily understandable, accessible and affordable mechanisms to provide their consent for the collection, use, disclosure and retention of their personal information."
+HITRUST-13.b-SPEC,HITRUST-13.b,"Personal information shall only be collected, used, retained and disclosed for specific, explicit and legitimate purposes."
+HITRUST-13.c-SPEC,HITRUST-13.c,The organization shall limit the collection of personal information to that which is directly relevant and necessary to accomplish the specified purpose(s).
+HITRUST-13.d-SPEC,HITRUST-13.d,"Organizations shall ensure personal information is accurate, complete, current and relevant for the purposes for which it is to be used."
+HITRUST-13.e-SPEC,HITRUST-13.e,"Organizations shall provide individuals with a simple and timely means to access, review and obtain a copy of their personal information."
+HITRUST-13.f-SPEC,HITRUST-13.f,Organizations shall be accountable for complying with measures that give effect to the privacy principles stated above.
+HITRUST-13.g-SPEC,HITRUST-13.g,Organizations shall provide notice about their policies and practices relating to the management of personal information.
+HITRUST-13.h-SPEC,HITRUST-13.h,Organizations shall retain personal information only for as long as necessary to fulfill the stated purposes or as required by law.
+HITRUST-13.i-SPEC,HITRUST-13.i,Organizations shall conduct privacy impact assessments to identify and assess privacy risks.
+HITRUST-13.j-SPEC,HITRUST-13.j,Organizations shall de-identify or aggregate personal information when the original information is no longer necessary.
+HITRUST-13.k-SPEC,HITRUST-13.k,Organizations shall obtain appropriate assurances that third parties can and will protect personal information consistent with privacy policies.
+HITRUST-13.l-SPEC,HITRUST-13.l,"Organizations shall monitor, audit and enforce compliance with privacy policies and applicable privacy requirements."
+HITRUST-13.m-SPEC,HITRUST-13.m,"Enhanced controls shall be applied to sensitive personal information such as health information, genetic data, or biometric information."
+HITRUST-13.n-SPEC,HITRUST-13.n,Organizations shall ensure that personal information transferred across borders complies with applicable laws and regulations.
+HITRUST-13.o-SPEC,HITRUST-13.o,Privacy shall be considered and integrated into the design of information systems and business processes.
+HITRUST-13.p-SPEC,HITRUST-13.p,Organizations shall provide procedures for individuals to request deletion or erasure of their personal information.
+HITRUST-13.q-SPEC,HITRUST-13.q,Organizations shall notify affected individuals and relevant authorities when personal information is breached.
+HITRUST-13.r-SPEC,HITRUST-13.r,"Privacy policies shall be clear, transparent, and easily accessible to individuals."
+HITRUST-13.s-SPEC,HITRUST-13.s,Organizations shall implement controls to prevent or mitigate harms from automated decision-making processes.
+HITRUST-13.t-SPEC,HITRUST-13.t,Organizations shall collect and use only the minimum personal information necessary for stated purposes.
+HITRUST-13.u-SPEC,HITRUST-13.u,Privacy training and awareness programs shall be provided to all personnel involved in handling personal information.
