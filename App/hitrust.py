@@ -72,6 +72,15 @@ MATCH (co:ControlObjective {standard_id: 'HITRUST', objective_id: row.start_id})
 MATCH (cs:ControlSpecification {standard_id: 'HITRUST', specification_id: row.end_id})
 MERGE (co)-[:HAS_SPECIFICATION]->(cs);
 """
+# Create MAPS_TO relationships (Controls -> CSF Subcategories)
+hitrust_controls_maps_nist_CSF = """
+Load CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Control {standard_id: 'HITRUST', control_id: row.start_id})
+MATCH (sc:Subcategory {framework_id: 'NIST_CSF_2.0',subcategory_id: row.end_id})
+MERGE (ctrl)-[:MAPS_TO]->(sc);
+"""
+
+
 
 
 
@@ -119,6 +128,8 @@ time.sleep(2)
 client.query(hitrust_ControlObjective_specification.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_SPECIFICATION.csv"))
 time.sleep(2)
 
+client.query(hitrust_controls_maps_nist_CSF.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 

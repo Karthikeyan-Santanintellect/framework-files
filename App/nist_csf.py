@@ -44,7 +44,7 @@ ON CREATE SET
 # CORRECTED: Used '=' instead of ':' for property assignment in SET clause.
 subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Subcategory {subcategory_id: row.Subcategory, framework_id: "NIST_CSF_2.0"})
+MERGE (s:Subcategory {subcategory_id: row.Subcategory_Code, framework_id: "NIST_CSF_2.0"})
 ON CREATE SET
   s.category_id = row.Category_Code,
   s.description = row.Subcategory_Description,
