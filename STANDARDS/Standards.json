@@ -1,0 +1,167 @@
+[
+  {
+    "full_name": "ISO/IEC 27001",
+    "short_name": "ISO 27001",
+    "publisher": "ISO / IEC",
+    "version_number": "2022",
+    "publication_date": "2022-10-01T00:00:00.000",
+    "status": "Current",
+    "description": "Formal specification for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS).",
+    "coverage": "Information Security Management (ISMS), CIA Triad, Governance, Controls (Annex A)",
+    "applicable_areas": "Global, all types and sizes of organizations seeking certification."
+  },
+  {
+    "full_name": "ISO/IEC 27001",
+    "short_name": "ISO 27001",
+    "publisher": "ISO / IEC",
+    "version_number": "2013",
+    "publication_date": "2013-09-01T00:00:00.000",
+    "status": "Previous Edition",
+    "description": "Former certified standard for ISMS. Replaced by the 2022 edition with updated control set (Annex A).",
+    "coverage": "Information Security Management (ISMS), 14 Control Domains",
+    "applicable_areas": "Global, organizations in the process of transitioning certification."
+  },
+  {
+    "full_name": "ISO/IEC 27701",
+    "short_name": "ISO 27701 (PIMS)",
+    "publisher": "ISO / IEC",
+    "version_number": "2019",
+    "publication_date": "2019-08-01T00:00:00.000",
+    "status": "Current (First)",
+    "description": "A privacy extension to ISO/IEC 27001. Provides requirements and guidance for a Privacy Information Management System (PIMS), acting as PII controllers/processors.",
+    "coverage": "Privacy Controls, PII Management, Data Subject Rights, Alignment with GDPR/CCPA",
+    "applicable_areas": "Organizations subject to global data protection laws (e.g., GDPR), PII Controllers, PII Processors."
+  },
+  {
+    "full_name": "ISO 31000",
+    "short_name": "ISO 31000",
+    "publisher": "ISO",
+    "version_number": "2018",
+    "publication_date": "2018-02-01T00:00:00.000",
+    "status": "Current",
+    "description": "Provides generic guidelines for implementing and maintaining an effective Enterprise Risk Management (ERM) framework. Non-certifiable guidance standard.",
+    "coverage": "Risk Management Principles, Framework, Process (Identify, Analyze, Evaluate, Treat)",
+    "applicable_areas": "Global, all types of organizations for all forms of risk (financial, strategic, security, operational)."
+  },
+  {
+    "full_name": "ISO 31000",
+    "short_name": "ISO 31000",
+    "publisher": "ISO",
+    "version_number": "2009",
+    "publication_date": "2009-11-01T00:00:00.000",
+    "status": "Previous Edition",
+    "description": "The first edition of the risk management guidelines. Revised in 2018 for greater emphasis on leadership and integration.",
+    "coverage": "Risk Management Principles, Framework, Process",
+    "applicable_areas": "Global, all types of organizations."
+  },
+  {
+    "full_name": "ISO/IEC 27005",
+    "short_name": "ISO 27005",
+    "publisher": "ISO / IEC",
+    "version_number": "2022",
+    "publication_date": "2022-10-01T00:00:00.000",
+    "status": "Current",
+    "description": "Provides guidance on managing information security risks to support the overall requirements of an ISO/IEC 27001 ISMS.",
+    "coverage": "Information Security Risk Assessment, Risk Treatment, Risk Scenarios (Event-based/Asset-based)",
+    "applicable_areas": "Information security professionals, organizations implementing ISO 27001, risk analysts."
+  },
+  {
+    "full_name": "ISO/IEC 27005",
+    "short_name": "ISO 27005",
+    "publisher": "ISO / IEC",
+    "version_number": "2018",
+    "publication_date": "2018-07-01T00:00:00.000",
+    "status": "Previous Edition",
+    "description": "Former guidance on information security risk management, aligned with ISO/IEC 27001:2013.",
+    "coverage": "Information Security Risk Management Process",
+    "applicable_areas": "Information security practitioners."
+  },
+  {
+    "full_name": "Payment Card Industry Data Security Standard",
+    "short_name": "PCI DSS",
+    "publisher": "PCI Security Standards Council (PCI SSC)",
+    "version_number": "4.0.1",
+    "publication_date": "2024-06-01T00:00:00.000",
+    "status": "Current",
+    "description": "A set of security standards designed to ensure that all companies that store, process, or transmit cardholder data maintain a secure environment.",
+    "coverage": "12 Core Requirements (e.g., Network Security, Vulnerability Management, Access Control, Continuous Monitoring)",
+    "applicable_areas": "Financial Services, Merchants, Payment Processors, E-commerce, all entities handling cardholder data."
+  },
+  {
+    "full_name": "Payment Card Industry Data Security Standard",
+    "short_name": "PCI DSS",
+    "publisher": "PCI Security Standards Council (PCI SSC)",
+    "version_number": "3.2.1",
+    "publication_date": "2018-05-01T00:00:00.000",
+    "status": "Superseded",
+    "description": "Previous active version before the major update to v4.0. Retired in March 2024.",
+    "coverage": "12 Core Requirements, foundational security principles.",
+    "applicable_areas": "Entities subject to card brand mandates (now required to transition to 4.0/4.0.1)."
+  },
+  {
+    "full_name": "SOC 2",
+    "short_name": "SOC 2 (TSC)",
+    "publisher": "AICPA (American Institute of Certified Public Accountants)",
+    "version_number": "2017 Trust Services Criteria (with revised Points of Focus - 2022)",
+    "publication_date": "2022-09-01T00:00:00.000",
+    "status": "Current",
+    "description": "Reporting on controls at a service organization relevant to one or more of the five Trust Services Criteria (TSC), primarily used for assurance over internal controls.",
+    "coverage": "Security (Mandatory), Availability, Processing Integrity, Confidentiality, Privacy",
+    "applicable_areas": "Service Organizations (Cloud Providers, SaaS, Data Centers), Financial Services, Healthcare, Technology."
+  },
+  {
+    "full_name": "SOC 2",
+    "short_name": "TSC (Trust Services Criteria)",
+    "publisher": "AICPA",
+    "version_number": "2016 Trust Services Criteria (Superseded)",
+    "publication_date": "2016-04-01T00:00:00.000",
+    "status": "Previous Edition",
+    "description": "Previous iteration of the Trust Services Criteria (then called Trust Services Principles) before the 2017 update aligned with the COSO framework.",
+    "coverage": "Security, Availability, Processing Integrity, Confidentiality, Privacy",
+    "applicable_areas": "Service Organizations."
+  },
+  {
+    "full_name": "ISO/IEC 27018",
+    "short_name": "ISO 27018",
+    "publisher": "ISO / IEC",
+    "version_number": "2019",
+    "publication_date": "2019-12-01T00:00:00.000",
+    "status": "Current",
+    "description": "Code of practice focusing on the protection of Personally Identifiable Information (PII) in public cloud environments for PII processors. An extension to ISO/IEC 27002.",
+    "coverage": "Cloud Privacy Controls, PII Protection, Data Disclosure, Subcontracting of PII Processing",
+    "applicable_areas": "Public Cloud Service Providers (CSPs) acting as PII Processors."
+  },
+  {
+    "full_name": "ISO/IEC 27018",
+    "short_name": "ISO 27018",
+    "publisher": "ISO / IEC",
+    "version_number": "2014",
+    "publication_date": "2014-08-01T00:00:00.000",
+    "status": "Previous Edition",
+    "description": "The first edition, containing the same core guidance, but with minor editorial corrections made in the 2019 revision.",
+    "coverage": "Cloud Privacy Controls, PII Protection in the Cloud",
+    "applicable_areas": "Public Cloud Service Providers."
+  },
+  {
+    "full_name": "COBIT",
+    "short_name": "COBIT",
+    "publisher": "ISACA",
+    "version_number": "2019",
+    "publication_date": "2018-11-01T00:00:00.000",
+    "status": "Current",
+    "description": "Framework for the Governance and Management of Enterprise Information and Technology (EGIT). Defines 40 core objectives and design factors for tailoring governance systems.",
+    "coverage": "Enterprise Governance, Audit, Risk Management, Security, Performance Measurement, Strategic Alignment",
+    "applicable_areas": "Enterprise-level organizations of all industries, IT and Business Management."
+  },
+  {
+    "full_name": "COBIT",
+    "short_name": "COBIT",
+    "publisher": "ISACA",
+    "version_number": "5",
+    "publication_date": "2012-04-01T00:00:00.000",
+    "status": "Previous Edition",
+    "description": "Integrated multiple ISACA frameworks into one model, based on 5 principles and 7 enablers.",
+    "coverage": "Enterprise IT Governance and Management",
+    "applicable_areas": "Enterprise-level organizations."
+  }
+]

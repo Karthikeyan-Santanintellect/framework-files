@@ -1,0 +1,189 @@
+[
+  {
+    "full_name": "NIST Cybersecurity Framework",
+    "short_name": "CSF 2.0",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "version_number": "2",
+    "publication_date": "2024-02-01T00:00:00.000",
+    "status": "Current",
+    "description": "A voluntary framework to manage and reduce cybersecurity risks. Expanded to include Governance as a core function and apply to all sectors, not just critical infrastructure.",
+    "coverage": "Governance, Identify, Protect, Detect, Respond, Recover functions; Risk Assessment; Improvement",
+    "applicable_areas": "All sizes and sectors globally, Critical Infrastructure, Federal Agencies (voluntary)"
+  },
+  {
+    "full_name": "NIST Cybersecurity Framework",
+    "short_name": "CSF 1.1",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "version_number": "1.1",
+    "publication_date": "2018-04-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "Focused on improving critical infrastructure cybersecurity. Core functions: Identify, Protect, Detect, Respond, Recover.",
+    "coverage": "Identify, Protect, Detect, Respond, Recover functions; Supply Chain Risk Management",
+    "applicable_areas": "Critical Infrastructure (original focus), widely adopted across all sectors."
+  },
+  {
+    "full_name": "ISO/IEC 27001",
+    "short_name": "ISO 27001:2022",
+    "publisher": "International Organization for Standardization (ISO) / IEC",
+    "version_number": "2022",
+    "publication_date": "2022-10-01T00:00:00.000",
+    "status": "Current",
+    "description": "Specifies the requirements for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS).",
+    "coverage": "Management System Requirements, Information Security Controls (Annex A), CIA Triad",
+    "applicable_areas": "Global, all types and sizes of organizations seeking certification."
+  },
+  {
+    "full_name": "ISO/IEC 27001",
+    "short_name": "ISO 27001:2013",
+    "publisher": "International Organization for Standardization (ISO) / IEC",
+    "version_number": "2013",
+    "publication_date": "2013-09-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "The former standard for the ISMS. Annex A controls updated and restructured in the 2022 revision.",
+    "coverage": "Management System Requirements, 14 Domains of Controls",
+    "applicable_areas": "Global, all types and sizes of organizations (now superseded for certification)."
+  },
+  {
+    "full_name": "NIST Risk Management Framework",
+    "short_name": "RMF 1.0",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "version_number": "SP 800-37 Rev. 2",
+    "publication_date": "2018-12-01T00:00:00.000",
+    "status": "Current",
+    "description": "A seven-step, disciplined, and structured process (Prepare, Categorize, Select, Implement, Assess, Authorize, Monitor) for managing security and privacy risk throughout the system lifecycle.",
+    "coverage": "Enterprise Risk Management, System Authorization (ATO), Security, Privacy, and Supply Chain Risk",
+    "applicable_areas": "US Federal Agencies (mandatory), Defense Contractors, highly regulated industries."
+  },
+  {
+    "full_name": "NIST Risk Management Framework",
+    "short_name": "RMF",
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "version_number": "SP 800-37 Rev. 1",
+    "publication_date": "2010-02-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "Six-step RMF lifecycle (Prepare step was added in Rev. 2). Focused heavily on C&A (Certification and Accreditation).",
+    "coverage": "System Authorization, Security Controls, Lifecycle Management",
+    "applicable_areas": "US Federal Agencies, highly regulated sectors."
+  },
+  {
+    "full_name": "PIMS (Privacy Information Management System)",
+    "short_name": "ISO 27701:2019",
+    "publisher": "International Organization for Standardization (ISO) / IEC",
+    "version_number": "2019",
+    "publication_date": "2019-08-01T00:00:00.000",
+    "status": "Current (First Edition)",
+    "description": "A privacy extension to ISO/IEC 27001. Provides requirements and guidance for implementing, maintaining, and continually improving a PIMS, including controls for PII controllers and processors.",
+    "coverage": "Privacy Principles, PII Management, Consent, Data Subject Rights, Controller/Processor specific controls",
+    "applicable_areas": "Organizations globally subject to data protection laws (e.g., GDPR, CCPA) that are PII Controllers or Processors."
+  },
+  {
+    "full_name": "COBIT",
+    "short_name": "COBIT:2019",
+    "publisher": "ISACA (Information Systems Audit and Control Association)",
+    "version_number": "2019",
+    "publication_date": "2018-11-01T00:00:00.000",
+    "status": "Current",
+    "description": "A business framework for the Governance and Management of Enterprise IT (EGIT). Focuses on creating value through I&T. Includes design factors to tailor governance systems.",
+    "coverage": "Enterprise Governance, Audit, Risk Management, Security, Performance Management, Alignment",
+    "applicable_areas": "Enterprise-level, all industries, IT Governance and Management."
+  },
+  {
+    "full_name": "COBIT",
+    "short_name": "COBIT",
+    "publisher": "ISACA (Information Systems Audit and Control Association)",
+    "version_number": "5",
+    "publication_date": "2012-04-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "Integrated five COBIT 4.1 areas (governance, risk, security, value, assurance) into a single framework. Introduced the 5 Principles and 7 Enablers.",
+    "coverage": "IT Governance, Risk Management, Assurance, Value Creation",
+    "applicable_areas": "Enterprise-level, IT and Business Management."
+  },
+  {
+    "full_name": "Cloud Controls Matrix",
+    "short_name": "CCM V4",
+    "publisher": "Cloud Security Alliance (CSA)",
+    "version_number": "v4.0.9 (CCM v4)",
+    "publication_date": "2022-10-01T00:00:00.000",
+    "status": "Current",
+    "description": "A cloud security control framework covering 17 domains. It provides a baseline set of security controls and guidance to assess the overall security risk of a cloud service.",
+    "coverage": "Technical Controls, Cloud Security Architecture, Governance, Compliance Mapping, Risk",
+    "applicable_areas": "Cloud Service Providers (CSPs), Cloud Customers (CSCs), and third-party auditors."
+  },
+  {
+    "full_name": "Cloud Controls Matrix",
+    "short_name": "CCM V3",
+    "publisher": "Cloud Security Alliance (CSA)",
+    "version_number": "v3.0.1 (CCM v3)",
+    "publication_date": "2013-11-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "Older version focusing on 13 domains. Used for self-assessment and compliance mapping prior to the CCM v4 update.",
+    "coverage": "Cloud Security Controls, Compliance and Audit",
+    "applicable_areas": "Cloud Service Providers and Customers."
+  },
+  {
+    "full_name": "ISO 31000",
+    "short_name": "ISO 31000:2018",
+    "publisher": "International Organization for Standardization (ISO)",
+    "version_number": "2018",
+    "publication_date": "2018-02-01T00:00:00.000",
+    "status": "Current",
+    "description": "Provides principles and generic guidelines on managing risk. Non-certifiable standard that promotes the integration of risk management into all organizational activities and decision-making.",
+    "coverage": "Enterprise Risk Management (ERM) Principles, Framework, and Process",
+    "applicable_areas": "Global, all types of organizations for any type of risk (strategic, financial, operational, security)."
+  },
+  {
+    "full_name": "ISO 31000",
+    "short_name": "ISO 31000:2009",
+    "publisher": "International Organization for Standardization (ISO)",
+    "version_number": "2009",
+    "publication_date": "2009-11-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "The first edition of the standard. Revised in 2018 for clarity, conciseness, and greater emphasis on top management leadership and integration.",
+    "coverage": "Risk Management Principles, Framework, and Process",
+    "applicable_areas": "Global, all types of organizations."
+  },
+  {
+    "full_name": "COSO Enterprise Risk Management",
+    "short_name": "COSO ERM",
+    "publisher": "COSO (Committee of Sponsoring Organizations of the Treadway Commission)",
+    "version_number": "Focus on Strategy and Performance",
+    "publication_date": "2017-09-01T00:00:00.000",
+    "status": "Current",
+    "description": "Highlights the importance of considering risk in both the strategy-setting process and in driving performance, based on five interrelated components (Governance and Culture, Strategy and Objective-Setting, Performance, Review and Revision, Information, Communication, and Reporting).",
+    "coverage": "Enterprise Risk Management (ERM) for Strategic and Performance Focus, Internal Control",
+    "applicable_areas": "Enterprise-level, focus on financial services, public companies, and internal control over financial reporting (ICFR)."
+  },
+  {
+    "full_name": "COSO Enterprise Risk Management",
+    "short_name": "COSO ERM",
+    "publisher": "COSO (Committee of Sponsoring Organizations of the Treadway Commission)",
+    "version_number": "Integrated Framework",
+    "publication_date": "2004-09-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "The original ERM framework. Structured around 8 components. Less focus on strategy and performance alignment than the 2017 revision.",
+    "coverage": "Enterprise Risk Management for Internal Control",
+    "applicable_areas": "Enterprise-level, especially for public companies."
+  },
+  {
+    "full_name": "Operationally Critical Threat, Asset, and Vulnerability Evaluation",
+    "short_name": "OCTAVE Allegro",
+    "publisher": "Carnegie Mellon University Software Engineering Institute (SEI)",
+    "version_number": "v1.0",
+    "publication_date": "2007-06-01T00:00:00.000",
+    "status": "Current",
+    "description": "A comprehensive, self-directed methodology that focuses on information assets and their containers to manage information security risks. Streamlined for faster, more repeatable assessments.",
+    "coverage": "Information Asset-Centric Risk Assessment, Threat Scenarios, Qualitative Risk Analysis",
+    "applicable_areas": "Small and Medium Organizations (SMOs), organizations seeking a qualitative and repeatable risk assessment method."
+  },
+  {
+    "full_name": "Operationally Critical Threat, Asset, and Vulnerability Evaluation",
+    "short_name": "OCTAVE-S",
+    "publisher": "Carnegie Mellon University Software Engineering Institute (SEI)",
+    "version_number": "v1.0",
+    "publication_date": "2005-03-01T00:00:00.000",
+    "status": "Previous Major Version",
+    "description": "A version of OCTAVE geared specifically toward smaller organizations (under 100 people) that have simple or flat organizational structures.",
+    "coverage": "Organizational and Technological Risk Assessment",
+    "applicable_areas": "Small organizations (SMEs)."
+  }
+]
