@@ -1,0 +1,404 @@
+name,description,query,id,parentId,isFolder
+Constraints,,,0,,true
+Drop,,"DROP CONSTRAINT framework_id_unique;
+DROP CONSTRAINT category_framework_composite_unique;
+DROP CONSTRAINT control_framework_composite_unique;
+DROP CONSTRAINT attribute_framework_composite_unique;
+DROP CONSTRAINT guideline_framework_composite_unique;
+DROP CONSTRAINT clause_framework_composite_unique;
+DROP CONSTRAINT requirement_framework_composite_unique;",1,0,false
+Create,,"CREATE CONSTRAINT framework_id_unique FOR (f:Framework) REQUIRE f.framework_id IS UNIQUE;
+CREATE CONSTRAINT clause_framework_composite_unique FOR (c:Clause) REQUIRE (c.framework_id, c.clause_id) IS UNIQUE;
+CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.framework_id, ctrl.control_id) IS UNIQUE;
+CREATE CONSTRAINT requirement_framework_composite_unique FOR (r:Requirement) REQUIRE (r.framework_id, r.requirement_id) IS UNIQUE;
+CREATE CONSTRAINT control_category_framework_composite_unique FOR (cc:ControlCategory) REQUIRE (cc.framework_id, cc.category_id) IS UNIQUE;
+CREATE CONSTRAINT category_framework_composite_unique FOR (c:Category) REQUIRE (c.framework_id, c.category_id) IS UNIQUE;
+CREATE CONSTRAINT attribute_framework_composite_unique FOR (a:Attribute) REQUIRE (a.framework_id, a.attribute_id) IS UNIQUE;
+CREATE CONSTRAINT guideline_framework_composite_unique FOR (g:Guideline) REQUIRE (g.framework_id, g.guideline_id) IS UNIQUE;
+CREATE CONSTRAINT function_framework_composite_unique IF NOT EXISTS FOR (fn:Function) REQUIRE (fn.framework_id, fn.function_id) IS UNIQUE;
+CREATE CONSTRAINT subcategory_framework_composite_unique IF NOT EXISTS FOR (s:Subcategory) REQUIRE (s.framework_id, s.subcategory_id) IS UNIQUE;
+CREATE CONSTRAINT step_framework_composite_unique IF NOT EXISTS FOR (s:Step) REQUIRE (s.framework_id, s.step_id) IS UNIQUE;
+CREATE CONSTRAINT family_framework_composite_unique IF NOT EXISTS FOR (cf:ControlFamily) REQUIRE (cf.framework_id, cf.family_id) IS UNIQUE;
+CREATE CONSTRAINT role_framework_composite_unique IF NOT EXISTS FOR (r:Role) REQUIRE (r.framework_id, r.role_id) IS UNIQUE;
+CREATE CONSTRAINT system_framework_composite_unique IF NOT EXISTS FOR (sys:System) REQUIRE (sys.framework_id, sys.system_id) IS UNIQUE;",2,0,false
+List,,SHOW CONSTRAINTS;,3,0,false
+ISO 27001,,,4,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""ISO27001_2022""})-[*]->() RETURN path",5,4,false
+Get all Control,,"MATCH (co:Control) 
+WHERE co.framework_id = 
+""ISO27001_2022""
+RETURN co.control_id,co.control_name",6,4,false
+Get all Category Relations,,"MATCH (c:ControlCategory) 
+WHERE c.framework_id = 
+""ISO27001_2022""
+RETURN c.category_id,c.category_name",7,4,false
+Control category Relations - name,,"// replace <control_category_name>
+MATCH path = (cc:ControlCategory {category_name: ""<control_category_name>""})-[*]->()
+WHERE cc.framework_id = ""ISO27001_2022""
+RETURN path
+",8,4,false
+Control Category - ID,,"// replace ,<control_category_id
+MATCH path = (cc:ControlCategory {category_id:""<control_category_id>""})-[*]->()
+WHERE cc.framework_id = ""ISO27001_2022""
+RETURN path
+",9,4,false
+Get all Clause Relations,,"MATCH (cl:Clause) 
+WHERE cl.framework_id = 
+""ISO27001_2022""
+RETURN cl.clause_id,cl.title",10,4,false
+Clause relations - Title,,"// replace <clause_title>
+// replace <category> with ""main_clause"" or ""subclause""
+MATCH path = (c:Clause {title: ""<clause_title>""})-[*]->()
+WHERE c.framework_id = ""ISO27001_2022"" AND c.category = ""<category>""
+RETURN path",11,4,false
+Clause relations - ID,,"//replace <clause_id>
+MATCH path = (c:Clause {clause_id:""<clause_id>""})-[*]->()
+WHERE c.framework_id = ""ISO27001_2022"" AND c.category = ""<category>""
+RETURN path",12,4,false
+ISO 27002,,,13,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""ISO27002_2022""})-[*]->() RETURN path",14,13,false
+"  Get all Category Relations",,"MATCH (ca:Category) 
+WHERE ca.category_name IS NOT NULL AND ca.framework_id = 
+""ISO27002_2022""
+RETURN ca.category_id,ca.category_name,ca.category_code",15,13,false
+" Category  - name",,"// replace <category_name>
+MATCH path = (cc:Category {category_name: ""<category_name>""})-[*]->()
+WHERE cc.framework_id = ""ISO27002_2022""
+RETURN path
+",16,13,false
+Category - ID,,"// replace <category_name>
+MATCH path = (cc:Category {category_id:""<category_id>""})-[*]->()
+WHERE cc.framework_id = ""ISO27002_2022""
+RETURN path
+",17,13,false
+Category - Code,,"// replace <control_category_code>
+MATCH path = (cc:ControlCategory {category_code: ""<control_code>""})-[*]->()
+WHERE cc.framework_id = ""ISO27002_2022""
+RETURN path
+",18,13,false
+Get all Controls,,"MATCH (co:Control) 
+WHERE co.control_name IS NOT NULL AND co.framework_id = 
+""ISO27002_2022""
+RETURN co.control_id,co.control_name",19,13,false
+Control - Name,,"// replace <control_name>
+MATCH path = (co:Control {control_name: ""<control_name>""})-[*]->()
+WHERE co.framework_id = ""ISO27002_2022""
+RETURN path
+",20,13,false
+Control - ID,,"// replace <control_ID>
+MATCH path = (co:Control {control_id:""<control_id>""})-[*]->()
+WHERE co.framework_id = ""ISO27002_2022""
+RETURN path
+",21,13,false
+Get all Guideline Relations,,"MATCH (g:Guideline) 
+WHERE g.guideline_type IS NOT NULL AND g.framework_id = 
+""ISO27002_2022""
+RETURN g.guideline_id,g.guideline_type",22,13,false
+Guideline - ID,,"// replace <Guideline_ID>
+MATCH path = (g:Guideline {guideline_id: ""<guideline_id>""})-[*]->()
+WHERE g.framework_id = ""ISO27002_2022""
+RETURN path
+",23,13,false
+Guideline - Type,,"// replace <Guideline_type>
+MATCH path = (g:Guideline {guideline_type: ""<guideline_type>""})-[*]->()
+WHERE g.framework_id = ""ISO27002_2022"" AND gt.control_id=""<control_id>""
+RETURN path
+",24,13,false
+Get all Attributes Relations,,"MATCH (A:Attribute) 
+WHERE A.attribute_id IS NOT NULL AND A.framework_id = 
+""ISO27002_2022""
+RETURN A.attribute_id,A.attribute_value,A.attribute_type",25,13,false
+Attribute Relations - Value,,"// replace <attribute_value>
+
+MATCH path = (c:Attribute {attribute_value: ""<attribute_value>""})-[*]->()
+WHERE c.framework_id = ""ISO27002_2022"" 
+RETURN path",26,13,false
+Attribute Relations - ID,,"// replace <attribute_id>
+MATCH path = (c:Attribute {attribute_id:""<attribute_id>""})-[*]->()
+WHERE c.framework_id = ""ISO27002_2022""
+RETURN path",27,13,false
+Attribute Relations - Type,,"//replace <attribute_type>
+
+MATCH path = (c:Attribute {attribute_value: ""<attribute_value>""})-[*]->()
+WHERE c.framework_id = ""ISO27002_2022""
+RETURN path",28,13,false
+Delete All,,MATCH (n) DETACH DELETE n,29,,false
+Get All,,MATCH path = (:Framework)-[*]->() RETURN path,30,,false
+NIST AI RMF,,,31,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""NIST_AI_RMF_2023""})-[*]-() RETURN path",32,31,false
+Get all Subcategory,,"MATCH (sc:Subcategory) 
+WHERE sc.subcategory_id IS NOT NULL AND sc.framework_id = 
+""NIST_AI_RMF_2023""
+RETURN sc.subcategory_id,sc.name",33,31,false
+Get all Category Relations,,"MATCH (cr:Category) 
+WHERE  cr.function_id IS NOT NULL AND cr.name IS NOT NULL AND cr.category_id IS NOT NULL AND cr.framework_id = ""NIST_AI_RMF_2023""
+RETURN cr.category_id,cr.function_id,cr.name",34,31,false
+Category Relations - Name,,"// replace <name>,
+MATCH path = (cc:Category {name: ""<name>""})-[*]->()
+WHERE cc.framework_id =""NIST_AI_RMF_2023""
+RETURN path
+",35,31,false
+Category Relation - F_id,,"// replace <name>,<control_category_id>,<functiom_id>
+MATCH path = (cc:Category {function_id:""<function_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_AI_RMF_2023""
+RETURN path
+",36,31,false
+Category Relation - CC_ID,,"// replace<control_category_id>
+MATCH path = (cc:Category {category_id:""<control_category_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_AI_RMF_2023""
+RETURN path
+",37,31,false
+Get all Function Relations,,"MATCH (F:Function)
+WHERE F.function_id IS NOT NULL AND F.function_name IS NOT NULL AND F.framework_id = 
+""NIST_AI_RMF_2023""
+RETURN  F.function_id,F.function_name",38,31,false
+Function relations - Name,,"// replace <function_name>
+MATCH path = (f:Function {function_name: ""<function_name>""})-[*]->()
+WHERE f.framework_id =""NIST_AI_RMF_2023""
+RETURN path
+",39,31,false
+Function - ID,,"// replace<function_id>
+MATCH path = (f:Function {function_id:""<function_id>""})-[*]->()
+WHERE f.framework_id =""NIST_AI_RMF_2023""
+RETURN path
+",40,31,false
+NIST CSF,,,41,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""NIST_CSF_2.0""})-[*]-() RETURN path",42,41,false
+Get all Subcategory,,"MATCH (sc:Subcategory) 
+WHERE sc.description IS NOT NULL AND  sc.framework_id = 
+""NIST_CSF_2.0""
+RETURN sc.subcategory_id,sc.description",43,41,false
+Get all Category Relations,,"MATCH (cs:Category) 
+WHERE  cs.function_id IS NOT NULL AND cs.name IS NOT NULL AND cs.category_id IS NOT NULL  AND cs.framework_id = ""NIST_CSF_2.0""
+RETURN cs.category_id,cs.function_id,cs.name",44,41,false
+Category Relations - Name,,"// replace <control_category_name>
+MATCH path = (cc:Category {name: ""<name>""})-[*]->()
+WHERE cc.framework_id =""NIST_CSF_2.0""
+RETURN path
+",45,41,false
+Category Relations - ID,,"// replace ,<category_id>
+MATCH path = (cc:Category {category_id:""<control_category_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_CSF_2.0""
+RETURN path
+",46,41,false
+Category Relations - F_id,,"// replace<function_id>
+MATCH path = (cc:Category {function_id:""<function_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_CSF_2.0""
+RETURN path
+",47,41,false
+Get all Function Relations,,"MATCH (F:Function)
+WHERE F.function_id IS NOT NULL AND F.function_name IS NOT NULL AND F.framework_id= ""NIST_CSF_2.0""
+RETURN F.function_id,F.function_name",48,41,false
+Function Relations - Name,,"// replace <function_name>
+MATCH path = (f:Function {function_id:""<function_id>""})-[*]->()
+WHERE f.framework_id =""NIST_CSF_2.0""
+RETURN path
+",49,41,false
+Function  Relation- F_id,,"// replace <function_id>
+MATCH path = (f:Function {function_id:""<function_id>""})-[*]->()
+WHERE f.framework_id =""NIST_CSF_2.0""
+RETURN path
+",50,41,false
+NIST Privacy 1.0,,,51,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""NIST_PRIVACY_2020""})-[*]-() RETURN path",52,51,false
+Get all Subcategory,,"MATCH (sc:Subcategory) 
+WHERE sc.subcategory_id IS NOT NULL AND sc.framework_id = 
+""NIST_PRIVACY_2020""
+RETURN sc.subcategory_id,sc.name",53,51,false
+Get all Category Relations,,"MATCH (cp:Category) 
+WHERE  cp.function_id IS NOT NULL AND cp.name IS NOT NULL AND cp.category_id IS NOT NULL AND cp.framework_id = 
+""NIST_PRIVACY_2020""
+RETURN cp.function_id,cp.category_id,cp.name",54,51,false
+Category Relations - Name,,"// replace <name>
+MATCH path = (cc:Category {name: ""<name>""})-[*]->()
+WHERE cc.framework_id =""NIST_PRIVACY_2020""
+RETURN path
+",55,51,false
+Category Relations - F_id,,"// replace <function_id>
+MATCH path = (cc:Category {function_id:""<function_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_PRIVACY_2020""
+RETURN path
+",56,51,false
+Category Relations - C_id,,"// replace<category_id>
+MATCH path = (cc:Category {category_id:""<category_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_PRIVACY_2020""
+RETURN path
+",57,51,false
+Get all Function Relations,,"MATCH (F:Function)
+WHERE F.function_id IS NOT NULL AND F.function_name IS NOT NULL AND F.framework_id= ""NIST_PRIVACY_2020""
+RETURN F.function_id,F.name",58,51,false
+Function Relations - Name,,"// replace <function_name>
+MATCH path = (f:Function {function_name: ""<function_name>""})-[*]->()
+WHERE f.framework_id =
+""NIST_PRIVACY_2020""
+RETURN path
+",59,51,false
+Function  Relations- F_id,,"// replace <function_id>
+MATCH path = (f:Function {function_id:""<function_id>""})-[*]->()
+WHERE f.framework_id =""NIST_PRIVACY_2020""
+RETURN path
+",60,51,false
+NIST Privacy 1.1,,,61,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""NIST_PRIVACY_11_2025""})-[*]-() RETURN path",62,61,false
+Get all Subcategory,,"MATCH (sc:Subcategory) 
+WHERE sc.subcategory_name IS NOT NULL AND sc.subcategory_id IS NOT NULL AND  sc.framework_id = 
+""NIST_PRIVACY_11_2025""
+RETURN sc.subcategory_id, sc.subcategory_name",63,61,false
+Get all category relations,,"MATCH (cv:Category) 
+WHERE  cv.function_id IS NOT NULL AND cv.name IS NOT NULL AND cv.category_id IS NOT NULL AND  cv.framework_id=""NIST_PRIVACY_11_2025""
+RETURN cv.category_id,cv.function_id,cv.name",64,61,false
+Category Relations - Name,,"// replace <name>
+MATCH path = (cc:Category {name: ""<name>""})-[*]->()
+WHERE cc.framework_id =
+""NIST_PRIVACY_11_2025""
+RETURN path
+",65,61,false
+Category Relations - C_id,,"// replace<category_id>,
+MATCH path = (cc:Category {category_id:""<category_id>""})-[*]->()
+WHERE cc.framework_id =""NIST_PRIVACY_11_2025""
+RETURN path
+",66,61,false
+Category Relation - F_id,,"// replace <function_id>
+MATCH path = (cc:Category {function_id:""<function_id>""})-[*]->()
+WHERE cc.framework_id =
+""NIST_PRIVACY_11_2025""
+RETURN path
+",67,61,false
+Get all Function Relations,,"MATCH (f:Function)
+WHERE f.function_id IS NOT NULL AND f.function_name IS NOT NULL AND f.framework_id= ""NIST_PRIVACY_11_2025""
+RETURN f.function_id,f.name",68,61,false
+Function Relations - Name,,"// replace <function_name>
+MATCH path = (f:Function {function_name: ""<function_name>""})-[*]->()
+WHERE f.framework_id =""NIST_PRIVACY_11_2025""
+RETURN path
+",69,61,false
+Function Relations - ID,,"// replace<function_id>
+MATCH path = (f:Function {function_id:""<function_id>""})-[*]->()
+WHERE f.framework_id =""NIST_PRIVACY_11_2025""
+RETURN path
+",70,61,false
+NIST RMF,,,71,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""NIST_RMF_2018""})-[*]-() RETURN path",72,71,false
+Get all Controls,,"MATCH (co:Control) 
+WHERE co.name IS NOT NULL AND co.control_id IS NOT NULL AND  co.framework_id = 
+""NIST_RMF_2018""
+RETURN co.control_id,co.name",73,71,false
+Get all Control Family Relations,,"MATCH (cf:ControlFamily) 
+WHERE  cf.control_category IS NOT NULL AND cf.family_id IS NOT NULL AND cf.family_name IS NOT NULL AND  cf.framework_id=""NIST_RMF_2018""
+RETURN cf.family_id,cf.family_name,cf.control_category",74,71,false
+Control Family  - Name,,"// replace<family_name>
+MATCH path = (f:ControlFamily {family_name: ""<family_name>""})-[*]->()
+WHERE f.framework_id= ""NIST_RMF_2018""
+RETURN path
+",75,71,false
+Control Family - Control_Category,,"// replace <Control_category>
+MATCH path = (cc:ControlFamily {control_category: ""<control_category>""})-[*]->()
+WHERE cc.framework_id= ""NIST_RMF_2018""
+RETURN path
+",76,71,false
+Control Family - Fa_id,,"// replace<family_id>
+MATCH path = (f:ControlFamily {family_id: ""<family_id>""})-[*]->()
+WHERE f.framework_id= ""NIST_RMF_2018""
+RETURN path
+",77,71,false
+Get all Step Relations,,"MATCH (st:Step) 
+WHERE  st.step_name IS NOT NULL AND st.step_id IS NOT NULL AND  st.framework_id=""NIST_RMF_2018""
+RETURN st.step_id,st.step_name",78,71,false
+Step -Name,,"// replace<step_name>
+MATCH path = (s:Step {step_name: ""<step_name>""})-[*]->()
+WHERE s.framework_id= ""NIST_RMF_2018""
+RETURN path
+",79,71,false
+Step- ID,,"// replace<step_id>
+MATCH path = (s:Step {step_id: ""<step_id>""})-[*]->()
+WHERE s.framework_id= ""NIST_RMF_2018""
+RETURN path
+",80,71,false
+Get all Role Relations,,"MATCH (R:Role) 
+WHERE  R.role_id IS NOT NULL AND R.role_title IS NOT NULL AND R.role_type IS NOT NULL AND R.framework_id=""NIST_RMF_2018""
+RETURN R.role_type,R.role_id",81,71,false
+Role - ID,,"// replace<role_id>
+MATCH path = (r:Role {role_id: ""<role_id>""})-[*]->()
+WHERE r.framework_id= ""NIST_RMF_2018""
+RETURN path
+",82,71,false
+Role - Title,,"// replace<role_title>
+MATCH path = (r:Role {role_title: ""<role_title>""})-[*]->()
+WHERE r.framework_id= ""NIST_RMF_2018""
+RETURN path
+",83,71,false
+Role - Type,,"// replace<role_type>
+MATCH path = (r:Role {role_type: ""<role_type>""})-[*]->()
+WHERE r.framework_id= ""NIST_RMF_2018""
+RETURN path
+",84,71,false
+HIPPA,,,85,,true
+Full Graph,,"MATCH path = (:Framework {framework_id: ""HIPAA""})-[*]->() RETURN path",86,85,false
+Get all standards,,"MATCH (s:Standard)
+WHERE s.framework_id = ""HIPAA"" AND s.standard_id IS NOT NULL
+RETURN DISTINCT s.standard_id AS id, s.type AS type",87,85,false
+Standard - ID,,"MATCH (s:Standard) 
+WHERE s.framework_id = ""HIPAA""
+RETURN s.standard_id",88,85,false
+Standard - Type,,"MATCH (s:Standard) 
+WHERE s.framework_id = ""HIPAA""
+RETURN s.type",89,85,false
+Get all Mappings,,"MATCH (m:Mapping)
+WHERE m.framework_id = ""HIPAA"" AND m.mapping_id IS NOT NULL
+RETURN DISTINCT m.mapping_id AS id, m.type AS type",90,85,false
+Mapping - ID,,"MATCH (m:Mapping) 
+WHERE m.framework_id = ""HIPAA""
+RETURN m.mapping_id",91,85,false
+Mapping - Type,,"MATCH (m:Mapping) 
+WHERE m.framework_id = ""HIPAA""
+RETURN m.type",92,85,false
+HITRUST,,,93,,true
+Full Graph,,"MATCH path = (:Standard {standard_id: ""HITRUST""})-[*]->() RETURN path",94,93,false
+Get all standards,,"MATCH (s:Standard)
+WHERE s.standard_id = ""HITRUST"" AND s.type IS NOT NULL
+RETURN DISTINCT s.standard_name AS name, s.type AS type , s.version AS version",95,93,false
+Standard - Name,,"MATCH (s:Standard) 
+WHERE s.standard_id = ""HITRUST""
+RETURN s.standard_name",96,93,false
+Standard - type,,"MATCH (s:Standard) 
+WHERE s.standard_id = ""HITRUST""
+RETURN s.type",97,93,false
+Standard - version,,"MATCH (s:Standard) 
+WHERE s.standard_id = ""HITRUST""
+RETURN s.version",98,93,false
+Get all categories,,"MATCH (c:Category)
+WHERE c.standard_id = ""HITRUST""  AND c.name IS NOT NULL
+RETURN DISTINCT c.name AS Category_name, c.category_id AS Category_id",99,93,false
+Category - Name,,"MATCH (c:Category) 
+WHERE c.standard_id = ""HITRUST""
+RETURN c.name",100,93,false
+Category - ID,,"MATCH (c:Category) 
+WHERE c.standard_id = ""HITRUST""
+RETURN c.category_id",101,93,false
+Get all Controls,,"MATCH (ctrl:Control)
+WHERE ctrl.standard_id = ""HITRUST""  AND ctrl.name IS NOT NULL
+RETURN DISTINCT ctrl.name AS Control_name, ctrl.control_id AS Control_id",102,93,false
+Control - Name,,"MATCH (ctrl:Control) 
+WHERE ctrl.standard_id = ""HITRUST"" 
+RETURN ctrl.name",103,93,false
+Control - ID,,"MATCH (ctrl:Control) 
+WHERE ctrl.standard_id = ""HITRUST"" 
+RETURN ctrl.control_id",104,93,false
+Get all ControlObjectives,,"MATCH (co:ControlObjective)
+WHERE co.standard_id = ""HITRUST""  AND co.control_id IS NOT NULL
+RETURN DISTINCT co.control_id AS ControlObjective_id, co.description AS Control_description",105,93,false
+ControlObjectives  - ID,,"MATCH (co:ControlObjective) 
+WHERE co.standard_id = ""HITRUST""
+RETURN co.control_id AS ControlObjective_id",106,93,false
+ControlObjective - Description,,"MATCH (co:ControlObjective) 
+WHERE co.standard_id = ""HITRUST""
+RETURN co.description AS ControlObjective_description",107,93,false
+Get all ControlSpecification,,"MATCH (cs:ControlSpecification)
+WHERE cs.standard_id = ""HITRUST""  AND cs.control_id IS NOT NULL
+RETURN DISTINCT cs.control_id AS ControlObjective_id, cs.description AS Control_description",108,93,false
+ControlSpecification - ID,,"MATCH (cs:ControlSpecification) 
+WHERE cs.standard_id = ""HITRUST""
+RETURN cs.control_id AS ControlSpecification_id",109,93,false
+" ControlSpecification - Description",,"MATCH (cs:ControlSpecification) 
+WHERE cs.standard_id = ""HITRUST""
+RETURN cs.description AS ControlSpecification_description",110,93,false
