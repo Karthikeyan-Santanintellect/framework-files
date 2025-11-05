@@ -9,7 +9,7 @@ ON CREATE SET
     s.description = "It integrates multiple standards, such as HIPAA, ISO, and PCI, into a single, comprehensive framework to safeguard sensitive data";
 """
 
-#Load HITRUST Category
+# Load HITRUST Category
 hitrust_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (c:Category {standard_id: 'HITRUST', category_id: row.id})
@@ -18,7 +18,7 @@ ON CREATE SET
     c.name = row.name,
     c.description = row.description;
 """
-#Load HITRUST Control
+# Load HITRUST Control
 hitrust_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (ctrl:Control {standard_id: 'HITRUST', control_id: row.id})
@@ -27,7 +27,7 @@ ON CREATE SET
     ctrl.category_id = row.category_id,
     ctrl.description = row.description;
 """
-#Load HITRUST Control_objective
+# Load HITRUST Control_objective
 hitrust_control_objective = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (co:ControlObjective {standard_id: 'HITRUST', objective_id: row.id})
@@ -35,7 +35,7 @@ ON CREATE SET
     co.control_id = row.control_id,
     co.description = row.text;
 """
-#Load HITRUST Control_specification
+# Load HITRUST Control_specification
 hitrust_control_specification = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cs:ControlSpecification {standard_id: 'HITRUST', specification_id: row.id})
@@ -44,7 +44,7 @@ ON CREATE SET
     cs.description = row.text;
 """
 
-#Create CONTAINS relationships (standard -> category)
+# Create CONTAINS relationships (standard -> category)
 hitrust_standard_category_rel = """
 MATCH (s:Standard {standard_id: 'HITRUST'})
 MATCH (c:Category {standard_id: 'HITRUST'})
@@ -80,10 +80,6 @@ MATCH (sc:Subcategory {framework_id: 'NIST_CSF_2.0',subcategory_id: row.end_id})
 MERGE (ctrl)-[:MAPS_TO]->(sc);
 """
 
-
-
-
-
 import os
 import time
 import logging
@@ -104,31 +100,39 @@ logger.info("Loading graph structure...")
 client.query(standard)
 time.sleep(2)
 
-client.query(hitrust_category.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Category.csv"))
+client.query(hitrust_category.replace('$file_path',
+                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Category.csv"))
 time.sleep(2)
 
-client.query(hitrust_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
+client.query(hitrust_control.replace('$file_path',
+                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
 time.sleep(2)
 
-client.query(hitrust_control_objective.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlObjective.csv"))
+client.query(hitrust_control_objective.replace('$file_path',
+                                               "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlObjective.csv"))
 time.sleep(2)
 
-client.query(hitrust_control_specification.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
+client.query(hitrust_control_specification.replace('$file_path',
+                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
 time.sleep(2)
 
 client.query(hitrust_standard_category_rel)
 time.sleep(2)
 
-client.query(hitrust_category_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_CONTROL.csv"))
+client.query(hitrust_category_control.replace('$file_path',
+                                              "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_CONTROL.csv"))
 time.sleep(2)
 
-client.query(hitrust_control_ControlObjective.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_OBJECTIVE.csv"))
+client.query(hitrust_control_ControlObjective.replace('$file_path',
+                                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_OBJECTIVE.csv"))
 time.sleep(2)
 
-client.query(hitrust_ControlObjective_specification.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_SPECIFICATION.csv"))
+client.query(hitrust_ControlObjective_specification.replace('$file_path',
+                                                            "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_SPECIFICATION.csv"))
 time.sleep(2)
 
-client.query(hitrust_controls_maps_nist_CSF.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+client.query(hitrust_controls_maps_nist_CSF.replace('$file_path',
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")

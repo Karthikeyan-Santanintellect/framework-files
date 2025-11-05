@@ -57,11 +57,10 @@ MATCH (sc:Subcategory {subcategory_id: row.csf_subcategory_id, framework_id: "NI
 MERGE (s)-[:MAPS_TO {mapping_type: row.mapping_type, confidence: row.confidence}]->(m)-[:TARGET]->(sc);
 """
 
-
 import os
 import time
 import logging
-from App.app import Neo4jConnect
+from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -78,19 +77,23 @@ logger.info("Loading graph structure...")
 client.query(framework)
 time.sleep(2)
 
-client.query(hipaa_standards.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_standards.csv'))
+client.query(hipaa_standards.replace('$file_path',
+                                     'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_standards.csv'))
 time.sleep(2)
 
-client.query(mappings.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
+client.query(mappings.replace('$file_path',
+                              'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
 time.sleep(2)
 
 client.query(framework_hipaa_standards_rel)
 time.sleep(2)
 
-client.query(hipaa_parent_child_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_standards.csv'))
+client.query(hipaa_parent_child_rel.replace('$file_path',
+                                            'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_standards.csv'))
 time.sleep(2)
 
-client.query(hippa_subcategory_mapping_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
+client.query(hippa_subcategory_mapping_rel.replace('$file_path',
+                                                   'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")

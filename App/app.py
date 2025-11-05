@@ -6,9 +6,9 @@ from neo4j import GraphDatabase
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-URL = 'neo4j+ssc://b5e7a476.databases.neo4j.io'
+URL = 'neo4j+ssc://e03b6885.databases.neo4j.io'
 USER = 'neo4j'
-PASSWORD = "z8JxqCCl8pOYuhCtPNA8-ds3TpBwnZQ8Olqj3P-bjBU"
+PASSWORD = "lsZrr90TxFqKxkJACLYUz0UNY2jvnyKFsAL5KzwuS3Q"
 
 
 class Neo4jConnect:
