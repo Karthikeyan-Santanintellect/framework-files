@@ -120,13 +120,6 @@ MATCH (p:Paragraph {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:CONTAINS_PARAGRAPH {order: toInteger(row.order)}]->(p);
 """
 
-#Create REFERENCES relationship
-gdpr_references = """
-MATCH (p:Paragraph {regulation_id: 'GDPR', id: row.start_id})
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (p)-[:REFERENCES {referenceType: row.referenceType, sourceTextSnippet: row.sourceTextSnippet}]->(ar);
-"""
-
 #Create PROVIDES_CONTEXT_FOR relationships
 gdpr_provides_context_for = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -270,10 +263,6 @@ time.sleep(2)
 
 client.query(gdpr_contains_paragraph.replace('$file_path',
                                                             "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_PARAGRAPH.csv"))
-time.sleep(2)
-
-client.query(gdpr_references.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/REFERENCES.csv"))
 time.sleep(2)
 
 client.query(gdpr_provides_context_for.replace('$file_path',
