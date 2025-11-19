@@ -240,12 +240,6 @@ time.sleep(2)
 client.query(pcidss_publishes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_publishes.csv"))
 time.sleep(2)
 
-client.query(pcidss_IS_revision_of.replace('$file_path',  "vhttps://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_is_revision_of.csv"))
-time.sleep(2)
-
-client.query(pcidss_superedes.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_supersedes.csv"))
-time.sleep(2)
-
 client.query(pcidss_has_group.replace('$file_path',   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_group.csv"))
 time.sleep(2)
 
