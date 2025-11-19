@@ -11,89 +11,92 @@ ON CREATE SET
     r.jurisdiction = "EU/EEA",
     r.description = "Comprehensive European regulation governing data protection and privacy for all individuals within the European Union and the European Economic Area";
 """
-#Create GDPR framework Node
+
+#Create GDPR framework Node 
 gdpr_framework = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Framework {regulation_id: 'GDPR',framework_id : row.id})
+MERGE (f:Framework {regulation_id: 'GDPR', id: row.id})
 ON CREATE SET
-    r.framework_name = row.name,
-    r.version = row.version,
-    r.effective_date = date(row.effective_date),
-    r.jurisdiction = row.jurisdiction,
-    r.description = row.description;
-"""
-#Create GDPR reticle 
-gdpr_reticle = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ret:Reticle{regulation_id: 'GDPR',reticle_id : row.id})
-ON CREATE SET
-    ret.number : toInteger(row.reticleNumber),
-    ret.name : row.name,
-    ret.description : row.description;
+    f.name = row.name,
+    f.version = row.version,
+    f.effective_date = date(row.effectiveDate),
+    f.jurisdiction = row.jurisdiction,
+    f.description = row.description;
 """
 
-#Create GDPR chapter
+#Create GDPR recital 
+gdpr_recital = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ret:Recital {regulation_id: 'GDPR', id: row.id})
+ON CREATE SET
+    ret.recitalNumber = toInteger(row.recitalNumber),
+    ret.name = row.name,
+    ret.description = row.description;
+"""
+
+#Create GDPR chapter 
 gdpr_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ch:Chapter{regulation_id: 'GDPR',chapter_id : row.id})
+MERGE (ch:Chapter {regulation_id: 'GDPR', id: row.id})
 ON CREATE SET
-    ch.number : toInteger(row.chapter_num),
-    ch.name : row.name,
-    ch.description : row.description;
+    ch.chapterNumber = toInteger(row.chapterNum),
+    ch.name = row.name,
+    ch.description = row.description;
 """
 
-#Create GDPR article
+#Create GDPR article 
 gdpr_article = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ar:Article{regulation_id: 'GDPR',article_id : row.id})
+MERGE (ar:Article {regulation_id: 'GDPR', id: row.id})
 ON CREATE SET
-    ar.id = row.article_id,
+    ar.articleId = row.articleId,
     ar.name = row.name,
     ar.chapter_id = row.chapter_id,
     ar.chapter_name = row.chapter_name,
     ar.description = row.description;
 """
 
-#Create GDPR concept
+#Create GDPR concept 
 gdpr_concept = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Concept{regulation_id: 'GDPR',concept_id : row.id})
+MERGE (co:Concept {regulation_id: 'GDPR', id: row.id})
 ON CREATE SET
-    co.name : row.name,
-    co.category : row.category,
-    co.description : row.description;
+    co.name = row.name,
+    co.category = row.category,
+    co.description = row.description;
 """
-#Create GDPR Legislative action
+
+#Create GDPR Legislative action 
 gdpr_legislative_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (l:Legislative_action{regulation_id: 'GDPR', legislative_action_id : row.id})
+MERGE (l:LegislativeAction {regulation_id: 'GDPR', id: row.id})
 ON CREATE SET
-    l.name : row.name,
-    l.date : date(row.proposal_date),
-    l.status : row.status,
-    l.description : row.description;
+    l.name = row.name,
+    l.proposalDate = date(row.proposalDate),
+    l.status = row.status,
+    l.description = row.description;
 """
 
 #Create GDPR Paragraph 
 gdpr_paragraph = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Paragraph{regulation_id: 'GDPR', paragraph_id : row.id})
+MERGE (p:Paragraph {regulation_id: 'GDPR', id: row.id})
 ON CREATE SET
-    paragraph_id : row.paragraph_id,
-    name : row.name,
-    article_id : row.article_id,
-    article_name : row.article_name,
-    description : row.description;
+    p.paragraphId = row.paragraphId,
+    p.name = row.name,
+    p.article_id = row.article_id,
+    p.article_name = row.article_name,
+    p.description = row.description;
 """
+
 #Create REGULATION_HAS_FRAMEWORK
 gdpr_regulation_framework = """
 MATCH (r:Regulation {regulation_id: 'GDPR'})
-MATCH (f:Framework {regulation_id: 'GDPR''})
+MATCH (f:Framework {regulation_id: 'GDPR'})
 MERGE (r)-[:HAS_FRAMEWORK]->(f);
 """
 
-
-#Create HAS_CHAPTER relationship
+#Create HAS_CHAPTER relationship 
 gdpr_has_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (f:Framework {regulation_id: 'GDPR', id: row.start_id})
@@ -116,34 +119,28 @@ MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (p:Paragraph {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:CONTAINS_PARAGRAPH {order: toInteger(row.order)}]->(p);
 """
+
 #Create REFERENCES relationship
 gdpr_references = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (p:Paragraph {regulation_id: 'GDPR', id: row.start_id})
 MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (p)-[:REFERENCES {
-    referenceType: row.referenceType,
-    sourceTextSnippet: row.sourceTextSnippet
-}]->(ar);
+MERGE (p)-[:REFERENCES {referenceType: row.referenceType, sourceTextSnippet: row.sourceTextSnippet}]->(ar);
 """
+
 #Create PROVIDES_CONTEXT_FOR relationships
 gdpr_provides_context_for = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ret:Recital {regulation_id: 'GDPR', id: row.start_id})
 MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ret)-[:PROVIDES_CONTEXT_FOR {
-    relevanceScore: toFloat(row.relevanceScore)
-}]->(ar);
+MERGE (ret)-[:PROVIDES_CONTEXT_FOR {relevanceScore: toFloat(row.relevanceScore)}]->(ar);
 """
 
-#Create SPECIALIZES_PROVISONS_OF relations
+#Create SPECIALIZES_PROVISIONS_OF relations
 gdpr_specializes_provisions_of = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (f:Framework {id: row.start_id})
 MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (f)-[:SPECIALIZES_PROVISIONS_OF {
-    context: row.context
-}]->(ar);
+MERGE (f)-[:SPECIALIZES_PROVISIONS_OF {context: row.context}]->(ar);
 """
 
 #Create DEFINES_CONCEPT relations
@@ -153,6 +150,7 @@ MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:DEFINES_CONCEPT]->(co);
 """
+
 #Create IMPLEMENTS_PRINCIPLE relation
 gdpr_implements_principle = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -160,6 +158,7 @@ MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:IMPLEMENTS_PRINCIPLE]->(co);
 """
+
 #Create ESTABLISHES_CRITERIA relation
 gdpr_establishes_criteria = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -167,13 +166,15 @@ MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:ESTABLISHES_CRITERIA]->(co);
 """
-#Create MANDATES_REQUIREMENTS relation
+
+#Create MANDATES_REQUIREMENT relation
 gdpr_mandates_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:MANDATES_REQUIREMENT]->(co);
 """
+
 #Create DEFINES_RESPONSIBILITY relation
 gdpr_defines_responsibility = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -189,25 +190,21 @@ MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
 MERGE (ar)-[:GOVERNS_PROCEDURE]->(co);
 """
-#Create REQUIRE_ACTION relation
+
+#Create REQUIRES_ACTION relation
 gdpr_requires_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
 MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:REQUIRES_ACTION {
-    action: row.action
-}]->(co);
+MERGE (ar)-[:REQUIRES_ACTION {action: row.action}]->(co);
 """
 
-#Create AFFECTS_PROVISON relation
+#Create AFFECTS_PROVISION relation (
 gdpr_affects_provision = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (l:LegislativeAction {regulation_id: 'GDPR', id: row.start_id})
 MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (l)-[:AFFECTS_PROVISION {
-    changeType: row.changeType,
-    description: row.description
-}]->(ar);
+MERGE (l)-[:AFFECTS_PROVISION {changeType: row.changeType, description: row.description}]->(ar);
 """
 
 import os
@@ -231,92 +228,92 @@ client.query(regulation)
 time.sleep(2)
 
 client.query(gdpr_framework.replace('$file_path',
-                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Category.csv"))
+                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_Framework.csv"))
 time.sleep(2)
 
-client.query(gdpr_reticle.replace('$file_path',
-                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
+client.query(gdpr_recital.replace('$file_path',
+                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_Recital.csv"))
 time.sleep(2)
 
 
 client.query(gdpr_chapter.replace('$file_path',
-                                               "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlObjective.csv"))
+                                               "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_Chapter.csv"))
 time.sleep(2)
 
 client.query(gdpr_article.replace('$file_path',
-                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
+                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_Article.csv"))
 time.sleep(2)
 
 client.query(gdpr_concept.replace('$file_path',
-                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
+                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_Concept.csv"))
 time.sleep(2)
 
 client.query(gdpr_legislative_action.replace('$file_path',
-                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
+                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_LegislativeAction.csv"))
 time.sleep(2)
 
 client.query(gdpr_paragraph.replace('$file_path',
-                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
+                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR_Paragraph.csv"))
 time.sleep(2)
 
 
-client.query(gdpr_regulation_frameworkl)
+client.query(gdpr_regulation_framework)
 time.sleep(2)
 
 client.query(gdpr_has_chapter.replace('$file_path',
-                                              "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_CONTROL.csv"))
+                                              "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/HAS_CHAPTER.csv"))
 time.sleep(2)
 
 client.query(gdpr_contains_article.replace('$file_path',
-                                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_OBJECTIVE.csv"))
+                                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_ARTICLE.csv"))
 time.sleep(2)
 
 client.query(gdpr_contains_paragraph.replace('$file_path',
-                                                            "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_SPECIFICATION.csv"))
+                                                            "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_PARAGRAPH.csv"))
 time.sleep(2)
 
 client.query(gdpr_references.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/REFERENCES.csv"))
 time.sleep(2)
 
 client.query(gdpr_provides_context_for.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/PROVIDES_CONTEXT_FOR.csv"))
 time.sleep(2)
 
 client.query(gdpr_specializes_provisions_of.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/SPECIALIZES_PROVISIONS_OF.csv"))
 time.sleep(2)
 
 client.query(gdpr_defines_concept.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/DEFINES_CONCEPT.csv"))
 time.sleep(2)
 
 client.query(gdpr_implements_principle.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/IMPLEMENTS_PRINCIPLE.csv"))
 time.sleep(2)
 
 client.query(gdpr_establishes_criteria.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/ESTABLISHES_CRITERIA.csv"))
 time.sleep(2)
 
 client.query(gdpr_mandates_requirement.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/MANDATES_REQUIREMENT.csv"))
 time.sleep(2)
 
 client.query(gdpr_defines_responsibility.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/DEFINES_RESPONSIBILITY.csv"))
 time.sleep(2)
 
 client.query(gdpr_governs_procedure.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GOVERNS_PROCEDURE.csv"))
 time.sleep(2)
 
 client.query(gdpr_requires_action.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/REQUIRES_ACTION.csv"))
 time.sleep(2)
 
 client.query(gdpr_affects_provision.replace('$file_path',
-                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
+                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/AFFECTS_PROVISION.csv"))
 time.sleep(2)
 
 
