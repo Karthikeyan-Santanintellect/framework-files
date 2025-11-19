@@ -1,0 +1,6 @@
+name,guidance_id,related_subrequirement
+Clear definition of roles prevents confusion and ensures accountability,G-1.2.1,1.2.1
+Unique user IDs enable tracing actions to specific individuals,G-8.1.1,8.1.1
+MFA significantly reduces risk of unauthorized access through compromised credentials,G-8.3.1,8.3.1
+Minimizing stored data reduces exposure in the event of a breach,G-3.2.1,3.2.1
+Timely identification of vulnerabilities is critical to maintaining security posture,G-6.1.1,6.1.1

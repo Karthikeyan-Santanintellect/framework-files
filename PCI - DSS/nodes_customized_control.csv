@@ -1,0 +1,4 @@
+name,control_id,description,owner,implementation_date,related_objective_req_id
+Behavioral Biometrics MFA,CC-001,Behavioral biometrics system analyzing keystroke dynamics and mouse movements,Authentication Team,2024-09-01,8.3.1
+Homomorphic Encryption Storage,CC-002,Encryption system allowing computation on encrypted cardholder data,Data Security Team,2024-10-15,3.2.1
+AI-Powered Vulnerability Scanner,CC-003,Machine learning-based vulnerability identification and prioritization system,Security Operations,2024-07-20,6.1.1

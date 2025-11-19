@@ -1,0 +1,13 @@
+name,req_id,requirement_group
+Install and Maintain Network Security Controls,1,RG1
+Apply Secure Configurations to All System Components,2,RG1
+Protect Stored Account Data,3,RG2
+"Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks",4,RG2
+Protect All Systems and Networks from Malicious Software,5,RG3
+Develop and Maintain Secure Systems and Software,6,RG3
+Restrict Access to System Components and Cardholder Data by Business Need to Know,7,RG4
+Identify Users and Authenticate Access to System Components,8,RG4
+Restrict Physical Access to Cardholder Data,9,RG4
+Log and Monitor All Access to System Components and Cardholder Data,10,RG5
+Test Security of Systems and Networks Regularly,11,RG5
+Support Information Security with Organizational Policies and Programs,12,RG6

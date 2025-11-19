@@ -1,0 +1,16 @@
+name,req_id,milestone,becomes_mandatory_on
+Configuration standards are defined and implemented,1.1.2,1,2025-03-31
+Roles and responsibilities are assigned,1.2.1,1,2025-03-31
+Account data storage is kept to minimum,3.2.1,2,2025-03-31
+Processes established for addressing security vulnerabilities,6.1.1,1,2025-03-31
+All users are assigned a unique ID,8.1.1,1,2025-03-31
+Multi-factor authentication established,8.3.1,3,2025-03-31
+Configuration standards are defined,1.1.2.b,1,2025-03-31
+Roles documented and assigned,1.2.1.a,1,2025-03-31
+Responsibilities communicated,1.2.1.b,1,2025-03-31
+Retain cardholder data minimally,3.1.1,2,2025-03-31
+Security patches identified and installed,6.2.1,1,2025-03-31
+Strong authentication implemented,8.2.1,3,2025-03-31
+Audit policies and procedures defined,10.1.1,1,2025-03-31
+Security testing processes implemented,11.1.1,2,2025-03-31
+Information security policy established,12.1.1,1,2025-03-31

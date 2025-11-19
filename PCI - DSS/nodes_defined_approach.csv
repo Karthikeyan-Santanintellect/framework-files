@@ -1,0 +1,6 @@
+name,req_id
+"Roles and responsibilities for Requirement 1 are documented, assigned, and understood",1.2.1
+Each user must be assigned a unique ID before allowing them to access system components,8.1.1
+Multi-factor authentication (MFA) must be incorporated into the CDE for all access,8.3.1
+Account data storage is kept to a minimum through implementation of data retention policies,3.2.1
+Security vulnerability identification processes are defined and maintained,6.1.1
