@@ -1,0 +1,5 @@
+start_id,end_id,relationship_type,order
+framework_1,chapter_1,HAS_CHAPTER,1
+framework_1,chapter_2,HAS_CHAPTER,2
+framework_1,chapter_3,HAS_CHAPTER,3
+framework_1,chapter_4,HAS_CHAPTER,4

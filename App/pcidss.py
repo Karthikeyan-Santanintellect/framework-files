@@ -273,5 +273,11 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
+res=client.query("MATCH path = (:Standard {standard_id: 'PCI-DSS'})-[*]->() return path")
+
+import json
+with open('pci-dss.json', 'w', encoding='utf-8') as f:
+  f.write(json.dumps(res, default=str))
+
 client.close()
 

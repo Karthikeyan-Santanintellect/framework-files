@@ -311,6 +311,12 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
+res=client.query("MATCH path = (:Regulation {regulation_id: 'GDPR'})-[*]->() return path")
+
+import json
+with open('gdpr.json', 'w', encoding='utf-8') as f:
+  f.write(json.dumps(res, default=str))
+
 client.close()
 
 
