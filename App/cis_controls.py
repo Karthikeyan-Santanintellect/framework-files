@@ -62,14 +62,14 @@ ON CREATE SET
 # 1.CREATE FRAMEWORK -> GOVERNING BODY RELATIONSHIPS 
 framework_governing_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {name: row.from_node_id})
+MATCH (f:Framework {framework_id: row.from_node_id}) 
 MATCH (gb:GoverningBody {name: row.to_node_id})
 MERGE (f)-[:PUBLISHED_BY]->(gb);
 """
 # 2.CREATE FRAMEWORK -> CONTROL RELATIONSHIPS 
 framework_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {name: row.from_node_id})
+MATCH (f:Framework {framework_id: row.from_node_id})
 MATCH (c:Control {control_id: row.to_node_id})
 MERGE (f)-[:HAS_CONTROL]->(c);
 """
@@ -123,44 +123,44 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework.replace('$file_path',))
+client.query(framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_framework.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_controls.csv"))
 time.sleep(2)
 
-client.query(safeguards.replace('$file_path',))
+client.query(safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_safeguards.csv"))
 time.sleep(2)
 
-client.query(asset_class.replace('$file_path',))
+client.query(asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_asset_class.csv"))
 time.sleep(2)
 
-client.query(security_function.replace('$file_path',))
+client.query(security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_security_function.csv"))
 time.sleep(2)
 
-client.query(implementation_group.replace('$file_path',))
+client.query(implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_implementation_group.csv"))
 time.sleep(2)
 
-client.query(governing_body.replace('$file_path',))
+client.query(governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_governing_body.csv"))
 time.sleep(2)
 
-client.query(framework_governing_body.replace('$file_path',))
+client.query(framework_governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_governing_body.csv"))
 time.sleep(2)
 
-client.query(framework_control.replace('$file_path',))
+client.query(framework_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_governing_body.csv"))
 time.sleep(2)
 
-client.query(control_safeguard.replace('$file_path',))
+client.query(control_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_governing_body.csv"))
 time.sleep(2)
 
 
-client.query(safeguard_implementation_group.replace('$file_path',))
+client.query(safeguard_implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_safeguard_to_implementation_group.csv"))
 time.sleep(2)
 
-client.query(safeguard_asset_class.replace('$file_path',))
+client.query(safeguard_asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_safeguard_to_asset_class.csv"))
 time.sleep(2)
 
-client.query(safeguard_security_function.replace('$file_path',))
+client.query(safeguard_security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_safeguard_to_security_function.csv"))
 time.sleep(2)
 
 
