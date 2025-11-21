@@ -1,0 +1,89 @@
+Node_Type,Node_ID,Paragraph_Number,Article,Article_ID,Description
+Paragraph,PARA-004-01,1,4,ART-004,Definition 1
+Paragraph,PARA-004-02,2,4,ART-004,Definition 2
+Paragraph,PARA-004-03,3,4,ART-004,Definition 3
+Paragraph,PARA-004-04,4,4,ART-004,Definition 4
+Paragraph,PARA-004-05,5,4,ART-004,Definition 5
+Paragraph,PARA-004-06,6,4,ART-004,Definition 6
+Paragraph,PARA-004-07,7,4,ART-004,Definition 7
+Paragraph,PARA-004-08,8,4,ART-004,Definition 8
+Paragraph,PARA-004-09,9,4,ART-004,Definition 9
+Paragraph,PARA-004-10,10,4,ART-004,Definition 10
+Paragraph,PARA-004-11,11,4,ART-004,Definition 11
+Paragraph,PARA-004-12,12,4,ART-004,Definition 12
+Paragraph,PARA-004-13,13,4,ART-004,Definition 13
+Paragraph,PARA-004-14,14,4,ART-004,Definition 14
+Paragraph,PARA-004-15,15,4,ART-004,Definition 15
+Paragraph,PARA-004-16,16,4,ART-004,Definition 16
+Paragraph,PARA-004-17,17,4,ART-004,Definition 17
+Paragraph,PARA-004-18,18,4,ART-004,Definition 18
+Paragraph,PARA-004-19,19,4,ART-004,Definition 19
+Paragraph,PARA-004-20,20,4,ART-004,Definition 20
+Paragraph,PARA-004-21,21,4,ART-004,Definition 21
+Paragraph,PARA-004-22,22,4,ART-004,Definition 22
+Paragraph,PARA-004-23,23,4,ART-004,Definition 23
+Paragraph,PARA-004-24,24,4,ART-004,Definition 24
+Paragraph,PARA-004-25,25,4,ART-004,Definition 25
+Paragraph,PARA-004-26,26,4,ART-004,Definition 26
+Paragraph,PARA-005-01,1,5,ART-005,Principles paragraph 1
+Paragraph,PARA-005-02,2,5,ART-005,Principles paragraph 2
+Paragraph,PARA-006-01,1,6,ART-006,Lawfulness paragraph 1
+Paragraph,PARA-006-02,2,6,ART-006,Lawfulness paragraph 2
+Paragraph,PARA-006-03,3,6,ART-006,Lawfulness paragraph 3
+Paragraph,PARA-006-04,4,6,ART-006,Lawfulness paragraph 4
+Paragraph,PARA-009-01,1,9,ART-009,Special categories paragraph 1
+Paragraph,PARA-009-02,2,9,ART-009,Special categories paragraph 2
+Paragraph,PARA-009-03,3,9,ART-009,Special categories paragraph 3
+Paragraph,PARA-009-04,4,9,ART-009,Special categories paragraph 4
+Paragraph,PARA-013-01,1,13,ART-013,Information provision paragraph 1
+Paragraph,PARA-013-02,2,13,ART-013,Information provision paragraph 2
+Paragraph,PARA-015-01,1,15,ART-015,Right of access paragraph 1
+Paragraph,PARA-015-02,2,15,ART-015,Right of access paragraph 2
+Paragraph,PARA-015-03,3,15,ART-015,Right of access paragraph 3
+Paragraph,PARA-015-04,4,15,ART-015,Right of access paragraph 4
+Paragraph,PARA-028-01,1,28,ART-028,Processor paragraph 1
+Paragraph,PARA-028-02,2,28,ART-028,Processor paragraph 2
+Paragraph,PARA-028-03,3,28,ART-028,Processor paragraph 3
+Paragraph,PARA-028-04,4,28,ART-028,Processor paragraph 4
+Paragraph,PARA-028-05,5,28,ART-028,Processor paragraph 5
+Paragraph,PARA-028-06,6,28,ART-028,Processor paragraph 6
+Paragraph,PARA-028-07,7,28,ART-028,Processor paragraph 7
+Paragraph,PARA-028-08,8,28,ART-028,Processor paragraph 8
+Paragraph,PARA-028-09,9,28,ART-028,Processor paragraph 9
+Paragraph,PARA-028-10,10,28,ART-028,Processor paragraph 10
+Paragraph,PARA-030-01,1,30,ART-030,Records of processing paragraph 1
+Paragraph,PARA-030-02,2,30,ART-030,Records of processing paragraph 2
+Paragraph,PARA-030-03,3,30,ART-030,Records of processing paragraph 3
+Paragraph,PARA-030-04,4,30,ART-030,Records of processing paragraph 4
+Paragraph,PARA-030-05,5,30,ART-030,Records of processing paragraph 5
+Paragraph,PARA-033-01,1,33,ART-033,Breach notification paragraph 1
+Paragraph,PARA-033-02,2,33,ART-033,Breach notification paragraph 2
+Paragraph,PARA-033-03,3,33,ART-033,Breach notification paragraph 3
+Paragraph,PARA-033-04,4,33,ART-033,Breach notification paragraph 4
+Paragraph,PARA-033-05,5,33,ART-033,Breach notification paragraph 5
+Paragraph,PARA-035-01,1,35,ART-035,DPIA paragraph 1
+Paragraph,PARA-035-02,2,35,ART-035,DPIA paragraph 2
+Paragraph,PARA-035-03,3,35,ART-035,DPIA paragraph 3
+Paragraph,PARA-035-04,4,35,ART-035,DPIA paragraph 4
+Paragraph,PARA-035-05,5,35,ART-035,DPIA paragraph 5
+Paragraph,PARA-035-06,6,35,ART-035,DPIA paragraph 6
+Paragraph,PARA-035-07,7,35,ART-035,DPIA paragraph 7
+Paragraph,PARA-035-08,8,35,ART-035,DPIA paragraph 8
+Paragraph,PARA-035-09,9,35,ART-035,DPIA paragraph 9
+Paragraph,PARA-035-10,10,35,ART-035,DPIA paragraph 10
+Paragraph,PARA-035-11,11,35,ART-035,DPIA paragraph 11
+Paragraph,PARA-058-01,1,58,ART-058,Powers paragraph 1
+Paragraph,PARA-058-02,2,58,ART-058,Powers paragraph 2
+Paragraph,PARA-058-03,3,58,ART-058,Powers paragraph 3
+Paragraph,PARA-058-04,4,58,ART-058,Powers paragraph 4
+Paragraph,PARA-058-05,5,58,ART-058,Powers paragraph 5
+Paragraph,PARA-058-06,6,58,ART-058,Powers paragraph 6
+Paragraph,PARA-083-01,1,83,ART-083,Administrative fines paragraph 1
+Paragraph,PARA-083-02,2,83,ART-083,Administrative fines paragraph 2
+Paragraph,PARA-083-03,3,83,ART-083,Administrative fines paragraph 3
+Paragraph,PARA-083-04,4,83,ART-083,Administrative fines paragraph 4
+Paragraph,PARA-083-05,5,83,ART-083,Administrative fines paragraph 5
+Paragraph,PARA-083-06,6,83,ART-083,Administrative fines paragraph 6
+Paragraph,PARA-083-07,7,83,ART-083,Administrative fines paragraph 7
+Paragraph,PARA-083-08,8,83,ART-083,Administrative fines paragraph 8
+Paragraph,PARA-083-09,9,83,ART-083,Administrative fines paragraph 9

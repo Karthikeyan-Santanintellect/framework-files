@@ -1,0 +1,39 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+DEFINES_CONCEPT,Article,ART-004,Concept,CONC-001,primary_definition:Personal Data
+DEFINES_CONCEPT,Article,ART-004,Concept,CONC-002,primary_definition:Data Subject
+DEFINES_CONCEPT,Article,ART-004,Concept,CONC-003,primary_definition:Controller
+DEFINES_CONCEPT,Article,ART-004,Concept,CONC-004,primary_definition:Processor
+DEFINES_CONCEPT,Article,ART-006,Concept,CONC-005,legal_basis_category:Consent
+DEFINES_CONCEPT,Article,ART-007,Concept,CONC-005,legal_basis_category:Consent|detailed_rules
+DEFINES_CONCEPT,Article,ART-009,Concept,CONC-006,data_protection_category:Special Categories
+DEFINES_CONCEPT,Article,ART-025,Concept,CONC-009,obligation_type:Technical Measure
+DEFINES_CONCEPT,Article,ART-025,Concept,CONC-010,obligation_type:Default Setting
+DEFINES_CONCEPT,Article,ART-006,Concept,CONC-011,primary_definition:Lawfulness
+DEFINES_CONCEPT,Article,ART-005,Concept,CONC-012,principle:Purpose Limitation
+DEFINES_CONCEPT,Article,ART-005,Concept,CONC-013,principle:Data Minimisation
+DEFINES_CONCEPT,Article,ART-005,Concept,CONC-014,principle:Accuracy
+DEFINES_CONCEPT,Article,ART-005,Concept,CONC-015,principle:Storage Limitation
+DEFINES_CONCEPT,Article,ART-005,Concept,CONC-016,principle:Integrity and Confidentiality
+DEFINES_CONCEPT,Article,ART-005,Concept,CONC-017,principle:Accountability
+DEFINES_CONCEPT,Article,ART-015,Concept,CONC-018,data_subject_right:Access
+DEFINES_CONCEPT,Article,ART-016,Concept,CONC-019,data_subject_right:Rectification
+DEFINES_CONCEPT,Article,ART-017,Concept,CONC-020,data_subject_right:Erasure
+DEFINES_CONCEPT,Article,ART-020,Concept,CONC-021,data_subject_right:Portability
+DEFINES_CONCEPT,Article,ART-021,Concept,CONC-022,data_subject_right:Object
+DEFINES_CONCEPT,Article,ART-035,Concept,CONC-023,obligation_type:Assessment
+DEFINES_CONCEPT,Article,ART-037,Concept,CONC-024,designation_article:Article 37
+DEFINES_CONCEPT,Article,ART-038,Concept,CONC-024,position_article:Article 38
+DEFINES_CONCEPT,Article,ART-039,Concept,CONC-024,tasks_article:Article 39
+DEFINES_CONCEPT,Article,ART-033,Concept,CONC-025,breach_notification:Authority
+DEFINES_CONCEPT,Article,ART-034,Concept,CONC-025,breach_notification:Data Subject
+DEFINES_CONCEPT,Article,ART-051,Concept,CONC-026,establishment_article:Article 51
+DEFINES_CONCEPT,Article,ART-056,Concept,CONC-027,competence_type:Lead Authority
+DEFINES_CONCEPT,Article,ART-068,Concept,CONC-028,establishment_article:Article 68
+DEFINES_CONCEPT,Article,ART-083,Concept,CONC-029,penalty_type:Administrative Fine
+DEFINES_CONCEPT,Article,ART-044,Concept,CONC-030,transfer_principle:General
+DEFINES_CONCEPT,Article,ART-045,Concept,CONC-031,transfer_mechanism:Adequacy
+DEFINES_CONCEPT,Article,ART-046,Concept,CONC-032,transfer_mechanism:Safeguards
+DEFINES_CONCEPT,Article,ART-047,Concept,CONC-033,transfer_mechanism:BCR
+DEFINES_CONCEPT,Article,ART-026,Concept,CONC-034,controller_type:Joint
+DEFINES_CONCEPT,Article,ART-030,Concept,CONC-035,obligation_type:Documentation
+DEFINES_CONCEPT,Article,ART-028,Concept,CONC-004,role_definition:Processor

@@ -1,1 +1,1055 @@
-[{"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG6", "name": "Maintain an Information Security Policy"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG6", "name": "Maintain an Information Security Policy"}, "HAS_REQUIREMENT", {"req_id": 12, "requirement_group": "RG6", "name": "Support Information Security with Organizational Policies and Programs"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG6", "name": "Maintain an Information Security Policy"}, "HAS_REQUIREMENT", {"req_id": 12, "requirement_group": "RG6", "name": "Support Information Security with Organizational Policies and Programs"}, "HAS_SUB_REQUIREMENT", {"req_id": "12.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Information security policy established"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG5", "name": "Regularly Monitor and Test Networks"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG5", "name": "Regularly Monitor and Test Networks"}, "HAS_REQUIREMENT", {"req_id": 11, "requirement_group": "RG5", "name": "Test Security of Systems and Networks Regularly"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG5", "name": "Regularly Monitor and Test Networks"}, "HAS_REQUIREMENT", {"req_id": 11, "requirement_group": "RG5", "name": "Test Security of Systems and Networks Regularly"}, "HAS_SUB_REQUIREMENT", {"req_id": "11.1.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Security testing processes implemented"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG5", "name": "Regularly Monitor and Test Networks"}, "HAS_REQUIREMENT", {"req_id": 10, "requirement_group": "RG5", "name": "Log and Monitor All Access to System Components and Cardholder Data"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG5", "name": "Regularly Monitor and Test Networks"}, "HAS_REQUIREMENT", {"req_id": 10, "requirement_group": "RG5", "name": "Log and Monitor All Access to System Components and Cardholder Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "10.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Audit policies and procedures defined"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 9, "requirement_group": "RG4", "name": "Restrict Physical Access to Cardholder Data"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.2.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Strong authentication implemented"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_GUIDANCE", {"name": "MFA significantly reduces risk of unauthorized access through compromised credentials", "related_subrequirement": "8.3.1", "guidance_id": "G-8.3.1"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "8.3.1", "name": "The authentication factors used provide equivalent or greater protection than MFA"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "8.3.1", "name": "The authentication factors used provide equivalent or greater protection than MFA"}, "REQUIRES_TRA", {"owner": "CISO", "tra_id": "TRA-001", "related_req_id": "8.3.1", "name": "Customized Approach TRA for MFA Alternative", "date_completed": "2024-08-15", "type": "Customized Approach", "status": "Completed"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "8.3.1", "name": "The authentication factors used provide equivalent or greater protection than MFA"}, "REQUIRES_TRA", {"owner": "CISO", "tra_id": "TRA-001", "related_req_id": "8.3.1", "name": "Customized Approach TRA for MFA Alternative", "date_completed": "2024-08-15", "type": "Customized Approach", "status": "Completed"}, "VALIDATES", {"owner": "Authentication Team", "control_id": "CC-001", "name": "Behavioral Biometrics MFA", "description": "Behavioral biometrics system analyzing keystroke dynamics and mouse movements", "related_objective_req_id": "8.3.1", "implementation_date": "2024-09-01"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "8.3.1", "name": "The authentication factors used provide equivalent or greater protection than MFA"}, "REQUIRES_TRA", {"owner": "CISO", "tra_id": "TRA-001", "related_req_id": "8.3.1", "name": "Customized Approach TRA for MFA Alternative", "date_completed": "2024-08-15", "type": "Customized Approach", "status": "Completed"}, "VALIDATES", {"owner": "Authentication Team", "control_id": "CC-001", "name": "Behavioral Biometrics MFA", "description": "Behavioral biometrics system analyzing keystroke dynamics and mouse movements", "related_objective_req_id": "8.3.1", "implementation_date": "2024-09-01"}, "ADDRESSES", {"req_id": "8.3.1", "name": "The authentication factors used provide equivalent or greater protection than MFA"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_DEFINED_APPROACH", {"req_id": "8.3.1", "name": "Multi-factor authentication (MFA) must be incorporated into the CDE for all access"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.3.1", "milestone": 3, "becomes_mandatory_on": "2025-03-31", "name": "Multi-factor authentication established"}, "HAS_DEFINED_APPROACH", {"req_id": "8.3.1", "name": "Multi-factor authentication (MFA) must be incorporated into the CDE for all access"}, "HAS_TEST", {"related_defined_approach": "8.3.1", "name": "Examine MFA configurations and test MFA functionality", "test_id": "8.3.1.a"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "All users are assigned a unique ID"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "All users are assigned a unique ID"}, "HAS_GUIDANCE", {"name": "Unique user IDs enable tracing actions to specific individuals", "related_subrequirement": "8.1.1", "guidance_id": "G-8.1.1"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "All users are assigned a unique ID"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "8.1.1", "name": "User accountability is maintained through alternative identification mechanisms"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "All users are assigned a unique ID"}, "HAS_DEFINED_APPROACH", {"req_id": "8.1.1", "name": "Each user must be assigned a unique ID before allowing them to access system components"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "All users are assigned a unique ID"}, "HAS_DEFINED_APPROACH", {"req_id": "8.1.1", "name": "Each user must be assigned a unique ID before allowing them to access system components"}, "HAS_TEST", {"related_defined_approach": "8.1.1", "name": "Observe authentication mechanisms to verify unique ID requirements", "test_id": "8.1.1.b"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 8, "requirement_group": "RG4", "name": "Identify Users and Authenticate Access to System Components"}, "HAS_SUB_REQUIREMENT", {"req_id": "8.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "All users are assigned a unique ID"}, "HAS_DEFINED_APPROACH", {"req_id": "8.1.1", "name": "Each user must be assigned a unique ID before allowing them to access system components"}, "HAS_TEST", {"related_defined_approach": "8.1.1", "name": "Examine user account lists to verify each user has a unique ID", "test_id": "8.1.1.a"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG4", "name": "Implement Strong Access Control Measures"}, "HAS_REQUIREMENT", {"req_id": 7, "requirement_group": "RG4", "name": "Restrict Access to System Components and Cardholder Data by Business Need to Know"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Security patches identified and installed"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_GUIDANCE", {"name": "Timely identification of vulnerabilities is critical to maintaining security posture", "related_subrequirement": "6.1.1", "guidance_id": "G-6.1.1"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "6.1.1", "name": "Security vulnerabilities are identified through equivalent risk-based processes"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "6.1.1", "name": "Security vulnerabilities are identified through equivalent risk-based processes"}, "REQUIRES_TRA", {"owner": "Compliance Officer", "tra_id": "TRA-003", "related_req_id": "6.1.1", "name": "Activity Frequency TRA for Vulnerability Management", "date_completed": "2024-09-01", "type": "Activity Frequency", "status": "Completed"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "6.1.1", "name": "Security vulnerabilities are identified through equivalent risk-based processes"}, "REQUIRES_TRA", {"owner": "Compliance Officer", "tra_id": "TRA-003", "related_req_id": "6.1.1", "name": "Activity Frequency TRA for Vulnerability Management", "date_completed": "2024-09-01", "type": "Activity Frequency", "status": "Completed"}, "VALIDATES", {"owner": "Security Operations", "control_id": "CC-003", "name": "AI-Powered Vulnerability Scanner", "description": "Machine learning-based vulnerability identification and prioritization system", "related_objective_req_id": "6.1.1", "implementation_date": "2024-07-20"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "6.1.1", "name": "Security vulnerabilities are identified through equivalent risk-based processes"}, "REQUIRES_TRA", {"owner": "Compliance Officer", "tra_id": "TRA-003", "related_req_id": "6.1.1", "name": "Activity Frequency TRA for Vulnerability Management", "date_completed": "2024-09-01", "type": "Activity Frequency", "status": "Completed"}, "VALIDATES", {"owner": "Security Operations", "control_id": "CC-003", "name": "AI-Powered Vulnerability Scanner", "description": "Machine learning-based vulnerability identification and prioritization system", "related_objective_req_id": "6.1.1", "implementation_date": "2024-07-20"}, "ADDRESSES", {"req_id": "6.1.1", "name": "Security vulnerabilities are identified through equivalent risk-based processes"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_DEFINED_APPROACH", {"req_id": "6.1.1", "name": "Security vulnerability identification processes are defined and maintained"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_DEFINED_APPROACH", {"req_id": "6.1.1", "name": "Security vulnerability identification processes are defined and maintained"}, "HAS_TEST", {"related_defined_approach": "6.1.1", "name": "Interview personnel to verify vulnerability processes are followed", "test_id": "6.1.1.b"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 6, "requirement_group": "RG3", "name": "Develop and Maintain Secure Systems and Software"}, "HAS_SUB_REQUIREMENT", {"req_id": "6.1.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Processes established for addressing security vulnerabilities"}, "HAS_DEFINED_APPROACH", {"req_id": "6.1.1", "name": "Security vulnerability identification processes are defined and maintained"}, "HAS_TEST", {"related_defined_approach": "6.1.1", "name": "Examine vulnerability management processes documentation", "test_id": "6.1.1.a"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG3", "name": "Maintain a Vulnerability Management Program"}, "HAS_REQUIREMENT", {"req_id": 5, "requirement_group": "RG3", "name": "Protect All Systems and Networks from Malicious Software"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 4, "requirement_group": "RG2", "name": "Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.1.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Retain cardholder data minimally"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_GUIDANCE", {"name": "Minimizing stored data reduces exposure in the event of a breach", "related_subrequirement": "3.2.1", "guidance_id": "G-3.2.1"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "3.2.1", "name": "Stored account data is protected through alternative compensating controls"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "3.2.1", "name": "Stored account data is protected through alternative compensating controls"}, "REQUIRES_TRA", {"owner": "Security Manager", "tra_id": "TRA-002", "related_req_id": "3.2.1", "name": "Customized Approach TRA for Account Data Protection", "date_completed": "2024-09-15", "type": "Customized Approach", "status": "In Progress"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "3.2.1", "name": "Stored account data is protected through alternative compensating controls"}, "REQUIRES_TRA", {"owner": "Security Manager", "tra_id": "TRA-002", "related_req_id": "3.2.1", "name": "Customized Approach TRA for Account Data Protection", "date_completed": "2024-09-15", "type": "Customized Approach", "status": "In Progress"}, "VALIDATES", {"owner": "Data Security Team", "control_id": "CC-002", "name": "Homomorphic Encryption Storage", "description": "Encryption system allowing computation on encrypted cardholder data", "related_objective_req_id": "3.2.1", "implementation_date": "2024-10-15"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "3.2.1", "name": "Stored account data is protected through alternative compensating controls"}, "REQUIRES_TRA", {"owner": "Security Manager", "tra_id": "TRA-002", "related_req_id": "3.2.1", "name": "Customized Approach TRA for Account Data Protection", "date_completed": "2024-09-15", "type": "Customized Approach", "status": "In Progress"}, "VALIDATES", {"owner": "Data Security Team", "control_id": "CC-002", "name": "Homomorphic Encryption Storage", "description": "Encryption system allowing computation on encrypted cardholder data", "related_objective_req_id": "3.2.1", "implementation_date": "2024-10-15"}, "ADDRESSES", {"req_id": "3.2.1", "name": "Stored account data is protected through alternative compensating controls"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_DEFINED_APPROACH", {"req_id": "3.2.1", "name": "Account data storage is kept to a minimum through implementation of data retention policies"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG2", "name": "Protect Account Data"}, "HAS_REQUIREMENT", {"req_id": 3, "requirement_group": "RG2", "name": "Protect Stored Account Data"}, "HAS_SUB_REQUIREMENT", {"req_id": "3.2.1", "milestone": 2, "becomes_mandatory_on": "2025-03-31", "name": "Account data storage is kept to minimum"}, "HAS_DEFINED_APPROACH", {"req_id": "3.2.1", "name": "Account data storage is kept to a minimum through implementation of data retention policies"}, "HAS_TEST", {"related_defined_approach": "3.2.1", "name": "Review data retention policies and examine stored data", "test_id": "3.2.1.a"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 2, "requirement_group": "RG1", "name": "Apply Secure Configurations to All System Components"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1.b", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Responsibilities communicated"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1.a", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles documented and assigned"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.1.2.b", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Configuration standards are defined"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles and responsibilities are assigned"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles and responsibilities are assigned"}, "HAS_GUIDANCE", {"name": "Clear definition of roles prevents confusion and ensures accountability", "related_subrequirement": "1.2.1", "guidance_id": "G-1.2.1"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles and responsibilities are assigned"}, "HAS_CUSTOMIZED_OBJECTIVE", {"req_id": "1.2.1", "name": "Personnel understand their role in protecting network security controls"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles and responsibilities are assigned"}, "HAS_DEFINED_APPROACH", {"req_id": "1.2.1", "name": "Roles and responsibilities for Requirement 1 are documented, assigned, and understood"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles and responsibilities are assigned"}, "HAS_DEFINED_APPROACH", {"req_id": "1.2.1", "name": "Roles and responsibilities for Requirement 1 are documented, assigned, and understood"}, "HAS_TEST", {"related_defined_approach": "1.2.1", "name": "Interview personnel to verify roles are assigned and understood", "test_id": "1.2.1.b"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.2.1", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Roles and responsibilities are assigned"}, "HAS_DEFINED_APPROACH", {"req_id": "1.2.1", "name": "Roles and responsibilities for Requirement 1 are documented, assigned, and understood"}, "HAS_TEST", {"related_defined_approach": "1.2.1", "name": "Examine documentation to verify roles and responsibilities are documented", "test_id": "1.2.1.a"}]}, {"path": [{"standard_id": "PCI-DSS", "retirement_date": "2028-03-31", "revision_type": "Limited Revision", "name": "PCI-DSS", "effective_date": "2025-01-01", "publication_date": "2024-06-01", "mandatory_date_future": "2025-03-31", "version": "4.0.1"}, "HAS_GROUP", {"group_id": "RG1", "name": "Build and Maintain a Secure Network and Systems"}, "HAS_REQUIREMENT", {"req_id": 1, "requirement_group": "RG1", "name": "Install and Maintain Network Security Controls"}, "HAS_SUB_REQUIREMENT", {"req_id": "1.1.2", "milestone": 1, "becomes_mandatory_on": "2025-03-31", "name": "Configuration standards are defined and implemented"}]}]
+[
+    {
+        "graph_data": {
+            "nodes": [
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "mainLabel": "Standard",
+                    "labels": [
+                        "Standard"
+                    ],
+                    "standard_id": "PCI-DSS",
+                    "retirement_date": "2028-03-31",
+                    "revision_type": "Limited Revision",
+                    "name": "PCI-DSS",
+                    "effective_date": "2025-01-01",
+                    "publication_date": "2024-06-01",
+                    "mandatory_date_future": "2025-03-31",
+                    "version": "4.0.1"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2683",
+                    "mainLabel": "RequirementGroup",
+                    "labels": [
+                        "RequirementGroup"
+                    ],
+                    "group_id": "RG6",
+                    "name": "Maintain an Information Security Policy"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2695",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 12,
+                    "requirement_group": "RG6",
+                    "name": "Support Information Security with Organizational Policies and Programs"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2710",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "12.1.1",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Information security policy established"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2682",
+                    "mainLabel": "RequirementGroup",
+                    "labels": [
+                        "RequirementGroup"
+                    ],
+                    "group_id": "RG5",
+                    "name": "Regularly Monitor and Test Networks"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2694",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 11,
+                    "requirement_group": "RG5",
+                    "name": "Test Security of Systems and Networks Regularly"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2709",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "11.1.1",
+                    "milestone": 2,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Security testing processes implemented"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2693",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 10,
+                    "requirement_group": "RG5",
+                    "name": "Log and Monitor All Access to System Components and Cardholder Data"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2708",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "10.1.1",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Audit policies and procedures defined"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2681",
+                    "mainLabel": "RequirementGroup",
+                    "labels": [
+                        "RequirementGroup"
+                    ],
+                    "group_id": "RG4",
+                    "name": "Implement Strong Access Control Measures"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2692",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 9,
+                    "requirement_group": "RG4",
+                    "name": "Restrict Physical Access to Cardholder Data"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2691",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 8,
+                    "requirement_group": "RG4",
+                    "name": "Identify Users and Authenticate Access to System Components"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2707",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "8.2.1",
+                    "milestone": 3,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Strong authentication implemented"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2701",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "8.3.1",
+                    "milestone": 3,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Multi-factor authentication established"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2737",
+                    "mainLabel": "Guidance",
+                    "labels": [
+                        "Guidance"
+                    ],
+                    "name": "MFA significantly reduces risk of unauthorized access through compromised credentials",
+                    "related_subrequirement": "8.3.1",
+                    "guidance_id": "G-8.3.1"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2724",
+                    "mainLabel": "CustomizedApproachObjective",
+                    "labels": [
+                        "CustomizedApproachObjective"
+                    ],
+                    "req_id": "8.3.1",
+                    "name": "The authentication factors used provide equivalent or greater protection than MFA"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2729",
+                    "mainLabel": "TargetedRiskAnalysis",
+                    "labels": [
+                        "TargetedRiskAnalysis"
+                    ],
+                    "owner": "CISO",
+                    "tra_id": "TRA-001",
+                    "related_req_id": "8.3.1",
+                    "name": "Customized Approach TRA for MFA Alternative",
+                    "date_completed": "2024-08-15",
+                    "type": "Customized Approach",
+                    "status": "Completed"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2732",
+                    "mainLabel": "CustomizedControl",
+                    "labels": [
+                        "CustomizedControl"
+                    ],
+                    "owner": "Authentication Team",
+                    "control_id": "CC-001",
+                    "name": "Behavioral Biometrics MFA",
+                    "description": "Behavioral biometrics system analyzing keystroke dynamics and mouse movements",
+                    "related_objective_req_id": "8.3.1",
+                    "implementation_date": "2024-09-01"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2713",
+                    "mainLabel": "DefinedApproach",
+                    "labels": [
+                        "DefinedApproach"
+                    ],
+                    "req_id": "8.3.1",
+                    "name": "Multi-factor authentication (MFA) must be incorporated into the CDE for all access"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2720",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "8.3.1",
+                    "name": "Examine MFA configurations and test MFA functionality",
+                    "test_id": "8.3.1.a"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2700",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "8.1.1",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "All users are assigned a unique ID"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2736",
+                    "mainLabel": "Guidance",
+                    "labels": [
+                        "Guidance"
+                    ],
+                    "name": "Unique user IDs enable tracing actions to specific individuals",
+                    "related_subrequirement": "8.1.1",
+                    "guidance_id": "G-8.1.1"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2728",
+                    "mainLabel": "CustomizedApproachObjective",
+                    "labels": [
+                        "CustomizedApproachObjective"
+                    ],
+                    "req_id": "8.1.1",
+                    "name": "User accountability is maintained through alternative identification mechanisms"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2712",
+                    "mainLabel": "DefinedApproach",
+                    "labels": [
+                        "DefinedApproach"
+                    ],
+                    "req_id": "8.1.1",
+                    "name": "Each user must be assigned a unique ID before allowing them to access system components"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2719",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "8.1.1",
+                    "name": "Observe authentication mechanisms to verify unique ID requirements",
+                    "test_id": "8.1.1.b"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2718",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "8.1.1",
+                    "name": "Examine user account lists to verify each user has a unique ID",
+                    "test_id": "8.1.1.a"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2690",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 7,
+                    "requirement_group": "RG4",
+                    "name": "Restrict Access to System Components and Cardholder Data by Business Need to Know"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2680",
+                    "mainLabel": "RequirementGroup",
+                    "labels": [
+                        "RequirementGroup"
+                    ],
+                    "group_id": "RG3",
+                    "name": "Maintain a Vulnerability Management Program"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2689",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 6,
+                    "requirement_group": "RG3",
+                    "name": "Develop and Maintain Secure Systems and Software"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2706",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "6.2.1",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Security patches identified and installed"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2699",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "6.1.1",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Processes established for addressing security vulnerabilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2739",
+                    "mainLabel": "Guidance",
+                    "labels": [
+                        "Guidance"
+                    ],
+                    "name": "Timely identification of vulnerabilities is critical to maintaining security posture",
+                    "related_subrequirement": "6.1.1",
+                    "guidance_id": "G-6.1.1"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2727",
+                    "mainLabel": "CustomizedApproachObjective",
+                    "labels": [
+                        "CustomizedApproachObjective"
+                    ],
+                    "req_id": "6.1.1",
+                    "name": "Security vulnerabilities are identified through equivalent risk-based processes"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2731",
+                    "mainLabel": "TargetedRiskAnalysis",
+                    "labels": [
+                        "TargetedRiskAnalysis"
+                    ],
+                    "owner": "Compliance Officer",
+                    "tra_id": "TRA-003",
+                    "related_req_id": "6.1.1",
+                    "name": "Activity Frequency TRA for Vulnerability Management",
+                    "date_completed": "2024-09-01",
+                    "type": "Activity Frequency",
+                    "status": "Completed"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2734",
+                    "mainLabel": "CustomizedControl",
+                    "labels": [
+                        "CustomizedControl"
+                    ],
+                    "owner": "Security Operations",
+                    "control_id": "CC-003",
+                    "name": "AI-Powered Vulnerability Scanner",
+                    "description": "Machine learning-based vulnerability identification and prioritization system",
+                    "related_objective_req_id": "6.1.1",
+                    "implementation_date": "2024-07-20"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2715",
+                    "mainLabel": "DefinedApproach",
+                    "labels": [
+                        "DefinedApproach"
+                    ],
+                    "req_id": "6.1.1",
+                    "name": "Security vulnerability identification processes are defined and maintained"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2723",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "6.1.1",
+                    "name": "Interview personnel to verify vulnerability processes are followed",
+                    "test_id": "6.1.1.b"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2722",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "6.1.1",
+                    "name": "Examine vulnerability management processes documentation",
+                    "test_id": "6.1.1.a"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2688",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 5,
+                    "requirement_group": "RG3",
+                    "name": "Protect All Systems and Networks from Malicious Software"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2679",
+                    "mainLabel": "RequirementGroup",
+                    "labels": [
+                        "RequirementGroup"
+                    ],
+                    "group_id": "RG2",
+                    "name": "Protect Account Data"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2687",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 4,
+                    "requirement_group": "RG2",
+                    "name": "Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2686",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 3,
+                    "requirement_group": "RG2",
+                    "name": "Protect Stored Account Data"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2705",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "3.1.1",
+                    "milestone": 2,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Retain cardholder data minimally"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2698",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "3.2.1",
+                    "milestone": 2,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Account data storage is kept to minimum"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2738",
+                    "mainLabel": "Guidance",
+                    "labels": [
+                        "Guidance"
+                    ],
+                    "name": "Minimizing stored data reduces exposure in the event of a breach",
+                    "related_subrequirement": "3.2.1",
+                    "guidance_id": "G-3.2.1"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2726",
+                    "mainLabel": "CustomizedApproachObjective",
+                    "labels": [
+                        "CustomizedApproachObjective"
+                    ],
+                    "req_id": "3.2.1",
+                    "name": "Stored account data is protected through alternative compensating controls"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2730",
+                    "mainLabel": "TargetedRiskAnalysis",
+                    "labels": [
+                        "TargetedRiskAnalysis"
+                    ],
+                    "owner": "Security Manager",
+                    "tra_id": "TRA-002",
+                    "related_req_id": "3.2.1",
+                    "name": "Customized Approach TRA for Account Data Protection",
+                    "date_completed": "2024-09-15",
+                    "type": "Customized Approach",
+                    "status": "In Progress"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2733",
+                    "mainLabel": "CustomizedControl",
+                    "labels": [
+                        "CustomizedControl"
+                    ],
+                    "owner": "Data Security Team",
+                    "control_id": "CC-002",
+                    "name": "Homomorphic Encryption Storage",
+                    "description": "Encryption system allowing computation on encrypted cardholder data",
+                    "related_objective_req_id": "3.2.1",
+                    "implementation_date": "2024-10-15"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2714",
+                    "mainLabel": "DefinedApproach",
+                    "labels": [
+                        "DefinedApproach"
+                    ],
+                    "req_id": "3.2.1",
+                    "name": "Account data storage is kept to a minimum through implementation of data retention policies"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2721",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "3.2.1",
+                    "name": "Review data retention policies and examine stored data",
+                    "test_id": "3.2.1.a"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2678",
+                    "mainLabel": "RequirementGroup",
+                    "labels": [
+                        "RequirementGroup"
+                    ],
+                    "group_id": "RG1",
+                    "name": "Build and Maintain a Secure Network and Systems"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2685",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 2,
+                    "requirement_group": "RG1",
+                    "name": "Apply Secure Configurations to All System Components"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684",
+                    "mainLabel": "Requirement",
+                    "labels": [
+                        "Requirement"
+                    ],
+                    "req_id": 1,
+                    "requirement_group": "RG1",
+                    "name": "Install and Maintain Network Security Controls"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2704",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "1.2.1.b",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Responsibilities communicated"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2703",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "1.2.1.a",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Roles documented and assigned"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2702",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "1.1.2.b",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Configuration standards are defined"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2697",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "1.2.1",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Roles and responsibilities are assigned"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2735",
+                    "mainLabel": "Guidance",
+                    "labels": [
+                        "Guidance"
+                    ],
+                    "name": "Clear definition of roles prevents confusion and ensures accountability",
+                    "related_subrequirement": "1.2.1",
+                    "guidance_id": "G-1.2.1"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2725",
+                    "mainLabel": "CustomizedApproachObjective",
+                    "labels": [
+                        "CustomizedApproachObjective"
+                    ],
+                    "req_id": "1.2.1",
+                    "name": "Personnel understand their role in protecting network security controls"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2711",
+                    "mainLabel": "DefinedApproach",
+                    "labels": [
+                        "DefinedApproach"
+                    ],
+                    "req_id": "1.2.1",
+                    "name": "Roles and responsibilities for Requirement 1 are documented, assigned, and understood"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2717",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "1.2.1",
+                    "name": "Interview personnel to verify roles are assigned and understood",
+                    "test_id": "1.2.1.b"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2716",
+                    "mainLabel": "TestingProcedure",
+                    "labels": [
+                        "TestingProcedure"
+                    ],
+                    "related_defined_approach": "1.2.1",
+                    "name": "Examine documentation to verify roles and responsibilities are documented",
+                    "test_id": "1.2.1.a"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2696",
+                    "mainLabel": "SubRequirement",
+                    "labels": [
+                        "SubRequirement"
+                    ],
+                    "req_id": "1.1.2",
+                    "milestone": 1,
+                    "becomes_mandatory_on": "2025-03-31",
+                    "name": "Configuration standards are defined and implemented"
+                }
+            ],
+            "links": [
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1164269564117125748",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "type": "HAS_GROUP",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2683"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153011664560327291",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2683",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2695"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955079",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2695",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2710"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162017764303440500",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "type": "HAS_GROUP",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2682"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155263464374012538",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2682",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2694"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955078",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2694",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2709"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153011664560327290",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2682",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2693"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955077",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2693",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2708"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159765964489755252",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "type": "HAS_GROUP",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2681"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157515264187697785",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2681",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2692"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155263464374012537",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2681",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2691"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157516363699325571",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2691",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2707"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155264563885640323",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2691",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2701"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153020460653349517",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2701",
+                    "type": "HAS_GUIDANCE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2737"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153016062606838413",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2701",
+                    "type": "HAS_CUSTOMIZED_OBJECTIVE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2724"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153017162118466212",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2724",
+                    "type": "REQUIRES_TRA",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2729"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153018261630093993",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2729",
+                    "type": "VALIDATES",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2732"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153019361141721772",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2732",
+                    "type": "ADDRESSES",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2724"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153013863583582861",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2701",
+                    "type": "HAS_DEFINED_APPROACH",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2713"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153014963095210649",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2713",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2720"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955075",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2691",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2700"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153020460653349516",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2700",
+                    "type": "HAS_GUIDANCE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2736"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153016062606838412",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2700",
+                    "type": "HAS_CUSTOMIZED_OBJECTIVE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2728"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153013863583582860",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2700",
+                    "type": "HAS_DEFINED_APPROACH",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2712"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155266762908895896",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2712",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2719"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153014963095210648",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2712",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2718"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153011664560327289",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2681",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2690"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157514164676070004",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "type": "HAS_GROUP",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2680"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155263464374012536",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2680",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2689"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155264563885640321",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2689",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2706"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955073",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2689",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2699"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153020460653349515",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2699",
+                    "type": "HAS_GUIDANCE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2739"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153016062606838411",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2699",
+                    "type": "HAS_CUSTOMIZED_OBJECTIVE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2727"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153017162118466215",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2727",
+                    "type": "REQUIRES_TRA",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2731"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153018261630093995",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2731",
+                    "type": "VALIDATES",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2734"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153019361141721774",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2734",
+                    "type": "ADDRESSES",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2727"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153013863583582859",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2699",
+                    "type": "HAS_DEFINED_APPROACH",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2715"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155266762908895899",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2715",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2723"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153014963095210651",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2715",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2722"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153011664560327288",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2680",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2688"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155262364862384756",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "type": "HAS_GROUP",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2679"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155263464374012535",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2679",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2687"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153011664560327287",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2679",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2686"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155264563885640318",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2686",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2705"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955070",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2686",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2698"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153020460653349514",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2698",
+                    "type": "HAS_GUIDANCE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2738"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153016062606838410",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2698",
+                    "type": "HAS_CUSTOMIZED_OBJECTIVE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2726"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153017162118466214",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2726",
+                    "type": "REQUIRES_TRA",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2730"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153018261630093994",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2730",
+                    "type": "VALIDATES",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2733"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153019361141721773",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2733",
+                    "type": "ADDRESSES",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2726"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153013863583582858",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2698",
+                    "type": "HAS_DEFINED_APPROACH",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2714"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153014963095210650",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2714",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2721"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153010565048699508",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2676",
+                    "type": "HAS_GROUP",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2678"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155263464374012534",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2678",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2685"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153011664560327286",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2678",
+                    "type": "HAS_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162019963326696060",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2704"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159768163513010812",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2703"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157516363699325564",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2702"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155264563885640316",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2697"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153020460653349513",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2697",
+                    "type": "HAS_GUIDANCE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2735"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153016062606838409",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2697",
+                    "type": "HAS_CUSTOMIZED_OBJECTIVE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2725"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153013863583582857",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2697",
+                    "type": "HAS_DEFINED_APPROACH",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2711"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155266762908895895",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2711",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2717"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153014963095210647",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2711",
+                    "type": "HAS_TEST",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2716"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153012764071955068",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2684",
+                    "type": "HAS_SUB_REQUIREMENT",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:2696"
+                }
+            ]
+        }
+    }
+]

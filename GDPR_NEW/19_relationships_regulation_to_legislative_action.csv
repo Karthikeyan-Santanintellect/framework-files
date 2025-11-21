@@ -1,0 +1,11 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-001,order:1
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-002,order:2
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-003,order:3
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-004,order:4
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-005,order:5
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-006,order:6
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-007,order:7
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-008,order:8
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-009,order:9
+HAS_LEGISLATIVE_ACTION,Regulation,REG-001,LegislativeAction,LEG-010,order:10

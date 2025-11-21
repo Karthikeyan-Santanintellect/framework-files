@@ -1,0 +1,100 @@
+Node_Type,Node_ID,Article_Number,Title,Chapter,Section
+Article,ART-001,1,Subject-matter and objectives,1,SEC-01-GENERAL
+Article,ART-002,2,Material scope,1,SEC-01-GENERAL
+Article,ART-003,3,Territorial scope,1,SEC-01-GENERAL
+Article,ART-004,4,Definitions,1,SEC-01-GENERAL
+Article,ART-005,5,Principles relating to processing of personal data,2,SEC-02-PRINCIPLES
+Article,ART-006,6,Lawfulness of processing,2,SEC-02-PRINCIPLES
+Article,ART-007,7,Conditions for consent,2,SEC-02-PRINCIPLES
+Article,ART-008,8,Conditions applicable to child's consent in relation to information society services,2,SEC-02-PRINCIPLES
+Article,ART-009,9,Processing of special categories of personal data,2,SEC-02-PRINCIPLES
+Article,ART-010,10,Processing of personal data relating to criminal convictions and offences,2,SEC-02-PRINCIPLES
+Article,ART-011,11,Processing which does not require identification,2,SEC-02-PRINCIPLES
+Article,ART-012,12,"Transparent information, communication and modalities for the exercise of the rights of the data subject",3,SEC-03-01
+Article,ART-013,13,Information to be provided where personal data are collected from the data subject,3,SEC-03-02
+Article,ART-014,14,Information to be provided where personal data have not been obtained from the data subject,3,SEC-03-02
+Article,ART-015,15,Right of access by the data subject,3,SEC-03-02
+Article,ART-016,16,Right to rectification,3,SEC-03-03
+Article,ART-017,17,Right to erasure ('right to be forgotten'),3,SEC-03-03
+Article,ART-018,18,Right to restriction of processing,3,SEC-03-03
+Article,ART-019,19,Notification obligation regarding rectification or erasure of personal data or restriction of processing,3,SEC-03-03
+Article,ART-020,20,Right to data portability,3,SEC-03-03
+Article,ART-021,21,Right to object,3,SEC-03-04
+Article,ART-022,22,"Automated individual decision-making, including profiling",3,SEC-03-04
+Article,ART-023,23,Restrictions,3,SEC-03-05
+Article,ART-024,24,Responsibility of the controller,4,SEC-04-01
+Article,ART-025,25,Data protection by design and by default,4,SEC-04-01
+Article,ART-026,26,Joint controllers,4,SEC-04-01
+Article,ART-027,27,Representatives of controllers or processors not established in the Union,4,SEC-04-01
+Article,ART-028,28,Processor,4,SEC-04-01
+Article,ART-029,29,Processing under the authority of the controller or processor,4,SEC-04-01
+Article,ART-030,30,Records of processing activities,4,SEC-04-01
+Article,ART-031,31,Cooperation with the supervisory authority,4,SEC-04-01
+Article,ART-032,32,Security of processing,4,SEC-04-02
+Article,ART-033,33,Notification of a personal data breach to the supervisory authority,4,SEC-04-02
+Article,ART-034,34,Communication of a personal data breach to the data subject,4,SEC-04-02
+Article,ART-035,35,Data protection impact assessment,4,SEC-04-03
+Article,ART-036,36,Prior consultation,4,SEC-04-03
+Article,ART-037,37,Designation of the data protection officer,4,SEC-04-04
+Article,ART-038,38,Position of the data protection officer,4,SEC-04-04
+Article,ART-039,39,Tasks of the data protection officer,4,SEC-04-04
+Article,ART-040,40,Codes of conduct,4,SEC-04-05
+Article,ART-041,41,Monitoring of approved codes of conduct,4,SEC-04-05
+Article,ART-042,42,Certification,4,SEC-04-05
+Article,ART-043,43,Certification bodies,4,SEC-04-05
+Article,ART-044,44,General principle for transfers,5,SEC-05-TRANSFERS
+Article,ART-045,45,Transfers on the basis of an adequacy decision,5,SEC-05-TRANSFERS
+Article,ART-046,46,Transfers subject to appropriate safeguards,5,SEC-05-TRANSFERS
+Article,ART-047,47,Binding corporate rules,5,SEC-05-TRANSFERS
+Article,ART-048,48,Transfers or disclosures not authorised by Union law,5,SEC-05-TRANSFERS
+Article,ART-049,49,Derogations for specific situations,5,SEC-05-TRANSFERS
+Article,ART-050,50,International cooperation for the protection of personal data,5,SEC-05-TRANSFERS
+Article,ART-051,51,Supervisory authority,6,SEC-06-01
+Article,ART-052,52,Independence,6,SEC-06-01
+Article,ART-053,53,General conditions for the members of the supervisory authority,6,SEC-06-01
+Article,ART-054,54,Rules on the establishment of the supervisory authority,6,SEC-06-01
+Article,ART-055,55,Competence,6,SEC-06-02
+Article,ART-056,56,Competence of the lead supervisory authority,6,SEC-06-02
+Article,ART-057,57,Tasks,6,SEC-06-02
+Article,ART-058,58,Powers,6,SEC-06-02
+Article,ART-059,59,Activity reports,6,SEC-06-02
+Article,ART-060,60,Cooperation between the lead supervisory authority and the other supervisory authorities concerned,7,SEC-07-01
+Article,ART-061,61,Mutual assistance,7,SEC-07-01
+Article,ART-062,62,Joint operations of supervisory authorities,7,SEC-07-01
+Article,ART-063,63,Consistency mechanism,7,SEC-07-02
+Article,ART-064,64,Opinion of the Board,7,SEC-07-02
+Article,ART-065,65,Dispute resolution by the Board,7,SEC-07-02
+Article,ART-066,66,Urgency procedure,7,SEC-07-02
+Article,ART-067,67,Exchange of information,7,SEC-07-02
+Article,ART-068,68,European Data Protection Board,7,SEC-07-03
+Article,ART-069,69,Independence,7,SEC-07-03
+Article,ART-070,70,Tasks of the Board,7,SEC-07-03
+Article,ART-071,71,Reports,7,SEC-07-03
+Article,ART-072,72,Procedure,7,SEC-07-03
+Article,ART-073,73,Chair,7,SEC-07-03
+Article,ART-074,74,Tasks of the Chair,7,SEC-07-03
+Article,ART-075,75,Secretariat,7,SEC-07-03
+Article,ART-076,76,Confidentiality,7,SEC-07-03
+Article,ART-077,77,Right to lodge a complaint with a supervisory authority,8,SEC-08-REMEDIES
+Article,ART-078,78,Right to an effective judicial remedy against a supervisory authority,8,SEC-08-REMEDIES
+Article,ART-079,79,Right to an effective judicial remedy against a controller or processor,8,SEC-08-REMEDIES
+Article,ART-080,80,Representation of data subjects,8,SEC-08-REMEDIES
+Article,ART-081,81,Suspension of proceedings,8,SEC-08-REMEDIES
+Article,ART-082,82,Right to compensation and liability,8,SEC-08-LIABILITY
+Article,ART-083,83,General conditions for imposing administrative fines,8,SEC-08-PENALTIES
+Article,ART-084,84,Penalties,8,SEC-08-PENALTIES
+Article,ART-085,85,Processing and freedom of expression and information,9,SEC-09-DEROGATIONS
+Article,ART-086,86,Processing and public access to official documents,9,SEC-09-DEROGATIONS
+Article,ART-087,87,Processing of the national identification number,9,SEC-09-DEROGATIONS
+Article,ART-088,88,Processing in the context of employment,9,SEC-09-DEROGATIONS
+Article,ART-089,89,"Safeguards and derogations relating to processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes",9,SEC-09-DEROGATIONS
+Article,ART-090,90,Obligations of secrecy,9,SEC-09-DEROGATIONS
+Article,ART-091,91,Existing data protection rules of churches and religious associations,9,SEC-09-DEROGATIONS
+Article,ART-092,92,Exercise of the delegation,10,SEC-10-ACTS
+Article,ART-093,93,Committee procedure,10,SEC-10-ACTS
+Article,ART-094,94,Repeal of Directive 95/46/EC,11,SEC-11-FINAL
+Article,ART-095,95,Relationship with Directive 2002/58/EC,11,SEC-11-FINAL
+Article,ART-096,96,Relationship with previously concluded Agreements,11,SEC-11-FINAL
+Article,ART-097,97,Commission reports,11,SEC-11-FINAL
+Article,ART-098,98,Review of other Union legal acts on data protection,11,SEC-11-FINAL
+Article,ART-099,99,Entry into force and application,11,SEC-11-FINAL

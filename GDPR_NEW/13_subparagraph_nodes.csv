@@ -1,0 +1,52 @@
+Node_Type,Node_ID,Sub_Paragraph_Letter,Paragraph,Paragraph_ID,Article,Description
+SubParagraph,SUBPARA-006-01-a,a,1,PARA-006-01,6,Consent
+SubParagraph,SUBPARA-006-01-b,b,1,PARA-006-01,6,Contract
+SubParagraph,SUBPARA-006-01-c,c,1,PARA-006-01,6,Legal obligation
+SubParagraph,SUBPARA-006-01-d,d,1,PARA-006-01,6,Vital interests
+SubParagraph,SUBPARA-006-01-e,e,1,PARA-006-01,6,Public interest
+SubParagraph,SUBPARA-006-01-f,f,1,PARA-006-01,6,Legitimate interests
+SubParagraph,SUBPARA-009-02-a,a,2,PARA-009-02,9,Explicit consent
+SubParagraph,SUBPARA-009-02-b,b,2,PARA-009-02,9,Employment law
+SubParagraph,SUBPARA-009-02-c,c,2,PARA-009-02,9,Vital interests
+SubParagraph,SUBPARA-009-02-d,d,2,PARA-009-02,9,Legitimate activities
+SubParagraph,SUBPARA-009-02-e,e,2,PARA-009-02,9,Made public by data subject
+SubParagraph,SUBPARA-009-02-f,f,2,PARA-009-02,9,Legal claims
+SubParagraph,SUBPARA-009-02-g,g,2,PARA-009-02,9,Substantial public interest
+SubParagraph,SUBPARA-009-02-h,h,2,PARA-009-02,9,Healthcare
+SubParagraph,SUBPARA-009-02-i,i,2,PARA-009-02,9,Public health
+SubParagraph,SUBPARA-009-02-j,j,2,PARA-009-02,9,Archiving/research/statistics
+SubParagraph,SUBPARA-005-01-a,a,1,PARA-005-01,5,"Lawfulness, fairness and transparency"
+SubParagraph,SUBPARA-005-01-b,b,1,PARA-005-01,5,Purpose limitation
+SubParagraph,SUBPARA-005-01-c,c,1,PARA-005-01,5,Data minimisation
+SubParagraph,SUBPARA-005-01-d,d,1,PARA-005-01,5,Accuracy
+SubParagraph,SUBPARA-005-01-e,e,1,PARA-005-01,5,Storage limitation
+SubParagraph,SUBPARA-005-01-f,f,1,PARA-005-01,5,Integrity and confidentiality
+SubParagraph,SUBPARA-015-01-a,a,1,PARA-015-01,15,Purposes of processing
+SubParagraph,SUBPARA-015-01-b,b,1,PARA-015-01,15,Categories of personal data
+SubParagraph,SUBPARA-015-01-c,c,1,PARA-015-01,15,Recipients
+SubParagraph,SUBPARA-015-01-d,d,1,PARA-015-01,15,Storage period
+SubParagraph,SUBPARA-015-01-e,e,1,PARA-015-01,15,Right to rectification/erasure/restriction
+SubParagraph,SUBPARA-015-01-f,f,1,PARA-015-01,15,Right to lodge complaint
+SubParagraph,SUBPARA-015-01-g,g,1,PARA-015-01,15,Source of data
+SubParagraph,SUBPARA-015-01-h,h,1,PARA-015-01,15,Automated decision-making
+SubParagraph,SUBPARA-013-01-a,a,1,PARA-013-01,13,Identity and contact details
+SubParagraph,SUBPARA-013-01-b,b,1,PARA-013-01,13,Contact details of DPO
+SubParagraph,SUBPARA-013-01-c,c,1,PARA-013-01,13,Purposes and legal basis
+SubParagraph,SUBPARA-013-01-d,d,1,PARA-013-01,13,Legitimate interests
+SubParagraph,SUBPARA-013-01-e,e,1,PARA-013-01,13,Recipients
+SubParagraph,SUBPARA-013-01-f,f,1,PARA-013-01,13,Intention to transfer
+SubParagraph,SUBPARA-030-01-a,a,1,PARA-030-01,30,Name and contact details
+SubParagraph,SUBPARA-030-01-b,b,1,PARA-030-01,30,Purposes of processing
+SubParagraph,SUBPARA-030-01-c,c,1,PARA-030-01,30,Categories of data subjects and data
+SubParagraph,SUBPARA-030-01-d,d,1,PARA-030-01,30,Categories of recipients
+SubParagraph,SUBPARA-030-01-e,e,1,PARA-030-01,30,Transfers to third countries
+SubParagraph,SUBPARA-030-01-f,f,1,PARA-030-01,30,Time limits for erasure
+SubParagraph,SUBPARA-030-01-g,g,1,PARA-030-01,30,Technical and organisational measures
+SubParagraph,SUBPARA-028-03-a,a,3,PARA-028-03,28,Process only on instructions
+SubParagraph,SUBPARA-028-03-b,b,3,PARA-028-03,28,Confidentiality
+SubParagraph,SUBPARA-028-03-c,c,3,PARA-028-03,28,Security measures
+SubParagraph,SUBPARA-028-03-d,d,3,PARA-028-03,28,Use of sub-processors
+SubParagraph,SUBPARA-028-03-e,e,3,PARA-028-03,28,Assistance to controller
+SubParagraph,SUBPARA-028-03-f,f,3,PARA-028-03,28,Deletion or return of data
+SubParagraph,SUBPARA-028-03-g,g,3,PARA-028-03,28,Make available information
+SubParagraph,SUBPARA-028-03-h,h,3,PARA-028-03,28,Allow for audits

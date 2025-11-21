@@ -1,0 +1,9 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-001,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-002,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-003,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-004,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-005,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-006,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-007,
+PART_OF_FRAMEWORK,Regulation,REG-001,Framework,FRW-008,

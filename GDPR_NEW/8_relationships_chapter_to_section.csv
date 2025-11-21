@@ -1,0 +1,16 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+CONTAINS_SECTION,Chapter,CH-03,Section,SEC-03-01,order:1
+CONTAINS_SECTION,Chapter,CH-03,Section,SEC-03-02,order:2
+CONTAINS_SECTION,Chapter,CH-03,Section,SEC-03-03,order:3
+CONTAINS_SECTION,Chapter,CH-03,Section,SEC-03-04,order:4
+CONTAINS_SECTION,Chapter,CH-03,Section,SEC-03-05,order:5
+CONTAINS_SECTION,Chapter,CH-04,Section,SEC-04-01,order:1
+CONTAINS_SECTION,Chapter,CH-04,Section,SEC-04-02,order:2
+CONTAINS_SECTION,Chapter,CH-04,Section,SEC-04-03,order:3
+CONTAINS_SECTION,Chapter,CH-04,Section,SEC-04-04,order:4
+CONTAINS_SECTION,Chapter,CH-04,Section,SEC-04-05,order:5
+CONTAINS_SECTION,Chapter,CH-06,Section,SEC-06-01,order:1
+CONTAINS_SECTION,Chapter,CH-06,Section,SEC-06-02,order:2
+CONTAINS_SECTION,Chapter,CH-07,Section,SEC-07-01,order:1
+CONTAINS_SECTION,Chapter,CH-07,Section,SEC-07-02,order:2
+CONTAINS_SECTION,Chapter,CH-07,Section,SEC-07-03,order:3

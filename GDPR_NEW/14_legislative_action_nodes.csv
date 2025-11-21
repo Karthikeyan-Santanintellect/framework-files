@@ -1,0 +1,11 @@
+Node_Type,Node_ID,Action_Type,Title,Date,Description
+LegislativeAction,LEG-001,Adoption,GDPR Adoption by European Parliament,2016-04-14,European Parliament adopted GDPR
+LegislativeAction,LEG-002,Adoption,GDPR Adoption by Council,2016-04-27,Council of the European Union adopted GDPR
+LegislativeAction,LEG-003,Publication,GDPR Official Publication,2016-05-04,Published in Official Journal of the European Union
+LegislativeAction,LEG-004,Entry into Force,GDPR Entry into Force,2016-05-24,GDPR entered into force 20 days after publication
+LegislativeAction,LEG-005,Enforcement,GDPR Enforcement Date,2018-05-25,GDPR became enforceable (2 years after entry into force)
+LegislativeAction,LEG-006,Repeal,Repeal of Directive 95/46/EC,2018-05-25,Previous data protection directive repealed (Article 94)
+LegislativeAction,LEG-007,Amendment,Corrigendum to GDPR,2018-11-06,Technical corrections published
+LegislativeAction,LEG-008,Related Directive,ePrivacy Directive 2002/58/EC,2002-07-12,Related directive on privacy in electronic communications (Article 95)
+LegislativeAction,LEG-009,Implementing Act,Standard Contractual Clauses,2021-06-04,New SCCs for international data transfers adopted
+LegislativeAction,LEG-010,Implementing Act,Adequacy Decisions,Various,Commission adequacy decisions for third countries (Article 45)

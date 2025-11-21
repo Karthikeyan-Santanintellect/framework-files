@@ -1,203 +1,211 @@
 # Create GDPR Regulation Node
 regulation = """
-MERGE (r:Regulation {regulation_id: 'GDPR'})
+MERGE (reg:Regulation {regulation_id: 'GDPR'})
 ON CREATE SET
-    r.regulation_name = "General Data Protection Regulation",
-    r.official_citation = "Regulation (EU) 2016/679",
-    r.version = "2016/679",
-    r.publication_date = date("2018-05-25"),
-    r.effective_date = date("2018-05-25"),
-    r.type = "EU Legislative",
-    r.jurisdiction = "EU/EEA",
-    r.description = "Comprehensive European regulation governing data protection and privacy for all individuals within the European Union and the European Economic Area";
+    reg.regulation_name = "General Data Protection Regulation",
+    reg.official_citation = "Regulation (EU) 2016/679",
+    reg.version = "2016/679",
+    reg.publication_date = date("2018-05-25"),
+    reg.effective_date = date("2018-05-25"),
+    reg.type = "EU Legislative",
+    reg.jurisdiction = "EU/EEA",
+    reg.description = "Comprehensive European regulation governing data protection and privacy for all individuals within the European Union and the European Economic Area";
 """
 
-# Create GDPR Framework Node
-gdpr_framework = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Framework {regulation_id: 'GDPR', id: row.id})
-ON CREATE SET
-    f.name = row.name,
-    f.version = row.version,
-    f.effective_date = date(row.effectiveDate),
-    f.jurisdiction = row.jurisdiction,
-    f.description = row.description;
-"""
-
-# Create GDPR Recital Node
-gdpr_recital = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ret:Recital {regulation_id: 'GDPR', id: row.id})
-ON CREATE SET
-    ret.recitalNumber = toInteger(row.recitalNumber),
-    ret.name = row.name,
-    ret.description = row.description;
-"""
-
-# Create GDPR Chapter Node
+# Create GDPR chapter Node
 gdpr_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ch:Chapter {regulation_id: 'GDPR', id: row.id})
+MERGE (c:Chapter {id: row.Node_ID})
 ON CREATE SET
-    ch.chapterNumber = toInteger(row.chapterNum),
-    ch.name = row.name,
-    ch.description = row.description;
+  c.number = toInteger(row.Chapter_Number),
+  c.type = row.Node_Type,
+  c.name = row.Name,
+  c.articleRange = row.Article_Range,
+  c.totalArticles = toInteger(row.Total_Articles),
+  c.totalSections = toInteger(row.Total_Sections);
+"""
+
+# Create GDPR Section Node
+gdpr_section = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+CREATE (s:Section {id: row.Node_ID})
+ON CREATE SET
+  s.type = row.Node_Type,
+  s.sectionNumber = row.Section_Number,
+  s.chapter = row.Chapter,
+  s.name = row.Name,
+  s.articleRange = row.Article_Range;
 """
 
 # Create GDPR Article Node
 gdpr_article = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ar:Article {regulation_id: 'GDPR', id: row.id})
+MEREG (a:Article {id: row.Node_ID})
 ON CREATE SET
-    ar.articleId = row.articleId,
-    ar.name = row.name,
-    ar.chapter_id = row.chapter_id,
-    ar.chapter_name = row.chapter_name,
-    ar.description = row.description;
+  a.type = row.Node_Type,
+  a.number = toInteger(row.Article_Number),
+  a.title = row.Title,
+  a.chapter = row.Chapter,
+  a.section = row.Section;
 """
 
-# Create GDPR Concept Node
-gdpr_concept = """
+# Create GDPR Recital Node
+gdpr_recital = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Concept {regulation_id: 'GDPR', id: row.id})
+MERGE (r:Recital {id: row.Node_ID}
 ON CREATE SET
-    co.name = row.name,
-    co.category = row.category,
-    co.description = row.description;
-"""
-
-# Create GDPR LegislativeAction Node
-gdpr_legislative_action = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (l:LegislativeAction {regulation_id: 'GDPR', id: row.id})
-ON CREATE SET
-    l.name = row.name,
-    l.proposalDate = date(row.proposalDate),
-    l.status = row.status,
-    l.description = row.description;
+  r.type = row.Node_Type
+  r.number  = toInteger(row.Recital_Number),
+  r.title = row.Title;
 """
 
 # Create GDPR Paragraph Node
 gdpr_paragraph = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Paragraph {regulation_id: 'GDPR', id: row.id})
+MERGE (p:Paragraph {id: row.Node_ID})
 ON CREATE SET
-    p.paragraphId = row.paragraphId,
-    p.name = row.name,
-    p.article_id = row.article_id,
-    p.article_name = row.article_name,
+    p.id = row.Article_ID
+    p.type = row.Node_Type
+    p.number = row.Paragraph_Number,
+    p.article = row.Article,
     p.description = row.description;
 """
 
-# 1. HAS_FRAMEWORK (Regulation → Framework)
-gdpr_regulation_framework = """
-MATCH (r:Regulation {regulation_id: 'GDPR'})
-MATCH (f:Framework {regulation_id: 'GDPR'})
-MERGE (r)-[:HAS_FRAMEWORK]->(f);
+# Create GDPR Sub_Paragraph Node
+gdpr_sub_paragraph = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sp:SubParagraph {id: row.Node_ID})
+ON CREATE SET
+  sp.type = row.Node_Type
+  sp.letter = row.Sub_Paragraph_Letter,
+  sp.paragraph = toInteger(row.Paragraph),
+  sp.paragraphId = row.Paragraph_ID,
+  sp.article = toInteger(row.Article),
+  sp.description: row.Description;
 """
 
-# 2. HAS_CHAPTER (Framework → Chapter)
-gdpr_has_chapter = """
+# Create GDPR Legistlative_Action Node
+gdpr_legislative_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {regulation_id: 'GDPR', id: row.start_id})
-MATCH (ch:Chapter {regulation_id: 'GDPR', id: row.end_id})
-MERGE (f)-[:HAS_CHAPTER {order: toInteger(row.order)}]->(ch);
+MERGE (la:LegislativeAction {id: row.Node_ID})
+ON CREATE SET
+  la.type = row.Node_Type
+  la.actionType = row.Action_Type,
+  la.title = row.Title,
+  la.date = row.Date,
+  la.description = row.Description;
+"""
+# Create GDPR Concept Node
+gdpr_concept ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (co:Concept {id: row.Node_ID})
+ON CREATE SET 
+  co.type = row.Node_Type,
+  co.name = row.Concept_Name,
+  co.category = row.Category,
+  co.primaryArticle = row.Primary_Article,
+  co.description = row.Description;
+"""
+# Create GDPR Framework Node
+gdpr_framework = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (f:Framework {id: row.Node_ID})
+  f.type = row.Node_Type
+  f.name = row.Framework_Name,
+  f.type =row.Type,
+  f.region = row.Region,
+  f.description = row.Description;
+"""
+# Regulation → Chapter Relationships (11 relationships)
+regulation_chapter_rel ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (reg:Regulation {id: row.Source_ID})
+MATCH (c:Chapter {id: row.Target_ID})
+MERGE (reg)-[:HAS_CHAPTER {order: row.Properties}]->(c);
 """
 
-# 3. CONTAINS_ARTICLE (Chapter → Article)
-gdpr_contains_article = """
+# Regulation → Recital Relationships 
+regulation_recital_rel ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ch:Chapter {regulation_id: 'GDPR', id: row.start_id})
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ch)-[:CONTAINS_ARTICLE {order: toInteger(row.order)}]->(ar);
+MATCH (reg:Regulation {id: row.Source_ID})
+MATCH (r:Recital {id: row.Target_ID})
+MERGE (reg)-[:HAS_RECITAL {order: row.Properties}]->(r);
+"""
+# Chapter → Section Relationships 
+chapter_section ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (c:Chapter {id: row.Source_ID})
+MATCH (s:Section {id: row.Target_ID})
+MERGE (c)-[:CONTAINS_SECTION {order: row.Properties}]->(s);
+"""
+# Chapter → Article Relationships 
+chapter_article ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (c:Chapter {id: row.Source_ID})
+MATCH (a:Article {id: row.Target_ID})
+MERGE (c)-[:CONTAINS_ARTICLE {order: row.Properties}]->(a);
 """
 
-# 4. CONTAINS_PARAGRAPH (Article → Paragraph)
-gdpr_contains_paragraph = """
+# Section → Article Relationships 
+section_article ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (p:Paragraph {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:CONTAINS_PARAGRAPH {order: toInteger(row.order)}]->(p);
+MATCH (s:Section {id: row.Source_ID})
+MATCH (a:Article {id: row.Target_ID})
+MERGE (s)-[:CONTAINS_ARTICLE {order: row.Properties}]->(a);
 """
 
-# 5. PROVIDES_CONTEXT_FOR (Recital → Article)
-gdpr_provides_context_for = """
+#  Article → Recital Relationships 
+article_recital ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ret:Recital {regulation_id: 'GDPR', id: row.start_id})
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ret)-[:PROVIDES_CONTEXT_FOR {relevanceScore: toFloat(row.relevanceScore)}]->(ar);
+MATCH (a:Article {id: row.Source_ID})
+MATCH (r:Recital {id: row.Target_ID})
+MERGE (a)-[:SUPPORTED_BY {order: row.Properties}]->(r);
 """
 
-# 6. SPECIALIZES_PROVISIONS_OF (Framework → Article)
-gdpr_specializes_provisions_of = """
+# Article → Paragraph Relationships 
+article_section ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {id: row.start_id})
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (f)-[:SPECIALIZES_PROVISIONS_OF {context: row.context}]->(ar);
+MATCH (a:Article {id: row.Source_ID})
+MATCH (p:Paragraph {id: row.Target_ID})
+MERGE (a)-[:HAS_PARAGRAPH {order: row.Properties}]->(p);
+"""
+# Paragraph → SubParagraph Relationships 
+paragraph_sub_paragraph ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (p:Paragraph {id: row.Source_ID})
+MATCH (sp:SubParagraph {id: row.Target_ID})
+MERGE (p)-[:HAS_SUB_PARAGRAPH {order: row.Properties}]->(sp);
 """
 
-# 7. DEFINES_CONCEPT (Article → Concept)
-gdpr_defines_concept = """
+# Regulation → LegislativeAction Relationships
+regulation_legislative_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:DEFINES_CONCEPT]->(co);
+MATCH (reg:Regulation {id: row.Source_ID})
+MATCH (la:LegislativeAction {id: row.Target_ID})
+MERGE (reg)-[:HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
 """
 
-# 8. IMPLEMENTS_PRINCIPLE (Article → Concept)
-gdpr_implements_principle = """
+# Regulation → Framework Relationships
+regulation_framework ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:IMPLEMENTS_PRINCIPLE]->(co);
+MATCH (reg:Regulation {id: row.Source_ID})
+MATCH (f:Framework {id: row.Target_ID})
+MERGE (reg)-[:PART_OF_FRAMEWORK]->(f);
 """
 
-# 9. ESTABLISHES_CRITERIA (Article → Concept)
-gdpr_establishes_criteria = """
+# Article → Concept Relationships 
+article_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:ESTABLISHES_CRITERIA]->(co);
+MATCH (a:Article {id: row.Source_ID})
+MATCH (co:Concept {id: row.Target_ID})
+MERGE (a)-[:DEFINES_CONCEPT {properties: row.Properties}]->(co);
 """
-
-# 10. MANDATES_REQUIREMENT (Article → Concept)
-gdpr_mandates_requirement = """
+# Recital → Concept Relationships 
+Recital_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:MANDATES_REQUIREMENT]->(co);
-"""
-
-# 11. DEFINES_RESPONSIBILITY (Article → Concept)
-gdpr_defines_responsibility = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:DEFINES_RESPONSIBILITY]->(co);
-"""
-
-# 12. GOVERNS_PROCEDURE (Article → Concept)
-gdpr_governs_procedure = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:GOVERNS_PROCEDURE]->(co);
-"""
-
-# 13. REQUIRES_ACTION (Article → Concept)
-gdpr_requires_action = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.start_id})
-MATCH (co:Concept {regulation_id: 'GDPR', id: row.end_id})
-MERGE (ar)-[:REQUIRES_ACTION {action: row.action}]->(co);
-"""
-
-# 14. AFFECTS_PROVISION (LegislativeAction → Article)
-gdpr_affects_provision = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (l:LegislativeAction {regulation_id: 'GDPR', id: row.start_id})
-MATCH (ar:Article {regulation_id: 'GDPR', id: row.end_id})
-MERGE (l)-[:AFFECTS_PROVISION {changeType: row.changeType, description: row.description}]->(ar);
+MATCH (r:Recital {id: row.Source_ID})
+MATCH (co:Concept {id: row.Target_ID})
+MERGE (a)-[:DEFINES_CONCEPT {properties: row.Properties}]->(co);
 """
 
 import os
@@ -254,15 +262,15 @@ client.query(gdpr_regulation_framework)
 time.sleep(2)
 
 client.query(gdpr_has_chapter.replace('$file_path',
-                                              "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/HAS_CHAPTER.csv"))
+                                              "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/HAS_CHAPTER_CORRECTED.csv"))
 time.sleep(2)
 
 client.query(gdpr_contains_article.replace('$file_path',
-                                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_ARTICLE.csv"))
+                                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_ARTICLE_CORRECTED.csv"))
 time.sleep(2)
 
 client.query(gdpr_contains_paragraph.replace('$file_path',
-                                                            "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_PARAGRAPH.csv"))
+                                                            "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/CONTAINS_PARAGRAPH_CORRECTED.csv"))
 time.sleep(2)
 
 client.query(gdpr_provides_context_for.replace('$file_path',

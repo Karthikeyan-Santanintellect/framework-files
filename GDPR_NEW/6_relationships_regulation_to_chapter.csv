@@ -1,0 +1,12 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-01,order:1
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-02,order:2
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-03,order:3
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-04,order:4
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-05,order:5
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-06,order:6
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-07,order:7
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-08,order:8
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-09,order:9
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-10,order:10
+HAS_CHAPTER,Regulation,REG-001,Chapter,CH-11,order:11

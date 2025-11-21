@@ -1,0 +1,36 @@
+Node_Type,Node_ID,Concept_Name,Category,Primary_Article,Description
+Concept,CONC-001,Personal Data,Definition,4(1),Any information relating to an identified or identifiable natural person
+Concept,CONC-002,Data Subject,Definition,4(1),An identified or identifiable natural person
+Concept,CONC-003,Controller,Definition,4(7),Entity that determines purposes and means of processing
+Concept,CONC-004,Processor,Definition,4(8),Entity that processes data on behalf of controller
+Concept,CONC-005,Consent,Legal Basis,"4(11), 6(1)(a)","Freely given, specific, informed and unambiguous indication of wishes"
+Concept,CONC-006,Special Categories,Data Type,9,Sensitive personal data requiring extra protection
+Concept,CONC-007,Pseudonymisation,Technique,4(5),Processing to prevent attribution without additional information
+Concept,CONC-008,Anonymisation,Technique,Recital 26,Processing to make data non-identifiable
+Concept,CONC-009,Data Protection by Design,Principle,25,Implementing data protection from the design stage
+Concept,CONC-010,Data Protection by Default,Principle,25,Default settings ensure highest privacy protection
+Concept,CONC-011,Lawfulness of Processing,Principle,6,Processing must have a valid legal basis
+Concept,CONC-012,Purpose Limitation,Principle,5(1)(b),"Data collected for specified, explicit, legitimate purposes"
+Concept,CONC-013,Data Minimisation,Principle,5(1)(c),Processing limited to what is necessary
+Concept,CONC-014,Accuracy,Principle,5(1)(d),Data must be accurate and kept up to date
+Concept,CONC-015,Storage Limitation,Principle,5(1)(e),Data kept only as long as necessary
+Concept,CONC-016,Integrity and Confidentiality,Principle,5(1)(f),Appropriate security of data
+Concept,CONC-017,Accountability,Principle,5(2),Controller responsible for demonstrating compliance
+Concept,CONC-018,Right of Access,Data Subject Right,15,Right to obtain confirmation and copy of data
+Concept,CONC-019,Right to Rectification,Data Subject Right,16,Right to correct inaccurate data
+Concept,CONC-020,Right to Erasure,Data Subject Right,17,Right to be forgotten
+Concept,CONC-021,Right to Data Portability,Data Subject Right,20,Right to receive and transmit data
+Concept,CONC-022,Right to Object,Data Subject Right,21,Right to object to processing
+Concept,CONC-023,Data Protection Impact Assessment,Obligation,35,Assessment of high-risk processing
+Concept,CONC-024,Data Protection Officer,Role,37-39,Expert monitoring compliance
+Concept,CONC-025,Data Breach,Incident,4(12),"Security breach leading to data destruction, loss, or disclosure"
+Concept,CONC-026,Supervisory Authority,Authority,51-59,Independent public authority monitoring GDPR
+Concept,CONC-027,Lead Supervisory Authority,Authority,56,Main authority for cross-border processing
+Concept,CONC-028,European Data Protection Board,Authority,68-76,Body ensuring consistent GDPR application
+Concept,CONC-029,Administrative Fine,Penalty,83,Financial penalties for non-compliance
+Concept,CONC-030,International Data Transfer,Process,44-50,Transfer of data outside EU/EEA
+Concept,CONC-031,Adequacy Decision,Mechanism,45,Commission decision on third country protection level
+Concept,CONC-032,Standard Contractual Clauses,Mechanism,46,Model contracts for international transfers
+Concept,CONC-033,Binding Corporate Rules,Mechanism,47,Internal rules for intra-group transfers
+Concept,CONC-034,Joint Controllers,Relationship,26,Multiple controllers jointly determining purposes and means
+Concept,CONC-035,Records of Processing Activities,Obligation,30,Documentation of all processing activities

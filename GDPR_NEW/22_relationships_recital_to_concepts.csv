@@ -1,0 +1,3 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+DEFINES_CONCEPT,Recital,REC-028,Concept,CONC-007,technique_type:Data Protection|context:Processing
+DEFINES_CONCEPT,Recital,REC-026,Concept,CONC-008,technique_type:Data Protection|scope:Out of scope

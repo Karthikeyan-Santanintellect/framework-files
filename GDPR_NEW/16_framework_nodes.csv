@@ -1,0 +1,9 @@
+Node_Type,Node_ID,Framework_Name,Type,Region,Description
+Framework,FRW-001,EU Data Protection Framework,Legal Framework,European Union,Overall EU data protection legal framework
+Framework,FRW-002,Charter of Fundamental Rights,Constitutional,European Union,EU Charter - Articles 7 and 8 on privacy and data protection
+Framework,FRW-003,Treaty on the Functioning of the EU,Treaty,European Union,TFEU Article 16 on data protection
+Framework,FRW-004,European Convention on Human Rights,Convention,Council of Europe,ECHR Article 8 on right to private life
+Framework,FRW-005,Data Protection Directive 95/46/EC,Repealed Directive,European Union,Previous data protection directive (repealed by GDPR)
+Framework,FRW-006,ePrivacy Directive 2002/58/EC,Active Directive,European Union,Directive on privacy in electronic communications
+Framework,FRW-007,Law Enforcement Directive,Active Directive,European Union,Directive (EU) 2016/680 on law enforcement data processing
+Framework,FRW-008,National Data Protection Laws,National Laws,EU Member States,Member State specific implementations and derogations
