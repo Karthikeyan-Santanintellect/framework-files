@@ -133,7 +133,7 @@ framework_chapter ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (f:Framework {id: row.Source_ID})
 MATCH (c:Chapter {id: row.Target_ID})
-MERGE (f)-[:HAS_CHAPTER {order: row.Properties}]->(c);
+MERGE (f)-[:FRAMEWORK_HAS_CHAPTER {order: row.Properties}]->(c);
 """
 
 
