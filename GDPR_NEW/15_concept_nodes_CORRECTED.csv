@@ -1,0 +1,7 @@
+Node_ID,Node_Type,Concept_Name,Category,Primary_Article,Description
+CONC-001,Concept,Lawfulness of Processing,Legal Basis,ART-006,"The requirement that personal data processing must be lawful and based on a valid legal ground such as consent, contract, legal obligation, vital interests, public task, or legitimate interests."
+CONC-002,Concept,Transparency,Data Subject Rights,ART-005,The principle requiring controllers to be transparent about data processing activities and provide clear information to data subjects about how their personal data is being used.
+CONC-003,Concept,Accountability,Responsibility,ART-005,"The controller's responsibility to demonstrate compliance with data protection principles through documentation, policies, and measures including data protection impact assessments and records of processing."
+CONC-004,Concept,Data Minimisation,Processing Principles,ART-005,"The principle of processing only personal data that is necessary and relevant to the stated purposes, avoiding collection of excessive or unnecessary information."
+CONC-005,Concept,Data Protection by Design and Default,Technical Measures,ART-025,The obligation to implement privacy-protective measures by default in data processing systems and throughout the lifecycle of personal data processing.
+CONC-006,Concept,Data Breach Notification,Incident Response,ART-033,The obligation to notify supervisory authorities and affected data subjects of security breaches or unauthorized access to personal data without undue delay.
