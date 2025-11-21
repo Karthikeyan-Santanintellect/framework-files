@@ -1,0 +1,12 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-001,1
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-002,2
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-003,3
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-004,4
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-005,5
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-006,6
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-007,7
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-008,8
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-009,9
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-010,10
+HAS_CHAPTER,Framework,FRAME-001,Chapter,CH-011,11
