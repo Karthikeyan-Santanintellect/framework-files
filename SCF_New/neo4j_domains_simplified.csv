@@ -1,34 +1,34 @@
 identifier,name,description
-GOV,Cybersecurity & Data Privacy Governance,Domain for Cybersecurity & Data Privacy Governance
 AAT,Artificial Intelligence & Autonomous Technologies,Domain for Artificial Intelligence & Autonomous Technologies
 AST,Asset Management,Domain for Asset Management
 BCD,Business Continuity & Disaster Recovery,Domain for Business Continuity & Disaster Recovery
 CAP,Capacity & Performance Management,Domain for Capacity & Performance Management
+CFG,Configuration Management,Domain for Configuration Management
 CHG,Change Management,Domain for Change Management
 CLD,Cloud Security,Domain for Cloud Security
 CPL,Compliance,Domain for Compliance
-CFG,Configuration Management,Domain for Configuration Management
-MON,Continuous Monitoring,Domain for Continuous Monitoring
 CRY,Cryptographic Protections,Domain for Cryptographic Protections
 DCH,Data Classification & Handling,Domain for Data Classification & Handling
 EMB,Embedded Technology,Domain for Embedded Technology
 END,Endpoint Security,Domain for Endpoint Security
+GOV,Cybersecurity & Data Privacy Governance,Domain for Cybersecurity & Data Privacy Governance
 HRS,Human Resources Security,Domain for Human Resources Security
 IAC,Identity & Access Management,Domain for Identity & Access Management
-IRO,Incident Response Operations,Domain for Incident Response Operations
 IAO,Information Assurance Operations,Domain for Information Assurance Operations
-MNT,Maintenance,Domain for Maintenance
+IRO,Incident Response Operations,Domain for Incident Response Operations
 MDM,Mobile Device Management,Domain for Mobile Device Management
+MNT,Maintenance,Domain for Maintenance
+MON,Continuous Monitoring,Domain for Continuous Monitoring
 NET,Network Security,Domain for Network Security
+OPS,Security Operations,Domain for Security Operations
 PES,Physical & Environmental Security,Domain for Physical & Environmental Security
 PRI,Privacy,Domain for Privacy
 PRM,Project & Resource Management,Domain for Project & Resource Management
 RSK,Risk Management,Domain for Risk Management
-SEA,Secure Engineering & Architecture,Domain for Secure Engineering & Architecture
-OPS,Security Operations,Domain for Security Operations
 SAT,Security Awareness & Training,Domain for Security Awareness & Training
+SEA,Secure Engineering & Architecture,Domain for Secure Engineering & Architecture
 TDA,Technology Development & Acquisition,Domain for Technology Development & Acquisition
-TPM,Third-Party Management,Domain for Third-Party Management
 THR,Threat Management,Domain for Threat Management
+TPM,Third-Party Management,Domain for Third-Party Management
 VPM,Vulnerability & Patch Management,Domain for Vulnerability & Patch Management
 WEB,Web Security,Domain for Web Security
