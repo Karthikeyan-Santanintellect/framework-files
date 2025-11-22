@@ -98,4 +98,26 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
+res=client.query("""MATCH path = (:Framework)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*, 
+    id: elementId(n),     
+    labels: labels(n),      
+    mainLabel: head(labels(n)) 
+  }],
+  links: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),     
+    type: type(r),         
+    source: elementId(startNode(r)), 
+    target: elementId(endNode(r)) 
+  }]
+} AS graph_data""")
+
 client.close()

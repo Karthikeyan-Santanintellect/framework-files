@@ -130,10 +130,10 @@ MERGE (reg)-[:HAS_CHAPTER {order: row.Properties}]->(c);
 """
 #Framework -> chapter Relationships
 framework_chapter ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {id: row.Source_ID})
-MATCH (c:Chapter {id: row.Target_ID})
-MERGE (f)-[:FRAMEWORK_HAS_CHAPTER {order: row.Properties}]->(c);
+MATCH (f:Framework {id: 'FRAME-001'})
+MATCH (c:Chapter)
+WHERE c.number IN [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+MERGE (f)-[:FRAMEWORK_HAS_CHAPTER {order: toString(c.number)}]->(c);
 """
 
 
@@ -164,7 +164,7 @@ section_article ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Section {id: row.Source_ID})
 MATCH (a:Article {id: row.Target_ID})
-MERGE (s)-[:CONTAINS_ARTICLE {order: row.Properties}]->(a);
+MERGE (s)-[:SECTION_CONTAINS_ARTICLE {order: row.Properties}]->(a);
 """
 
 #  Article → Recital Relationships 
@@ -180,14 +180,14 @@ article_paragraph ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (a:Article {id: row.Source_ID})
 MATCH (p:Paragraph {id: row.Target_ID})
-MERGE (a)-[:CONTAINS_PARAGRAPH {order: row.Properties}]->(p);
+MERGE (a)-[:ARTICLE_CONTAINS_PARAGRAPH {order: row.Properties}]->(p);
 """
 # Recital → Paragraph Relationships
 recital_paragraph ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Recital {id: row.Source_ID})
 MATCH (p:Paragraph {id: row.Target_ID})
-MERGE (r)-[:CONTAINS_PARAGRAPH {order: row.Properties}]->(p);
+MERGE (r)-[:RECITAL_CONTAINS_PARAGRAPH {order: row.Properties}]->(p);
 """
 # Paragraph → SubParagraph Relationships 
 paragraph_sub_paragraph ="""
@@ -218,7 +218,7 @@ article_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (a:Article {id: row.Source_ID})
 MATCH (co:Concept {id: row.Target_ID})
-MERGE (a)-[:ARTICLE_CONCEPT {properties: row.Properties}]->(co);
+MERGE (a)-[:ARTICLE_DEFINES_CONCEPT{properties: row.Properties}]->(co);
 """
 # Recital → Concept Relationships 
 recital_concept ="""
@@ -281,7 +281,7 @@ time.sleep(2)
 client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
 time.sleep(2)
 
-client.query(framework_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/16_relationships_framework_to_chapter.csv"))
+client.query(framework_chapter)
 time.sleep(2)
 
 client.query(regulation_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/7_relationships_regulation_to_recital.csv"))
