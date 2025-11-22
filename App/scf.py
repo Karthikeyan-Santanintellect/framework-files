@@ -1,7 +1,7 @@
 #Load Framework
-framework ="""
+framework = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Framework {framework_id : 'SCF 2025'})
+MERGE (f:Framework:SCFFramework {framework_id : 'SCF 2025'})
 ON CREATE SET
     f.name = row.name,
     f.version = row.version,
@@ -68,13 +68,12 @@ ON CREATE SET
 """     
 
 #Create Framework→Domain Relationships
-framework_domain_rel ="""
+framework_domain_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework:SCFFramework {name: row.framework_name, version: row.framework_version})
+MATCH (f:Framework:SCFFramework {framework_id: 'SCF 2025'})
 MATCH (d:Domain {identifier: row.domain_identifier})
 MERGE (f)-[r:CONTAINS_DOMAIN]->(d)
-ON CREATE SET 
-    r.created_at = datetime();
+ON CREATE SET r.created_at = datetime();
 """
 #Create Domain→Control Relationships
 domain_controls_rel="""
@@ -82,11 +81,10 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (d:Domain {identifier: row.domain_identifier})
 MATCH (c:Control:SCFControl {control_id: row.control_id})
 MERGE (d)-[r:CONTAINS_CONTROL]->(c)
-ON CREATE SET 
-    r.created_at = datetime();
+ON CREATE SET r.created_at = datetime();
 """
 #Create External Framework→Control Relationships
-control_external_control_rel="""
+external_framework_controls_rel="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (f:Framework:ExternalFramework {name: row.framework_name, version: row.framework_version})
 MATCH (c:Control:ExternalControl {
@@ -95,8 +93,7 @@ MATCH (c:Control:ExternalControl {
     source_framework_version: row.framework_version
 })
 MERGE (f)-[r:CONTAINS_CONTROL]->(c)
-ON CREATE SET 
-    r.created_at = datetime();
+ON CREATE SET r.created_at = datetime()
 """
 #Create Cross-Framework Mappings (STRM)
 scf_external_control="""
@@ -107,9 +104,8 @@ MATCH (ext:Control:ExternalControl {
     source_framework: row.external_framework,
     source_framework_version: row.external_framework_version
 })
-MERGE (scf)-[r:MAPS_TO]->(ext)
+MERGE (scf)-[r:SCF_EXTERNAL_CONTROL]->(ext)
 ON CREATE SET 
-    r.relationship_type = row.relationship_type,
     r.strength = row.strength,
     r.justification = row.justification,
     r.date_established = date(row.date_established),
@@ -139,33 +135,33 @@ if health is not True:
 logger.info("Loading graph structure...")
 
 
-client.query(framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/2_chapter_nodes.csv"))
+client.query(framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_framework.csv"))
 time.sleep(2)
 
-client.query(external_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/3_section_nodes.csv"))
-time.sleep(2)
-
-
-client.query(domain.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/article_node.csv"))
-time.sleep(2)
-
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/5_recital_nodes.csv"))
-time.sleep(2)
-
-client.query(external_controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/12_paragraph_nodes.csv"))
-time.sleep(2)
-
-client.query(framework_domain_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/13_subparagraph_nodes.csv"))
-time.sleep(2)
-
-client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/14_legislative_action_nodes.csv"))
+client.query(external_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_external_frameworks.csv"))
 time.sleep(2)
 
 
-client.query(control_external_control_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/15_concept_nodes_CORRECTED.csv"))
+client.query(domain.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_domains.csv"))
 time.sleep(2)
 
-client.query(scf_external_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/1_framework_nodes_CORRECTED.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_controls.csv"))
+time.sleep(2)
+
+client.query(external_controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_external_controls.csv"))
+time.sleep(2)
+
+client.query(framework_domain_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_rel_framework_contains_domain%20(1).csv"))
+time.sleep(2)
+
+client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_rel_domain_contains_control.csv"))
+time.sleep(2)
+
+
+client.query(external_framework_controls_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_rel_external_framework_contains_control.csv"))
+time.sleep(2)
+
+client.query(scf_external_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF_Frameworks/neo4j_strm_mappings.csv"))
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")

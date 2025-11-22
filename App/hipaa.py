@@ -119,5 +119,8 @@ RETURN {
     target: elementId(endNode(r)) 
   }]
 } AS graph_data""")
+import json
+with open('hippa.json', 'w', encoding='utf-8') as f:
+  f.write(json.dumps(res, default=str))
 
 client.close()
