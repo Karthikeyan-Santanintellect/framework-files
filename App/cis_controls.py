@@ -1,7 +1,7 @@
 #Load Framework
-framework ="""
+framework_and_standard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Framework {framework_id : 'CIS CONTROLS'})
+MERGE (f:FrameworkAndStandards {framework_id : 'CIS CONTROLS'})
 ON CREATE SET
   f.name = row.name,
   f.version = row.version,
@@ -60,16 +60,16 @@ ON CREATE SET
 """
 
 # 1.CREATE FRAMEWORK -> GOVERNING BODY RELATIONSHIPS 
-framework_governing_body ="""
+framework_and_standard_governing_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {framework_id: row.from_node_id}) 
+MATCH (f:FrameworkAndStandards {framework_id: row.from_node_id}) 
 MATCH (gb:GoverningBody {name: row.to_node_id})
 MERGE (f)-[:PUBLISHED_BY]->(gb);
 """
 # 2.CREATE FRAMEWORK -> CONTROL RELATIONSHIPS 
-framework_control ="""
+framework_and_standard_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:Framework {framework_id: row.from_node_id})
+MATCH (f:FrameworkAndStandards {framework_id: row.from_node_id})
 MATCH (c:Control {control_id: row.to_node_id})
 MERGE (f)-[:HAS_CONTROL]->(c);
 """
@@ -85,7 +85,7 @@ safeguard_implementation_group ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (ig:ImplementationGroup {name: row.to_node_id})
-MERGE (s)-[:BELONGS_TO_IG]->(ig);
+MERGE (s)-[:BELONGS_TO_IMPLEMENTATION_GROUP]->(ig);
 """
 
 # 5. CREATE SAFEGUARD -> ASSET CLASS RELATIONSHIPS 
@@ -93,7 +93,7 @@ safeguard_asset_class ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (ac:AssetClass {name: row.to_node_id})
-MERGE (s)-[:APPLIES_TO_ASSET]->(ac);
+MERGE (s)-[:APPLIES_TO_ASSET_CLASS]->(ac);
 """
 
 # 6. CREATE SAFEGUARD -> SECURITY FUNCTION RELATIONSHIPS 
@@ -101,7 +101,7 @@ safeguard_security_function ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (sf:SecurityFunction {name: row.to_node_id})
-MERGE (s)-[:MAPS_TO_FUNCTION]->(sf);
+MERGE (s)-[:SAFEGUARD_MAPS_TO_SECURITY_FUNCTION]->(sf);
 """
 
 
@@ -109,6 +109,7 @@ MERGE (s)-[:MAPS_TO_FUNCTION]->(sf);
 import os
 import time
 import logging
+import json
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -123,7 +124,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_framework.csv"))
+client.query(framework_and_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_framework.csv"))
 time.sleep(2)
 
 client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_controls.csv"))
@@ -144,10 +145,10 @@ time.sleep(2)
 client.query(governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_governing_body.csv"))
 time.sleep(2)
 
-client.query(framework_governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_governing_body_CORRECTED.csv"))
+client.query(framework_and_standard_governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_governing_body_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(framework_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_control_CORRECTED.csv"))
+client.query(framework_and_standard_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_control_CORRECTED.csv"))
 time.sleep(2)
 
 client.query(control_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_control_to_safeguard.csv"))
@@ -169,11 +170,51 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("MATCH path = (:Framework {framework_id : 'CIS CONTROLS'})-[*]->() return path")
+output_filename = "cis_controls.json"
 
-import json
-with open('cis_controls.json', 'w', encoding='utf-8') as f:
-  f.write(json.dumps(res, default=str))
+res = client.query("""
+    MATCH path = (:FrameworkAndStandards)-[*]->()
+    WITH path
+    UNWIND nodes(path) AS n
+    UNWIND relationships(path) AS r
+    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+    RETURN {
+      nodes: [n IN uniqueNodes | n {
+        .*, 
+        id: elementId(n),     
+        labels: labels(n),      
+        mainLabel: head(labels(n)) 
+      }],
+      links: [r IN uniqueRels | r {
+        .*,
+        id: elementId(r),     
+        type: type(r),         
+        source: elementId(startNode(r)), 
+        target: elementId(endNode(r)) 
+      }]
+    } AS graph_data
+""")
+
+if isinstance(res, str):
+    logger.error(f" Export query failed: {res}")
+    client.close()
+    sys.exit(1)
+
+if not res or len(res) == 0:
+    logger.warning(" No data returned from export query")
+    client.close()
+    sys.exit(1)
+
+graph_data = res[0].get('graph_data', res[0])
+
+with open(output_filename, 'w', encoding='utf-8') as f:
+    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
+
+node_count = len(graph_data.get('nodes', []))
+link_count = len(graph_data.get('links', []))
+
+logger.info(f"✓ Exported {node_count} nodes and {link_count} relationships")
+logger.info(f"✓ Graph data saved to: {output_filename}") 
 
 client.close()
 

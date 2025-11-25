@@ -9,6 +9,16 @@ ON CREATE SET
     s.description = "It integrates multiple standards, such as HIPAA, ISO, and PCI, into a single, comprehensive framework to safeguard sensitive data";
 """
 
+# Create NIST CSF Framework
+nist_csf_framework = """
+MERGE (f:Framework {framework_id: 'NIST_CSF_2.0'})
+ON CREATE SET
+    f.name = "NIST Cybersecurity Framework",
+    f.version = "2.0",
+    f.type = "Framework";
+"""
+
+
 # Load HITRUST Category
 hitrust_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -18,6 +28,7 @@ ON CREATE SET
     c.name = row.name,
     c.description = row.description;
 """
+
 # Load HITRUST Control
 hitrust_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -27,6 +38,7 @@ ON CREATE SET
     ctrl.category_id = row.category_id,
     ctrl.description = row.description;
 """
+
 # Load HITRUST Control_objective
 hitrust_control_objective = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -35,6 +47,7 @@ ON CREATE SET
     co.control_id = row.control_id,
     co.description = row.text;
 """
+
 # Load HITRUST Control_specification
 hitrust_control_specification = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -51,39 +64,30 @@ MATCH (c:Category {industry_standard_id: 'HITRUST'})
 MERGE (s)-[:INDUSTRY_STANDARD_CONTAINS_CATEGORY]->(c);
 """
 
-#  Create HAS_CONTROL relationships (Category -> Control)
+# Create HAS_CONTROL relationships (Category -> Control)
 hitrust_category_control = """
-Load CSV WITH HEADERS FROM '$file_path' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Category {industry_standard_id: 'HITRUST', category_id: row.start_id})
 MATCH (ctrl:Control {industry_standard_id: 'HITRUST', control_id: row.end_id})
 MERGE (c)-[:CATEGORY_HAS_CONTROL]->(ctrl);
 """
+
 # Create HAS_OBJECTIVE relationships (Control -> ControlObjective)
 hitrust_control_ControlObjective = """
-Load CSV WITH HEADERS FROM '$file_path' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ctrl:Control {industry_standard_id: 'HITRUST', control_id: row.start_id})
 MATCH (co:ControlObjective {industry_standard_id: 'HITRUST', objective_id: row.end_id})
 MERGE (ctrl)-[:CONTROL_HAS_CONTROL_OBJECTIVE]->(co);
 """
-# Create HAS_SPECIFICATION relationships (Controlobjective -> ControlSpecification)
+
+# Create HAS_SPECIFICATION relationships (ControlObjective -> ControlSpecification)
 hitrust_ControlObjective_specification = """
-Load CSV WITH HEADERS FROM '$file_path' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (co:ControlObjective {industry_standard_id: 'HITRUST', objective_id: row.start_id})
 MATCH (cs:ControlSpecification {industry_standard_id: 'HITRUST', specification_id: row.end_id})
 MERGE (co)-[:CONTROL_OBJECTIVE_HAS_SPECIFICATION]->(cs);
-"""
-# Create MAPS_TO relationships (Controls -> CSF Subcategories)
-hitrust_controls_maps_nist_CSF = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {industry_standard_id: 'HITRUST', control_id: row.start_id})
-MATCH (sc:Subcategory {framework_id: 'NIST_CSF_2.0', subcategory_id: row.end_id})
-MERGE (ctrl)-[:CONTROLS_MAPS_TO_CSF_SUB_CATEGORIES {
-  type: row.mapping_type,
-  confidence: row.confidence,
-  rationale: row.rationale,
-  source_document_id: row.source_document_id,
-  created_date: date(row.created_date)
-}]->(sc);
+
+
 """
 
 
@@ -114,6 +118,10 @@ time.sleep(2)
 
 client.query(hitrust_control.replace('$file_path',
                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
+time.sleep(2)
+
+client.query(nist_csf_subcategories.replace('$file_path',
+                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/NIST_CSF_subcategories.csv"))
 time.sleep(2)
 
 client.query(hitrust_control_objective.replace('$file_path',

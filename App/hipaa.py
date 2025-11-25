@@ -1,17 +1,21 @@
 # UPDATED: Using MERGE to prevent errors on re-runs.
-framework = """
-MERGE (f:Framework {framework_id: 'HIPAA'})
+#Industry Standard & Regulations: HIPAA
+industry_standard_and_regulations = """
+MERGE(i:IndustryStandardAndRegulations{industry_standard_id:'HIPAA'})
 ON CREATE SET
-    f.name = 'Health Insurance Portability and Accountability Act',
-    f.version = '2022',
-    f.publication_date = date('2025-01-05'),
-    f.status = 'Active',
-    f.description = '';
+    i.name='Health Insurance Portability and Accountability Act',
+    i.description='The Health Insurance Portability and Accountability Act (HIPAA) is a US regulation that sets standards for protecting sensitive patient health information.',
+    i.url='https://www.hhs.gov/hipaa/index.html',
+    i.abbreviation='HIPAA',
+    i.version='1996',
+    i.published_date='1996-08-21',
+    i.type='Regulation';
 """
+
 
 hipaa_standards = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Standard {standard_id: row.id, framework_id: 'HIPAA'})
+MERGE (s:Standard{standard_id: row.id, industry_standard_id: 'HIPAA'})
 ON CREATE SET
     s.title = row.title,
     s.safeguard_type = row.safeguard_type,
@@ -25,7 +29,7 @@ ON CREATE SET
 
 mappings = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, framework_id: "HIPAA"})
+MERGE (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, industry_standard_id: "HIPAA"})
 ON CREATE SET
     m.type = row.mapping_type,
     m.confidence = row.confidence,
@@ -34,25 +38,19 @@ ON CREATE SET
     m.source_section = row.source_section;
 """
 
-framework_hipaa_standards_rel = """
-MATCH (f:Framework {framework_id: 'HIPAA'})
-MATCH (c:Standard {framework_id: 'HIPAA'})
-MERGE (f)-[:CONTAINS]->(c);
-"""
-
 # UPDATED: Scoped MATCH to framework_id for precision.
 hipaa_parent_child_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row WHERE row.parent_id IS NOT NULL AND row.parent_id <> ''
-MATCH (child:Standard {standard_id: row.id, framework_id: 'HIPAA'})
-MATCH (parent:Standard {standard_id: row.parent_id, framework_id: 'HIPAA'})
-MERGE (parent)-[:HAS_SPEC]->(child);
+MATCH (child:Standard {standard_id: row.id, industry_standard_id: 'HIPAA'})
+MATCH (parent:Standard {standard_id: row.parent_id, industry_standard_id: 'HIPAA'})
+MERGE (parent)-[:HIPAA_PARENT_CHILD_]->(child);
 """
 
-hippa_subcategory_mapping_rel = """
+hipaa_subcategory_mapping_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Standard {framework_id: "HIPAA", standard_id: row.hipaa_id})
-MATCH (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, framework_id: "HIPAA"})
+MATCH (s:Standard {industry_standard_id: "HIPAA", standard_id: row.hipaa_id})
+MATCH (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, industry_standard_id: "HIPAA"})
 MATCH (sc:Subcategory {subcategory_id: row.csf_subcategory_id, framework_id: "NIST_CSF_2.0"})
 MERGE (s)-[:MAPS_TO {mapping_type: row.mapping_type, confidence: row.confidence}]->(m)-[:TARGET]->(sc);
 """
@@ -74,7 +72,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework)
+client.query(industry_standard_and_regulations)
 time.sleep(2)
 
 client.query(hipaa_standards.replace('$file_path',
@@ -85,20 +83,20 @@ client.query(mappings.replace('$file_path',
                               'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
 time.sleep(2)
 
-client.query(framework_hipaa_standards_rel)
+client.query(industry_standard_and_regulations_hipaa_standards_rel)
 time.sleep(2)
 
 client.query(hipaa_parent_child_rel.replace('$file_path',
                                             'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_standards.csv'))
 time.sleep(2)
 
-client.query(hippa_subcategory_mapping_rel.replace('$file_path',
+client.query(hipaa_subcategory_mapping_rel.replace('$file_path',
                                                    'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:Framework)-[*]->()
+res=client.query("""MATCH path = (:IndustryStandardAndRegulations)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
@@ -120,7 +118,7 @@ RETURN {
   }]
 } AS graph_data""")
 import json
-with open('hippa.json', 'w', encoding='utf-8') as f:
+with open('hipaa.json', 'w', encoding='utf-8') as f:
   f.write(json.dumps(res, default=str))
 
 client.close()
