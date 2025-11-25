@@ -106,7 +106,7 @@ pcidss_publishes ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (o:Organization {name: row.source_name})
 MATCH (s:Standard {name: row.target_name, version: row.target_version})
-MERGE (o)-[:PUBLISHES]->(s);
+MERGE (o)-[:PUBLISHES_STANDARD]->(s);
 """
 # 2. HAS_GROUP (Standard -> RequirementGroup) 
 pcidss_has_group ="""
@@ -166,7 +166,7 @@ pcidss_requires_tra = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (cao:CustomizedApproachObjective {req_id: row.source_customized_objective_id})
 MATCH (tra:TargetedRiskAnalysis {tra_id: row.target_tra_id})
-MERGE (cao)-[:REQUIRES_TRA]->(tra);
+MERGE (cao)-[:REQUIRES_TARGETED_RISK_ANALYSIS]->(tra);
 """
 
 # 10. VALIDATES (TargetedRiskAnalysis -> CustomizedControl) 
@@ -174,7 +174,7 @@ pcidss_validates ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (tra:TargetedRiskAnalysis {tra_id: row.source_tra_id})
 MATCH (cc:CustomizedControl {control_id: row.target_control_id})
-MERGE (tra)-[:VALIDATES]->(cc);
+MERGE (tra)-[:VALIDATES_CUSTOMIZED_CONTROL]->(cc);
 """
 
 # 11. ADDRESSES (CustomizedControl -> CustomizedApproachObjective) 
@@ -182,13 +182,14 @@ pcidss_addresses ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (cc:CustomizedControl {control_id: row.source_control_id})
 MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id})
-MERGE (cc)-[:ADDRESSES]->(cao);
+MERGE (cc)-[:ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE]->(cao);
 """
 
 
 import os
 import time
 import logging
+import json
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -273,12 +274,14 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:Standard)-[*]->()
+# Export graph data for PCI DSS
+logger.info("\nExporting graph data to pci-dss.json...")
+res = client.query("""
+MATCH path = (:Standard)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*, 
@@ -293,11 +296,49 @@ RETURN {
     source: elementId(startNode(r)), 
     target: elementId(endNode(r)) 
   }]
-} AS graph_data""")
+} AS graph_data
+""")
 
-import json
-with open('pci-dss.json', 'w', encoding='utf-8') as f:
-  f.write(json.dumps(res, default=str))
+if isinstance(res, str):
+    logger.error(f"✗ Export query failed: {res}")
+elif res and len(res) > 0:
+    graph_data = res[0].get('graph_data', res[0])
+    
+    # PCI DSS relationship type mappings
+    relationship_mapping = {
+        'REQUIRES_TRA': 'REQUIRES_TARGETED_RISK_ANALYSIS',
+        'VALIDATES': 'VALIDATES_CUSTOMIZED_CONTROL',
+        'ADDRESSES': 'ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE',
+        
+    }
+    
+    # Rename relationship types in JSON
+    renamed_counts = {}
+    if 'links' in graph_data:
+        for link in graph_data['links']:
+            old_type = link.get('type')
+            if old_type in relationship_mapping:
+                new_type = relationship_mapping[old_type]
+                link['type'] = new_type
+                renamed_counts[old_type] = renamed_counts.get(old_type, 0) + 1
+        
+        if renamed_counts:
+            logger.info("✓ Renamed PCI DSS relationships:")
+            for old_type, count in renamed_counts.items():
+                new_type = relationship_mapping[old_type]
+                logger.info(f"  {old_type} → {new_type}: {count} relationships")
+    
+    # Export to pcidss.json
+    with open('pci-dss.json', 'w', encoding='utf-8') as f:
+        json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
+    
+    node_count = len(graph_data.get('nodes', []))
+    link_count = len(graph_data.get('links', []))
+    logger.info(f"✓ Exported {node_count} nodes and {link_count} relationships")
+    logger.info(f"✓ Graph data saved to: pci-dss.json")
+else:
+    logger.warning("⚠ No data returned from export query")
+
 
 client.close()
 

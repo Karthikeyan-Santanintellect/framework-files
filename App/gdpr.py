@@ -1,8 +1,8 @@
 # Create GDPR Regulation Node
-regulation = """
-MERGE (reg:Regulation {regulation_id: 'GDPR'})
+regional_regulation = """
+MERGE (reg:RegionalRegulation {regional_regulation_id: 'GDPR'})
 ON CREATE SET
-    reg.regulation_name = "General Data Protection Regulation",
+    reg.regional_regulation_name = "General Data Protection Regulation",
     reg.official_citation = "Regulation (EU) 2016/679",
     reg.version = "2016/679",
     reg.publication_date = date("2018-05-25"),
@@ -122,11 +122,11 @@ ON CREATE SET
 """
 
 # Regulation → Chapter Relationships 
-regulation_chapter ="""
+regional_regulation_chapter ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:Regulation {regulation_id: 'GDPR'})
+MATCH (reg:RegionalRegulation {regional_regulation_id: 'GDPR'})
 MATCH (c:Chapter {id: row.Target_ID})
-MERGE (reg)-[:HAS_CHAPTER {order: row.Properties}]->(c);
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_CHAPTER {order: row.Properties}]->(c);
 """
 #Framework -> chapter Relationships
 framework_chapter ="""
@@ -138,18 +138,18 @@ MERGE (f)-[:FRAMEWORK_HAS_CHAPTER {order: toString(c.number)}]->(c);
 
 
 # Regulation → Recital Relationships 
-regulation_recital ="""
+regional_regulation_recital ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:Regulation {regulation_id: 'GDPR'})
+MATCH (reg:RegionalRegulation {regional_regulation_id: 'GDPR'})
 MATCH (r:Recital {id: row.Target_ID})
-MERGE (reg)-[:HAS_RECITAL {order: row.Properties}]->(r);
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_RECITAL {order: row.Properties}]->(r);
 """
 # Chapter → Section Relationships 
 chapter_section ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Chapter {id: row.Source_ID})
 MATCH (s:Section {id: row.Target_ID})
-MERGE (c)-[:CONTAINS_SECTION {order: row.Properties}]->(s);
+MERGE (c)-[:CHAPTER_CONTAINS_SECTION {order: row.Properties}]->(s);
 """
 # Chapter → Article Relationships 
 chapter_article ="""
@@ -172,7 +172,7 @@ article_recital ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (a:Article {id: row.Source_ID})
 MATCH (r:Recital {id: row.Target_ID})
-MERGE (a)-[:SUPPORTED_BY {order: row.Properties}]->(r);
+MERGE (a)-[:ARTICLE_SUPPORTED_BY_RECITAL {order: row.Properties}]->(r);
 """
 
 # Article → Paragraph Relationships 
@@ -194,23 +194,23 @@ paragraph_sub_paragraph ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (p:Paragraph {id: row.Source_ID})
 MATCH (sp:SubParagraph {id: row.Target_ID})
-MERGE (p)-[:HAS_SUB_PARAGRAPH {order: row.Properties}]->(sp);
+MERGE (p)-[:PARAGRAPH_HAS_SUB_PARAGRAPH {order: row.Properties}]->(sp);
 """
 
 # Regulation → LegislativeAction Relationships
-regulation_legislative_action ="""
+regional_regulation_legislative_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:Regulation {regulation_id: 'GDPR'})
+MATCH (reg:RegionalRegulation {regional_regulation_id: 'GDPR'})
 MATCH (la:LegislativeAction {id: row.Target_ID})
-MERGE (reg)-[:HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
 """
 
 # Regulation → Framework Relationships
-regulation_framework ="""
+regional_regulation_framework ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:Regulation {regulation_id: 'GDPR'})
+MATCH (reg:RegionalRegulation {regional_regulation_id: 'GDPR'})
 MATCH (f:Framework {id: row.Target_ID})
-MERGE (reg)-[:PART_OF_FRAMEWORK {properties: row.Properties}]->(f);
+MERGE (reg)-[:REGIONAL_REGULATION_IS_PART_OF_FRAMEWORK {properties: row.Properties}]->(f);
 """
 
 # Article → Concept Relationships 
@@ -225,13 +225,15 @@ recital_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Recital {id: row.Source_ID})
 MATCH (co:Concept {id: row.Target_ID})
-MERGE (r)-[:DEFINES_CONCEPT {properties: row.Properties}]->(co);
+MERGE (r)-[:RECITAL_DEFINES_CONCEPT {properties: row.Properties}]->(co);
 """
 
 
+import sys
 import os
 import time
 import logging
+import json
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -242,11 +244,12 @@ client = Neo4jConnect()
 health = client.check_health()
 if health is not True:
     print("Neo4j connection error:", health)
-    os._exit(1)
+    client.close()
+    sys.exit(1)
 
 logger.info("Loading graph structure...")
 
-client.query(regulation)
+client.query(regional_regulation)
 time.sleep(2)
 
 client.query(gdpr_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/2_chapter_nodes.csv"))
@@ -254,7 +257,6 @@ time.sleep(2)
 
 client.query(gdpr_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/3_section_nodes.csv"))
 time.sleep(2)
-
 
 client.query(gdpr_article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/article_node.csv"))
 time.sleep(2)
@@ -271,20 +273,19 @@ time.sleep(2)
 client.query(gdpr_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/14_legislative_action_nodes.csv"))
 time.sleep(2)
 
-
 client.query(gdpr_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/15_concept_nodes_CORRECTED.csv"))
 time.sleep(2)
 
 client.query(gdpr_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/1_framework_nodes_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
+client.query(regional_regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
 time.sleep(2)
 
 client.query(framework_chapter)
 time.sleep(2)
 
-client.query(regulation_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/7_relationships_regulation_to_recital.csv"))
+client.query(regional_regulation_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/7_relationships_regulation_to_recital.csv"))
 time.sleep(2)
 
 client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/8_relationships_chapter_to_section.csv"))
@@ -308,10 +309,10 @@ time.sleep(2)
 client.query(paragraph_sub_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/18_relationships_paragraph_to_subparagraph.csv"))
 time.sleep(2)
 
-client.query(regulation_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/19_relationships_regulation_to_legislative_action.csv"))
+client.query(regional_regulation_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/19_relationships_regulation_to_legislative_action.csv"))
 time.sleep(2)
 
-client.query(regulation_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/20_relationships_regulation_to_framework_CORRECTED.csv"))
+client.query(regional_regulation_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/20_relationships_regulation_to_framework_CORRECTED.csv"))
 time.sleep(2)
 
 client.query(article_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/21_relationships_article_to_concepts.csv"))
@@ -320,34 +321,53 @@ time.sleep(2)
 client.query(recital_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/22_relationships_recital_to_concepts.csv"))
 time.sleep(2)
 
-
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:Regulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
-WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+output_filename = "gdpr.json"
 
-RETURN {
-  nodes: [n IN uniqueNodes | n {
-    .*, 
-    id: elementId(n),     
-    labels: labels(n),      
-    mainLabel: head(labels(n)) 
-  }],
-  links: [r IN uniqueRels | r {
-    .*,
-    id: elementId(r),     
-    type: type(r),         
-    source: elementId(startNode(r)), 
-    target: elementId(endNode(r)) 
-  }]
-} AS graph_data""")
+res = client.query("""
+    MATCH path = (:RegionalRegulation)-[*]->()
+    WITH path
+    UNWIND nodes(path) AS n
+    UNWIND relationships(path) AS r
+    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+    RETURN {
+      nodes: [n IN uniqueNodes | n {
+        .*, 
+        id: elementId(n),     
+        labels: labels(n),      
+        mainLabel: head(labels(n)) 
+      }],
+      links: [r IN uniqueRels | r {
+        .*,
+        id: elementId(r),     
+        type: type(r),         
+        source: elementId(startNode(r)), 
+        target: elementId(endNode(r)) 
+      }]
+    } AS graph_data
+""")
 
-import json
-with open('gdpr.json', 'w', encoding='utf-8') as f:
-  f.write(json.dumps(res, default=str))
+if isinstance(res, str):
+    logger.error(f"✗ Export query failed: {res}")
+    client.close()
+    sys.exit(1)
+
+if not res or len(res) == 0:
+    logger.warning("⚠ No data returned from export query")
+    client.close()
+    sys.exit(1)
+
+graph_data = res[0].get('graph_data', res[0])
+
+with open(output_filename, 'w', encoding='utf-8') as f:
+    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
+
+node_count = len(graph_data.get('nodes', []))
+link_count = len(graph_data.get('links', []))
+
+logger.info(f"✓ Exported {node_count} nodes and {link_count} relationships")
+logger.info(f"✓ Graph data saved to: {output_filename}") 
 
 client.close()
 
