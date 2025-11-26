@@ -14,8 +14,8 @@ CREATE INDEX nist_category_name IF NOT EXISTS FOR (c:Category) ON (c.name);
 """
 
 # CORRECTED: Changed property from 'id' to 'framework_id' for consistency.
-framework = """
-MERGE (f:Framework {framework_id: "NIST_CSF_2.0"})
+framework_and_standards = """
+MERGE (f:FrameworkAndStandards {framework_id: "NIST_CSF_2.0"})
 ON CREATE SET
   f.name = "NIST Cybersecurity Framework 2.0",
   f.version = "2.0",
@@ -52,30 +52,33 @@ ON CREATE SET
 """
 
 # No changes needed here, as it now correctly matches the 'framework_id' property.
-framework_functions_rel = """
-MATCH (f:Framework {framework_id: 'NIST_CSF_2.0'})
+framework_and_standard_functions_rel = """
+MATCH (f:FrameworkAndStandards {framework_id: 'NIST_CSF_2.0'})
 MATCH (fn:Function {framework_id: 'NIST_CSF_2.0'})
-MERGE (f)-[:CONTAINS]->(fn);
+MERGE (f)-[:FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS]->(fn);
 """
+
 
 function_categories_rel = """
 MATCH (fn:Function {framework_id: 'NIST_CSF_2.0'})
 MATCH (c:Category {framework_id: 'NIST_CSF_2.0'})
 WHERE fn.function_id = c.function_id
-MERGE (fn)-[:HAS_CATEGORY]->(c);
+MERGE (fn)-[:FUNCTION_HAS_CATEGORIES]->(c);
 """
 
 category_subcategories_rel = """
 MATCH (c:Category {framework_id: 'NIST_CSF_2.0'})
 MATCH (s:Subcategory {framework_id: 'NIST_CSF_2.0'})
 WHERE c.category_id = s.category_id
-MERGE (c)-[:CONTAINS]->(s);
+MERGE (c)-[:CATEGORY_CONTAINS_SUBCATEGORIES]->(s);
 """
 
 
 import os
 import time
 import logging
+import json
+import sys
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -91,9 +94,9 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework)
+client.query(framework_and_standards)
 time.sleep(2)
-logger.info('Framework')
+logger.info('FrameworkAndStandards')
 
 client.query(functions.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20CSF%202.0/functions.csv'))
 time.sleep(2)
@@ -108,7 +111,7 @@ time.sleep(2)
 logger.info('Subcategory')
 
 logger.info("Creating relationships...")
-client.query(framework_functions_rel)
+client.query(framework_and_standard_functions_rel)
 time.sleep(2)
 
 client.query(function_categories_rel)
@@ -118,5 +121,51 @@ client.query(category_subcategories_rel)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
+
+output_filename = "nist_csf.json"
+
+res = client.query("""
+    MATCH path = (:FrameworkAndStandards)-[*]->()
+    WITH path
+    UNWIND nodes(path) AS n
+    UNWIND relationships(path) AS r
+    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+    RETURN {
+      nodes: [n IN uniqueNodes | n {
+        .*, 
+        id: elementId(n),     
+        labels: labels(n),      
+        mainLabel: head(labels(n)) 
+      }],
+      links: [r IN uniqueRels | r {
+        .*,
+        id: elementId(r),     
+        type: type(r),         
+        source: elementId(startNode(r)), 
+        target: elementId(endNode(r)) 
+      }]
+    } AS graph_data
+""")
+
+if isinstance(res, str):
+    logger.error(f" Export query failed: {res}")
+    client.close()
+    sys.exit(1)
+
+if not res or len(res) == 0:
+    logger.warning(" No data returned from export query")
+    client.close()
+    sys.exit(1)
+
+graph_data = res[0].get('graph_data', res[0])
+
+with open(output_filename, 'w', encoding='utf-8') as f:
+    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
+
+node_count = len(graph_data.get('nodes', []))
+link_count = len(graph_data.get('links', []))
+
+logger.info(f" Exported {node_count} nodes and {link_count} relationships")
+logger.info(f" Graph data saved to: {output_filename}") 
 
 client.close()

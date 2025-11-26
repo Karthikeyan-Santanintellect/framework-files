@@ -1,0 +1,1005 @@
+{
+  "nodes": [
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8967",
+      "mainLabel": "FrameworkAndStandard",
+      "labels": [
+        "FrameworkAndStandard"
+      ],
+      "full_title": "A Tool for Improving Privacy through Enterprise Risk Management - Version 1.1",
+      "purpose": "Enhance privacy engineering practices supporting privacy by design concepts in AI systems",
+      "publication": "NIST CSWP 01112025",
+      "name": "NIST Privacy Framework 1.1",
+      "publication_date": "2025-01-11",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "version": "1.1",
+      "status": "Active"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "Protect-P",
+      "key_activities": [
+        "Access controls",
+        " data security",
+        " protective technology",
+        " maintenance"
+      ],
+      "function_id": "PR-P",
+      "v11_updates": "Aligned with CSF 2.0 Protect function, enhanced data protection measures",
+      "supports_functions": [
+        "Supports all functions through security"
+      ],
+      "definition": "Develop and implement appropriate data processing safeguards to prevent cybersecurity-related privacy events",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "is_foundational": false,
+      "primary_focus": "Cybersecurity-related privacy protection, data safeguards, technical controls"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8999",
+      "mainLabel": "PrivacyObjective",
+      "labels": [
+        "PrivacyObjective"
+      ],
+      "related_functions": [
+        "ID-P",
+        "GV-P",
+        "CT-P",
+        "CM-P",
+        "PR-P"
+      ],
+      "objective_name": "Predictability",
+      "objective_definition": "Enabling reliable assumptions by individuals, owners, and operators about data and their processing by systems including AI systems",
+      "engineering_focus": [
+        "System transparency",
+        " user expectations",
+        " AI explainability"
+      ],
+      "v11_updates": "Enhanced focus on AI explainability and predictable AI system behavior",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "objective_id": "PRED"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8997",
+      "mainLabel": "AIPrivacyRisk",
+      "labels": [
+        "AIPrivacyRisk"
+      ],
+      "risk_category": "Data",
+      "likelihood": "Medium",
+      "affected_functions": [
+        "ID-P",
+        "GV-P",
+        "CT-P",
+        "PR-P"
+      ],
+      "mitigation_strategies": [
+        "Data sanitization",
+        " PII detection and removal",
+        " synthetic data generation"
+      ],
+      "risk_description": "Personal information inadvertently included in AI training datasets, potentially exposed through model outputs",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "ai_risk_id": "AI_PII_001",
+      "impact_level": "High",
+      "risk_name": "PII Exposure in Training Data",
+      "v11_section": "1.2.2"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8995",
+      "mainLabel": "AIPrivacyRisk",
+      "labels": [
+        "AIPrivacyRisk"
+      ],
+      "risk_category": "Technical",
+      "likelihood": "Medium",
+      "affected_functions": [
+        "ID-P",
+        "CT-P",
+        "PR-P"
+      ],
+      "mitigation_strategies": [
+        "Differential privacy",
+        " model regularization",
+        " data minimization"
+      ],
+      "risk_description": "Ability to determine if specific data points were used in AI model training, potentially revealing sensitive information",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "ai_risk_id": "AI_MEMBER_001",
+      "impact_level": "Medium",
+      "risk_name": "Membership Inference Attacks",
+      "v11_section": "1.2.2"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8994",
+      "mainLabel": "AIPrivacyRisk",
+      "labels": [
+        "AIPrivacyRisk"
+      ],
+      "risk_category": "Technical",
+      "likelihood": "High",
+      "affected_functions": [
+        "CT-P",
+        "CM-P",
+        "PR-P"
+      ],
+      "mitigation_strategies": [
+        "Input validation",
+        " prompt sanitization",
+        " output filtering",
+        " access controls"
+      ],
+      "risk_description": "Malicious inputs that manipulate AI systems to reveal private information or bypass privacy controls",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "ai_risk_id": "AI_PROMPT_001",
+      "impact_level": "Medium",
+      "risk_name": "Prompt Injection Vulnerabilities",
+      "v11_section": "1.2.2"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8993",
+      "mainLabel": "AIPrivacyRisk",
+      "labels": [
+        "AIPrivacyRisk"
+      ],
+      "risk_category": "Technical",
+      "likelihood": "Medium",
+      "affected_functions": [
+        "ID-P",
+        "CT-P",
+        "PR-P"
+      ],
+      "mitigation_strategies": [
+        "Differential privacy",
+        " secure aggregation",
+        " privacy-preserving ML techniques"
+      ],
+      "risk_description": "AI models may enable reconstruction of training data or reveal sensitive information through model inversion attacks",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "ai_risk_id": "AI_RECON_001",
+      "impact_level": "High",
+      "risk_name": "Data Reconstruction Attacks",
+      "v11_section": "1.2.2"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8991",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.PT-P",
+      "name": "Protective Technology",
+      "function_id": "PR-P",
+      "v11_updates": "AI-aware protective technologies",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8990",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.MA-P",
+      "name": "Maintenance",
+      "function_id": "PR-P",
+      "v11_updates": "AI system maintenance and updates",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8989",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.DS-P",
+      "name": "Data Security",
+      "function_id": "PR-P",
+      "v11_updates": "AI data protection and cybersecurity alignment",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8988",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.AC-P",
+      "name": "Identity Management, Authentication, and Access Control",
+      "function_id": "PR-P",
+      "v11_updates": "Enhanced access control aligned with CSF 2.0",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8987",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.PO-P",
+      "name": "Data Protection Policies, Processes, and Procedures",
+      "function_id": "PR-P",
+      "v11_updates": "Aligned with CSF 2.0 Protect function structure",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "Communicate-P",
+      "key_activities": [
+        "Privacy notices",
+        " stakeholder engagement",
+        " transparency reporting"
+      ],
+      "function_id": "CM-P",
+      "v11_updates": "AI transparency requirements, enhanced stakeholder communication",
+      "supports_functions": [
+        "All functions through communication"
+      ],
+      "definition": "Develop and implement appropriate activities to enable organizations and individuals to have a reliable understanding and engage in dialogue about data processing and privacy risks",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "is_foundational": false,
+      "primary_focus": "Transparency, stakeholder communication, data processing awareness"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8998",
+      "mainLabel": "AIPrivacyRisk",
+      "labels": [
+        "AIPrivacyRisk"
+      ],
+      "risk_category": "Content",
+      "likelihood": "Medium",
+      "affected_functions": [
+        "GV-P",
+        "CT-P",
+        "CM-P"
+      ],
+      "mitigation_strategies": [
+        "Consent management",
+        " content labeling",
+        " synthetic media detection",
+        " ethical AI policies"
+      ],
+      "risk_description": "AI generation of synthetic content that violates individual likeness rights or creates misleading representations",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "ai_risk_id": "AI_DEEP_001",
+      "impact_level": "Medium",
+      "risk_name": "Deepfake and Likeness Rights",
+      "v11_section": "1.2.2"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8996",
+      "mainLabel": "AIPrivacyRisk",
+      "labels": [
+        "AIPrivacyRisk"
+      ],
+      "risk_category": "Algorithmic",
+      "likelihood": "High",
+      "affected_functions": [
+        "ID-P",
+        "GV-P",
+        "CT-P",
+        "CM-P"
+      ],
+      "mitigation_strategies": [
+        "Bias testing",
+        " fair ML algorithms",
+        " diverse training data",
+        " algorithmic auditing"
+      ],
+      "risk_description": "AI-assisted decisions that exhibit unfair bias affecting individuals or groups, leading to discriminatory outcomes",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "ai_risk_id": "AI_BIAS_001",
+      "impact_level": "High",
+      "risk_name": "Statistical and Cognitive Bias",
+      "v11_section": "1.2.2"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8986",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "CM.AW-P",
+      "name": "Data Processing Awareness",
+      "function_id": "CM-P",
+      "v11_updates": "AI processing awareness and stakeholder communication",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8985",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "CM.PO-P",
+      "name": "Communication Policies, Processes, and Procedures",
+      "function_id": "CM-P",
+      "v11_updates": "AI transparency and explainability communication",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "Control-P",
+      "key_activities": [
+        "Data processing controls",
+        " individual rights",
+        " privacy-preserving techniques"
+      ],
+      "function_id": "CT-P",
+      "v11_updates": "AI-specific control mechanisms, enhanced individual empowerment",
+      "supports_functions": [
+        "Communicate-P",
+        " Protect-P"
+      ],
+      "definition": "Develop and implement appropriate activities to enable organizations or individuals to manage data with sufficient granularity to manage privacy risks",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "is_foundational": false,
+      "primary_focus": "Data processing management, individual empowerment, disassociated processing"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9001",
+      "mainLabel": "PrivacyObjective",
+      "labels": [
+        "PrivacyObjective"
+      ],
+      "related_functions": [
+        "ID-P",
+        "GV-P",
+        "CT-P"
+      ],
+      "objective_name": "Disassociability",
+      "objective_definition": "Enabling processing of data without association to individuals beyond operational requirements using privacy-preserving AI techniques",
+      "engineering_focus": [
+        "Privacy-preserving techniques",
+        " AI anonymization",
+        " differential privacy"
+      ],
+      "v11_updates": "Privacy-preserving AI techniques (federated learning, differential privacy, secure multi-party computation)",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "objective_id": "DISA"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9000",
+      "mainLabel": "PrivacyObjective",
+      "labels": [
+        "PrivacyObjective"
+      ],
+      "related_functions": [
+        "ID-P",
+        "GV-P",
+        "CT-P"
+      ],
+      "objective_name": "Manageability",
+      "objective_definition": "Providing capability for granular administration of data including AI-generated data and model outputs",
+      "engineering_focus": [
+        "Data lifecycle management",
+        " individual control",
+        " AI data governance"
+      ],
+      "v11_updates": "AI data governance and model output management capabilities",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "objective_id": "MGMT"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8984",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "CT.DP-P",
+      "name": "Disassociated Processing",
+      "function_id": "CT-P",
+      "v11_updates": "AI privacy-preserving techniques and disassociation",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8983",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "CT.DM-P",
+      "name": "Data Processing Management",
+      "function_id": "CT-P",
+      "v11_updates": "AI data management and individual empowerment controls",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8982",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "CT.PO-P",
+      "name": "Data Processing Policies, Processes, and Procedures",
+      "function_id": "CT-P",
+      "v11_updates": "AI-specific data processing controls",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "Govern-P",
+      "key_activities": [
+        "Policy development",
+        " risk strategy",
+        " training",
+        " monitoring",
+        " oversight"
+      ],
+      "function_id": "GV-P",
+      "v11_updates": "Standalone governance capabilities, enhanced organizational accountability",
+      "supports_functions": [
+        "All implementation functions"
+      ],
+      "definition": "Develop and implement the organizational governance structure to enable an ongoing understanding of the organization's risk management priorities informed by privacy risk",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "is_foundational": true,
+      "primary_focus": "Governance structure, policies, risk management strategy, organizational accountability"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8981",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.OV-P",
+      "name": "Organizational Oversight",
+      "function_id": "GV-P",
+      "v11_updates": "New category for enhanced organizational accountability",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8980",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.MT-P",
+      "name": "Monitoring and Review",
+      "function_id": "GV-P",
+      "v11_updates": "Enhanced accountability and responsibility tracking",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8979",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.AT-P",
+      "name": "Awareness and Training",
+      "function_id": "GV-P",
+      "v11_updates": "AI privacy training and awareness programs",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8978",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.RM-P",
+      "name": "Risk Management Strategy",
+      "function_id": "GV-P",
+      "v11_updates": "AI risk tolerance and strategy frameworks",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8977",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.PO-P",
+      "name": "Governance Policies, Processes, and Procedures",
+      "function_id": "GV-P",
+      "v11_updates": "Standalone governance without CSF dependency",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "Identify-P",
+      "key_activities": [
+        "Data inventory",
+        " stakeholder mapping",
+        " privacy risk assessment",
+        " ecosystem analysis"
+      ],
+      "function_id": "ID-P",
+      "v11_updates": "Enhanced data lifecycle management, AI data processing identification",
+      "supports_functions": [
+        "All other functions"
+      ],
+      "definition": "Develop the organizational understanding to manage privacy risk for individuals arising from data processing",
+      "framework_standard_id": "NIST_PRIVACY_11_2025",
+      "is_foundational": true,
+      "primary_focus": "Data processing understanding, privacy risk identification, ecosystem mapping"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8976",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.DE-P",
+      "name": "Data Processing Ecosystem Risk Management",
+      "function_id": "ID-P",
+      "v11_updates": "AI supply chain and ecosystem risk management",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8975",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.RA-P",
+      "name": "Risk Assessment",
+      "function_id": "ID-P",
+      "v11_updates": "AI-specific risk assessment methodologies",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8974",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.BE-P",
+      "name": "Business Environment",
+      "function_id": "ID-P",
+      "v11_updates": "AI ecosystem stakeholder identification",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    },
+    {
+      "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8973",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.IM-P",
+      "name": "Inventory and Mapping",
+      "function_id": "ID-P",
+      "v11_updates": "Enhanced AI data inventory and lifecycle mapping",
+      "framework_standard_id": "NIST_PRIVACY_11_2025"
+    }
+  ],
+  "links": [
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162110123280179975",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8967",
+      "type": "FRAMEWORK_STANDARD_HAS_FUNCTION",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6926720944849298215",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8999"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6924468045523985189",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8997",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922216245710299939",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8995",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922216245710299938",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8994",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922216245710299937",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8993",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162089232559252236",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8991"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159837432745566988",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8990"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157585632931881740",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8989"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155333833118196492",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8988"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153082033304511244",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8987"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159858323466494727",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8967",
+      "type": "FRAMEWORK_STANDARD_HAS_FUNCTION",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6924469145035612967",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8999"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922216245710299942",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8998",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6924468045523985188",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8996",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919964445896614690",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8994",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155333833118196491",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8986"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153082033304511243",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8985"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157606523652809479",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8967",
+      "type": "FRAMEWORK_STANDARD_HAS_FUNCTION",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922217345221927721",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9001"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922217345221927720",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9000"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922217345221927719",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8999"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919964445896614694",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8998",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922216245710299941",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8997",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6922216245710299940",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8996",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919964445896614691",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8995",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917712646082929442",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8994",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919964445896614689",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8993",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157585632931881738",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8984"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155333833118196490",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8983"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153082033304511242",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8982"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155354723839124231",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8967",
+      "type": "FRAMEWORK_STANDARD_HAS_FUNCTION",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919965545408242473",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9001"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919965545408242472",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9000"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919965545408242471",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8999"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917712646082929446",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8998",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919964445896614693",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8997",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6919964445896614692",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8996",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157607623164437257",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_FOUNDATIONAL_SUPPORT",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "relationship_type": "Foundational_Support",
+      "support_area": "Governance structure, policies, risk management strategy, organizational accountability"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155355823350752009",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_FOUNDATIONAL_SUPPORT",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "relationship_type": "Foundational_Support",
+      "support_area": "Governance structure, policies, risk management strategy, organizational accountability"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153104023537066761",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_FOUNDATIONAL_SUPPORT",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "relationship_type": "Foundational_Support",
+      "support_area": "Governance structure, policies, risk management strategy, organizational accountability"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162089232559252233",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8981"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159837432745566985",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8980"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157585632931881737",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8979"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155333833118196489",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8978"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153082033304511241",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8969",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8977"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153102924025438983",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8967",
+      "type": "FRAMEWORK_STANDARD_HAS_FUNCTION",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917713745594557225",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9001"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917713745594557224",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:9000"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917713745594557223",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_SUPPORTS_OBJECTIVE",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8999"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917712646082929445",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8997",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917712646082929444",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8996",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917712646082929443",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8995",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:6917712646082929441",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_ADDRESSES_AI_RISKS",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8993",
+      "address_type": "AI_Privacy_Risk_Mitigation",
+      "v11_new_capability": true
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157607623164437256",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_FOUNDATIONAL_SUPPORT",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8972",
+      "relationship_type": "Foundational_Support",
+      "support_area": "Data processing understanding, privacy risk identification, ecosystem mapping"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155355823350752008",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_FOUNDATIONAL_SUPPORT",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8971",
+      "relationship_type": "Foundational_Support",
+      "support_area": "Data processing understanding, privacy risk identification, ecosystem mapping"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153104023537066760",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_FOUNDATIONAL_SUPPORT",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8970",
+      "relationship_type": "Foundational_Support",
+      "support_area": "Data processing understanding, privacy risk identification, ecosystem mapping"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159837432745566984",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8976"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157585632931881736",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8975"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155333833118196488",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8974"
+    },
+    {
+      "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153082033304511240",
+      "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8968",
+      "type": "FUNCTION_HAS_CATEGORY",
+      "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8973"
+    }
+  ]
+}

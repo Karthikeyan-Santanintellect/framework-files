@@ -2,11 +2,11 @@
 
 # UPDATED: Constraints are now composite, requiring IDs to be unique within a framework.
 constraints = """
-CREATE CONSTRAINT framework_id_unique FOR (f:Framework) REQUIRE f.framework_id IS UNIQUE;
-CREATE CONSTRAINT category_framework_composite_unique FOR (c:Category) REQUIRE (c.framework_id, c.category_id) IS UNIQUE;
-CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.framework_id, ctrl.control_id) IS UNIQUE;
-CREATE CONSTRAINT attribute_framework_composite_unique FOR (a:Attribute) REQUIRE (a.framework_id, a.attribute_id) IS UNIQUE;
-CREATE CONSTRAINT guideline_framework_composite_unique FOR (g:Guideline) REQUIRE (g.framework_id, g.guideline_id) IS UNIQUE;
+CREATE CONSTRAINT framework_id_unique FOR (f:FrameworkAndStandard) REQUIRE f.framework_standard_id IS UNIQUE;
+CREATE CONSTRAINT category_framework_composite_unique FOR (c:Category) REQUIRE (c.framework_standard_id, c.category_id) IS UNIQUE;
+CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.framework_standard_id, ctrl.control_id) IS UNIQUE;
+CREATE CONSTRAINT attribute_framework_composite_unique FOR (a:Attribute) REQUIRE (a.framework_standard_id, a.attribute_id) IS UNIQUE;
+CREATE CONSTRAINT guideline_framework_composite_unique FOR (g:Guideline) REQUIRE (g.framework_standard_id, g.guideline_id) IS UNIQUE;
 """
 
 indexes = """
@@ -18,9 +18,9 @@ CREATE INDEX control_new_index FOR (ctrl:Control) ON (ctrl.is_new);
 """
 
 # UPDATED: Switched to MERGE.
-framework = """
+framework_standard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Framework {framework_id: row.framework_id})
+MERGE (f:FrameworkAndStandard {framework_standard_id: row.framework_id})
 ON CREATE SET
     f.name = row.name,
     f.full_name = row.full_name,
@@ -34,7 +34,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {framework_id: 'ISO27002_2022', category_id: row.category_id})
+MERGE (c:Category {framework_standard_id: 'ISO27002_2022', category_id: row.category_id})
 ON CREATE SET
     c.category_code = row.category_code,
     c.category_name = row.category_name,
@@ -46,7 +46,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctrl:Control {framework_id: 'ISO27002_2022', control_id: row.control_id})
+MERGE (ctrl:Control {framework_standard_id: 'ISO27002_2022', control_id: row.control_id})
 ON CREATE SET
     ctrl.control_name = row.control_name,
     ctrl.purpose = row.purpose,
@@ -61,7 +61,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Attribute {framework_id: 'ISO27002_2022', attribute_id: row.attribute_id})
+MERGE (a:Attribute {framework_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
 ON CREATE SET
     a.attribute_type = row.attribute_type,
     a.attribute_value = row.attribute_value,
@@ -72,7 +72,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 guidelines = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (g:Guideline {framework_id: 'ISO27002_2022', guideline_id: row.guideline_id})
+MERGE (g:Guideline {framework_standard_id: 'ISO27002_2022', guideline_id: row.guideline_id})
 ON CREATE SET
     g.control_id = row.control_id,
     g.guideline_type = row.guideline_type,
@@ -82,34 +82,34 @@ ON CREATE SET
 """
 
 # UPDATED: Scoped MATCH to framework_id.
-framework_category_rel = """
-MATCH (f:Framework {framework_id: 'ISO27002_2022'})
-MATCH (c:Category {framework_id: 'ISO27002_2022'})
-MERGE (f)-[:CONTAINS]->(c);
+framework_standard_category_rel = """
+MATCH (f:FrameworkAndStandard {framework_standard_id: 'ISO27002_2022'})
+MATCH (c:Category {framework_standard_id: 'ISO27002_2022'})
+MERGE (f)-[:FRAMEWORK_CONTAINS_CATEGORY]->(c);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 category_control_rel = """
-MATCH (cat:Category {framework_id: 'ISO27002_2022'})
-MATCH (ctrl:Control {framework_id: 'ISO27002_2022'})
+MATCH (cat:Category {framework_standard_id: 'ISO27002_2022'})
+MATCH (ctrl:Control {framework_standard_id: 'ISO27002_2022'})
 WHERE cat.category_id = ctrl.category_id
-MERGE (cat)-[:CONTAINS]->(ctrl);
+MERGE (cat)-[:CATEGORY_CONTAINS_CONTROL]->(ctrl);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 control_guideline_rel = """
-MATCH (ctrl:Control {framework_id: 'ISO27002_2022'})
-MATCH (guide:Guideline {framework_id: 'ISO27002_2022'})
+MATCH (ctrl:Control {framework_standard_id: 'ISO27002_2022'})
+MATCH (guide:Guideline {framework_standard_id: 'ISO27002_2022'})
 WHERE ctrl.control_id = guide.control_id
-MERGE (ctrl)-[:HAS_GUIDELINE]->(guide);
+MERGE (ctrl)-[:CONTROL_HAS_GUIDELINE]->(guide);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 control_attribute_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {framework_id: 'ISO27002_2022', control_id: row.control_id})
-MATCH (attr:Attribute {framework_id: 'ISO27002_2022', attribute_id: row.attribute_id})
-MERGE (ctrl)-[:HAS_ATTRIBUTE {relevance: row.relevance}]->(attr);
+MATCH (ctrl:Control {framework_standard_id: 'ISO27002_2022', control_id: row.control_id})
+MATCH (attr:Attribute {framework_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
+MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE {relevance: row.relevance}]->(attr);
 """
 # ... (rest of the python script remains the same)
 
@@ -117,6 +117,8 @@ MERGE (ctrl)-[:HAS_ATTRIBUTE {relevance: row.relevance}]->(attr);
 import os
 import time
 import logging
+import json
+import sys
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -131,7 +133,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_framework.csv'))
+client.query(framework_standard.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_framework.csv'))
 time.sleep(2)
 
 client.query(categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_categories.csv'))
@@ -146,7 +148,7 @@ time.sleep(2)
 client.query(guidelines.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_guidelines.csv'))
 time.sleep(2)
 
-client.query(framework_category_rel)
+client.query(framework_standard_category_rel)
 time.sleep(2)
 
 client.query(category_control_rel)
@@ -159,7 +161,7 @@ client.query(control_attribute_rel.replace('$file_path', 'https://github.com/Kar
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:Standard)-[*]->()
+res=client.query("""MATCH path = (:FrameworkAndStandard)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r

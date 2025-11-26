@@ -1,0 +1,2893 @@
+[
+    {
+        "graph_data": {
+            "nodes": [
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8497",
+                    "mainLabel": "FrameworkAndStandard",
+                    "labels": [
+                        "FrameworkAndStandard"
+                    ],
+                    "full_name": "Information security, cybersecurity and privacy protection \u2014 Information security controls",
+                    "name": "ISO/IEC 27002:2022",
+                    "description": "Reference set of generic information security controls including implementation guidance",
+                    "publication_date": "2022-02-15",
+                    "framework_standard_id": "ISO27002_2022",
+                    "version": "2022",
+                    "total_controls": 93,
+                    "status": "Active"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "mainLabel": "Category",
+                    "labels": [
+                        "Category"
+                    ],
+                    "control_range": "8.1-8.34",
+                    "control_count": 34,
+                    "category_name": "Technological Controls",
+                    "category_id": "technological",
+                    "category_code": "8",
+                    "description": "Technical controls including systems security, cryptography, and access controls",
+                    "framework_standard_id": "ISO27002_2022"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8594",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.34",
+                    "category_id": "technological",
+                    "purpose": "To ensure protection during audit testing",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.7.1",
+                    "control_description": "ISO 27002:2022 Control 8.34 - Protection of Information Systems During Audit Testing: To ensure protection during audit testing",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Protection of Information Systems During Audit Testing control",
+                    "control_name": "Protection of Information Systems During Audit Testing"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8593",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.33",
+                    "category_id": "technological",
+                    "purpose": "To ensure protection of test data",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "14.3.1",
+                    "control_description": "ISO 27002:2022 Control 8.33 - Test Information: To ensure protection of test data",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Test Information control",
+                    "control_name": "Test Information"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8592",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.32",
+                    "category_id": "technological",
+                    "purpose": "To ensure changes are authorized and implemented securely",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.1.2, 14.2.2, 14.2.3, 14.2.4",
+                    "control_description": "ISO 27002:2022 Control 8.32 - Change Management: To ensure changes are authorized and implemented securely",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Change Management control",
+                    "control_name": "Change Management"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8597",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "control_types_corrective",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "control_types",
+                    "attribute_value": "Corrective",
+                    "attribute_description": "Control Types: Corrective",
+                    "usage_context": "Used to classify controls based on control types"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8591",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.31",
+                    "category_id": "technological",
+                    "purpose": "To prevent unauthorized access to operational systems",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.1.4, 14.2.6",
+                    "control_description": "ISO 27002:2022 Control 8.31 - Separation of Development, Test and Production Environments: To prevent unauthorized access to operational systems",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Separation of Development, Test and Production Environments control",
+                    "control_name": "Separation of Development, Test and Production Environments"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8590",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.30",
+                    "category_id": "technological",
+                    "purpose": "To ensure security of outsourced system development",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "14.2.7",
+                    "control_description": "ISO 27002:2022 Control 8.30 - Outsourced Development: To ensure security of outsourced system development",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Outsourced Development control",
+                    "control_name": "Outsourced Development"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8589",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.29",
+                    "category_id": "technological",
+                    "purpose": "To ensure security testing during development",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "14.2.8, 14.2.9",
+                    "control_description": "ISO 27002:2022 Control 8.29 - Security Testing in Development and Acceptance: To ensure security testing during development",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Security Testing in Development and Acceptance control",
+                    "control_name": "Security Testing in Development and Acceptance"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8588",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.28",
+                    "category_id": "technological",
+                    "purpose": "To ensure secure coding principles are applied",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.28 - Secure Coding: To ensure secure coding principles are applied",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Secure Coding control",
+                    "control_name": "Secure Coding"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8587",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.27",
+                    "category_id": "technological",
+                    "purpose": "To ensure systems are built on secure architecture",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "14.2.5",
+                    "control_description": "ISO 27002:2022 Control 8.27 - Secure System Architecture and Engineering Principles: To ensure systems are built on secure architecture",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Secure System Architecture and Engineering Principles control",
+                    "control_name": "Secure System Architecture and Engineering Principles"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8586",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.26",
+                    "category_id": "technological",
+                    "purpose": "To ensure security is built into applications",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "14.1.2, 14.1.3",
+                    "control_description": "ISO 27002:2022 Control 8.26 - Application Security Requirements: To ensure security is built into applications",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Application Security Requirements control",
+                    "control_name": "Application Security Requirements"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8585",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.25",
+                    "category_id": "technological",
+                    "purpose": "To ensure information security is integrated throughout the development lifecycle",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "14.2.1",
+                    "control_description": "ISO 27002:2022 Control 8.25 - Secure Development Life Cycle: To ensure information security is integrated throughout the development lifecycle",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Secure Development Life Cycle control",
+                    "control_name": "Secure Development Life Cycle"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8584",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.24",
+                    "category_id": "technological",
+                    "purpose": "To ensure proper and effective use of cryptography to protect information",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "10.1.1, 10.1.2",
+                    "control_description": "ISO 27002:2022 Control 8.24 - Use of Cryptography: To ensure proper and effective use of cryptography to protect information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Use of Cryptography control",
+                    "control_name": "Use of Cryptography"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8598",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "security_properties_confidentiality",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "security_properties",
+                    "attribute_value": "Confidentiality",
+                    "attribute_description": "Security Properties: Confidentiality",
+                    "usage_context": "Used to classify controls based on security properties"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8583",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.23",
+                    "category_id": "technological",
+                    "purpose": "To manage risks from web-based threats",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.23 - Web Filtering: To manage risks from web-based threats",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Web Filtering control",
+                    "control_name": "Web Filtering"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8582",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.22",
+                    "category_id": "technological",
+                    "purpose": "To segregate networks to protect sensitive information",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "13.1.3",
+                    "control_description": "ISO 27002:2022 Control 8.22 - Segregation of Networks: To segregate networks to protect sensitive information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Segregation of Networks control",
+                    "control_name": "Segregation of Networks"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8581",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.21",
+                    "category_id": "technological",
+                    "purpose": "To ensure security mechanisms and service levels of network services",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "13.1.2",
+                    "control_description": "ISO 27002:2022 Control 8.21 - Security of Network Services: To ensure security mechanisms and service levels of network services",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Security of Network Services control",
+                    "control_name": "Security of Network Services"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8580",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.20",
+                    "category_id": "technological",
+                    "purpose": "To ensure protection of information in networks",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "13.1.1",
+                    "control_description": "ISO 27002:2022 Control 8.20 - Networks Security: To ensure protection of information in networks",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Networks Security control",
+                    "control_name": "Networks Security"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8579",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.19",
+                    "category_id": "technological",
+                    "purpose": "To control installation of software on operational systems",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.5.1, 12.6.2",
+                    "control_description": "ISO 27002:2022 Control 8.19 - Installation of Software on Operational Systems: To control installation of software on operational systems",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Installation of Software on Operational Systems control",
+                    "control_name": "Installation of Software on Operational Systems"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8578",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.18",
+                    "category_id": "technological",
+                    "purpose": "To control use of system utilities that might compromise systems and applications",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "9.4.4",
+                    "control_description": "ISO 27002:2022 Control 8.18 - Use of Privileged Utility Programs: To control use of system utilities that might compromise systems and applications",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Use of Privileged Utility Programs control",
+                    "control_name": "Use of Privileged Utility Programs"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8577",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.17",
+                    "category_id": "technological",
+                    "purpose": "To ensure accurate time stamping of events",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.4.4",
+                    "control_description": "ISO 27002:2022 Control 8.17 - Clock Synchronization: To ensure accurate time stamping of events",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Clock Synchronization control",
+                    "control_name": "Clock Synchronization"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8576",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.16",
+                    "category_id": "technological",
+                    "purpose": "To detect information security events",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.16 - Monitoring Activities: To detect information security events",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Monitoring Activities control",
+                    "control_name": "Monitoring Activities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8596",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "control_types_detective",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "control_types",
+                    "attribute_value": "Detective",
+                    "attribute_description": "Control Types: Detective",
+                    "usage_context": "Used to classify controls based on control types"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8575",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.15",
+                    "category_id": "technological",
+                    "purpose": "To record activities in information systems",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.4.1, 12.4.2, 12.4.3",
+                    "control_description": "ISO 27002:2022 Control 8.15 - Logging: To record activities in information systems",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Logging control",
+                    "control_name": "Logging"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8574",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.14",
+                    "category_id": "technological",
+                    "purpose": "To ensure availability of information processing facilities",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "17.2.1",
+                    "control_description": "ISO 27002:2022 Control 8.14 - Redundancy of Information Processing Facilities: To ensure availability of information processing facilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Redundancy of Information Processing Facilities control",
+                    "control_name": "Redundancy of Information Processing Facilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8573",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.13",
+                    "category_id": "technological",
+                    "purpose": "To ensure availability of information",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.3.1",
+                    "control_description": "ISO 27002:2022 Control 8.13 - Information Backup: To ensure availability of information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Backup control",
+                    "control_name": "Information Backup"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8572",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.12",
+                    "category_id": "technological",
+                    "purpose": "To detect and prevent unauthorized disclosure of information",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.12 - Data Leakage Prevention: To detect and prevent unauthorized disclosure of information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Data Leakage Prevention control",
+                    "control_name": "Data Leakage Prevention"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8571",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.11",
+                    "category_id": "technological",
+                    "purpose": "To limit exposure of sensitive data",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.11 - Data Masking: To limit exposure of sensitive data",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Data Masking control",
+                    "control_name": "Data Masking"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8570",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.10",
+                    "category_id": "technological",
+                    "purpose": "To ensure information is deleted securely when no longer required",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.10 - Information Deletion: To ensure information is deleted securely when no longer required",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Deletion control",
+                    "control_name": "Information Deletion"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8569",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.9",
+                    "category_id": "technological",
+                    "purpose": "To ensure security configurations of systems",
+                    "category_code": "8",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 8.9 - Configuration Management: To ensure security configurations of systems",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Configuration Management control",
+                    "control_name": "Configuration Management"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8568",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.8",
+                    "category_id": "technological",
+                    "purpose": "To prevent exploitation of technical vulnerabilities",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.6.1, 18.2.3",
+                    "control_description": "ISO 27002:2022 Control 8.8 - Management of Technical Vulnerabilities: To prevent exploitation of technical vulnerabilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Management of Technical Vulnerabilities control",
+                    "control_name": "Management of Technical Vulnerabilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8567",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.7",
+                    "category_id": "technological",
+                    "purpose": "To ensure information and information processing facilities are protected against malware",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.2.1",
+                    "control_description": "ISO 27002:2022 Control 8.7 - Protection Against Malware: To ensure information and information processing facilities are protected against malware",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Protection Against Malware control",
+                    "control_name": "Protection Against Malware"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8595",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "control_types_preventive",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "control_types",
+                    "attribute_value": "Preventive",
+                    "attribute_description": "Control Types: Preventive",
+                    "usage_context": "Used to classify controls based on control types"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8566",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.6",
+                    "category_id": "technological",
+                    "purpose": "To ensure required system performance",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "12.1.3",
+                    "control_description": "ISO 27002:2022 Control 8.6 - Capacity Management: To ensure required system performance",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Capacity Management control",
+                    "control_name": "Capacity Management"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8565",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.5",
+                    "category_id": "technological",
+                    "purpose": "To ensure secure authentication procedures",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "9.4.2",
+                    "control_description": "ISO 27002:2022 Control 8.5 - Secure Authentication: To ensure secure authentication procedures",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Secure Authentication control",
+                    "control_name": "Secure Authentication"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8644",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement secure authentication by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_8_5",
+                    "control_id": "8.5",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to secure authentication.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Secure Authentication."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8564",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.4",
+                    "category_id": "technological",
+                    "purpose": "To ensure access to source code is appropriately managed",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "9.4.5",
+                    "control_description": "ISO 27002:2022 Control 8.4 - Access to Source Code: To ensure access to source code is appropriately managed",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Access to Source Code control",
+                    "control_name": "Access to Source Code"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8643",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement access to source code by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_8_4",
+                    "control_id": "8.4",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to access to source code.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Access to Source Code."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8563",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.3",
+                    "category_id": "technological",
+                    "purpose": "To restrict access to information and application system functions",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "9.4.1",
+                    "control_description": "ISO 27002:2022 Control 8.3 - Information Access Restriction: To restrict access to information and application system functions",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Access Restriction control",
+                    "control_name": "Information Access Restriction"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8642",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement information access restriction by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_8_3",
+                    "control_id": "8.3",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to information access restriction.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Information Access Restriction."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8562",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.2",
+                    "category_id": "technological",
+                    "purpose": "To restrict and control privileged access rights",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "9.2.3",
+                    "control_description": "ISO 27002:2022 Control 8.2 - Privileged Access Rights: To restrict and control privileged access rights",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Privileged Access Rights control",
+                    "control_name": "Privileged Access Rights"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8641",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement privileged access rights by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_8_2",
+                    "control_id": "8.2",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to privileged access rights.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Privileged Access Rights."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8561",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "8.1",
+                    "category_id": "technological",
+                    "purpose": "To ensure information in endpoint devices is protected",
+                    "category_code": "8",
+                    "is_new": false,
+                    "legacy_mapping": "6.2.1, 11.2.8",
+                    "control_description": "ISO 27002:2022 Control 8.1 - User Endpoint Devices: To ensure information in endpoint devices is protected",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for User Endpoint Devices control",
+                    "control_name": "User Endpoint Devices"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8640",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement user endpoint devices by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_8_1",
+                    "control_id": "8.1",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to user endpoint devices.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing User Endpoint Devices."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "mainLabel": "Category",
+                    "labels": [
+                        "Category"
+                    ],
+                    "control_range": "7.1-7.14",
+                    "control_count": 14,
+                    "category_name": "Physical Controls",
+                    "category_id": "physical",
+                    "category_code": "7",
+                    "description": "Controls for physical and environmental protection of information assets",
+                    "framework_standard_id": "ISO27002_2022"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8560",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.14",
+                    "category_id": "physical",
+                    "purpose": "To prevent information leakage from equipment containing storage media",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.7",
+                    "control_description": "ISO 27002:2022 Control 7.14 - Secure Disposal or Re-Use of Equipment: To prevent information leakage from equipment containing storage media",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Secure Disposal or Re-Use of Equipment control",
+                    "control_name": "Secure Disposal or Re-Use of Equipment"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8559",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.13",
+                    "category_id": "physical",
+                    "purpose": "To ensure continued availability and integrity of information",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.4",
+                    "control_description": "ISO 27002:2022 Control 7.13 - Equipment Maintenance: To ensure continued availability and integrity of information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Equipment Maintenance control",
+                    "control_name": "Equipment Maintenance"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8558",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.12",
+                    "category_id": "physical",
+                    "purpose": "To prevent interception or damage to cables carrying information",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.3",
+                    "control_description": "ISO 27002:2022 Control 7.12 - Cabling Security: To prevent interception or damage to cables carrying information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Cabling Security control",
+                    "control_name": "Cabling Security"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8557",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.11",
+                    "category_id": "physical",
+                    "purpose": "To ensure correct operation of information processing facilities",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.2",
+                    "control_description": "ISO 27002:2022 Control 7.11 - Supporting Utilities: To ensure correct operation of information processing facilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Supporting Utilities control",
+                    "control_name": "Supporting Utilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8556",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.10",
+                    "category_id": "physical",
+                    "purpose": "To ensure secure management of storage media",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "8.3.1, 8.3.2, 8.3.3, 11.2.5",
+                    "control_description": "ISO 27002:2022 Control 7.10 - Storage Media: To ensure secure management of storage media",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Storage Media control",
+                    "control_name": "Storage Media"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8555",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.9",
+                    "category_id": "physical",
+                    "purpose": "To maintain security of assets used outside organizational premises",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.6",
+                    "control_description": "ISO 27002:2022 Control 7.9 - Security of Assets Off-Premises: To maintain security of assets used outside organizational premises",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Security of Assets Off-Premises control",
+                    "control_name": "Security of Assets Off-Premises"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8554",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.8",
+                    "category_id": "physical",
+                    "purpose": "To protect equipment from environmental threats and hazards",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.1",
+                    "control_description": "ISO 27002:2022 Control 7.8 - Equipment Siting and Protection: To protect equipment from environmental threats and hazards",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Equipment Siting and Protection control",
+                    "control_name": "Equipment Siting and Protection"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8553",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.7",
+                    "category_id": "physical",
+                    "purpose": "To reduce risks of unauthorized access to information",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.2.9",
+                    "control_description": "ISO 27002:2022 Control 7.7 - Clear Desk and Clear Screen: To reduce risks of unauthorized access to information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Clear Desk and Clear Screen control",
+                    "control_name": "Clear Desk and Clear Screen"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8552",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.6",
+                    "category_id": "physical",
+                    "purpose": "To ensure secure working in areas containing sensitive information",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.1.5",
+                    "control_description": "ISO 27002:2022 Control 7.6 - Working In Secure Areas: To ensure secure working in areas containing sensitive information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Working In Secure Areas control",
+                    "control_name": "Working In Secure Areas"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8551",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.5",
+                    "category_id": "physical",
+                    "purpose": "To protect against physical and environmental threats",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.1.4",
+                    "control_description": "ISO 27002:2022 Control 7.5 - Protecting Against Physical and Environmental Threats: To protect against physical and environmental threats",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Protecting Against Physical and Environmental Threats control",
+                    "control_name": "Protecting Against Physical and Environmental Threats"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8639",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement protecting against physical and environmental threats by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_7_5",
+                    "control_id": "7.5",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to protecting against physical and environmental threats.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Protecting Against Physical and Environmental Threats."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8550",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.4",
+                    "category_id": "physical",
+                    "purpose": "To monitor for unauthorized physical access",
+                    "category_code": "7",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 7.4 - Physical Security Monitoring: To monitor for unauthorized physical access",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Physical Security Monitoring control",
+                    "control_name": "Physical Security Monitoring"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8638",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement physical security monitoring by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_7_4",
+                    "control_id": "7.4",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to physical security monitoring.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Physical Security Monitoring."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8549",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.3",
+                    "category_id": "physical",
+                    "purpose": "To design and apply physical security for offices, rooms and facilities",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.1.3",
+                    "control_description": "ISO 27002:2022 Control 7.3 - Securing Offices, Rooms and Facilities: To design and apply physical security for offices, rooms and facilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Securing Offices, Rooms and Facilities control",
+                    "control_name": "Securing Offices, Rooms and Facilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8637",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement securing offices, rooms and facilities by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_7_3",
+                    "control_id": "7.3",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to securing offices, rooms and facilities.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Securing Offices, Rooms and Facilities."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8548",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.2",
+                    "category_id": "physical",
+                    "purpose": "To ensure only authorized physical access to areas containing information occurs",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.1.2, 11.1.6",
+                    "control_description": "ISO 27002:2022 Control 7.2 - Physical Entry: To ensure only authorized physical access to areas containing information occurs",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Physical Entry control",
+                    "control_name": "Physical Entry"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8636",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement physical entry by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_7_2",
+                    "control_id": "7.2",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to physical entry.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Physical Entry."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8547",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "7.1",
+                    "category_id": "physical",
+                    "purpose": "To prevent unauthorized physical access to areas containing information",
+                    "category_code": "7",
+                    "is_new": false,
+                    "legacy_mapping": "11.1.1",
+                    "control_description": "ISO 27002:2022 Control 7.1 - Physical Security Perimeters: To prevent unauthorized physical access to areas containing information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Physical Security Perimeters control",
+                    "control_name": "Physical Security Perimeters"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8610",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "operational_capabilities_physical_security",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "operational_capabilities",
+                    "attribute_value": "Physical Security",
+                    "attribute_description": "Operational Capabilities: Physical Security",
+                    "usage_context": "Used to classify controls based on operational capabilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8635",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement physical security perimeters by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_7_1",
+                    "control_id": "7.1",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to physical security perimeters.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Physical Security Perimeters."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "mainLabel": "Category",
+                    "labels": [
+                        "Category"
+                    ],
+                    "control_range": "6.1-6.8",
+                    "control_count": 8,
+                    "category_name": "People Controls",
+                    "category_id": "people",
+                    "category_code": "6",
+                    "description": "Controls related to personnel security including screening, training, and responsibilities",
+                    "framework_standard_id": "ISO27002_2022"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8546",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.8",
+                    "category_id": "people",
+                    "purpose": "To ensure information security events are reported",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "16.1.2, 16.1.3",
+                    "control_description": "ISO 27002:2022 Control 6.8 - Information Security Event Reporting: To ensure information security events are reported",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security Event Reporting control",
+                    "control_name": "Information Security Event Reporting"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8603",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "cybersecurity_concepts_detect",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "cybersecurity_concepts",
+                    "attribute_value": "Detect",
+                    "attribute_description": "Cybersecurity Concepts: Detect",
+                    "usage_context": "Used to classify controls based on cybersecurity concepts"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8545",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.7",
+                    "category_id": "people",
+                    "purpose": "To ensure information security when working remotely",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "6.2.2",
+                    "control_description": "ISO 27002:2022 Control 6.7 - Remote Working: To ensure information security when working remotely",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Remote Working control",
+                    "control_name": "Remote Working"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8544",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.6",
+                    "category_id": "people",
+                    "purpose": "To protect information using legally enforceable agreements",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "13.2.4",
+                    "control_description": "ISO 27002:2022 Control 6.6 - Confidentiality or Non-Disclosure Agreements: To protect information using legally enforceable agreements",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Confidentiality or Non-Disclosure Agreements control",
+                    "control_name": "Confidentiality or Non-Disclosure Agreements"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8543",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.5",
+                    "category_id": "people",
+                    "purpose": "To protect the organization's interests as part of the process of changing or terminating employment",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "7.3.1",
+                    "control_description": "ISO 27002:2022 Control 6.5 - Responsibilities After Termination or Change of Employment: To protect the organization's interests as part of the process of changing or terminating employment",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Responsibilities After Termination or Change of Employment control",
+                    "control_name": "Responsibilities After Termination or Change of Employment"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8634",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement responsibilities after termination or change of employment by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_6_5",
+                    "control_id": "6.5",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to responsibilities after termination or change of employment.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Responsibilities After Termination or Change of Employment."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8542",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.4",
+                    "category_id": "people",
+                    "purpose": "To ensure a formal and communicated disciplinary process is in place",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "7.2.3",
+                    "control_description": "ISO 27002:2022 Control 6.4 - Disciplinary Process: To ensure a formal and communicated disciplinary process is in place",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Disciplinary Process control",
+                    "control_name": "Disciplinary Process"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8633",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement disciplinary process by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_6_4",
+                    "control_id": "6.4",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to disciplinary process.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Disciplinary Process."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8541",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.3",
+                    "category_id": "people",
+                    "purpose": "To ensure that all personnel receive appropriate information security awareness education and training",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "7.2.2",
+                    "control_description": "ISO 27002:2022 Control 6.3 - Information Security Awareness, Education and Training: To ensure that all personnel receive appropriate information security awareness education and training",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security Awareness, Education and Training control",
+                    "control_name": "Information Security Awareness, Education and Training"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8632",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement information security awareness, education and training by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_6_3",
+                    "control_id": "6.3",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to information security awareness, education and training.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Information Security Awareness, Education and Training."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8540",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.2",
+                    "category_id": "people",
+                    "purpose": "To ensure employees and contractors are aware of and fulfil their information security responsibilities",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "7.1.2",
+                    "control_description": "ISO 27002:2022 Control 6.2 - Terms and Conditions of Employment: To ensure employees and contractors are aware of and fulfil their information security responsibilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Terms and Conditions of Employment control",
+                    "control_name": "Terms and Conditions of Employment"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8631",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement terms and conditions of employment by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_6_2",
+                    "control_id": "6.2",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to terms and conditions of employment.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Terms and Conditions of Employment."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8539",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "6.1",
+                    "category_id": "people",
+                    "purpose": "To ensure that employees and contractors understand their responsibilities",
+                    "category_code": "6",
+                    "is_new": false,
+                    "legacy_mapping": "7.1.1",
+                    "control_description": "ISO 27002:2022 Control 6.1 - Screening: To ensure that employees and contractors understand their responsibilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Screening control",
+                    "control_name": "Screening"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8609",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "operational_capabilities_human_resource_security",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "operational_capabilities",
+                    "attribute_value": "Human Resource Security",
+                    "attribute_description": "Operational Capabilities: Human Resource Security",
+                    "usage_context": "Used to classify controls based on operational capabilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8630",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement screening by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_6_1",
+                    "control_id": "6.1",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to screening.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Screening."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "mainLabel": "Category",
+                    "labels": [
+                        "Category"
+                    ],
+                    "control_range": "5.1-5.37",
+                    "control_count": 37,
+                    "category_name": "Organisational Controls",
+                    "category_id": "organizational",
+                    "category_code": "5",
+                    "description": "Controls focused on policies, procedures, responsibilities and organizational measures for information security",
+                    "framework_standard_id": "ISO27002_2022"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8538",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.37",
+                    "category_id": "organizational",
+                    "purpose": "To ensure correct and secure operation of information processing facilities",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "12.1.1",
+                    "control_description": "ISO 27002:2022 Control 5.37 - Documented Operating Procedures: To ensure correct and secure operation of information processing facilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Documented Operating Procedures control",
+                    "control_name": "Documented Operating Procedures"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8537",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.36",
+                    "category_id": "organizational",
+                    "purpose": "To ensure compliance with organizational information security policies",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "18.2.2, 18.2.3",
+                    "control_description": "ISO 27002:2022 Control 5.36 - Compliance With Policies, Rules and Standards for Information Security: To ensure compliance with organizational information security policies",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Compliance With Policies, Rules and Standards for Information Security control",
+                    "control_name": "Compliance With Policies, Rules and Standards for Information Security"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8536",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.35",
+                    "category_id": "organizational",
+                    "purpose": "To ensure independent review of information security management",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "18.2.1",
+                    "control_description": "ISO 27002:2022 Control 5.35 - Independent Review of Information Security: To ensure independent review of information security management",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Independent Review of Information Security control",
+                    "control_name": "Independent Review of Information Security"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8535",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.34",
+                    "category_id": "organizational",
+                    "purpose": "To ensure privacy and protection of personally identifiable information",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "18.1.4",
+                    "control_description": "ISO 27002:2022 Control 5.34 - Privacy and Protection of PII: To ensure privacy and protection of personally identifiable information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Privacy and Protection of PII control",
+                    "control_name": "Privacy and Protection of PII"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8534",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.33",
+                    "category_id": "organizational",
+                    "purpose": "To protect records from loss, destruction, falsification and unauthorized access",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "18.1.3",
+                    "control_description": "ISO 27002:2022 Control 5.33 - Protection of Records: To protect records from loss, destruction, falsification and unauthorized access",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Protection of Records control",
+                    "control_name": "Protection of Records"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8533",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.32",
+                    "category_id": "organizational",
+                    "purpose": "To ensure compliance with intellectual property rights",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "18.1.2",
+                    "control_description": "ISO 27002:2022 Control 5.32 - Intellectual Property Rights: To ensure compliance with intellectual property rights",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Intellectual Property Rights control",
+                    "control_name": "Intellectual Property Rights"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8532",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.31",
+                    "category_id": "organizational",
+                    "purpose": "To ensure compliance with legal, statutory, regulatory and contractual requirements",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "18.1.1, 18.1.5",
+                    "control_description": "ISO 27002:2022 Control 5.31 - Legal, Statutory, Regulatory and Contractual Requirements: To ensure compliance with legal, statutory, regulatory and contractual requirements",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Legal, Statutory, Regulatory and Contractual Requirements control",
+                    "control_name": "Legal, Statutory, Regulatory and Contractual Requirements"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8531",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.30",
+                    "category_id": "organizational",
+                    "purpose": "To prepare ICT for business continuity",
+                    "category_code": "5",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 5.30 - ICT Readiness for Business Continuity: To prepare ICT for business continuity",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for ICT Readiness for Business Continuity control",
+                    "control_name": "ICT Readiness for Business Continuity"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8530",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.29",
+                    "category_id": "organizational",
+                    "purpose": "To plan for maintaining information security during disruption",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "17.1.1, 17.1.2, 17.1.3",
+                    "control_description": "ISO 27002:2022 Control 5.29 - Information Security During Disruption: To plan for maintaining information security during disruption",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security During Disruption control",
+                    "control_name": "Information Security During Disruption"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8529",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.28",
+                    "category_id": "organizational",
+                    "purpose": "To collect evidence concerning information security events",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "16.1.7",
+                    "control_description": "ISO 27002:2022 Control 5.28 - Collection of Evidence: To collect evidence concerning information security events",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Collection of Evidence control",
+                    "control_name": "Collection of Evidence"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8528",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.27",
+                    "category_id": "organizational",
+                    "purpose": "To apply knowledge gained from information security incidents",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "16.1.6",
+                    "control_description": "ISO 27002:2022 Control 5.27 - Learning From Information Security Incidents: To apply knowledge gained from information security incidents",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Learning From Information Security Incidents control",
+                    "control_name": "Learning From Information Security Incidents"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8527",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.26",
+                    "category_id": "organizational",
+                    "purpose": "To respond to information security incidents",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "16.1.5",
+                    "control_description": "ISO 27002:2022 Control 5.26 - Response to Information Security Incidents: To respond to information security incidents",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Response to Information Security Incidents control",
+                    "control_name": "Response to Information Security Incidents"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8526",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.25",
+                    "category_id": "organizational",
+                    "purpose": "To assess and decide on information security events",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "16.1.4",
+                    "control_description": "ISO 27002:2022 Control 5.25 - Assessment and Decision on Information Security Events: To assess and decide on information security events",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Assessment and Decision on Information Security Events control",
+                    "control_name": "Assessment and Decision on Information Security Events"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8525",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.24",
+                    "category_id": "organizational",
+                    "purpose": "To plan and prepare for managing information security incidents",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "16.1.1",
+                    "control_description": "ISO 27002:2022 Control 5.24 - Information Security Incident Management Planning and Preparation: To plan and prepare for managing information security incidents",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security Incident Management Planning and Preparation control",
+                    "control_name": "Information Security Incident Management Planning and Preparation"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8524",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.23",
+                    "category_id": "organizational",
+                    "purpose": "To ensure information security when using cloud services",
+                    "category_code": "5",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 5.23 - Information Security for Use of Cloud Services: To ensure information security when using cloud services",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security for Use of Cloud Services control",
+                    "control_name": "Information Security for Use of Cloud Services"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8523",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.22",
+                    "category_id": "organizational",
+                    "purpose": "To monitor and review information security practices of suppliers",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "15.2.1, 15.2.2",
+                    "control_description": "ISO 27002:2022 Control 5.22 - Monitoring, Review and Change Management of Supplier Services: To monitor and review information security practices of suppliers",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Monitoring, Review and Change Management of Supplier Services control",
+                    "control_name": "Monitoring, Review and Change Management of Supplier Services"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8522",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.21",
+                    "category_id": "organizational",
+                    "purpose": "To manage information security risks associated with ICT services supply chain",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "15.1.3",
+                    "control_description": "ISO 27002:2022 Control 5.21 - Managing Information Security in the ICT Supply Chain: To manage information security risks associated with ICT services supply chain",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Managing Information Security in the ICT Supply Chain control",
+                    "control_name": "Managing Information Security in the ICT Supply Chain"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8521",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.20",
+                    "category_id": "organizational",
+                    "purpose": "To establish and implement requirements for information security in agreements with suppliers",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "15.1.2",
+                    "control_description": "ISO 27002:2022 Control 5.20 - Addressing Information Security Within Supplier Agreements: To establish and implement requirements for information security in agreements with suppliers",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Addressing Information Security Within Supplier Agreements control",
+                    "control_name": "Addressing Information Security Within Supplier Agreements"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8520",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.19",
+                    "category_id": "organizational",
+                    "purpose": "To maintain an agreed level of information security in supplier relationships",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "15.1.1",
+                    "control_description": "ISO 27002:2022 Control 5.19 - Information Security in Supplier Relationships: To maintain an agreed level of information security in supplier relationships",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security in Supplier Relationships control",
+                    "control_name": "Information Security in Supplier Relationships"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8519",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.18",
+                    "category_id": "organizational",
+                    "purpose": "To provide or revoke access rights to all users",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "9.2.2, 9.2.5, 9.2.6",
+                    "control_description": "ISO 27002:2022 Control 5.18 - Access Rights: To provide or revoke access rights to all users",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Access Rights control",
+                    "control_name": "Access Rights"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8518",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.17",
+                    "category_id": "organizational",
+                    "purpose": "To ensure proper allocation and management of privileged access rights",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "9.2.4, 9.3.1, 9.4.3",
+                    "control_description": "ISO 27002:2022 Control 5.17 - Authentication Information: To ensure proper allocation and management of privileged access rights",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Authentication Information control",
+                    "control_name": "Authentication Information"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8517",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.16",
+                    "category_id": "organizational",
+                    "purpose": "To ensure authorized user access and prevent unauthorized access",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "9.2.1",
+                    "control_description": "ISO 27002:2022 Control 5.16 - Identity Management: To ensure authorized user access and prevent unauthorized access",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Identity Management control",
+                    "control_name": "Identity Management"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8516",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.15",
+                    "category_id": "organizational",
+                    "purpose": "To limit access to information and information processing facilities",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "9.1.1, 9.1.2",
+                    "control_description": "ISO 27002:2022 Control 5.15 - Access Control: To limit access to information and information processing facilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Access Control control",
+                    "control_name": "Access Control"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8515",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.14",
+                    "category_id": "organizational",
+                    "purpose": "To maintain the security of information transferred within the organization and with external parties",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "13.2.1, 13.2.2, 13.2.3",
+                    "control_description": "ISO 27002:2022 Control 5.14 - Information Transfer: To maintain the security of information transferred within the organization and with external parties",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Transfer control",
+                    "control_name": "Information Transfer"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8514",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.13",
+                    "category_id": "organizational",
+                    "purpose": "To ensure appropriate labelling of information in accordance with its classification",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "8.2.2",
+                    "control_description": "ISO 27002:2022 Control 5.13 - Labelling of Information: To ensure appropriate labelling of information in accordance with its classification",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Labelling of Information control",
+                    "control_name": "Labelling of Information"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8513",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.12",
+                    "category_id": "organizational",
+                    "purpose": "To ensure that information receives an appropriate level of protection",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "8.2.1",
+                    "control_description": "ISO 27002:2022 Control 5.12 - Classification of Information: To ensure that information receives an appropriate level of protection",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Classification of Information control",
+                    "control_name": "Classification of Information"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8512",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.11",
+                    "category_id": "organizational",
+                    "purpose": "To ensure that employees and external party users return all organizational assets",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "8.1.4",
+                    "control_description": "ISO 27002:2022 Control 5.11 - Return of Assets: To ensure that employees and external party users return all organizational assets",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Return of Assets control",
+                    "control_name": "Return of Assets"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8511",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.10",
+                    "category_id": "organizational",
+                    "purpose": "To identify, document and implement rules for acceptable use",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "8.1.3, 8.2.3",
+                    "control_description": "ISO 27002:2022 Control 5.10 - Acceptable Use of Information and Other Associated Assets: To identify, document and implement rules for acceptable use",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Acceptable Use of Information and Other Associated Assets control",
+                    "control_name": "Acceptable Use of Information and Other Associated Assets"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8510",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.9",
+                    "category_id": "organizational",
+                    "purpose": "To identify information and other associated assets and define protection responsibilities",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "8.1.1, 8.1.2",
+                    "control_description": "ISO 27002:2022 Control 5.9 - Inventory of Information and Other Associated Assets: To identify information and other associated assets and define protection responsibilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Inventory of Information and Other Associated Assets control",
+                    "control_name": "Inventory of Information and Other Associated Assets"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8509",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.8",
+                    "category_id": "organizational",
+                    "purpose": "To ensure that information security is integrated into project management",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "6.1.5, 14.1.1",
+                    "control_description": "ISO 27002:2022 Control 5.8 - Information Security in Project Management: To ensure that information security is integrated into project management",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security in Project Management control",
+                    "control_name": "Information Security in Project Management"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8508",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.7",
+                    "category_id": "organizational",
+                    "purpose": "To ensure that information relating to information security threats is collected and analysed",
+                    "category_code": "5",
+                    "is_new": true,
+                    "legacy_mapping": "NEW",
+                    "control_description": "ISO 27002:2022 Control 5.7 - Threat Intelligence: To ensure that information relating to information security threats is collected and analysed",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Threat Intelligence control",
+                    "control_name": "Threat Intelligence"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8507",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.6",
+                    "category_id": "organizational",
+                    "purpose": "To maintain appropriate contacts with special interest groups or other specialist security forums",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "6.1.4",
+                    "control_description": "ISO 27002:2022 Control 5.6 - Contact With Special Interest Groups: To maintain appropriate contacts with special interest groups or other specialist security forums",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Contact With Special Interest Groups control",
+                    "control_name": "Contact With Special Interest Groups"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8506",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.5",
+                    "category_id": "organizational",
+                    "purpose": "To maintain appropriate contacts with relevant authorities",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "6.1.3",
+                    "control_description": "ISO 27002:2022 Control 5.5 - Contact With Authorities: To maintain appropriate contacts with relevant authorities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Contact With Authorities control",
+                    "control_name": "Contact With Authorities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8629",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement contact with authorities by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_5_5",
+                    "control_id": "5.5",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to contact with authorities.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Contact With Authorities."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8505",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.4",
+                    "category_id": "organizational",
+                    "purpose": "To ensure management approval for information security responsibilities",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "7.2.1",
+                    "control_description": "ISO 27002:2022 Control 5.4 - Management Responsibilities: To ensure management approval for information security responsibilities",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Management Responsibilities control",
+                    "control_name": "Management Responsibilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8628",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement management responsibilities by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_5_4",
+                    "control_id": "5.4",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to management responsibilities.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Management Responsibilities."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8504",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.3",
+                    "category_id": "organizational",
+                    "purpose": "To reduce opportunities for unauthorized or unintentional modification or misuse of information",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "6.1.2",
+                    "control_description": "ISO 27002:2022 Control 5.3 - Segregation of Duties: To reduce opportunities for unauthorized or unintentional modification or misuse of information",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Segregation of Duties control",
+                    "control_name": "Segregation of Duties"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8627",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement segregation of duties by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_5_3",
+                    "control_id": "5.3",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to segregation of duties.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Segregation of Duties."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8503",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.2",
+                    "category_id": "organizational",
+                    "purpose": "To ensure information security responsibilities are defined and allocated",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "6.1.1",
+                    "control_description": "ISO 27002:2022 Control 5.2 - Information Security Roles and Responsibilities: To ensure information security responsibilities are defined and allocated",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Information Security Roles and Responsibilities control",
+                    "control_name": "Information Security Roles and Responsibilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8626",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement information security roles and responsibilities by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_5_2",
+                    "control_id": "5.2",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to information security roles and responsibilities.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Information Security Roles and Responsibilities."
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "mainLabel": "Control",
+                    "labels": [
+                        "Control"
+                    ],
+                    "control_id": "5.1",
+                    "category_id": "organizational",
+                    "purpose": "To provide management direction and support for information security",
+                    "category_code": "5",
+                    "is_new": false,
+                    "legacy_mapping": "5.1.1, 5.1.2",
+                    "control_description": "ISO 27002:2022 Control 5.1 - Policies for Information Security: To provide management direction and support for information security",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_guidance": "Implementation guidance for Policies for Information Security control",
+                    "control_name": "Policies for Information Security"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8621",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "security_domains_governance_and_ecosystem",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "security_domains",
+                    "attribute_value": "Governance and Ecosystem",
+                    "attribute_description": "Security Domains: Governance and Ecosystem",
+                    "usage_context": "Used to classify controls based on security domains"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8606",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "operational_capabilities_governance",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "operational_capabilities",
+                    "attribute_value": "Governance",
+                    "attribute_description": "Operational Capabilities: Governance",
+                    "usage_context": "Used to classify controls based on operational capabilities"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8602",
+                    "mainLabel": "Attribute",
+                    "labels": [
+                        "Attribute"
+                    ],
+                    "attribute_id": "cybersecurity_concepts_protect",
+                    "framework_standard_id": "ISO27002_2022",
+                    "attribute_type": "cybersecurity_concepts",
+                    "attribute_value": "Protect",
+                    "attribute_description": "Cybersecurity Concepts: Protect",
+                    "usage_context": "Used to classify controls based on cybersecurity concepts"
+                },
+                {
+                    "id": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8625",
+                    "mainLabel": "Guideline",
+                    "labels": [
+                        "Guideline"
+                    ],
+                    "guideline_text": "Organizations should implement policies for information security by establishing clear procedures and responsibilities. Regular review and updates should be conducted to ensure continued effectiveness.",
+                    "guideline_id": "GUIDE_5_1",
+                    "control_id": "5.1",
+                    "measurement_criteria": "Effectiveness can be measured through regular audits, compliance checks, and incident analysis related to policies for information security.",
+                    "guideline_type": "Implementation",
+                    "framework_standard_id": "ISO27002_2022",
+                    "implementation_considerations": "Consider organizational context, risk assessment results, and applicable legal requirements when implementing Policies for Information Security."
+                }
+            ],
+            "links": [
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159853925419983153",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8497",
+                    "type": "FRAMEWORK_CONTAINS_CATEGORY",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1227409019342168373",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8594"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1225157219528483125",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8593"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1222905419714797877",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8592"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810832",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8592",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8597",
+                    "relevance": "Medium"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1220653619901112629",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8591"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1218401820087427381",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8590"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1216150020273742133",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8589"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1213898220460056885",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8588"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1211646420646371637",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8587"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1209394620832686389",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8586"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1207142821019001141",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8585"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1204891021205315893",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8584"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810824",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8584",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8598",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1202639221391630645",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8583"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1200387421577945397",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8582"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1198135621764260149",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8581"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1195883821950574901",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8580"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1193632022136889653",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8579"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1191380222323204405",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8578"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1189128422509519157",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8577"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1186876622695833909",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8576"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810816",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8576",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8596",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1184624822882148661",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8575"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810815",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8575",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8596",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1182373023068463413",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8574"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1180121223254778165",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8573"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1177869423441092917",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8572"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1175617623627407669",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8571"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1173365823813722421",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8570"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1171114024000037173",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8569"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1168862224186351925",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8568"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1166610424372666677",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8567"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810807",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8567",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8595",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1164358624558981429",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8566"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162106824745296181",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8565"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183029",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8565",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8644"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159855024931610933",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8564"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183028",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8564",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8643"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157603225117925685",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8563"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183027",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8563",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8642"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155351425304240437",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8562"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183026",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8562",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8641"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153099625490555189",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8501",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8561"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183025",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8561",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8640"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157602125606297905",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8497",
+                    "type": "FRAMEWORK_CONTAINS_CATEGORY",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1182373023068463412",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8560"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1180121223254778164",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8559"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1177869423441092916",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8558"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1175617623627407668",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8557"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1173365823813722420",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8556"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1171114024000037172",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8555"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1168862224186351924",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8554"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1166610424372666676",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8553"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1164358624558981428",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8552"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162106824745296180",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8551"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183015",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8551",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8639"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159855024931610932",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8550"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810790",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8550",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8596",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183014",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8550",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8638"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157603225117925684",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8549"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183013",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8549",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8637"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155351425304240436",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8548"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183012",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8548",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8636"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153099625490555188",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8500",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8547"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155353624327496035",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8547",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8610",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810787",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8547",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8595",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183011",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8547",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8635"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155350325792612657",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8497",
+                    "type": "FRAMEWORK_CONTAINS_CATEGORY",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1168862224186351923",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8546"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155353624327496034",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8546",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8603",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810786",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8546",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8596",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1166610424372666675",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8545"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1164358624558981427",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8544"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162106824745296179",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8543"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183007",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8543",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8634"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159855024931610931",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8542"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183006",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8542",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8633"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157603225117925683",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8541"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183005",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8541",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8632"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155351425304240435",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8540"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183004",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8540",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8631"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153099625490555187",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8499",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8539"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155353624327496027",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8539",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8609",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810779",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8539",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8595",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002183003",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8539",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8630"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153098525978927409",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8497",
+                    "type": "FRAMEWORK_CONTAINS_CATEGORY",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1234164418783224114",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8538"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1231912618969538866",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8537"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1229660819155853618",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8536"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1227409019342168370",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8535"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1225157219528483122",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8534"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1222905419714797874",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8533"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1220653619901112626",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8532"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1218401820087427378",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8531"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1216150020273742130",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8530"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1213898220460056882",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8529"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1211646420646371634",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8528"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1209394620832686386",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8527"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1207142821019001138",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8526"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1204891021205315890",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8525"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1202639221391630642",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8524"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1200387421577945394",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8523"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1198135621764260146",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8522"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1195883821950574898",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8521"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1193632022136889650",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8520"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1191380222323204402",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8519"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1189128422509519154",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8518"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1186876622695833906",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8517"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1184624822882148658",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8516"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1182373023068463410",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8515"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1180121223254778162",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8514"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1177869423441092914",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8513"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1175617623627407666",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8512"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1173365823813722418",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8511"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1171114024000037170",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8510"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1168862224186351922",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8509"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1166610424372666674",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8508"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1164358624558981426",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8507"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162106824745296178",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8506"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002182970",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8506",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8629"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159855024931610930",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8505"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002182969",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8505",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8628"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157603225117925682",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8504"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002182968",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8504",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8627"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155351425304240434",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8503"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002182967",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8503",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8626"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153099625490555186",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8498",
+                    "type": "CATEGORY_CONTAINS_CONTROL",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1162109023768551734",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8621",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1159857223954866486",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8606",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1157605424141181238",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8602",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1155353624327495990",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8598",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153101824513810742",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "type": "CONTROL_HAS_ATTRIBUTE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8595",
+                    "relevance": "High"
+                },
+                {
+                    "id": "5:06867072-df58-475a-ba65-4072e8ee9cbb:1153100725002182966",
+                    "source": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8502",
+                    "type": "CONTROL_HAS_GUIDELINE",
+                    "target": "4:06867072-df58-475a-ba65-4072e8ee9cbb:8625"
+                }
+            ]
+        }
+    }
+]

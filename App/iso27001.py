@@ -2,11 +2,11 @@
 
 # UPDATED: Constraints are now composite, requiring IDs to be unique within a framework.
 constraints = """
-CREATE CONSTRAINT framework_id_unique FOR (f:Framework) REQUIRE f.framework_id IS UNIQUE;
-CREATE CONSTRAINT clause_framework_composite_unique FOR (c:Clause) REQUIRE (c.framework_id, c.clause_id) IS UNIQUE;
-CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.framework_id, ctrl.control_id) IS UNIQUE;
-CREATE CONSTRAINT requirement_framework_composite_unique FOR (r:Requirement) REQUIRE (r.framework_id, r.requirement_id) IS UNIQUE;
-CREATE CONSTRAINT category_framework_composite_unique FOR (cc:ControlCategory) REQUIRE (cc.framework_id, cc.category_id) IS UNIQUE;
+CREATE CONSTRAINT framework_id_unique FOR (f:FrameworkAndStandard) REQUIRE f.framework_standard_id IS UNIQUE;
+CREATE CONSTRAINT clause_framework_composite_unique FOR (c:Clause) REQUIRE (c.framework_standard_id, c.clause_id) IS UNIQUE;
+CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.framework_standard_id, ctrl.control_id) IS UNIQUE;
+CREATE CONSTRAINT requirement_framework_composite_unique FOR (r:Requirement) REQUIRE (r.framework_standard_id, r.requirement_id) IS UNIQUE;
+CREATE CONSTRAINT category_framework_composite_unique FOR (cc:ControlCategory) REQUIRE (cc.framework_standard_id, cc.category_id) IS UNIQUE;
 """
 
 indexes = """
@@ -16,8 +16,8 @@ CREATE INDEX control_category_index FOR (ctrl:Control) ON (ctrl.category);
 """
 
 # UPDATED: Using MERGE to prevent errors on re-runs.
-framework = """
-MERGE (f:Framework {framework_id: 'ISO27001_2022'})
+framework_standard = """
+MERGE (f:FrameworkAndStandard {framework_standard_id: 'ISO27001_2022'})
 ON CREATE SET
     f.name = 'ISO/IEC 27001:2022',
     f.version = '2022',
@@ -29,7 +29,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 control_categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cc:ControlCategory {framework_id: 'ISO27001_2022', category_id: row.category_id})
+MERGE (cc:ControlCategory {framework_standard_id: 'ISO27001_2022', category_id: row.category_id})
 ON CREATE SET
     cc.category_name = row.category_name,
     cc.control_range = row.control_range,
@@ -39,7 +39,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 clauses = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Clause {framework_id: 'ISO27001_2022', clause_id: row.clause_id})
+MERGE (c:Clause {framework_standard_id: 'ISO27001_2022', clause_id: row.clause_id})
 ON CREATE SET
     c.title = row.title,
     c.description = row.description,
@@ -50,7 +50,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctrl:Control {framework_id: 'ISO27001_2022', control_id: row.control_id})
+MERGE (ctrl:Control {framework_standard_id: 'ISO27001_2022', control_id: row.control_id})
 ON CREATE SET
     ctrl.control_name = row.control_name,
     ctrl.category = row.category,
@@ -63,7 +63,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE. Attribute combination is the key.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Attribute {framework_id: 'ISO27001_2022', attribute_type: row.attribute_type, attribute_value: row.attribute_value})
+MERGE (a:Attribute {framework_standard_id: 'ISO27001_2022', attribute_type: row.attribute_type, attribute_value: row.attribute_value})
 ON CREATE SET
     a.description = row.description;
 """
@@ -71,7 +71,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement {framework_id: 'ISO27001_2022', requirement_id: row.requirement_id})
+MERGE (r:Requirement {framework_standard_id: 'ISO27001_2022', requirement_id: row.requirement_id})
 ON CREATE SET
     r.clause_id = row.clause_id,
     r.requirement_text = row.requirement_text,
@@ -79,47 +79,49 @@ ON CREATE SET
 """
 
 # No changes needed here, as the MATCH is already specific.
-framework_clauses = """
-MATCH (f:Framework {framework_id: 'ISO27001_2022'})
-MATCH (c:Clause {framework_id: 'ISO27001_2022', category: 'main_clause'})
-MERGE (f)-[:CONTAINS]->(c);
+framework_standard_clauses = """
+MATCH (f:FrameworkAndStandard {framework_standard_id: 'ISO27001_2022'})
+MATCH (c:Clause {framework_standard_id: 'ISO27001_2022', category: 'main_clause'})
+MERGE (f)-[:FRAMEWORK_CONTAINS_CLAUSES]->(c);
 """
 
 # UPDATED: Scoped MATCH to framework_id for precision.
 clause_subclauses = """
-MATCH (main:Clause {framework_id: 'ISO27001_2022', category: 'main_clause'})
-MATCH (sub:Clause {framework_id: 'ISO27001_2022', category: 'subclause'})
+MATCH (main:Clause {framework_standard_id: 'ISO27001_2022', category: 'main_clause'})
+MATCH (sub:Clause {framework_standard_id: 'ISO27001_2022', category: 'subclause'})
 WHERE sub.parent_clause = main.clause_id
-MERGE (main)-[:CONTAINS]->(sub);
+MERGE (main)-[:CLAUSE_CONTAINS_SUBCLAUSES]->(sub);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
-framework_control_category = """
-MATCH (f:Framework {framework_id: 'ISO27001_2022'})
-MATCH (cat:ControlCategory {framework_id: 'ISO27001_2022'})
-MERGE (f)-[:CONTAINS]->(cat);
+framework_standard_control_category = """
+MATCH (f:FrameworkAndStandard {framework_standard_id: 'ISO27001_2022'})
+MATCH (cat:ControlCategory {framework_standard_id: 'ISO27001_2022'})
+MERGE (f)-[:FRAMEWORK_CONTAINS_CONTROL_CATEGORY]->(cat);
 """
 
 # UPDATED: Scoped MATCH to framework_id. Note the spelling fix for 'control'.
 control_categories_control = """
-MATCH (cat:ControlCategory {framework_id: 'ISO27001_2022'})
-MATCH (ctrl:Control {framework_id: 'ISO27001_2022'})
+MATCH (cat:ControlCategory {framework_standard_id: 'ISO27001_2022'})
+MATCH (ctrl:Control {framework_standard_id: 'ISO27001_2022'})
 WHERE cat.category_id = ctrl.category
-MERGE (cat)-[:CONTAINS]->(ctrl);
+MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROL]->(ctrl);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 clause_requirements = """
-MATCH (c:Clause {framework_id: 'ISO27001_2022'})
-MATCH (r:Requirement {framework_id: 'ISO27001_2022'})
+MATCH (c:Clause {framework_standard_id: 'ISO27001_2022'})
+MATCH (r:Requirement {framework_standard_id: 'ISO27001_2022'})
 WHERE c.clause_id = r.clause_id
-MERGE (c)-[:REQUIRES]->(r);
+MERGE (c)-[:CLAUSE_REQUIRES_REQUIREMENT]->(r);
 """
 # ... (rest of the python script remains the same)s
 
 import os
 import time
 import logging
+import json
+import sys
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -134,7 +136,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework)
+client.query(framework_standard)
 time.sleep(2)
 
 client.query(control_categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_control_categories.csv'))
@@ -152,13 +154,13 @@ time.sleep(2)
 client.query(requirements.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_requirements.csv'))
 time.sleep(2)
 
-client.query(framework_clauses)
+client.query(framework_standard_clauses)
 time.sleep(2)
 
 client.query(clause_subclauses)
 time.sleep(2)
 
-client.query(framework_control_category)
+client.query(framework_standard_control_category)
 time.sleep(2)
 
 client.query(control_categories_control)
@@ -169,7 +171,7 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:Framework)-[*]->()
+res=client.query("""MATCH path = (:FrameworkAndStandard)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
