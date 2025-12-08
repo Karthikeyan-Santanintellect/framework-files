@@ -105,7 +105,6 @@ ON CREATE SET
   co.category = row.Category,
   co.primaryArticle = row.Primary_Article,
   co.description = row.Description;
-
 """
 # Create GDPR Framework Node
 gdpr_framework = """
@@ -187,7 +186,7 @@ recital_paragraph ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Recital {id: row.Source_ID})
 MATCH (p:Paragraph {id: row.Target_ID})
-MERGE (r)-[:RECITAL_CONTAINS_PARAGRAPH]->(p);
+MERGE (r)-[:RECITAL_CONTAINS_PARAGRAPH{Properties:row.Properties}]->(p);
 """
 # Paragraph → SubParagraph Relationships 
 paragraph_sub_paragraph ="""
@@ -225,7 +224,7 @@ recital_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Recital {id: row.Source_ID})
 MATCH (co:Concept {id: row.Target_ID})
-MERGE (r)-[:RECITAL_DEFINES_CONCEPT]->(co);
+MERGE (r)-[:RECITAL_DEFINES_CONCEPT{properties:row.Properties}]->(co);
 """
 
 
@@ -274,7 +273,7 @@ time.sleep(2)
 client.query(gdpr_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/14_legislative_action_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/15_concept_nodes_CORRECTED.csv"))
+client.query(gdpr_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/15_concept_nodes_COMPLETE.csv"))
 time.sleep(2)
 
 client.query(gdpr_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/1_framework_nodes_CORRECTED.csv"))
@@ -304,7 +303,7 @@ time.sleep(2)
 client.query(article_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/17_relationships_article_to_paragraph.csv"))
 time.sleep(2)
 
-client.query(recital_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/23_relationships_recital_to_paragraph.csv"))
+client.query(recital_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/23_relationships_recital_to_paragraph_CLEANED.csv"))
 time.sleep(2)
 
 client.query(paragraph_sub_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/18_relationships_paragraph_to_subparagraph.csv"))
