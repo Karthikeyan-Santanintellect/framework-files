@@ -1,0 +1,8 @@
+Relationship_Type,Source_Node_Type,Source_ID,Target_Node_Type,Target_ID,Properties
+CONTAINS_PARAGRAPH,Recital,REC-007,Paragraph,PARA-004-01,foundational
+CONTAINS_PARAGRAPH,Recital,REC-008,Paragraph,PARA-005-01,foundational
+CONTAINS_PARAGRAPH,Recital,REC-009,Paragraph,PARA-006-01,foundational
+CONTAINS_PARAGRAPH,Recital,REC-025,Paragraph,PARA-005-01,consent_principle
+CONTAINS_PARAGRAPH,Recital,REC-032,Paragraph,PARA-006-01,data_subject_rights
+CONTAINS_PARAGRAPH,Recital,REC-050,Paragraph,PARA-015-01,profiling_restriction
+CONTAINS_PARAGRAPH,Recital,REC-094,Paragraph,PARA-035-01,authority_oversight
