@@ -1,7 +1,7 @@
 # Create PCIDSS Standard Node
-standard = """
+industry_standard_regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:IndustryStandard {industry_standard_id: 'PCI-DSS'})
+MERGE (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS'})
 ON CREATE SET
   s.name =  row.name,
   s.version = row.version,
@@ -105,15 +105,15 @@ ON CREATE SET
 pcidss_publishes ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (o:Organization {name: row.source_name})
-MATCH (s:IndustryStandard {name: row.target_name, version: row.target_version})
+MATCH (s:IndustryStandardAndRegulation {name: row.target_name, version: row.target_version})
 MERGE (o)-[:PUBLISHES_STANDARD]->(s);
 """
 # 2. HAS_GROUP (Standard -> RequirementGroup) 
 pcidss_has_group ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:IndustryStandard {version: row.source_standard_version})
+MATCH (s:IndustryStandardAndRegulation {version: row.source_standard_version})
 MATCH (rg:RequirementGroup {group_id: row.target_group_id})
-MERGE (s)-[:HAS_GROUP]->(rg);
+MERGE (s)-[:INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP]->(rg);
 """
 
 # 3. HAS_REQUIREMENT (RequirementGroup -> Requirement) 
@@ -121,21 +121,21 @@ pcidss_has_requirement ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (rg:RequirementGroup {group_id: row.source_group_id})
 MATCH (r:Requirement {req_id: toInteger(row.target_req_id)})
-MERGE (rg)-[:HAS_REQUIREMENT]->(r);
+MERGE (rg)-[:REQUIREMENT_GROUP_HAS_REQUIREMENT]->(r);
 """
 # 4. HAS_SUB_REQUIREMENT (Requirement -> SubRequirement) 
 pcidss_has_sub_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {req_id: toInteger(row.source_req_id)})
 MATCH (sr:SubRequirement {req_id: row.target_subreq_id})
-MERGE (r)-[:HAS_SUB_REQUIREMENT]->(sr);
+MERGE (r)-[:REQUIREMENT_HAS_SUB_REQUIREMENT]->(sr);
 """
 # 5. HAS_DEFINED_APPROACH (SubRequirement -> DefinedApproach) 
 pcidss_has_defined_approach = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sr:SubRequirement {req_id: row.source_subreq_id})
 MATCH (da:DefinedApproach {req_id: row.target_defined_approach_id})
-MERGE (sr)-[:HAS_DEFINED_APPROACH]->(da);
+MERGE (sr)-[:SUB_REQUIREMENT_HAS_DEFINED_APPROACH]->(da);
 """
 
 # 6. HAS_TEST (DefinedApproach -> TestingProcedure) 
@@ -143,7 +143,7 @@ pcidss_has_test ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (da:DefinedApproach {req_id: row.source_defined_approach_id})
 MATCH (tp:TestingProcedure {test_id: row.target_test_id})
-MERGE (da)-[:HAS_TEST]->(tp);
+MERGE (da)-[:DEFINED_APPROACH_TESTS_TESTING_PROCEDURE]->(tp);
 """
 
 # 7. HAS_CUSTOMIZED_OBJECTIVE (SubRequirement -> CustomizedApproachObjective) 
@@ -151,14 +151,14 @@ pcidss_has_customized_objective ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sr:SubRequirement {req_id: row.source_subreq_id})
 MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id})
-MERGE (sr)-[:HAS_CUSTOMIZED_OBJECTIVE]->(cao);
+MERGE (sr)-[:SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE]->(cao);
 """
 # 8. HAS_GUIDANCE (SubRequirement -> Guidance) 
 pcidss_has_guidance = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sr:SubRequirement {req_id: row.source_subreq_id})
 MATCH (g:Guidance {guidance_id: row.target_guidance_id})
-MERGE (sr)-[:HAS_GUIDANCE]->(g);
+MERGE (sr)-[:SUB_REQUIREMENT_HAS_GUIDANCE]->(g);
 """
 
 # 9. REQUIRES_TRA (CustomizedApproachObjective -> TargetedRiskAnalysis) 
@@ -204,7 +204,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(standard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_standard.csv"))
+client.query(industry_standard_regulation.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_standard.csv"))
 time.sleep(2)
 
 client.query(organization.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_organization.csv"))
@@ -274,50 +274,35 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-output_filename = "pci-dss.json"
+res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 
-res = client.query("""
-    MATCH path = (:IndustryStandard)-[*]->()
-    WITH path
-    UNWIND nodes(path) AS n
-    UNWIND relationships(path) AS r
-    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-    RETURN {
-      nodes: [n IN uniqueNodes | n {
-        .*, 
-        id: elementId(n),     
-        labels: labels(n),      
-        mainLabel: head(labels(n)) 
-      }],
-      links: [r IN uniqueRels | r {
-        .*,
-        id: elementId(r),     
-        type: type(r),         
-        source: elementId(startNode(r)), 
-        target: elementId(endNode(r)) 
-      }]
-    } AS graph_data
-""")
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data""")
 
-if isinstance(res, str):
-    logger.error(f" Export query failed: {res}")
-    client.close()
-    sys.exit(1)
+res = res[-1]['graph_data']
 
-if not res or len(res) == 0:
-    logger.warning(" No data returned from export query")
-    client.close()
-    sys.exit(1)
+import json
+with open('pci-dss.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
+logger.info("✓ Exported graph data to pci-dss.json")
 
-graph_data = res[0].get('graph_data', res[0])
-
-with open(output_filename, 'w', encoding='utf-8') as f:
-    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
-
-node_count = len(graph_data.get('nodes', []))
-link_count = len(graph_data.get('links', []))
-
-logger.info(f"✓ Exported {node_count} nodes and {link_count} relationships")
-logger.info(f"✓ Graph data saved to: {output_filename}") 
 
 client.close()
+

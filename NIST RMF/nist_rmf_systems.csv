@@ -1,0 +1,26 @@
+system_id,system_name,system_type,categorization,authorization_status,ato_date,ato_expiration
+SYS-001,Financial Management System,Information System,MODERATE,Authorized,2023-01-15,2026-01-15
+SYS-002,Personnel Database,Information System,HIGH,Authorized,2022-06-20,2025-06-20
+SYS-003,Email System,Information System,MODERATE,Authorized,2023-03-10,2026-03-10
+SYS-004,Web Portal,Web Application,MODERATE,Authorized,2023-07-01,2026-07-01
+SYS-005,Backup System,Infrastructure,LOW,Authorized,2023-11-05,2026-11-05
+SYS-006,Intrusion Detection System,Security System,HIGH,Authorized,2022-09-12,2025-09-12
+SYS-007,Authentication Service,Identity Management,HIGH,Authorized,2023-02-28,2026-02-28
+SYS-008,Data Warehouse,Database,MODERATE,Authorized,2023-08-14,2026-08-14
+SYS-009,Cloud Storage,Cloud Service,MODERATE,In Process,2024-01-20,
+SYS-010,Mobile Application,Mobile App,MODERATE,Authorized,2023-05-08,2026-05-08
+SYS-011,Network Infrastructure,Infrastructure,MODERATE,Authorized,2022-12-01,2025-12-01
+SYS-012,Disaster Recovery System,Infrastructure,HIGH,Authorized,2023-04-15,2026-04-15
+SYS-013,Incident Response Platform,Security System,MODERATE,Authorized,2023-09-20,2026-09-20
+SYS-014,Compliance Management Tool,Management,LOW,Authorized,2023-10-30,2026-10-30
+SYS-015,API Gateway,Infrastructure,MODERATE,Authorized,2023-06-12,2026-06-12
+SYS-016,Data Analytics System,Information System,MODERATE,Authorized,2023-02-01,2026-02-01
+SYS-017,Legacy System,Legacy,HIGH,Authorized,2021-05-10,2024-05-10
+SYS-018,IoT Monitoring System,IoT System,MODERATE,In Process,2024-03-15,
+SYS-019,Enterprise Resource Planning,ERP System,HIGH,Authorized,2022-11-08,2025-11-08
+SYS-020,Collaboration Platform,Web Application,MODERATE,Authorized,2023-08-25,2026-08-25
+SYS-021,Security Operations Center,Security System,HIGH,Authorized,2023-01-10,2026-01-10
+SYS-022,Configuration Management,Management,LOW,Authorized,2023-07-05,2026-07-05
+SYS-023,Vulnerability Assessment Tool,Security Tool,MODERATE,Authorized,2023-09-01,2026-09-01
+SYS-024,Patch Management System,Management,MODERATE,Authorized,2023-04-18,2026-04-18
+SYS-025,Logging and Monitoring System,Infrastructure,MODERATE,Authorized,2023-03-22,2026-03-22

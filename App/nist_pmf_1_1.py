@@ -1,15 +1,15 @@
 # nist_pmf_1_1.py
 
-# UPDATED: Constraints are now composite to ensure uniqueness within a FrameworkAndStandard.
+# UPDATED: Constraints are now composite to ensure uniqueness within a ISFrameworksAndStandard.
 constraints = """
-CREATE CONSTRAINT pmf_11_FrameworkAndStandard_id_unique IF NOT EXISTS FOR (f:FrameworkAndStandard) REQUIRE f.framework_standard_id IS UNIQUE;
-CREATE CONSTRAINT pmf_11_function_id_unique IF NOT EXISTS FOR (fn:Function) REQUIRE (fn.framework_standard_id, fn.function_id) IS UNIQUE;
-CREATE CONSTRAINT pmf_11_category_id_unique IF NOT EXISTS FOR (c:Category) REQUIRE (c.framework_standard_id, c.category_id) IS UNIQUE;
-CREATE CONSTRAINT pmf_11_subcategory_id_unique IF NOT EXISTS FOR (s:Subcategory) REQUIRE (s.framework_standard_id, s.subcategory_id) IS UNIQUE;
-CREATE CONSTRAINT pmf_11_objective_id_unique IF NOT EXISTS FOR (po:PrivacyObjective) REQUIRE (po.framework_standard_id, po.objective_id) IS UNIQUE;
-CREATE CONSTRAINT pmf_11_tier_id_unique IF NOT EXISTS FOR (it:ImplementationTier) REQUIRE (it.framework_standard_id, it.tier_id) IS UNIQUE;
-CREATE CONSTRAINT pmf_11_ai_risk_id_unique IF NOT EXISTS FOR (apr:AIPrivacyRisk) REQUIRE (apr.framework_standard_id, apr.ai_risk_id) IS UNIQUE;
-CREATE CONSTRAINT pmf_11_org_id_unique IF NOT EXISTS FOR (o:Organization) REQUIRE (o.framework_standard_id, o.org_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_ISFrameworksAndStandard_id_unique IF NOT EXISTS FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_framework_standard_id IS UNIQUE;
+CREATE CONSTRAINT pmf_11_function_id_unique IF NOT EXISTS FOR (fn:Function) REQUIRE (fn.IS_framework_standard_id, fn.function_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_category_id_unique IF NOT EXISTS FOR (c:Category) REQUIRE (c.IS_framework_standard_id, c.category_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_subcategory_id_unique IF NOT EXISTS FOR (s:Subcategory) REQUIRE (s.IS_framework_standard_id, s.subcategory_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_objective_id_unique IF NOT EXISTS FOR (po:PrivacyObjective) REQUIRE (po.IS_framework_standard_id, po.objective_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_tier_id_unique IF NOT EXISTS FOR (it:ImplementationTier) REQUIRE (it.IS_framework_standard_id, it.tier_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_ai_risk_id_unique IF NOT EXISTS FOR (apr:AIPrivacyRisk) REQUIRE (apr.IS_framework_standard_id, apr.ai_risk_id) IS UNIQUE;
+CREATE CONSTRAINT pmf_11_org_id_unique IF NOT EXISTS FOR (o:Organization) REQUIRE (o.IS_framework_standard_id, o.org_id) IS UNIQUE;
 """
 
 indexes = """
@@ -21,8 +21,8 @@ CREATE INDEX pmf_11_org_v11_adoption IF NOT EXISTS FOR (o:Organization) ON (o.v1
 """
 
 # UPDATED: Using MERGE to prevent duplicates.
-framework_standard = """
-MERGE (f:FrameworkAndStandard {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+IS_frameworks_standard = """
+MERGE (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 SET
     f.name = 'NIST Privacy Framework 1.1',
     f.full_title = 'A Tool for Improving Privacy through Enterprise Risk Management - Version 1.1',
@@ -34,10 +34,10 @@ SET
 """
 
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (fn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025', function_id: row.function_id})
+MERGE (fn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', function_id: row.function_id})
 ON CREATE SET
     fn.name = row.function_name,
     fn.definition = row.function_definition,
@@ -48,10 +48,10 @@ ON CREATE SET
     fn.supports_functions = split(row.supports_functions, ',');
 """
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {framework_standard_id: 'NIST_PRIVACY_11_2025', category_id: row.category_id})
+MERGE (c:Category {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', category_id: row.category_id})
 ON CREATE SET
     c.function_id = row.function_id,
     c.name = row.category_name,
@@ -59,19 +59,22 @@ ON CREATE SET
     c.v11_updates = row.v11_updates;
 """
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Subcategory {framework_standard_id: 'NIST_PRIVACY_11_2025', subcategory_id: row.`Sub-Category`})
+MERGE (s:Subcategory {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', subcategory_id: row.subcategory_id})
 ON CREATE SET
-    s.category_id = row.Category,
-    s.subcategory_name = row.subcategory_name;
+    s.category_id = row.category_id,
+    s.function_id = row.function_id,
+    s.name = row.subcategory_name,
+    s.type = row.subcategory_type,
+    s.updates = row.v11_updates;
 """
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 ai_privacy_risks = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (apr:AIPrivacyRisk {framework_standard_id: 'NIST_PRIVACY_11_2025', ai_risk_id: row.ai_risk_id})
+MERGE (apr:AIPrivacyRisk {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', ai_risk_id: row.ai_risk_id})
 ON CREATE SET
     apr.risk_name = row.risk_name,
     apr.risk_description = row.risk_description,
@@ -84,10 +87,10 @@ ON CREATE SET
 
 """
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 implementation_tiers = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (it:ImplementationTier {framework_standard_id: 'NIST_PRIVACY_11_2025', tier_id: row.tier_id})
+MERGE (it:ImplementationTier {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', tier_id: row.tier_id})
 ON CREATE SET
     it.tier_name = row.tier_name,
     it.tier_number = toInteger(row.tier_number),
@@ -96,10 +99,10 @@ ON CREATE SET
     it.v11_updates = row.v11_updates;
 """
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 organization = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (o:Organization {framework_standard_id: 'NIST_PRIVACY_11_2025', org_id: row.org_id})
+MERGE (o:Organization {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', org_id: row.org_id})
 ON CREATE SET
     o.org_name = row.org_name,
     o.industry = row.industry,
@@ -119,10 +122,10 @@ ON CREATE SET
     o.key_ai_privacy_focus = split(row.key_ai_privacy_focus, ',');
 """
 
-# UPDATED: Using MERGE and adding FrameworkAndStandard_id.
+# UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 objectives = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (po:PrivacyObjective {framework_standard_id: 'NIST_PRIVACY_11_2025', objective_id: row.objective_id})
+MERGE (po:PrivacyObjective {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', objective_id: row.objective_id})
 ON CREATE SET
     po.objective_name = row.objective_name,
     po.objective_definition = row.objective_definition,
@@ -131,69 +134,66 @@ ON CREATE SET
     po.v11_updates = row.v11_updates;
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 framework_standard_function_rel = """
-MATCH (f:FrameworkAndStandard {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (fn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (fn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 WHERE fn.function_id IN ['ID-P', 'GV-P', 'CT-P', 'CM-P', 'PR-P']
 MERGE (f)-[:FRAMEWORK_STANDARD_HAS_FUNCTION]->(fn);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 function_category_rel = """
-MATCH (fn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (c:Category {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (fn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (c:Category {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 WHERE fn.function_id = c.function_id
 MERGE (fn)-[:FUNCTION_HAS_CATEGORY]->(c);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 category_subcategory_rel = """
-MATCH (c:Category {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (s:Subcategory {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (c:Category {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (s:Subcategory {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 WHERE c.category_id = s.category_id
 MERGE (c)-[:CATEGORY_HAS_SUBCATEGORY]->(s);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 function_support_imp_function_rel = """
-MATCH (fn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025', is_foundational: true})
-MATCH (nfn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025', is_foundational: false})
+MATCH (fn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', is_foundational: true})
+MATCH (nfn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025', is_foundational: false})
 MERGE (fn)-[:FUNCTION_HAS_FOUNDATIONAL_SUPPORT {relationship_type: 'Foundational_Support', support_area: fn.primary_focus}]->(nfn);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 function_ai_risk_rel = """
-MATCH (fn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (apr:AIPrivacyRisk {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (fn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (apr:AIPrivacyRisk {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 WHERE fn.function_id IN apr.affected_functions
 MERGE (fn)-[:FUNCTION_ADDRESSES_AI_RISKS {address_type: 'AI_Privacy_Risk_Mitigation', v11_new_capability: true}]->(apr);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 function_objective_rel = """
-MATCH (fn:Function {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (po:PrivacyObjective {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (fn:Function {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (po:PrivacyObjective {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 WHERE fn.function_id IN po.related_functions
 MERGE (fn)-[:FUNCTION_SUPPORTS_OBJECTIVE]->(po);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 org_ai_risk_rel = """
-MATCH (o:Organization {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (apr:AIPrivacyRisk {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-WHERE o.ai_system_count > 0 AND (
-    (o.industry = 'Healthcare' AND apr.ai_risk_id IN ['AI_BIAS_001', 'AI_PII_001']) OR
-    (o.industry = 'Financial Services' AND apr.ai_risk_id IN ['AI_BIAS_001', 'AI_RECON_001']) OR
-    apr.impact_level = 'High'
-)
-MERGE (o)-[:ORGANIZATION_FACES_AI_RISKS {risk_exposure: 'Active_AI_Systems', ai_systems_count: o.ai_system_count}]->(apr);
+MATCH (o:Organization {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (apr:AIPrivacyRisk {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MERGE (o)-[:ORGANIZATION_FACES_AI_RISKS]->(apr);
 """
 
-# UPDATED: Scoped MATCH to FrameworkAndStandard_id.
+
+
+# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 org_tier_rel = """
-MATCH (o:Organization {framework_standard_id: 'NIST_PRIVACY_11_2025'})
-MATCH (it:ImplementationTier {framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (o:Organization {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
+MATCH (it:ImplementationTier {IS_framework_standard_id: 'NIST_PRIVACY_11_2025'})
 WHERE o.implementation_tier = it.tier_id
 MERGE (o)-[:ORGANIZATION_HAS_TIER]->(it);
 """ 
@@ -219,9 +219,9 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework_standard)
+client.query(IS_frameworks_standard)
 time.sleep(2)
-logger.info('FrameworkAndStandard')
+logger.info('ISFrameworksAndStandard')
 
 client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/nist_privacy_framework_11_functions.csv"))
 time.sleep(2)
@@ -288,50 +288,35 @@ time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")
-output_filename = "nist_pmf_1_1.json"
 
-res = client.query("""
-    MATCH path = (:FrameworkAndStandard)-[*]->()
-    WITH path
-    UNWIND nodes(path) AS n
-    UNWIND relationships(path) AS r
-    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-    RETURN {
-      nodes: [n IN uniqueNodes | n {
-        .*, 
-        id: elementId(n),     
-        labels: labels(n),      
-        mainLabel: head(labels(n)) 
-      }],
-      links: [r IN uniqueRels | r {
-        .*,
-        id: elementId(r),     
-        type: type(r),         
-        source: elementId(startNode(r)), 
-        target: elementId(endNode(r)) 
-      }]
-    } AS graph_data
-""")
+res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 
-if isinstance(res, str):
-    logger.error(f" Export query failed: {res}")
-    client.close()
-    sys.exit(1)
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data""")
 
-if not res or len(res) == 0:
-    logger.warning(" No data returned from export query")
-    client.close()
-    sys.exit(1)
+res = res[-1]['graph_data']
 
-graph_data = res[0].get('graph_data', res[0])
+import json
+with open('nist_pmf_1_1.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
+logger.info("✓ Exported graph data to nist_pmf_1_1.json")
 
-with open(output_filename, 'w', encoding='utf-8') as f:
-    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
-
-node_count = len(graph_data.get('nodes', []))
-link_count = len(graph_data.get('links', []))
-
-logger.info(f" Exported {node_count} nodes and {link_count} relationships")
-logger.info(f" Graph data saved to: {output_filename}") 
 
 client.close()
