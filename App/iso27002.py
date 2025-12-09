@@ -2,11 +2,11 @@
 
 # UPDATED: Constraints are now composite, requiring IDs to be unique within a framework.
 constraints = """
-CREATE CONSTRAINT framework_id_unique FOR (f:FrameworkAndStandard) REQUIRE f.framework_standard_id IS UNIQUE;
-CREATE CONSTRAINT category_framework_composite_unique FOR (c:Category) REQUIRE (c.framework_standard_id, c.category_id) IS UNIQUE;
-CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.framework_standard_id, ctrl.control_id) IS UNIQUE;
-CREATE CONSTRAINT attribute_framework_composite_unique FOR (a:Attribute) REQUIRE (a.framework_standard_id, a.attribute_id) IS UNIQUE;
-CREATE CONSTRAINT guideline_framework_composite_unique FOR (g:Guideline) REQUIRE (g.framework_standard_id, g.guideline_id) IS UNIQUE;
+CREATE CONSTRAINT framework_id_unique FOR (f:ISFrameworksAndStandard) REQUIRE f.ISframework_standard_id IS UNIQUE;
+CREATE CONSTRAINT category_framework_composite_unique FOR (c:Category) REQUIRE (c.ISframework_standard_id, c.category_id) IS UNIQUE;
+CREATE CONSTRAINT control_framework_composite_unique FOR (ctrl:Control) REQUIRE (ctrl.ISframework_standard_id, ctrl.control_id) IS UNIQUE;
+CREATE CONSTRAINT attribute_framework_composite_unique FOR (a:Attribute) REQUIRE (a.ISframework_standard_id, a.attribute_id) IS UNIQUE;
+CREATE CONSTRAINT guideline_framework_composite_unique FOR (g:Guideline) REQUIRE (g.ISframework_standard_id, g.guideline_id) IS UNIQUE;
 """
 
 indexes = """
@@ -20,7 +20,7 @@ CREATE INDEX control_new_index FOR (ctrl:Control) ON (ctrl.is_new);
 # UPDATED: Switched to MERGE.
 framework_standard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:FrameworkAndStandard {framework_standard_id: row.framework_id})
+MERGE (f:ISFrameworksAndStandard {ISframework_standard_id: row.framework_id})
 ON CREATE SET
     f.name = row.name,
     f.full_name = row.full_name,
@@ -34,7 +34,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {framework_standard_id: 'ISO27002_2022', category_id: row.category_id})
+MERGE (c:Category {ISframework_standard_id: 'ISO27002_2022', category_id: row.category_id})
 ON CREATE SET
     c.category_code = row.category_code,
     c.category_name = row.category_name,
@@ -46,7 +46,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctrl:Control {framework_standard_id: 'ISO27002_2022', control_id: row.control_id})
+MERGE (ctrl:Control {ISframework_standard_id: 'ISO27002_2022', control_id: row.control_id})
 ON CREATE SET
     ctrl.control_name = row.control_name,
     ctrl.purpose = row.purpose,
@@ -61,7 +61,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Attribute {framework_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
+MERGE (a:Attribute {ISframework_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
 ON CREATE SET
     a.attribute_type = row.attribute_type,
     a.attribute_value = row.attribute_value,
@@ -72,7 +72,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 guidelines = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (g:Guideline {framework_standard_id: 'ISO27002_2022', guideline_id: row.guideline_id})
+MERGE (g:Guideline {ISframework_standard_id: 'ISO27002_2022', guideline_id: row.guideline_id})
 ON CREATE SET
     g.control_id = row.control_id,
     g.guideline_type = row.guideline_type,
@@ -83,23 +83,23 @@ ON CREATE SET
 
 # UPDATED: Scoped MATCH to framework_id.
 framework_standard_category_rel = """
-MATCH (f:FrameworkAndStandard {framework_standard_id: 'ISO27002_2022'})
-MATCH (c:Category {framework_standard_id: 'ISO27002_2022'})
+MATCH (f:ISFrameworksAndStandard {ISframework_standard_id: 'ISO27002_2022'})
+MATCH (c:Category {ISframework_standard_id: 'ISO27002_2022'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_CATEGORY]->(c);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 category_control_rel = """
-MATCH (cat:Category {framework_standard_id: 'ISO27002_2022'})
-MATCH (ctrl:Control {framework_standard_id: 'ISO27002_2022'})
+MATCH (cat:Category {ISframework_standard_id: 'ISO27002_2022'})
+MATCH (ctrl:Control {ISframework_standard_id: 'ISO27002_2022'})
 WHERE cat.category_id = ctrl.category_id
 MERGE (cat)-[:CATEGORY_CONTAINS_CONTROL]->(ctrl);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 control_guideline_rel = """
-MATCH (ctrl:Control {framework_standard_id: 'ISO27002_2022'})
-MATCH (guide:Guideline {framework_standard_id: 'ISO27002_2022'})
+MATCH (ctrl:Control {ISframework_standard_id: 'ISO27002_2022'})
+MATCH (guide:Guideline {ISframework_standard_id: 'ISO27002_2022'})
 WHERE ctrl.control_id = guide.control_id
 MERGE (ctrl)-[:CONTROL_HAS_GUIDELINE]->(guide);
 """
@@ -107,8 +107,8 @@ MERGE (ctrl)-[:CONTROL_HAS_GUIDELINE]->(guide);
 # UPDATED: Scoped MATCH to framework_id.
 control_attribute_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {framework_standard_id: 'ISO27002_2022', control_id: row.control_id})
-MATCH (attr:Attribute {framework_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
+MATCH (ctrl:Control {ISframework_standard_id: 'ISO27002_2022', control_id: row.control_id})
+MATCH (attr:Attribute {ISframework_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
 MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE {relevance: row.relevance}]->(attr);
 """
 # ... (rest of the python script remains the same)
@@ -161,7 +161,7 @@ client.query(control_attribute_rel.replace('$file_path', 'https://github.com/Kar
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:FrameworkAndStandard)-[*]->()
+res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
@@ -169,22 +169,26 @@ WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 
 RETURN {
   nodes: [n IN uniqueNodes | n {
-    .*, 
-    id: elementId(n),     
-    labels: labels(n),      
-    mainLabel: head(labels(n)) 
-  }],
-  links: [r IN uniqueRels | r {
     .*,
-    id: elementId(r),     
-    type: type(r),         
-    source: elementId(startNode(r)), 
-    target: elementId(endNode(r)) 
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
   }]
 } AS graph_data""")
 
+res = res[-1]['graph_data']
+
 import json
-with open('iso27002.json', 'w', encoding='utf-8') as f:
-  f.write(json.dumps(res, default=str))
+with open('iso-27002.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
+logger.info("✓ Exported graph data to iso-27002.json")
+
 
 client.close()

@@ -1,7 +1,7 @@
 #Load Framework
 framework_and_standard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:FrameworkAndStandards {framework_id : 'CIS CONTROLS'})
+MERGE (f:ISFrameworksAndStandard {framework_standard_id : 'CIS CONTROLS'})
 ON CREATE SET
   f.name = row.name,
   f.version = row.version,
@@ -62,30 +62,30 @@ ON CREATE SET
 # 1.CREATE FRAMEWORK -> GOVERNING BODY RELATIONSHIPS 
 framework_and_standard_governing_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:FrameworkAndStandards {framework_id: row.from_node_id}) 
+MATCH (f:ISFrameworksAndStandard {framework_standard_id: row.from_node_id}) 
 MATCH (gb:GoverningBody {name: row.to_node_id})
-MERGE (f)-[:PUBLISHED_BY]->(gb);
+MERGE (f)-[:FRAMEWORK_PUBLISHED_BY_GOVERNING_BODY]->(gb);
 """
 # 2.CREATE FRAMEWORK -> CONTROL RELATIONSHIPS 
 framework_and_standard_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:FrameworkAndStandards {framework_id: row.from_node_id})
+MATCH (f:ISFrameworksAndStandard {framework_standard_id: row.from_node_id})
 MATCH (c:Control {control_id: row.to_node_id})
-MERGE (f)-[:HAS_CONTROL]->(c);
+MERGE (f)-[:FRAMEWORK_HAS_CONTROL]->(c);
 """
 # 3. CREATE CONTROL -> SAFEGUARD RELATIONSHIPS 
 control_safeguard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Control {control_id: row.from_node_id})
 MATCH (s:Safeguard {safeguard_id: row.to_node_id})
-MERGE (c)-[:HAS_SAFEGUARD]->(s);
+MERGE (c)-[:CONTROL_HAS_SAFEGUARD]->(s);
 """
 # 4. CREATE SAFEGUARD -> IMPLEMENTATION GROUP RELATIONSHIPS 
 safeguard_implementation_group ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (ig:ImplementationGroup {name: row.to_node_id})
-MERGE (s)-[:BELONGS_TO_IMPLEMENTATION_GROUP]->(ig);
+MERGE (s)-[:SAFEGUARD_BELONGS_TO_IMPLEMENTATION_GROUP]->(ig);
 """
 
 # 5. CREATE SAFEGUARD -> ASSET CLASS RELATIONSHIPS 
@@ -93,7 +93,7 @@ safeguard_asset_class ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (ac:AssetClass {name: row.to_node_id})
-MERGE (s)-[:APPLIES_TO_ASSET_CLASS]->(ac);
+MERGE (s)-[:SAGEGUARD_APPLIES_TO_ASSET_CLASS]->(ac);
 """
 
 # 6. CREATE SAFEGUARD -> SECURITY FUNCTION RELATIONSHIPS 
@@ -170,51 +170,35 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-output_filename = "cis_controls.json"
+res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 
-res = client.query("""
-    MATCH path = (:FrameworkAndStandards)-[*]->()
-    WITH path
-    UNWIND nodes(path) AS n
-    UNWIND relationships(path) AS r
-    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-    RETURN {
-      nodes: [n IN uniqueNodes | n {
-        .*, 
-        id: elementId(n),     
-        labels: labels(n),      
-        mainLabel: head(labels(n)) 
-      }],
-      links: [r IN uniqueRels | r {
-        .*,
-        id: elementId(r),     
-        type: type(r),         
-        source: elementId(startNode(r)), 
-        target: elementId(endNode(r)) 
-      }]
-    } AS graph_data
-""")
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data""")
 
-if isinstance(res, str):
-    logger.error(f" Export query failed: {res}")
-    client.close()
-    sys.exit(1)
+res = res[-1]['graph_data']
 
-if not res or len(res) == 0:
-    logger.warning(" No data returned from export query")
-    client.close()
-    sys.exit(1)
+import json
+with open('cis-controls.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
+logger.info("✓ Exported graph data to cis-controls.json")
 
-graph_data = res[0].get('graph_data', res[0])
-
-with open(output_filename, 'w', encoding='utf-8') as f:
-    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
-
-node_count = len(graph_data.get('nodes', []))
-link_count = len(graph_data.get('links', []))
-
-logger.info(f"✓ Exported {node_count} nodes and {link_count} relationships")
-logger.info(f"✓ Graph data saved to: {output_filename}") 
 
 client.close()
 

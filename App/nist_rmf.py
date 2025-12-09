@@ -79,6 +79,7 @@ ON CREATE SET
 
 # UPDATED: Using MERGE and adding framework_id.
 systems = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (sys:System {IS_framework_standard_id: 'NIST_RMF_2018', system_id: row.system_id})
 ON CREATE SET
     sys.system_name = row.system_name,
@@ -86,7 +87,7 @@ ON CREATE SET
     sys.categorization = row.categorization,
     sys.authorization_status = row.authorization_status,
     sys.ato_date = date(row.ato_date),
-    sys.ato_expiration = row.ato_expiration = '' ? null : date(row.ato_expiration);
+    sys.ato_expiration = CASE WHEN row.ato_expiration = '' THEN null ELSE date(row.ato_expiration) END;
 """
 
 # UPDATED: Scoped MATCH to framework_id.
@@ -126,11 +127,16 @@ MERGE (r)-[:ROLE_INVOLVED_IN_STEP {involvement_type: 'Decision_Making'}]->(s);
 """
 
 # UPDATED: Scoped MATCH and changed CREATE to MERGE.
-system_control_rel = """
-MATCH (sys:System {IS_framework_standard_id: 'NIST_RMF_2018'})
+control_system_rel = """
 MATCH (c:Control {IS_framework_standard_id: 'NIST_RMF_2018'})
-MERGE (sys)-[:SYSTEM_IMPLEMENTS_CONTROLS {implementation_status: 'Required'}]->(c);
+MATCH (sys:System {IS_framework_standard_id: 'NIST_RMF_2018'})
+WHERE sys.authorization_status = 'Authorized'
+MERGE (c)-[:CONTROL_IMPLEMENTED_BY_SYSTEM {
+    implementation_status: 'Required',
+    system_type: sys.system_type
+}]->(sys);
 """
+
 
 
 import os
@@ -173,7 +179,7 @@ client.query(roles.replace('$file_path', 'https://github.com/Karthikeyan-Santani
 time.sleep(2)
 logger.info('Roles')
 
-client.query(systems)
+client.query(systems.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/nist_rmf_systems.csv'))
 time.sleep(2)
 logger.info('Systems')
 
@@ -193,7 +199,7 @@ time.sleep(2)
 client.query(role_step_rel)
 time.sleep(2)
 
-client.query(system_control_rel)
+client.query(control_system_rel)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
