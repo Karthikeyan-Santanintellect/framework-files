@@ -1,7 +1,7 @@
 # UPDATED: Using MERGE to prevent errors on re-runs.
 #Industry Standard & Regulations: HIPAA
 industry_standard_and_regulations = """
-MERGE(i:IndustryStandardAndRegulations{industry_standard_id:'HIPAA'})
+MERGE(i:IndustryStandardAndRegulation{industry_standard_regulation_id:'HIPAA'})
 ON CREATE SET
     i.name='Health Insurance Portability and Accountability Act',
     i.description='The Health Insurance Portability and Accountability Act (HIPAA) is a US regulation that sets standards for protecting sensitive patient health information.',
@@ -15,7 +15,7 @@ ON CREATE SET
 
 hipaa_standards = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Standard{standard_id: row.id, industry_standard_id: 'HIPAA'})
+MERGE (s:Standard{standard_id: row.id, industry_standard_regulation_id: 'HIPAA'})
 ON CREATE SET
     s.title = row.title,
     s.safeguard_type = row.safeguard_type,
@@ -29,7 +29,7 @@ ON CREATE SET
 
 mappings = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, industry_standard_id: "HIPAA"})
+MERGE (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, industry_standard_regulation_id: "HIPAA"})
 ON CREATE SET
     m.type = row.mapping_type,
     m.confidence = row.confidence,
@@ -38,19 +38,26 @@ ON CREATE SET
     m.source_section = row.source_section;
 """
 
+industry_standard_and_regulations_hipaa_standards_rel = """
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA'})
+MATCH (s:Standard {industry_standard_regulation_id: 'HIPAA'})
+MERGE (i)-[:CONTAINS]->(s);
+"""
+
+
 # UPDATED: Scoped MATCH to framework_id for precision.
 hipaa_parent_child_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row WHERE row.parent_id IS NOT NULL AND row.parent_id <> ''
-MATCH (child:Standard {standard_id: row.id, industry_standard_id: 'HIPAA'})
-MATCH (parent:Standard {standard_id: row.parent_id, industry_standard_id: 'HIPAA'})
+MATCH (child:Standard {standard_id: row.id, industry_standard_regulation_id: 'HIPAA'})
+MATCH (parent:Standard {standard_id: row.parent_id, industry_standard_regulation_id: 'HIPAA'})
 MERGE (parent)-[:HIPAA_PARENT_CHILD_]->(child);
 """
 
 hipaa_subcategory_mapping_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Standard {industry_standard_id: "HIPAA", standard_id: row.hipaa_id})
-MATCH (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, industry_standard_id: "HIPAA"})
+MATCH (s:Standard {industry_standard_regulation_id: "HIPAA", standard_id: row.hipaa_id})
+MATCH (m:Mapping {mapping_id: row.hipaa_id + '_TO_' + row.csf_subcategory_id, industry_standard_regulation_id: "HIPAA"})
 MATCH (sc:Subcategory {subcategory_id: row.csf_subcategory_id, framework_id: "NIST_CSF_2.0"})
 MERGE (s)-[:MAPS_TO {mapping_type: row.mapping_type, confidence: row.confidence}]->(m)-[:TARGET]->(sc);
 """
@@ -96,7 +103,7 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res=client.query("""MATCH path = (:IndustryStandardAndRegulations)-[*]->()
+res=client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
