@@ -1,0 +1,2373 @@
+{
+  "nodes": [
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4183",
+      "mainLabel": "ISFrameworksAndStandard",
+      "labels": [
+        "ISFrameworksAndStandard"
+      ],
+      "full_title": "A Tool for Improving Privacy through Enterprise Risk Management",
+      "purpose": "Enable better privacy engineering practices that support privacy by design concepts",
+      "publication": "NIST CSWP 01162020",
+      "name": "NIST Privacy Framework 1.0",
+      "publication_date": "2020-01-16",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "version": "1.0",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "category_count": 5,
+      "function_name": "Protect-P",
+      "key_activities": "Implement data protection, access control, security safeguards",
+      "function_id": "PR-P",
+      "is_foundational": false,
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 30,
+      "function_definition": "Develop and implement appropriate data processing safeguards",
+      "primary_focus": "Cybersecurity-related privacy protection"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4206",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Technical security solutions are managed to ensure the security and resilience of systems/products/services",
+      "category_name": "Protective Technology",
+      "category_id": "PR.PT-P",
+      "function_id": "PR-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 4
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4306",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PT-P4",
+      "subcategory_type": "Protective Technology",
+      "category_id": "PR.PT-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Mechanisms (e.g., failsafe, load balancing, hot swap) are implemented to achieve resilience requirements in normal and adverse situations.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4305",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PT-P3",
+      "subcategory_type": "Protective Technology",
+      "category_id": "PR.PT-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Communications and control networks are protected.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4304",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PT-P2",
+      "subcategory_type": "Protective Technology",
+      "category_id": "PR.PT-P",
+      "function_id": "PR-P",
+      "subcategory_name": "The principle of least functionality is incorporated by configuring systems to provide only essential capabilities.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4303",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PT-P1",
+      "subcategory_type": "Protective Technology",
+      "category_id": "PR.PT-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Removable media is protected and its use restricted according to policy.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4205",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "System maintenance and repairs are performed consistent with policies, processes, and procedures",
+      "category_name": "Maintenance",
+      "category_id": "PR.MA-P",
+      "function_id": "PR-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 2
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4302",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.MA-P2",
+      "subcategory_type": "Maintenance",
+      "category_id": "PR.MA-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Remote maintenance of organizational assets is approved, logged, and performed in a manner that prevents unauthorized access.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4301",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.MA-P1",
+      "subcategory_type": "Maintenance",
+      "category_id": "PR.MA-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Maintenance and repair of organizational assets are performed and logged, with approved and controlled tools.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Data are managed consistent with the organizations risk strategy to protect individuals privacy and maintain data confidentiality, integrity, and availability",
+      "category_name": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 8
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4300",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P8",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Integrity checking mechanisms are used to verify hardware integrity.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4299",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P7",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "The development and testing environment(s) are separate from the production environment.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4298",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P6",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Integrity checking mechanisms are used to verify software, firmware, and information integrity.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4297",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P5",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Protections against data leaks are implemented.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4296",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P4",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Adequate capacity to ensure availability is maintained.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4295",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P3",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Systems/products/services and associated data are formally managed throughout removal, transfers, and disposition.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4294",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P2",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Data-in-transit are protected.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4293",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.DS-P1",
+      "subcategory_type": "Data Security",
+      "category_id": "PR.DS-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Data-at-rest are protected.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Access to data and devices is limited to authorized individuals, processes, and devices",
+      "category_name": "Identity Management, Authentication, and Access Control",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 6
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4292",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.AC-P6",
+      "subcategory_type": "Identity Management, Authentication, and Access Control ",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Individuals and devices are proofed and bound to credentials, and authenticated commensurate with the risk of the transaction (e.g., individuals\ufffd security and privacy risks and other organizational risks).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4291",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.AC-P5",
+      "subcategory_type": "Identity Management, Authentication, and Access Control ",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Network integrity is protected (e.g., network segregation, network segmentation).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4290",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.AC-P4",
+      "subcategory_type": "Identity Management, Authentication, and Access Control ",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4289",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.AC-P3",
+      "subcategory_type": "Identity Management, Authentication, and Access Control ",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Remote access is managed.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4288",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.AC-P2",
+      "subcategory_type": "Identity Management, Authentication, and Access Control ",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Physical access to data and devices is managed.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4287",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.AC-P1",
+      "subcategory_type": "Identity Management, Authentication, and Access Control ",
+      "category_id": "PR.AC-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized individuals, processes, and devices.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Security and privacy policies, processes, and procedures maintained and used to manage the protection of data",
+      "category_name": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 10
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4286",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P10",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "A vulnerability management plan is developed and implemented.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4285",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P9",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Privacy procedures are included in human resources practices (e.g., deprovisioning, personnel screening).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4284",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P8",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Response and recovery plans are tested.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4283",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P7",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Response plans (Incident Response and Business Continuity) and recovery plans (Incident Recovery and Disaster Recovery) are established, in place, and managed.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4282",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P6",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Effectiveness of protection technologies is shared.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4281",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P5",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Protection processes are improved.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4280",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P4",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Policy and regulations regarding the physical operating environment for organizational assets are met.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4279",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P3",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Backups of information are conducted, maintained, and tested.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4278",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P2",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "Configuration change control processes are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4277",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "PR.PO-P1",
+      "subcategory_type": "Data Protection Policies, Processes, and Procedures",
+      "category_id": "PR.PO-P",
+      "function_id": "PR-P",
+      "subcategory_name": "A baseline configuration of information technology is created and maintained incorporating security principles (e.g., concept of least functionality).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4187",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "category_count": 2,
+      "function_name": "Communicate-P",
+      "key_activities": "Communicate processing practices, provide transparency mechanisms",
+      "function_id": "CM-P",
+      "is_foundational": false,
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 10,
+      "function_definition": "Develop and implement appropriate activities to enable organizations and individuals to have a reliable understanding and engage in a dialogue about how data are processed and associated privacy risks",
+      "primary_focus": "Transparency and communication about data processing"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Individuals and organizations have reliable knowledge about data processing practices and associated privacy risks",
+      "category_name": "Data Processing Awareness",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 8
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4276",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P8",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Individuals are provided with mitigation mechanisms (e.g., credit monitoring, consent withdrawal, data alteration or deletion) to address impacts of problematic data actions.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4275",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P7",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Impacted individuals and organizations are notified about a privacy breach or event.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4274",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P6",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Data provenance and lineage are maintained and can be accessed for review or transmission/disclosure.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4273",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P5",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Data corrections or deletions can be communicated to individuals or organizations (e.g., data sources) in the data processing ecosystem.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4272",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P4",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Records of data disclosures and sharing are maintained and can be accessed for review or transmission/disclosure.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4271",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P3",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "System/product/service design enables data processing visibility.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4270",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P2",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Mechanisms for obtaining feedback from individuals (e.g., surveys or focus groups) about data processing and associated privacy risks are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4269",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.AW-P1",
+      "subcategory_type": "Data Processing Awareness ",
+      "category_id": "CM.AW-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Mechanisms (e.g., notices, internal or public reports) for communicating data processing purposes, practices, associated privacy risks, and options for enabling individuals\ufffd data processing preferences and requests are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4200",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Policies, processes, and procedures to increase transparency of data processing practices",
+      "category_name": "Communication Policies, Processes, and Procedures",
+      "category_id": "CM.PO-P",
+      "function_id": "CM-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 2
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4268",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.PO-P2",
+      "subcategory_type": "Communication Policies, Processes, and Procedures",
+      "category_id": "CM.PO-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Roles and responsibilities (e.g., public relations) for communicating data processing purposes, practices, and associated privacy risks are established.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4267",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CM.PO-P1",
+      "subcategory_type": "Communication Policies, Processes, and Procedures",
+      "category_id": "CM.PO-P",
+      "function_id": "CM-P",
+      "subcategory_name": "Transparency policies, processes, and procedures for communicating data processing purposes, practices, and associated privacy risks are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4186",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "category_count": 3,
+      "function_name": "Control-P",
+      "key_activities": "Manage data processing, enable individual control, implement disassociation",
+      "function_id": "CT-P",
+      "is_foundational": false,
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 19,
+      "function_definition": "Develop and implement appropriate activities to enable organizations or individuals to manage data with sufficient granularity to manage privacy risks",
+      "primary_focus": "Data processing control and management"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Data processing solutions increase disassociability consistent with the organizations risk strategy",
+      "category_name": "Disassociated Processing",
+      "category_id": "CT.DP-P",
+      "function_id": "CT-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 5
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4266",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DP-P5",
+      "subcategory_type": "Disassociated Processing",
+      "category_id": "CT.DP-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Attribute references are substituted for attribute values.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4265",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DP-P4",
+      "subcategory_type": "Disassociated Processing",
+      "category_id": "CT.DP-P",
+      "function_id": "CT-P",
+      "subcategory_name": "System or device configurations permit selective collection or disclosure of data elements. ",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4264",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DP-P3",
+      "subcategory_type": "Disassociated Processing",
+      "category_id": "CT.DP-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data are processed to limit the formulation of inferences about individuals\ufffd behavior or activities (e.g., data processing is decentralized, distributed architectures).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4263",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DP-P2",
+      "subcategory_type": "Disassociated Processing",
+      "category_id": "CT.DP-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data are processed to limit the identification of individuals (e.g., de-identification privacy techniques, tokenization).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4262",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DP-P1",
+      "subcategory_type": "Disassociated Processing",
+      "category_id": "CT.DP-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data are processed to limit observability and linkability (e.g., data actions take place on local devices, privacy-preserving cryptography).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Data are managed consistent with the organizations risk strategy to protect individuals privacy",
+      "category_name": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 10
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4261",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P10",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Stakeholder privacy preferences are included in algorithmic design objectives and outputs are evaluated against these preferences.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4260",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P9",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Technical measures implemented to manage data processing are tested and assessed.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4259",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P8",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Audit/log records are determined, documented, implemented, and reviewed in accordance with policy and incorporating the principle of data minimization.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4258",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P7",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Mechanisms for transmitting processing permissions and related data values with data elements are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4257",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P6",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data are transmitted using standardized formats.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4256",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P5",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data are destroyed according to policy.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4255",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P4",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data elements can be accessed for deletion.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4254",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P3",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data elements can be accessed for alteration.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4253",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P2",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data elements can be accessed for transmission or disclosure.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4252",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.DM-P1",
+      "subcategory_type": "Data Processing Management",
+      "category_id": "CT.DM-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Data elements can be accessed for review.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4197",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Policies, processes, and procedures maintained and used to manage data processing",
+      "category_name": "Data Processing Policies, Processes, and Procedures",
+      "category_id": "CT.PO-P",
+      "function_id": "CT-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 4
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4251",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.PO-P4",
+      "subcategory_type": "Data Processing Policies, Processes, and Procedures",
+      "category_id": "CT.PO-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Policies, processes, and procedures for authorizing data processing (e.g., organizational decisions, individual consent), revoking authorizations, and maintaining authorizations are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4250",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.PO-P3",
+      "subcategory_type": "Data Processing Policies, Processes, and Procedures",
+      "category_id": "CT.PO-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Policies, processes, and procedures for authorizing data processing (e.g., organizational decisions, individual consent), revoking authorizations, and maintaining authorizations are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4249",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.PO-P2",
+      "subcategory_type": "Data Processing Policies, Processes, and Procedures",
+      "category_id": "CT.PO-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Policies, processes, and procedures for authorizing data processing (e.g., organizational decisions, individual consent), revoking authorizations, and maintaining authorizations are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4248",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "CT.PO-P1",
+      "subcategory_type": "Data Processing Policies, Processes, and Procedures",
+      "category_id": "CT.PO-P",
+      "function_id": "CT-P",
+      "subcategory_name": "Policies, processes, and procedures for authorizing data processing (e.g., organizational decisions, individual consent), revoking authorizations, and maintaining authorizations are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4185",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "category_count": 4,
+      "function_name": "Govern-P",
+      "key_activities": "Establish policies, define risk tolerance, provide training",
+      "function_id": "GV-P",
+      "is_foundational": true,
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 20,
+      "function_definition": "Develop and implement the organizational governance structure to enable an ongoing understanding of the organizations risk management priorities that are informed by privacy risk",
+      "primary_focus": "Organizational governance and risk management"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Policies, processes, and procedures for ongoing review of the organizations privacy posture",
+      "category_name": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 7
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4247",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P7",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Policies, processes, and procedures for receiving, tracking, and responding to complaints, concerns, and questions from individuals about organizational privacy practices are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4246",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P6",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Policies, processes, and procedures incorporate lessons learned from problematic data actions.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4245",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P5",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Policies, processes, and procedures are established and in place to receive, analyze, and respond to problematic data actions disclosed to the organization from internal and external sources (e.g., internal discovery, privacy researchers, professional events).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4244",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P4",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Policies, processes, and procedures for communicating progress on managing privacy risks are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4243",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P3",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Policies, processes, and procedures for assessing compliance with legal requirements and privacy policies are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4242",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P2",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Privacy values, policies, and training are reviewed and any updates are communicated.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4241",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.MT-P1",
+      "subcategory_type": "Monitoring and Review",
+      "category_id": "GV.MT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Privacy risk is re-evaluated on an ongoing basis and as key factors, including the organization\ufffds business environment (e.g., introduction of new technologies), governance (e.g., legal obligations, risk tolerance), data processing, and systems/products/services change.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4195",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Workforce and third parties are provided privacy awareness education and training",
+      "category_name": "Awareness and Training",
+      "category_id": "GV.AT-P",
+      "function_id": "GV-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 4
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4240",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.AT-P4",
+      "subcategory_type": "Awareness and Training",
+      "category_id": "GV.AT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Third parties (e.g., service providers, customers, partners) understand their roles and responsibilities.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4239",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.AT-P3",
+      "subcategory_type": "Awareness and Training",
+      "category_id": "GV.AT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Privacy personnel understand their roles and responsibilities.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4238",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.AT-P2",
+      "subcategory_type": "Awareness and Training",
+      "category_id": "GV.AT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Senior executives understand their roles and responsibilities.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4237",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.AT-P1",
+      "subcategory_type": "Awareness and Training",
+      "category_id": "GV.AT-P",
+      "function_id": "GV-P",
+      "subcategory_name": "The workforce is informed and trained on its roles and responsibilities. ",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4194",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Organizations priorities, constraints, risk tolerances, and assumptions to support operational risk decisions",
+      "category_name": "Risk Management Strategy",
+      "category_id": "GV.RM-P",
+      "function_id": "GV-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 3
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4236",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.RM-P3",
+      "subcategory_type": "Risk Management Strategy",
+      "category_id": "GV.RM-P",
+      "function_id": "GV-P",
+      "subcategory_name": "The organization\ufffds determination of risk tolerance is informed by its role(s) in the data processing ecosystem.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4235",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.RM-P2",
+      "subcategory_type": "Risk Management Strategy",
+      "category_id": "GV.RM-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Organizational risk tolerance is determined and clearly expressed.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4234",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.RM-P1",
+      "subcategory_type": "Risk Management Strategy",
+      "category_id": "GV.RM-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Risk management processes are established, managed, and agreed to by organizational stakeholders.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Policies, processes, and procedures to manage and monitor regulatory, legal, risk, environmental, and operational requirements",
+      "category_name": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 6
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4233",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.PO-P6",
+      "subcategory_type": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Governance and risk management policies, processes, and procedures address privacy risks.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4232",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.PO-P5",
+      "subcategory_type": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Legal, regulatory, and contractual requirements regarding privacy are understood and managed.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4231",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.PO-P4",
+      "subcategory_type": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Privacy roles and responsibilities are coordinated and aligned with third-party stakeholders (e.g., service providers, customers, partners).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4230",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.PO-P3",
+      "subcategory_type": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Roles and responsibilities for the workforce are established with respect to privacy. ",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4229",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.PO-P2",
+      "subcategory_type": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Processes to instill organizational privacy values within system/product/service development and operations are established and in place.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4228",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "GV.PO-P1",
+      "subcategory_type": "Governance Policies, Processes, and Procedures",
+      "category_id": "GV.PO-P",
+      "function_id": "GV-P",
+      "subcategory_name": "Organizational privacy values and policies (e.g., conditions on data processing such as data uses or retention periods, individuals\ufffd prerogatives with respect to data processing) are established and communicated.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4184",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "category_count": 4,
+      "function_name": "Identify-P",
+      "key_activities": "Inventory data processing, assess risks, understand ecosystem",
+      "function_id": "ID-P",
+      "is_foundational": true,
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 21,
+      "function_definition": "Develop the organizational understanding to manage privacy risk for individuals arising from data processing",
+      "primary_focus": "Understanding data processing and privacy risks"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Processes to identify, assess, and manage privacy risks within the data processing ecosystem",
+      "category_name": "Data Processing Ecosystem Risk Management",
+      "category_id": "ID.DE-P",
+      "function_id": "ID-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 5
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4227",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.DE-P5",
+      "subcategory_type": "Data Processing Ecosystem Risk Management",
+      "category_id": "ID.DE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data processing ecosystem parties are routinely assessed using audits, test results, or other forms of evaluations to confirm they are meeting their contractual, interoperability framework, or other obligations.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4226",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.DE-P4",
+      "subcategory_type": "Data Processing Ecosystem Risk Management",
+      "category_id": "ID.DE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Interoperability frameworks or similar multi-party approaches are used to manage data processing ecosystem privacy risks. ",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4225",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.DE-P3",
+      "subcategory_type": "Data Processing Ecosystem Risk Management",
+      "category_id": "ID.DE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Contracts with data processing ecosystem parties are used to implement appropriate measures designed to meet the objectives of an organization\ufffds privacy program. ",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4224",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.DE-P2",
+      "subcategory_type": "Data Processing Ecosystem Risk Management",
+      "category_id": "ID.DE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data processing ecosystem parties (e.g., service providers, customers, partners, product manufacturers, application developers) are identified, prioritized, and assessed using a privacy risk assessment process.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4223",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.DE-P1",
+      "subcategory_type": "Data Processing Ecosystem Risk Management",
+      "category_id": "ID.DE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data processing ecosystem risk management policies, processes, and procedures are identified, established, assessed, managed, and agreed to by organizational stakeholders.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "The organization understands the privacy risks to individuals and how such privacy risks may create follow-on impacts",
+      "category_name": "Risk Assessment",
+      "category_id": "ID.RA-P",
+      "function_id": "ID-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 5
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4222",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.RA-P5",
+      "subcategory_type": "Risk Assessment",
+      "category_id": "ID.RA-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Risk responses are identified, prioritized, and implemented.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4221",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.RA-P4",
+      "subcategory_type": "Risk Assessment",
+      "category_id": "ID.RA-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Problematic data actions, likelihoods, and impacts are used to determine and prioritize risk.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4220",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.RA-P3",
+      "subcategory_type": "Risk Assessment",
+      "category_id": "ID.RA-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Potential problematic data actions and associated problems are identified.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4219",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.RA-P2",
+      "subcategory_type": "Risk Assessment",
+      "category_id": "ID.RA-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data analytic inputs and outputs are identified and evaluated for bias.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4218",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.RA-P1",
+      "subcategory_type": "Risk Assessment",
+      "category_id": "ID.RA-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Contextual factors related to the systems/products/services and the data actions are identified (e.g., individuals\ufffd demographics and privacy interests or perceptions, data sensitivity and/or types, visibility of data processing to individuals and third parties). ",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4190",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "The organizations mission, objectives, stakeholders, and activities are understood and prioritized",
+      "category_name": "Business Environment",
+      "category_id": "ID.BE-P",
+      "function_id": "ID-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 3
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4217",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.BE-P3",
+      "subcategory_type": "Business Environment",
+      "category_id": "ID.BE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Systems/products/services that support organizational priorities are identified and key requirements communicated.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4216",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.BE-P2",
+      "subcategory_type": "Business Environment",
+      "category_id": "ID.BE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Priorities for organizational mission, objectives, and activities are established and communicated.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4215",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.BE-P1",
+      "subcategory_type": "Business Environment",
+      "category_id": "ID.BE-P",
+      "function_id": "ID-P",
+      "subcategory_name": "The organization\ufffds role(s) in the data processing ecosystem are identified and communicated.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_description": "Data processing by systems, products, or services is understood and informs the management of privacy risk",
+      "category_name": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020",
+      "subcategory_count": 8
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4214",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P8",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data processing is mapped, illustrating the data actions and associated data elements for systems/products/services, including components; roles of the component owners/operators; and interactions of individuals or third parties with the systems/products/services.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4213",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P7",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "The data processing environment is identified (e.g., geographic location, internal, cloud, third parties).",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4212",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P6",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data elements within the data actions are inventoried.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4211",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P5",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "The purposes for the data actions are inventoried.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4210",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P4",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Data actions of the systems/products/services are inventoried.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4209",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P3",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Categories of individuals (e.g., customers, employees or prospective employees, consumers) whose data are being processed are inventoried.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4208",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P2",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Owners or operators (e.g., the organization or third parties such as service providers, partners, customers, and developers) and their roles with respect to the systems/products/services and components (e.g., internal or external) that process data are inventoried.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4207",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "subcategory_id": "ID.IM-P1",
+      "subcategory_type": "Inventory and Mapping",
+      "category_id": "ID.IM-P",
+      "function_id": "ID-P",
+      "subcategory_name": "Systems/products/services that process data are inventoried.",
+      "IS_frameworks_standard_id": "NIST_PRIVACY_2020"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4183",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162088133047619671",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "type": "FRAMEWORK_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162083735001108572",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4206",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4206",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051118",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4306",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4206",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365870",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4305",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4206",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680622",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4304",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4206",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995374",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4303",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159831935187423324",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4205",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4205",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680621",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4302",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4205",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995373",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4301",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738076",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792108",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4300",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140106860",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4299",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421612",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4298",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736364",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4297",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051116",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4296",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365868",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4295",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680620",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4294",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4204",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995372",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4293",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560052828",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421611",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4292",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736363",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4291",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051115",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4290",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365867",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4289",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680619",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4288",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4203",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995371",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4287",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4188",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746367580",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1173343833581162602",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4286",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1171092033767477354",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4285",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792106",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4284",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140106858",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4283",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421610",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4282",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736362",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4281",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051114",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4280",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365866",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4279",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680618",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4278",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4202",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995370",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4277",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4183",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159836333233934423",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4187",
+      "type": "FRAMEWORK_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4187",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560052827",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792105",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4276",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140106857",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4275",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421609",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4274",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736361",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4273",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051113",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4272",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365865",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4271",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680617",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4270",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995369",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4269",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4187",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746367579",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4200",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4200",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680616",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4268",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4200",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995368",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4267",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4183",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157584533420249175",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4186",
+      "type": "FRAMEWORK_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4186",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738074",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736359",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4266",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051111",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4265",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365863",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4264",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680615",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4263",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995367",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4262",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4186",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560052826",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1173343833581162598",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4261",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1171092033767477350",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4260",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792102",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4259",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140106854",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4258",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421606",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4257",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736358",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4256",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051110",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4255",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365862",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4254",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680614",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4253",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995366",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4252",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4186",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746367578",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4197",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051109",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4251",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365861",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4250",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680613",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4249",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995365",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4248",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4183",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155332733606563927",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4185",
+      "type": "FRAMEWORK_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4185",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159831935187423321",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140106852",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4247",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421604",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4246",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736356",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4245",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051108",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4244",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365860",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4243",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680612",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4242",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995364",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4241",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4185",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738073",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4195",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4195",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051107",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4240",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4195",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365859",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4239",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4195",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680611",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4238",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4195",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995363",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4237",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4185",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560052825",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4194",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4194",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365858",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4236",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4194",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680610",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4235",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4194",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995362",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4234",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4185",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746367577",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421601",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4233",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736353",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4232",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051105",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4231",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365857",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4230",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680609",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4229",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4193",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995361",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4228",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4183",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153080933792878679",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4184",
+      "type": "FRAMEWORK_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4184",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159831935187423320",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736352",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4227",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051104",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4226",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365856",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4225",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680608",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4224",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4192",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995360",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4223",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4184",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738072",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736351",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4222",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051103",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4221",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365855",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4220",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680607",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4219",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4191",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995359",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4218",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4184",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560052824",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4190",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4190",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365854",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4217",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4190",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680606",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4216",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4190",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995358",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4215",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4184",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746367576",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792093",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4214",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140106845",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4213",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326421597",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4212",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736349",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4211",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051101",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4210",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885365853",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4209",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071680605",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4208",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4189",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995357",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4207",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    }
+  ]
+}

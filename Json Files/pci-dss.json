@@ -1,0 +1,1051 @@
+{
+  "nodes": [
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "mainLabel": "IndustryStandardAndRegulation",
+      "labels": [
+        "IndustryStandardAndRegulation"
+      ],
+      "retirement_date": "2028-03-31",
+      "revision_type": "Limited Revision",
+      "name": "PCI-DSS",
+      "effective_date": "2025-01-01",
+      "publication_date": "2024-06-01",
+      "mandatory_date_future": "2025-03-31",
+      "industry_standard_regulation_id": "PCI-DSS",
+      "version": "4.0.1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:7",
+      "mainLabel": "RequirementGroup",
+      "labels": [
+        "RequirementGroup"
+      ],
+      "group_id": "RG6",
+      "name": "Maintain an Information Security Policy"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:19",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 12,
+      "requirement_group": "RG6",
+      "name": "Support Information Security with Organizational Policies and Programs"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:34",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "12.1.1",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Information security policy established"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:6",
+      "mainLabel": "RequirementGroup",
+      "labels": [
+        "RequirementGroup"
+      ],
+      "group_id": "RG5",
+      "name": "Regularly Monitor and Test Networks"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:18",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 11,
+      "requirement_group": "RG5",
+      "name": "Test Security of Systems and Networks Regularly"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:33",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "11.1.1",
+      "milestone": 2,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Security testing processes implemented"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:17",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 10,
+      "requirement_group": "RG5",
+      "name": "Log and Monitor All Access to System Components and Cardholder Data"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:32",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "10.1.1",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Audit policies and procedures defined"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:5",
+      "mainLabel": "RequirementGroup",
+      "labels": [
+        "RequirementGroup"
+      ],
+      "group_id": "RG4",
+      "name": "Implement Strong Access Control Measures"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:16",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 9,
+      "requirement_group": "RG4",
+      "name": "Restrict Physical Access to Cardholder Data"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:15",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 8,
+      "requirement_group": "RG4",
+      "name": "Identify Users and Authenticate Access to System Components"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:31",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "8.2.1",
+      "milestone": 3,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Strong authentication implemented"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:25",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "8.3.1",
+      "milestone": 3,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Multi-factor authentication established"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:61",
+      "mainLabel": "Guidance",
+      "labels": [
+        "Guidance"
+      ],
+      "name": "MFA significantly reduces risk of unauthorized access through compromised credentials",
+      "related_subrequirement": "8.3.1",
+      "guidance_id": "G-8.3.1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:48",
+      "mainLabel": "CustomizedApproachObjective",
+      "labels": [
+        "CustomizedApproachObjective"
+      ],
+      "req_id": "8.3.1",
+      "name": "The authentication factors used provide equivalent or greater protection than MFA"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:53",
+      "mainLabel": "TargetedRiskAnalysis",
+      "labels": [
+        "TargetedRiskAnalysis"
+      ],
+      "owner": "CISO",
+      "tra_id": "TRA-001",
+      "related_req_id": "8.3.1",
+      "name": "Customized Approach TRA for MFA Alternative",
+      "date_completed": "2024-08-15",
+      "type": "Customized Approach",
+      "status": "Completed"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:56",
+      "mainLabel": "CustomizedControl",
+      "labels": [
+        "CustomizedControl"
+      ],
+      "owner": "Authentication Team",
+      "control_id": "CC-001",
+      "name": "Behavioral Biometrics MFA",
+      "description": "Behavioral biometrics system analyzing keystroke dynamics and mouse movements",
+      "related_objective_req_id": "8.3.1",
+      "implementation_date": "2024-09-01"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:37",
+      "mainLabel": "DefinedApproach",
+      "labels": [
+        "DefinedApproach"
+      ],
+      "req_id": "8.3.1",
+      "name": "Multi-factor authentication (MFA) must be incorporated into the CDE for all access"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:44",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "8.3.1",
+      "name": "Examine MFA configurations and test MFA functionality",
+      "test_id": "8.3.1.a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:24",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "8.1.1",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "All users are assigned a unique ID"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:60",
+      "mainLabel": "Guidance",
+      "labels": [
+        "Guidance"
+      ],
+      "name": "Unique user IDs enable tracing actions to specific individuals",
+      "related_subrequirement": "8.1.1",
+      "guidance_id": "G-8.1.1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:52",
+      "mainLabel": "CustomizedApproachObjective",
+      "labels": [
+        "CustomizedApproachObjective"
+      ],
+      "req_id": "8.1.1",
+      "name": "User accountability is maintained through alternative identification mechanisms"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:36",
+      "mainLabel": "DefinedApproach",
+      "labels": [
+        "DefinedApproach"
+      ],
+      "req_id": "8.1.1",
+      "name": "Each user must be assigned a unique ID before allowing them to access system components"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:43",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "8.1.1",
+      "name": "Observe authentication mechanisms to verify unique ID requirements",
+      "test_id": "8.1.1.b"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:42",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "8.1.1",
+      "name": "Examine user account lists to verify each user has a unique ID",
+      "test_id": "8.1.1.a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:14",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 7,
+      "requirement_group": "RG4",
+      "name": "Restrict Access to System Components and Cardholder Data by Business Need to Know"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4",
+      "mainLabel": "RequirementGroup",
+      "labels": [
+        "RequirementGroup"
+      ],
+      "group_id": "RG3",
+      "name": "Maintain a Vulnerability Management Program"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:13",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 6,
+      "requirement_group": "RG3",
+      "name": "Develop and Maintain Secure Systems and Software"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:30",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "6.2.1",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Security patches identified and installed"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:23",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "6.1.1",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Processes established for addressing security vulnerabilities"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:63",
+      "mainLabel": "Guidance",
+      "labels": [
+        "Guidance"
+      ],
+      "name": "Timely identification of vulnerabilities is critical to maintaining security posture",
+      "related_subrequirement": "6.1.1",
+      "guidance_id": "G-6.1.1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:51",
+      "mainLabel": "CustomizedApproachObjective",
+      "labels": [
+        "CustomizedApproachObjective"
+      ],
+      "req_id": "6.1.1",
+      "name": "Security vulnerabilities are identified through equivalent risk-based processes"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:55",
+      "mainLabel": "TargetedRiskAnalysis",
+      "labels": [
+        "TargetedRiskAnalysis"
+      ],
+      "owner": "Compliance Officer",
+      "tra_id": "TRA-003",
+      "related_req_id": "6.1.1",
+      "name": "Activity Frequency TRA for Vulnerability Management",
+      "date_completed": "2024-09-01",
+      "type": "Activity Frequency",
+      "status": "Completed"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:58",
+      "mainLabel": "CustomizedControl",
+      "labels": [
+        "CustomizedControl"
+      ],
+      "owner": "Security Operations",
+      "control_id": "CC-003",
+      "name": "AI-Powered Vulnerability Scanner",
+      "description": "Machine learning-based vulnerability identification and prioritization system",
+      "related_objective_req_id": "6.1.1",
+      "implementation_date": "2024-07-20"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:39",
+      "mainLabel": "DefinedApproach",
+      "labels": [
+        "DefinedApproach"
+      ],
+      "req_id": "6.1.1",
+      "name": "Security vulnerability identification processes are defined and maintained"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:47",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "6.1.1",
+      "name": "Interview personnel to verify vulnerability processes are followed",
+      "test_id": "6.1.1.b"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:46",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "6.1.1",
+      "name": "Examine vulnerability management processes documentation",
+      "test_id": "6.1.1.a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:12",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 5,
+      "requirement_group": "RG3",
+      "name": "Protect All Systems and Networks from Malicious Software"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:3",
+      "mainLabel": "RequirementGroup",
+      "labels": [
+        "RequirementGroup"
+      ],
+      "group_id": "RG2",
+      "name": "Protect Account Data"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:11",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 4,
+      "requirement_group": "RG2",
+      "name": "Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:10",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 3,
+      "requirement_group": "RG2",
+      "name": "Protect Stored Account Data"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:29",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "3.1.1",
+      "milestone": 2,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Retain cardholder data minimally"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:22",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "3.2.1",
+      "milestone": 2,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Account data storage is kept to minimum"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:62",
+      "mainLabel": "Guidance",
+      "labels": [
+        "Guidance"
+      ],
+      "name": "Minimizing stored data reduces exposure in the event of a breach",
+      "related_subrequirement": "3.2.1",
+      "guidance_id": "G-3.2.1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:50",
+      "mainLabel": "CustomizedApproachObjective",
+      "labels": [
+        "CustomizedApproachObjective"
+      ],
+      "req_id": "3.2.1",
+      "name": "Stored account data is protected through alternative compensating controls"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:54",
+      "mainLabel": "TargetedRiskAnalysis",
+      "labels": [
+        "TargetedRiskAnalysis"
+      ],
+      "owner": "Security Manager",
+      "tra_id": "TRA-002",
+      "related_req_id": "3.2.1",
+      "name": "Customized Approach TRA for Account Data Protection",
+      "date_completed": "2024-09-15",
+      "type": "Customized Approach",
+      "status": "In Progress"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:57",
+      "mainLabel": "CustomizedControl",
+      "labels": [
+        "CustomizedControl"
+      ],
+      "owner": "Data Security Team",
+      "control_id": "CC-002",
+      "name": "Homomorphic Encryption Storage",
+      "description": "Encryption system allowing computation on encrypted cardholder data",
+      "related_objective_req_id": "3.2.1",
+      "implementation_date": "2024-10-15"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:38",
+      "mainLabel": "DefinedApproach",
+      "labels": [
+        "DefinedApproach"
+      ],
+      "req_id": "3.2.1",
+      "name": "Account data storage is kept to a minimum through implementation of data retention policies"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:45",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "3.2.1",
+      "name": "Review data retention policies and examine stored data",
+      "test_id": "3.2.1.a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2",
+      "mainLabel": "RequirementGroup",
+      "labels": [
+        "RequirementGroup"
+      ],
+      "group_id": "RG1",
+      "name": "Build and Maintain a Secure Network and Systems"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:9",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 2,
+      "requirement_group": "RG1",
+      "name": "Apply Secure Configurations to All System Components"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "req_id": 1,
+      "requirement_group": "RG1",
+      "name": "Install and Maintain Network Security Controls"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:28",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "1.2.1.b",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Responsibilities communicated"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:27",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "1.2.1.a",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Roles documented and assigned"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:26",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "1.1.2.b",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Configuration standards are defined"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:21",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "1.2.1",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Roles and responsibilities are assigned"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:59",
+      "mainLabel": "Guidance",
+      "labels": [
+        "Guidance"
+      ],
+      "name": "Clear definition of roles prevents confusion and ensures accountability",
+      "related_subrequirement": "1.2.1",
+      "guidance_id": "G-1.2.1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:49",
+      "mainLabel": "CustomizedApproachObjective",
+      "labels": [
+        "CustomizedApproachObjective"
+      ],
+      "req_id": "1.2.1",
+      "name": "Personnel understand their role in protecting network security controls"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:35",
+      "mainLabel": "DefinedApproach",
+      "labels": [
+        "DefinedApproach"
+      ],
+      "req_id": "1.2.1",
+      "name": "Roles and responsibilities for Requirement 1 are documented, assigned, and understood"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:41",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "1.2.1",
+      "name": "Interview personnel to verify roles are assigned and understood",
+      "test_id": "1.2.1.b"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:40",
+      "mainLabel": "TestingProcedure",
+      "labels": [
+        "TestingProcedure"
+      ],
+      "related_defined_approach": "1.2.1",
+      "name": "Examine documentation to verify roles and responsibilities are documented",
+      "test_id": "1.2.1.a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:20",
+      "mainLabel": "SubRequirement",
+      "labels": [
+        "SubRequirement"
+      ],
+      "req_id": "1.1.2",
+      "milestone": 1,
+      "becomes_mandatory_on": "2025-03-31",
+      "name": "Configuration standards are defined and implemented"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164377316256645120",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:7",
+      "type": "INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:7",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153119416699846663",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:19",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:19",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474451",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:34",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162125516442959872",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:6",
+      "type": "INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:6",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155371216513531910",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:18",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:18",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474450",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:33",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:6",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153119416699846662",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:17",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:17",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474449",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:32",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159873716629274624",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:5",
+      "type": "INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:5",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157623016327217157",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:16",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:5",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155371216513531909",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:15",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:15",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157624115838844943",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:31",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:15",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155372316025159695",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:25",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:25",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153124914257985561",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:61",
+      "type": "SUB_REQUIREMENT_HAS_GUIDANCE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:25",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153123814746357785",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:48",
+      "type": "SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:48",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153052346490552368",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:53",
+      "type": "REQUIRES_TARGETED_RISK_ANALYSIS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:53",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153053446002180149",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:56",
+      "type": "VALIDATES_CUSTOMIZED_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:56",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153054545513807928",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:48",
+      "type": "ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:25",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153121615723102233",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:37",
+      "type": "SUB_REQUIREMENT_HAS_DEFINED_APPROACH"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:37",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153122715234730021",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:44",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:15",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474447",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:24",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:24",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153124914257985560",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:60",
+      "type": "SUB_REQUIREMENT_HAS_GUIDANCE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:24",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153123814746357784",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:52",
+      "type": "SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:24",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153121615723102232",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:36",
+      "type": "SUB_REQUIREMENT_HAS_DEFINED_APPROACH"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:36",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155374515048415268",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:43",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:36",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153122715234730020",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:42",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:5",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153119416699846661",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:14",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157621916815589376",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4",
+      "type": "INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155371216513531908",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:13",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:13",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155372316025159693",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:30",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:13",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474445",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:23",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:23",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153124914257985559",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:63",
+      "type": "SUB_REQUIREMENT_HAS_GUIDANCE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:23",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153123814746357783",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:51",
+      "type": "SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:51",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153052346490552371",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:55",
+      "type": "REQUIRES_TARGETED_RISK_ANALYSIS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:55",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153053446002180151",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:58",
+      "type": "VALIDATES_CUSTOMIZED_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:58",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153054545513807930",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:51",
+      "type": "ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:23",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153121615723102231",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:39",
+      "type": "SUB_REQUIREMENT_HAS_DEFINED_APPROACH"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:39",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155374515048415271",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:47",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:39",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153122715234730023",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:46",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153119416699846660",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:12",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155370117001904128",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:3",
+      "type": "INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:3",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155371216513531907",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:11",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:3",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153119416699846659",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:10",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:10",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155372316025159690",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:29",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:10",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474442",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:22",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:22",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153124914257985558",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:62",
+      "type": "SUB_REQUIREMENT_HAS_GUIDANCE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:22",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153123814746357782",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:50",
+      "type": "SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:50",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153052346490552370",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:54",
+      "type": "REQUIRES_TARGETED_RISK_ANALYSIS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:54",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153053446002180150",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:57",
+      "type": "VALIDATES_CUSTOMIZED_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:57",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153054545513807929",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:50",
+      "type": "ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:22",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153121615723102230",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:38",
+      "type": "SUB_REQUIREMENT_HAS_DEFINED_APPROACH"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:38",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153122715234730022",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:45",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:0",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153118317188218880",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2",
+      "type": "INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155371216513531906",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:9",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153119416699846658",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "type": "REQUIREMENT_GROUP_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162127715466215432",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:28",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159875915652530184",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:27",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157624115838844936",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:26",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155372316025159688",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:21",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:21",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153124914257985557",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:59",
+      "type": "SUB_REQUIREMENT_HAS_GUIDANCE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:21",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153123814746357781",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:49",
+      "type": "SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:21",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153121615723102229",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:35",
+      "type": "SUB_REQUIREMENT_HAS_DEFINED_APPROACH"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:35",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155374515048415267",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:41",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:35",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153122715234730019",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:40",
+      "type": "DEFINED_APPROACH_TESTS_TESTING_PROCEDURE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:8",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153120516211474440",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:20",
+      "type": "REQUIREMENT_HAS_SUB_REQUIREMENT"
+    }
+  ]
+}

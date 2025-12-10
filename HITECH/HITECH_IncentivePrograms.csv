@@ -1,0 +1,3 @@
+program_id,title_id,name,description,payer
+EHR-MEDICARE,Title II,Medicare EHR Incentive Program,Incentive payments for meaningful use of certified EHR technology,Medicare
+EHR-MEDICAID,Title II,Medicaid EHR Incentive Program,Incentive payments for Medicaid providers using EHRs,Medicaid

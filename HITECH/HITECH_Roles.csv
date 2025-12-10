@@ -1,0 +1,4 @@
+role_id,name,description
+COVERED_ENTITY,Covered Entity,"Health plans, health care clearinghouses, and certain health care providers"
+BUSINESS_ASSOCIATE,Business Associate,Performs functions or activities on behalf of a covered entity involving ePHI
+HHS_OCR,HHS OCR,Office for Civil Rights at HHS

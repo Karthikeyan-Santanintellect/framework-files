@@ -1,0 +1,3 @@
+data_id,name,description
+EPHI,Electronic Protected Health Information,Individually identifiable health information in electronic form
+DEIDENTIFIED_DATA,De-identified Data,Health information that does not identify an individual

@@ -1,0 +1,3 @@
+event_type_id,name,description
+BREACH,Breach of Unsecured ePHI,"Acquisition, access, use, or disclosure of unsecured ePHI in a manner not permitted"
+UNAUTHORIZED_DISCLOSURE,Unauthorized Disclosure,Unauthorized disclosure of PHI

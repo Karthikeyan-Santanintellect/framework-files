@@ -1,0 +1,3 @@
+safeguard_id,type,name,description
+SG-T-ENCRYPTION,Technical,Encryption of ePHI,Use of encryption technologies to protect ePHI at rest and in transit
+SG-A-NOTIFICATION_PROC,Administrative,Breach Notification Procedures,Documented procedures for breach investigation and notification
