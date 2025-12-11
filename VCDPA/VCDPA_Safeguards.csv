@@ -1,0 +1,13 @@
+safeguard_id,type,name,description,applies_to_section
+SG-DATA_MINIMIZATION,Administrative,Data Minimization,Limit collection to adequate relevant and necessary,59.1-578.A.1
+SG-PURPOSE_LIMITATION,Administrative,Purpose Limitation,Process only for reasonably necessary and compatible purposes,59.1-578.A.2
+SG-SECURITY_PRACTICES,Technical,Security Practices,Reasonable administrative technical and physical security,59.1-578.A.3
+SG-NON_DISCRIMINATION,Organizational,Non-Discrimination,Do not discriminate against consumers exercising rights,59.1-578.A.4
+SG-CONSENT_MECHANISM,Organizational,Consent Mechanism,Obtain clear affirmative consent for sensitive data,59.1-578.A.5
+SG-PRIVACY_NOTICE,Organizational,Privacy Notice,Provide accessible clear meaningful privacy notice,59.1-578.C
+SG-OPT_OUT_DISCLOSURE,Organizational,Opt-Out Disclosure,Disclose sale and targeted advertising with opt-out,59.1-578.D
+SG-REQUEST_MECHANISM,Technical,Consumer Request Mechanism,Secure reliable means for submitting requests,59.1-578.E
+SG-AUTHENTICATION,Technical,Authentication,Authenticate consumer identity commercially reasonable,59.1-577.B.4
+SG-APPEAL_PROCESS,Organizational,Appeal Process,Process for consumers to appeal refusal,59.1-577.C
+SG-PROCESSOR_CONTRACT,Contractual,Processor Contract,Binding contract with processor,59.1-579.B
+SG-DPA_DOCUMENTATION,Administrative,DPA Documentation,Conduct and document data protection assessments,59.1-580

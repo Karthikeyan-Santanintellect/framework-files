@@ -1,0 +1,7 @@
+policy_id,name,description,owner,version,effective_date
+POL-DATA_MINIMIZATION,Data Minimization Policy,Collect only adequate relevant and necessary data,Chief Privacy Officer,1.0,2023-01-01
+POL-CONSENT_MANAGEMENT,Consent Management Policy,Obtain consent before processing sensitive data,Chief Privacy Officer,1.0,2023-01-01
+POL-CONSUMER_RIGHTS,Consumer Rights Policy,Honor consumer access correction deletion portability opt-out requests,Privacy Operations Lead,1.0,2023-01-01
+POL-SECURITY,Data Security Policy,Implement reasonable security practices,Chief Information Security Officer,1.0,2023-01-01
+POL-TRANSPARENCY,Transparency and Notice Policy,Provide clear accessible privacy notices,Chief Privacy Officer,1.0,2023-01-01
+POL-DPA,Data Protection Assessment Policy,Conduct and document DPAs for high-risk processing,Chief Privacy Officer,1.0,2023-01-01

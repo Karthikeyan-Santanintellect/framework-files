@@ -1,0 +1,4 @@
+processor_role_id,subcontractor_role_id,authorization_type,notification_required,description
+PROCESSOR,PROCESSOR,general_authorization,true,Processor engages subcontractor with general written authorization from Controller
+PROCESSOR,PROCESSOR,specific_authorization,true,Processor engages subcontractor with specific prior written authorization from Controller
+PROCESSOR,PROCESSOR,subprocessor_agreement,true,Processor must impose same data protection obligations on subcontractor via contract

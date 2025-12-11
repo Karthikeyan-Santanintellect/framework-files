@@ -1,0 +1,9 @@
+enforcement_id,type,authority,violation_amount,description,section,cure_period,private_right_of_action
+EA-CURE_PERIOD,Cure Period,Virginia Attorney General,0.00,AG must provide 30-day notice and cure opportunity,59.1-584.A,30 days,false
+EA-CIVIL_PENALTY,Civil Penalty,Virginia Attorney General,7500.00,"AG may seek penalties up to $7,500 per violation if not cured",59.1-584.B,N/A,false
+EA-INJUNCTION,Injunctive Relief,Virginia Attorney General,N/A,AG may seek injunction to restrain violations,59.1-584.B,N/A,false
+EA-INVESTIGATION,Investigation,Virginia Attorney General,0.00,AG investigates consumer complaints and violations,59.1-584,N/A,false
+EA-ENFORCEMENT_NOTICE,Enforcement Notice,Virginia Attorney General,0.00,AG sends formal notice of violation and requires corrective action,59.1-584,30 days,false
+EA-VIOLATION_DOCUMENTATION,Violation Record,Virginia Attorney General,0.00,Documented record of VCDPA violation maintained by AG,59.1-584,N/A,false
+EA-CONSUMER_COMPLAINT,Consumer Complaint,Virginia Attorney General,0.00,Consumer files complaint with Virginia Attorney General for investigation,59.1-584,N/A,false
+EA-SETTLEMENT_AGREEMENT,Settlement,Virginia Attorney General,Variable,Negotiated settlement between AG and violating entity,59.1-584,N/A,false

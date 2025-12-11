@@ -1,0 +1,9 @@
+control_id,name,description,category,owner
+CTRL-CONSENT_COLLECTION,Consent Collection System,Capture store and track consumer consent,Technical,Privacy Engineering
+CTRL-REQUEST_AUTOMATION,Consumer Request Automation,Automate receipt authentication and response to requests,Technical,Privacy Operations
+CTRL-OPT_OUT_MECHANISM,Opt-Out Request Processing,Process opt-out requests for targeted ad sale profiling,Technical,Privacy Operations
+CTRL-PRIVACY_NOTICE_MANAGEMENT,Privacy Notice Management,Generate and publish privacy notices,Administrative,Privacy Operations
+CTRL-DATA_MAPPING,Personal Data Mapping,Identify and catalog personal data types sources uses,Administrative,Data Governance
+CTRL-ACCESS_LOGGING,Access Control and Logging,Log and monitor access to personal data,Technical,Security Operations
+CTRL-ENCRYPTION,Encryption Implementation,Encrypt personal data at rest and in transit,Technical,Security Engineering
+CTRL-DPA_EXECUTION,DPA Execution,System to conduct and document DPAs,Administrative,Privacy/Compliance

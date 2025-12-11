@@ -1,0 +1,6 @@
+dpa_id,trigger,description,section,required_elements
+DPA-SALE,Sale of Personal Data,Controller must conduct DPA for sale of personal data,59.1-580,Purpose; categories processed; categories shared; benefits and risks; safeguards
+DPA-SENSITIVE_DATA,Processing Sensitive Data,Controller must conduct DPA for processing sensitive data,59.1-580,Purpose; categories processed; categories shared; benefits and risks; safeguards
+DPA-TARGETED_ADVERTISING,Targeted Advertising,Controller must conduct DPA for targeted advertising,59.1-580,Purpose; categories processed; categories shared; benefits and risks; safeguards
+DPA-PROFILING,Profiling with Risk,Controller must conduct DPA for profiling with risk of harm,59.1-580,Purpose; categories processed; categories shared; benefits and risks; safeguards
+DPA-HEIGHTENED_RISK,Heightened Risk Processing,Controller must conduct DPA for heightened-risk processing,59.1-580,Purpose; categories processed; categories shared; benefits and risks; safeguards

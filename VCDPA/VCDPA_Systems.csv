@@ -1,0 +1,7 @@
+system_id,name,type,description,owner,holds_personal_data,holds_sensitive_data,processing_activities
+SYS_CRM,Customer Relationship Management,CRM,Centralized customer data platform,Marketing Operations,true,false,Data collection contact management
+SYS_CONSENT_PLATFORM,Consent Management Platform,Consent Tool,Capture and track consumer consent,Privacy Operations,true,false,Consent capture opt-out tracking
+SYS_CONSUMER_PORTAL,Consumer Request Portal,DSAR Portal,Self-service portal for consumer requests,Privacy Operations,true,false,DSAR handling
+SYS_DATA_WAREHOUSE,Enterprise Data Warehouse,Data Warehouse,Consolidated repository for analytics,Data Engineering,true,true,Profiling targeted advertising
+SYS_AD_TECH,Ad Tech Platform,Ad Tech,Tracks consumer activity for targeted advertising,Digital Marketing,true,false,Targeted advertising sale
+SYS_DPA_TRACKER,DPA Tracker,DPA Management,System to conduct and maintain DPAs,Privacy/Compliance,false,false,DPA documentation

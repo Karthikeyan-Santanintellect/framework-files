@@ -1,0 +1,4 @@
+processor_role_id,controller_role_id,relationship_type,contractual_basis,description
+PROCESSOR,CONTROLLER,processes_on_behalf_of,Data Processing Agreement,Processor processes personal data on behalf of and under instructions of Controller
+PROCESSOR,CONTROLLER,processes_on_behalf_of,Service Agreement,Processor acts as service provider to Controller for data processing activities
+PROCESSOR,CONTROLLER,processes_on_behalf_of,Vendor Contract,Processor provides services requiring access to personal data controlled by Controller

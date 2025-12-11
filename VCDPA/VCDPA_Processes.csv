@@ -1,0 +1,8 @@
+process_id,name,description,owner,frequency,deadline
+PROC_CONSUMER_REQUEST_HANDLING,Consumer Request Handling,Receive authenticate respond to consumer requests,Privacy Operations,On-demand,45 days extendable to 90
+PROC_CONSENT_MANAGEMENT,Consent Management,Capture store track consent for sensitive data,Privacy Operations,Per collection,Prior to processing
+PROC_OPT_OUT_PROCESSING,Opt-Out Processing,Honor opt-out requests for targeted ad sale profiling,Privacy Operations,On-demand,Immediate
+PROC_APPEAL_HANDLING,Appeal Handling,Process consumer appeals of controller refusal,Privacy Operations,On-demand,60 days
+PROC_DPA_EXECUTION,DPA Execution,Conduct and document DPAs for high-risk processing,Privacy/Compliance,Prior to activity,Prior to activity
+PROC_DATA_MINIMIZATION,Data Minimization Review,Review and limit personal data collection,Data Governance,Quarterly,Ongoing
+PROC_SECURITY_PRACTICES,Security Practices Implementation,Establish and maintain security practices,Security Operations,Continuous,Ongoing

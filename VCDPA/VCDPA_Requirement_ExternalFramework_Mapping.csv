@@ -1,0 +1,35 @@
+source_requirement_id,target_requirement_id,source_framework,target_framework,strength,justification,mapping_type
+VCDPA-59.1-577-R1,GDPR-Article_15,VCDPA,GDPR,STRONG,Both grant right to access personal data,direct_equivalence
+VCDPA-59.1-577-R2,GDPR-Article_16,VCDPA,GDPR,STRONG,Both grant right to correct inaccurate data,direct_equivalence
+VCDPA-59.1-577-R3,GDPR-Article_17,VCDPA,GDPR,STRONG,Both grant right to erasure/deletion,direct_equivalence
+VCDPA-59.1-577-R4,GDPR-Article_20,VCDPA,GDPR,STRONG,Both grant data portability rights,direct_equivalence
+VCDPA-59.1-577-R5,GDPR-Article_21,VCDPA,GDPR,MODERATE,VCDPA opt-out similar to GDPR objection right,functional_equivalence
+VCDPA-59.1-578-R5,GDPR-Article_7,VCDPA,GDPR,STRONG,Both require affirmative consent for sensitive data,direct_equivalence
+VCDPA-59.1-578-R1,GDPR-Article_5,VCDPA,GDPR,STRONG,Both require data minimization and purpose limitation,direct_equivalence
+VCDPA-59.1-578-R3,GDPR-Article_32,VCDPA,GDPR,STRONG,Both require security safeguards for personal data,direct_equivalence
+VCDPA-59.1-580-R2,GDPR-Article_35,VCDPA,GDPR,MODERATE,Both require impact assessments for sensitive data processing,functional_equivalence
+VCDPA-59.1-579-R5,GDPR-Article_28,VCDPA,GDPR,STRONG,Both require binding processor contracts,direct_equivalence
+VCDPA-59.1-577-R1,CCPA-1798.100,VCDPA,CCPA,STRONG,Both grant right to know/access personal data,direct_equivalence
+VCDPA-59.1-577-R3,CCPA-1798.105,VCDPA,CCPA,STRONG,Both grant right to deletion,direct_equivalence
+VCDPA-59.1-577-R4,CCPA-1798.110,VCDPA,CCPA,MODERATE,Both grant data portability or access rights,functional_equivalence
+VCDPA-59.1-577-R5,CCPA-1798.120,VCDPA,CCPA,STRONG,Both grant right to opt-out of sale/processing,direct_equivalence
+VCDPA-59.1-577-R2,CPRA-1798.106,VCDPA,CPRA,STRONG,Both grant right to correct inaccurate personal data,direct_equivalence
+VCDPA-59.1-578-R5,CPRA-1798.100-c,VCDPA,CPRA,STRONG,Both require consent for sensitive data,direct_equivalence
+VCDPA-59.1-577-R1,NIST-PR.AC-2,VCDPA,NIST Privacy Framework,STRONG,Both enable access to personal data by individuals,direct_equivalence
+VCDPA-59.1-577-R2,NIST-PR.AC-4,VCDPA,NIST Privacy Framework,STRONG,Both enable correction/deletion of personal data,direct_equivalence
+VCDPA-59.1-577-R3,NIST-PR.AC-4,VCDPA,NIST Privacy Framework,STRONG,Both enable deletion of personal data,direct_equivalence
+VCDPA-59.1-578-R1,NIST-PR.IP-2,VCDPA,NIST Privacy Framework,STRONG,Both require data minimization,direct_equivalence
+VCDPA-59.1-578-R1,NIST-PR.IP-3,VCDPA,NIST Privacy Framework,STRONG,Both require purpose limitation,direct_equivalence
+VCDPA-59.1-578-R3,NIST-PR.DS-8,VCDPA,NIST Privacy Framework,STRONG,Both require security and confidentiality protections,direct_equivalence
+VCDPA-59.1-578-R6,NIST-PR.IP-4,VCDPA,NIST Privacy Framework,STRONG,Both require privacy notice and transparency,direct_equivalence
+VCDPA-59.1-580-R2,NIST-PR.PO-3,VCDPA,NIST Privacy Framework,STRONG,Both require data protection assessments,direct_equivalence
+VCDPA-59.1-578-R5,NIST-PR.IP-1,VCDPA,NIST Privacy Framework,STRONG,Both require consent mechanisms,direct_equivalence
+VCDPA-59.1-577-R1,ISO-27701-5.7.3,VCDPA,ISO/IEC 27701,STRONG,Both grant data subject access rights,direct_equivalence
+VCDPA-59.1-577-R2,ISO-27701-5.7.4,VCDPA,ISO/IEC 27701,STRONG,Both enable rectification of personal data,direct_equivalence
+VCDPA-59.1-577-R3,ISO-27701-5.7.4,VCDPA,ISO/IEC 27701,STRONG,Both enable erasure of personal data,direct_equivalence
+VCDPA-59.1-578-R1,ISO-27701-5.2.3,VCDPA,ISO/IEC 27701,STRONG,Both require data minimization and purpose limitation,direct_equivalence
+VCDPA-59.1-578-R3,ISO-27701-5.2.2,VCDPA,ISO/IEC 27701,STRONG,Both require lawful and secure processing,direct_equivalence
+VCDPA-59.1-580-R2,ISO-27701-6.2.1,VCDPA,ISO/IEC 27701,STRONG,Both require privacy impact assessments,direct_equivalence
+VCDPA-59.1-577-R1,CPA-6-1-1306,VCDPA,Colorado Privacy Act,STRONG,Both grant consumer access rights,direct_equivalence
+VCDPA-59.1-577-R3,CPA-6-1-1306,VCDPA,Colorado Privacy Act,STRONG,Both grant consumer deletion rights,direct_equivalence
+VCDPA-59.1-577-R1,CTDPA-42-520,VCDPA,Connecticut Data Privacy Act,STRONG,Both grant consumer access rights,direct_equivalence

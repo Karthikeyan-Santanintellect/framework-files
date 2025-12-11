@@ -1,0 +1,6 @@
+exemption_id,type,name,description,section
+EXEMPT-STATE_AGENCIES,Entity Exemption,State Agencies,State agencies and political subdivisions,59.1-576.B.i
+EXEMPT-GLBA,Entity Exemption,GLBA Financial Institutions,Financial institutions under Gramm-Leach-Bliley Act,59.1-576.B.ii
+EXEMPT-HIPAA,Entity Exemption,HIPAA Entities,HIPAA covered entities and business associates,59.1-576.B.iii
+EXEMPT-NONPROFIT,Entity Exemption,Nonprofit Organizations,Nonprofit organizations exempt under IRS 501(c),59.1-576.B.iv
+EXEMPT-HIGHER_ED,Entity Exemption,Higher Education,Public and private institutions of higher education,59.1-576.B.v

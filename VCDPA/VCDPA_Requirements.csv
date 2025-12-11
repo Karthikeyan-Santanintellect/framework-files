@@ -1,0 +1,12 @@
+requirement_id,section_id,type,text,priority,status,deadline,extendable,extension_period
+VCDPA-59.1-577-R1,59.1-577,Consumer Right,Consumer right to access personal data,High,Active,45 days,true,45 additional days
+VCDPA-59.1-577-R2,59.1-577,Consumer Right,Consumer right to correct inaccuracies,High,Active,45 days,true,45 additional days
+VCDPA-59.1-577-R3,59.1-577,Consumer Right,Consumer right to delete personal data,High,Active,45 days,true,45 additional days
+VCDPA-59.1-577-R4,59.1-577,Consumer Right,Consumer right to portable copy,High,Active,45 days,true,45 additional days
+VCDPA-59.1-577-R5,59.1-577,Consumer Right,Right to opt out of targeted advertising,High,Active,Immediate,false,
+VCDPA-59.1-578-R1,59.1-578,Controller Obligation,Data minimization requirement,High,Active,Ongoing,false,
+VCDPA-59.1-578-R3,59.1-578,Controller Obligation,Establish security practices,High,Active,Ongoing,false,
+VCDPA-59.1-578-R5,59.1-578,Consent Requirement,Obtain consent for sensitive data,High,Active,Prior to processing,false,
+VCDPA-59.1-579-R1,59.1-579,Processor Obligation,Adhere to controller instructions,High,Active,Ongoing,false,
+VCDPA-59.1-580-R1,59.1-580,Data Protection Assessment,DPA for sale of personal data,High,Active,Prior to activity,false,
+VCDPA-59.1-580-R2,59.1-580,Data Protection Assessment,DPA for processing sensitive data,High,Active,Prior to activity,false,

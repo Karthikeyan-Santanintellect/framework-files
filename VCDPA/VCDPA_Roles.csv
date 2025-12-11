@@ -1,0 +1,8 @@
+role_id,name,description,threshold
+CONTROLLER,Controller,Natural or legal person that determines purpose and means of processing,"≥100,000 consumers OR ≥25,000 + >50% revenue from sales"
+PROCESSOR,Processor,Entity processing personal data on behalf of controller,Service agreement with controller
+CONSUMER,Consumer,Virginia resident acting in individual or household context,Any Virginia resident
+CHILD,Child,Natural person younger than 13 years of age,Under 13 years
+PARENT_GUARDIAN,Parent or Legal Guardian,Parent or legal guardian of a child,Guardian of child under 13
+THIRD_PARTY,Third Party,Person other than consumer controller processor or affiliates,Unaffiliated party
+ATTORNEY_GENERAL,Virginia Attorney General,Sole enforcement authority for VCDPA,Enforcement authority

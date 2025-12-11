@@ -1,0 +1,11 @@
+data_id,category_type,name,description,definition_section,requires_consent
+PERSONAL_DATA,Personal Data,Personal Data,Information linked to identified or identifiable natural person,59.1-575,false
+SENSITIVE_DATA_RACE_ETHNICITY,Sensitive Data,Racial or Ethnic Origin,Personal data revealing racial or ethnic origin,59.1-575,true
+SENSITIVE_DATA_RELIGIOUS_BELIEFS,Sensitive Data,Religious Beliefs,Personal data revealing religious beliefs,59.1-575,true
+SENSITIVE_DATA_HEALTH,Sensitive Data,Health Diagnosis,Personal data revealing mental or physical health diagnosis,59.1-575,true
+SENSITIVE_DATA_SEXUAL_ORIENTATION,Sensitive Data,Sexual Orientation,Personal data revealing sexual orientation,59.1-575,true
+SENSITIVE_DATA_CITIZENSHIP,Sensitive Data,Citizenship Status,Personal data revealing citizenship or immigration status,59.1-575,true
+SENSITIVE_DATA_GENETIC_BIOMETRIC,Sensitive Data,Genetic or Biometric ID,Processing genetic or biometric data for unique identification,59.1-575,true
+SENSITIVE_DATA_CHILD,Sensitive Data,Child Data,Personal data collected from known child under 13,59.1-575,true
+SENSITIVE_DATA_GEOLOCATION,Sensitive Data,Precise Geolocation,Precise geolocation within 1750 feet radius,59.1-575,true
+DEIDENTIFIED_DATA,Other,De-identified Data,Data cannot reasonably be linked to identified person,59.1-575,false

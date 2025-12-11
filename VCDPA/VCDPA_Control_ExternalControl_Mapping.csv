@@ -1,0 +1,18 @@
+source_control_id,target_control_id,source_framework,target_framework,strength,justification,mapping_type
+CTRL-CONSENT_COLLECTION,NIST-PR.IP-1,VCDPA,NIST Privacy Framework,STRONG,Both control consent and choice mechanisms,direct_equivalence
+CTRL-REQUEST_AUTOMATION,NIST-PR.AC-2,VCDPA,NIST Privacy Framework,STRONG,Both enable individuals to access personal data,direct_equivalence
+CTRL-OPT_OUT_MECHANISM,NIST-PR.AC-3,VCDPA,NIST Privacy Framework,STRONG,Both enable individuals to manage data processing,direct_equivalence
+CTRL-DATA_MAPPING,NIST-PR.IP-2,VCDPA,NIST Privacy Framework,MODERATE,Data mapping supports data minimization,functional_equivalence
+CTRL-ENCRYPTION,NIST-CSF-PR.DS-1,VCDPA,NIST Cybersecurity Framework,STRONG,Both control data-at-rest protection via encryption,direct_equivalence
+CTRL-ENCRYPTION,NIST-CSF-PR.DS-2,VCDPA,NIST Cybersecurity Framework,STRONG,Both control data-in-transit protection via encryption,direct_equivalence
+CTRL-ACCESS_LOGGING,NIST-CSF-DE.CM-1,VCDPA,NIST Cybersecurity Framework,MODERATE,Access logging enables monitoring for anomalies,functional_equivalence
+CTRL-PRIVACY_NOTICE_MANAGEMENT,NIST-PR.IP-4,VCDPA,NIST Privacy Framework,STRONG,Both control privacy notice and transparency,direct_equivalence
+CTRL-DPA_EXECUTION,NIST-PR.PO-3,VCDPA,NIST Privacy Framework,STRONG,Both control data protection assessments,direct_equivalence
+CTRL-CONSENT_COLLECTION,GDPR-Article_7,VCDPA,GDPR,STRONG,Both collect and document consent,direct_equivalence
+CTRL-REQUEST_AUTOMATION,GDPR-Article_15,VCDPA,GDPR,MODERATE,Both enable fulfillment of access requests,functional_equivalence
+CTRL-ENCRYPTION,GDPR-Article_32,VCDPA,GDPR,STRONG,Both implement encryption safeguards,direct_equivalence
+CTRL-DPA_EXECUTION,GDPR-Article_35,VCDPA,GDPR,STRONG,Both conduct and document impact assessments,direct_equivalence
+CTRL-CONSENT_COLLECTION,ISO-27701-5.2.1,VCDPA,ISO/IEC 27701,STRONG,Both collect lawful consent for processing,direct_equivalence
+CTRL-REQUEST_AUTOMATION,ISO-27701-5.7.3,VCDPA,ISO/IEC 27701,STRONG,Both enable subject access requests,direct_equivalence
+CTRL-ENCRYPTION,ISO-27701-5.2.2,VCDPA,ISO/IEC 27701,STRONG,Both protect data confidentiality via encryption,direct_equivalence
+CTRL-DPA_EXECUTION,ISO-27701-6.2.1,VCDPA,ISO/IEC 27701,STRONG,Both conduct privacy impact assessments,direct_equivalence

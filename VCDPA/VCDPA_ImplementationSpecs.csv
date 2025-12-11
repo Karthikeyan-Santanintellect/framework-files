@@ -1,0 +1,21 @@
+impl_id,requirement_id,name,description,owner
+IMPL-CONSUMER_REQUEST_PROCESS,VCDPA-59.1-577-R1,Consumer Request Process,Documented procedure for receiving authenticating and responding to consumer rights requests within 45 days,Privacy Operations
+IMPL-CONSUMER_REQUEST_AUTHENTICATION,VCDPA-59.1-577-R1,Consumer Authentication,Commercially reasonable authentication method to verify consumer identity for access requests,Privacy Operations
+IMPL-ACCESS_REQUEST_RESPONSE,VCDPA-59.1-577-R1,Access Request Response Template,Standard template and workflow for providing access to personal data in portable format,Privacy Operations
+IMPL-CORRECTION_REQUEST_PROCESS,VCDPA-59.1-577-R2,Correction Request Process,Documented procedure for accepting correcting and confirming corrections to personal data,Privacy Operations
+IMPL-DELETION_REQUEST_PROCESS,VCDPA-59.1-577-R3,Deletion Request Process,Documented procedure for receiving and executing deletion requests including notification to service providers,Privacy Operations
+IMPL-PORTABILITY_REQUEST_FORMAT,VCDPA-59.1-577-R4,Data Portability Format,Specification for portable usable format to transmit personal data upon consumer request,Privacy Operations
+IMPL-OPT_OUT_TRACKING,VCDPA-59.1-577-R5,Opt-Out Request Tracking,System and procedures to track honor and document opt-out requests for targeted advertising sale and profiling,Privacy Operations
+IMPL-APPEAL_PROCESS,VCDPA-59.1-577-R8,Appeal Handling Process,Documented procedure for receiving and adjudicating consumer appeals of controller refusal to act,Privacy Operations
+IMPL-CONSENT_CAPTURE,VCDPA-59.1-578-R5,Consent Capture Mechanism,Technical specification for capturing storing and managing affirmative consent for sensitive data processing,Privacy Engineering
+IMPL-DATA_MINIMIZATION_AUDIT,VCDPA-59.1-578-R1,Data Minimization Audit,Quarterly audit procedure to verify personal data collection is adequate relevant and necessary,Data Governance
+IMPL-SECURITY_ASSESSMENT,VCDPA-59.1-578-R3,Security Practices Assessment,Annual assessment and documentation of administrative technical and physical security safeguards,Security Operations
+IMPL-PRIVACY_NOTICE_TEMPLATE,VCDPA-59.1-578-R6,Privacy Notice Template,Standard template for clear accessible meaningful privacy notices describing processing practices,Privacy Operations
+IMPL-OPT_OUT_MECHANISM,VCDPA-59.1-578-R7,Opt-Out Disclosure Mechanism,Technical specification for disclosing sale and targeted advertising with easy opt-out option,Digital Marketing
+IMPL-PROCESSOR_AGREEMENT_TEMPLATE,VCDPA-59.1-579-R5,Processor Agreement Template,Standard data processing agreement containing required statutory obligations and duties,Legal
+IMPL-DPA_TEMPLATE,VCDPA-59.1-580-R1,Data Protection Assessment Template,Standard template and process for conducting documenting DPA for sale of personal data,Privacy/Compliance
+IMPL-DPA_SENSITIVE_DATA,VCDPA-59.1-580-R2,DPA for Sensitive Data Processing,Specific DPA procedure and template for sensitive data processing activities,Privacy/Compliance
+IMPL-DPA_TARGETED_ADVERTISING,VCDPA-59.1-580-R3,DPA for Targeted Advertising,DPA procedure for targeted advertising and profiling activities,Privacy/Compliance
+IMPL-DPA_HEIGHTENED_RISK,VCDPA-59.1-580-R5,DPA for Heightened-Risk Processing,DPA procedure for heightened-risk processing activities,Privacy/Compliance
+IMPL-DEIDENTIFICATION_STANDARD,VCDPA-59.1-581-R1,De-identification Standard,Technical specification and procedures for de-identifying data per NIST standards,Data Engineering
+IMPL-REIDENTIFICATION_COMMITMENT,VCDPA-59.1-581-R2,Re-identification Commitment,Public commitment and binding controls to prevent re-identification of de-identified data,Legal

@@ -1,0 +1,11 @@
+event_type_id,name,description,deadline,extendable,extension_period,cost
+ACCESS_REQUEST,Access Request,Consumer requests to confirm and access personal data,45 days,true,45 additional days,Free up to twice annually
+CORRECTION_REQUEST,Correction Request,Consumer requests correction of inaccuracies,45 days,true,45 additional days,Free up to twice annually
+DELETION_REQUEST,Deletion Request,Consumer requests deletion of personal data,45 days,true,45 additional days,Free up to twice annually
+PORTABILITY_REQUEST,Data Portability Request,Consumer requests portable copy in usable format,45 days,true,45 additional days,Free up to twice annually
+OPT_OUT_TARGETED_AD,Opt-Out Targeted Advertising,Consumer opts out of targeted advertising,Immediate,false,,Free
+OPT_OUT_SALE,Opt-Out Sale,Consumer opts out of sale of personal data,Immediate,false,,Free
+OPT_OUT_PROFILING,Opt-Out Profiling,Consumer opts out of profiling with legal effects,Immediate,false,,Free
+CONSENT,Consent for Sensitive Data,Controller obtains consent for sensitive data processing,Prior to processing,false,,N/A
+APPEAL,Consumer Appeal,Consumer appeals controller refusal to act,60 days from receipt,false,,Free
+DPA_REQUIRED,DPA Required,Event triggering data protection assessment,Prior to activity,false,,N/A

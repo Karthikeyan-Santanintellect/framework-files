@@ -1,0 +1,798 @@
+{
+  "nodes": [
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:341",
+      "mainLabel": "IndustryStandardAndRegulation",
+      "labels": [
+        "IndustryStandardAndRegulation"
+      ],
+      "name": "Health Information Technology for Economic and Clinical Health Act",
+      "description": "U.S. legislation to promote the adoption and meaningful use of health information technology.",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "version": "2009",
+      "enactment_date": "2009-02-17"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:343",
+      "mainLabel": "Title",
+      "labels": [
+        "Title"
+      ],
+      "title_id": "Title II",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:363",
+      "mainLabel": "IncentiveProgram",
+      "labels": [
+        "IncentiveProgram"
+      ],
+      "program_id": "EHR-MEDICAID",
+      "name": "Medicaid EHR Incentive Program",
+      "title_id": "Title II",
+      "description": "Incentive payments for Medicaid providers using EHRs",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "payer": "Medicaid"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:365",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "stage": "Stage 1",
+      "program_id": "EHR-MEDICARE",
+      "description": "E-prescribing for eligible professionals",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "criterion_id": "MU1-EPRESCRIBE"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:364",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "stage": "Stage 1",
+      "program_id": "EHR-MEDICARE",
+      "description": "Use computerized provider order entry for medication orders",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "criterion_id": "MU1-CPOE"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:362",
+      "mainLabel": "IncentiveProgram",
+      "labels": [
+        "IncentiveProgram"
+      ],
+      "program_id": "EHR-MEDICARE",
+      "name": "Medicare EHR Incentive Program",
+      "title_id": "Title II",
+      "description": "Incentive payments for meaningful use of certified EHR technology",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "payer": "Medicare"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:342",
+      "mainLabel": "Title",
+      "labels": [
+        "Title"
+      ],
+      "title_id": "Title I",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:345",
+      "mainLabel": "Subtitle",
+      "labels": [
+        "Subtitle"
+      ],
+      "title_id": "Title I",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "Subtitle D"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:347",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "13402",
+      "full_citation": "42 U.S.C. \u00a717932",
+      "heading": "Breach Notification",
+      "topic": "Breach Notification",
+      "text": "Notification in the case of breach of unsecured protected health information",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "Subtitle D"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "13402",
+      "text": "Business associates must notify covered entities following a breach of unsecured ePHI.",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Reporting",
+      "priority": "High",
+      "requirement_id": "HITECH-13402-R2",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:352",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "BUSINESS_ASSOCIATE",
+      "name": "Business Associate",
+      "description": "Performs functions or activities on behalf of a covered entity involving ePHI",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:366",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Compliance",
+      "impl_id": "IMPL-BREACH-NOTIF-1",
+      "name": "Breach Notification Workflow",
+      "description": "Detailed workflow for detection, risk assessment, and notification of breaches",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:372",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-NOTIF-WF",
+      "name": "Notification Workflow Control",
+      "description": "Control to ensure execution of breach notification workflow",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "category": "Incident Response"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:375",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "owner": "Compliance",
+      "system_id": "SYSTEM-NOTIF",
+      "name": "Notification Platform",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Cloud Service"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:370",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-LOGGING",
+      "name": "Audit Logging",
+      "description": "Controls for logging access to ePHI",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "category": "Audit Logging"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:373",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "owner": "IT",
+      "system_id": "SYSTEM-EHR1",
+      "name": "Primary EHR System",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "EHR"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:360",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "authority": "HHS OCR",
+      "description": "Civil monetary penalties for violations of HITECH and HIPAA",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Civil Penalty",
+      "enforcement_id": "EA-CIVIL-HHS"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:376",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "process_id": "PROC-BREACH-MGMT",
+      "name": "Breach Management",
+      "description": "End-to-end process for breach detection, assessment, and notification",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:368",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Compliance",
+      "policy_id": "POL-BREACH-NOTIF",
+      "name": "Breach Notification Policy",
+      "description": "Defines responsibilities and timelines for breach notification",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:358",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "name": "Breach of Unsecured ePHI",
+      "description": "Acquisition, access, use, or disclosure of unsecured ePHI in a manner not permitted",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "event_type_id": "BREACH"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:357",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "safeguard_id": "SG-A-NOTIFICATION_PROC",
+      "name": "Breach Notification Procedures",
+      "description": "Documented procedures for breach investigation and notification",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:354",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "data_id": "EPHI",
+      "name": "Electronic Protected Health Information",
+      "description": "Individually identifiable health information in electronic form",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "13402",
+      "text": "Covered entities must notify affected individuals following a breach of unsecured ePHI.",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Reporting",
+      "priority": "High",
+      "requirement_id": "HITECH-13402-R1",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:378",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "source_framework": "HIPAA Security Rule",
+      "text": "Administrative safeguards including security management process",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "requirement_id": "HIPAA-SEC-164-308"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:351",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "COVERED_ENTITY",
+      "name": "Covered Entity",
+      "description": "Health plans, health care clearinghouses, and certain health care providers",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:361",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "authority": "State AG",
+      "description": "State Attorney General civil actions for violations",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Civil Penalty",
+      "enforcement_id": "EA-AG-STATE"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:356",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "safeguard_id": "SG-T-ENCRYPTION",
+      "name": "Encryption of ePHI",
+      "description": "Use of encryption technologies to protect ePHI at rest and in transit",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:346",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "13400",
+      "full_citation": "42 U.S.C. \u00a717930",
+      "heading": "Definitions",
+      "topic": "Definitions",
+      "text": "Definitions related to HITECH privacy provisions",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "Subtitle D"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "13400",
+      "text": "Organizations must use statutory definitions of breach and unsecured ePHI for compliance purposes.",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Administrative",
+      "priority": "Medium",
+      "requirement_id": "HITECH-13400-R1",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:379",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "source_framework": "NIST SP 800-53",
+      "text": "Audit events definition and logging",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "requirement_id": "NIST-800-53-AU-2"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:367",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "IT Security",
+      "impl_id": "IMPL-ENCRYPTION-1",
+      "name": "Database Encryption",
+      "description": "Implementation spec for enabling encryption on EHR database",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:371",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-ENCRYPTION",
+      "name": "Encryption Control",
+      "description": "Controls for encryption of ePHI at rest and in transit",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "category": "Access Control"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:374",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "owner": "IT",
+      "system_id": "SYSTEM-DB1",
+      "name": "EHR Database Cluster",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "type": "Database"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:377",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "process_id": "PROC-PATIENT-CARE",
+      "name": "Patient Care Delivery",
+      "description": "Clinical care delivery using EHR",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:369",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "IT Security",
+      "policy_id": "POL-ACCESS-CONTROL",
+      "name": "Access Control Policy",
+      "description": "Defines access control rules for ePHI systems",
+      "industry_standard_regulation_id": "HITECH_ACT_2009"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:344",
+      "mainLabel": "Subtitle",
+      "labels": [
+        "Subtitle"
+      ],
+      "title_id": "Title I",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "Subtitle A"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:341",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155389908211204437",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:343",
+      "type": "REGULATION_CONTAINS_TITLES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:343",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155400903327482199",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:363",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:363",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155402002839109995",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:365",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:363",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153150203025424747",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:364",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:343",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153149103513796951",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:362",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:362",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155402002839109994",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:365",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:362",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153150203025424746",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:364",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:341",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153138108397519189",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:342",
+      "type": "REGULATION_CONTAINS_TITLES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:342",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155391007722832214",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:345",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:345",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155392107234459993",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:347",
+      "type": "SUBTITLE_CONTAINS_SECTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:347",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155410798932132187",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "type": "SECTION_HAS_REQUIREMENTS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153160098630074717",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:352",
+      "type": "REQUIREMENT_ASSIGNED_TO_ROLE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920013923919855982",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:366",
+      "type": "REQUIREMENT_HAS_IMPLEMENTATION_SPEC"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:366",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153155700583563630",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:372",
+      "type": "IMPLEMENTATION_SPEC_INCLUDES_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:372",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153146904490541428",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:375",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:366",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155407500397248878",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:370",
+      "type": "IMPLEMENTATION_SPEC_INCLUDES_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:370",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153146904490541426",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:373",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920011724896600424",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:360",
+      "type": "REQUIREMENT_SUBJECT_TO_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920007326850089336",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:376",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:376",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153157899606819192",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:375",
+      "type": "PROCESS_INVOLVES_SYSTEM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978913629",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:372",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153144705467285853",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:368",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:368",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153156800095191408",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:372",
+      "type": "POLICY_ENFORCES_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:368",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155408599908876656",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:370",
+      "type": "POLICY_ENFORCES_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153143605955658077",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:358",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444030301",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:357",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:349",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153141406932402525",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:354",
+      "type": "REQUIREMENT_INCLUDES_DATA_CATEGORY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:347",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153158999118446939",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "type": "SECTION_HAS_REQUIREMENTS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917768721175937402",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:378",
+      "type": "REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT",
+      "strength": "STRONG",
+      "source": "Compliance Team",
+      "justification": "Breach notification aligns with HIPAA security incident handling"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153160098630074716",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:351",
+      "type": "REQUIREMENT_ASSIGNED_TO_ROLE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917762124106170734",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:366",
+      "type": "REQUIREMENT_HAS_IMPLEMENTATION_SPEC"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917759925082915177",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:361",
+      "type": "REQUIREMENT_SUBJECT_TO_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917759925082915176",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:360",
+      "type": "REQUIREMENT_SUBJECT_TO_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917758825571287405",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:365",
+      "type": "REQUIREMENT_DRIVES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917758825571287404",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:364",
+      "type": "REQUIREMENT_DRIVES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917755527036404088",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:376",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978913628",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:372",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155397604792598876",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:370",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153144705467285852",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:368",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153143605955658076",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:358",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444030300",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:357",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155394306257715548",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:356",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:348",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153141406932402524",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:354",
+      "type": "REQUIREMENT_INCLUDES_DATA_CATEGORY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:347",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155405301373993307",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:361",
+      "type": "SECTION_SUBJECT_TO_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:347",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153153501560308059",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:360",
+      "type": "SECTION_SUBJECT_TO_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:345",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153140307420774745",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:346",
+      "type": "SUBTITLE_CONTAINS_SECTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:346",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153158999118446938",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "type": "SECTION_HAS_REQUIREMENTS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917768721175937403",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:379",
+      "type": "REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT",
+      "strength": "MODERATE",
+      "source": "Compliance Team",
+      "justification": "Requirement overlaps with NIST audit logging expectations"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153160098630074718",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:351",
+      "type": "REQUIREMENT_ASSIGNED_TO_ROLE"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153154601071935838",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:367",
+      "type": "REQUIREMENT_HAS_IMPLEMENTATION_SPEC"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:367",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153155700583563631",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:371",
+      "type": "IMPLEMENTATION_SPEC_INCLUDES_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:371",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153146904490541427",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:374",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920010625384972652",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:364",
+      "type": "REQUIREMENT_DRIVES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153148004002169182",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:377",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:377",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153157899606819193",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:373",
+      "type": "PROCESS_INVOLVES_SYSTEM"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978913630",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:371",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153144705467285854",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:369",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:369",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153156800095191409",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:371",
+      "type": "POLICY_ENFORCES_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:350",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153141406932402526",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:354",
+      "type": "REQUIREMENT_INCLUDES_DATA_CATEGORY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:342",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153139207909146966",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:344",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    }
+  ]
+}
