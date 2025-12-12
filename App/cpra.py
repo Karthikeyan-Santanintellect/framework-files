@@ -251,7 +251,7 @@ time.sleep(2)
 client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Safeguards.csv"))
 time.sleep(2)
 
-client.query(requirement_event.replace('$file _path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Events.csv"))
+client.query(requirement_event.replace('$file _path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Events_Updated.csv"))
 time.sleep(2)
 
 client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Controls.csv"))
