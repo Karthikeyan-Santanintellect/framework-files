@@ -99,97 +99,90 @@ ON CREATE SET
 regulation_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.from_id})
-MATCH (s:Section {section_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.to_id})
 MERGE (reg)-[:REGULATION_DEFINES_SECTION]->(s);
 """
 
 # Section to Requirement
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Section {section_id: row.from_id})
-MATCH (rq:Requirement {requirement_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.from_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.to_id})
 MERGE (s)-[:SECTION_DEFINES_REQUIREMENT]->(rq);
 """
 
 # Section to Right
 section_right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Section {section_id: row.from_id})
-MATCH (r:Right {right_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.from_id})
+MATCH (r:Right {regional_standard_regulation_id: 'CPRA', right_id: row.to_id})
 MERGE (s)-[:SECTION_ESTABLISHES_RIGHT]->(r);
 """
 
 # Section to EnforcementAction
 section_enforcement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Section {section_id: row.from_id})
-MATCH (ea:EnforcementAction {enforcement_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.from_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA', enforcement_id: row.to_id})
 MERGE (s)-[:SECTION_PRESCRIBES_PENALTY]->(ea);
-"""
-
-# Requirement to Role
-requirement_role = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (ro:Role {role_id: row.to_id})
-MERGE (rq)-[:REQUIREMENT_APPLIES_TO_ROLE]->(ro);
 """
 
 # Requirement to DataCategory
 requirement_datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (dc:DataCategory {data_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'CPRA', data_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY]->(dc);
 """
 
 # Requirement to Safeguard
 requirement_safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (sg:Safeguard {safeguard_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
+MATCH (sg:Safeguard {regional_standard_regulation_id: 'CPRA', safeguard_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_REQUIRES_SAFEGUARD]->(sg);
 """
 
 # Requirement to EventType
 requirement_event = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (et:EventType {event_type_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
+MATCH (et:EventType {regional_standard_regulation_id: 'CPRA', event_type_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_TRIGGERS_ON_EVENT_TYPE]->(et);
 """
 
 # Requirement to Control
 requirement_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (co:Control {control_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
+MATCH (co:Control {regional_standard_regulation_id: 'CPRA', control_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL]->(co);
 """
 
 # Requirement to EnforcementAction
 requirement_enforcement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (ea:EnforcementAction {enforcement_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA', enforcement_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT]->(ea);
 """
 
 # Role to Right
 role_right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ro:Role {role_id: row.from_id})
-MATCH (r:Right {right_id: row.to_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'CPRA', role_id: row.from_id})
+MATCH (r:Right {regional_standard_regulation_id: 'CPRA', right_id: row.to_id})
 MERGE (ro)-[:ROLE_HAS_RIGHT]->(r);
 """
 
-# Contract Requirements 
+# Contract Requirements
 requirement_contract = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {requirement_id: row.from_id})
-MATCH (ro:Role {role_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'CPRA', role_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_MANDATES_CONTRACT_WITH_ROLE]->(ro);
 """
+
 import sys
 import os
 import time
@@ -240,36 +233,40 @@ time.sleep(2)
 client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Controls.csv"))
 time.sleep(2)
 
-
-client.query(requirement_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Roles.csv"))
-time.sleep(2)
-
-client.query(requirement_datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Data.csv"))
-time.sleep(2)
-
-client.query(role_right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Role_Rights.csv"))
-time.sleep(2)
-
-client.query(requirement_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Contract_Requirements.csv"))
-time.sleep(2)
-
-client.query(requirement_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Events.csv"))
-time.sleep(2)
-
-client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Controls.csv"))
-time.sleep(2)
-
-client.query(requirement_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Enforcement_Links.csv"))
+client.query(regulation_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Regulation_Sections.csv"))
 time.sleep(2)
 
 client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Section_Requirements.csv"))
 time.sleep(2)
 
-client.query(regulation_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Regulation_Sections.csv"))
-time.sleep(2)
-
 client.query(section_right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Section_Rights.csv"))
 time.sleep(2)
+
+client.query(section_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Section_Enforcement.csv"))
+time.sleep(2)
+
+client.query(requirement_datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Data.csv"))
+time.sleep(2)
+
+client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Safeguards.csv"))
+time.sleep(2)
+
+client.query(requirement_event.replace('$file _path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Events.csv"))
+time.sleep(2)
+
+client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Controls.csv"))
+time.sleep(2)
+
+
+client.query(requirement_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Enforcement_Links.csv"))
+time.sleep(2)
+
+client.query(role_right.replace('$file_ path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Role_Rights.csv"))
+time.sleep(2)
+
+client.query(requirement_contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Contract_Requirements.csv "))
+time.sleep(2)
+
 
 
 logger.info("Graph structure loaded successfully.")

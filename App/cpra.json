@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
       "mainLabel": "RegionalStandardAndRegulation",
       "labels": [
         "RegionalStandardAndRegulation"
@@ -16,7 +16,7 @@
       "base_regulation": "California Consumer Privacy Act (CCPA)"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2459",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2690",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -26,7 +26,7 @@
       "heading": "Functions of the California Privacy Protection Agency"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2458",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2689",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -36,7 +36,7 @@
       "heading": "Rulemaking Authority of the CPPA"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2457",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2688",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -46,7 +46,7 @@
       "heading": "Consumer Privacy Fund"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2456",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2687",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -56,239 +56,19 @@
       "heading": "Administrative Enforcement and Fines"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2455",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.150",
-      "heading": "Private Right of Action for Data Breaches"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2474",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.150",
-      "text": "Maintain reasonable security procedures to protect personal information from unauthorized access, theft, or disclosure.",
-      "type": "Obligation",
-      "requirement_id": "REQ-150-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2511",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2741",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
       ],
       "regional_standard_regulation_id": "CPRA",
-      "authority": "Consumer",
-      "max_penalty": "$750 per consumer, per incident, or actual damages",
-      "description": "Private right of action for consumers in the event of a data breach resulting from failure to implement reasonable security.",
-      "enforcement_id": "PrivateRightOfAction"
+      "authority": "CPPA",
+      "max_penalty": "$7,500 per violation",
+      "description": "Administrative fine for violations involving the personal information of consumers under 16 years of age.",
+      "enforcement_id": "AdminFine-Minor"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2504",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "name": "Security Breach",
-      "description": "Unauthorized access and exfiltration, theft, or disclosure of nonencrypted or nonredacted personal information.",
-      "event_type_id": "SecurityBreach"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "role_id": "Business",
-      "name": "Business",
-      "description": "An entity that collects consumers' personal information and determines the purposes and means of the processing."
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2518",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-Encryption",
-      "name": "Encryption of Data at Rest and in Transit",
-      "category": "Security"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2454",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.140",
-      "heading": "Definitions"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2453",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.135",
-      "heading": "Mechanisms for Opting Out of Sale or Sharing"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2473",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.135",
-      "text": "Ensure that the business\u2019s privacy policy is updated at least once every 12 months.",
-      "type": "Obligation",
-      "requirement_id": "REQ-135-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2452",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.130",
-      "heading": "Notice, Disclosure, and Reporting Requirements"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2499",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.130",
-      "name": "Right to Data Portability",
-      "right_id": "Right-to-Data-Portability"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2472",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.130",
-      "text": "Disclose information about consumer rights and how to exercise them in a privacy policy.",
-      "type": "Obligation",
-      "requirement_id": "REQ-130-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2514",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-PrivacyPolicy",
-      "name": "Comprehensive Privacy Policy",
-      "category": "Transparency"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2451",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.125",
-      "heading": "The Right to Non-Discrimination for the Exercise of a Consumer's Privacy Rights"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2498",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.125",
-      "name": "Right to Non-Discrimination",
-      "right_id": "Right-to-Non-Discrimination"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2471",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.125",
-      "text": "Do not discriminate against a consumer because the consumer exercised any of their rights.",
-      "type": "Restriction",
-      "requirement_id": "REQ-125-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2450",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.121",
-      "heading": "The Right to Limit the Use and Disclosure of Sensitive Personal Information"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2497",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.121",
-      "name": "Right to Limit Use of Sensitive Personal Information",
-      "right_id": "Right-to-Limit-SPI"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2470",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.121",
-      "text": "Stop using and disclosing sensitive personal information for purposes other than those specified in the regulations upon request.",
-      "type": "Restriction",
-      "requirement_id": "REQ-121-2"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2483",
-      "mainLabel": "DataCategory",
-      "labels": [
-        "DataCategory"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "data_id": "SPI",
-      "name": "Sensitive Personal Information",
-      "sensitivity": "High"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2469",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.121",
-      "text": "Provide a clear and conspicuous link on the business\u2019s Internet homepage(s), titled \u2019Limit the Use of My Sensitive Personal Information\u2019.",
-      "type": "Obligation",
-      "requirement_id": "REQ-121-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2509",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2740",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -300,329 +80,7 @@
       "enforcement_id": "AdminFine-Intentional"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2513",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-LimitUseLink",
-      "name": "'Limit the Use of My Sensitive Personal Information' Link",
-      "category": "Consent Management"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2449",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.120",
-      "heading": "The Right to Opt-Out of Sale or Sharing of Personal Information"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2496",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.120",
-      "name": "Right to Opt-Out of Sale or Sharing",
-      "right_id": "Right-to-Opt-Out-Sale-Sharing"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2468",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.120",
-      "text": "Provide a clear and conspicuous link on the business\u2019s Internet homepage(s), titled \u2019Do Not Sell or Share My Personal Information\u2019.",
-      "type": "Obligation",
-      "requirement_id": "REQ-120-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2506",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "name": "Global Privacy Control (GPC) Signal",
-      "description": "An automated signal sent by a browser or device that communicates a consumer's choice to opt-out of the sale or sharing of their personal information.",
-      "event_type_id": "OptOutSignal"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2512",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-DoNotSellShareLink",
-      "name": "'Do Not Sell or Share My Personal Information' Link",
-      "category": "Consent Management"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2448",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.115",
-      "heading": "The Right to Know What Personal Information is Sold or Shared and to Whom"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2447",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.110",
-      "heading": "The Right to Know What Personal Information is Being Collected"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2493",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.110",
-      "name": "Right to Know",
-      "right_id": "Right-to-Know"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2446",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.106",
-      "heading": "Consumers' Right to Correct Inaccurate Personal Information"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2495",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.106",
-      "name": "Right to Correct",
-      "right_id": "Right-to-Correct"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2467",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.106",
-      "text": "Correct inaccurate personal information upon receipt of a verifiable consumer request.",
-      "type": "Obligation",
-      "requirement_id": "REQ-106-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2505",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "name": "Verifiable Consumer Request",
-      "description": "A request made by a consumer to exercise their rights that the business can reasonably verify.",
-      "event_type_id": "VerifiableConsumerRequest"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2515",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-VCR-Intake",
-      "name": "Verifiable Consumer Request Intake Mechanism",
-      "category": "Consumer Rights"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2445",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.105",
-      "heading": "Consumers' Right to Delete Personal Information"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2494",
-      "mainLabel": "Right",
-      "labels": [
-        "Right"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.105",
-      "name": "Right to Delete",
-      "right_id": "Right-to-Delete"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2466",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.105",
-      "text": "Delete a consumer's personal information upon receipt of a verifiable consumer request.",
-      "type": "Obligation",
-      "requirement_id": "REQ-105-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "heading": "General Duties of Businesses that Collect Personal Information"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2465",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "text": "Ensure contracts with Service Providers, Contractors, and Third Parties are in place to protect PI.",
-      "type": "Obligation",
-      "requirement_id": "REQ-100-6"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2477",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "role_id": "Contractor",
-      "name": "Contractor",
-      "description": "A person to whom the business makes available a consumer's personal information for a business purpose, pursuant to a written contract."
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2476",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "role_id": "Service Provider",
-      "name": "Service Provider",
-      "description": "An entity that processes personal information on behalf of a business."
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2519",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-VendorContracts",
-      "name": "Vendor Contract Review Process",
-      "category": "Third-Party Risk Management"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "text": "Implement reasonable security procedures and practices.",
-      "type": "Obligation",
-      "requirement_id": "REQ-100-5"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2482",
-      "mainLabel": "DataCategory",
-      "labels": [
-        "DataCategory"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "data_id": "PI",
-      "name": "Personal Information",
-      "sensitivity": "Standard"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2517",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "control_id": "Ctrl-AccessControls",
-      "name": "Role-Based Access Controls",
-      "category": "Security"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2463",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "text": "Collection, use, retention, and sharing of PI shall be reasonably necessary and proportionate.",
-      "type": "Restriction",
-      "requirement_id": "REQ-100-4"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2462",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "text": "Inform consumers of the length of time the business intends to retain each category of personal information.",
-      "type": "Obligation",
-      "requirement_id": "REQ-100-3"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2461",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "text": "Do not collect additional categories of PI or use PI for incompatible purposes without providing notice.",
-      "type": "Obligation",
-      "requirement_id": "REQ-100-2"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "regional_standard_regulation_id": "CPRA",
-      "section_id": "1798.100",
-      "text": "Inform consumers at or before the point of collection about the categories of personal information to be collected.",
-      "type": "Obligation",
-      "requirement_id": "REQ-100-1"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2508",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2739",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -634,496 +92,939 @@
       "enforcement_id": "AdminFine-Unintentional"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2507",
-      "mainLabel": "EventType",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2686",
+      "mainLabel": "Section",
       "labels": [
-        "EventType"
+        "Section"
       ],
       "regional_standard_regulation_id": "CPRA",
-      "name": "Point of Collection",
-      "description": "The time at which a business collects personal information from a consumer.",
-      "event_type_id": "PointOfCollection"
+      "section_id": "1798.150",
+      "heading": "Private Right of Action for Data Breaches"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2742",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "authority": "Consumer",
+      "max_penalty": "$750 per consumer, per incident, or actual damages",
+      "description": "Private right of action for consumers in the event of a data breach resulting from failure to implement reasonable security.",
+      "enforcement_id": "PrivateRightOfAction"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2705",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.150",
+      "text": "Maintain reasonable security procedures to protect personal information from unauthorized access, theft, or disclosure.",
+      "type": "Obligation",
+      "requirement_id": "REQ-150-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2749",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-Encryption",
+      "name": "Encryption of Data at Rest and in Transit",
+      "category": "Security"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2732",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "safeguard_id": "SG-Encryption",
+      "description": "Encrypt or redact personal information to render it unreadable in the event of a breach.",
+      "type": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2685",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.140",
+      "heading": "Definitions"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2684",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.135",
+      "heading": "Mechanisms for Opting Out of Sale or Sharing"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2704",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.135",
+      "text": "Ensure that the business\u2019s privacy policy is updated at least once every 12 months.",
+      "type": "Obligation",
+      "requirement_id": "REQ-135-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2683",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.130",
+      "heading": "Notice, Disclosure, and Reporting Requirements"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2730",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.130",
+      "name": "Right to Data Portability",
+      "right_id": "Right-to-Data-Portability"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2703",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.130",
+      "text": "Disclose information about consumer rights and how to exercise them in a privacy policy.",
+      "type": "Obligation",
+      "requirement_id": "REQ-130-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2745",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-PrivacyPolicy",
+      "name": "Comprehensive Privacy Policy",
+      "category": "Transparency"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2682",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.125",
+      "heading": "The Right to Non-Discrimination for the Exercise of a Consumer's Privacy Rights"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2729",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.125",
+      "name": "Right to Non-Discrimination",
+      "right_id": "Right-to-Non-Discrimination"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2702",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.125",
+      "text": "Do not discriminate against a consumer because the consumer exercised any of their rights.",
+      "type": "Restriction",
+      "requirement_id": "REQ-125-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2681",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.121",
+      "heading": "The Right to Limit the Use and Disclosure of Sensitive Personal Information"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2728",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.121",
+      "name": "Right to Limit Use of Sensitive Personal Information",
+      "right_id": "Right-to-Limit-SPI"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2701",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.121",
+      "text": "Stop using and disclosing sensitive personal information for purposes other than those specified in the regulations upon request.",
+      "type": "Restriction",
+      "requirement_id": "REQ-121-2"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2714",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "data_id": "SPI",
+      "name": "Sensitive Personal Information",
+      "sensitivity": "High"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2700",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.121",
+      "text": "Provide a clear and conspicuous link on the business\u2019s Internet homepage(s), titled \u2019Limit the Use of My Sensitive Personal Information\u2019.",
+      "type": "Obligation",
+      "requirement_id": "REQ-121-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2744",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-LimitUseLink",
+      "name": "'Limit the Use of My Sensitive Personal Information' Link",
+      "category": "Consent Management"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2680",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.120",
+      "heading": "The Right to Opt-Out of Sale or Sharing of Personal Information"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2727",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.120",
+      "name": "Right to Opt-Out of Sale or Sharing",
+      "right_id": "Right-to-Opt-Out-Sale-Sharing"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2699",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.120",
+      "text": "Provide a clear and conspicuous link on the business\u2019s Internet homepage(s), titled \u2019Do Not Sell or Share My Personal Information\u2019.",
+      "type": "Obligation",
+      "requirement_id": "REQ-120-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2743",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-DoNotSellShareLink",
+      "name": "'Do Not Sell or Share My Personal Information' Link",
+      "category": "Consent Management"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2679",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.115",
+      "heading": "The Right to Know What Personal Information is Sold or Shared and to Whom"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2678",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.110",
+      "heading": "The Right to Know What Personal Information is Being Collected"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2724",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.110",
+      "name": "Right to Know",
+      "right_id": "Right-to-Know"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2677",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.106",
+      "heading": "Consumers' Right to Correct Inaccurate Personal Information"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2726",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.106",
+      "name": "Right to Correct",
+      "right_id": "Right-to-Correct"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2698",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.106",
+      "text": "Correct inaccurate personal information upon receipt of a verifiable consumer request.",
+      "type": "Obligation",
+      "requirement_id": "REQ-106-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2746",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-VCR-Intake",
+      "name": "Verifiable Consumer Request Intake Mechanism",
+      "category": "Consumer Rights"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2676",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.105",
+      "heading": "Consumers' Right to Delete Personal Information"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2725",
+      "mainLabel": "Right",
+      "labels": [
+        "Right"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.105",
+      "name": "Right to Delete",
+      "right_id": "Right-to-Delete"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2697",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.105",
+      "text": "Delete a consumer's personal information upon receipt of a verifiable consumer request.",
+      "type": "Obligation",
+      "requirement_id": "REQ-105-1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "heading": "General Duties of Businesses that Collect Personal Information"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2696",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "text": "Ensure contracts with Service Providers, Contractors, and Third Parties are in place to protect PI.",
+      "type": "Obligation",
+      "requirement_id": "REQ-100-6"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2750",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-VendorContracts",
+      "name": "Vendor Contract Review Process",
+      "category": "Third-Party Risk Management"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2733",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "safeguard_id": "SG-Contractual-Safeguards",
+      "description": "Contractual provisions prohibiting the retention, use, or disclosure of personal information for any purpose other than the specific business purpose defined in the contract.",
+      "type": "Legal"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "text": "Implement reasonable security procedures and practices.",
+      "type": "Obligation",
+      "requirement_id": "REQ-100-5"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2713",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "data_id": "PI",
+      "name": "Personal Information",
+      "sensitivity": "Standard"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2748",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "control_id": "Ctrl-AccessControls",
+      "name": "Role-Based Access Controls",
+      "category": "Security"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2731",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "safeguard_id": "SG-ReasonableSecurity",
+      "description": "Implement reasonable security procedures and practices appropriate to the nature of the personal information to protect from unauthorized or illegal access, destruction, use, modification, or disclosure.",
+      "type": "Organizational/Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2694",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "text": "Collection, use, retention, and sharing of PI shall be reasonably necessary and proportionate.",
+      "type": "Restriction",
+      "requirement_id": "REQ-100-4"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2693",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "text": "Inform consumers of the length of time the business intends to retain each category of personal information.",
+      "type": "Obligation",
+      "requirement_id": "REQ-100-3"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2692",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "text": "Do not collect additional categories of PI or use PI for incompatible purposes without providing notice.",
+      "type": "Obligation",
+      "requirement_id": "REQ-100-2"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2734",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "safeguard_id": "SG-Deidentification",
+      "description": "Deidentify or aggregate consumer information so that it cannot reasonably identify, relate to, describe, be capable of being associated with, or be linked, directly or indirectly, to a particular consumer.",
+      "type": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2691",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "CPRA",
+      "section_id": "1798.100",
+      "text": "Inform consumers at or before the point of collection about the categories of personal information to be collected.",
+      "type": "Obligation",
+      "requirement_id": "REQ-100-1"
     }
   ],
   "rels": [
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1186962384602794379",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2459",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1186962384602794610",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2690",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1184710584789109131",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2458",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1184710584789109362",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2689",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1182458784975423883",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2457",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1182458784975424114",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2688",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1180206985161738635",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2456",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1180206985161738866",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2687",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1177955185348053387",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2455",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2687",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157691186048141951",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2741",
+      "type": "SECTION_PRESCRIBES_PENALTY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2687",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155439386234456703",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2740",
+      "type": "SECTION_PRESCRIBES_PENALTY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2687",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153187586420771455",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2739",
+      "type": "SECTION_PRESCRIBES_PENALTY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1177955185348053618",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2686",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2455",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887895",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2474",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2686",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153187586420771454",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2742",
+      "type": "SECTION_PRESCRIBES_PENALTY"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2686",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888126",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2705",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2474",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260138",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2511",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2705",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260369",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2742",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2474",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153178790327749034",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2504",
-      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2474",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332394",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2474",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915754",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2518",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2705",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915985",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2749",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1175703385534368139",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2454",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2705",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032657",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2732",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1175703385534368370",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2685",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1173451585720682891",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2453",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1173451585720683122",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2684",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2453",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887893",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2473",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2684",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888124",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2704",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2473",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332393",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1171199785906997643",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2452",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1171199785906997874",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2683",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2452",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143444",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2499",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2683",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143675",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2730",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2452",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887892",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2472",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2683",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888123",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2703",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2472",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332392",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2472",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915752",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2514",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2703",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915983",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2745",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168947986093312395",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2451",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168947986093312626",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2682",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2451",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143443",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2498",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2682",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143674",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2729",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2451",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887891",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2471",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2682",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888122",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2702",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2471",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332391",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166696186279627147",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2450",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166696186279627378",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2681",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2450",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143442",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2497",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2681",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143673",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2728",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2450",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155436087699573138",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2470",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2681",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155436087699573369",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2701",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2470",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004582",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2483",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2701",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004813",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2714",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2450",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887890",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2469",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2681",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888121",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2700",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2469",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260133",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2509",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2700",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260364",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2740",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2469",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004581",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2483",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2700",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004812",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2714",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2469",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332389",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2469",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915749",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2513",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2700",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915980",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2744",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164444386465941899",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2449",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164444386465942130",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2680",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2449",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143441",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2496",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2680",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143672",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2727",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2449",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887889",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2468",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2680",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888120",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2699",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2468",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260132",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2509",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2699",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260363",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2740",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2468",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153178790327749028",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2506",
-      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2468",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332388",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2468",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915748",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2512",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2699",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915979",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2743",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162192586652256651",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2448",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162192586652256882",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2679",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159940786838571403",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2447",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159940786838571634",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2678",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2447",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143439",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2493",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2678",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143670",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2724",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157688987024886155",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2446",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157688987024886386",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2677",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2446",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143438",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2495",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2677",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143669",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2726",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2446",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887886",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2467",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2677",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888117",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2698",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2467",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153178790327749027",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2505",
-      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2467",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332387",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2467",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915747",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2515",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2698",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915978",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2746",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155437187211200907",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2445",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155437187211201138",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2676",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2445",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143437",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2494",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2676",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153186486909143668",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2725",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2445",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887885",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2466",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2676",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888116",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2697",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2466",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153178790327749026",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2505",
-      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2466",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332386",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2466",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915746",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2515",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2697",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915977",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2746",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153185387397515659",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2674",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153185387397515890",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
       "type": "REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164443286954314124",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2465",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164443286954314355",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2696",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2465",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157665897280702881",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2477",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2465",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155414097467017633",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2476",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2465",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332385",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2465",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915745",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2519",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2696",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915976",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2750",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162191487140628876",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2696",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032648",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2733",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162191487140629107",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260128",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2511",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260359",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2742",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004576",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2482",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004807",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2713",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332384",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155397604792600992",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2518",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155397604792601223",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2749",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2464",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915744",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2517",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915975",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2748",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159939687326943628",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2463",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2695",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032647",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2731",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159939687326943859",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2694",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2463",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332383",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157687887513258380",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2462",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157687887513258611",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2693",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2462",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004574",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2483",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2693",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004805",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2714",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2462",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332382",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155436087699573132",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2461",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155436087699573363",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2692",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2461",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260125",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2509",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2692",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260356",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2740",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2461",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332381",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2692",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032644",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2734",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885887884",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2675",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153184287885888115",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2691",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260124",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2508",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2691",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153183188374260355",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2739",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004572",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2482",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2691",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153180989351004803",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2713",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153178790327749020",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2507",
-      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332380",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2475",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2460",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915740",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2514",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2691",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915971",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2745",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     }
   ]
