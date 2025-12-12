@@ -144,8 +144,8 @@ ON CREATE SET
 #regulation->chapter
 regulation_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: 'dpdpa_2023'})
-MATCH (c:Chapter {regional_standard_and_regulation_id:'dpdpa_2023', chapter_id: row.chapter_id})
+MATCH (reg:RegionalStandardAndRegulation{regional_standard_and_regulation_id: row.regulation_id})
+MATCH (c:Chapter {chapter_id: row.chapter_id})
 MERGE (reg)-[:REGULATION_HAS_CHAPTER]->(c);
 """
 #requirement->roles
@@ -309,6 +309,10 @@ time.sleep(2)
 client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction.csv"))
 time.sleep(2)
 
+client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Chapter_Relationship.csv"))
+time.sleep(2)
+
+                                        
 client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Roles.csv"))
 time.sleep(2)
 
