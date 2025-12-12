@@ -74,7 +74,7 @@ event_type ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (et:EventType {regional_standard_and_regulation_id:'dpdpa_2023', event_type_id: row.event_type_id})
 ON CREATE SET 
-  ett.name = row.name,
+  et.name = row.name,
   et.description = row.description,
   et.deadline = row.deadline,
   et.extendable = row.extendable,
@@ -129,14 +129,24 @@ ON CREATE SET
 #enforcement_action
 enforcement_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ea:EnforcementAction {regional_standard_and_regulation_id:'dpdpa_2023', enforcement_id: row.enforcement_id})
+MERGE (ea:EnforcementAction {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    enforcement_action_id: row.enforcement_action_id
+})
 ON CREATE SET 
- ea.name = row.name,
+  ea.name = row.name,
   ea.description = row.description,
   ea.type = row.type,
   ea.authority = row.authority,
   ea.severity_level = row.severity_level,
   ea.applicable_section = row.applicable_section;
+"""
+#regulation->chapter
+regulation_chapter = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: 'dpdpa_2023'})
+MATCH (c:Chapter {regional_standard_and_regulation_id:'dpdpa_2023', chapter_id: row.chapter_id})
+MERGE (reg)-[:REGULATION_HAS_CHAPTER]->(c);
 """
 #requirement->roles
 requirement_roles ="""
@@ -190,7 +200,7 @@ MERGE (co)-[:CONTROLS_CONTROLS_SYSTEM]->(sys);
 #Requirement->process
 requirement_process ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_ id})
+MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (pr:Process {regional_standard_and_regulation_id:'dpdpa_2023', process_id: row.process_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_PROCESS]->(pr);
 """
@@ -204,22 +214,40 @@ MERGE (pr)-[:PROCESSES_PROCESSES_SYSTEM]->(sys);
 #enforcement_action->requirements
 enforcement_action_requirements ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ea:enforcement_action {regional_standard_and_regulation_id:'dpdpa_2023', enforcement_id: row.enforcement_id})
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_ id})
+MATCH (ea:EnforcementAction {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    enforcement_action_id: row.enforcement_action_id
+})
+MATCH (req:Requirement {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    requirement_id: row.requirement_id
+})
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS]->(req);
 """
 #enforcement_action->role
 enforcement_action_role ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ea:enforcement_action {regional_standard_and_regulation_id:'dpdpa_2023', enforcement_id: row.enforcement_id})
-MATCH (ro:Role {regional_standard_and_regulation_id:'dpdpa_2023', role_id: row.role_id})
+MATCH (ea:EnforcementAction {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    enforcement_action_id: row.enforcement_action_id
+})
+MATCH (ro:Role {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    role_id: row.role_id
+})
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES]->(ro);
 """
 #enforcement_action->section
 enforcement_action_section ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ea:enforcement_action {regional_standard_and_regulation_id:'dpdpa_2023', enforcement_id: row.enforcement_id})
-MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})
+MATCH (ea:EnforcementAction {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    enforcement_action_id: row.enforcement_action_id
+})
+MATCH (sec:Section {
+    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    section_id: row.section_id
+})
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION]->(sec);
 """
 import sys
@@ -245,77 +273,88 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Sections.csv"))
+client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Chapters.csv"))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirements.csv"))
+client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Sections.csv"))
 time.sleep(2)
 
-client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Roles_Corrected.csv"))
+client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirements.csv"))
 time.sleep(2)
 
-client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_DataCategories.csv"))
+client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Roles.csv"))
 time.sleep(2)
 
-client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Rights_Corrected.csv"))
+client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_DataCategories.csv"))
 time.sleep(2)
 
-client.query(safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Safeguards.csv"))
+client.query(safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Safeguards.csv"))
 time.sleep(2)
 
-client.query(event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_EventTypes_Corrected.csv"))
+client.query(event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EventTypes.csv"))
 time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPPA_EnforcementActions.csv"))
+client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Policies.csv"))
 time.sleep(2)
 
-client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Controls.csv"))
+client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Controls.csv"))
 time.sleep(2)
 
-client.query(regulation_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Regulation_Sections.csv"))
+client.query(system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Systems.csv"))
 time.sleep(2)
 
-client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Section_Requirements.csv"))
+client.query(process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Processes.csv"))
 time.sleep(2)
 
-client.query(section_right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Section_Rights.csv"))
+client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction.csv"))
 time.sleep(2)
 
-client.query(section_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Section_Enforcement.csv"))
+client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Roles.csv"))
 time.sleep(2)
 
-client.query(requirement_datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Data.csv"))
+client.query(requirement_datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Data.csv"))
 time.sleep(2)
 
-client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Safeguards.csv"))
+client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Safeguards.csv"))
 time.sleep(2)
 
-client.query(requirement_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Events_Updated.csv"))
+client.query(requirement_event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Events.csv"))
 time.sleep(2)
 
-client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Controls.csv"))
+client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Controls.csv"))
 time.sleep(2)
 
 
-client.query(requirement_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Enforcement_Links.csv"))
+client.query(requirement_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Policies.csv"))
 time.sleep(2)
 
-client.query(role_right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Role_Rights.csv"))
+client.query(control_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Control_Systems.csv"))
 time.sleep(2)
 
-client.query(requirement_contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Requirement_Contract_Corrected.csv"))
+client.query(requirement_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Processes.csv"))
 time.sleep(2)
+
+client.query(process_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Process_Systems.csv"))
+time.sleep(2)
+
+client.query(enforcement_action_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Requirement_Relationship.csv"))
+time.sleep(2)
+
+client.query(enforcement_action_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Role_Relationship.csv"))
+time.sleep(2)
+
+client.query(enforcement_action_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Section_Relationship.csv"))
+time.sleep(2)
+
 
 
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+export_query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]->(m)
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -323,22 +362,43 @@ RETURN {
     labels: labels(n),
     mainLabel: head(labels(n))
   }],
-  rels: [r IN uniqueRels | r {
+  rels: [r IN uniqueRels WHERE r IS NOT NULL | r {
     .*,
     id: elementId(r),
     type: type(r),
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+try:
+    res = client.query(export_query)
 
-import json
-with open('cpra.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to cpra.json")
+    if res and len(res) > 0:
+        graph_data = res[0]['graph_data']
+        
+        # Write to JSON
+        with open('dpdpa.json', 'w', encoding='utf-8') as f:
+            f.write(json.dumps(graph_data, default=str, indent=2))
+        
+        node_count = len(graph_data.get('nodes', []))
+        rel_count = len(graph_data.get('rels', []))
+        
+        logger.info(f"✓ Exported graph data to dpdpa.json")
+        logger.info(f"  └─ Nodes: {node_count}")
+        logger.info(f"  └─ Relationships: {rel_count}")
+    else:
+        logger.warning("Query returned no results")
+        # Try alternate query if primary fails
+        logger.info("Attempting alternate query...")
+        alt_query = "MATCH (n) RETURN count(n) as nodes; MATCH ()-[r]->() RETURN count(r) as rels"
+        res_alt = client.query(alt_query)
+        logger.info(f"Database stats: {res_alt}")
 
+except Exception as e:
+    logger.error(f"Failed to export graph: {str(e)}")
 
 client.close()
+logger.info("\n✓ Import complete!")
 
