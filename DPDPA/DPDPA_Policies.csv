@@ -1,0 +1,11 @@
+policy_id,name,description,owner,version,effective_date
+POL-DPP,Data Protection Policy,Primary policy for data protection governance,Organization,1.0,2024-01-01
+POL-BREACH,Breach Notification Policy,Procedures for notifying breach incidents,Operational,1.0,2024-01-01
+POL-CONSENT,Consent Management Policy,Framework for managing consent collection and withdrawal,Operational,1.0,2024-01-01
+POL-TRANSFER,Data Transfer Policy,Guidelines for transferring data to third parties,Operational,1.0,2024-01-01
+POL-RETENTION,Data Retention Policy,Defines retention periods and deletion procedures,Operational,1.0,2024-01-01
+POL-GRIEVANCE,Grievance Redressal Policy,Process for handling data principal grievances,Operational,1.0,2024-01-01
+POL-ACCESS,Data Access Policy,Controls for accessing personal data by authorized personnel,Security,1.0,2024-01-01
+POL-CHILD,Children Data Policy,Special protections for children under 18 years,Compliance,1.0,2024-01-01
+POL-AUDIT,Audit and Monitoring Policy,Framework for internal and external audits,Governance,1.0,2024-01-01
+POL-THIRD,Third Party Policy,Requirements for data processors and sub-processors,Vendor,1.0,2024-01-01

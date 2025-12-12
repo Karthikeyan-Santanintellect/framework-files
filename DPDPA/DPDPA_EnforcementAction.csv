@@ -1,0 +1,13 @@
+enforcement_action_id,name,description,type,authority,severity_level,applicable_section
+EA-WARNING,Warning Notice,Initial warning to non-compliant fiduciary,Administrative,Data Protection Authority,Low,Section 36
+EA-SUSPEND,Suspension Order,Suspension of data processing activities,Administrative,Data Protection Authority,Medium,Section 36
+EA-CEASE,Cease Processing Order,Order to cease processing immediately,Judicial,Data Protection Authority,High,Section 36
+EA-FINE-LOW,Fine - Low Tier,Monetary penalty up to ₹5 crores,Financial,Data Protection Authority,Medium,Section 39
+EA-FINE-HIGH,Fine - High Tier,Monetary penalty up to ₹10 crores,Financial,Data Protection Authority,High,Section 40
+EA-DESTROY,Data Destruction Order,Order to destroy collected personal data,Judicial,Data Protection Authority,Critical,Section 36
+EA-AUDIT,Compliance Audit Order,Mandatory compliance audit at fiduciary expense,Administrative,Data Protection Authority,Medium,Section 20
+EA-BARRIER,Transfer Barrier,Prohibition on data transfers to third parties,Administrative,Data Protection Authority,High,Section 36
+EA-COMPENSATION,Compensation Order,Order to pay compensation to data principal,Judicial,Data Protection Authority,Medium,Section 43
+EA-APPEAL,Appeal Rejection,Rejection of appeal against penalty,Judicial,Data Protection Authority,High,Section 38
+EA-CRIMINAL,Criminal Referral,Referral for criminal prosecution,Criminal,Law Enforcement,Critical,Section 42
+EA-PUBLICITY,Public Notice,Publication of enforcement action in public domain,Administrative,Data Protection Authority,Medium,Section 36

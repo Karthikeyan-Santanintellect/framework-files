@@ -1,0 +1,8 @@
+role_id,name,description,category
+ROLE-DF,Data Fiduciary,Entity determining purposes and means of processing personal data,Primary
+ROLE-SDF,Significant Data Fiduciary,Large-scale data processors with enhanced obligations,Primary
+ROLE-DP,Data Processor,Entity processing personal data on behalf of fiduciary,Secondary
+ROLE-DPR,Data Principal,Individual to whom personal data relates,Individual
+ROLE-CM,Consent Manager,Facilitates collection and management of consent,Infrastructure
+ROLE-DPO,Data Protection Officer,Appointed by SDFs for compliance oversight,Compliance
+ROLE-AUTH,Data Protection Authority,Regulatory and enforcement body under DPDPA,Regulatory

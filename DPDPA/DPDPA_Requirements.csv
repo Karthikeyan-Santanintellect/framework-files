@@ -1,0 +1,53 @@
+requirement_id,section_id,requirement_text,requirement_type,priority,status
+REQ-S4-001,SEC-04,Provide clear notice before processing,Mandatory,High,Active
+REQ-S4-002,SEC-04,Notice must include purpose of processing,Mandatory,High,Active
+REQ-S4-003,SEC-04,Notice must identify fiduciary and processor,Mandatory,High,Active
+REQ-S5-001,SEC-05,Obtain explicit consent for processing,Mandatory,High,Active
+REQ-S5-002,SEC-05,Consent must be freely given,Mandatory,High,Active
+REQ-S5-003,SEC-05,Maintain evidence of consent,Mandatory,High,Active
+REQ-S6-001,SEC-06,Process only for specified purposes,Mandatory,High,Active
+REQ-S6-002,SEC-06,Process only personal data that is necessary,Mandatory,High,Active
+REQ-S6-003,SEC-06,Do not process without legal basis,Mandatory,High,Active
+REQ-S7-001,SEC-07,Implement reasonable security practices,Mandatory,Critical,Active
+REQ-S7-002,SEC-07,Encrypt personal data,Mandatory,Critical,Active
+REQ-S7-003,SEC-07,Implement access controls,Mandatory,Critical,Active
+REQ-S7-004,SEC-07,Maintain audit logs,Mandatory,High,Active
+REQ-S7-005,SEC-07,Use authentication mechanisms,Mandatory,High,Active
+REQ-S7-006,SEC-07,Ensure data integrity,Mandatory,High,Active
+REQ-S8-001,SEC-08,Notify breach within 72 hours,Mandatory,Critical,Active
+REQ-S8-002,SEC-08,Include impact assessment in notice,Mandatory,High,Active
+REQ-S8-003,SEC-08,Notify Authority and data principals,Mandatory,Critical,Active
+REQ-S8-004,SEC-08,Maintain breach notification records,Mandatory,High,Active
+REQ-S9-001,SEC-09,Establish grievance redressal mechanism,Mandatory,High,Active
+REQ-S9-002,SEC-09,Respond to grievances within 30 days,Mandatory,High,Active
+REQ-S9-003,SEC-09,Maintain grievance records,Mandatory,Medium,Active
+REQ-S10-001,SEC-10,Retain data only as long as necessary,Mandatory,High,Active
+REQ-S10-002,SEC-10,Define retention periods,Mandatory,High,Active
+REQ-S10-003,SEC-10,Delete data after retention period,Mandatory,High,Active
+REQ-S11-001,SEC-11,Provide access to personal data,Mandatory,High,Active
+REQ-S11-002,SEC-11,Respond to access requests within 30 days,Mandatory,High,Active
+REQ-S12-001,SEC-12,Allow correction of inaccurate data,Mandatory,High,Active
+REQ-S12-002,SEC-12,Process correction within 30 days,Mandatory,High,Active
+REQ-S13-001,SEC-13,Allow erasure of personal data,Mandatory,High,Active
+REQ-S13-002,SEC-13,Process erasure within 30 days,Mandatory,High,Active
+REQ-S14-001,SEC-14,Provide grievance redressal,Mandatory,High,Active
+REQ-S15-001,SEC-15,Data principal responsible for their actions,Advisory,Medium,Active
+REQ-S15-002,SEC-15,Principal liable for false information,Advisory,Medium,Active
+REQ-S16-001,SEC-16,Identify Significant Data Fiduciaries,Mandatory,High,Active
+REQ-S17-001,SEC-17,SDFs must conduct DPIA,Mandatory,High,Active
+REQ-S17-002,SEC-17,SDFs must implement additional safeguards,Mandatory,High,Active
+REQ-S18-001,SEC-18,SDFs must appoint Consent Manager,Mandatory,High,Active
+REQ-S19-001,SEC-19,Conduct DPIA for high-risk processing,Mandatory,High,Active
+REQ-S20-001,SEC-20,Audit SDF compliance,Mandatory,Medium,Active
+REQ-S21-001,SEC-21,Bind processor with contract,Mandatory,High,Active
+REQ-S21-002,SEC-21,Processor obligated by contract,Mandatory,High,Active
+REQ-S23-001,SEC-23,Obtain fiduciary approval for sub-processing,Mandatory,High,Active
+REQ-S24-001,SEC-24,Transfer data only with fiduciary approval,Mandatory,High,Active
+REQ-S25-001,SEC-25,International transfers require approval,Mandatory,High,Active
+REQ-S26-001,SEC-26,DPIA for high-risk processing,Mandatory,High,Active
+REQ-S27-001,SEC-27,Establish Board of Fiduciary,Mandatory,Medium,Active
+REQ-S28-001,SEC-28,Appoint Data Protection Officer,Mandatory,Medium,Active
+REQ-S29-001,SEC-29,Obtain parental consent for children,Mandatory,Critical,Active
+REQ-S29-002,SEC-29,Do not use children for profiling,Mandatory,High,Active
+REQ-S30-001,SEC-30,Verify parental consent,Mandatory,High,Active
+REQ-S31-001,SEC-31,Additional protections for vulnerable persons,Mandatory,High,Active

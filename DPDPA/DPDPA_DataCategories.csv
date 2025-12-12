@@ -1,0 +1,11 @@
+data_id,name,description,category,definition_section,requires_consent
+DATA-PII,Personal Identifiable Information,"Name, email, phone, address",Personal,Section 2,Yes
+DATA-SENS,Sensitive Personal Data,"Biometric, genetic, financial, health data",Sensitive,Section 2,Yes
+DATA-CHILD,Data of Children,Personal data of persons under 18 years,Special,Section 29,Yes
+DATA-VULN,Data of Vulnerable Persons,Data of disabled or vulnerable individuals,Special,Section 31,Yes
+DATA-TRACK,Location/Tracking Data,"GPS, movement tracking information",Location,Section 2,No
+DATA-COMM,Communication Data,"Emails, messages, call logs",Communication,Section 2,Yes
+DATA-TRANS,Transaction Data,Payment and transaction information,Financial,Section 2,Yes
+DATA-DEVICE,Device Data,"Device IDs, IP addresses, cookies",Technical,Section 2,No
+DATA-BEHAV,Behavioral Data,"Browsing history, preferences, interactions",Behavioral,Section 2,No
+DATA-DEMOG,Demographic Data,"Age, gender, ethnicity, religion",Demographic,Section 2,No

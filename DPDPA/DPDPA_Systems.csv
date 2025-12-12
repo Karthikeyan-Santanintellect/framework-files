@@ -1,0 +1,11 @@
+system_id,name,type,description,category,holds_personal_data,holds_sensitive_data,processing_activities
+SYS-CMS,Consent Management System,Software,Centralized platform for managing consent collection and revocation,Technical,Yes,Yes,Consent management
+SYS-DPIA,DPIA Assessment Platform,Software,Automated DPIA assessment and reporting tool,Analysis,No,No,Impact assessment
+SYS-GRIEVANCE,Grievance Management Portal,Software,Portal for data principals to lodge grievances,Operations,Yes,No,Grievance tracking
+SYS-AUDIT,Audit Logging System,Infrastructure,Centralized audit log aggregation and analysis,Security,No,No,Security monitoring
+SYS-IAM,Identity and Access Management,Infrastructure,Central authentication and authorization system,Security,Yes,No,Access control
+SYS-VAULT,Data Vault/Repository,Infrastructure,Encrypted database for storing personal data,Storage,Yes,Yes,Data storage
+SYS-BACKUP,Backup and Recovery System,Infrastructure,Backup and disaster recovery infrastructure,Operations,Yes,Yes,Data protection
+SYS-DLP,Data Loss Prevention Suite,Software,Tools for preventing unauthorized data exfiltration,Security,No,No,Data protection
+SYS-SIEM,Security Information Event Management,Software,Real-time security monitoring and alerting,Security,No,No,Threat detection
+SYS-API,Data Access API,Software,APIs for authorized access to personal data,Integration,Yes,No,Data access

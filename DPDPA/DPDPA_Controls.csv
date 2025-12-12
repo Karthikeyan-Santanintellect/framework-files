@@ -1,0 +1,16 @@
+control_id,name,category,owner,description
+CTRL-ENC,AES-256 Encryption,Technical,IT Security,Implement AES-256 for all stored data
+CTRL-TLS,TLS/SSL in Transit,Technical,IT Security,Enforce TLS 1.2+ for data transmission
+CTRL-MFA,Multi-Factor Authentication,Technical,IT Security,Require MFA for all system access
+CTRL-RBAC,Role-Based Access Control,Administrative,IT Security,Implement RBAC with principle of least privilege
+CTRL-AUDIT,Automated Audit Logging,Technical,IT Security,Log all data access and modifications
+CTRL-DLP,Data Loss Prevention,Technical,IT Security,Deploy DLP tools to prevent unauthorized exfiltration
+CTRL-SIEM,SIEM Monitoring,Technical,IT Security,Real-time monitoring and alerting
+CTRL-TRAINING,Data Protection Training,Administrative,HR,Annual mandatory training for all staff
+CTRL-BACKGROUND,Background Screening,Administrative,HR,Background checks for data-handling staff
+CTRL-NDA,Confidentiality Agreements,Administrative,Legal,NDAs for all staff and contractors
+CTRL-CONSENT,Consent Management System,Procedural,Privacy,Automated consent tracking system
+CTRL-GRIEVANCE,Grievance Tracking System,Procedural,Privacy,Manage grievance resolution process
+CTRL-BREACH,Incident Response Plan,Procedural,Security,Documented breach response procedures
+CTRL-DPIA,DPIA Assessment Tool,Procedural,Privacy,Automated DPIA evaluation system
+CTRL-RETENTION,Data Retention Management,Procedural,Privacy,Automated data deletion based on retention periods

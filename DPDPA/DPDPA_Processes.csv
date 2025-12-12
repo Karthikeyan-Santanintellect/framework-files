@@ -1,0 +1,11 @@
+process_id,name,description,owner,frequency,deadline
+PROC-CONSENT,Consent Collection,Collect and record consent from data principals,Privacy,Daily,2024-12-31
+PROC-NOTIFY,Breach Notification,Notify authority and data principals of breaches,Security,On-demand,2024-12-31
+PROC-GRIEVANCE,Grievance Resolution,"Receive, track, and resolve grievances",Privacy,Daily,2024-12-31
+PROC-ACCESS,Data Access Request,Process data principal access requests,Privacy,Daily,2024-12-31
+PROC-ERASE,Data Erasure,Process and execute data erasure requests,Privacy,Weekly,2024-12-31
+PROC-CORRECT,Data Correction,Process and execute data correction requests,Privacy,Weekly,2024-12-31
+PROC-TRANSFER,Data Transfer,Transfer personal data to third parties with consent,Operations,As needed,2024-12-31
+PROC-AUDIT,Internal Audit,Conduct compliance audits and assessments,Governance,Quarterly,2024-12-31
+PROC-TRAINING,Compliance Training,Deliver data protection training to staff,Governance,Annually,2024-12-31
+PROC-DPIA,DPIA Execution,Conduct data protection impact assessments,Governance,As required,2024-12-31

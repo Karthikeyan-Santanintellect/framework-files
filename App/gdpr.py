@@ -326,7 +326,7 @@ logger.info("Graph structure loaded successfully.")
 output_filename = "gdpr.json"
 
 res = client.query("""
-    MATCH path = (:RegionalStandardAndRegulation)-[*]->()
+    MATCH path = (:RegionalStandardAndRegulation)-[*]-()
     WITH path
     UNWIND nodes(path) AS n
     UNWIND relationships(path) AS r

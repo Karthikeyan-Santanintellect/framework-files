@@ -1,0 +1,13 @@
+safeguard_id,name,description,type,applies_to_section
+SG-ENC,Encryption,Encrypt personal data in transit and at rest,Technical,Section 7
+SG-ACCESS,Access Controls,Restrict access to authorized personnel only,Administrative,Section 7
+SG-AUTH,Authentication,Multi-factor authentication and strong passwords,Technical,Section 7
+SG-AUDIT,Audit Logs,Maintain logs of all data access and modifications,Technical,Section 7
+SG-BACKUP,Data Backup,Regular backups with secure storage,Technical,Section 7
+SG-TRAIN,Employee Training,Data protection and privacy training programs,Administrative,Section 7
+SG-POLICY,Data Protection Policy,Written data protection and processing policy,Administrative,Section 4
+SG-NOTIFY,Breach Notification,Notify authority and principals of breaches,Procedural,Section 8
+SG-CONSENT,Consent Management,Manage and track consent for processing,Procedural,Section 5
+SG-RETENTION,Retention Limits,Delete data when retention purpose is met,Procedural,Section 10
+SG-DPIA,DPIA Requirement,Conduct Data Protection Impact Assessment,Procedural,Section 26
+SG-GRIEVANCE,Grievance Mechanism,Establish grievance redressal system,Procedural,Section 9
