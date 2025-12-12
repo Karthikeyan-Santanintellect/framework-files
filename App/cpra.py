@@ -261,10 +261,10 @@ time.sleep(2)
 client.query(requirement_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Enforcement_Links.csv"))
 time.sleep(2)
 
-client.query(role_right.replace('$file_ path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Role_Rights.csv"))
+client.query(role_right.replace('$file_ path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Role_Rights_Corrected.csv"))
 time.sleep(2)
 
-client.query(requirement_contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Contract_Requirements.csv "))
+client.query(requirement_contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Contract_Requirements_Corrected.csv"))
 time.sleep(2)
 
 
