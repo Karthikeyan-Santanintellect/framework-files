@@ -1,15 +1,17 @@
 #Regulation
 regulation = """
-MERGE (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: 'vcdpa'})
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE(reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: "vcdpa"})
 ON CREATE SET
-    reg.name = "Virginia Consumer Data Protection Act (VCDPA)",
-    reg.citation = "Va. Code Ann. §§ 59.1-571 to 59.1-575 (2023)",
-    reg.version = "2023",
-    reg.status = "Active",
-    reg.effective_date = date('2023-01-01'),
-    reg.jurisdiction = "Virginia - USA",
-    reg.description = "The Virginia Consumer Data Protection Act (VCDPA) is a comprehensive data privacy law that establishes consumer rights and data protection obligations for businesses operating in Virginia";
+  reg.name = row.name,
+  reg.citation =row.citation,
+  reg.version = row.version,
+  reg.status = row.status,
+  reg.effective_date = date(row.effective_date),
+  reg.jurisdiction = row.jurisdiction,
+  reg.description = row.description;
 """
+
 #section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -187,8 +189,9 @@ ON CREATE SET
 """
 #Regulation → Section
 regulation_section = """
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: 'vcdpa'})
-MATCH (sec:Section {regional_standard_and_regulation_section_id: 'vcdpa'})
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: row.regulation_id})
+MATCH (sec:Section {regional_standard_and_regulation_id: row.regulation_id, section_id: row.section_id})
 MERGE (reg)-[:REGULATION_HAS_SECTION]->(sec);
 """
 
@@ -235,7 +238,7 @@ MATCH (ex:Exemption {regional_standard_and_regulation_id: 'vcdpa', exemption_id:
 MERGE (ro)-[:ROLE_QUALIFIES_FOR_EXEMPTION {exemption_type: row.exemption_type}]->(ex);
 """
 #Requirement → Safeguard
-requirement_safequard ="""
+requirement_safeguard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id: 'vcdpa', requirement_id: row.requirement_id})
 MATCH (sg:Safeguard {regional_standard_and_regulation_id: 'vcdpa', safeguard_id: row.safeguard_id})
@@ -374,7 +377,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(regulation)
+client.query(regulation.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Node.csv'))
 time.sleep(2)
 
 client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Sections.csv'))
@@ -426,7 +429,7 @@ time.sleep(2)
 client.query(Exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Exemptions.csv'))
 time.sleep(2)
 
-client.query(regulation_section)
+client.query(regulation_section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Section_Relationship.csv'))
 time.sleep(2)
 
 client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Requirements.csv'))
@@ -447,7 +450,7 @@ time.sleep(2)
 client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Exemptions.csv'))    
 time.sleep(2)
 
-client.query(requirement_safequard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Safeguards.csv'))
+client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Safeguards.csv'))
 time.sleep(2)   
 
 client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Policies.csv'))
@@ -500,37 +503,63 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
-WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+export_query = """
+MATCH (n)
+WHERE n.regional_standard_and_regulation_id = 'vcdpa'
+WITH collect(n {
+  .*,
+  id: elementId(n),
+  labels: labels(n),
+  mainLabel: head(labels(n))
+}) AS allNodes
+
+MATCH (start)-[r]->(end)
+WHERE start.regional_standard_and_regulation_id = 'vcdpa'
+  AND end.regional_standard_and_regulation_id = 'vcdpa'
+WITH allNodes, collect(r {
+  .*,
+  id: elementId(r),
+  type: type(r),
+  from: elementId(start),
+  to: elementId(end)
+}) AS allRels
 
 RETURN {
-  nodes: [n IN uniqueNodes | n {
-    .*,
-    id: elementId(n),
-    labels: labels(n),
-    mainLabel: head(labels(n))
-  }],
-  rels: [r IN uniqueRels | r {
-    .*,
-    id: elementId(r),
-    type: type(r),
-    from: elementId(startNode(r)),
-    to: elementId(endNode(r))
-  }]
-} AS graph_data""")
+  nodes: allNodes,
+  rels: allRels
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+try:
+    logger.info("Exporting graph to JSON...")
+    res = client.query(export_query)
+    
+    if not res or len(res) == 0:
+        raise Exception("Export failed - no data returned")
+    
+    graph_data = res[0]['graph_data']
+    
+    if 'nodes' not in graph_data or 'rels' not in graph_data:
+        raise Exception("Invalid export data structure")
+    
+    node_count = len(graph_data['nodes'])
+    rel_count = len(graph_data['rels'])
+    logger.info(f"Exporting {node_count} nodes and {rel_count} relationships")
+    
+    with open('vcdpa.json', 'w', encoding='utf-8') as f:
+        json.dump(graph_data, f, default=str, indent=2)
+    
+    logger.info(f"✓ Successfully exported graph data to vcdpa.json")
+    logger.info(f"  - Nodes: {node_count}")
+    logger.info(f"  - Relationships: {rel_count}")
+    
+except Exception as e:
+    logger.error(f"Export failed: {e}")
+    raise
+finally:
+    client.close()
+    logger.info("Neo4j connection closed")
 
-import json
-with open('vcdpa.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to vcdpa.json")
-
-
-client.close()
 
 
 

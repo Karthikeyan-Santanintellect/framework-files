@@ -1,0 +1,5 @@
+"event_type_id","name","description"
+"SecurityBreach","Security Breach","Unauthorized access and exfiltration, theft, or disclosure of nonencrypted or nonredacted personal information."
+"VerifiableConsumerRequest","Verifiable Consumer Request","A request made by a consumer to exercise their rights that the business can reasonably verify."
+"OptOutSignal","Global Privacy Control (GPC) Signal","An automated signal sent by a browser or device that communicates a consumer's choice to opt-out of the sale or sharing of their personal information."
+"PointOfCollection","Point of Collection","The time at which a business collects personal information from a consumer."

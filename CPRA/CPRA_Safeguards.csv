@@ -1,0 +1,5 @@
+"safeguard_id","type","description"
+"SG-ReasonableSecurity","Organizational/Technical","Implement reasonable security procedures and practices appropriate to the nature of the personal information to protect from unauthorized or illegal access, destruction, use, modification, or disclosure."
+"SG-Encryption","Technical","Encrypt or redact personal information to render it unreadable in the event of a breach."
+"SG-Contractual-Safeguards","Legal","Contractual provisions prohibiting the retention, use, or disclosure of personal information for any purpose other than the specific business purpose defined in the contract."
+"SG-Deidentification","Technical","Deidentify or aggregate consumer information so that it cannot reasonably identify, relate to, describe, be capable of being associated with, or be linked, directly or indirectly, to a particular consumer."

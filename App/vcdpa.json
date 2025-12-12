@@ -1,4 +1,1363 @@
 {
-  "nodes": [],
-  "rels": []
+  "nodes": [
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "mainLabel": "RegionalStandardAndRegulation",
+      "labels": [
+        "RegionalStandardAndRegulation"
+      ],
+      "citation": "Va. Code Ann. \u00a7\u00a7 59.1-571 to 59.1-575 (2023)",
+      "jurisdiction": "Virginia - USA",
+      "name": "Virginia Consumer Data Protection Act (VCDPA)",
+      "effective_date": "2023-01-01",
+      "description": "The Virginia Consumer Data Protection Act (VCDPA) is a comprehensive data privacy law that establishes consumer rights and data protection obligations for businesses operating in Virginia.",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "version": "2023",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2223",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-575",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-575",
+      "heading": "Definitions",
+      "topic": "Definitions",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "As used in this chapter..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2224",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-576",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-576",
+      "heading": "Scope; exemptions",
+      "topic": "Scope and Exemptions",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "This chapter applies to persons..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-577",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-577",
+      "heading": "Personal data rights; consumers",
+      "topic": "Consumer Rights",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "A consumer may invoke rights..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2226",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-578",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-578",
+      "heading": "Data controller responsibilities",
+      "topic": "Controller Obligations",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "Controller must limit collection..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2227",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-579",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-579",
+      "heading": "Responsibility according to role",
+      "topic": "Processor Obligations",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "Processor must adhere to instructions..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2228",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-580",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-580",
+      "heading": "Data protection assessments",
+      "topic": "Data Protection Assessments",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "Controller must conduct and document DPAs..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2229",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-581",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-581",
+      "heading": "De-identified data",
+      "topic": "De-identified Data",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "Controller that possesses de-identified data..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2230",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "59.1-584",
+      "full_citation": "Va. Code Ann. \u00a7 59.1-584",
+      "heading": "Enforcement",
+      "topic": "Enforcement",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "text": "Any violation of this chapter..."
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2231",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-577",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extension_period": "45 additional days",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "45 days",
+      "requirement_id": "VCDPA-59.1-577-R1",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2232",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-577",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extension_period": "45 additional days",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "45 days",
+      "requirement_id": "VCDPA-59.1-577-R2",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2233",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-577",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extension_period": "45 additional days",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "45 days",
+      "requirement_id": "VCDPA-59.1-577-R3",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2234",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-577",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extension_period": "45 additional days",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "45 days",
+      "requirement_id": "VCDPA-59.1-577-R4",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2235",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-577",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Immediate",
+      "requirement_id": "VCDPA-59.1-577-R5",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2236",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-578",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Ongoing",
+      "requirement_id": "VCDPA-59.1-578-R1",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2237",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-578",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Ongoing",
+      "requirement_id": "VCDPA-59.1-578-R3",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2238",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-578",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Prior to processing",
+      "requirement_id": "VCDPA-59.1-578-R5",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2239",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-579",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Ongoing",
+      "requirement_id": "VCDPA-59.1-579-R1",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2240",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-580",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Prior to activity",
+      "requirement_id": "VCDPA-59.1-580-R1",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2241",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "section_id": "59.1-580",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "extendable": false,
+      "priority": "High",
+      "deadline": "Prior to activity",
+      "requirement_id": "VCDPA-59.1-580-R2",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "CONTROLLER",
+      "name": "Controller",
+      "description": "Natural or legal person that determines purpose and means of processing",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "\u2265100,000 consumers OR \u226525,000 + >50% revenue from sales"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "PROCESSOR",
+      "name": "Processor",
+      "description": "Entity processing personal data on behalf of controller",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "Service agreement with controller"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2244",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "CONSUMER",
+      "name": "Consumer",
+      "description": "Virginia resident acting in individual or household context",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "Any Virginia resident"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2245",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "CHILD",
+      "name": "Child",
+      "description": "Natural person younger than 13 years of age",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "Under 13 years"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2246",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "PARENT_GUARDIAN",
+      "name": "Parent or Legal Guardian",
+      "description": "Parent or legal guardian of a child",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "Guardian of child under 13"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2247",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "THIRD_PARTY",
+      "name": "Third Party",
+      "description": "Person other than consumer controller processor or affiliates",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "Unaffiliated party"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2248",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "ATTORNEY_GENERAL",
+      "name": "Virginia Attorney General",
+      "description": "Sole enforcement authority for VCDPA",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "threshold": "Enforcement authority"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2249",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.A.1",
+      "safeguard_id": "SG-DATA_MINIMIZATION",
+      "name": "Data Minimization",
+      "description": "Limit collection to adequate relevant and necessary",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2250",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.A.2",
+      "safeguard_id": "SG-PURPOSE_LIMITATION",
+      "name": "Purpose Limitation",
+      "description": "Process only for reasonably necessary and compatible purposes",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2251",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.A.3",
+      "safeguard_id": "SG-SECURITY_PRACTICES",
+      "name": "Security Practices",
+      "description": "Reasonable administrative technical and physical security",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2252",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.A.4",
+      "safeguard_id": "SG-NON_DISCRIMINATION",
+      "name": "Non-Discrimination",
+      "description": "Do not discriminate against consumers exercising rights",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Organizational"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2253",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.A.5",
+      "safeguard_id": "SG-CONSENT_MECHANISM",
+      "name": "Consent Mechanism",
+      "description": "Obtain clear affirmative consent for sensitive data",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Organizational"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2254",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.C",
+      "safeguard_id": "SG-PRIVACY_NOTICE",
+      "name": "Privacy Notice",
+      "description": "Provide accessible clear meaningful privacy notice",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Organizational"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2255",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.D",
+      "safeguard_id": "SG-OPT_OUT_DISCLOSURE",
+      "name": "Opt-Out Disclosure",
+      "description": "Disclose sale and targeted advertising with opt-out",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Organizational"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2256",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-578.E",
+      "safeguard_id": "SG-REQUEST_MECHANISM",
+      "name": "Consumer Request Mechanism",
+      "description": "Secure reliable means for submitting requests",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2257",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-577.B.4",
+      "safeguard_id": "SG-AUTHENTICATION",
+      "name": "Authentication",
+      "description": "Authenticate consumer identity commercially reasonable",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2258",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-577.C",
+      "safeguard_id": "SG-APPEAL_PROCESS",
+      "name": "Appeal Process",
+      "description": "Process for consumers to appeal refusal",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Organizational"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2259",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-579.B",
+      "safeguard_id": "SG-PROCESSOR_CONTRACT",
+      "name": "Processor Contract",
+      "description": "Binding contract with processor",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Contractual"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2260",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "applies_to": "59.1-580",
+      "safeguard_id": "SG-DPA_DOCUMENTATION",
+      "name": "DPA Documentation",
+      "description": "Conduct and document data protection assessments",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2261",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-CONSUMER_REQUEST_PROCESS",
+      "name": "Consumer Request Process",
+      "description": "Documented procedure for receiving authenticating and responding to consumer rights requests within 45 days",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2262",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-CONSUMER_REQUEST_AUTHENTICATION",
+      "name": "Consumer Authentication",
+      "description": "Commercially reasonable authentication method to verify consumer identity for access requests",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2263",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-ACCESS_REQUEST_RESPONSE",
+      "name": "Access Request Response Template",
+      "description": "Standard template and workflow for providing access to personal data in portable format",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2264",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-CORRECTION_REQUEST_PROCESS",
+      "name": "Correction Request Process",
+      "description": "Documented procedure for accepting correcting and confirming corrections to personal data",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R2"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2265",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-DELETION_REQUEST_PROCESS",
+      "name": "Deletion Request Process",
+      "description": "Documented procedure for receiving and executing deletion requests including notification to service providers",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R3"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2266",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-PORTABILITY_REQUEST_FORMAT",
+      "name": "Data Portability Format",
+      "description": "Specification for portable usable format to transmit personal data upon consumer request",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R4"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2267",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-OPT_OUT_TRACKING",
+      "name": "Opt-Out Request Tracking",
+      "description": "System and procedures to track honor and document opt-out requests for targeted advertising sale and profiling",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R5"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2268",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-APPEAL_PROCESS",
+      "name": "Appeal Handling Process",
+      "description": "Documented procedure for receiving and adjudicating consumer appeals of controller refusal to act",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-577-R8"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2269",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Engineering",
+      "impl_id": "IMPL-CONSENT_CAPTURE",
+      "name": "Consent Capture Mechanism",
+      "description": "Technical specification for capturing storing and managing affirmative consent for sensitive data processing",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-578-R5"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2270",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Data Governance",
+      "impl_id": "IMPL-DATA_MINIMIZATION_AUDIT",
+      "name": "Data Minimization Audit",
+      "description": "Quarterly audit procedure to verify personal data collection is adequate relevant and necessary",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-578-R1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2271",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Security Operations",
+      "impl_id": "IMPL-SECURITY_ASSESSMENT",
+      "name": "Security Practices Assessment",
+      "description": "Annual assessment and documentation of administrative technical and physical security safeguards",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-578-R3"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2272",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy Operations",
+      "impl_id": "IMPL-PRIVACY_NOTICE_TEMPLATE",
+      "name": "Privacy Notice Template",
+      "description": "Standard template for clear accessible meaningful privacy notices describing processing practices",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-578-R6"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2273",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Digital Marketing",
+      "impl_id": "IMPL-OPT_OUT_MECHANISM",
+      "name": "Opt-Out Disclosure Mechanism",
+      "description": "Technical specification for disclosing sale and targeted advertising with easy opt-out option",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-578-R7"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2274",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Legal",
+      "impl_id": "IMPL-PROCESSOR_AGREEMENT_TEMPLATE",
+      "name": "Processor Agreement Template",
+      "description": "Standard data processing agreement containing required statutory obligations and duties",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-579-R5"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2275",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy/Compliance",
+      "impl_id": "IMPL-DPA_TEMPLATE",
+      "name": "Data Protection Assessment Template",
+      "description": "Standard template and process for conducting documenting DPA for sale of personal data",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-580-R1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2276",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy/Compliance",
+      "impl_id": "IMPL-DPA_SENSITIVE_DATA",
+      "name": "DPA for Sensitive Data Processing",
+      "description": "Specific DPA procedure and template for sensitive data processing activities",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-580-R2"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2277",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy/Compliance",
+      "impl_id": "IMPL-DPA_TARGETED_ADVERTISING",
+      "name": "DPA for Targeted Advertising",
+      "description": "DPA procedure for targeted advertising and profiling activities",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-580-R3"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2278",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Privacy/Compliance",
+      "impl_id": "IMPL-DPA_HEIGHTENED_RISK",
+      "name": "DPA for Heightened-Risk Processing",
+      "description": "DPA procedure for heightened-risk processing activities",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-580-R5"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2279",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Data Engineering",
+      "impl_id": "IMPL-DEIDENTIFICATION_STANDARD",
+      "name": "De-identification Standard",
+      "description": "Technical specification and procedures for de-identifying data per NIST standards",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-581-R1"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2280",
+      "mainLabel": "ImplementationSpec",
+      "labels": [
+        "ImplementationSpec"
+      ],
+      "owner": "Legal",
+      "impl_id": "IMPL-REIDENTIFICATION_COMMITMENT",
+      "name": "Re-identification Commitment",
+      "description": "Public commitment and binding controls to prevent re-identification of de-identified data",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "requirement_id": "VCDPA-59.1-581-R2"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2281",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy Engineering",
+      "control_id": "CTRL-CONSENT_COLLECTION",
+      "name": "Consent Collection System",
+      "description": "Capture store and track consumer consent",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2282",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy Operations",
+      "control_id": "CTRL-REQUEST_AUTOMATION",
+      "name": "Consumer Request Automation",
+      "description": "Automate receipt authentication and response to requests",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2283",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy Operations",
+      "control_id": "CTRL-OPT_OUT_MECHANISM",
+      "name": "Opt-Out Request Processing",
+      "description": "Process opt-out requests for targeted ad sale profiling",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2284",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy Operations",
+      "control_id": "CTRL-PRIVACY_NOTICE_MANAGEMENT",
+      "name": "Privacy Notice Management",
+      "description": "Generate and publish privacy notices",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2285",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Data Governance",
+      "control_id": "CTRL-DATA_MAPPING",
+      "name": "Personal Data Mapping",
+      "description": "Identify and catalog personal data types sources uses",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2286",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Security Operations",
+      "control_id": "CTRL-ACCESS_LOGGING",
+      "name": "Access Control and Logging",
+      "description": "Log and monitor access to personal data",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2287",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Security Engineering",
+      "control_id": "CTRL-ENCRYPTION",
+      "name": "Encryption Implementation",
+      "description": "Encrypt personal data at rest and in transit",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Technical"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2288",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy/Compliance",
+      "control_id": "CTRL-DPA_EXECUTION",
+      "name": "DPA Execution",
+      "description": "System to conduct and document DPAs",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2289",
+      "mainLabel": "Threshold",
+      "labels": [
+        "Threshold"
+      ],
+      "condition": "consumer_count >= 100000",
+      "name": "100,000 Consumers Threshold",
+      "description": "Controls or processes data of 100,000+ consumers",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.A.i",
+      "threshold_id": "THRESHOLD_100K_CONSUMERS",
+      "type": "Consumer Count"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2290",
+      "mainLabel": "Threshold",
+      "labels": [
+        "Threshold"
+      ],
+      "condition": "consumer_count >= 25000 AND data_revenue_pct > 0.50",
+      "name": "25,000 + 50% Revenue Threshold",
+      "description": "Controls 25,000+ consumers AND >50% revenue from data sales",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.A.ii",
+      "threshold_id": "THRESHOLD_25K_PLUS_REVENUE",
+      "type": "Consumer Count + Revenue"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2291",
+      "mainLabel": "Exemption",
+      "labels": [
+        "Exemption"
+      ],
+      "name": "State Agencies",
+      "exemption_id": "EXEMPT-STATE_AGENCIES",
+      "description": "State agencies and political subdivisions",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.B.i",
+      "type": "Entity Exemption"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2292",
+      "mainLabel": "Exemption",
+      "labels": [
+        "Exemption"
+      ],
+      "name": "GLBA Financial Institutions",
+      "exemption_id": "EXEMPT-GLBA",
+      "description": "Financial institutions under Gramm-Leach-Bliley Act",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.B.ii",
+      "type": "Entity Exemption"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2293",
+      "mainLabel": "Exemption",
+      "labels": [
+        "Exemption"
+      ],
+      "name": "HIPAA Entities",
+      "exemption_id": "EXEMPT-HIPAA",
+      "description": "HIPAA covered entities and business associates",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.B.iii",
+      "type": "Entity Exemption"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2294",
+      "mainLabel": "Exemption",
+      "labels": [
+        "Exemption"
+      ],
+      "name": "Nonprofit Organizations",
+      "exemption_id": "EXEMPT-NONPROFIT",
+      "description": "Nonprofit organizations exempt under IRS 501(c)",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.B.iv",
+      "type": "Entity Exemption"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2295",
+      "mainLabel": "Exemption",
+      "labels": [
+        "Exemption"
+      ],
+      "name": "Higher Education",
+      "exemption_id": "EXEMPT-HIGHER_ED",
+      "description": "Public and private institutions of higher education",
+      "regional_standard_and_regulation_id": "vcdpa",
+      "section": "59.1-576.B.v",
+      "type": "Entity Exemption"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153177690816121006",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "type": "REGULATION_HAS_SECTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155429490629806254",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2226",
+      "type": "REGULATION_HAS_SECTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157681290443491502",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2227",
+      "type": "REGULATION_HAS_SECTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159933090257176750",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2228",
+      "type": "REGULATION_HAS_SECTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162184890070861998",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2229",
+      "type": "REGULATION_HAS_SECTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2222",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164436689884547246",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2230",
+      "type": "REGULATION_HAS_SECTION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153173292769609905",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2231",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155425092583295153",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2232",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157676892396980401",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2233",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159928692210665649",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2234",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2225",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162180492024350897",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2235",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2226",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153173292769609906",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2236",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2226",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155425092583295154",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2237",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2226",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157676892396980402",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2238",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2227",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153173292769609907",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2239",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2228",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153173292769609908",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2240",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2228",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155425092583295156",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2241",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2231",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155394306257717431",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2256",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2231",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032183",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2257",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2231",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915511",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2282",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2231",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332151",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2244",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "entitled"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2232",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915512",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2282",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2232",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332152",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2244",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "entitled"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2233",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915513",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2282",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2233",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332153",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2244",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "entitled"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2234",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915514",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2282",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2234",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332154",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2244",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "entitled"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2235",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915515",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2283",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2235",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332155",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2244",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "entitled"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2236",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032188",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2249",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2236",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915516",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2285",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2236",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332156",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2237",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032189",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2251",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2237",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155397604792600765",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2286",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2237",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915517",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2287",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2237",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332157",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2238",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032190",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2253",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2238",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915518",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2281",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2238",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332158",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2239",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332159",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2240",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032192",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2260",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2240",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915520",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2288",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2240",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332160",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2241",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153142506444032193",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2260",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2241",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153145804978915521",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2288",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2241",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153162297653332161",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917772019710822641",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2289",
+      "type": "ROLE_MEETS_THRESHOLD",
+      "status": "applies"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917772019710822642",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2290",
+      "type": "ROLE_MEETS_THRESHOLD",
+      "status": "applies"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917773119222450419",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2291",
+      "type": "ROLE_QUALIFIES_FOR_EXEMPTION",
+      "exemption_type": "entity"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917773119222450420",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2292",
+      "type": "ROLE_QUALIFIES_FOR_EXEMPTION",
+      "exemption_type": "entity"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917773119222450421",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2293",
+      "type": "ROLE_QUALIFIES_FOR_EXEMPTION",
+      "exemption_type": "entity"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917773119222450422",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2294",
+      "type": "ROLE_QUALIFIES_FOR_EXEMPTION",
+      "exemption_type": "entity"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153171093746354371",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "PROCESSES_ON_BEHALF_OF_CONTROLLER",
+      "relationship_type": "processes_on_behalf_of",
+      "description": "Processor processes personal data on behalf of and under instructions of Controller",
+      "contractual_basis": "Data Processing Agreement"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155422893560039619",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "PROCESSES_ON_BEHALF_OF_CONTROLLER",
+      "relationship_type": "processes_on_behalf_of",
+      "description": "Processor acts as service provider to Controller for data processing activities",
+      "contractual_basis": "Service Agreement"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157674693373724867",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2242",
+      "type": "PROCESSES_ON_BEHALF_OF_CONTROLLER",
+      "relationship_type": "processes_on_behalf_of",
+      "description": "Processor provides services requiring access to personal data controlled by Controller",
+      "contractual_basis": "Vendor Contract"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153172193257982147",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "type": "PROCESSOR_ENGAGES_SUBCONTRACTOR",
+      "description": "Processor engages subcontractor with general written authorization from Controller",
+      "notification_required": "true",
+      "authorization_type": "general_authorization"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155423993071667395",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "type": "PROCESSOR_ENGAGES_SUBCONTRACTOR",
+      "description": "Processor engages subcontractor with specific prior written authorization from Controller",
+      "notification_required": "true",
+      "authorization_type": "specific_authorization"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157675792885352643",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2243",
+      "type": "PROCESSOR_ENGAGES_SUBCONTRACTOR",
+      "description": "Processor must impose same data protection obligations on subcontractor via contract",
+      "notification_required": "true",
+      "authorization_type": "subprocessor_agreement"
+    }
+  ]
 }

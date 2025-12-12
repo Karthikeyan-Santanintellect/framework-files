@@ -1,0 +1,5 @@
+"enforcement_id","authority","max_penalty","description"
+"AdminFine-Unintentional","CPPA","$2,500 per violation","Administrative fine for unintentional violations."
+"AdminFine-Intentional","CPPA","$7,500 per violation","Administrative fine for intentional violations."
+"AdminFine-Minor","CPPA","$7,500 per violation","Administrative fine for violations involving the personal information of consumers under 16 years of age."
+"PrivateRightOfAction","Consumer","$750 per consumer, per incident, or actual damages","Private right of action for consumers in the event of a data breach resulting from failure to implement reasonable security."

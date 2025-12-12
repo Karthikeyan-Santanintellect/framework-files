@@ -1,0 +1,8 @@
+"role_id","name","description"
+"Business","Business","An entity that collects consumers' personal information and determines the purposes and means of the processing."
+"Service Provider","Service Provider","An entity that processes personal information on behalf of a business."
+"Contractor","Contractor","A person to whom the business makes available a consumer's personal information for a business purpose, pursuant to a written contract."
+"Third Party","Third Party","A person who is not the business, a service provider, or a contractor."
+"Consumer","Consumer","A natural person who is a California resident."
+"CPPA","California Privacy Protection Agency","The government agency responsible for implementing and enforcing the CPRA."
+"Minor","Minor","A consumer under the age of 16."
