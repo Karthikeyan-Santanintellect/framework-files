@@ -1,21 +1,24 @@
 #Regulation
 regulation = """
-MERGE (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: 'dpdpa_2023'})
-ON CREATE SET 
-  reg.name = 'Digital Personal Data Protection Act, 2023',
-  reg.citation = 'Act No. 22 of 2023',
-  reg.version = '1.0',
-  reg.status = 'Active',
-  reg.effective_date = '2023-08-04',
-  reg.jurisdiction = 'India',
-  reg.description = 'Comprehensive framework for processing digital personal data in India';
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (reg:RegionalStandardAndRegulation {
+  regional_standard_and_regulation_id: row.regional_standard_and_regulation_id
+})
+ON CREATE SET
+  reg.name = row.name,
+  reg.citation = row.citation,
+  reg.version = row.version,
+  reg.status = row.status,
+  reg.effective_date = date(row.effective_date),
+  reg.jurisdiction = row.jurisdiction,
+  reg.description = row.description;
 """
 #Chapter
 chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (c:Chapter {regional_standard_and_regulation_id:'dpdpa_2023', chapter_id: row.chapter_id})
 ON CREATE SET 
-  c.chapter_number = row.chapter_number,
+  c.chapter_number = toInteger(row.chapter_number),
   c.title = row.title,
   c.description = row.description;
 """
@@ -141,99 +144,91 @@ ON CREATE SET
   ea.severity_level = row.severity_level,
   ea.applicable_section = row.applicable_section;
 """
-#regulation->chapter
-regulation_chapter ="""
+regulation_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {
-  regional_standard_and_regulation_id: 'dpdpa_2023'
-})
-MATCH (c:Chapter {
-  regional_standard_and_regulation_id: 'dpdpa_2023',
-  chapter_id: row.chapter_id
-})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id})
+MATCH (c:Chapter {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, chapter_id: row.chapter_id})
 MERGE (reg)-[:REGULATION_HAS_CHAPTER]->(c);
 """
 
-#chapter->section
-chapter_section ="""
+chapter_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (c:Chapter {regional_standard_and_regulation_id:'dpdpa_2023', chapter_id: row.chapter_id})
-MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})
+MATCH (c:Chapter {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, chapter_id: row.chapter_id})
+MATCH (sec:Section {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, section_id: row.section_id})
 MERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);
 """
-#section->requirement
-section_requirement ="""
+
+section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
+MATCH (sec:Section {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, section_id: row.section_id})
+MATCH (req:Requirement {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, requirement_id: row.requirement_id})
 MERGE (sec)-[:SECTION_HAS_REQUIREMENT]->(req);
 """
 
-#requirement->roles
-requirement_roles ="""
+requirement_roles = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (ro:Role {regional_standard_and_regulation_id:'dpdpa_2023', role_id: row.role_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_ROLES]->(ro);
 """
-#requirement->datacategory
-requirement_datacategory ="""
+
+requirement_datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (dc:DataCategory {regional_standard_and_regulation_id:'dpdpa_2023', data_id: row.data_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_DATACATEGORY]->(dc);
 """
-#requirement->safeguard
-requirement_safeguard ="""
+
+requirement_safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (sg:Safeguard {regional_standard_and_regulation_id:'dpdpa_2023', safeguard_id: row.safeguard_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_SAFEGUARD]->(sg);
 """
-#requirement->event_type
-requirement_event_type ="""
+
+requirement_event_type = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (et:EventType {regional_standard_and_regulation_id:'dpdpa_2023', event_type_id: row.event_type_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_EVENTTYPE]->(et);
 """
-#requirement->policy
-requirement_policy ="""
+
+requirement_policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (pol:Policy {regional_standard_and_regulation_id:'dpdpa_2023', policy_id: row.policy_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_POLICY]->(pol);
 """
-#requirement->control
-requirement_control ="""
+
+requirement_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (co:Control {regional_standard_and_regulation_id:'dpdpa_2023', control_id: row.control_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_CONTROL]->(co);
-""" 
-#control->system
-control_system ="""
+"""
+
+control_system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (co:Control {regional_standard_and_regulation_id:'dpdpa_2023', control_id: row.control_id})
 MATCH (sys:System {regional_standard_and_regulation_id:'dpdpa_2023', system_id: row.system_id})
 MERGE (co)-[:CONTROLS_CONTROLS_SYSTEM]->(sys);
 """
-#Requirement->process
-requirement_process ="""
+
+requirement_process = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
 MATCH (pr:Process {regional_standard_and_regulation_id:'dpdpa_2023', process_id: row.process_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_PROCESS]->(pr);
 """
-#process->system
-process_system ="""
+
+process_system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pr:Process {regional_standard_and_regulation_id:'dpdpa_2023', process_id: row.process_id})
 MATCH (sys:System {regional_standard_and_regulation_id:'dpdpa_2023', system_id: row.system_id})
 MERGE (pr)-[:PROCESSES_PROCESSES_SYSTEM]->(sys);
 """
-#enforcement_action->requirements
-enforcement_action_requirements ="""
+
+enforcement_action_requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {
     regional_standard_and_regulation_id: 'dpdpa_2023', 
@@ -245,8 +240,8 @@ MATCH (req:Requirement {
 })
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS]->(req);
 """
-#enforcement_action->role
-enforcement_action_role ="""
+
+enforcement_action_role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {
     regional_standard_and_regulation_id: 'dpdpa_2023', 
@@ -258,8 +253,8 @@ MATCH (ro:Role {
 })
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES]->(ro);
 """
-#enforcement_action->section
-enforcement_action_section ="""
+
+enforcement_action_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {
     regional_standard_and_regulation_id: 'dpdpa_2023', 
@@ -291,7 +286,7 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(regulation)
+client.query(regulation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Node.csv"))
 time.sleep(2)
 
 client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Chapters.csv"))
@@ -333,7 +328,7 @@ time.sleep(2)
 client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Chapter_Relationship_FIXED.csv"))
 time.sleep(2)
 
-client.query(chapter_section.replace('$file_path',"MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})\nMATCH (c:Chapter {chapter_id: row.chapter_id})\nMERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);"))
+client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Chapter_Section_Relationship_CORRECT.csv"))
 time.sleep(2)
 
 client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Section_Requirement_Relationship_CORRECT.csv"))
