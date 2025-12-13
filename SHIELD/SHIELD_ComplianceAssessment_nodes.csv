@@ -1,0 +1,4 @@
+assessment_id,assessment_type,assessment_date,assessor_name,assessor_organization,scope,compliant_areas,non_compliant_areas,gaps_identified_count,critical_gaps_count,remediation_plan_developed,remediation_timeline,reassessment_date,recommendation_count,overall_compliance_rating,risk_rating,shield_compliance_result
+ASSESS-001,InternalAudit,2024-08-15,Internal Audit Team,Internal,All systems containing NY resident data,Encryption; Access controls; Training,Vendor assessments incomplete,3,0,True,90 days,2025-02-15,8,Compliant,Low,True
+ASSESS-002,ExternalAudit,2024-09-20,Third Party Auditors,Deloitte,Complete SHIELD Act compliance review,Policies; Procedures; Safeguards,Disaster recovery plan gaps,5,1,True,120 days,2025-06-20,12,PartiallyCompliant,Medium,False
+ASSESS-003,GapAnalysis,2024-07-01,CISO & Compliance,Internal,Identification of SHIELD compliance gaps,Administrative safeguards; Monitoring,Physical security gaps,4,0,True,60 days,2024-10-01,6,Compliant,Low,True

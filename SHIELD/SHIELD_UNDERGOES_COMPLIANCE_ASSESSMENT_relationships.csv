@@ -1,0 +1,4 @@
+source_controller_id,relationship_type,target_assessment_id,assessment_initiation_date,assessment_start_date,assessment_completion_date,assessment_type,findings_count,remediation_required,remediation_deadline,compliance_achieved
+CTR-001,UNDERGOES_COMPLIANCE_ASSESSMENT,ASSESS-001,2024-07-15,2024-08-15,2024-08-15,InternalAudit,3,True,2024-11-15,True
+CTR-002,UNDERGOES_COMPLIANCE_ASSESSMENT,ASSESS-002,2024-08-15,2024-09-20,2024-09-20,ExternalAudit,5,True,2024-12-20,False
+CTR-003,UNDERGOES_COMPLIANCE_ASSESSMENT,ASSESS-003,2024-06-01,2024-07-01,2024-07-01,GapAnalysis,4,True,2024-08-30,True

@@ -1,0 +1,7 @@
+source_entity_id,relationship_type,target_mechanism_id,mechanism_implementation_date,mechanism_types,consumer_friendly,easy_to_use,universal_opt_out_supported,gpc_support_enabled,merchant_reasonableness_standard
+ENT-001,PROVIDES_OPT_OUT_MECHANISM,OPTOUT-001,2024-01-01,Website portal; Email,True,True,False,,True
+ENT-002,PROVIDES_OPT_OUT_MECHANISM,OPTOUT-002,2024-01-15,Global Privacy Control; Website,True,True,True,2024-01-15,True
+ENT-003,PROVIDES_OPT_OUT_MECHANISM,OPTOUT-003,2024-02-01,Website form; Email,True,True,False,,True
+ENT-004,PROVIDES_OPT_OUT_MECHANISM,OPTOUT-001,2024-01-01,Website portal,True,True,False,,True
+ENT-005,PROVIDES_OPT_OUT_MECHANISM,OPTOUT-002,2024-01-15,Universal opt-out,True,True,True,2024-01-15,True
+ENT-006,PROVIDES_OPT_OUT_MECHANISM,OPTOUT-003,2024-02-01,Portal form,False,False,False,,False

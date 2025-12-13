@@ -1,0 +1,5 @@
+provider_id,provider_name,service_type,services_provided,engagement_date,contract_end_date,has_security_agreement,agreement_includes_data_security_clauses,agreement_includes_breach_notification,agreement_includes_audit_rights,agreement_includes_data_deletion,access_level,security_assessment_completed,security_assessment_date,assessment_result,compliance_certifications,incident_history_count,last_incident_date
+PROV-001,CloudSecure Services,CloudProvider,Cloud backup; Data storage,2021-01-15,2026-01-15,True,True,True,True,True,FullAccess,True,2024-08-01,Approved,ISO27001; SOC2,0,
+PROV-002,DataGuard Analytics,DataProcessor,Analytics; Reporting,2020-06-20,2025-12-31,True,True,True,True,True,LimitedAccess,True,2024-09-15,Approved_With_Conditions,SOC2,0,
+PROV-003,SecureIT Consulting,SecurityVendor,Security assessment; Consulting,2022-03-10,2025-03-10,True,True,True,True,True,ViewOnly,True,2024-07-20,Approved,ISO27001,0,
+PROV-004,Network Solutions LLC,ITSupport,IT infrastructure; Support,2023-01-05,2025-12-31,False,False,False,False,False,FullAccess,False,,,,2,2023-06-15

@@ -1,0 +1,5 @@
+source_controller_id,relationship_type,target_program_id,implementation_date,program_scope,coverage_percentage,budget_allocated,effectiveness_assessment_date
+CTR-001,IMPLEMENTS_SECURITY_PROGRAM,PROG-001,2020-01-01,All systems; All data types,100.0,500000.0,2024-08-15
+CTR-002,IMPLEMENTS_SECURITY_PROGRAM,PROG-002,2019-06-15,Healthcare systems; Patient data,100.0,750000.0,2024-09-20
+CTR-003,IMPLEMENTS_SECURITY_PROGRAM,PROG-003,2021-03-01,IT infrastructure; Customer data,95.0,250000.0,2024-09-01
+CTR-004,IMPLEMENTS_SECURITY_PROGRAM,PROG-004,2022-01-15,Retail systems; POS data,85.0,150000.0,2024-08-10

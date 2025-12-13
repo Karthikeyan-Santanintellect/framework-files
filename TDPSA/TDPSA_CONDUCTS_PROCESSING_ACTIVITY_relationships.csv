@@ -1,0 +1,7 @@
+source_entity_id,relationship_type,target_activity_id,activity_start_date,activity_end_date,disclosed_to_consumer,consent_required,consent_obtained,dpa_completed,compliance_status
+ENT-001,CONDUCTS_PROCESSING_ACTIVITY,ACT-001,2020-03-15,,True,False,False,False,Compliant
+ENT-002,CONDUCTS_PROCESSING_ACTIVITY,ACT-002,2018-01-10,,True,True,True,True,Compliant
+ENT-003,CONDUCTS_PROCESSING_ACTIVITY,ACT-003,2021-06-20,,True,True,True,True,Compliant
+ENT-004,CONDUCTS_PROCESSING_ACTIVITY,ACT-004,2019-08-05,,False,True,False,False,NonCompliant
+ENT-005,CONDUCTS_PROCESSING_ACTIVITY,ACT-005,2022-02-01,,True,True,True,True,Compliant
+ENT-006,CONDUCTS_PROCESSING_ACTIVITY,ACT-006,2020-09-15,,True,True,True,True,Compliant

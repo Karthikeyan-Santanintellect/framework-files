@@ -1,0 +1,7 @@
+source_program_id,relationship_type,target_safeguard_id,application_date,coverage_percentage,data_categories_protected,effectiveness_verified,last_verification_date
+PROG-001,APPLIES_SAFEGUARDS_TO,ADMIN-001,2020-01-01,100.0,All data,True,2024-08-15
+PROG-001,APPLIES_SAFEGUARDS_TO,TECH-001,2020-06-01,100.0,Financial; SSN; Credentials,True,2024-08-15
+PROG-001,APPLIES_SAFEGUARDS_TO,TECH-002,2021-03-15,98.0,All credentials,True,2024-09-20
+PROG-002,APPLIES_SAFEGUARDS_TO,ADMIN-003,2019-06-15,98.0,Health information,True,2024-09-20
+PROG-003,APPLIES_SAFEGUARDS_TO,TECH-003,2021-03-01,95.0,Customer data,True,2024-09-01
+PROG-004,APPLIES_SAFEGUARDS_TO,TECH-004,2022-01-15,85.0,POS data,False,2024-08-10

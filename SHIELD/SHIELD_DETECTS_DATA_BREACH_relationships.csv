@@ -1,0 +1,4 @@
+source_controller_id,relationship_type,target_breach_id,detection_date,detection_method,confirmation_required,investigation_initiated_date
+CTR-001,DETECTS_DATA_BREACH,BREACH-001,2024-06-15,SecurityAlert,True,2024-06-16
+CTR-002,DETECTS_DATA_BREACH,BREACH-002,2024-07-20,SecurityAlert,True,2024-07-22
+CTR-003,DETECTS_DATA_BREACH,BREACH-003,2024-08-10,AuditFindings,True,2024-08-12

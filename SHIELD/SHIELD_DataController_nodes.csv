@@ -1,0 +1,7 @@
+controller_id,entity_name,entity_type,business_size,employee_count,annual_revenue,total_assets,nysag_regulated,nysdfs_regulated,hipaa_compliant,glba_compliant,state_jurisdiction,shield_compliance_status,last_security_audit_date,security_program_coordinator,data_classification_implemented,contact_email,contact_phone
+CTR-001,NewYork Financial Services,Business,LargeBusiness,1250,85000000.0,450000000.0,True,False,False,True,New York,Compliant,2024-09-15,Dr. Sarah Chen,True,security@nyfin.com,+1-212-555-0100
+CTR-002,Empire State Healthcare,Healthcare,LargeBusiness,2100,125000000.0,600000000.0,True,False,True,False,New York,Compliant,2024-08-20,Michael Rodriguez,True,compliance@empirehealth.org,+1-212-555-0200
+CTR-003,Metro Tech Solutions,Business,MediumBusiness,350,18000000.0,85000000.0,True,False,False,False,New York,Compliant,2024-10-01,Jennifer Adams,True,ciso@metrotech.com,+1-212-555-0300
+CTR-004,Manhattan Retail Group,Business,MediumBusiness,450,42000000.0,120000000.0,True,False,False,True,New York,InProgress,2024-07-10,Robert Williams,False,privacy@manhattanretail.com,+1-212-555-0400
+CTR-005,Brooklyn NonProfit Org,NonProfit,SmallBusiness,45,5000000.0,15000000.0,False,False,False,False,New York,NonCompliant,2024-05-15,Amanda Foster,False,data@brooklynnpo.org,+1-718-555-0500
+CTR-006,Empire Insurance Co,FinancialInstitution,LargeBusiness,800,95000000.0,550000000.0,False,True,False,True,New York,Compliant,2024-09-01,Thomas Kelly,True,security@empireins.com,+1-212-555-0600

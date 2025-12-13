@@ -1,0 +1,7 @@
+request_id,request_type,request_submission_date,submission_method,consumer_identification,authorized_agent_status,agent_authorization_verified,authentication_method,authentication_successful,authentication_date,processing_status,response_deadline,extension_needed,extension_date,response_date,response_method,free_request_count,fee_charged,completion_status,consumer_satisfied,appeal_submitted,appeal_deadline
+REQ-001,Access,2024-01-10 08:15:00,Website,CONS-001,False,False,Email,True,2024-01-10,Completed,2024-02-24,False,,2024-02-20,Email,1,False,True,True,False,
+REQ-002,Deletion,2024-02-15 10:30:00,Email,CONS-002,False,False,MFA,True,2024-02-15,Completed,2024-04-01,False,,2024-03-30,Email,1,False,True,True,False,
+REQ-003,Correction,2024-03-01 14:45:00,Website,CONS-003,False,False,Email,True,2024-03-01,Denied,2024-04-15,False,,2024-04-10,Email,1,False,False,False,True,2024-05-10
+REQ-004,Portability,2024-03-20 09:00:00,InApp,CONS-004,True,True,GovernmentID,True,2024-03-20,Completed,2024-05-04,False,,2024-04-28,Download,1,False,True,True,False,
+REQ-005,OptOut,2024-04-05 16:20:00,Website,CONS-005,False,False,Email,True,2024-04-05,Completed,2024-05-20,False,,2024-05-15,Email,2,False,True,True,False,
+REQ-006,Appeal,2024-05-10 11:30:00,Email,CONS-006,False,False,MFA,True,2024-05-10,Under Review,2024-06-24,True,2024-07-24,,,1,False,False,,False,

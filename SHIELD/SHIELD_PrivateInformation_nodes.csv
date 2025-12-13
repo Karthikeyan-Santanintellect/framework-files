@@ -1,0 +1,7 @@
+info_id,category_name,category_type,description,sensitivity_level,requires_combination_with_pi,examples,protection_level_required,breach_notification_required,retention_guidance
+PI-001,Social Security Number,IdentificationData,Social Security Number or tax ID,Critical,True,SSN: 123-45-6789,Maximum,True,5 years
+PI-002,Driver License Number,IdentificationData,Driver license or state ID number,Critical,True,NY DL: D1234567,Maximum,True,3 years
+PI-003,Financial Account,FinancialData,Bank account or credit card with credentials,Critical,True,Account: xxxx-xxxx-xxxx-1234,Maximum,True,3 years
+PI-004,Biometric Data,BiometricData,"Fingerprints, facial recognition, iris scan",Critical,True,Fingerprint hash,Maximum,True,3 years
+PI-005,Health Information,HealthData,"Medical diagnoses, treatment records",Critical,False,Cancer diagnosis,Maximum,True,Per healthcare law
+PI-006,Credential Combination,CredentialData,Username/email + password/security question,Critical,True,user@email.com + password,Maximum,True,1 year

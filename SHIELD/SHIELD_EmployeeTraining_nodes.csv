@@ -1,0 +1,4 @@
+training_id,training_name,training_type,target_audience,delivery_method,required_frequency,duration_hours,completion_tracking,completion_rate,last_delivery_date,next_scheduled_date,certification_earned,test_requirement,average_test_score,training_materials_available,trainer_qualified,compliance_with_shield,effectiveness_feedback_score
+TRAIN-001,Data Security Awareness,DataSecurityAwareness,AllEmployees,Online,AnnualMandatory,2.0,True,95.0,2024-09-15,2025-09-15,False,True,88.5,True,True,True,4.2
+TRAIN-002,Phishing Detection,PhishingDetection,AllEmployees,Video,AnnualMandatory,1.5,True,92.0,2024-09-10,2025-09-10,False,True,85.0,True,True,True,4.0
+TRAIN-003,Password Security,PasswordSecurity,AllEmployees,Online,AnnualMandatory,1.0,True,88.0,2024-08-30,2025-08-30,False,True,82.0,True,True,True,3.8

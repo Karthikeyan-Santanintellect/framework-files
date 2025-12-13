@@ -1,0 +1,7 @@
+sensitive_id,data_type,description,protection_level,encryption_required,access_restricted,audit_frequency_months,parental_consent_for_children,usage_restrictions,sale_permitted,sale_notice_provided,location_radius_feet,processing_justified,risk_assessment_conducted,risk_level
+SD-001,RacialOrigin,Racial or ethnic origin classification,Maximum,True,True,3,True,No selling; Limited use,False,True,,False,True,High
+SD-002,ReligiousBeliefs,Religious or philosophical beliefs,Maximum,True,True,3,True,No selling; Limited use,False,True,,False,True,High
+SD-003,HealthDiagnosis,Medical diagnosis or health conditions,Maximum,True,True,3,True,Healthcare only; No selling,False,True,,True,True,Critical
+SD-004,BiometricID,"Fingerprints, facial recognition, iris scans",Maximum,True,True,3,True,Authentication only; No selling,False,True,,True,True,High
+SD-005,PreciseGeolocation,GPS location within 1750 feet,Enhanced,True,True,6,True,Precise location not permitted,False,False,1750.0,True,True,Medium
+SD-006,KnownChildData,Data of children under 13 years old,Maximum,True,True,3,True,Parental consent required; No selling,False,False,,True,True,Critical

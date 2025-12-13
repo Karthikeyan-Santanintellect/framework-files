@@ -1,0 +1,5 @@
+source_entity_id,relationship_type,target_notice_id,notice_date,notice_version,notice_accessible,notice_clear,all_required_elements,consumer_acknowledged,acknowledgment_date
+ENT-001,OFFERS_PRIVACY_NOTICE,NOTICE-001,2024-01-01,1.2,True,True,True,True,2024-01-15
+ENT-002,OFFERS_PRIVACY_NOTICE,NOTICE-002,2024-06-01,2.0,True,True,True,True,2024-06-15
+ENT-003,OFFERS_PRIVACY_NOTICE,NOTICE-003,2023-07-01,1.5,True,False,True,False,
+ENT-004,OFFERS_PRIVACY_NOTICE,NOTICE-004,2024-01-15,1.0,True,True,True,True,2024-01-30

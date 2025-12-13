@@ -1,0 +1,7 @@
+source_controller_id,relationship_type,target_resident_id,collection_start_date,collection_method,original_purpose,current_purpose,data_categories_held,retention_justification
+CTR-001,HOLDS_PERSONAL_DATA_OF,RES-001,2020-01-15,Direct,Account opening,Account management; Analytics,Name; Address; SSN; Financial,Regulatory requirement; Business need
+CTR-002,HOLDS_PERSONAL_DATA_OF,RES-002,2019-06-20,Direct,Healthcare services,Healthcare services; Treatment,Name; DOB; Health Info; SSN,HIPAA requirements
+CTR-003,HOLDS_PERSONAL_DATA_OF,RES-003,2021-03-10,Third-Party,Credit application,Credit reporting; Risk assessment,Name; Address; DL; Financial,FCRA requirements
+CTR-004,HOLDS_PERSONAL_DATA_OF,RES-004,2018-11-05,Direct,Retail transaction,Marketing; Customer service,Name; Email; Phone; Preferences,Customer relationship management
+CTR-005,HOLDS_PERSONAL_DATA_OF,RES-005,2022-02-01,Public,Nonprofit services,Nonprofit operations; Donor relations,Name; Address; Email,Nonprofit mission
+CTR-006,HOLDS_PERSONAL_DATA_OF,RES-006,2020-09-15,Direct,Policy issuance,Policy administration; Claims,Name; SSN; Financial; Medical,Insurance regulatory requirements

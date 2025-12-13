@@ -1,0 +1,6 @@
+safeguard_id,safeguard_name,control_type,description,implementation_status,implementation_date,encryption_algorithm,encryption_scope,mfa_enabled,mfa_coverage_percentage,testing_frequency,last_testing_date,vulnerabilities_found_count,critical_vulnerabilities_count,compliance_with_shield
+TECH-001,Data Encryption,Encryption,AES-256 encryption for data at rest and in transit,Implemented,2020-06-01,AES-256,TransitAndRest,False,0.0,Annual,2024-08-15,2,0,True
+TECH-002,Multi-Factor Authentication,MFA,MFA required for all administrative access,Implemented,2021-03-15,,,True,98.0,Quarterly,2024-09-20,0,0,True
+TECH-003,Security Monitoring,Monitoring,24/7 security monitoring and alerting,Implemented,2020-01-01,,,False,0.0,Continuous,2024-10-15,5,0,True
+TECH-004,Intrusion Detection,IncidentDetection,IDS/IPS for network threat detection,Implemented,2021-06-01,,,False,0.0,Continuous,2024-10-15,3,1,True
+TECH-005,Vulnerability Scanning,VulnerabilityAssessment,Weekly vulnerability scanning and patching,Implemented,2020-09-01,,,False,0.0,Weekly,2024-10-22,1,0,True

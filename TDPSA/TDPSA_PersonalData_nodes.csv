@@ -1,0 +1,9 @@
+data_id,data_category,classification_level,is_sensitive_data,collection_method,collection_purpose,disclosed_to_consumer,processing_purpose,compatible_with_disclosed,consent_required,consent_obtained,retention_period_days,third_party_sharing,third_party_categories,security_classification
+PD-001,Name,Internal,False,DirectCollection,Account management,True,Identity verification,True,False,False,730,False,None,Standard
+PD-002,Contact,Internal,False,DirectCollection,Communication,True,Service delivery,True,False,False,365,False,None,Standard
+PD-003,Financial,Confidential,True,DirectCollection,Payment processing,True,Transaction processing,True,True,True,1095,True,Payment processors; Analytics,Enhanced
+PD-004,Biometric,Sensitive,True,DirectCollection,Authentication,True,Security,True,True,True,730,False,None,Maximum
+PD-005,Health,Restricted,True,ThirdPartySource,Health services,True,Medical records,True,True,True,2555,True,Healthcare providers; Insurers,Maximum
+PD-006,Behavioral,Confidential,False,Inference,Personalization,False,User profiling,False,False,False,180,True,Ad networks; Marketing partners,Standard
+PD-007,Location,Confidential,True,DirectCollection,Location services,True,Location tracking,True,True,True,90,False,None,Enhanced
+PD-008,Demographic,Internal,False,Inference,Demographic analysis,True,Analytics,True,False,False,365,False,None,Standard

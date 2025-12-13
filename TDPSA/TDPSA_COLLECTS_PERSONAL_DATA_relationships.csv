@@ -1,0 +1,7 @@
+source_entity_id,relationship_type,target_data_id,collection_date,collection_method,frequency,disclosed_purpose,purpose_legitimate,minimization_applied
+ENT-001,COLLECTS_PERSONAL_DATA,PD-001,2020-03-15,DirectCollection,Continuous,Account services,True,True
+ENT-002,COLLECTS_PERSONAL_DATA,PD-002,2018-01-10,DirectCollection,Daily,Transactions and marketing,True,False
+ENT-003,COLLECTS_PERSONAL_DATA,PD-003,2021-06-20,DirectCollection,Continuous,System operations,True,True
+ENT-004,COLLECTS_PERSONAL_DATA,PD-004,2019-08-05,DirectCollection,Continuous,Financial services,True,True
+ENT-005,COLLECTS_PERSONAL_DATA,PD-005,2022-02-01,Inference,Continuous,Personalization,False,False
+ENT-006,COLLECTS_PERSONAL_DATA,PD-006,2020-09-15,DirectCollection,AsNeeded,Healthcare delivery,True,True

@@ -1,0 +1,5 @@
+policy_id,policy_name,policy_type,description,creation_date,last_revision_date,next_review_date,version_number,key_procedures,acknowledgment_required,training_required,regulatory_mandate,effectiveness_rating,accessible_to_all_staff
+POL-001,Data Security Policy,DataSecurityPolicy,Comprehensive data security requirements,2020-01-01,2024-09-15,2025-09-15,3.2,Classification; Encryption; Access controls,True,True,SHIELD,Effective,True
+POL-002,Incident Response Policy,IncidentResponsePolicy,Procedures for detecting and responding to breaches,2020-12-01,2024-08-20,2025-08-20,2.5,Detection; Notification; Investigation; Recovery,True,True,SHIELD,Effective,True
+POL-003,Employee Training Policy,EmployeeTrainingPolicy,Mandatory annual security training,2021-01-15,2024-09-01,2025-09-01,2.1,Annual training; Phishing; Password security,True,True,SHIELD,PartiallyEffective,True
+POL-004,Vendor Management Policy,VendorManagementPolicy,Third-party security assessment and management,2021-06-01,2024-07-15,2025-07-15,1.8,Assessment; Contract; Monitoring; Audit,True,False,SHIELD,Effective,True

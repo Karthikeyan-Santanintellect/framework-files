@@ -1,0 +1,5 @@
+source_entity_id,relationship_type,target_audit_id,audit_initiation_date,audit_start_date,audit_completion_date,audit_type,findings_count,remediation_required,remediation_deadline,compliance_achieved
+ENT-001,UNDERGOES_COMPLIANCE_AUDIT,AUDIT-001,2024-01-01,2024-01-15,2024-03-15,Internal,5,True,2024-05-15,True
+ENT-002,UNDERGOES_COMPLIANCE_AUDIT,AUDIT-002,2024-04-01,2024-04-01,2024-05-31,External,3,True,2024-07-01,True
+ENT-003,UNDERGOES_COMPLIANCE_AUDIT,AUDIT-003,2024-07-01,2024-07-01,2024-08-15,RegulatoryConducted,0,False,,True
+ENT-004,UNDERGOES_COMPLIANCE_AUDIT,AUDIT-004,2024-08-15,2024-08-15,2024-09-30,ThirdPartyAssessment,2,False,,True

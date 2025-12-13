@@ -1,0 +1,6 @@
+response_id,breach_associated_id,response_step,step_name,step_type,start_date,completion_date,responsible_person,responsible_team,actions_taken,status,time_to_complete_hours,notification_sent,notification_date
+RESP-001,BREACH-001,1,Detection,Detection,2024-06-15,2024-06-15,Security Team,SOC,Alert triggered; Investigation initiated,Completed,1,False,
+RESP-002,BREACH-001,2,Containment,Containment,2024-06-16,2024-06-19,CISO,Executive,Systems isolated; Access revoked,Completed,72,False,
+RESP-003,BREACH-001,3,Investigation,Investigation,2024-06-20,2024-07-10,Forensics Firm,External,Forensic analysis; Scope determination,Completed,360,False,
+RESP-004,BREACH-002,1,Detection,Detection,2024-07-20,2024-07-25,Monitoring System,SOC,Alert triggered; Investigation initiated,Completed,120,False,
+RESP-005,BREACH-002,2,Notification,Notification,2024-07-25,2024-08-20,Legal Team,Legal/Communications,Notification letters prepared; Sent,Completed,600,True,2024-08-20

@@ -1,0 +1,3 @@
+source_breach_id,relationship_type,agency_name,report_date,report_method,report_number,confirmation_received,confirmation_date
+BREACH-001,REPORTS_TO_GOVERNMENT,NYSAG,2024-06-25,Email,NYS-2024-001,True,2024-06-27
+BREACH-002,REPORTS_TO_GOVERNMENT,NYSAG,2024-07-28,OnlinePortal,NYS-2024-002,True,2024-07-29

@@ -1,0 +1,5 @@
+source_program_id,relationship_type,assessment_date,next_assessment_date,assessment_scope,internal_risks_identified,external_risks_identified,risk_mitigation_plan_exists
+PROG-001,CONDUCTS_RISK_ASSESSMENT,2024-08-15,2025-08-15,All systems; All data types,3,2,True
+PROG-002,CONDUCTS_RISK_ASSESSMENT,2024-09-20,2024-12-20,Healthcare systems; Patient data,2,1,True
+PROG-003,CONDUCTS_RISK_ASSESSMENT,2024-09-01,2025-09-01,IT infrastructure; Customer data,5,3,True
+PROG-004,CONDUCTS_RISK_ASSESSMENT,2024-08-10,2025-08-10,Retail systems; Cardholder data,7,4,False

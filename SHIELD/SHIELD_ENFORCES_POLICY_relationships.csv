@@ -1,0 +1,5 @@
+source_controller_id,relationship_type,target_policy_id,enforcement_start_date,coverage_percentage,violation_count_reported,enforcement_effectiveness,last_enforcement_review
+CTR-001,ENFORCES_POLICY,POL-001,2020-01-01,100.0,0,Effective,2024-09-15
+CTR-002,ENFORCES_POLICY,POL-002,2020-12-01,100.0,2,Effective,2024-08-20
+CTR-003,ENFORCES_POLICY,POL-001,2021-01-15,95.0,5,PartiallyEffective,2024-09-01
+CTR-004,ENFORCES_POLICY,POL-003,2021-01-15,85.0,8,PartiallyEffective,2024-07-15

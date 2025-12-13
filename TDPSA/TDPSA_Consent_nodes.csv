@@ -1,0 +1,7 @@
+consent_id,consent_timestamp,affirmative_action_taken,consent_type,consent_valid,dark_pattern_used,consent_method,scope_of_consent,expiration_date,revocation_allowed,revocation_method,renewal_needed,renewal_date,compliance_with_coppa,parental_verification_completed,freely_given,specific,informed,consumer_can_withdraw
+CONS-001,2024-01-15 10:30:00,True,ExplicitOptIn,True,False,Checkbox,Targeted advertising and analytics,2025-01-15,True,Email; Web Portal,True,2025-01-15,False,False,True,True,True,True
+CONS-002,2024-02-20 14:45:00,True,ExplicitOptIn,True,False,WrittenStatement,Data sale to business partners,2025-02-20,True,Email; Phone,True,2025-02-20,False,False,True,True,True,True
+CONS-003,2024-03-01 09:15:00,True,ExplicitOptIn,True,False,EmailConfirm,Sensitive data processing,2025-03-01,True,Email,True,2025-03-01,False,False,True,True,True,True
+CONS-004,2024-03-25 16:20:00,True,OptOut,True,False,Website,Opt out of all data sales,,True,Web Portal,False,,False,False,True,True,True,True
+CONS-005,2024-04-10 11:00:00,True,ExplicitOptIn,True,False,Checkbox,Behavioral profiling,2025-04-10,True,Email; Web Portal,True,2025-04-10,False,False,True,True,True,True
+CONS-006,2024-05-05 13:30:00,True,ExplicitOptIn,True,False,SignedForm,Health data processing,2026-05-05,True,Email; Mail,False,,True,True,True,True,True,True

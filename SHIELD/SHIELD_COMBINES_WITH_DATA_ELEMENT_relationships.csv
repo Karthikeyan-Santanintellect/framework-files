@@ -1,0 +1,5 @@
+source_info_id,relationship_type,target_info_id,combination_date,combination_justification,breach_trigger_if_combined,protection_level_required,common_combination
+PI-001,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,SSN + Name + Address = High risk,True,Maximum,True
+PI-002,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,DL + Name + Address = High risk,True,Maximum,True
+PI-003,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,Financial + Name + SSN = Critical risk,True,Maximum,True
+PI-004,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,Biometric + Name = Identification,True,Maximum,True

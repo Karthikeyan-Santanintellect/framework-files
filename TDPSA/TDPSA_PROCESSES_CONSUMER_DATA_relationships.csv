@@ -1,0 +1,7 @@
+source_entity_id,relationship_type,target_consumer_id,relationship_start_date,relationship_status,data_processing_scope,legal_basis,processing_established,consent_obtained,consent_date
+ENT-001,PROCESSES_CONSUMER_DATA,CONS-001,2020-03-15,Active,Account management; Analytics,Consent,True,True,2020-03-20
+ENT-002,PROCESSES_CONSUMER_DATA,CONS-002,2018-01-10,Active,Retail transactions; Targeted ads,ContractPerformance,True,False,
+ENT-003,PROCESSES_CONSUMER_DATA,CONS-003,2021-06-20,Active,System services; Data storage,Consent,True,True,2021-06-25
+ENT-004,PROCESSES_CONSUMER_DATA,CONS-004,2019-08-05,Active,Financial services; Analytics,ContractPerformance,True,False,
+ENT-005,PROCESSES_CONSUMER_DATA,CONS-005,2022-02-01,Active,Marketing; Profiling,Consent,True,True,2022-02-05
+ENT-006,PROCESSES_CONSUMER_DATA,CONS-006,2020-09-15,Active,Health records; Treatment,LegalObligation,True,True,2020-09-20

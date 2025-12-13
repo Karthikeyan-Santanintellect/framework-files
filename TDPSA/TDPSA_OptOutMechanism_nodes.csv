@@ -1,0 +1,4 @@
+optout_id,optout_type,optout_method,optout_request_date,optout_effective_date,universal_opt_out_signal,signal_type,signal_verified,commercial_reasonableness,optout_confirmation_provided,optout_scope_explained,optout_duration,optout_revocation_allowed,revocation_method,enforcement_status,violation_date,violation_description,consumer_notification_sent,remediation_completed,remediation_date
+OPTOUT-001,TargetedAdvertising,Website,2024-04-01 10:00:00,2024-04-15,False,None,False,True,True,Targeted advertising suspended,Indefinite,True,Email; Web Portal,True,,,False,False,
+OPTOUT-002,DataSale,UniversalOptOut,2024-05-15 14:30:00,2024-05-20,True,GlobalPrivacyControl,True,True,True,All data sales halted,Indefinite,True,Web Portal,True,,,False,False,
+OPTOUT-003,Profiling,Website,2024-06-01 09:15:00,2024-06-15,False,None,False,True,True,Profiling and analytics disabled,Indefinite,True,Email; Web Portal,False,2024-08-01,Profiling continued despite opt-out,True,False,

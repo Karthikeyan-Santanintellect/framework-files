@@ -1,0 +1,6 @@
+safeguard_id,safeguard_name,safeguard_category,description,implementation_status,implementation_date,responsible_person,frequency_of_review,last_review_date,effectiveness_score,compliance_with_shield
+ADMIN-001,Annual Risk Assessment,RiskAssessment,Formal annual risk assessment of data security,Implemented,2020-01-01,Dr. Sarah Chen,Annual,2024-08-15,92.0,True
+ADMIN-002,Data Classification Scheme,PolicyAndProcedures,Classification of data by sensitivity level,Implemented,2020-06-15,Jennifer Adams,Quarterly,2024-09-20,88.0,True
+ADMIN-003,Employee Security Training,StaffTraining,Annual mandatory security awareness training,Implemented,2021-03-01,Michael Rodriguez,Annual,2024-09-01,85.0,True
+ADMIN-004,Vendor Management Program,ServiceProviderManagement,Vendor security assessment and monitoring,InProgress,2023-01-15,Robert Williams,Quarterly,2024-08-10,78.0,False
+ADMIN-005,Incident Response Plan,IncidentResponse,Documented procedures for breach response,Implemented,2020-12-01,Thomas Kelly,Biennial,2024-07-15,90.0,True

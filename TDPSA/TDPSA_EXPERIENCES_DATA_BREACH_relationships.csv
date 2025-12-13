@@ -1,0 +1,4 @@
+source_consumer_id,relationship_type,target_breach_id,breach_date,notification_sent_date,data_compromised,financial_impact,identity_theft_risk,credit_monitoring_offered,legal_action_status
+CONS-001,EXPERIENCES_DATA_BREACH,BREACH-001,2024-06-10,2024-06-25,Email; Names; Addresses,0.0,False,True,None
+CONS-002,EXPERIENCES_DATA_BREACH,BREACH-002,2024-07-15,2024-07-25,All personal data; Payment info; Health,15000.0,True,True,Class action filed
+CONS-003,EXPERIENCES_DATA_BREACH,BREACH-003,2024-08-05,2024-08-15,Email address,0.0,False,False,None

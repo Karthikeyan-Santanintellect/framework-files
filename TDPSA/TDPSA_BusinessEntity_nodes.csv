@@ -1,0 +1,7 @@
+entity_id,legal_name,entity_type,industry_classification,employee_count,annual_revenue,sba_small_business_status,gdpr_tdpsa_compliance_status,data_controller_designation,data_processor_designation,registration_date,headquarters_location,texas_operations_presence,personal_data_processing,sensitive_data_processing,children_data_processing,targeted_advertising_processing,personal_data_sale,profiling_processing,last_compliance_audit_date,compliance_status,designated_compliance_officer
+ENT-001,TexasTech Solutions,Corporation,5112,250,15000000.0,False,True,True,False,2020-03-15,"Austin, TX",True,True,False,True,True,False,True,2024-09-15,Compliant,Sarah Chen
+ENT-002,Lone Star Retail Corp,Corporation,4523,1200,85000000.0,False,False,True,False,2018-01-10,"Houston, TX",True,True,True,False,True,True,True,2024-08-20,Compliant,Michael Rodriguez
+ENT-003,Houston Data Systems,LLC,5182,85,8500000.0,True,True,True,True,2021-06-20,"Dallas, TX",True,True,True,False,False,False,True,2024-10-01,Compliant,Jennifer Lee
+ENT-004,Dallas Finance Group,Corporation,5231,450,45000000.0,False,True,True,False,2019-08-05,"Dallas, TX",True,True,True,False,False,False,False,2024-07-10,Compliant,Robert Taylor
+ENT-005,Austin Marketing Inc,LLC,5418,120,12000000.0,True,False,True,True,2022-02-01,"Austin, TX",True,True,False,True,True,True,True,2024-09-01,Remediation,Amanda White
+ENT-006,San Antonio Health Tech,Corporation,6241,95,9500000.0,True,True,True,False,2020-09-15,"San Antonio, TX",True,True,True,False,False,False,False,2024-06-15,Compliant,Dr. James Martinez

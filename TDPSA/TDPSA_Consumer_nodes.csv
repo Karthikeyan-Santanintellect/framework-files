@@ -1,0 +1,8 @@
+consumer_id,texas_residency_status,age_group,known_child_status,parental_consent_obtained,contact_email,contact_phone,request_history_count,last_request_date,opt_out_status,universal_opt_out_signal_status,data_breach_affected,dispute_status,discrimination_complaint
+CONS-001,True,Adult,False,False,john@example.com,[hashed],1,2024-08-15,False,False,False,False,False
+CONS-002,True,Adult,False,False,jane@example.com,[hashed],2,2024-09-20,True,True,False,False,False
+CONS-003,True,Child_Under_13,True,True,[hashed],[hashed],0,,False,False,False,False,False
+CONS-004,True,Adult,False,False,bob@example.com,[hashed],3,2024-10-01,False,False,True,False,False
+CONS-005,True,Child_13_17,True,True,[hashed],[hashed],0,,False,False,False,False,False
+CONS-006,True,Adult,False,False,alice@example.com,[hashed],1,2024-07-15,True,True,False,True,False
+CONS-007,True,Adult,False,False,charlie@example.com,[hashed],2,2024-09-10,False,False,False,False,False

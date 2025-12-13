@@ -1,0 +1,5 @@
+source_controller_id,relationship_type,target_provider_id,engagement_start_date,engagement_end_date,contract_terms_reviewed,security_agreement_signed,audit_rights_granted,last_audit_date
+CTR-001,MANAGES_THIRD_PARTY,PROV-001,2021-01-15,2026-01-15,True,True,True,2024-08-01
+CTR-002,MANAGES_THIRD_PARTY,PROV-002,2020-06-20,2025-12-31,True,True,True,2024-09-15
+CTR-003,MANAGES_THIRD_PARTY,PROV-003,2022-03-10,2025-03-10,True,True,True,2024-07-20
+CTR-004,MANAGES_THIRD_PARTY,PROV-004,2023-01-05,2025-12-31,False,False,False,

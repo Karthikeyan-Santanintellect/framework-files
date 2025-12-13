@@ -1,0 +1,7 @@
+source_entity_id,relationship_type,target_request_id,response_deadline,response_date,response_method,extension_requested,extension_granted,extended_deadline,request_fulfilled
+ENT-001,RESPONDS_TO_CONSUMER_REQUEST,REQ-001,2024-02-24,2024-02-20,Email,False,False,,True
+ENT-002,RESPONDS_TO_CONSUMER_REQUEST,REQ-002,2024-04-01,2024-03-30,Email,False,False,,True
+ENT-003,RESPONDS_TO_CONSUMER_REQUEST,REQ-003,2024-04-15,2024-04-10,Email,False,False,,False
+ENT-004,RESPONDS_TO_CONSUMER_REQUEST,REQ-004,2024-05-04,2024-04-28,Download,False,False,,True
+ENT-005,RESPONDS_TO_CONSUMER_REQUEST,REQ-005,2024-05-20,2024-05-15,Email,False,False,,True
+ENT-006,RESPONDS_TO_CONSUMER_REQUEST,REQ-006,2024-06-24,,,True,True,2024-07-24,False
