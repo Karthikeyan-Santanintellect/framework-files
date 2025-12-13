@@ -1,10 +1,10 @@
 chapter_id,chapter_number,title,description
-CH-01,I,Preliminary,Introduction and definitions
-CH-02,II,Data Fiduciary,Fiduciary obligations and responsibilities
-CH-03,III,Data Principal Rights,Rights of data principals
-CH-04,IV,Significant Data Fiduciaries,Obligations of significant fiduciaries
-CH-05,V,Data Processors,Processor roles and obligations
-CH-06,VI,Data Protection Impact Assessment,Assessment requirements
-CH-07,VII,Children and Vulnerable Persons,Special protections
-CH-08,VIII,Exemptions and Restricted Processing,Legal exemptions
-CH-09,IX,Penalties and Enforcement,Penalties and enforcement mechanisms
+CHAP-1,1,Preliminary,"Definitions and scope of applicability"
+CHAP-2,2,Obligations of Data Fiduciary,"Core responsibilities including consent, notice, and data handling"
+CHAP-3,3,Rights and Duties of Data Principal,"Rights to access, correction, erasure, and grievance redressal"
+CHAP-4,4,Special Provisions,"Exemptions for state security, research, and startups"
+CHAP-5,5,Data Protection Board of India,"Establishment, composition, and powers of the Board"
+CHAP-6,6,Powers and Functions of Board,"Inquiry, penalty imposition, and direction issuance"
+CHAP-7,7,Appeal and Alternative Dispute Resolution,"Appellate Tribunal procedures and mediation options"
+CHAP-8,8,Penalties and Adjudication,"Schedule of penalties for non-compliance"
+CHAP-9,9,Miscellaneous,"Power to make rules, amendments, and override effect"

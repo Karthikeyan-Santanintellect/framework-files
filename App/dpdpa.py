@@ -142,12 +142,33 @@ ON CREATE SET
   ea.applicable_section = row.applicable_section;
 """
 #regulation->chapter
-regulation_chapter = """
+regulation_chapter ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation{regional_standard_and_regulation_id: row.regional_standard_and_regulation_id})
-MATCH (c:Chapter {chapter_id: row.chapter_id})
+MATCH (reg:RegionalStandardAndRegulation {
+  regional_standard_and_regulation_id: 'dpdpa_2023'
+})
+MATCH (c:Chapter {
+  regional_standard_and_regulation_id: 'dpdpa_2023',
+  chapter_id: row.chapter_id
+})
 MERGE (reg)-[:REGULATION_HAS_CHAPTER]->(c);
 """
+
+#chapter->section
+chapter_section ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (c:Chapter {regional_standard_and_regulation_id:'dpdpa_2023', chapter_id: row.chapter_id})
+MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})
+MERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);
+"""
+#section->requirement
+section_requirement ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})
+MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
+MERGE (sec)-[:SECTION_HAS_REQUIREMENT]->(req);
+"""
+
 #requirement->roles
 requirement_roles ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -312,6 +333,11 @@ time.sleep(2)
 client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Chapter_Relationship_FIXED.csv"))
 time.sleep(2)
 
+client.query(chapter_section.replace('$file_path',"MATCH (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})\nMATCH (c:Chapter {chapter_id: row.chapter_id})\nMERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);"))
+time.sleep(2)
+
+client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Section_Requirement_Relationship_CORRECT.csv"))
+time.sleep(2)
                                         
 client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Roles.csv"))
 time.sleep(2)
