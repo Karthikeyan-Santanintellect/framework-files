@@ -1,16 +1,16 @@
-#Regulation
+#Regulation 
 regulation = """
 MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA'})
 ON CREATE SET
     reg.name = "Texas Data Privacy and Security Act ",
     reg.version = "2023",
-    reg.effective_date = date("2022-01-01"),
     reg.status = "Active",
     reg.jurisdiction = "Texas, United States",
     reg.effective_date = date("2024-07-01"),
     reg.enactment_date = date("2023-06-18"),
     reg.description = "Comprehensive state consumer data privacy law that regulates the collection, use, processing, and sale of personal data of Texas residents. Grants consumers rights to access, correct, delete, and port their personal data, and to opt-out of targeted advertising, data sales, and profiling. Requires businesses to obtain consent for processing sensitive data and conduct data protection assessments for high-risk processing activities.";
 """
+
 #Business_entity
 business_entity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -81,10 +81,11 @@ ON CREATE SET
     c.record_updated_date = date(row.record_updated_date),
     c.account_status = row.account_status;
 """
+
 #Personal_data
 personal_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pd:PersonalData {regional_standard_regulation_id: 'TDPSA' ,data_id: row.data_id})
+MERGE (pd:PersonalData {regional_standard_regulation_id: 'TDPSA', data_id: row.data_id})
 ON CREATE SET
     pd.data_category = row.data_category,
     pd.classification_level = row.classification_level,
@@ -102,10 +103,11 @@ ON CREATE SET
     pd.third_party_categories = split(row.third_party_categories, ','),
     pd.security_classification = row.security_classification;
 """
-#Sensitive_data
+
+#Sensitive_data 
 sensitive_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sd:SensitiveData {regional_standard_regulation_id: 'TDPSA', sd.sensitive_id = row.sensitive_id})
+MERGE (sd:SensitiveData {regional_standard_regulation_id: 'TDPSA', sensitive_id: row.sensitive_id})
 ON CREATE SET
     sd.data_type = row.data_type,
     sd.description = row.description,
@@ -122,6 +124,7 @@ ON CREATE SET
     sd.risk_assessment_conducted = toBoolean(row.risk_assessment_conducted),
     sd.risk_level = row.risk_level;
 """
+
 #Datacategory 
 data_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -138,10 +141,11 @@ ON CREATE SET
     dc.retention_guidance_months = toInteger(row.retention_guidance_months),
     dc.audit_frequency_months = toInteger(row.audit_frequency_months);
 """
-#processing_activity
+
+#processing_activity 
 processing_activity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pa:ProcessingActivity {regional_standard_regulation_id: 'TDPSA',pa.activity_id = row.activity_id})
+MERGE (pa:ProcessingActivity {regional_standard_regulation_id: 'TDPSA', activity_id: row.activity_id})
 ON CREATE SET
     pa.activity_name = row.activity_name,
     pa.processing_type = row.processing_type,
@@ -162,10 +166,11 @@ ON CREATE SET
     pa.deletion_process_established = toBoolean(row.deletion_process_established),
     pa.compliance_status = row.compliance_status;
 """
-#consent
+
+#consent 
 consent = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Consent {regional_standard_regulation_id: 'TDPSA',c.consent_id = row.consent_id})
+MERGE (c:Consent {regional_standard_regulation_id: 'TDPSA', consent_id: row.consent_id})
 ON CREATE SET
     c.consent_timestamp = datetime(row.consent_timestamp),
     c.affirmative_action_taken = toBoolean(row.affirmative_action_taken),
@@ -194,12 +199,12 @@ ON CREATE SET
     c.informed = toBoolean(row.informed),
     c.consumer_can_withdraw = toBoolean(row.consumer_can_withdraw);
 """
-#privacy_notice
+
+#privacy_notice 
 privacy_notice = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pn:PrivacyNotice {regional_standard_regulation_id: 'TDPSA',pn.notice_id = row.notice_id})
+MERGE (pn:PrivacyNotice {regional_standard_regulation_id: 'TDPSA', notice_id: row.notice_id})
 ON CREATE SET
-    pn.notice_id = row.notice_id,
     pn.notice_version = row.notice_version,
     pn.effective_date = date(row.effective_date),
     pn.last_updated_date = date(row.last_updated_date),
@@ -226,10 +231,11 @@ ON CREATE SET
     pn.compliance_verified = toBoolean(row.compliance_verified),
     pn.last_compliance_review_date = date(row.last_compliance_review_date);
 """
-#Data_protection_assessment
+
+#Data_protection_assessment 
 data_protection_assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'TDPSA',dpa.assessment_id = row.assessment_id})
+MERGE (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'TDPSA', assessment_id: row.assessment_id})
 ON CREATE SET
     dpa.assessment_type = row.assessment_type,
     dpa.assessment_date = date(row.assessment_date),
@@ -263,10 +269,11 @@ ON CREATE SET
     dpa.assessment_documentation_complete = toBoolean(row.assessment_documentation_complete),
     dpa.compliant_with_other_laws = toBoolean(row.compliant_with_other_laws);
 """
-#consumer_request
+
+#consumer_request 
 consumer_request = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cr:ConsumerRequest {regional_standard_regulation_id: 'TDPSA',cr.request_id = row.request_id})
+MERGE (cr:ConsumerRequest {regional_standard_regulation_id: 'TDPSA', request_id: row.request_id})
 ON CREATE SET
     cr.request_type = row.request_type,
     cr.request_submission_date = datetime(row.request_submission_date),
@@ -302,10 +309,11 @@ ON CREATE SET
         ELSE date(row.appeal_deadline) 
     END;
 """
-#Data_processor
+
+#Data_processor 
 data_processor = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dp:DataProcessor {regional_standard_regulation_id: 'TDPSA',dp.processor_id = row.processor_id})
+MERGE (dp:DataProcessor {regional_standard_regulation_id: 'TDPSA', processor_id: row.processor_id})
 ON CREATE SET
     dp.processor_name = row.processor_name,
     dp.processor_type = row.processor_type,
@@ -343,10 +351,11 @@ ON CREATE SET
     END,
     dp.data_legacy_period_days = toInteger(row.data_legacy_period_days);
 """
-#Data_breach
+
+#Data_breach 
 data_breach = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (db:DataBreach {regional_standard_regulation_id: 'TDPSA',db.breach_id = row.breach_id})
+MERGE (db:DataBreach {regional_standard_regulation_id: 'TDPSA', breach_id: row.breach_id})
 ON CREATE SET
     db.discovery_date = datetime(row.discovery_date),
     db.occurrence_date = datetime(row.occurrence_date),
@@ -374,10 +383,12 @@ ON CREATE SET
     db.public_disclosure_required = toBoolean(row.public_disclosure_required),
     db.lessons_learned = row.lessons_learned;
 """
-#opt_out_mechanism
+
+#opt_out_mechanism 
 opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA',om.mechanism_id = row.mechanism_id})
+MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA', mechanism_id: row.mechanism_id})
+ON CREATE SET
     om.optout_type = row.optout_type,
     om.optout_method = row.optout_method,
     om.optout_request_date = datetime(row.optout_request_date),
@@ -414,10 +425,11 @@ MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA',om.mechanism
         ELSE date(row.remediation_date) 
     END;
 """
-#Compliance audit
+
+#Compliance audit 
 compliance_audit = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ca:ComplianceAudit {regional_standard_regulation_id: 'TDPSA',ca.audit_id = row.audit_id)
+MERGE (ca:ComplianceAudit {regional_standard_regulation_id: 'TDPSA', audit_id: row.audit_id})
 ON CREATE SET
     ca.audit_type = row.audit_type,
     ca.audit_start_date = date(row.audit_start_date),
@@ -454,6 +466,7 @@ ON CREATE SET
     ca.continuous_monitoring_implemented = toBoolean(row.continuous_monitoring_implemented),
     ca.next_audit_date = date(row.next_audit_date);
 """
+
 #Process_consumer_rel
 process_consumer_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -477,6 +490,7 @@ ON CREATE SET
         ELSE date(row.consent_date) 
     END;
 """
+
 #collects_personal_data
 collects_personal_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -495,6 +509,7 @@ ON CREATE SET
     r.purpose_legitimate = toBoolean(row.purpose_legitimate),
     r.minimization_applied = toBoolean(row.minimization_applied);
 """
+
 #Process_sensitive_data
 process_sensitive_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -514,11 +529,12 @@ ON CREATE SET
     r.access_restrictions = row.access_restrictions,
     r.audit_frequency_months = toInteger(row.audit_frequency_months);
 """
-#obtains_consent_data
+
+#obtains_consent_data - FIXED: Target should be Consent, not Consumer
 obtains_consent_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:BusinessEntity {entity_id: row.source_entity_id})
-MATCH (target:Consumer {consumer_id: row.target_consent_id})
+MATCH (target:Consent {consent_id: row.target_consent_id})
 MERGE (source)-[r:OBTAINS_CONSENT {
     source_id: row.source_entity_id,
     target_id: row.target_consent_id
@@ -533,8 +549,9 @@ ON CREATE SET
     r.specific_purpose_consented = row.specific_purpose_consented,
     r.consent_valid = toBoolean(row.consent_valid);
 """
-#Conducts_processing_activity
-processing_activity = """
+
+#Conducts_processing_activity - FIXED: Renamed variable
+conducts_processing_activity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:BusinessEntity {entity_id: row.source_entity_id})
 MATCH (target:ProcessingActivity {activity_id: row.target_activity_id})
@@ -552,11 +569,12 @@ ON CREATE SET
     r.dpa_completed = toBoolean(row.dpa_completed),
     r.compliance_status = row.compliance_status;
 """
-#requires_data_protection_assessment
+
+#requires_data_protection_assessment - FIXED: Changed dpa_id to assessment_id
 requires_data_protection_assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:ProcessingActivity {activity_id: row.source_activity_id})
-MATCH (target:DataProtectionAssessment {dpa_id: row.target_dpa_id})
+MATCH (target:DataProtectionAssessment {assessment_id: row.target_dpa_id})
 MERGE (source)-[r:REQUIRES_DATA_PROTECTION_ASSESSMENT {
     source_id: row.source_activity_id,
     target_id: row.target_dpa_id
@@ -571,6 +589,7 @@ ON CREATE SET
     r.risk_identified = toBoolean(row.risk_identified),
     r.risk_level = row.risk_level;
 """
+
 #respond_consumer_request
 respond_consumer_request = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -590,6 +609,7 @@ ON CREATE SET
     r.extended_deadline = CASE WHEN row.extended_deadline = '' THEN null ELSE date(row.extended_deadline) END,
     r.request_fulfilled = toBoolean(row.request_fulfilled);
 """
+
 #uses_data_processor
 uses_data_processor = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -610,6 +630,7 @@ ON CREATE SET
     r.subprocessor_agreement_required = toBoolean(row.subprocessor_agreement_required),
     r.audit_rights_included = toBoolean(row.audit_rights_included);
 """
+
 #offers_privacy_notice
 offers_privacy_notice = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -629,6 +650,7 @@ ON CREATE SET
     r.consumer_acknowledged = toBoolean(row.consumer_acknowledged),
     r.acknowledgment_date = CASE WHEN row.acknowledgment_date = '' THEN null ELSE date(row.acknowledgment_date) END;
 """
+
 #PROVIDES_OPT_OUT_MECHANISM
 provides_opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -648,6 +670,7 @@ ON CREATE SET
     r.gpc_support_enabled = CASE WHEN row.gpc_support_enabled = '' THEN null ELSE date(row.gpc_support_enabled) END,
     r.merchant_reasonableness_standard = toBoolean(row.merchant_reasonableness_standard);
 """
+
 #EXPERIENCES_DATA_BREACH
 experiences_data_breach = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -667,6 +690,7 @@ ON CREATE SET
     r.credit_monitoring_offered = toBoolean(row.credit_monitoring_offered),
     r.legal_action_status = row.legal_action_status;
 """
+
 #UNDERGOES_COMPLIANCE_AUDIT
 undergoes_compliance_audit = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -687,6 +711,7 @@ ON CREATE SET
     r.remediation_deadline = CASE WHEN row.remediation_deadline = '' THEN null ELSE date(row.remediation_deadline) END,
     r.compliance_achieved = toBoolean(row.compliance_achieved);
 """
+
 #EXERCISES_CONSUMER_RIGHT
 exercises_consumer_right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -707,9 +732,51 @@ ON CREATE SET
     r.fee_charged = toBoolean(row.fee_charged),
     r.appeal_available = toBoolean(row.appeal_available);
 """
+#personal_data_belongs_to_category
+personal_data_belongs_to_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (source:PersonalData {regional_standard_regulation_id: 'TDPSA', data_id: row.source_data_id})
+MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA', category_id: row.target_category_id})
+MERGE (source)-[r:BELONGS_TO_CATEGORY {
+    source_id: row.source_data_id,
+    target_id: row.target_category_id
+}]->(target)
+ON CREATE SET
+    r.relationship_type = row.relationship_type,
+    r.classification_date = date(row.classification_date),
+    r.primary_category = toBoolean(row.primary_category);
+"""
 
+#sensitive_data_belongs_to_category
+sensitive_data_belongs_to_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA', sensitive_id: row.source_sensitive_id})
+MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA', category_id: row.target_category_id})
+MERGE (source)-[r:BELONGS_TO_CATEGORY {
+    source_id: row.source_sensitive_id,
+    target_id: row.target_category_id
+}]->(target)
+ON CREATE SET
+    r.relationship_type = row.relationship_type,
+    r.classification_date = date(row.classification_date),
+    r.sensitive_category_type = row.sensitive_category_type;
+"""
 
-
+#governed_by
+governed_by = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (source:BusinessEntity {regional_standard_regulation_id: 'TDPSA', entity_id: row.source_entity_id})
+MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: row.target_regulation_id})
+MERGE (source)-[r:GOVERNED_BY {
+    source_id: row.source_entity_id,
+    target_id: row.target_regulation_id
+}]->(target)
+ON CREATE SET
+    r.relationship_type = row.relationship_type,
+    r.compliance_start_date = date(row.compliance_start_date),
+    r.jurisdiction = row.jurisdiction,
+    r.mandatory = toBoolean(row.mandatory);
+"""
 
 import os
 import time
@@ -772,57 +839,61 @@ time.sleep(2)
 client.query(opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OptOutMechanism_nodes.csv'))
 time.sleep(2)
 
-
 client.query(compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ComplianceAudit_nodes.csv'))
 time.sleep(2)
 
-client.query(process_consumer_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships.csv'))  
+client.query(process_consumer_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships.csv'))
+time.sleep(2)
 
 client.query(collects_personal_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_COLLECTS_PERSONAL_DATA_relationships.csv'))
 time.sleep(2)
 
 client.query(process_sensitive_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_SENSITIVE_DATA_relationships.csv'))
-time.sleep(2)  
+time.sleep(2)
 
 client.query(obtains_consent_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OBTAINS_CONSENT_relationships.csv'))
 time.sleep(2)
 
-client.query(processing_activity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ProcessingActivity_nodes.csv'))
+client.query(conducts_processing_activity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_CONDUCTS_PROCESSING_ACTIVITY_relationships.csv'))
 time.sleep(2)
 
 client.query(requires_data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_REQUIRES_DATA_PROTECTION_ASSESSMENT_relationships.csv'))
-time.sleep(2)   
+time.sleep(2)
 
 client.query(respond_consumer_request.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_RESPONDS_TO_CONSUMER_REQUEST_relationships.csv'))
-time.sleep(2)   
-
-client.query(uses_data_processor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_USES_DATA_PROCESSOR_relationships.csv'))    
-time.sleep(2)   
-
-client.query(offers_privacy_notice.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OFFERS_PRIVACY_NOTICE_relationships.csv'))    
 time.sleep(2)
 
-client.query(provides_opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Controls.csv'))
-time.sleep(2)   
-
-client.query(experiences_data_breach.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Control_Systems.csv'))
+client.query(uses_data_processor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_USES_DATA_PROCESSOR_relationships.csv'))
 time.sleep(2)
 
-client.query(undergoes_compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Processes.csv'))
+client.query(offers_privacy_notice.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OFFERS_PRIVACY_NOTICE_relationships.csv'))
 time.sleep(2)
 
-client.query(exercises_consumer_right.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_IncentivePrograms.csv'))
+client.query(provides_opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROVIDES_OPT_OUT_MECHANISM_relationships.csv'))
 time.sleep(2)
 
+client.query(experiences_data_breach.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_EXPERIENCES_DATA_BREACH_relationships.csv'))
+time.sleep(2)
 
+client.query(undergoes_compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_UNDERGOES_COMPLIANCE_AUDIT_relationships.csv'))
+time.sleep(2)
 
+client.query(exercises_consumer_right.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_EXERCISES_CONSUMER_RIGHT_relationships.csv'))
+time.sleep(2)
 
+client.query(personal_data_belongs_to_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_PersonalData.csv'))
+time.sleep(2)
 
+client.query(sensitive_data_belongs_to_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_SensitiveData.csv'))
+time.sleep(2)
+
+client.query(governed_by.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_GOVERNED_BY_relationships.csv'))
+time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
+res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]-()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
@@ -851,16 +922,4 @@ with open('tdpsa.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(res, default=str, indent=2))
 logger.info("✓ Exported graph data to tdpsa.json")
 
-
 client.close()
-
-
-
-
-
-
-    
-
-
-
-
