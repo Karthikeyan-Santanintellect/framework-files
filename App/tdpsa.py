@@ -630,7 +630,7 @@ ON CREATE SET
     r.acknowledgment_date = CASE WHEN row.acknowledgment_date = '' THEN null ELSE date(row.acknowledgment_date) END;
 """
 #PROVIDES_OPT_OUT_MECHANISM
-offers_opt_out_mechanism = """
+provides_opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:BusinessEntity {entity_id: row.source_entity_id})
 MATCH (target:OptOutMechanism {mechanism_id: row.target_mechanism_id})
@@ -733,123 +733,88 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles.csv'))
+client.query(business_entity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BusinessEntity_nodes.csv'))
 time.sleep(2)
 
-client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles.csv'))
+client.query(consumer.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consumer_nodes.csv'))
 time.sleep(2)
 
-client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections.csv'))
+client.query(personal_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PersonalData_nodes.csv'))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements.csv'))
+client.query(sensitive_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_SensitiveData_nodes.csv'))
 time.sleep(2)
 
-client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
+client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DATACATEGORY.csv'))
 time.sleep(2)
 
-client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_DataCategories.csv'))
+client.query(processing_activity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ProcessingActivity_nodes.csv'))
 time.sleep(2)
 
-client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Safeguards.csv'))
+client.query(consent.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consent_nodes.csv'))
 time.sleep(2)
 
-client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
+client.query(privacy_notice.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PrivacyNotice_nodes.csv'))
 time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions.csv'))
+client.query(data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProtectionAssessment_nodes.csv'))
 time.sleep(2)
 
-client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms.csv'))
+client.query(consumer_request.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ConsumerRequest_nodes.csv'))
 time.sleep(2)
 
-client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria.csv'))
+client.query(data_processor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProcessor_nodes.csv'))
 time.sleep(2)
 
-client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs.csv'))
+client.query(data_breach.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataBreach_nodes.csv'))
 time.sleep(2)
 
-client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies.csv'))
-time.sleep(2)
-
-client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls.csv'))
-time.sleep(2)
-
-client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems.csv'))
+client.query(opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OptOutMechanism_nodes.csv'))
 time.sleep(2)
 
 
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Processes.csv'))
+client.query(compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ComplianceAudit_nodes.csv'))
 time.sleep(2)
 
-client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements.csv'))  
+client.query(process_consumer_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships.csv'))  
 
-client.query(regulation_title_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Regulation_Titles.csv'))
+client.query(collects_personal_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_COLLECTS_PERSONAL_DATA_relationships.csv'))
 time.sleep(2)
 
-client.query(title_subtitle_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_Subtitles.csv'))
+client.query(process_sensitive_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_SENSITIVE_DATA_relationships.csv'))
+time.sleep(2)  
+
+client.query(obtains_consent_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OBTAINS_CONSENT_relationships.csv'))
 time.sleep(2)
 
-client.query(subtitle_section_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitle_Sections.csv'))
+client.query(processing_activity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ProcessingActivity_nodes.csv'))
+time.sleep(2)
+
+client.query(requires_data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_REQUIRES_DATA_PROTECTION_ASSESSMENT_relationships.csv'))
 time.sleep(2)   
 
-client.query(section_requirement_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Section_Requirements.csv'))
-time.sleep(2)
-
-client.query(requirement_role_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Roles.csv'))
-time.sleep(2)
-
-client.query(requirement_data_category_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Data.csv'))
+client.query(respond_consumer_request.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_RESPONDS_TO_CONSUMER_REQUEST_relationships.csv'))
 time.sleep(2)   
 
-client.query(requirement_safeguard_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Safeguards.csv'))
+client.query(uses_data_processor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_USES_DATA_PROCESSOR_relationships.csv'))    
 time.sleep(2)   
 
-client.query(requirement_event_type_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Events.csv'))    
+client.query(offers_privacy_notice.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OFFERS_PRIVACY_NOTICE_relationships.csv'))    
+time.sleep(2)
+
+client.query(provides_opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Controls.csv'))
 time.sleep(2)   
 
-client.query(requirement_policy_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Policies.csv'))    
+client.query(experiences_data_breach.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Control_Systems.csv'))
 time.sleep(2)
 
-client.query(requirement_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Controls.csv'))
-time.sleep(2)   
-
-client.query(control_system_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Control_Systems.csv'))
+client.query(undergoes_compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Processes.csv'))
 time.sleep(2)
 
-client.query(requirement_process_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Processes.csv'))
+client.query(exercises_consumer_right.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_IncentivePrograms.csv'))
 time.sleep(2)
 
-client.query(title_incentive_program_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_IncentivePrograms.csv'))
-time.sleep(2)
 
-client.query(incentive_program_meaningful_use_criterion_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentiveProgram_MeaningfulUseCriteria.csv'))
-time.sleep(2)
-
-client.query(requirement_meaningful_use_criterion_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_MeaningfulUseCriteria.csv'))
-time.sleep(2)
-
-client.query(requirement_enforcement_action_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Enforcement.csv'))
-time.sleep(2)
-
-client.query(section_enforcement_action_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Section_Enforcement.csv'))
-time.sleep(2)
-
-client.query(requirements_implementation_spec_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_ImplementationSpecs.csv'))
-time.sleep(2)
-
-client.query(implementation_spec_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpec_Controls.csv'))
-time.sleep(2)
-
-client.query(policy_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policy_Controls.csv'))
-time.sleep(2)
-
-client.query(process_system_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Process_Systems.csv'))
-time.sleep(2)
-
-client.query(requirement_external_framework_requirements_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Mapping.csv'))
-time.sleep(2)   
- 
 
 
 

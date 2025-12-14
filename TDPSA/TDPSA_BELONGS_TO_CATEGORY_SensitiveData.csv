@@ -1,0 +1,5 @@
+source_sensitive_id,target_category_id,relationship_type,classification_date,sensitive_category_type
+SENS-001,CAT-006,BELONGS_TO_CATEGORY,2024-01-10,Biometric
+SENS-002,CAT-007,BELONGS_TO_CATEGORY,2024-02-15,Health
+SENS-003,CAT-008,BELONGS_TO_CATEGORY,2024-03-20,Financial
+SENS-004,CAT-009,BELONGS_TO_CATEGORY,2024-04-25,Geolocation
