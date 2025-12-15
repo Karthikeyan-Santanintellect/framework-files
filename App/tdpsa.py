@@ -166,7 +166,7 @@ ON CREATE SET
     pa.deletion_process_established = toBoolean(row.deletion_process_established),
     pa.compliance_status = row.compliance_status;
 """
-
+#consent
 consent = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (co:Consent {regional_standard_regulation_id: 'TDPSA', consent_id: row.consent_id})
@@ -184,7 +184,7 @@ ON CREATE SET
         ELSE date(row.expiration_date) 
     END,
     co.revocation_allowed = toBoolean(row.revocation_allowed),
-    co.revocation_method = split(row.revocation_method, ';'),
+    co.revocation_method = [method IN split(row.revocation_method, ';') | trim(method)],
     co.renewal_needed = toBoolean(row.renewal_needed),
     co.renewal_date = CASE 
         WHEN row.renewal_date = '' OR row.renewal_date IS NULL 
@@ -198,6 +198,7 @@ ON CREATE SET
     co.informed = toBoolean(row.informed),
     co.consumer_can_withdraw = toBoolean(row.consumer_can_withdraw);
 """
+
 
 
 #privacy_notice 
@@ -847,7 +848,7 @@ time.sleep(2)
 client.query(processing_activity.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ProcessingActivity_nodes.csv'))
 time.sleep(2)
 
-client.query(consent.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consent_nodes.csv'))
+client.query(consent.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consent.csv'))
 time.sleep(2)
 
 client.query(privacy_notice.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PrivacyNotice_nodes.csv'))
