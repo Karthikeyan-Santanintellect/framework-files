@@ -856,13 +856,13 @@ time.sleep(2)
 client.query(data_protection_assessment.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProtectionAssessment_nodes.csv'))
 time.sleep(2)
 
-client.query(consumer_request.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ConsumerRequest_nodes.csv'))
+client.query(consumer_request.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ConsumerRequest.csv'))
 time.sleep(2)
 
 client.query(data_processor.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProcessor_nodes.csv'))
 time.sleep(2)
 
-client.query(data_breach.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataBreach_nodes.csv'))
+client.query(data_breach.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataBreach.csv'))
 time.sleep(2)
 
 client.query(opt_out_mechanism.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OptOutMechanism_nodes.csv'))
