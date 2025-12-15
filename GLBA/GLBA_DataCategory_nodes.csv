@@ -1,0 +1,4 @@
+dataid,name,description,examples
+NPI,Nonpublic Personal Information,Personally identifiable financial information that is not publicly available,"Account balance, payment history, credit score, fact of relationship"
+PIFI,Personally Identifiable Financial Information,Information about consumer obtained in connection with providing a financial product or service,"Application form data, transaction records, credit reports"
+PUBLICLY_AVAILABLE_INFO,Publicly Available Information,"Information lawfully made available from government records, media, or required disclosures","Telephone directory listings, mortgage records from county recorder"

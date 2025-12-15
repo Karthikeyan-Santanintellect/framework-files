@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
       "mainLabel": "RegionalStandardAndRegulation",
       "labels": [
         "RegionalStandardAndRegulation"
@@ -16,7 +16,7 @@
       "status": "Active"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -46,7 +46,33 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:238",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:870",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "consumer_identification": "CONS-006",
+      "authentication_successful": "True",
+      "fee_charged": "False",
+      "request_type": "Appeal",
+      "submission_method": "Email",
+      "extension_needed": "True",
+      "free_request_count": "1",
+      "request_submission_date": "2024-05-10 11:30:00",
+      "authentication_method": "MFA",
+      "authentication_date": "2024-05-10",
+      "extension_date": "2024-07-24",
+      "agent_authorization_verified": "False",
+      "completion_status": "False",
+      "processing_status": "Under Review",
+      "response_deadline": "2024-06-24",
+      "appeal_submitted": "False",
+      "authorized_agent_status": "False",
+      "request_id": "REQ-006"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:849",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -77,7 +103,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:248",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:864",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -112,7 +138,33 @@
       "assessment_date": "2024-05-01"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:221",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:855",
+      "mainLabel": "Consent",
+      "labels": [
+        "Consent"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "dark_pattern_used": "False",
+      "informed": "True",
+      "consent_method": "SignedForm",
+      "renewal_needed": "False",
+      "consumer_can_withdraw": "True",
+      "consent_valid": "True",
+      "scope_of_consent": "Health data processing",
+      "compliance_with_coppa": "True",
+      "revocation_allowed": "True",
+      "expiration_date": "2026-05-05",
+      "specific": "True",
+      "consent_type": "ExplicitOptIn",
+      "affirmative_action_taken": "True",
+      "freely_given": "True",
+      "consent_timestamp": "2024-05-05 13:30:00",
+      "consent_id": "CONS-006",
+      "parental_verification_completed": "True",
+      "revocation_method": "Email; Mail"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:832",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -135,7 +187,7 @@
       "location_radius_feet": 1750
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:214",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:825",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -160,7 +212,7 @@
       "third_party_sharing": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:207",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:818",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
@@ -198,7 +250,7 @@
       "record_updated_date": "2024-10-20"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -228,7 +280,35 @@
       "compliance_status": "Remediation"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:237",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:869",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "consumer_identification": "CONS-005",
+      "authentication_successful": "True",
+      "fee_charged": "False",
+      "request_type": "OptOut",
+      "submission_method": "Website",
+      "response_date": "2024-05-15",
+      "extension_needed": "False",
+      "free_request_count": "2",
+      "request_submission_date": "2024-04-05 16:20:00",
+      "authentication_method": "Email",
+      "consumer_satisfied": "True",
+      "authentication_date": "2024-04-05",
+      "agent_authorization_verified": "False",
+      "response_method": "Email",
+      "completion_status": "True",
+      "processing_status": "Completed",
+      "response_deadline": "2024-05-20",
+      "appeal_submitted": "False",
+      "authorized_agent_status": "False",
+      "request_id": "REQ-005"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:848",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -258,7 +338,34 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:213",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:854",
+      "mainLabel": "Consent",
+      "labels": [
+        "Consent"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "dark_pattern_used": "False",
+      "informed": "True",
+      "consent_method": "Checkbox",
+      "renewal_needed": "True",
+      "consumer_can_withdraw": "True",
+      "consent_valid": "True",
+      "scope_of_consent": "Behavioral profiling",
+      "compliance_with_coppa": "False",
+      "revocation_allowed": "True",
+      "expiration_date": "2025-04-10",
+      "specific": "True",
+      "consent_type": "ExplicitOptIn",
+      "affirmative_action_taken": "True",
+      "renewal_date": "2025-04-10",
+      "freely_given": "True",
+      "consent_timestamp": "2024-04-10 11:00:00",
+      "consent_id": "CONS-005",
+      "parental_verification_completed": "False",
+      "revocation_method": "Email; Web Portal"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:824",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -283,7 +390,7 @@
       "third_party_sharing": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:206",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:817",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
@@ -321,7 +428,7 @@
       "record_updated_date": "2024-09-30"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -351,7 +458,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:259",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:884",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -383,7 +490,7 @@
       "audit_type": "ThirdPartyAssessment"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:243",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:859",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -417,7 +524,7 @@
       "sensitive_data_sale_notice": "No sale"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:253",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:874",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -452,7 +559,35 @@
       "assessment_allowed": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:236",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:868",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "consumer_identification": "CONS-004",
+      "authentication_successful": "True",
+      "fee_charged": "False",
+      "request_type": "Portability",
+      "submission_method": "InApp",
+      "response_date": "2024-04-28",
+      "extension_needed": "False",
+      "free_request_count": "1",
+      "request_submission_date": "2024-03-20 09:00:00",
+      "authentication_method": "GovernmentID",
+      "consumer_satisfied": "True",
+      "authentication_date": "2024-03-20",
+      "agent_authorization_verified": "True",
+      "response_method": "Download",
+      "completion_status": "True",
+      "processing_status": "Completed",
+      "response_deadline": "2024-05-04",
+      "appeal_submitted": "False",
+      "authorized_agent_status": "True",
+      "request_id": "REQ-004"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:847",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -483,7 +618,7 @@
       "compliance_status": "NonCompliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:246",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:862",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -518,7 +653,32 @@
       "assessment_date": "2024-03-15"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:220",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:853",
+      "mainLabel": "Consent",
+      "labels": [
+        "Consent"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "dark_pattern_used": "False",
+      "informed": "True",
+      "consent_method": "Website",
+      "renewal_needed": "False",
+      "consumer_can_withdraw": "True",
+      "consent_valid": "True",
+      "scope_of_consent": "Opt out of all data sales",
+      "compliance_with_coppa": "False",
+      "revocation_allowed": "True",
+      "specific": "True",
+      "consent_type": "OptOut",
+      "affirmative_action_taken": "True",
+      "freely_given": "True",
+      "consent_timestamp": "2024-03-25 16:20:00",
+      "consent_id": "CONS-004",
+      "parental_verification_completed": "False",
+      "revocation_method": "Web Portal"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:831",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -540,7 +700,7 @@
       "sensitive_id": "SD-004"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:212",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:823",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -565,7 +725,7 @@
       "third_party_sharing": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:205",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:816",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
@@ -604,7 +764,7 @@
       "record_updated_date": "2024-10-01"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -634,7 +794,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:258",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:883",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -666,7 +826,7 @@
       "audit_type": "RegulatoryConducted"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:242",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:858",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -700,7 +860,7 @@
       "sensitive_data_sale_notice": "Limited sale"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:252",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:873",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -734,7 +894,36 @@
       "assessment_allowed": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:235",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:867",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "consumer_identification": "CONS-003",
+      "authentication_successful": "True",
+      "fee_charged": "False",
+      "request_type": "Correction",
+      "submission_method": "Website",
+      "response_date": "2024-04-10",
+      "appeal_deadline": "2024-05-10",
+      "extension_needed": "False",
+      "free_request_count": "1",
+      "request_submission_date": "2024-03-01 14:45:00",
+      "authentication_method": "Email",
+      "consumer_satisfied": "False",
+      "authentication_date": "2024-03-01",
+      "agent_authorization_verified": "False",
+      "response_method": "Email",
+      "completion_status": "False",
+      "processing_status": "Denied",
+      "response_deadline": "2024-04-15",
+      "appeal_submitted": "True",
+      "authorized_agent_status": "False",
+      "request_id": "REQ-003"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:846",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -763,7 +952,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:245",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:861",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -798,7 +987,34 @@
       "assessment_date": "2024-02-25"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:219",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:852",
+      "mainLabel": "Consent",
+      "labels": [
+        "Consent"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "dark_pattern_used": "False",
+      "informed": "True",
+      "consent_method": "EmailConfirm",
+      "renewal_needed": "True",
+      "consumer_can_withdraw": "True",
+      "consent_valid": "True",
+      "scope_of_consent": "Sensitive data processing",
+      "compliance_with_coppa": "False",
+      "revocation_allowed": "True",
+      "expiration_date": "2025-03-01",
+      "specific": "True",
+      "consent_type": "ExplicitOptIn",
+      "affirmative_action_taken": "True",
+      "renewal_date": "2025-03-01",
+      "freely_given": "True",
+      "consent_timestamp": "2024-03-01 09:15:00",
+      "consent_id": "CONS-003",
+      "parental_verification_completed": "False",
+      "revocation_method": "Email"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:830",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -820,7 +1036,7 @@
       "sensitive_id": "SD-003"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:211",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:822",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -845,7 +1061,7 @@
       "third_party_sharing": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:204",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:815",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
@@ -883,7 +1099,41 @@
       "record_updated_date": "2024-11-01"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:877",
+      "mainLabel": "DataBreach",
+      "labels": [
+        "DataBreach"
+      ],
+      "legal_action_threatened": "FALSE",
+      "occurrence_date": "05-08-2024 06:00",
+      "notification_deadline_date": "10-08-2024",
+      "encryption_status_bypassed": "FALSE",
+      "cost_incurred": "5000",
+      "notification_completed_date": "15-08-2024",
+      "sensitive_data_compromised": "FALSE",
+      "cause_description": "Accidental database misconfiguration",
+      "lessons_learned": "Improved configuration management",
+      "discovery_date": "10-08-2024 09:15",
+      "regional_standard_regulation_id": "TDPSA",
+      "investigation_completion_date": "20-08-2024",
+      "system_hardening_date": "22-08-2024",
+      "fines_imposed": "0",
+      "attorney_general_notified": "FALSE",
+      "regulatory_notification_required": "FALSE",
+      "breach_type": "SystemError",
+      "consent_decree_issued": "FALSE",
+      "affected_consumer_count": "50",
+      "credit_monitoring_offered": "FALSE",
+      "data_types_compromised": "Single email address",
+      "notification_method": "Email",
+      "investigation_status": "Complete",
+      "class_action_filed": "FALSE",
+      "notification_letter_filed": "FALSE",
+      "public_disclosure_required": "FALSE",
+      "breach_id": "BREACH-003"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -913,7 +1163,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:257",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:882",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -947,7 +1197,7 @@
       "audit_type": "External"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:241",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:857",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -981,7 +1231,7 @@
       "sensitive_data_sale_notice": "Not selling sensitive data"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:251",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:872",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -1015,7 +1265,35 @@
       "assessment_allowed": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:234",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:866",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "consumer_identification": "CONS-002",
+      "authentication_successful": "True",
+      "fee_charged": "False",
+      "request_type": "Deletion",
+      "submission_method": "Email",
+      "response_date": "2024-03-30",
+      "extension_needed": "False",
+      "free_request_count": "1",
+      "request_submission_date": "2024-02-15 10:30:00",
+      "authentication_method": "MFA",
+      "consumer_satisfied": "True",
+      "authentication_date": "2024-02-15",
+      "agent_authorization_verified": "False",
+      "response_method": "Email",
+      "completion_status": "True",
+      "processing_status": "Completed",
+      "response_deadline": "2024-04-01",
+      "appeal_submitted": "False",
+      "authorized_agent_status": "False",
+      "request_id": "REQ-002"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:845",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -1046,7 +1324,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:244",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:860",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -1081,7 +1359,34 @@
       "assessment_date": "2024-01-20"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:218",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:851",
+      "mainLabel": "Consent",
+      "labels": [
+        "Consent"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "dark_pattern_used": "False",
+      "informed": "True",
+      "consent_method": "WrittenStatement",
+      "renewal_needed": "True",
+      "consumer_can_withdraw": "True",
+      "consent_valid": "True",
+      "scope_of_consent": "Data sale to business partners",
+      "compliance_with_coppa": "False",
+      "revocation_allowed": "True",
+      "expiration_date": "2025-02-20",
+      "specific": "True",
+      "consent_type": "ExplicitOptIn",
+      "affirmative_action_taken": "True",
+      "renewal_date": "2025-02-20",
+      "freely_given": "True",
+      "consent_timestamp": "2024-02-20 14:45:00",
+      "consent_id": "CONS-002",
+      "parental_verification_completed": "False",
+      "revocation_method": "Email; Phone"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:829",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -1103,7 +1408,7 @@
       "sensitive_id": "SD-002"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:210",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:821",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -1128,7 +1433,7 @@
       "third_party_sharing": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:203",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:814",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
@@ -1166,7 +1471,41 @@
       "record_updated_date": "2024-09-20"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:876",
+      "mainLabel": "DataBreach",
+      "labels": [
+        "DataBreach"
+      ],
+      "legal_action_threatened": "TRUE",
+      "occurrence_date": "15-07-2024 11:00",
+      "notification_deadline_date": "20-07-2024",
+      "encryption_status_bypassed": "TRUE",
+      "cost_incurred": "850000",
+      "notification_completed_date": "25-07-2024",
+      "sensitive_data_compromised": "TRUE",
+      "cause_description": "Ransomware infection on server",
+      "lessons_learned": "Segmented networks; Advanced threat detection",
+      "discovery_date": "20-07-2024 14:30",
+      "regional_standard_regulation_id": "TDPSA",
+      "investigation_completion_date": "01-08-2024",
+      "system_hardening_date": "05-08-2024",
+      "fines_imposed": "0",
+      "attorney_general_notified": "TRUE",
+      "regulatory_notification_required": "TRUE",
+      "breach_type": "Ransomware",
+      "consent_decree_issued": "FALSE",
+      "affected_consumer_count": "45000",
+      "credit_monitoring_offered": "TRUE",
+      "data_types_compromised": "All personal data; Payment info",
+      "notification_method": "Email",
+      "investigation_status": "Complete",
+      "class_action_filed": "TRUE",
+      "notification_letter_filed": "TRUE",
+      "public_disclosure_required": "TRUE",
+      "breach_id": "BREACH-002"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -1196,7 +1535,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:256",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:881",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -1230,7 +1569,7 @@
       "audit_type": "Internal"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:240",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:856",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -1264,7 +1603,7 @@
       "sensitive_data_sale_notice": "N/A"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:250",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:871",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -1298,7 +1637,35 @@
       "assessment_allowed": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:233",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:865",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "consumer_identification": "CONS-001",
+      "authentication_successful": "True",
+      "fee_charged": "False",
+      "request_type": "Access",
+      "submission_method": "Website",
+      "response_date": "2024-02-20",
+      "extension_needed": "False",
+      "free_request_count": "1",
+      "request_submission_date": "2024-01-10 08:15:00",
+      "authentication_method": "Email",
+      "consumer_satisfied": "True",
+      "authentication_date": "2024-01-10",
+      "agent_authorization_verified": "False",
+      "response_method": "Email",
+      "completion_status": "True",
+      "processing_status": "Completed",
+      "response_deadline": "2024-02-24",
+      "appeal_submitted": "False",
+      "authorized_agent_status": "False",
+      "request_id": "REQ-001"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:844",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -1329,7 +1696,34 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:209",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:850",
+      "mainLabel": "Consent",
+      "labels": [
+        "Consent"
+      ],
+      "regional_standard_regulation_id": "TDPSA",
+      "dark_pattern_used": "False",
+      "informed": "True",
+      "consent_method": "Checkbox",
+      "renewal_needed": "True",
+      "consumer_can_withdraw": "True",
+      "consent_valid": "True",
+      "scope_of_consent": "Targeted advertising and analytics",
+      "compliance_with_coppa": "False",
+      "revocation_allowed": "True",
+      "expiration_date": "2025-01-15",
+      "specific": "True",
+      "consent_type": "ExplicitOptIn",
+      "affirmative_action_taken": "True",
+      "renewal_date": "2025-01-15",
+      "freely_given": "True",
+      "consent_timestamp": "2024-01-15 10:30:00",
+      "consent_id": "CONS-001",
+      "parental_verification_completed": "False",
+      "revocation_method": "Email; Web Portal"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:820",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -1354,7 +1748,7 @@
       "third_party_sharing": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:202",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:813",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
@@ -1390,183 +1784,272 @@
       "texas_residency_status": true,
       "universal_opt_out_signal_status": false,
       "record_updated_date": "2024-08-15"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:875",
+      "mainLabel": "DataBreach",
+      "labels": [
+        "DataBreach"
+      ],
+      "legal_action_threatened": "FALSE",
+      "occurrence_date": "10-06-2024 08:00",
+      "notification_deadline_date": "15-06-2024",
+      "encryption_status_bypassed": "TRUE",
+      "cost_incurred": "125000",
+      "notification_completed_date": "25-06-2024",
+      "sensitive_data_compromised": "FALSE",
+      "cause_description": "Credential compromise via phishing",
+      "lessons_learned": "Implemented MFA; Enhanced monitoring",
+      "discovery_date": "15-06-2024 10:00",
+      "regional_standard_regulation_id": "TDPSA",
+      "investigation_completion_date": "01-07-2024",
+      "system_hardening_date": "05-07-2024",
+      "fines_imposed": "0",
+      "attorney_general_notified": "FALSE",
+      "regulatory_notification_required": "FALSE",
+      "breach_type": "UnauthorizedAccess",
+      "consent_decree_issued": "FALSE",
+      "affected_consumer_count": "1250",
+      "credit_monitoring_offered": "TRUE",
+      "data_types_compromised": "Email; Names; Addresses",
+      "notification_method": "Email",
+      "investigation_status": "Complete",
+      "class_action_filed": "FALSE",
+      "notification_letter_filed": "FALSE",
+      "public_disclosure_required": "TRUE",
+      "breach_id": "BREACH-001"
     }
   ],
   "rels": [
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6929082695825752259",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
-      "type": "GOVERNED_BY",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6929099188500169510",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
+      "type": "BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
       "target_id": "TDPSA",
       "source_id": "ENT-006",
       "compliance_start_date": "2024-07-01",
-      "mandatory": true
+      "mandatory": "true"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187182",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:238",
-      "type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "dpa_completed": true,
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917834691873604454",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:870",
+      "type": "BUSINESS_ENTITY_RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_requested": "True",
+      "relationship_type": "RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_granted": "True",
+      "response_deadline": "2024-06-24",
+      "extended_deadline": "2024-07-24",
+      "target_id": "REQ-006",
+      "source_id": "ENT-006",
+      "request_fulfilled": "False"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917832492850348881",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:849",
+      "type": "BUSINESS_ENTITY_CONDUCTS_PROCESSING_ACTIVITY",
+      "dpa_completed": "True",
+      "consent_obtained": "True",
       "activity_start_date": "2020-09-15",
       "relationship_type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "disclosed_to_consumer": true,
-      "consent_required": true,
+      "disclosed_to_consumer": "True",
+      "consent_required": "True",
       "target_id": "ACT-006",
       "source_id": "ENT-006",
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:238",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814968",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:248",
-      "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:849",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917833592361976672",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:864",
+      "type": "PROCESS_ACTIVITY_REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "High",
       "assessment_requirement_date": "2022-02-01",
       "relationship_type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
-      "assessment_completed": true,
+      "assessment_completed": "True",
       "target_id": "DPA-005",
       "source_id": "ACT-006",
-      "risk_identified": true,
+      "risk_identified": "True",
       "assessment_type": "HighRiskProcessing",
       "assessment_required_reason": "High-risk processing",
       "assessment_date": "2024-05-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559389",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:221",
-      "type": "PROCESSES_SENSITIVE_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917831393338721111",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:855",
+      "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
+      "specific_purpose_consented": "Biometric authentication",
+      "relationship_type": "OBTAINS_CONSENT",
+      "freely_given": "True",
+      "consent_valid": "True",
+      "consent_granted_date": "2020-09-20",
+      "target_id": "CONS-006",
+      "source_id": "ENT-006",
+      "dark_pattern_avoided": "True",
+      "consent_request_date": "2020-09-01",
+      "consent_type": "ExplicitOptIn"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917830293827093312",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:832",
+      "type": "BUSINESS_ENTITY_PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 6,
       "processing_start_date": "2020-09-15",
       "relationship_type": "PROCESSES_SENSITIVE_DATA",
       "access_restrictions": "App use only",
       "consent_scope": "Location-based services",
-      "encryption_enabled": true,
+      "encryption_enabled": "True",
       "target_id": "SD-005",
       "source_id": "ENT-006",
       "protection_level_applied": "Enhanced",
       "explicit_consent_obtained": "2020-09-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931606",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:214",
-      "type": "COLLECTS_PERSONAL_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917829194315465529",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:825",
+      "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",
       "collection_date": "2020-09-15",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
-      "purpose_legitimate": true,
+      "purpose_legitimate": "True",
       "disclosed_purpose": "Healthcare delivery",
-      "minimization_applied": true,
+      "minimization_applied": "True",
       "collection_method": "DirectCollection",
       "target_id": "PD-006",
       "source_id": "ENT-006",
       "frequency": "AsNeeded"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068937",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:207",
-      "type": "PROCESSES_CONSUMER_DATA",
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:812",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153220571769602860",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:818",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "True",
       "relationship_status": "Active",
       "relationship_type": "PROCESSES_CONSUMER_DATA",
-      "processing_established": true,
+      "processing_established": "True",
       "relationship_start_date": "2020-09-15",
       "legal_basis": "LegalObligation",
       "target_id": "CONS-006",
-      "data_processing_scope": [
-        "Health records",
-        " Treatment"
-      ],
+      "data_processing_scope": "Health records; Treatment",
       "source_id": "ENT-006",
       "consent_date": "2020-09-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6926830896012067011",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
-      "type": "GOVERNED_BY",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6926847388686484262",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
+      "type": "BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
       "target_id": "TDPSA",
       "source_id": "ENT-005",
       "compliance_start_date": "2024-07-01",
-      "mandatory": true
+      "mandatory": "true"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187181",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:237",
-      "type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "dpa_completed": true,
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917834691873604453",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:869",
+      "type": "BUSINESS_ENTITY_RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_requested": "False",
+      "response_method": "Email",
+      "relationship_type": "RESPONDS_TO_CONSUMER_REQUEST",
+      "response_date": "2024-05-15",
+      "extension_granted": "False",
+      "response_deadline": "2024-05-20",
+      "target_id": "REQ-005",
+      "source_id": "ENT-005",
+      "request_fulfilled": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917832492850348880",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:848",
+      "type": "BUSINESS_ENTITY_CONDUCTS_PROCESSING_ACTIVITY",
+      "dpa_completed": "True",
+      "consent_obtained": "True",
       "activity_start_date": "2022-02-01",
       "relationship_type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "disclosed_to_consumer": true,
-      "consent_required": true,
+      "disclosed_to_consumer": "True",
+      "consent_required": "True",
       "target_id": "ACT-005",
       "source_id": "ENT-005",
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931605",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:213",
-      "type": "COLLECTS_PERSONAL_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917831393338721110",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:854",
+      "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
+      "specific_purpose_consented": "Health data processing",
+      "relationship_type": "OBTAINS_CONSENT",
+      "freely_given": "True",
+      "consent_valid": "True",
+      "consent_granted_date": "2022-02-05",
+      "target_id": "CONS-005",
+      "source_id": "ENT-005",
+      "dark_pattern_avoided": "True",
+      "consent_request_date": "2022-01-25",
+      "consent_type": "ExplicitOptIn"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917829194315465528",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:824",
+      "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",
       "collection_date": "2022-02-01",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
-      "purpose_legitimate": false,
+      "purpose_legitimate": "False",
       "disclosed_purpose": "Personalization",
-      "minimization_applied": false,
+      "minimization_applied": "False",
       "collection_method": "Inference",
       "target_id": "PD-005",
       "source_id": "ENT-005",
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068936",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:206",
-      "type": "PROCESSES_CONSUMER_DATA",
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:811",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153220571769602859",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:817",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "True",
       "relationship_status": "Active",
       "relationship_type": "PROCESSES_CONSUMER_DATA",
-      "processing_established": true,
+      "processing_established": "True",
       "relationship_start_date": "2022-02-01",
       "legal_basis": "Consent",
       "target_id": "CONS-005",
-      "data_processing_scope": [
-        "Marketing",
-        " Profiling"
-      ],
+      "data_processing_scope": "Marketing; Profiling",
       "source_id": "ENT-005",
       "consent_date": "2022-02-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924579096198381763",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
-      "type": "GOVERNED_BY",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924595588872799014",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
+      "type": "BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
       "target_id": "TDPSA",
       "source_id": "ENT-004",
       "compliance_start_date": "2024-07-01",
-      "mandatory": true
+      "mandatory": "true"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698307",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:259",
-      "type": "UNDERGOES_COMPLIANCE_AUDIT",
-      "remediation_required": false,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917839089920115572",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:884",
+      "type": "BUSINESS_ENTITY_UNDERGOES_COMPLIANCE_AUDIT",
+      "remediation_required": "False",
       "audit_start_date": "2024-08-15",
-      "compliance_achieved": true,
+      "compliance_achieved": "True",
       "relationship_type": "UNDERGOES_COMPLIANCE_AUDIT",
       "audit_completion_date": "2024-09-30",
       "target_id": "AUDIT-004",
@@ -1576,138 +2059,166 @@
       "audit_initiation_date": "2024-08-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070515",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:243",
-      "type": "OFFERS_PRIVACY_NOTICE",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917836890896859995",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:859",
+      "type": "BUSINESS_ENTITY_OFFERS_PRIVACY_NOTICE",
       "acknowledgment_date": "2024-01-30",
       "notice_date": "2024-01-15",
       "relationship_type": "OFFERS_PRIVACY_NOTICE",
       "notice_version": "1.0",
-      "notice_accessible": true,
-      "notice_clear": true,
+      "notice_accessible": "True",
+      "notice_clear": "True",
       "target_id": "NOTICE-004",
       "source_id": "ENT-004",
-      "all_required_elements": true,
-      "consumer_acknowledged": true
+      "all_required_elements": "True",
+      "consumer_acknowledged": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442749",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:253",
-      "type": "USES_DATA_PROCESSOR",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917835791385232234",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:874",
+      "type": "BUSINESS_ENTITY_USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-09-15",
       "relationship_type": "USES_DATA_PROCESSOR",
-      "subprocessor_agreement_required": true,
+      "subprocessor_agreement_required": "True",
       "contract_date": "2023-09-01",
-      "processing_instructions_clear": false,
+      "processing_instructions_clear": "False",
       "contract_status": "Terminated",
       "target_id": "PROC-004",
       "source_id": "ENT-004",
-      "tdpsa_compliant_contract": false,
-      "audit_rights_included": false,
-      "confidentiality_binding": true
+      "tdpsa_compliant_contract": "False",
+      "audit_rights_included": "False",
+      "confidentiality_binding": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187180",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:236",
-      "type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "dpa_completed": false,
-      "consent_obtained": false,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917834691873604452",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:868",
+      "type": "BUSINESS_ENTITY_RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_requested": "False",
+      "response_method": "Download",
+      "relationship_type": "RESPONDS_TO_CONSUMER_REQUEST",
+      "response_date": "2024-04-28",
+      "extension_granted": "False",
+      "response_deadline": "2024-05-04",
+      "target_id": "REQ-004",
+      "source_id": "ENT-004",
+      "request_fulfilled": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917832492850348879",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:847",
+      "type": "BUSINESS_ENTITY_CONDUCTS_PROCESSING_ACTIVITY",
+      "dpa_completed": "False",
+      "consent_obtained": "False",
       "activity_start_date": "2019-08-05",
       "relationship_type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "disclosed_to_consumer": false,
-      "consent_required": true,
+      "disclosed_to_consumer": "False",
+      "consent_required": "True",
       "target_id": "ACT-004",
       "source_id": "ENT-004",
       "compliance_status": "NonCompliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:236",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814966",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:246",
-      "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:847",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917833592361976670",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:862",
+      "type": "PROCESS_ACTIVITY_REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "High",
       "assessment_requirement_date": "2019-08-05",
       "relationship_type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
-      "assessment_completed": false,
+      "assessment_completed": "False",
       "target_id": "DPA-003",
       "source_id": "ACT-004",
-      "risk_identified": true,
+      "risk_identified": "True",
       "assessment_type": "Profiling",
       "assessment_required_reason": "Profiling requires DPA",
       "assessment_date": "2024-03-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559388",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:220",
-      "type": "PROCESSES_SENSITIVE_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917831393338721109",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:853",
+      "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
+      "specific_purpose_consented": "Opt out of sales",
+      "relationship_type": "OBTAINS_CONSENT",
+      "freely_given": "True",
+      "consent_valid": "True",
+      "consent_granted_date": "2019-08-10",
+      "target_id": "CONS-004",
+      "source_id": "ENT-004",
+      "dark_pattern_avoided": "True",
+      "consent_request_date": "2019-08-01",
+      "consent_type": "OptOut"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917830293827093311",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:831",
+      "type": "BUSINESS_ENTITY_PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 3,
       "processing_start_date": "2019-08-05",
       "relationship_type": "PROCESSES_SENSITIVE_DATA",
       "access_restrictions": "Security team only",
       "consent_scope": "Biometric authentication",
-      "encryption_enabled": true,
+      "encryption_enabled": "True",
       "target_id": "SD-004",
       "source_id": "ENT-004",
       "protection_level_applied": "Maximum",
       "explicit_consent_obtained": "2019-08-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931604",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:212",
-      "type": "COLLECTS_PERSONAL_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917829194315465527",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:823",
+      "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",
       "collection_date": "2019-08-05",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
-      "purpose_legitimate": true,
+      "purpose_legitimate": "True",
       "disclosed_purpose": "Financial services",
-      "minimization_applied": true,
+      "minimization_applied": "True",
       "collection_method": "DirectCollection",
       "target_id": "PD-004",
       "source_id": "ENT-004",
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068935",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:205",
-      "type": "PROCESSES_CONSUMER_DATA",
-      "consent_obtained": false,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:810",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153220571769602858",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:816",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "False",
       "relationship_status": "Active",
       "relationship_type": "PROCESSES_CONSUMER_DATA",
-      "processing_established": true,
+      "processing_established": "True",
       "relationship_start_date": "2019-08-05",
       "legal_basis": "ContractPerformance",
       "target_id": "CONS-004",
-      "data_processing_scope": [
-        "Financial services",
-        " Analytics"
-      ],
+      "data_processing_scope": "Financial services; Analytics",
       "source_id": "ENT-004"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922327296384696515",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
-      "type": "GOVERNED_BY",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922343789059113766",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
+      "type": "BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
       "target_id": "TDPSA",
       "source_id": "ENT-003",
       "compliance_start_date": "2024-07-01",
-      "mandatory": true
+      "mandatory": "true"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698306",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:258",
-      "type": "UNDERGOES_COMPLIANCE_AUDIT",
-      "remediation_required": false,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917839089920115571",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:883",
+      "type": "BUSINESS_ENTITY_UNDERGOES_COMPLIANCE_AUDIT",
+      "remediation_required": "False",
       "audit_start_date": "2024-07-01",
-      "compliance_achieved": true,
+      "compliance_achieved": "True",
       "relationship_type": "UNDERGOES_COMPLIANCE_AUDIT",
       "audit_completion_date": "2024-08-15",
       "target_id": "AUDIT-003",
@@ -1717,138 +2228,182 @@
       "audit_initiation_date": "2024-07-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070514",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:242",
-      "type": "OFFERS_PRIVACY_NOTICE",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917836890896859994",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:858",
+      "type": "BUSINESS_ENTITY_OFFERS_PRIVACY_NOTICE",
       "notice_date": "2023-07-01",
       "relationship_type": "OFFERS_PRIVACY_NOTICE",
       "notice_version": "1.5",
-      "notice_accessible": true,
-      "notice_clear": false,
+      "notice_accessible": "True",
+      "notice_clear": "False",
       "target_id": "NOTICE-003",
       "source_id": "ENT-003",
-      "all_required_elements": true,
-      "consumer_acknowledged": false
+      "all_required_elements": "True",
+      "consumer_acknowledged": "False"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442748",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:252",
-      "type": "USES_DATA_PROCESSOR",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917835791385232233",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:873",
+      "type": "BUSINESS_ENTITY_USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-05-15",
       "relationship_type": "USES_DATA_PROCESSOR",
-      "subprocessor_agreement_required": true,
+      "subprocessor_agreement_required": "True",
       "contract_date": "2023-05-10",
-      "processing_instructions_clear": true,
+      "processing_instructions_clear": "True",
       "contract_status": "Active",
       "target_id": "PROC-003",
       "source_id": "ENT-003",
-      "tdpsa_compliant_contract": true,
-      "audit_rights_included": true,
-      "confidentiality_binding": true
+      "tdpsa_compliant_contract": "True",
+      "audit_rights_included": "True",
+      "confidentiality_binding": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187179",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:235",
-      "type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "dpa_completed": true,
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917834691873604451",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:867",
+      "type": "BUSINESS_ENTITY_RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_requested": "False",
+      "response_method": "Email",
+      "relationship_type": "RESPONDS_TO_CONSUMER_REQUEST",
+      "response_date": "2024-04-10",
+      "extension_granted": "False",
+      "response_deadline": "2024-04-15",
+      "target_id": "REQ-003",
+      "source_id": "ENT-003",
+      "request_fulfilled": "False"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917832492850348878",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:846",
+      "type": "BUSINESS_ENTITY_CONDUCTS_PROCESSING_ACTIVITY",
+      "dpa_completed": "True",
+      "consent_obtained": "True",
       "activity_start_date": "2021-06-20",
       "relationship_type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "disclosed_to_consumer": true,
-      "consent_required": true,
+      "disclosed_to_consumer": "True",
+      "consent_required": "True",
       "target_id": "ACT-003",
       "source_id": "ENT-003",
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:235",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814965",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:245",
-      "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:846",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917833592361976669",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:861",
+      "type": "PROCESS_ACTIVITY_REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "Critical",
       "assessment_requirement_date": "2021-06-20",
       "relationship_type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
-      "assessment_completed": true,
+      "assessment_completed": "True",
       "target_id": "DPA-002",
       "source_id": "ACT-003",
-      "risk_identified": true,
+      "risk_identified": "True",
       "assessment_type": "DataSale",
       "assessment_required_reason": "Data sale requires DPA",
       "assessment_date": "2024-02-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559387",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:219",
-      "type": "PROCESSES_SENSITIVE_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917831393338721108",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:852",
+      "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
+      "specific_purpose_consented": "System analytics",
+      "relationship_type": "OBTAINS_CONSENT",
+      "freely_given": "True",
+      "consent_valid": "True",
+      "consent_granted_date": "2021-06-25",
+      "target_id": "CONS-003",
+      "source_id": "ENT-003",
+      "dark_pattern_avoided": "True",
+      "consent_request_date": "2021-06-01",
+      "consent_type": "ExplicitOptIn"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917830293827093310",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:830",
+      "type": "BUSINESS_ENTITY_PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 3,
       "processing_start_date": "2021-06-20",
       "relationship_type": "PROCESSES_SENSITIVE_DATA",
       "access_restrictions": "Healthcare team only",
       "consent_scope": "Health data for treatment",
-      "encryption_enabled": true,
+      "encryption_enabled": "True",
       "target_id": "SD-003",
       "source_id": "ENT-003",
       "protection_level_applied": "Maximum",
       "explicit_consent_obtained": "2021-06-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931603",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:211",
-      "type": "COLLECTS_PERSONAL_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917829194315465526",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:822",
+      "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",
       "collection_date": "2021-06-20",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
-      "purpose_legitimate": true,
+      "purpose_legitimate": "True",
       "disclosed_purpose": "System operations",
-      "minimization_applied": true,
+      "minimization_applied": "True",
       "collection_method": "DirectCollection",
       "target_id": "PD-003",
       "source_id": "ENT-003",
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068934",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:204",
-      "type": "PROCESSES_CONSUMER_DATA",
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:809",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153220571769602857",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:815",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "True",
       "relationship_status": "Active",
       "relationship_type": "PROCESSES_CONSUMER_DATA",
-      "processing_established": true,
+      "processing_established": "True",
       "relationship_start_date": "2021-06-20",
       "legal_basis": "Consent",
       "target_id": "CONS-003",
-      "data_processing_scope": [
-        "System services",
-        " Data storage"
-      ],
+      "data_processing_scope": "System services; Data storage",
       "source_id": "ENT-003",
       "consent_date": "2021-06-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920075496571011267",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
-      "type": "GOVERNED_BY",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:815",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917837990408487789",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:877",
+      "type": "CONSUMER_EXPERIENCES_DATA_BREACH",
+      "breach_date": "2024-08-05",
+      "identity_theft_risk": "False",
+      "credit_monitoring_offered": "False",
+      "relationship_type": "EXPERIENCES_DATA_BREACH",
+      "data_compromised": "Email address",
+      "target_id": "BREACH-003",
+      "legal_action_status": "None",
+      "source_id": "CONS-003",
+      "notification_sent_date": "2024-08-15",
+      "financial_impact": 0
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920091989245428518",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
+      "type": "BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
       "target_id": "TDPSA",
       "source_id": "ENT-002",
       "compliance_start_date": "2024-07-01",
-      "mandatory": true
+      "mandatory": "true"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698305",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:257",
-      "type": "UNDERGOES_COMPLIANCE_AUDIT",
-      "remediation_required": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917839089920115570",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:882",
+      "type": "BUSINESS_ENTITY_UNDERGOES_COMPLIANCE_AUDIT",
+      "remediation_required": "True",
       "audit_start_date": "2024-04-01",
-      "compliance_achieved": true,
+      "compliance_achieved": "True",
       "relationship_type": "UNDERGOES_COMPLIANCE_AUDIT",
       "audit_completion_date": "2024-05-31",
       "target_id": "AUDIT-002",
@@ -1859,138 +2414,182 @@
       "audit_initiation_date": "2024-04-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070513",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:241",
-      "type": "OFFERS_PRIVACY_NOTICE",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917836890896859993",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:857",
+      "type": "BUSINESS_ENTITY_OFFERS_PRIVACY_NOTICE",
       "acknowledgment_date": "2024-06-15",
       "notice_date": "2024-06-01",
       "relationship_type": "OFFERS_PRIVACY_NOTICE",
       "notice_version": "2.0",
-      "notice_accessible": true,
-      "notice_clear": true,
+      "notice_accessible": "True",
+      "notice_clear": "True",
       "target_id": "NOTICE-002",
       "source_id": "ENT-002",
-      "all_required_elements": true,
-      "consumer_acknowledged": true
+      "all_required_elements": "True",
+      "consumer_acknowledged": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442747",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:251",
-      "type": "USES_DATA_PROCESSOR",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917835791385232232",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:872",
+      "type": "BUSINESS_ENTITY_USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-09-01",
       "relationship_type": "USES_DATA_PROCESSOR",
-      "subprocessor_agreement_required": true,
+      "subprocessor_agreement_required": "True",
       "contract_date": "2023-08-15",
-      "processing_instructions_clear": true,
+      "processing_instructions_clear": "True",
       "contract_status": "Active",
       "target_id": "PROC-002",
       "source_id": "ENT-002",
-      "tdpsa_compliant_contract": true,
-      "audit_rights_included": true,
-      "confidentiality_binding": true
+      "tdpsa_compliant_contract": "True",
+      "audit_rights_included": "True",
+      "confidentiality_binding": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187178",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:234",
-      "type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "dpa_completed": true,
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917834691873604450",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:866",
+      "type": "BUSINESS_ENTITY_RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_requested": "False",
+      "response_method": "Email",
+      "relationship_type": "RESPONDS_TO_CONSUMER_REQUEST",
+      "response_date": "2024-03-30",
+      "extension_granted": "False",
+      "response_deadline": "2024-04-01",
+      "target_id": "REQ-002",
+      "source_id": "ENT-002",
+      "request_fulfilled": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917832492850348877",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:845",
+      "type": "BUSINESS_ENTITY_CONDUCTS_PROCESSING_ACTIVITY",
+      "dpa_completed": "True",
+      "consent_obtained": "True",
       "activity_start_date": "2018-01-10",
       "relationship_type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "disclosed_to_consumer": true,
-      "consent_required": true,
+      "disclosed_to_consumer": "True",
+      "consent_required": "True",
       "target_id": "ACT-002",
       "source_id": "ENT-002",
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:234",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814964",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:244",
-      "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:845",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917833592361976668",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:860",
+      "type": "PROCESS_ACTIVITY_REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "High",
       "assessment_requirement_date": "2018-01-10",
       "relationship_type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
-      "assessment_completed": true,
+      "assessment_completed": "True",
       "target_id": "DPA-001",
       "source_id": "ACT-002",
-      "risk_identified": true,
+      "risk_identified": "True",
       "assessment_type": "TargetedAdvertising",
       "assessment_required_reason": "Targeted advertising requires DPA",
       "assessment_date": "2024-01-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559386",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:218",
-      "type": "PROCESSES_SENSITIVE_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917831393338721107",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:851",
+      "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
+      "specific_purpose_consented": "Data sale and marketing",
+      "relationship_type": "OBTAINS_CONSENT",
+      "freely_given": "True",
+      "consent_valid": "True",
+      "consent_granted_date": "2018-01-15",
+      "target_id": "CONS-002",
+      "source_id": "ENT-002",
+      "dark_pattern_avoided": "True",
+      "consent_request_date": "2018-01-01",
+      "consent_type": "ExplicitOptIn"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917830293827093309",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:829",
+      "type": "BUSINESS_ENTITY_PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 3,
       "processing_start_date": "2018-01-10",
       "relationship_type": "PROCESSES_SENSITIVE_DATA",
       "access_restrictions": "Restricted to 2 staff members",
       "consent_scope": "Religious affiliation processing",
-      "encryption_enabled": true,
+      "encryption_enabled": "True",
       "target_id": "SD-002",
       "source_id": "ENT-002",
       "protection_level_applied": "Maximum",
       "explicit_consent_obtained": "2018-01-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931602",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:210",
-      "type": "COLLECTS_PERSONAL_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917829194315465525",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:821",
+      "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",
       "collection_date": "2018-01-10",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
-      "purpose_legitimate": true,
+      "purpose_legitimate": "True",
       "disclosed_purpose": "Transactions and marketing",
-      "minimization_applied": false,
+      "minimization_applied": "False",
       "collection_method": "DirectCollection",
       "target_id": "PD-002",
       "source_id": "ENT-002",
       "frequency": "Daily"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068933",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:203",
-      "type": "PROCESSES_CONSUMER_DATA",
-      "consent_obtained": false,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:808",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153220571769602856",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:814",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "False",
       "relationship_status": "Active",
       "relationship_type": "PROCESSES_CONSUMER_DATA",
-      "processing_established": true,
+      "processing_established": "True",
       "relationship_start_date": "2018-01-10",
       "legal_basis": "ContractPerformance",
       "target_id": "CONS-002",
-      "data_processing_scope": [
-        "Retail transactions",
-        " Targeted ads"
-      ],
+      "data_processing_scope": "Retail transactions; Targeted ads",
       "source_id": "ENT-002"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917823696757326019",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
-      "type": "GOVERNED_BY",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:814",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917837990408487788",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:876",
+      "type": "CONSUMER_EXPERIENCES_DATA_BREACH",
+      "breach_date": "2024-07-15",
+      "identity_theft_risk": "True",
+      "credit_monitoring_offered": "True",
+      "relationship_type": "EXPERIENCES_DATA_BREACH",
+      "data_compromised": "All personal data; Payment info; Health",
+      "target_id": "BREACH-002",
+      "legal_action_status": "Class action filed",
+      "source_id": "CONS-002",
+      "notification_sent_date": "2024-07-25",
+      "financial_impact": 15000
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917840189431743270",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:806",
+      "type": "BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
       "target_id": "TDPSA",
       "source_id": "ENT-001",
       "compliance_start_date": "2024-07-01",
-      "mandatory": true
+      "mandatory": "true"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698304",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:256",
-      "type": "UNDERGOES_COMPLIANCE_AUDIT",
-      "remediation_required": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917839089920115569",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:881",
+      "type": "BUSINESS_ENTITY_UNDERGOES_COMPLIANCE_AUDIT",
+      "remediation_required": "True",
       "audit_start_date": "2024-01-15",
-      "compliance_achieved": true,
+      "compliance_achieved": "True",
       "relationship_type": "UNDERGOES_COMPLIANCE_AUDIT",
       "audit_completion_date": "2024-03-15",
       "target_id": "AUDIT-001",
@@ -2001,86 +2600,130 @@
       "audit_initiation_date": "2024-01-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070512",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:240",
-      "type": "OFFERS_PRIVACY_NOTICE",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917836890896859992",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:856",
+      "type": "BUSINESS_ENTITY_OFFERS_PRIVACY_NOTICE",
       "acknowledgment_date": "2024-01-15",
       "notice_date": "2024-01-01",
       "relationship_type": "OFFERS_PRIVACY_NOTICE",
       "notice_version": "1.2",
-      "notice_accessible": true,
-      "notice_clear": true,
+      "notice_accessible": "True",
+      "notice_clear": "True",
       "target_id": "NOTICE-001",
       "source_id": "ENT-001",
-      "all_required_elements": true,
-      "consumer_acknowledged": true
+      "all_required_elements": "True",
+      "consumer_acknowledged": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442746",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:250",
-      "type": "USES_DATA_PROCESSOR",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917835791385232231",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:871",
+      "type": "BUSINESS_ENTITY_USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-06-15",
       "relationship_type": "USES_DATA_PROCESSOR",
-      "subprocessor_agreement_required": false,
+      "subprocessor_agreement_required": "False",
       "contract_date": "2023-06-01",
-      "processing_instructions_clear": true,
+      "processing_instructions_clear": "True",
       "contract_status": "Active",
       "target_id": "PROC-001",
       "source_id": "ENT-001",
-      "tdpsa_compliant_contract": true,
-      "audit_rights_included": true,
-      "confidentiality_binding": true
+      "tdpsa_compliant_contract": "True",
+      "audit_rights_included": "True",
+      "confidentiality_binding": "True"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187177",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:233",
-      "type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "dpa_completed": false,
-      "consent_obtained": false,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917834691873604449",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:865",
+      "type": "BUSINESS_ENTITY_RESPONDS_TO_CONSUMER_REQUEST",
+      "extension_requested": "False",
+      "response_method": "Email",
+      "relationship_type": "RESPONDS_TO_CONSUMER_REQUEST",
+      "response_date": "2024-02-20",
+      "extension_granted": "False",
+      "response_deadline": "2024-02-24",
+      "target_id": "REQ-001",
+      "source_id": "ENT-001",
+      "request_fulfilled": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917832492850348876",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:844",
+      "type": "BUSINESS_ENTITY_CONDUCTS_PROCESSING_ACTIVITY",
+      "dpa_completed": "False",
+      "consent_obtained": "False",
       "activity_start_date": "2020-03-15",
       "relationship_type": "CONDUCTS_PROCESSING_ACTIVITY",
-      "disclosed_to_consumer": true,
-      "consent_required": false,
+      "disclosed_to_consumer": "True",
+      "consent_required": "False",
       "target_id": "ACT-001",
       "source_id": "ENT-001",
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931601",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:209",
-      "type": "COLLECTS_PERSONAL_DATA",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917831393338721106",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:850",
+      "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
+      "specific_purpose_consented": "Targeted advertising and profiling",
+      "relationship_type": "OBTAINS_CONSENT",
+      "freely_given": "True",
+      "consent_valid": "True",
+      "consent_granted_date": "2020-03-20",
+      "target_id": "CONS-001",
+      "source_id": "ENT-001",
+      "dark_pattern_avoided": "True",
+      "consent_request_date": "2020-03-01",
+      "consent_type": "ExplicitOptIn"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917829194315465524",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:820",
+      "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",
       "collection_date": "2020-03-15",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
-      "purpose_legitimate": true,
+      "purpose_legitimate": "True",
       "disclosed_purpose": "Account services",
-      "minimization_applied": true,
+      "minimization_applied": "True",
       "collection_method": "DirectCollection",
       "target_id": "PD-001",
       "source_id": "ENT-001",
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068932",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:202",
-      "type": "PROCESSES_CONSUMER_DATA",
-      "consent_obtained": true,
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:807",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153220571769602855",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:813",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "True",
       "relationship_status": "Active",
       "relationship_type": "PROCESSES_CONSUMER_DATA",
-      "processing_established": true,
+      "processing_established": "True",
       "relationship_start_date": "2020-03-15",
       "legal_basis": "Consent",
       "target_id": "CONS-001",
-      "data_processing_scope": [
-        "Account management",
-        " Analytics"
-      ],
+      "data_processing_scope": "Account management; Analytics",
       "source_id": "ENT-001",
       "consent_date": "2020-03-20"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:813",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917837990408487787",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:875",
+      "type": "CONSUMER_EXPERIENCES_DATA_BREACH",
+      "breach_date": "2024-06-10",
+      "identity_theft_risk": "False",
+      "credit_monitoring_offered": "True",
+      "relationship_type": "EXPERIENCES_DATA_BREACH",
+      "data_compromised": "Email; Names; Addresses",
+      "target_id": "BREACH-001",
+      "legal_action_status": "None",
+      "source_id": "CONS-001",
+      "notification_sent_date": "2024-06-25",
+      "financial_impact": 0
     }
   ]
 }

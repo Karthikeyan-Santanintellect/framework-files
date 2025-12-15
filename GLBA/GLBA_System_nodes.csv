@@ -1,0 +1,6 @@
+systemid,name,holds_npi
+SYS-CORE_BANKING,Core Banking System,True
+SYS-LOAN_ORIGINATION,Loan Origination System,True
+SYS-CRM,Customer Relationship Management,True
+SYS-PAYMENT_PROCESSING,Payment Processing System,True
+SYS-CUSTOMER_PORTAL,Customer Portal,True
