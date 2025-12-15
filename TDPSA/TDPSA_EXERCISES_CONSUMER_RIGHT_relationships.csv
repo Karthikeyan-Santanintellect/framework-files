@@ -1,7 +1,0 @@
-source_consumer_id,relationship_type,target_request_id,request_date,right_exercised,request_authenticated,request_fulfilled,fulfillment_date,free_request_used,fee_charged,appeal_available
-CONS-001,EXERCISES_CONSUMER_RIGHT,REQ-001,2024-01-10,Access,True,True,2024-02-20,True,False,False
-CONS-002,EXERCISES_CONSUMER_RIGHT,REQ-002,2024-02-15,Deletion,True,True,2024-03-30,True,False,False
-CONS-003,EXERCISES_CONSUMER_RIGHT,REQ-003,2024-03-01,Correction,True,False,,True,False,True
-CONS-004,EXERCISES_CONSUMER_RIGHT,REQ-004,2024-03-20,Portability,True,True,2024-04-28,True,False,False
-CONS-005,EXERCISES_CONSUMER_RIGHT,REQ-005,2024-04-05,OptOut,True,True,2024-05-15,True,False,False
-CONS-006,EXERCISES_CONSUMER_RIGHT,REQ-006,2024-05-10,Confirmation,True,False,,True,False,True

@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "mainLabel": "RegionalStandardAndRegulation",
       "labels": [
         "RegionalStandardAndRegulation"
@@ -16,7 +16,7 @@
       "status": "Active"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:71",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -46,7 +46,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:108",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:238",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -77,7 +77,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:118",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:248",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -112,7 +112,7 @@
       "assessment_date": "2024-05-01"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:91",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:221",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -135,7 +135,7 @@
       "location_radius_feet": 1750
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:84",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:214",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -160,29 +160,45 @@
       "third_party_sharing": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:77",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:207",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
       ],
+      "contact_phone": "202-555-0106",
+      "right_to_portability": true,
+      "response_received": false,
+      "last_interaction_date": "2024-10-20",
+      "account_status": "under_review",
+      "parental_consent_obtained": false,
+      "contact_email": "alice.williams@example.com",
+      "right_to_correct": true,
+      "consumer_id": "CONS-006",
+      "right_to_appeal": true,
+      "known_child_status": false,
       "regional_standard_regulation_id": "TDPSA",
-      "last_request_date": "2024-07-15",
-      "contact_phone": "[hashed]",
+      "record_created_date": "2024-07-15",
+      "right_to_delete": true,
+      "last_request_date": "2024-10-20",
       "data_breach_affected": false,
       "age_group": "Adult",
-      "parental_consent_obtained": false,
+      "satisfaction_rating": 2,
+      "right_to_access": true,
+      "request_types": "access,deletion,correction",
+      "compliance_requirement_met": false,
       "dispute_status": true,
-      "contact_email": "alice@example.com",
+      "has_legal_representative": true,
       "opt_out_status": true,
-      "consumer_id": "CONS-006",
+      "opt_out_categories": "targeted_advertising,sale",
+      "dispute_type": "accuracy_dispute",
       "request_history_count": 1,
       "discrimination_complaint": false,
       "texas_residency_status": true,
-      "known_child_status": false,
-      "universal_opt_out_signal_status": true
+      "universal_opt_out_signal_status": true,
+      "record_updated_date": "2024-10-20"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:70",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -212,7 +228,7 @@
       "compliance_status": "Remediation"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:107",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:237",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -242,7 +258,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:83",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:213",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -267,28 +283,45 @@
       "third_party_sharing": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:76",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:206",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
       ],
+      "contact_phone": "202-555-0105",
+      "right_to_portability": false,
+      "response_received": true,
+      "last_interaction_date": "2024-09-30",
+      "account_status": "active",
+      "parental_consent_obtained": true,
+      "contact_email": "child.teen@example.com",
+      "right_to_correct": false,
+      "consumer_id": "CONS-005",
+      "right_to_appeal": false,
+      "known_child_status": true,
       "regional_standard_regulation_id": "TDPSA",
-      "contact_phone": "[hashed]",
+      "record_created_date": "2024-09-30",
+      "right_to_delete": false,
+      "last_request_date": "2024-09-30",
       "data_breach_affected": false,
       "age_group": "Child_13_17",
-      "parental_consent_obtained": true,
+      "satisfaction_rating": 4,
+      "right_to_access": false,
+      "request_types": "none",
+      "compliance_requirement_met": true,
       "dispute_status": false,
-      "contact_email": "[hashed]",
+      "has_legal_representative": false,
       "opt_out_status": false,
-      "consumer_id": "CONS-005",
+      "opt_out_categories": "none",
+      "dispute_type": "none",
       "request_history_count": 0,
       "discrimination_complaint": false,
       "texas_residency_status": true,
-      "known_child_status": true,
-      "universal_opt_out_signal_status": false
+      "universal_opt_out_signal_status": false,
+      "record_updated_date": "2024-09-30"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -318,7 +351,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:129",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:259",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -350,7 +383,7 @@
       "audit_type": "ThirdPartyAssessment"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:113",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:243",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -384,7 +417,7 @@
       "sensitive_data_sale_notice": "No sale"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:123",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:253",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -419,7 +452,7 @@
       "assessment_allowed": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:106",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:236",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -450,7 +483,7 @@
       "compliance_status": "NonCompliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:116",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:246",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -485,7 +518,7 @@
       "assessment_date": "2024-03-15"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:90",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:220",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -507,7 +540,7 @@
       "sensitive_id": "SD-004"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:82",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:212",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -532,29 +565,46 @@
       "third_party_sharing": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:75",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:205",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
       ],
+      "contact_phone": "202-555-0104",
+      "right_to_portability": false,
+      "response_received": true,
+      "last_interaction_date": "2024-10-01",
+      "breach_notification_date": "2024-09-15",
+      "account_status": "active",
+      "parental_consent_obtained": false,
+      "contact_email": "bob.johnson@example.com",
+      "right_to_correct": true,
+      "consumer_id": "CONS-004",
+      "right_to_appeal": false,
+      "known_child_status": false,
       "regional_standard_regulation_id": "TDPSA",
+      "record_created_date": "2024-10-01",
+      "right_to_delete": true,
       "last_request_date": "2024-10-01",
-      "contact_phone": "[hashed]",
       "data_breach_affected": true,
       "age_group": "Adult",
-      "parental_consent_obtained": false,
+      "satisfaction_rating": 3,
+      "right_to_access": true,
+      "request_types": "access,correction,deletion",
+      "compliance_requirement_met": true,
       "dispute_status": false,
-      "contact_email": "bob@example.com",
+      "has_legal_representative": false,
       "opt_out_status": false,
-      "consumer_id": "CONS-004",
+      "opt_out_categories": "none",
+      "dispute_type": "none",
       "request_history_count": 3,
       "discrimination_complaint": false,
       "texas_residency_status": true,
-      "known_child_status": false,
-      "universal_opt_out_signal_status": false
+      "universal_opt_out_signal_status": false,
+      "record_updated_date": "2024-10-01"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -584,7 +634,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:128",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:258",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -616,7 +666,7 @@
       "audit_type": "RegulatoryConducted"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:112",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:242",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -650,7 +700,7 @@
       "sensitive_data_sale_notice": "Limited sale"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:122",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:252",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -684,7 +734,7 @@
       "assessment_allowed": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:105",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:235",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -713,7 +763,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:115",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:245",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -748,7 +798,7 @@
       "assessment_date": "2024-02-25"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:89",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:219",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -770,7 +820,7 @@
       "sensitive_id": "SD-003"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:81",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:211",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -795,28 +845,45 @@
       "third_party_sharing": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:74",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:204",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
       ],
+      "contact_phone": "202-555-0103",
+      "right_to_portability": false,
+      "response_received": true,
+      "last_interaction_date": "2024-11-01",
+      "account_status": "active",
+      "parental_consent_obtained": true,
+      "contact_email": "child.under.13@example.com",
+      "right_to_correct": false,
+      "consumer_id": "CONS-003",
+      "right_to_appeal": false,
+      "known_child_status": true,
       "regional_standard_regulation_id": "TDPSA",
-      "contact_phone": "[hashed]",
+      "record_created_date": "2024-11-01",
+      "right_to_delete": false,
+      "last_request_date": "2024-11-01",
       "data_breach_affected": false,
       "age_group": "Child_Under_13",
-      "parental_consent_obtained": true,
+      "satisfaction_rating": 5,
+      "right_to_access": false,
+      "request_types": "none",
+      "compliance_requirement_met": true,
       "dispute_status": false,
-      "contact_email": "[hashed]",
+      "has_legal_representative": false,
       "opt_out_status": false,
-      "consumer_id": "CONS-003",
+      "opt_out_categories": "none",
+      "dispute_type": "none",
       "request_history_count": 0,
       "discrimination_complaint": false,
       "texas_residency_status": true,
-      "known_child_status": true,
-      "universal_opt_out_signal_status": false
+      "universal_opt_out_signal_status": false,
+      "record_updated_date": "2024-11-01"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -846,7 +913,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:127",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:257",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -880,7 +947,7 @@
       "audit_type": "External"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:111",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:241",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -914,7 +981,7 @@
       "sensitive_data_sale_notice": "Not selling sensitive data"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:121",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:251",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -948,7 +1015,7 @@
       "assessment_allowed": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:104",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:234",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -979,7 +1046,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:114",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:244",
       "mainLabel": "DataProtectionAssessment",
       "labels": [
         "DataProtectionAssessment"
@@ -1014,7 +1081,7 @@
       "assessment_date": "2024-01-20"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:88",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:218",
       "mainLabel": "SensitiveData",
       "labels": [
         "SensitiveData"
@@ -1036,7 +1103,7 @@
       "sensitive_id": "SD-002"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:80",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:210",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -1061,29 +1128,45 @@
       "third_party_sharing": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:73",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:203",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
       ],
+      "contact_phone": "202-555-0102",
+      "right_to_portability": false,
+      "response_received": true,
+      "last_interaction_date": "2024-09-20",
+      "account_status": "active",
+      "parental_consent_obtained": false,
+      "contact_email": "jane.smith@example.com",
+      "right_to_correct": true,
+      "consumer_id": "CONS-002",
+      "right_to_appeal": false,
+      "known_child_status": false,
       "regional_standard_regulation_id": "TDPSA",
+      "record_created_date": "2024-09-20",
+      "right_to_delete": true,
       "last_request_date": "2024-09-20",
-      "contact_phone": "[hashed]",
       "data_breach_affected": false,
       "age_group": "Adult",
-      "parental_consent_obtained": false,
+      "satisfaction_rating": 5,
+      "right_to_access": true,
+      "request_types": "access,deletion",
+      "compliance_requirement_met": true,
       "dispute_status": false,
-      "contact_email": "jane@example.com",
+      "has_legal_representative": false,
       "opt_out_status": true,
-      "consumer_id": "CONS-002",
+      "opt_out_categories": "targeted_advertising,sale,profiling",
+      "dispute_type": "none",
       "request_history_count": 2,
       "discrimination_complaint": false,
       "texas_residency_status": true,
-      "known_child_status": false,
-      "universal_opt_out_signal_status": true
+      "universal_opt_out_signal_status": true,
+      "record_updated_date": "2024-09-20"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
       "mainLabel": "BusinessEntity",
       "labels": [
         "BusinessEntity"
@@ -1113,7 +1196,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:126",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:256",
       "mainLabel": "ComplianceAudit",
       "labels": [
         "ComplianceAudit"
@@ -1147,7 +1230,7 @@
       "audit_type": "Internal"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:110",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:240",
       "mainLabel": "PrivacyNotice",
       "labels": [
         "PrivacyNotice"
@@ -1181,7 +1264,7 @@
       "sensitive_data_sale_notice": "N/A"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:120",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:250",
       "mainLabel": "DataProcessor",
       "labels": [
         "DataProcessor"
@@ -1215,7 +1298,7 @@
       "assessment_allowed": true
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:103",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:233",
       "mainLabel": "ProcessingActivity",
       "labels": [
         "ProcessingActivity"
@@ -1246,7 +1329,7 @@
       "compliance_status": "Compliant"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:79",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:209",
       "mainLabel": "PersonalData",
       "labels": [
         "PersonalData"
@@ -1271,33 +1354,49 @@
       "third_party_sharing": false
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:72",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:202",
       "mainLabel": "Consumer",
       "labels": [
         "Consumer"
       ],
+      "contact_phone": "202-555-0101",
+      "right_to_portability": false,
+      "response_received": true,
+      "last_interaction_date": "2024-08-15",
+      "account_status": "active",
+      "parental_consent_obtained": false,
+      "contact_email": "john.doe@example.com",
+      "right_to_correct": false,
+      "consumer_id": "CONS-001",
+      "right_to_appeal": false,
+      "known_child_status": false,
       "regional_standard_regulation_id": "TDPSA",
+      "record_created_date": "2024-08-15",
+      "right_to_delete": false,
       "last_request_date": "2024-08-15",
-      "contact_phone": "[hashed]",
       "data_breach_affected": false,
       "age_group": "Adult",
-      "parental_consent_obtained": false,
+      "satisfaction_rating": 4,
+      "right_to_access": true,
+      "request_types": "access",
+      "compliance_requirement_met": true,
       "dispute_status": false,
-      "contact_email": "john@example.com",
+      "has_legal_representative": false,
       "opt_out_status": false,
-      "consumer_id": "CONS-001",
+      "opt_out_categories": "none",
+      "dispute_type": "none",
       "request_history_count": 1,
       "discrimination_complaint": false,
       "texas_residency_status": true,
-      "known_child_status": false,
-      "universal_opt_out_signal_status": false
+      "universal_opt_out_signal_status": false,
+      "record_updated_date": "2024-08-15"
     }
   ],
   "rels": [
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:71",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6929082695825752129",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6929082695825752259",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "type": "GOVERNED_BY",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
@@ -1307,9 +1406,9 @@
       "mandatory": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:71",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187052",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:108",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187182",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:238",
       "type": "CONDUCTS_PROCESSING_ACTIVITY",
       "dpa_completed": true,
       "consent_obtained": true,
@@ -1322,9 +1421,9 @@
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:108",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814838",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:118",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:238",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814968",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:248",
       "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "High",
       "assessment_requirement_date": "2022-02-01",
@@ -1338,9 +1437,9 @@
       "assessment_date": "2024-05-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:71",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559259",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:91",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559389",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:221",
       "type": "PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 6,
       "processing_start_date": "2020-09-15",
@@ -1354,9 +1453,9 @@
       "explicit_consent_obtained": "2020-09-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:71",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931476",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:84",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931606",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:214",
       "type": "COLLECTS_PERSONAL_DATA",
       "collection_date": "2020-09-15",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
@@ -1369,9 +1468,9 @@
       "frequency": "AsNeeded"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:71",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068807",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:77",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:201",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068937",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:207",
       "type": "PROCESSES_CONSUMER_DATA",
       "consent_obtained": true,
       "relationship_status": "Active",
@@ -1388,9 +1487,9 @@
       "consent_date": "2020-09-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:70",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6926830896012066881",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6926830896012067011",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "type": "GOVERNED_BY",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
@@ -1400,9 +1499,9 @@
       "mandatory": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:70",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187051",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:107",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187181",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:237",
       "type": "CONDUCTS_PROCESSING_ACTIVITY",
       "dpa_completed": true,
       "consent_obtained": true,
@@ -1415,9 +1514,9 @@
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:70",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931475",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:83",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931605",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:213",
       "type": "COLLECTS_PERSONAL_DATA",
       "collection_date": "2022-02-01",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
@@ -1430,9 +1529,9 @@
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:70",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068806",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:76",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:200",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068936",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:206",
       "type": "PROCESSES_CONSUMER_DATA",
       "consent_obtained": true,
       "relationship_status": "Active",
@@ -1449,9 +1548,9 @@
       "consent_date": "2022-02-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924579096198381633",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924579096198381763",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "type": "GOVERNED_BY",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
@@ -1461,9 +1560,9 @@
       "mandatory": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698177",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:129",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698307",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:259",
       "type": "UNDERGOES_COMPLIANCE_AUDIT",
       "remediation_required": false,
       "audit_start_date": "2024-08-15",
@@ -1477,9 +1576,9 @@
       "audit_initiation_date": "2024-08-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070385",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:113",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070515",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:243",
       "type": "OFFERS_PRIVACY_NOTICE",
       "acknowledgment_date": "2024-01-30",
       "notice_date": "2024-01-15",
@@ -1493,9 +1592,9 @@
       "consumer_acknowledged": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442619",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:123",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442749",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:253",
       "type": "USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-09-15",
       "relationship_type": "USES_DATA_PROCESSOR",
@@ -1510,9 +1609,9 @@
       "confidentiality_binding": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187050",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:106",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187180",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:236",
       "type": "CONDUCTS_PROCESSING_ACTIVITY",
       "dpa_completed": false,
       "consent_obtained": false,
@@ -1525,9 +1624,9 @@
       "compliance_status": "NonCompliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:106",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814836",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:116",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:236",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814966",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:246",
       "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "High",
       "assessment_requirement_date": "2019-08-05",
@@ -1541,9 +1640,9 @@
       "assessment_date": "2024-03-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559258",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:90",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559388",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:220",
       "type": "PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 3,
       "processing_start_date": "2019-08-05",
@@ -1557,9 +1656,9 @@
       "explicit_consent_obtained": "2019-08-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931474",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:82",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931604",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:212",
       "type": "COLLECTS_PERSONAL_DATA",
       "collection_date": "2019-08-05",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
@@ -1572,9 +1671,9 @@
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:69",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068805",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:75",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:199",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068935",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:205",
       "type": "PROCESSES_CONSUMER_DATA",
       "consent_obtained": false,
       "relationship_status": "Active",
@@ -1590,9 +1689,9 @@
       "source_id": "ENT-004"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922327296384696385",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922327296384696515",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "type": "GOVERNED_BY",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
@@ -1602,9 +1701,9 @@
       "mandatory": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698176",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:128",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698306",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:258",
       "type": "UNDERGOES_COMPLIANCE_AUDIT",
       "remediation_required": false,
       "audit_start_date": "2024-07-01",
@@ -1618,9 +1717,9 @@
       "audit_initiation_date": "2024-07-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070384",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:112",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070514",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:242",
       "type": "OFFERS_PRIVACY_NOTICE",
       "notice_date": "2023-07-01",
       "relationship_type": "OFFERS_PRIVACY_NOTICE",
@@ -1633,9 +1732,9 @@
       "consumer_acknowledged": false
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442618",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:122",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442748",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:252",
       "type": "USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-05-15",
       "relationship_type": "USES_DATA_PROCESSOR",
@@ -1650,9 +1749,9 @@
       "confidentiality_binding": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187049",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:105",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187179",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:235",
       "type": "CONDUCTS_PROCESSING_ACTIVITY",
       "dpa_completed": true,
       "consent_obtained": true,
@@ -1665,9 +1764,9 @@
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:105",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814835",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:115",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:235",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814965",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:245",
       "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "Critical",
       "assessment_requirement_date": "2021-06-20",
@@ -1681,9 +1780,9 @@
       "assessment_date": "2024-02-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559257",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:89",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559387",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:219",
       "type": "PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 3,
       "processing_start_date": "2021-06-20",
@@ -1697,9 +1796,9 @@
       "explicit_consent_obtained": "2021-06-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931473",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:81",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931603",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:211",
       "type": "COLLECTS_PERSONAL_DATA",
       "collection_date": "2021-06-20",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
@@ -1712,9 +1811,9 @@
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:68",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068804",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:74",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:198",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068934",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:204",
       "type": "PROCESSES_CONSUMER_DATA",
       "consent_obtained": true,
       "relationship_status": "Active",
@@ -1731,9 +1830,9 @@
       "consent_date": "2021-06-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920075496571011137",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920075496571011267",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "type": "GOVERNED_BY",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
@@ -1743,9 +1842,9 @@
       "mandatory": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698175",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:127",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698305",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:257",
       "type": "UNDERGOES_COMPLIANCE_AUDIT",
       "remediation_required": true,
       "audit_start_date": "2024-04-01",
@@ -1760,9 +1859,9 @@
       "audit_initiation_date": "2024-04-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070383",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:111",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070513",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:241",
       "type": "OFFERS_PRIVACY_NOTICE",
       "acknowledgment_date": "2024-06-15",
       "notice_date": "2024-06-01",
@@ -1776,9 +1875,9 @@
       "consumer_acknowledged": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442617",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:121",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442747",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:251",
       "type": "USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-09-01",
       "relationship_type": "USES_DATA_PROCESSOR",
@@ -1793,9 +1892,9 @@
       "confidentiality_binding": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187048",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:104",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187178",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:234",
       "type": "CONDUCTS_PROCESSING_ACTIVITY",
       "dpa_completed": true,
       "consent_obtained": true,
@@ -1808,9 +1907,9 @@
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:104",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814834",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:114",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:234",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917819298710814964",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:244",
       "type": "REQUIRES_DATA_PROTECTION_ASSESSMENT",
       "risk_level": "High",
       "assessment_requirement_date": "2018-01-10",
@@ -1824,9 +1923,9 @@
       "assessment_date": "2024-01-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559256",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:88",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917817099687559386",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:218",
       "type": "PROCESSES_SENSITIVE_DATA",
       "audit_frequency_months": 3,
       "processing_start_date": "2018-01-10",
@@ -1840,9 +1939,9 @@
       "explicit_consent_obtained": "2018-01-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931472",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:80",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931602",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:210",
       "type": "COLLECTS_PERSONAL_DATA",
       "collection_date": "2018-01-10",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
@@ -1855,9 +1954,9 @@
       "frequency": "Daily"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:67",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068803",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:73",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:197",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068933",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:203",
       "type": "PROCESSES_CONSUMER_DATA",
       "consent_obtained": false,
       "relationship_status": "Active",
@@ -1873,9 +1972,9 @@
       "source_id": "ENT-002"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917823696757325889",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:65",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917823696757326019",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:195",
       "type": "GOVERNED_BY",
       "relationship_type": "GOVERNED_BY",
       "jurisdiction": "Texas",
@@ -1885,9 +1984,9 @@
       "mandatory": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698174",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:126",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917822597245698304",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:256",
       "type": "UNDERGOES_COMPLIANCE_AUDIT",
       "remediation_required": true,
       "audit_start_date": "2024-01-15",
@@ -1902,9 +2001,9 @@
       "audit_initiation_date": "2024-01-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070382",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:110",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917821497734070512",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:240",
       "type": "OFFERS_PRIVACY_NOTICE",
       "acknowledgment_date": "2024-01-15",
       "notice_date": "2024-01-01",
@@ -1918,9 +2017,9 @@
       "consumer_acknowledged": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442616",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:120",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917820398222442746",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:250",
       "type": "USES_DATA_PROCESSOR",
       "contract_effective_date": "2023-06-15",
       "relationship_type": "USES_DATA_PROCESSOR",
@@ -1935,9 +2034,9 @@
       "confidentiality_binding": true
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187047",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:103",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917818199199187177",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:233",
       "type": "CONDUCTS_PROCESSING_ACTIVITY",
       "dpa_completed": false,
       "consent_obtained": false,
@@ -1950,9 +2049,9 @@
       "compliance_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931471",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:79",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917816000175931601",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:209",
       "type": "COLLECTS_PERSONAL_DATA",
       "collection_date": "2020-03-15",
       "relationship_type": "COLLECTS_PERSONAL_DATA",
@@ -1965,9 +2064,9 @@
       "frequency": "Continuous"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:66",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068802",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:72",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:196",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153207377630068932",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:202",
       "type": "PROCESSES_CONSUMER_DATA",
       "consent_obtained": true,
       "relationship_status": "Active",
