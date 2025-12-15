@@ -170,34 +170,34 @@ ON CREATE SET
 #consent 
 consent = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Consent {regional_standard_regulation_id: 'TDPSA', consent_id: row.consent_id})
+MERGE (co:Consent {regional_standard_regulation_id: 'TDPSA', consent_id: row.consent_id})
 ON CREATE SET
-    c.consent_timestamp = datetime(row.consent_timestamp),
-    c.affirmative_action_taken = toBoolean(row.affirmative_action_taken),
-    c.consent_type = row.consent_type,
-    c.consent_valid = toBoolean(row.consent_valid),
-    c.dark_pattern_used = toBoolean(row.dark_pattern_used),
-    c.consent_method = row.consent_method,
-    c.scope_of_consent = row.scope_of_consent,
-    c.expiration_date = CASE 
+    co.consent_timestamp = datetime(row.consent_timestamp),
+    co.affirmative_action_taken = toBoolean(row.affirmative_action_taken),
+    co.consent_type = row.consent_type,
+    co.consent_valid = toBoolean(row.consent_valid),
+    co.dark_pattern_used = toBoolean(row.dark_pattern_used),
+    co.consent_method = row.consent_method,
+    co.scope_of_consent = row.scope_of_consent,
+    co.expiration_date = CASE 
         WHEN row.expiration_date = '' OR row.expiration_date IS NULL 
         THEN null 
         ELSE date(row.expiration_date) 
     END,
-    c.revocation_allowed = toBoolean(row.revocation_allowed),
-    c.revocation_method = split(row.revocation_method, ';'),
-    c.renewal_needed = toBoolean(row.renewal_needed),
-    c.renewal_date = CASE 
+    co.revocation_allowed = toBoolean(row.revocation_allowed),
+    co.revocation_method = split(row.revocation_method, ';'),
+    co.renewal_needed = toBoolean(row.renewal_needed),
+    co.renewal_date = CASE 
         WHEN row.renewal_date = '' OR row.renewal_date IS NULL 
         THEN null 
         ELSE date(row.renewal_date) 
     END,
-    c.compliance_with_coppa = toBoolean(row.compliance_with_coppa),
-    c.parental_verification_completed = toBoolean(row.parental_verification_completed),
-    c.freely_given = toBoolean(row.freely_given),
-    c.specific = toBoolean(row.specific),
-    c.informed = toBoolean(row.informed),
-    c.consumer_can_withdraw = toBoolean(row.consumer_can_withdraw);
+    co.compliance_with_coppa = toBoolean(row.compliance_with_coppa),
+    co.parental_verification_completed = toBoolean(row.parental_verification_completed),
+    co.freely_given = toBoolean(row.freely_given),
+    co.specific = toBoolean(row.specific),
+    co.informed = toBoolean(row.informed),
+    co.consumer_can_withdraw = toBoolean(row.consumer_can_withdraw);
 """
 
 #privacy_notice 
@@ -245,7 +245,7 @@ ON CREATE SET
     dpa.benefits_identified = row.benefits_identified,
     dpa.risks_identified = row.risks_identified,
     dpa.unfair_treatment_risk = toBoolean(row.unfair_treatment_risk),
-    dpa.disparate_impact_risk = toBoolean(row.disparate_impact_risk),
+    dpa.disparate_impact_risk = toBoolean(row.disparate_iconsumer_requestmpact_risk),
     dpa.financial_harm_risk = toBoolean(row.financial_harm_risk),
     dpa.physical_harm_risk = toBoolean(row.physical_harm_risk),
     dpa.reputation_harm_risk = toBoolean(row.reputation_harm_risk),
@@ -297,11 +297,23 @@ ON CREATE SET
         THEN null 
         ELSE date(row.response_date) 
     END,
-    cr.response_method = row.response_method,
+    cr.response_method = CASE 
+        WHEN row.response_method = '' OR row.response_method IS NULL 
+        THEN null 
+        ELSE row.response_method 
+    END,
     cr.free_request_count = toInteger(row.free_request_count),
     cr.fee_charged = toBoolean(row.fee_charged),
-    cr.completion_status = toBoolean(row.completion_status),
-    cr.consumer_satisfied = toBoolean(row.consumer_satisfied),
+    cr.completion_status = CASE 
+        WHEN row.completion_status = '' OR row.completion_status IS NULL 
+        THEN null 
+        ELSE toBoolean(row.completion_status) 
+    END,
+    cr.consumer_satisfied = CASE 
+        WHEN row.consumer_satisfied = '' OR row.consumer_satisfied IS NULL 
+        THEN null 
+        ELSE toBoolean(row.consumer_satisfied) 
+    END,
     cr.appeal_submitted = toBoolean(row.appeal_submitted),
     cr.appeal_deadline = CASE 
         WHEN row.appeal_deadline = '' OR row.appeal_deadline IS NULL 
@@ -383,11 +395,10 @@ ON CREATE SET
     db.public_disclosure_required = toBoolean(row.public_disclosure_required),
     db.lessons_learned = row.lessons_learned;
 """
-
-#opt_out_mechanism 
+#opt_out_mechanism
 opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA', mechanism_id: row.mechanism_id})
+MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA', optout_id: row.optout_id})
 ON CREATE SET
     om.optout_type = row.optout_type,
     om.optout_method = row.optout_method,
@@ -395,7 +406,7 @@ ON CREATE SET
     om.optout_effective_date = date(row.optout_effective_date),
     om.universal_opt_out_signal = toBoolean(row.universal_opt_out_signal),
     om.signal_type = CASE 
-        WHEN row.signal_type = '' OR row.signal_type IS NULL 
+        WHEN row.signal_type = '' OR row.signal_type IS NULL OR row.signal_type = 'None'
         THEN null 
         ELSE row.signal_type 
     END,
@@ -425,6 +436,7 @@ ON CREATE SET
         ELSE date(row.remediation_date) 
     END;
 """
+
 
 #Compliance audit 
 compliance_audit = """
@@ -777,6 +789,20 @@ ON CREATE SET
     r.jurisdiction = row.jurisdiction,
     r.mandatory = toBoolean(row.mandatory);
 """
+# Personal data belongs to category
+personal_data_belongs_to_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (source:PersonalData {regional_standard_regulation_id: 'TDPSA', data_id: row.source_data_id})
+MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA', category_id: row.target_category_id})
+MERGE (source)-[r:BELONGS_TO_CATEGORY {
+    source_id: row.source_data_id,
+    target_id: row.target_category_id
+}]->(target)
+ON CREATE SET
+    r.relationship_type = row.relationship_type,
+    r.classification_date = date(row.classification_date),
+    r.primary_category = toBoolean(row.primary_category);
+"""
 
 import os
 import time
@@ -800,94 +826,94 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(business_entity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BusinessEntity_nodes.csv'))
+client.query(business_entity.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BusinessEntity_nodes.csv'))
 time.sleep(2)
 
-client.query(consumer.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consumer_nodes.csv'))
+client.query(consumer.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consumer_nodes.csv'))
 time.sleep(2)
 
-client.query(personal_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PersonalData_nodes.csv'))
+client.query(personal_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PersonalData_nodes.csv'))
 time.sleep(2)
 
-client.query(sensitive_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_SensitiveData_nodes.csv'))
+client.query(sensitive_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_SensitiveData_nodes.csv'))
 time.sleep(2)
 
-client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DATACATEGORY.csv'))
+client.query(data_category.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DATACATEGORY.csv'))
 time.sleep(2)
 
-client.query(processing_activity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ProcessingActivity_nodes.csv'))
+client.query(processing_activity.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ProcessingActivity_nodes.csv'))
 time.sleep(2)
 
-client.query(consent.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consent_nodes.csv'))
+client.query(consent.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_Consent_nodes.csv'))
 time.sleep(2)
 
-client.query(privacy_notice.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PrivacyNotice_nodes.csv'))
+client.query(privacy_notice.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PrivacyNotice_nodes.csv'))
 time.sleep(2)
 
-client.query(data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProtectionAssessment_nodes.csv'))
+client.query(data_protection_assessment.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProtectionAssessment_nodes.csv'))
 time.sleep(2)
 
-client.query(consumer_request.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ConsumerRequest_nodes.csv'))
+client.query(consumer_request.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ConsumerRequest_nodes.csv'))
 time.sleep(2)
 
-client.query(data_processor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProcessor_nodes.csv'))
+client.query(data_processor.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataProcessor_nodes.csv'))
 time.sleep(2)
 
-client.query(data_breach.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataBreach_nodes.csv'))
+client.query(data_breach.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_DataBreach_nodes.csv'))
 time.sleep(2)
 
-client.query(opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OptOutMechanism_nodes.csv'))
+client.query(opt_out_mechanism.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OptOutMechanism_nodes.csv'))
 time.sleep(2)
 
-client.query(compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ComplianceAudit_nodes.csv'))
+client.query(compliance_audit.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_ComplianceAudit_nodes.csv'))
 time.sleep(2)
 
-client.query(process_consumer_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships.csv'))
+client.query(process_consumer_rel.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships.csv'))
 time.sleep(2)
 
-client.query(collects_personal_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_COLLECTS_PERSONAL_DATA_relationships.csv'))
+client.query(collects_personal_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_COLLECTS_PERSONAL_DATA_relationships.csv'))
 time.sleep(2)
 
-client.query(process_sensitive_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_SENSITIVE_DATA_relationships.csv'))
+client.query(process_sensitive_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_SENSITIVE_DATA_relationships.csv'))
 time.sleep(2)
 
-client.query(obtains_consent_data.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OBTAINS_CONSENT_relationships.csv'))
+client.query(obtains_consent_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OBTAINS_CONSENT_relationships.csv'))
 time.sleep(2)
 
-client.query(conducts_processing_activity.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_CONDUCTS_PROCESSING_ACTIVITY_relationships.csv'))
+client.query(conducts_processing_activity.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_CONDUCTS_PROCESSING_ACTIVITY_relationships.csv'))
 time.sleep(2)
 
-client.query(requires_data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_REQUIRES_DATA_PROTECTION_ASSESSMENT_relationships.csv'))
+client.query(requires_data_protection_assessment.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_REQUIRES_DATA_PROTECTION_ASSESSMENT_relationships.csv'))
 time.sleep(2)
 
-client.query(respond_consumer_request.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_RESPONDS_TO_CONSUMER_REQUEST_relationships.csv'))
+client.query(respond_consumer_request.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_RESPONDS_TO_CONSUMER_REQUEST_relationships.csv'))
 time.sleep(2)
 
-client.query(uses_data_processor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_USES_DATA_PROCESSOR_relationships.csv'))
+client.query(uses_data_processor.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_USES_DATA_PROCESSOR_relationships.csv'))
 time.sleep(2)
 
-client.query(offers_privacy_notice.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OFFERS_PRIVACY_NOTICE_relationships.csv'))
+client.query(offers_privacy_notice.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OFFERS_PRIVACY_NOTICE_relationships.csv'))
 time.sleep(2)
 
-client.query(provides_opt_out_mechanism.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROVIDES_OPT_OUT_MECHANISM_relationships.csv'))
+client.query(provides_opt_out_mechanism.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROVIDES_OPT_OUT_MECHANISM_relationships.csv'))
 time.sleep(2)
 
-client.query(experiences_data_breach.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_EXPERIENCES_DATA_BREACH_relationships.csv'))
+client.query(experiences_data_breach.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_EXPERIENCES_DATA_BREACH_relationships.csv'))
 time.sleep(2)
 
-client.query(undergoes_compliance_audit.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_UNDERGOES_COMPLIANCE_AUDIT_relationships.csv'))
+client.query(undergoes_compliance_audit.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_UNDERGOES_COMPLIANCE_AUDIT_relationships.csv'))
 time.sleep(2)
 
-client.query(exercises_consumer_right.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_EXERCISES_CONSUMER_RIGHT_relationships.csv'))
+client.query(exercises_consumer_right.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_EXERCISES_CONSUMER_RIGHT_relationships.csv'))
 time.sleep(2)
 
-client.query(personal_data_belongs_to_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_PersonalData.csv'))
+client.query(personal_data_belongs_to_category.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_PersonalData.csv'))
 time.sleep(2)
 
-client.query(sensitive_data_belongs_to_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_SensitiveData.csv'))
+client.query(sensitive_data_belongs_to_category.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_SensitiveData.csv'))
 time.sleep(2)
 
-client.query(governed_by.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_GOVERNED_BY_relationships.csv'))
+client.query(governed_by.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_GOVERNED_BY_relationships.csv'))
 time.sleep(2)
 
 

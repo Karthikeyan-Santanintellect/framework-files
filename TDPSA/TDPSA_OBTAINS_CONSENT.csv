@@ -1,0 +1,7 @@
+source_entity_id,target_consent_id,relationship_type,consent_request_date,consent_granted_date,consent_type,dark_pattern_avoided,freely_given,specific_purpose_consented,consent_valid
+ENT-001,CONS-001,OBTAINS_CONSENT,2024-01-10,2024-01-15,ExplicitOptIn,true,true,Targeted advertising and analytics,true
+ENT-001,CONS-005,OBTAINS_CONSENT,2024-04-05,2024-04-10,ExplicitOptIn,true,true,Behavioral profiling,true
+ENT-002,CONS-002,OBTAINS_CONSENT,2024-02-15,2024-02-20,ExplicitOptIn,true,true,Data sale to business partners,true
+ENT-002,CONS-004,OBTAINS_CONSENT,2024-03-20,2024-03-25,OptOut,true,true,Opt out of all data sales,true
+ENT-003,CONS-003,OBTAINS_CONSENT,2024-02-25,2024-03-01,ExplicitOptIn,true,true,Sensitive data processing,true
+ENT-006,CONS-006,OBTAINS_CONSENT,2024-04-30,2024-05-05,ExplicitOptIn,true,true,Health data processing,true
