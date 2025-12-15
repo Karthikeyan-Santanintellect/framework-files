@@ -1,0 +1,4 @@
+level_id,name,description,protection_level,data_protection_needs,isa_catalogue_required,external_audit_required,self_assessment_allowed,requires_on_site_visit,typical_scope_size,costs_implications,certification_validity_years
+1,Assessment Level 1,Basic security assessment for less sensitive environments,Basic,Standard data protection,ISA 1,False,True,False,Small (50-100 controls),Low costs,3
+2,Assessment Level 2,Moderate security assessment for standard operations,Moderate,Enhanced protection,"ISA 1, ISA 2",True,False,True,Medium (100-200 controls),Medium costs,3
+3,Assessment Level 3,Advanced security assessment for highly sensitive information,Advanced,Maximum protection with encryption,"ISA 1, ISA 2, ISA 3",True,False,True,Large (200+ controls),High costs,3

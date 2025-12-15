@@ -1,20 +1,20 @@
 #Regulation
 regulation = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (i:IndustryStandardAndRegulation{industry_standard_regulation_id: row.industry_standard_regulation_id:'GLBA'})
+MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA'})
 ON CREATE SET
-    i.name = "Gramm-Leach-Bliley Act",
-    i.version = "1999 (Pub. L. 106-102)",
-    i.status = "Active",
-    i.jurisdiction = "United States (Federal)",
-    i.effective_date = date("1999-11-12"),
-    i.enactment_date = date("1999-11-12"),
-    i.description = "Federal law that requires financial institutions to explain their information-sharing practices to their customers and to safeguard sensitive data. It consists of three primary sections: the Financial Privacy Rule, which governs the collection and disclosure of customers' personal financial information; the Safeguards Rule, which requires financial institutions to implement security programs to protect such information; and the Pretexting provisions, which prohibit accessing private information using false pretenses. Applies to banks, securities firms, insurance companies, and other financial service providers.";
+  i.name = "Gramm-Leach-Bliley Act",
+  i.version = "1999 (Pub. L. 106-102)",
+  i.status = "Active",
+  i.jurisdiction = "United States (Federal)",
+  i.effective_date = date("1999-11-12"),
+  i.enactment_date = date("1999-11-12"),
+  i.description = "Federal law that requires financial institutions to explain their information-sharing practices to their customers and to safeguard sensitive data. It includes the Financial Privacy Rule, Safeguards Rule, and pretexting provisions.";
 """
+
 #rule
 rule = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ru:Rule{IndustyStandardAndRegulation_id: row.industry_standard_regulation_id, rule_id: row.ruleid})
+MERGE (ru:Rule{industry_standard_regulation_id: 'GLBA', rule_id: row.ruleid})
 ON CREATE SET
     ru.name = row.name,
     ru.description = row.description,
@@ -24,7 +24,7 @@ ON CREATE SET
 #section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sec:Section{industry_standard_regulation_id: row.industry_standard_regulation_id, section_id: row.sectionid})
+MERGE (sec:Section{industry_standard_regulation_id: 'GLBA', section_id: row.sectionid})
 ON CREATE SET
     sec.fullcitation = row.fullcitation,
     sec.heading = row.heading,
@@ -33,7 +33,7 @@ ON CREATE SET
 #requirement
 requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement{industry_standard_regulation_id: row.industry_standard_regulation_id, requirement_id: row.requirementid})
+MERGE (r:Requirement{industry_standard_regulation_id: 'GLBA', requirement_id: row.requirementid})
 ON CREATE SET
     r.type = row.type,
     r.text = row.text,
@@ -43,15 +43,15 @@ ON CREATE SET
 #role
 role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ro:Role{industry_standard_regulation_id: row.industry_standard_regulation_id, role_id: row.roleid})
-ON CREATE
+MERGE (ro:Role{industry_standard_regulation_id: 'GLBA', role_id: row.roleid})
+ON CREATE SET
     ro.name = row.name,
     ro.description = row.description;
 """
 #datacategory
 datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataCategory{industry_standard_regulation_id: row.industry_standard_regulation_id, data_id: row.dataid})
+MERGE (dc:DataCategory{industry_standard_regulation_id: 'GLBA', data_id: row.dataid})
 ON CREATE SET
     dc.name = row.name,
     dc.description = row.description,
@@ -60,7 +60,7 @@ ON CREATE SET
 #Eventype
 eventype = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (et:EventType{industry_standard_regulation_id: row.industry_standard_regulation_id, event_id:row.eventtypeid})
+MERGE (et:EventType{industry_standard_regulation_id: 'GLBA', event_id:row.eventtypeid})
 ON CREATE SET
     et.name = row.name,
     et.deadline = row.deadline;
@@ -68,7 +68,7 @@ ON CREATE SET
 #safeguard
 safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Safeguard{industry_standard_regulation_id: row.industry_standard_regulation_id, safeguard_id: row.safeguardid})
+MERGE (s:Safeguard{industry_standard_regulation_id: 'GLBA', safeguard_id: row.safeguardid})
 ON CREATE SET
     s.name = row.name,
     s.type = row.type,
@@ -77,7 +77,7 @@ ON CREATE SET
 #enforcement_action
 enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row  
-MERGE (ea:EnforcementAction{industry_standard_regulation_id: row.industry_standard_regulation_id, enforcement_action_id: row.enforcementid})
+MERGE (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA', enforcement_action_id: row.enforcementid})
 ON CREATE SET
     ea.authority = row.authority,
     ea.description = row.description;
@@ -85,15 +85,15 @@ ON CREATE SET
 #policy
 policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (po:Policy{industry_standard_regulation_id: row.industry_standard_regulation_id, policy_id: row.policyid})
+MERGE (po:Policy{industry_standard_regulation_id: 'GLBA', policy_id: row.policyid})
 ON CREATE SET
     po.name = row.name,
     po.owner = row.owner;
 """
 #control
 control = """
-LOAD CSV WITH HEADERS FROM '$file_path
-MERGE (co:Control{industry_standard_regulation_id: row.industry_standard_regulation_id, control_id: row.controlid})
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (co:Control{industry_standard_regulation_id: 'GLBA', control_id: row.controlid})
 ON CREATE SET
     co.name = row.name,
     co.category = row.category;
@@ -101,7 +101,7 @@ ON CREATE SET
 #system
 system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sys:System{industry_standard_regulation_id: row.industry_standard_regulation_id, system_id: row.systemid})
+MERGE (sys:System{industry_standard_regulation_id: 'GLBA', system_id: row.systemid})
 ON CREATE SET
     sys.name = row.name,
     sys.holds_npi = row.holds_npi;
@@ -109,7 +109,7 @@ ON CREATE SET
 #process
 process = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pr:Process{industry_standard_regulation_id: row.industry_standard_regulation_id, process_id: row.processid})
+MERGE (pr:Process{industry_standard_regulation_id: 'GLBA', process_id: row.processid})
 ON CREATE SET
     pr.name = row.name;
 """
@@ -117,8 +117,8 @@ ON CREATE SET
 #Regulation → Rule
 regulation_rule ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: row.source_regulation_name})
-MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA',rule_id:target_rule_id)
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id:'GLBA'})
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA',rule_id:row.target_rule_id})
 MERGE (i)-[:REGULATION_HAS_RULE{type:row.relationship_type}]->(ru);
 """
 #Rule → Section
@@ -166,10 +166,19 @@ MERGE (r)-[:REQUIREMENT_REQUIRES_SAFEGUARD{type:row.relationship_type}]->(s);
 #Requirement → Policy
 requirement_policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (po:Policy{industry_standard_regulation_id: 'GLBA',policy_id:row.target_policy_id})
-MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY{type:row.relationship_type}]->(po);
+MATCH (r:Requirement {
+  industry_standard_regulation_id: 'GLBA',
+  requirement_id: row.source_requirement_id
+})
+MATCH (po:Policy {
+  industry_standard_regulation_id: 'GLBA',
+  policy_id: row.target_policy_id
+})
+MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY {
+  type: row.relationship_type
+}]->(po);
 """
+
 #Requirement → Control
 requirement_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -194,18 +203,18 @@ MERGE (r)-[:REQUIREMENT_IMPACTS_PROCESS{type:row.relationship_type}]->(pr);
 #Role → Role (Customer → Financial Institution)
 role_role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ro:Role{industry_standard_regulation_id: 'GLBA',role_id:row.source_role_id})
-MATCH (ro:Role{industry_standard_regulation_id: 'GLBA',role_id:row.target_role_id})}
-MERGE (ro)-[:ROLE_HAS_ROLE{
+MATCH (src:Role{industry_standard_regulation_id: 'GLBA',role_id:row.source_role_id})
+MATCH (tgt:Role{industry_standard_regulation_id: 'GLBA',role_id:row.target_role_id})
+MERGE (src)-[:ROLE_HAS_ROLE{
     type:row.relationship_type,
-    description:relationship_description
-    }]->(ro);
+    description:row.relationship_description
+    }]->(tgt);
 """
 #Requirement → EnforcementAction
 requirement_enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA',enforcement_action_id:row.target_enforcement_action_id})
+MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA',enforcement_action_id:row.target_enforcement_id})
 MERGE (r)-[:REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION{type:row.relationship_type}]->(ea);
 """
 
@@ -232,91 +241,81 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(rule.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles.csv'))
+client.query(rule.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Rule_nodes.csv'))
 time.sleep(2)
 
-client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles.csv'))
+client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Section_nodes.csv'))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections.csv'))
+client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Requirement_nodes.csv'))
 time.sleep(2)
 
-client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements.csv'))
+client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Role_nodes.csv'))
 time.sleep(2)
 
-client.query(datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
+client.query(datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_DataCategory_nodes.csv'))
 time.sleep(2)
 
-client.query(eventype.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_DataCategories.csv'))
+client.query(eventype.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_EventType_nodes.csv'))
 time.sleep(2)
 
-client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Safeguards.csv'))
+client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Safeguard_nodes.csv'))
 time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
+client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_EnforcementAction_nodes.csv'))
 time.sleep(2)
 
-client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions.csv'))
+client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Policy_nodes.csv'))
 time.sleep(2)
 
-client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms.csv'))
+client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Control_nodes.csv'))
 time.sleep(2)
 
-client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria.csv'))
+client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_System_nodes.csv'))
 time.sleep(2)
 
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs.csv'))
-time.sleep(2)
-
-client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies.csv'))
-time.sleep(2)
-
-client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls.csv'))
-time.sleep(2)
-
-client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems.csv'))
+client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Process_nodes.csv'))
 time.sleep(2)
 
 
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Processes.csv'))
+
+
+client.query(regulation_rule.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASRULE_relationships.csv'))  
+
+client.query(rule_section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASSECTION_relationships.csv'))
 time.sleep(2)
 
-client.query(regulation_rule.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements.csv'))  
-
-client.query(rule_section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Regulation_Titles.csv'))
+client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASREQUIREMENT_relationships.csv'))
 time.sleep(2)
 
-client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_Subtitles.csv'))
-time.sleep(2)
-
-client.query(requirement_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitle_Sections.csv'))
+client.query(requirement_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_APPLIESTOROLE_relationships.csv'))
 time.sleep(2)   
 
-client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Section_Requirements.csv'))
+client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_APPLIESTODATA_relationships.csv'))
 time.sleep(2)
 
-client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Roles.csv'))
+client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_TRIGGERSEVENTTYPE_relationships.csv'))
 time.sleep(2)
 
-client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Data.csv'))
+client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_REQUIRESSAFEGUARD_relationships.csv'))
 time.sleep(2)   
 
-client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Safeguards.csv'))
+client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_SUPPORTEDBYPOLICY_relationships.csv'))
 time.sleep(2)   
 
-client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Events.csv'))    
+client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPLEMENTEDBYCONTROL_relationships.csv'))    
 time.sleep(2)   
 
-client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Policies.csv'))    
+client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPLEMENTEDINSYSTEM_relationships.csv'))    
 time.sleep(2)
 
-client.query(requirement_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Controls.csv'))
+client.query(requirement_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPACTSPROCESS_relationships.csv'))
 time.sleep(2)   
 
-client.query(role_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Control_Systems.csv'))
+client.query(role_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASRELATIONSHIPWITH_relationships.csv'))
 time.sleep(2)
 
-client.query(requirement_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Processes.csv'))
+client.query(requirement_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_ENFORCEDBY_relationships.csv'))
 time.sleep(2)
 
  
@@ -351,7 +350,5 @@ with open('glba.json', 'w', encoding='utf-8') as f:
     f.write(json.dumps(res, default=str, indent=2))
 logger.info("✓ Exported graph data to glba.json")
 
-
 client.close()
-
 

@@ -1,0 +1,5 @@
+source_participant_id,relationship_type,target_participant_id,sharing_date,shared_by,confidentiality_level_granted,result_id_shared,expires_date,consent_obtained
+PART-001,SHARES_RESULTS_WITH,PART-002,2024-10-15,CISSO-001,Restricted,RES-001,2025-10-15,True
+PART-002,SHARES_RESULTS_WITH,PART-003,2024-11-01,CISO-002,Public,RES-002,2025-11-01,True
+PART-001,SHARES_RESULTS_WITH,PART-004,2024-09-20,CISSO-001,Restricted,RES-001,2025-09-20,True
+PART-002,SHARES_RESULTS_WITH,PART-001,2024-08-15,CISO-002,Public,RES-003,2025-08-15,True

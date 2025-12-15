@@ -1,0 +1,4 @@
+result_id,certification_date,validity_start,validity_end,assessment_level_achieved,overall_compliance_percentage,findings_critical_count,findings_major_count,findings_minor_count,findings_observations_count,non_conformities,corrective_actions_required,label_status,label_validity_months,auditor_name,auditor_sign_off_date,confidentiality_level,result_documentation_url,issuing_body
+RES-001,2024-08-15,2024-08-15,2027-08-15,2,92.5,1,3,8,4,4,True,Active,36,Dr. Hans Mueller,2024-08-20,Restricted,https://portal.enx.com/result/RES-001,TISAX Registry - ENX Association
+RES-002,2023-12-20,2023-12-20,2026-12-20,3,96.0,0,2,5,2,2,False,Active,36,Johann Schmidt,2023-12-25,Public,https://portal.enx.com/result/RES-002,TISAX Registry - ENX Association
+RES-003,2024-11-10,2024-11-10,2027-11-10,2,88.5,2,5,12,6,7,True,Active,36,Dr. Hans Mueller,2024-11-15,Restricted,https://portal.enx.com/result/RES-003,TISAX Registry - ENX Association

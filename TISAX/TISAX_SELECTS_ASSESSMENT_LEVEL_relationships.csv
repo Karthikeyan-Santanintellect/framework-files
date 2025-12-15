@@ -1,0 +1,6 @@
+source_organization_id,relationship_type,target_level_id,selection_date,justification,data_protection_justification,approved_by,is_upgrade_from_previous
+ORG-001,SELECTS_ASSESSMENT_LEVEL,2,2023-12-01,Standard automotive supply requirements,Customer data and product specs,Chief Compliance Officer,False
+ORG-002,SELECTS_ASSESSMENT_LEVEL,3,2021-05-15,OEM requirement with sensitive data,"Customer data, designs, financial records",Board of Directors,False
+ORG-003,SELECTS_ASSESSMENT_LEVEL,2,2023-02-10,IT services with access to proprietary systems,High sensitivity due to design access,CTO,False
+ORG-004,SELECTS_ASSESSMENT_LEVEL,3,2020-10-01,Design and manufacturing with patents,Prototype and technical designs,CEO,True
+ORG-005,SELECTS_ASSESSMENT_LEVEL,1,2022-12-20,Initial compliance step,Basic customer information,Compliance Manager,False

@@ -1,0 +1,7 @@
+source_assessment_id,relationship_type,target_catalogue_id,applicability_date,catalogue_version_used,control_questions_applicable_count,exemptions_claimed,exemption_justification
+ASS-001,SUBJECT_TO_ISA_CATALOGUE,ISA-001,2024-01-10,5.0,165,Cloud data center operations,"External provider, separate contract"
+ASS-002,SUBJECT_TO_ISA_CATALOGUE,ISA-002,2023-06-15,5.0,245,None,Full coverage applicable
+ASS-003,SUBJECT_TO_ISA_CATALOGUE,ISA-001,2024-08-20,5.0,175,Legacy system maintenance,Deprecated by 2025
+ASS-004,SUBJECT_TO_ISA_CATALOGUE,ISA-002,2024-09-05,5.0,240,None,Full coverage applicable
+ASS-005,SUBJECT_TO_ISA_CATALOGUE,ISA-001,2024-10-01,5.0,160,Outsourced logistics,Third party managed
+ASS-006,SUBJECT_TO_ISA_CATALOGUE,ISA-001,2024-11-15,5.0,120,None,None required

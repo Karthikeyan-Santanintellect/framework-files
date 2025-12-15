@@ -1,0 +1,6 @@
+object_id,name,type,classification,protection_level,is_sensitive,data_categories_contained,owner_department,criticality_to_business,location,last_assessment_date,protection_controls_implemented,remaining_risk
+PO-001,Production Database,Data,Confidential,High,True,Product specifications; Manufacturing parameters,Operations,Critical,Frankfurt Data Center,2024-06-15,Encryption; Access controls; Backup,Low
+PO-002,CAD Design Files,Document,Secret,Maximum,True,Design drawings; Technical specifications; Patents,Engineering,Critical,Stuttgart Server Room,2024-08-20,Encryption; Digital signatures; Version control,Low
+PO-003,Customer Database,Data,Confidential,High,True,Customer names; Contact info; Orders; Payment data,Sales,High,Munich Data Center,2024-07-01,Encryption; Access controls; Audit logs; DLP,Low
+PO-004,Manufacturing ERP,System,Confidential,High,True,Production schedules; Inventory; Financial data,IT,Critical,Frankfurt Data Center,2024-06-15,Encryption; MFA; Firewall; Monitoring,Low
+PO-005,R&D Documentation,Document,Secret,Maximum,True,Research results; Technical innovations; Lab notes,Research & Development,Critical,Munich Server Room,2024-09-01,Encryption; Access controls; Audit trails; Classification,Medium

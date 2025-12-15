@@ -1,0 +1,6 @@
+source_assessment_id,relationship_type,target_object_id,inclusion_date,current_protection_level,target_protection_level,identified_gaps
+ASS-001,PROTECTS_OBJECT,PO-001,2024-01-10,High,High,Key management process; Encryption standard update
+ASS-001,PROTECTS_OBJECT,PO-004,2024-01-20,High,High,Backup encryption; MFA not everywhere
+ASS-002,PROTECTS_OBJECT,PO-002,2023-06-15,Maximum,Maximum,None identified
+ASS-003,PROTECTS_OBJECT,PO-003,2024-08-20,High,High,Access control logging; DLP tool gaps
+ASS-002,PROTECTS_OBJECT,PO-005,2023-06-25,High,Maximum,Classification labeling; Vault protection

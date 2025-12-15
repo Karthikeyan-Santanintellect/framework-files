@@ -1,0 +1,7 @@
+source_organization_id,relationship_type,target_assessment_id,assessment_start,scheduled_completion,budget_allocated,scope_agreed,internal_resource_hours
+ORG-001,UNDERGOES_ASSESSMENT,ASS-001,2024-01-10,2024-08-15,45000,Production and warehouse,200
+ORG-002,UNDERGOES_ASSESSMENT,ASS-002,2023-06-15,2023-12-20,75000,Complete organization,400
+ORG-003,UNDERGOES_ASSESSMENT,ASS-003,2024-08-20,2024-11-10,35000,Supply chain IT,150
+ORG-004,UNDERGOES_ASSESSMENT,ASS-004,2024-09-05,2024-12-05,65000,Manufacturing and R&D,350
+ORG-005,UNDERGOES_ASSESSMENT,ASS-005,2024-10-01,2024-12-30,40000,All business processes,200
+ORG-001,UNDERGOES_ASSESSMENT,ASS-006,2024-11-15,2024-12-15,20000,Basic infrastructure,80

@@ -1,0 +1,6 @@
+source_organization_id,relationship_type,target_tisax,registration_date,initial_al_target,scope_declaration,terms_acceptance_date,registration_number
+ORG-001,REGISTERS_IN_TISAX,TISAX,2022-01-15,2,Production and supply chain,2022-01-10,REG-2022-001
+ORG-002,REGISTERS_IN_TISAX,TISAX,2021-06-20,3,Full organization scope,2021-06-15,REG-2021-001
+ORG-003,REGISTERS_IN_TISAX,TISAX,2023-03-10,2,IT services only,2023-03-05,REG-2023-001
+ORG-004,REGISTERS_IN_TISAX,TISAX,2020-11-05,3,Manufacturing and design,2020-11-01,REG-2020-001
+ORG-005,REGISTERS_IN_TISAX,TISAX,2023-01-30,1,Component supply,2023-01-25,REG-2023-002

@@ -1,0 +1,5 @@
+participant_id,organization_name,participant_type,joining_date,assessment_result_access_level,data_sharing_status,trusted_relationship,shared_assessments_count,received_assessments_count,exchange_agreements_count,last_exchange_date,quality_incidents_reported
+PART-001,AutoSupply Corp,Supplier,2022-01-15,Restricted,ActiveSharing,True,5,3,2,2024-10-15,0
+PART-002,Premium Automotive,Supplier,2021-06-20,Public,ActiveSharing,True,12,15,4,2024-11-01,1
+PART-003,Manufacturing LLC,OEM,2020-11-05,Private,Paused,True,8,2,3,2024-08-20,0
+PART-004,ElectroSystems AG,Supplier,2023-01-30,Restricted,ActiveSharing,False,2,1,1,2024-09-15,2

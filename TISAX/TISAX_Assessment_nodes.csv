@@ -1,0 +1,7 @@
+assessment_id,start_date,completion_date,planned_duration_days,assessment_level,status,scope_description,scope_type,assessment_type,methodology,on_site_required,documentation_reviewed
+ASS-001,2024-01-10,2024-08-15,180,2,Completed,Production systems and data handling,StandardScope,Initial,Risk-Based,True,True
+ASS-002,2023-06-15,2023-12-20,180,3,Completed,Full organizational security assessment,CustomScope,Renewal,Comprehensive,True,True
+ASS-003,2024-08-20,2024-11-10,90,2,Completed,Supply chain information systems,StandardScope,Initial,Risk-Based,True,True
+ASS-004,2024-09-05,,120,3,InProgress,Manufacturing and R&D systems,CustomScope,Upgrade,Comprehensive,True,False
+ASS-005,2024-10-01,,90,2,InProgress,Customer-facing applications,StandardScope,Renewal,Risk-Based,False,False
+ASS-006,2024-11-15,,60,1,Planned,Basic infrastructure audit,StandardScope,Initial,Basic,False,False

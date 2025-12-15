@@ -1,0 +1,5 @@
+provider_id,provider_name,registration_number,accreditation_status,accreditation_date,accreditation_expiry,supported_assessment_levels,geographic_coverage,industry_specialization,max_concurrent_assessments,average_audit_duration_days,certification_count,quality_rating,contact_person,website
+AP-001,Global Audit Services GmbH,AP-REG-2021-001,Accredited,2021-03-15,2025-03-15,"AL1,AL2,AL3","Germany,Austria,Switzerland","Automotive,Electronics",15,120,156,4.8,Dr. Hans Mueller,www.global-audit.de
+AP-002,TISAX Certified Auditors AG,AP-REG-2020-002,Accredited,2020-06-01,2025-06-01,"AL1,AL2,AL3","EU,UK",Automotive,25,100,245,4.9,Johann Schmidt,www.tisax-auditors.at
+AP-003,Security Assessment Partners,AP-REG-2022-003,Accredited,2022-01-10,2026-01-10,"AL1,AL2","Germany,Poland,Czech",Manufacturing,10,90,78,4.5,Maria Lopez,www.security-partners.eu
+AP-004,European Compliance Consultants,AP-REG-2021-004,Suspended,2021-09-20,2024-12-31,AL1,Germany,General,5,60,32,3.2,Klaus Weber,www.eu-compliance.de

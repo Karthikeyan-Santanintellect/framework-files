@@ -1,0 +1,5 @@
+source_participant_id,relationship_type,target_tisax_exchange,participation_start_date,participation_status,agreement_signed_date
+PART-001,PARTICIPATES_IN_EXCHANGE,TISAX_Exchange,2022-02-01,Active,2022-01-25
+PART-002,PARTICIPATES_IN_EXCHANGE,TISAX_Exchange,2021-07-15,Active,2021-07-01
+PART-003,PARTICIPATES_IN_EXCHANGE,TISAX_Exchange,2020-12-01,Paused,2020-11-15
+PART-004,PARTICIPATES_IN_EXCHANGE,TISAX_Exchange,2023-02-15,Active,2023-02-01

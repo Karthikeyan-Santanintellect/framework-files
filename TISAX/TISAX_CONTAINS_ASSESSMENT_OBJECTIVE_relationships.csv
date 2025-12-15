@@ -1,0 +1,7 @@
+source_assessment_id,relationship_type,target_objective_id,inclusion_date,priority_order,estimated_hours,weight_percentage,pass_fail_criteria
+ASS-001,CONTAINS_ASSESSMENT_OBJECTIVE,OBJ-001,2024-01-10,1,80,45.0,All controls documented and evidence provided
+ASS-001,CONTAINS_ASSESSMENT_OBJECTIVE,OBJ-002,2024-01-15,2,70,35.0,Compliance level >= 80%
+ASS-002,CONTAINS_ASSESSMENT_OBJECTIVE,OBJ-001,2023-06-15,1,90,50.0,AL3 requirements fully met
+ASS-002,CONTAINS_ASSESSMENT_OBJECTIVE,OBJ-003,2023-06-20,2,60,30.0,No critical findings
+ASS-003,CONTAINS_ASSESSMENT_OBJECTIVE,OBJ-004,2024-08-20,1,65,55.0,MFA on all systems; <5% non-compliant
+ASS-003,CONTAINS_ASSESSMENT_OBJECTIVE,OBJ-005,2024-08-25,2,55,40.0,Risk register documented; remediation plan

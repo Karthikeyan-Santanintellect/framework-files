@@ -1,0 +1,6 @@
+organization_id,name,type,location,industry_sector,registration_date,assessment_status,highest_al_current,last_assessment_date,certification_validity_end,contact_email,contact_phone
+ORG-001,AutoSupply Corp,Supplier,Germany,Automotive,2022-01-15,Assessed,2,2024-08-15,2027-08-15,info@autosupply.de,+49-123-4567
+ORG-002,Premium Automotive,Supplier,Germany,Automotive,2021-06-20,Assessed,3,2024-06-20,2027-06-20,contact@premium-auto.de,+49-456-7890
+ORG-003,Tech Solutions GmbH,ServiceProvider,Switzerland,IT Services,2023-03-10,AssessmentInProgress,2,2024-11-10,2027-11-10,compliance@techsolutions.ch,+41-79-1234567
+ORG-004,Manufacturing LLC,OEM,Germany,Automotive,2020-11-05,ResultsExchanged,3,2024-07-05,2027-07-05,admin@manufacturing.de,+49-789-0123
+ORG-005,ElectroSystems AG,Supplier,Austria,Automotive,2023-01-30,Registered,1,,,tisax@electrosys.at,+43-1-555555
