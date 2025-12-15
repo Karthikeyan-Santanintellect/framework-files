@@ -167,7 +167,6 @@ ON CREATE SET
     pa.compliance_status = row.compliance_status;
 """
 
-#consent 
 consent = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (co:Consent {regional_standard_regulation_id: 'TDPSA', consent_id: row.consent_id})
@@ -199,6 +198,7 @@ ON CREATE SET
     co.informed = toBoolean(row.informed),
     co.consumer_can_withdraw = toBoolean(row.consumer_can_withdraw);
 """
+
 
 #privacy_notice 
 privacy_notice = """
@@ -270,7 +270,7 @@ ON CREATE SET
     dpa.compliant_with_other_laws = toBoolean(row.compliant_with_other_laws);
 """
 
-#consumer_request 
+#consumer_request
 consumer_request = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cr:ConsumerRequest {regional_standard_regulation_id: 'TDPSA', request_id: row.request_id})
@@ -321,6 +321,8 @@ ON CREATE SET
         ELSE date(row.appeal_deadline) 
     END;
 """
+
+
 
 #Data_processor 
 data_processor = """
@@ -395,6 +397,7 @@ ON CREATE SET
     db.public_disclosure_required = toBoolean(row.public_disclosure_required),
     db.lessons_learned = row.lessons_learned;
 """
+
 #opt_out_mechanism
 opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
