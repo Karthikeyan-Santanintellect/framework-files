@@ -1,0 +1,6 @@
+facility_id,facility_name,facility_type,location,criticality_rating,backup_facility_id,physical_security_level,cctv_monitoring_active
+FAC-001,Chicago Control Center,Control Center,"Chicago, IL",9,FAC-003,Maximum,True
+FAC-002,Denver Operations Center,Operations Center,"Denver, CO",8,,Maximum,True
+FAC-003,Atlanta Backup Facility,Backup Facility,"Atlanta, GA",7,FAC-001,High,True
+FAC-004,Boston Regional Office,Regional Office,"Boston, MA",6,,High,True
+FAC-005,Houston Emergency Command,Emergency Command,"Houston, TX",9,,Maximum,True

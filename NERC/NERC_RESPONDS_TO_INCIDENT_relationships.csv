@@ -1,0 +1,6 @@
+source_organization_id,relationship_type,target_response_plan_id,plan_effective_date,coverage_scope,test_success_percentage
+ORG-001,RESPONDS_TO_INCIDENT,IRP-001,2015-07-01,All Systems,100
+ORG-002,RESPONDS_TO_INCIDENT,IRP-002,2014-08-15,Critical Systems,95
+ORG-003,RESPONDS_TO_INCIDENT,IRP-003,2016-05-01,Data Systems,85
+ORG-004,RESPONDS_TO_INCIDENT,IRP-004,2015-12-01,All Critical Infrastructure,100
+ORG-005,RESPONDS_TO_INCIDENT,IRP-001,2017-02-01,Regional Operations,90

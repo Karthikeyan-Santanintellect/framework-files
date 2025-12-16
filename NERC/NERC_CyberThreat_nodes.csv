@@ -1,0 +1,6 @@
+threat_id,threat_name,threat_category,severity_level,affected_systems_count,threat_description,attack_vector,remediation_status
+THR-001,Advanced Persistent Threat - Phishing,Social Engineering,High,3,Targeted phishing campaign targeting utility operators,Email,In Progress
+THR-002,Ransomware - Critical System Variant,Malware,Critical,2,Ransomware specifically designed for SCADA systems,Network,Mitigated
+THR-003,Zero-Day Vulnerability Exploitation,Exploitation,Critical,4,Unknown vulnerability in legacy control system,Network,Investigation
+THR-004,DDoS Attack on Control Systems,Network Attack,High,6,Coordinated denial of service attacks on grid,Internet-facing,Contained
+THR-005,Supply Chain Compromise,Supply Chain,High,2,Compromised vendor software in critical systems,Software Update,Remediation Plan

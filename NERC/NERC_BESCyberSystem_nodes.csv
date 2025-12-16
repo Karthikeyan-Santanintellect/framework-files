@@ -1,0 +1,7 @@
+system_id,system_name,system_type,impact_level,critical_function,location,connected_assets_count,operates_in_esop,backup_recovery_capability,mean_time_to_recovery
+SYS-001,Grid Control SCADA,SCADA,High,Real-time grid control and monitoring,"Chicago, IL",45,True,Hot Standby,15
+SYS-002,EMS Energy Management,EMS,High,Energy management and optimization,"Denver, CO",68,True,Cold Standby,120
+SYS-003,Protection Relay System,Protection,High,System protection and fault detection,"Atlanta, GA",32,True,Warm Standby,45
+SYS-004,Phasor Measurement Units,Monitoring,Medium,Phasor data collection and analysis,"Boston, MA",112,True,No Backup,300
+SYS-005,Network Access Controls,Access Control,High,Critical system access management,"Kansas City, MO",28,False,No Backup,60
+SYS-006,Backup Energy Control,SCADA,Medium,Emergency grid backup control,"Houston, TX",38,True,Hot Standby,20

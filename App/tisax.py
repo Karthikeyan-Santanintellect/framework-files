@@ -363,6 +363,52 @@ ON CREATE SET
   r.participation_status     = row.participation_status,
   r.agreement_signed_date    = row.agreement_signed_date;
 """
+#result_of_assessment
+result_of_assessment = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ar:AssessmentResult {assessment_result_id: row.source_result_id})
+MATCH (ass:Assessment {assessment_id: row.target_assessment_id})
+MERGE (ar)-[r:ASSESSMENT_RESULT_OF_ASSESSMENT {type: row.relationship_type}]->(ass)
+ON CREATE SET
+  r.result_date        = date(row.result_date),
+  r.final_status       = row.final_status,
+  r.certification_body = row.certification_body;
+"""
+# Participant → IndustryStandardAndRegulation (TISAX)
+participant_to_tisax = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pa:Participant {participant_id: row.source_participant_id})
+MATCH (tisax:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_regulation_id})
+MERGE (pa)-[r:PARTICIPATES_IN_EXCHANGE {type: row.relationship_type}]->(tisax)
+ON CREATE SET
+  r.registration_date       = date(row.registration_date),
+  r.participation_status    = row.participation_status,
+  r.agreement_signed_date   = date(row.agreement_signed_date);
+"""
+#ISA -> tisax
+ISA_tisax = """
+MATCH (ic:ISACatalogue{industry_standard_regulation_id: 'TISAX'}), 
+MATCH(t:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX'})
+WHERE NOT (ic)--()
+MERGE (t)-[:DEFINES_CATALOGUE]->(ic);
+"""
+#control -> ISA
+control_ISA = """
+MATCH (cq:ControlQuestion{industry_standard_regulation_id: 'TISAX'}), 
+MATCH(ic:ISACatalogue{industry_standard_regulation_id: 'TISAX'})
+WHERE NOT (cq)--()
+MERGE (ic)-[:CONTAINS_QUESTION]->(cq);
+"""
+#Audit -> tisax
+audit_tisax = """
+MATCH (ap:AuditProvider{industry_standard_regulation_id: 'TISAX'}), 
+MATCH(t:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX'})
+WHERE NOT (ap)--()
+MERGE (t)-[:ACCREDITS_PROVIDER]->(ap);
+"""
+
+
+
 
 import os
 import time
@@ -451,6 +497,12 @@ client.query(shares_results_with.replace('$file_path', 'https://github.com/Karth
 time.sleep(2)   
 
 client.query(participates_in_exchange.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_PARTICIPATES_IN_EXCHANGE_relationships.csv'))    
+time.sleep(2)
+
+client.query(result_of_assessment.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_RESULT_OF_ASSESSMENT_relationships.csv'))
+time.sleep(2)
+
+client.query(participant_to_tisax.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_PARTICIPANT_REGISTERS_IN_TISAX_relationships.csv'))
 time.sleep(2)
  
 logger.info("Graph structure loaded successfully.")

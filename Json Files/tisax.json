@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1955",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2099",
       "mainLabel": "IndustryStandardAndRegulation",
       "labels": [
         "IndustryStandardAndRegulation"
@@ -16,7 +16,7 @@
       "status": "Active"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1960",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2104",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -34,7 +34,7 @@
       "contact_email": "tisax@electrosys.at"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1977",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2121",
       "mainLabel": "AuditProvider",
       "labels": [
         "AuditProvider"
@@ -57,7 +57,7 @@
       "average_audit_duration_days": "90"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1967",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2111",
       "mainLabel": "AssessmentLevel",
       "labels": [
         "AssessmentLevel"
@@ -77,7 +77,7 @@
       "certification_validity_years": "3"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1965",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2109",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -96,7 +96,7 @@
       "planned_duration_days": "90"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1979",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2123",
       "mainLabel": "ISACatalogue",
       "labels": [
         "ISACatalogue"
@@ -118,7 +118,7 @@
       "language_support": "German; English; French"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1959",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2103",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -138,7 +138,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1976",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2120",
       "mainLabel": "AuditProvider",
       "labels": [
         "AuditProvider"
@@ -161,7 +161,7 @@
       "average_audit_duration_days": "100"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1969",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2113",
       "mainLabel": "AssessmentLevel",
       "labels": [
         "AssessmentLevel"
@@ -181,7 +181,7 @@
       "certification_validity_years": "3"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1964",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2108",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -200,7 +200,7 @@
       "planned_duration_days": "120"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1980",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2124",
       "mainLabel": "ISACatalogue",
       "labels": [
         "ISACatalogue"
@@ -222,7 +222,7 @@
       "language_support": "German; English"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1958",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2102",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -242,7 +242,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1985",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2129",
       "mainLabel": "ControlQuestion",
       "labels": [
         "ControlQuestion"
@@ -264,7 +264,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1975",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2119",
       "mainLabel": "AuditProvider",
       "labels": [
         "AuditProvider"
@@ -287,7 +287,7 @@
       "average_audit_duration_days": "120"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1968",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2112",
       "mainLabel": "AssessmentLevel",
       "labels": [
         "AssessmentLevel"
@@ -307,7 +307,7 @@
       "certification_validity_years": "3"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -327,7 +327,7 @@
       "planned_duration_days": "90"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1992",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2136",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -348,7 +348,7 @@
       "remaining_risk": "Low"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1971",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2115",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -368,7 +368,7 @@
       "risk_area": "Data Protection"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1974",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2118",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -388,7 +388,7 @@
       "risk_area": "Risk Management"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1973",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2117",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -408,7 +408,7 @@
       "risk_area": "Access"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -428,7 +428,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1983",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2127",
       "mainLabel": "ControlQuestion",
       "labels": [
         "ControlQuestion"
@@ -450,7 +450,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1982",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2126",
       "mainLabel": "ControlQuestion",
       "labels": [
         "ControlQuestion"
@@ -472,7 +472,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -492,7 +492,7 @@
       "planned_duration_days": "180"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1994",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2138",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -513,7 +513,7 @@
       "remaining_risk": "Medium"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1991",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2135",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -534,7 +534,7 @@
       "remaining_risk": "Low"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1970",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2114",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -554,7 +554,7 @@
       "risk_area": "Governance"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1972",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2116",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -574,7 +574,7 @@
       "risk_area": "IP Protection"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -594,7 +594,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1984",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2128",
       "mainLabel": "ControlQuestion",
       "labels": [
         "ControlQuestion"
@@ -616,7 +616,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1966",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2110",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -635,7 +635,7 @@
       "planned_duration_days": "60"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -655,7 +655,7 @@
       "planned_duration_days": "180"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1993",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2137",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -676,7 +676,7 @@
       "remaining_risk": "Low"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1990",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2134",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -699,9 +699,9 @@
   ],
   "rels": [
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1955",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162246462722017187",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1960",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2099",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162246462722017331",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2104",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2023-01-30",
       "initial_al_target": "1",
@@ -710,9 +710,9 @@
       "terms_acceptance_date": "2023-01-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1960",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548022201",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1977",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2104",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548022345",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2121",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "Affordability; Proximity; Accreditation",
@@ -722,9 +722,9 @@
       "contract_start_date": "2024-10-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1960",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036394415",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1967",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2104",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036394559",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2111",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "Compliance Manager",
@@ -733,9 +733,9 @@
       "justification": "Initial compliance step"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1960",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013138861",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1965",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2104",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013139005",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2109",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "200",
       "budget_allocated": "40000",
@@ -744,9 +744,9 @@
       "scheduled_completion": "2024-12-30"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1965",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922361381245159355",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1979",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2109",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922361381245159499",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2123",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-10-01",
       "catalogue_version_used": "5.0",
@@ -755,9 +755,9 @@
       "exemption_justification": "Third party managed"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1955",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159994662908331939",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1959",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2099",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159994662908332083",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2103",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2020-11-05",
       "initial_al_target": "3",
@@ -766,9 +766,9 @@
       "terms_acceptance_date": "2020-11-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1959",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361707448",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1976",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2103",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361707592",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2120",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "AL3 expertise; Industry knowledge; Reputation",
@@ -778,9 +778,9 @@
       "contract_start_date": "2024-09-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1959",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850079665",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1969",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2103",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850079809",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2113",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "True",
       "approved_by": "CEO",
@@ -789,9 +789,9 @@
       "justification": "Design and manufacturing with patents"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1959",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013138860",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1964",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2103",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013139004",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2108",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "350",
       "budget_allocated": "65000",
@@ -800,9 +800,9 @@
       "scheduled_completion": "2024-12-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1964",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431474108",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1980",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2108",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431474252",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2124",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-09-05",
       "catalogue_version_used": "5.0",
@@ -811,9 +811,9 @@
       "exemption_justification": "Full coverage applicable"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1955",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157742863094646691",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1958",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2099",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157742863094646835",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2102",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2023-03-10",
       "initial_al_target": "2",
@@ -822,9 +822,9 @@
       "terms_acceptance_date": "2023-03-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1958",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277761",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1985",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2102",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277905",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2129",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "False",
       "response_date": "2024-08-25",
@@ -833,9 +833,9 @@
       "answer_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1958",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361707447",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1975",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2102",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361707591",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2119",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "AL2 capability; Cost-effectiveness; References",
@@ -845,9 +845,9 @@
       "contract_start_date": "2024-08-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1958",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850079664",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1968",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2102",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850079808",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2112",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "CTO",
@@ -856,9 +856,9 @@
       "justification": "IT services with access to proprietary systems"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1958",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013138859",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2102",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013139003",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "150",
       "budget_allocated": "35000",
@@ -867,9 +867,9 @@
       "scheduled_completion": "2024-11-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416648",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1992",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416792",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2136",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "High",
@@ -877,9 +877,9 @@
       "inclusion_date": "2024-08-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431474107",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1979",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431474251",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2123",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-08-20",
       "catalogue_version_used": "5.0",
@@ -888,9 +888,9 @@
       "exemption_justification": "Deprecated by 2025"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048670635",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1971",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048670779",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2115",
       "type": "ASSESSMENT_MEETS_CRITERIA",
       "auditor_notes": "Some gaps in encryption standards, remediation planned",
       "confidence_level": "0.88",
@@ -898,9 +898,9 @@
       "verification_date": "2024-11-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059649974",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1974",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059650118",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2118",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "40.0",
       "pass_fail_criteria": "Risk register documented; remediation plan",
@@ -909,9 +909,9 @@
       "inclusion_date": "2024-08-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1963",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059649973",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1973",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2107",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059650117",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2117",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "55.0",
       "pass_fail_criteria": "MFA on all systems; <5% non-compliant",
@@ -920,9 +920,9 @@
       "inclusion_date": "2024-08-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1955",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155491063280961443",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2099",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155491063280961587",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2021-06-20",
       "initial_al_target": "3",
@@ -931,9 +931,9 @@
       "terms_acceptance_date": "2021-06-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277759",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1983",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277903",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2127",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "True",
       "response_date": "2023-06-25",
@@ -943,9 +943,9 @@
       "answer_status": "PartiallyCompliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920105183384963006",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1982",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920105183384963150",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2126",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "False",
       "response_date": "2023-06-20",
@@ -954,9 +954,9 @@
       "answer_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548022200",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1976",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548022344",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2120",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2023-12-31",
       "criteria_considered": "Expertise; Availability; Geographic coverage",
@@ -966,9 +966,9 @@
       "contract_start_date": "2023-06-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036394417",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1969",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036394561",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2113",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "Board of Directors",
@@ -977,9 +977,9 @@
       "justification": "OEM requirement with sensitive data"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1957",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013138858",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2101",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013139002",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "400",
       "budget_allocated": "75000",
@@ -988,9 +988,9 @@
       "scheduled_completion": "2023-12-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416650",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1994",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416794",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2138",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "Maximum",
@@ -998,9 +998,9 @@
       "inclusion_date": "2023-06-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416647",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1991",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416791",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2135",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "Maximum",
       "target_protection_level": "Maximum",
@@ -1008,9 +1008,9 @@
       "inclusion_date": "2023-06-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617788860",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1980",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617789004",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2124",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2023-06-15",
       "catalogue_version_used": "5.0",
@@ -1019,9 +1019,9 @@
       "exemption_justification": "Full coverage applicable"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048670634",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1970",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048670778",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2114",
       "type": "ASSESSMENT_MEETS_CRITERIA",
       "auditor_notes": "Exemplary compliance with industry best practices",
       "confidence_level": "0.98",
@@ -1029,9 +1029,9 @@
       "verification_date": "2023-12-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059649972",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1972",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059650116",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2116",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "30.0",
       "pass_fail_criteria": "No critical findings",
@@ -1040,9 +1040,9 @@
       "inclusion_date": "2023-06-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1962",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920104083873335218",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1970",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2106",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920104083873335362",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2114",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "50.0",
       "pass_fail_criteria": "AL3 requirements fully met",
@@ -1051,9 +1051,9 @@
       "inclusion_date": "2023-06-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1955",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153239263467276195",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2099",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153239263467276339",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2022-01-15",
       "initial_al_target": "2",
@@ -1062,9 +1062,9 @@
       "terms_acceptance_date": "2022-01-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277760",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1984",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277904",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2128",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "False",
       "response_date": "2024-01-20",
@@ -1073,9 +1073,9 @@
       "answer_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277758",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1982",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571277902",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2126",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "False",
       "response_date": "2024-01-15",
@@ -1084,9 +1084,9 @@
       "answer_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548022199",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1975",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548022343",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2119",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "Experience; Rating; Cost",
@@ -1096,9 +1096,9 @@
       "contract_start_date": "2024-01-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036394416",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1968",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036394560",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2112",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "Chief Compliance Officer",
@@ -1107,9 +1107,9 @@
       "justification": "Standard automotive supply requirements"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013138862",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1966",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013139006",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2110",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "80",
       "budget_allocated": "20000",
@@ -1118,9 +1118,9 @@
       "scheduled_completion": "2024-12-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1966",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924613181058844603",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1979",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2110",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924613181058844747",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2123",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-11-15",
       "catalogue_version_used": "5.0",
@@ -1129,9 +1129,9 @@
       "exemption_justification": "None required"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1956",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013138857",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2100",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013139001",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "200",
       "budget_allocated": "45000",
@@ -1140,9 +1140,9 @@
       "scheduled_completion": "2024-08-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416649",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1993",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416793",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2137",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "High",
@@ -1150,9 +1150,9 @@
       "inclusion_date": "2024-01-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416646",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1990",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129416790",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2134",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "High",
@@ -1160,9 +1160,9 @@
       "inclusion_date": "2024-01-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617788859",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1979",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617789003",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2123",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-01-10",
       "catalogue_version_used": "5.0",
@@ -1171,9 +1171,9 @@
       "exemption_justification": "External provider, separate contract"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048670633",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1970",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048670777",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2114",
       "type": "ASSESSMENT_MEETS_CRITERIA",
       "auditor_notes": "Well-documented process with consistent implementation",
       "confidence_level": "0.95",
@@ -1181,9 +1181,9 @@
       "verification_date": "2024-08-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059649971",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1971",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059650115",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2115",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "35.0",
       "pass_fail_criteria": "Compliance level >= 80%",
@@ -1192,9 +1192,9 @@
       "inclusion_date": "2024-01-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1961",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059649970",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:1970",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2105",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059650114",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:2114",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "45.0",
       "pass_fail_criteria": "All controls documented and evidence provided",

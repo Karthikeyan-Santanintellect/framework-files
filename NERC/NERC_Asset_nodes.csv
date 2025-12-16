@@ -1,0 +1,8 @@
+asset_id,asset_name,asset_type,location,criticality_level,operational_status,last_maintenance_date,backup_asset_id
+AST-001,Primary Control Server,Server,Chicago Data Center,Critical,Operational,2024-09-15,AST-002
+AST-002,Backup SCADA System,Server,Chicago Data Center,Critical,Standby,2024-08-20,AST-001
+AST-003,RTU Gateway Device,Network Device,Field - Substation A,High,Operational,2024-10-01,AST-004
+AST-004,PMU Data Aggregator,Server,Denver Operations,High,Operational,2024-09-10,AST-003
+AST-005,Network Router Core-1,Network Device,Kansas City Hub,Critical,Operational,2024-09-05,AST-006
+AST-006,Switch Fabric Layer2,Network Device,Chicago Data Center,Critical,Operational,2024-08-30,AST-005
+AST-007,Access Control Firewall,Security Device,Boston Network Center,Critical,Operational,2024-09-20,

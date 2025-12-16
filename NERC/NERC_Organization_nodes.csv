@@ -1,0 +1,6 @@
+organization_id,name,entity_type,nerc_region,registration_date,compliance_status,last_audit_date,next_audit_date,bes_asset_count,ciso_name,ciso_contact_email
+ORG-001,Midwest Electric Grid,Transmission Operator,MISO,2015-01-15,Compliant,2024-06-15,2025-06-15,156,Robert Taylor,rtaylor@midwest.grid
+ORG-002,Western Transmission Corp,Transmission Operator,WECC,2014-06-20,Compliant,2024-08-20,2025-08-20,203,Jennifer Chen,jchen@western.trans
+ORG-003,Southern Generation LLC,Generator,SERC,2016-03-10,Non-Compliant,2024-05-10,2025-05-10,89,Michael Johnson,mjohnson@south.gen
+ORG-004,Northeast Power Operator,Bulk Electric System Operator,NPCC,2015-11-05,Compliant,2024-09-01,2025-09-01,412,David Anderson,danderson@ne.power
+ORG-005,Central Grid Authority,Distribution Operator,SPP,2017-01-30,Partially-Compliant,2024-07-15,2025-07-15,145,Sarah Williams,swilliams@central.grid
