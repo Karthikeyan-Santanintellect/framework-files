@@ -1,0 +1,6 @@
+source_result_id,target_assessment_id,relationship_type,result_date,final_status,certification_body
+RES-001,ASS-001,RESULT_OF_ASSESSMENT,2024-08-15,Certified,TÜV SÜD
+RES-002,ASS-002,RESULT_OF_ASSESSMENT,2023-12-20,Certified,DEKRA
+RES-003,ASS-003,RESULT_OF_ASSESSMENT,2024-11-10,Certified,DNV GL
+RES-004,ASS-004,RESULT_OF_ASSESSMENT,2020-12-05,Certified,TÜV Rheinland
+RES-005,ASS-005,RESULT_OF_ASSESSMENT,2023-03-25,Certified,SGS
