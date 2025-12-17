@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:434",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:579",
       "mainLabel": "IndustryStandardAndRegulation",
       "labels": [
         "IndustryStandardAndRegulation"
@@ -16,7 +16,7 @@
       "status": "Active"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:439",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:584",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -34,7 +34,29 @@
       "contact_email": "tisax@electrosys.at"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:456",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:610",
+      "mainLabel": "ControlQuestion",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "question_category": "Incident Management",
+      "last_revision_date": "2024-02-01",
+      "criticality": "Critical",
+      "guidance_url": "https://portal.enx.com/qa-005",
+      "related_control_ids": "CQ-001; CQ-006",
+      "sequence_number": "5",
+      "question_text": "Is there a documented incident response plan?",
+      "expected_evidence_types": "Plan document; Incident logs; Test results",
+      "maturity_levels": "Partial; Complete; Regular review",
+      "applies_to_al1": "False",
+      "control_question_id": "CQ-005",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "typical_response_options": "Documented and tested; Documented; None",
+      "industry_standard_regulation_id": "TISAX"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:601",
       "mainLabel": "AuditProvider",
       "labels": [
         "AuditProvider"
@@ -57,7 +79,7 @@
       "average_audit_duration_days": "90"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:446",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:591",
       "mainLabel": "AssessmentLevel",
       "labels": [
         "AssessmentLevel"
@@ -77,7 +99,7 @@
       "certification_validity_years": "3"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:444",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:589",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -96,7 +118,7 @@
       "planned_duration_days": "90"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:458",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
       "mainLabel": "ISACatalogue",
       "labels": [
         "ISACatalogue"
@@ -118,7 +140,51 @@
       "language_support": "German; English; French"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:438",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:609",
+      "mainLabel": "ControlQuestion",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "question_category": "Awareness",
+      "last_revision_date": "2024-02-01",
+      "criticality": "High",
+      "guidance_url": "https://portal.enx.com/qa-004",
+      "related_control_ids": "CQ-001; CQ-005",
+      "sequence_number": "4",
+      "question_text": "Are regular security awareness trainings conducted?",
+      "expected_evidence_types": "Training records; Attendance lists; Tests",
+      "maturity_levels": "Partial; Complete; Continuous",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-004",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "typical_response_options": "Annual; Quarterly; No training",
+      "industry_standard_regulation_id": "TISAX"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:606",
+      "mainLabel": "ControlQuestion",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "question_category": "Governance",
+      "last_revision_date": "2024-01-15",
+      "criticality": "High",
+      "guidance_url": "https://portal.enx.com/qa-001",
+      "related_control_ids": "CQ-005; CQ-006",
+      "sequence_number": "1",
+      "question_text": "Is there a documented information security policy?",
+      "expected_evidence_types": "Policy documents; Approval records",
+      "maturity_levels": "Documented; Implemented; Optimized",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-001",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "typical_response_options": "Yes with evidence; Partial; Not implemented",
+      "industry_standard_regulation_id": "TISAX"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:583",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -138,7 +204,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:455",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:600",
       "mainLabel": "AuditProvider",
       "labels": [
         "AuditProvider"
@@ -161,7 +227,7 @@
       "average_audit_duration_days": "100"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:448",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:593",
       "mainLabel": "AssessmentLevel",
       "labels": [
         "AssessmentLevel"
@@ -181,7 +247,7 @@
       "certification_validity_years": "3"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:443",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:588",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -200,7 +266,7 @@
       "planned_duration_days": "120"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:459",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:604",
       "mainLabel": "ISACatalogue",
       "labels": [
         "ISACatalogue"
@@ -222,7 +288,51 @@
       "language_support": "German; English"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:437",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:608",
+      "mainLabel": "ControlQuestion",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "question_category": "Data Protection",
+      "last_revision_date": "2024-01-15",
+      "criticality": "Critical",
+      "guidance_url": "https://portal.enx.com/qa-003",
+      "related_control_ids": "CQ-001",
+      "sequence_number": "3",
+      "question_text": "Is encryption used for data in transit and at rest?",
+      "expected_evidence_types": "Encryption configs; Key management docs",
+      "maturity_levels": "Implemented; Monitored; Optimized",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-003",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "typical_response_options": "Yes, all data; Partial encryption; No encryption",
+      "industry_standard_regulation_id": "TISAX"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:607",
+      "mainLabel": "ControlQuestion",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "question_category": "Access Control",
+      "last_revision_date": "2024-01-15",
+      "criticality": "Critical",
+      "guidance_url": "https://portal.enx.com/qa-002",
+      "related_control_ids": "CQ-007; CQ-008",
+      "sequence_number": "2",
+      "question_text": "Are access controls implemented for sensitive systems?",
+      "expected_evidence_types": "System configs; User listings; Audit logs",
+      "maturity_levels": "Implemented; Monitored; Optimized",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-002",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "typical_response_options": "Fully implemented; Partially; Not implemented",
+      "industry_standard_regulation_id": "TISAX"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:582",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -242,29 +352,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:464",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "question_category": "Awareness",
-      "last_revision_date": "2024-02-01",
-      "criticality": "High",
-      "guidance_url": "https://portal.enx.com/qa-004",
-      "related_control_ids": "CQ-001; CQ-005",
-      "sequence_number": "4",
-      "question_text": "Are regular security awareness trainings conducted?",
-      "expected_evidence_types": "Training records; Attendance lists; Tests",
-      "maturity_levels": "Partial; Complete; Continuous",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-004",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "typical_response_options": "Annual; Quarterly; No training",
-      "industry_standard_regulation_id": "TISAX"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:454",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:599",
       "mainLabel": "AuditProvider",
       "labels": [
         "AuditProvider"
@@ -287,7 +375,7 @@
       "average_audit_duration_days": "120"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:447",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:592",
       "mainLabel": "AssessmentLevel",
       "labels": [
         "AssessmentLevel"
@@ -307,7 +395,7 @@
       "certification_validity_years": "3"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -327,7 +415,7 @@
       "planned_duration_days": "90"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:471",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:616",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -348,7 +436,7 @@
       "remaining_risk": "Low"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:450",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:595",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -368,7 +456,7 @@
       "risk_area": "Data Protection"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:453",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:598",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -388,7 +476,7 @@
       "risk_area": "Risk Management"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:452",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:597",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -408,7 +496,7 @@
       "risk_area": "Access"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:581",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -428,51 +516,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:462",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "question_category": "Access Control",
-      "last_revision_date": "2024-01-15",
-      "criticality": "Critical",
-      "guidance_url": "https://portal.enx.com/qa-002",
-      "related_control_ids": "CQ-007; CQ-008",
-      "sequence_number": "2",
-      "question_text": "Are access controls implemented for sensitive systems?",
-      "expected_evidence_types": "System configs; User listings; Audit logs",
-      "maturity_levels": "Implemented; Monitored; Optimized",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-002",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "typical_response_options": "Fully implemented; Partially; Not implemented",
-      "industry_standard_regulation_id": "TISAX"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:461",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "question_category": "Governance",
-      "last_revision_date": "2024-01-15",
-      "criticality": "High",
-      "guidance_url": "https://portal.enx.com/qa-001",
-      "related_control_ids": "CQ-005; CQ-006",
-      "sequence_number": "1",
-      "question_text": "Is there a documented information security policy?",
-      "expected_evidence_types": "Policy documents; Approval records",
-      "maturity_levels": "Documented; Implemented; Optimized",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-001",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "typical_response_options": "Yes with evidence; Partial; Not implemented",
-      "industry_standard_regulation_id": "TISAX"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -492,7 +536,7 @@
       "planned_duration_days": "180"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:473",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:618",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -513,7 +557,7 @@
       "remaining_risk": "Medium"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:470",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:615",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -534,7 +578,7 @@
       "remaining_risk": "Low"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:449",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:594",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -554,7 +598,7 @@
       "risk_area": "Governance"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:451",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:596",
       "mainLabel": "AssessmentObjective",
       "labels": [
         "AssessmentObjective"
@@ -574,7 +618,7 @@
       "risk_area": "IP Protection"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
       "mainLabel": "Organization",
       "labels": [
         "Organization"
@@ -594,29 +638,7 @@
       "industry_standard_regulation_id": "TISAX"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:463",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "question_category": "Data Protection",
-      "last_revision_date": "2024-01-15",
-      "criticality": "Critical",
-      "guidance_url": "https://portal.enx.com/qa-003",
-      "related_control_ids": "CQ-001",
-      "sequence_number": "3",
-      "question_text": "Is encryption used for data in transit and at rest?",
-      "expected_evidence_types": "Encryption configs; Key management docs",
-      "maturity_levels": "Implemented; Monitored; Optimized",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-003",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "typical_response_options": "Yes, all data; Partial encryption; No encryption",
-      "industry_standard_regulation_id": "TISAX"
-    },
-    {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:445",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:590",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -635,7 +657,7 @@
       "planned_duration_days": "60"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
       "mainLabel": "Assessment",
       "labels": [
         "Assessment"
@@ -655,7 +677,7 @@
       "planned_duration_days": "180"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:472",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:617",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -676,7 +698,7 @@
       "remaining_risk": "Low"
     },
     {
-      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:469",
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:614",
       "mainLabel": "ProtectionObject",
       "labels": [
         "ProtectionObject"
@@ -699,9 +721,9 @@
   ],
   "rels": [
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:434",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162246462722015666",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:439",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:579",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162246462722015811",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:584",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2023-01-30",
       "initial_al_target": "1",
@@ -710,9 +732,20 @@
       "terms_acceptance_date": "2023-01-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:439",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548020680",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:456",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:584",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276386",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:610",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "False",
+      "response_date": "2024-02-01",
+      "evidence_provided": "Plan document; Incident logs; Test results",
+      "maturity_level_achieved": "3",
+      "answer_status": "Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:584",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548020825",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:601",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "Affordability; Proximity; Accreditation",
@@ -722,9 +755,9 @@
       "contract_start_date": "2024-10-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:439",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036392894",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:446",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:584",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036393039",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:591",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "Compliance Manager",
@@ -733,9 +766,9 @@
       "justification": "Initial compliance step"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:439",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137340",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:444",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:584",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137485",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:589",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "200",
       "budget_allocated": "40000",
@@ -744,9 +777,9 @@
       "scheduled_completion": "2024-12-30"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:444",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922361381245157834",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:458",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:589",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922361381245157979",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-10-01",
       "catalogue_version_used": "5.0",
@@ -755,9 +788,31 @@
       "exemption_justification": "Third party managed"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:434",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159994662908330418",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:438",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155514153025143387",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:609",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL1; AL2; AL3",
+      "question_order": "2",
+      "question_weight": "1.0",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153262353211458139",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:606",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL1; AL2; AL3",
+      "question_order": "1",
+      "question_weight": "1.0",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:579",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159994662908330563",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:583",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2020-11-05",
       "initial_al_target": "3",
@@ -766,9 +821,20 @@
       "terms_acceptance_date": "2020-11-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:438",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361705927",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:455",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:583",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276385",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:609",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "False",
+      "response_date": "2024-08-25",
+      "evidence_provided": "Training schedule; Completion records",
+      "maturity_level_achieved": "3",
+      "answer_status": "Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:583",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361706072",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:600",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "AL3 expertise; Industry knowledge; Reputation",
@@ -778,9 +844,9 @@
       "contract_start_date": "2024-09-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:438",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850078144",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:448",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:583",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850078289",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:593",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "True",
       "approved_by": "CEO",
@@ -789,9 +855,9 @@
       "justification": "Design and manufacturing with patents"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:438",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137339",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:443",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:583",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137484",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:588",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "350",
       "budget_allocated": "65000",
@@ -800,9 +866,9 @@
       "scheduled_completion": "2024-12-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:443",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431472587",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:459",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:588",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431472732",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:604",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-09-05",
       "catalogue_version_used": "5.0",
@@ -811,9 +877,31 @@
       "exemption_justification": "Full coverage applicable"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:434",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157742863094645170",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:437",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:604",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155514153025143388",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:608",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL1; AL2; AL3",
+      "question_order": "2",
+      "question_weight": "1.0",
+      "response_required": "True",
+      "inclusion_date": "2023-06-15"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:604",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153262353211458140",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:607",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL2; AL3",
+      "question_order": "1",
+      "question_weight": "1.2",
+      "response_required": "True",
+      "inclusion_date": "2023-06-15"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:579",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157742863094645315",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:582",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2023-03-10",
       "initial_al_target": "2",
@@ -822,20 +910,20 @@
       "terms_acceptance_date": "2023-03-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:437",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276240",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:464",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:582",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276384",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:608",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "False",
-      "response_date": "2024-08-25",
-      "evidence_provided": "Training schedule; Completion records",
+      "response_date": "2024-01-20",
+      "evidence_provided": "Encryption config audit; Key management plan",
       "maturity_level_achieved": "3",
       "answer_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:437",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361705926",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:454",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:582",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920102984361706071",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:599",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "AL2 capability; Cost-effectiveness; References",
@@ -845,9 +933,9 @@
       "contract_start_date": "2024-08-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:437",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850078143",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:447",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:582",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920101884850078288",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:592",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "CTO",
@@ -856,9 +944,9 @@
       "justification": "IT services with access to proprietary systems"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:437",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137338",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:582",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137483",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "150",
       "budget_allocated": "35000",
@@ -867,9 +955,9 @@
       "scheduled_completion": "2024-11-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415127",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:471",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415272",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:616",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "High",
@@ -877,9 +965,9 @@
       "inclusion_date": "2024-08-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431472586",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:458",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920109581431472731",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-08-20",
       "catalogue_version_used": "5.0",
@@ -888,9 +976,9 @@
       "exemption_justification": "Deprecated by 2025"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048669114",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:450",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048669259",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:595",
       "type": "ASSESSMENT_MEETS_CRITERIA",
       "auditor_notes": "Some gaps in encryption standards, remediation planned",
       "confidence_level": "0.88",
@@ -898,9 +986,9 @@
       "verification_date": "2024-11-05"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648453",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:453",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648598",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:598",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "40.0",
       "pass_fail_criteria": "Risk register documented; remediation plan",
@@ -909,9 +997,9 @@
       "inclusion_date": "2024-08-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:442",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648452",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:452",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:587",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648597",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:597",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "55.0",
       "pass_fail_criteria": "MFA on all systems; <5% non-compliant",
@@ -920,9 +1008,9 @@
       "inclusion_date": "2024-08-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:434",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155491063280959922",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:579",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155491063280960067",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:581",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2021-06-20",
       "initial_al_target": "3",
@@ -931,9 +1019,9 @@
       "terms_acceptance_date": "2021-06-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276238",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:462",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:581",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276383",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:607",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "True",
       "response_date": "2023-06-25",
@@ -943,20 +1031,9 @@
       "answer_status": "PartiallyCompliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920105183384961485",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:461",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "False",
-      "response_date": "2023-06-20",
-      "evidence_provided": "Policy document v3.0; Training records",
-      "maturity_level_achieved": "3",
-      "answer_status": "Compliant"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548020679",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:455",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:581",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548020824",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:600",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2023-12-31",
       "criteria_considered": "Expertise; Availability; Geographic coverage",
@@ -966,9 +1043,9 @@
       "contract_start_date": "2023-06-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036392896",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:448",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:581",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036393041",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:593",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "Board of Directors",
@@ -977,9 +1054,9 @@
       "justification": "OEM requirement with sensitive data"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:436",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137337",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:581",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137482",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "400",
       "budget_allocated": "75000",
@@ -988,9 +1065,9 @@
       "scheduled_completion": "2023-12-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415129",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:473",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415274",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:618",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "Maximum",
@@ -998,9 +1075,9 @@
       "inclusion_date": "2023-06-25"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415126",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:470",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415271",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:615",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "Maximum",
       "target_protection_level": "Maximum",
@@ -1008,9 +1085,9 @@
       "inclusion_date": "2023-06-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617787339",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:459",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617787484",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:604",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2023-06-15",
       "catalogue_version_used": "5.0",
@@ -1019,9 +1096,9 @@
       "exemption_justification": "Full coverage applicable"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048669113",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:449",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048669258",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:594",
       "type": "ASSESSMENT_MEETS_CRITERIA",
       "auditor_notes": "Exemplary compliance with industry best practices",
       "confidence_level": "0.98",
@@ -1029,9 +1106,9 @@
       "verification_date": "2023-12-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648451",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:451",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648596",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:596",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "30.0",
       "pass_fail_criteria": "No critical findings",
@@ -1040,9 +1117,9 @@
       "inclusion_date": "2023-06-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:441",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920104083873333697",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:449",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:586",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920104083873333842",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:594",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "50.0",
       "pass_fail_criteria": "AL3 requirements fully met",
@@ -1051,9 +1128,9 @@
       "inclusion_date": "2023-06-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:434",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153239263467274674",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:579",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153239263467274819",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
       "type": "ORGANISATION_REGISTERS_IN_TISAX",
       "registration_date": "2022-01-15",
       "initial_al_target": "2",
@@ -1062,20 +1139,9 @@
       "terms_acceptance_date": "2022-01-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276239",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:463",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "False",
-      "response_date": "2024-01-20",
-      "evidence_provided": "Encryption config audit; Key management plan",
-      "maturity_level_achieved": "3",
-      "answer_status": "Compliant"
-    },
-    {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276237",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:461",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917853383571276382",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:606",
       "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
       "remediation_required": "False",
       "response_date": "2024-01-15",
@@ -1084,9 +1150,9 @@
       "answer_status": "Compliant"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548020678",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:454",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917851184548020823",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:599",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2024-12-31",
       "criteria_considered": "Experience; Rating; Cost",
@@ -1096,9 +1162,9 @@
       "contract_start_date": "2024-01-01"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036392895",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:447",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917850085036393040",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:592",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
       "approved_by": "Chief Compliance Officer",
@@ -1107,9 +1173,9 @@
       "justification": "Standard automotive supply requirements"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137341",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:445",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137486",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:590",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "80",
       "budget_allocated": "20000",
@@ -1118,9 +1184,9 @@
       "scheduled_completion": "2024-12-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:445",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924613181058843082",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:458",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:590",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924613181058843227",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-11-15",
       "catalogue_version_used": "5.0",
@@ -1129,9 +1195,9 @@
       "exemption_justification": "None required"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:435",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137336",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:580",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917847886013137481",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "200",
       "budget_allocated": "45000",
@@ -1140,9 +1206,9 @@
       "scheduled_completion": "2024-08-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415128",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:472",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415273",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:617",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "High",
@@ -1150,9 +1216,9 @@
       "inclusion_date": "2024-01-20"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415125",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:469",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917858881129415270",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:614",
       "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
       "current_protection_level": "High",
       "target_protection_level": "High",
@@ -1160,9 +1226,9 @@
       "inclusion_date": "2024-01-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617787338",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:458",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917857781617787483",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:603",
       "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
       "applicability_date": "2024-01-10",
       "catalogue_version_used": "5.0",
@@ -1171,9 +1237,9 @@
       "exemption_justification": "External provider, separate contract"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048669112",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:449",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153246960048669257",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:594",
       "type": "ASSESSMENT_MEETS_CRITERIA",
       "auditor_notes": "Well-documented process with consistent implementation",
       "confidence_level": "0.95",
@@ -1181,9 +1247,9 @@
       "verification_date": "2024-08-10"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648450",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:450",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648595",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:595",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "35.0",
       "pass_fail_criteria": "Compliance level >= 80%",
@@ -1192,9 +1258,9 @@
       "inclusion_date": "2024-01-15"
     },
     {
-      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:440",
-      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648449",
-      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:449",
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:585",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917852284059648594",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:594",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "45.0",
       "pass_fail_criteria": "All controls documented and evidence provided",

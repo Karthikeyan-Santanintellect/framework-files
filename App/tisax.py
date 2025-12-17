@@ -473,7 +473,7 @@ client.query(undergoes_assessment.replace('$file_path', 'https://github.com/Kart
 client.query(selects_assessment_level.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_SELECTS_ASSESSMENT_LEVEL_relationships.csv'))
 time.sleep(2)
 
-client.query(chooses_audit_provider.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_CHOOSES_AUDIT_relationships.csv'))
+client.query(chooses_audit_provider.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_CHOOSES_AUDIT_PROV.csv'))
 time.sleep(2)
 
 client.query(subject_to_isa_catalogue.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CATALOGUE_relationships.csv'))
@@ -503,11 +503,13 @@ time.sleep(2)
 client.query(participant_to_tisax.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_PARTICIPANT_REGISTERS_IN_TISAX_relationships.csv'))
 time.sleep(2)
 
-client.query(ISA_control.replace('$file_path','
+client.query(ISA_control.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CONTAINS_QUESTIONS.csv'))
+time.sleep(2)
+
  
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]-()
+res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
