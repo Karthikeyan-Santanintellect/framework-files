@@ -475,10 +475,10 @@ client.query(undergoes_assessment.replace('$file_path', 'https://github.com/Kart
 client.query(selects_assessment_level.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_SELECTS_ASSESSMENT_LEVEL_relationships.csv'))
 time.sleep(2)
 
-client.query(chooses_audit_provider.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_CHOOSES_AUDIT_PROVIDER_relationships.csv'))
+client.query(chooses_audit_provider.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_CHOOSES_AUDIT_relationships.csv'))
 time.sleep(2)
 
-client.query(subject_to_isa_catalogue.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_SUBJECT_TO_ISA_CATALOGUE_relationships.csv'))
+client.query(subject_to_isa_catalogue.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CATALOGUE_relationships.csv'))
 time.sleep(2)   
 
 client.query(contains_assessment_objective.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_CONTAINS_ASSESSMENT_OBJECTIVE_relationships.csv'))
@@ -487,7 +487,7 @@ time.sleep(2)
 client.query(protects_object.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_PROTECTS_OBJECT_relationships.csv'))
 time.sleep(2)
 
-client.query(answers_control_question.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ANSWERS_CONTROL_QUESTION_relationships.csv'))
+client.query(answers_control_question.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ANSWERS_FULLY_UNIQUE_relationships.csv'))
 time.sleep(2)   
 
 client.query(meets_criteria.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_MEETS_CRITERIA_relationships.csv'))
@@ -507,7 +507,7 @@ time.sleep(2)
  
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
+res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]-()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
