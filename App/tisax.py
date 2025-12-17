@@ -385,27 +385,25 @@ ON CREATE SET
   r.participation_status    = row.participation_status,
   r.agreement_signed_date   = date(row.agreement_signed_date);
 """
-#ISA -> tisax
-ISA_tisax = """
-MATCH (ic:ISACatalogue{industry_standard_regulation_id: 'TISAX'}), 
-MATCH(t:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX'})
-WHERE NOT (ic)--()
-MERGE (t)-[:DEFINES_CATALOGUE]->(ic);
+#ISA -> control_question
+ISA_control = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ic:ISACatalogue {isa_catalogue_id: row.source_catalogue_id})
+MATCH (cq:ControlQuestion {control_question_id: row.target_question_id})
+MERGE (ic)-[r:ISA_CONTROLS_CONTROL_QUESTION {type: row.relationship_type}]->(cq)
+ON CREATE SET
+  r.inclusion_date = row.inclusion_date,
+  r.applicability_level = row.applicability_level,
+  r.question_order = row.question_order,
+  r.question_weight = row.question_weight,
+  r.response_required = row.response_required;
 """
-#control -> ISA
-control_ISA = """
-MATCH (cq:ControlQuestion{industry_standard_regulation_id: 'TISAX'}), 
-MATCH(ic:ISACatalogue{industry_standard_regulation_id: 'TISAX'})
-WHERE NOT (cq)--()
-MERGE (ic)-[:CONTAINS_QUESTION]->(cq);
-"""
-#Audit -> tisax
-audit_tisax = """
-MATCH (ap:AuditProvider{industry_standard_regulation_id: 'TISAX'}), 
-MATCH(t:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX'})
-WHERE NOT (ap)--()
-MERGE (t)-[:ACCREDITS_PROVIDER]->(ap);
-"""
+
+
+
+
+ 
+ 
 
 
 
@@ -504,6 +502,8 @@ time.sleep(2)
 
 client.query(participant_to_tisax.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_PARTICIPANT_REGISTERS_IN_TISAX_relationships.csv'))
 time.sleep(2)
+
+client.query(ISA_control.replace('$file_path','
  
 logger.info("Graph structure loaded successfully.")
 
