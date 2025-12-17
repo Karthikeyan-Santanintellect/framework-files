@@ -9,23 +9,6 @@ ON CREATE SET
     s.description = "It integrates multiple standards, such as HIPAA, ISO, and PCI, into a single, comprehensive framework to safeguard sensitive data";
 """
 
-# Create NIST CSF Framework
-nist_csf_framework = """
-MERGE (f:Framework {framework_id: 'NIST_CSF_2.0'})
-ON CREATE SET
-    f.name = "NIST Cybersecurity Framework",
-    f.version = "2.0",
-    f.type = "Framework";
-"""
-#Create NIST CSF Subcategories
-nist_csf_subcategories = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sc:Subcategory {subcategory_id: row.Subcategory_Code,framework_id: 'NIST_CSF_2.0'})
-ON CREATE SET
-  sc.category_code = row.Category_Code,
-  sc.title = row.Subcategory_Description,
-  sc.implementation_example = row.Implementation_Example;
-"""
 
 
 # Load HITRUST Category
@@ -99,14 +82,21 @@ MERGE (co)-[:CONTROL_OBJECTIVE_HAS_SPECIFICATION]->(cs);
 
 hitrust_controls_nist_CSF_subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {control_id: row.start_id,industry_standard_regulation_id: 'HITRUST'})
-MATCH (sc:Subcategory {subcategory_id: row.end_id,framework_id: 'NIST_CSF_2.0'})
+MATCH (ctrl:Control {
+  control_id: row.start_id,
+  industry_standard_regulation_id: 'HITRUST'
+})
+MATCH (sc:Subcategory {
+  id: row.end_id,
+  IS_framework_standard_id: 'NIST_CSF_2.0'
+})
 MERGE (ctrl)-[:CONTROLS_MAPS_TO_SUBCATEGORIES {
   mapping_type: row.mapping_type,
   confidence: row.confidence,
   rationale: row.rationale,
   source_document_id: row.source_document_id,
-  created_date: row.created_date}]->(sc);
+  created_date: row.created_date
+}]->(sc);
 """
 
 
@@ -131,10 +121,6 @@ logger.info("Loading graph structure...")
 client.query(industry_standard_regulation)
 time.sleep(2)
 
-client.query(nist_csf_framework)
-time.sleep(2)
-
-client.query(nist_csf_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/NIST_CSF_subcategories.csv"))
 
 client.query(hitrust_category.replace('$file_path',
                                       "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Category.csv"))

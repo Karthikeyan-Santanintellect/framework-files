@@ -26,16 +26,6 @@ ON CREATE SET
     s.source_doc = row.source_doc,
     s.source_section = row.source_section;
 """
-csf_subcategory = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sc:Subcategory {subcategory_id: row.subcategory_id, framework_id: "NIST_CSF_2.0"})
-ON CREATE SET
-    sc.framework_id = row.framework_id,
-    sc.category_id = row.csf_category_id,
-    sc.title = row.title,
-    sc.description = row.description;
-"""
-
 
 mappings = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -48,6 +38,7 @@ ON CREATE SET
     m.source_section = row.source_section;
 """
 
+#Relationships
 industry_standard_and_regulations_hipaa_standards_rel = """
 MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA'})
 MATCH (s:Standard {industry_standard_regulation_id: 'HIPAA'})
@@ -74,7 +65,7 @@ MERGE (s)-[:STANDARD_MAPS_TO_MAPPING {relationship_type: row.relationship_type, 
 mapping_subcategory_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (m:Mapping {mapping_id: row.source_mapping_id})
-MATCH (sc:Subcategory {subcategory_id: row.target_subcategory_id, framework_id: 'NIST_CSF_2.0'})
+MATCH (sc:Subcategory {id: row.target_subcategory_id, IS_framework_standard_id: 'NIST_CSF_2.0'})
 MERGE (m)-[:MAPPING_TARGETS_SUB_CATEGORY]->(sc);
 """
 
@@ -101,8 +92,6 @@ time.sleep(2)
 
 client.query(hipaa_standards.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_standards.csv'))
 time.sleep(2)
-
-client.query(csf_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/nist_csf_subcategories.csv"))
 
 client.query(mappings.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_csf_mappings.csv'))
 time.sleep(2)

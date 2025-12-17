@@ -1,0 +1,2318 @@
+{
+  "nodes": [
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "mainLabel": "ISFrameworksAndStandard",
+      "labels": [
+        "ISFrameworksAndStandard"
+      ],
+      "release_date": "2024-02-26",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "description": "Framework for managing cybersecurity risks",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "version": "2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4734",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "RECOVER",
+      "description": "Assets and operations affected by a cybersecurity incident are restored",
+      "function_id": "RC",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4756",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "RC.CO",
+      "name": "Incident Recovery Communication",
+      "description": "Restoration activities are coordinated with internal and external parties",
+      "function_id": "RC",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4862",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.CO",
+      "description": "Public updates on incident recovery are shared using approved methods and messaging",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Follow the organization's breach notification procedures for recovering from a data breach incident"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4861",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.CO",
+      "description": "Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Securely share recovery information, including restoration progress, consistent with response plans and information sharing agreements"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "RC.RP",
+      "name": "Incident Recovery Plan Execution",
+      "description": "Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents",
+      "function_id": "RC",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4860",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.RP",
+      "description": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Prepare an after-action report that documents the incident itself, the response and recovery actions taken, and lessons learned"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4859",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.RP",
+      "description": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Check restored assets for indicators of compromise and remediation of root causes of the incident before production use"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4858",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.RP",
+      "description": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use business impact and system categorization records (including service delivery objectives) to validate that essential services are restored in the appropriate order"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4857",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.RP",
+      "description": "The integrity of backups and other restoration assets is verified before using them for restoration",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Check restoration assets for indicators of compromise, file corruption, and other integrity issues before use"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4856",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.RP",
+      "description": "Recovery actions are selected, scoped, prioritized, and performed",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Select recovery actions based on the criteria defined in the incident response plan and available resources"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4855",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RC.RP",
+      "description": "The recovery portion of the incident response plan is executed once initiated from the incident response process",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Begin recovery procedures during or after incident response processes"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4733",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "RESPOND",
+      "description": "Actions regarding a detected cybersecurity incident are taken",
+      "function_id": "RS",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4754",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "RS.MI",
+      "name": "Incident Mitigation",
+      "description": "Activities are performed to prevent expansion of an event and mitigate its effects",
+      "function_id": "RS",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4854",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MI",
+      "description": "Incidents are eradicated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Cybersecurity technologies and cybersecurity features of other technologies (e.g., operating systems, network infrastructure devices) automatically perform eradication actions"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4853",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MI",
+      "description": "Incidents are contained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Cybersecurity technologies (e.g., antivirus software) and cybersecurity features of other technologies (e.g., operating systems, network infrastructure devices) automatically perform containment actions"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4753",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "RS.CO",
+      "name": "Incident Response Reporting and Communication",
+      "description": "Response activities are coordinated with internal and external stakeholders as required by laws, regulations, or policies",
+      "function_id": "RS",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4852",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.CO",
+      "description": "Information is shared with designated internal and external stakeholders",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Securely share information consistent with response plans and information sharing agreements"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4851",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.CO",
+      "description": "Internal and external stakeholders are notified of incidents",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Follow the organization's breach notification procedures after discovering a data breach incident, including notifying affected customers"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4752",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "RS.AN",
+      "name": "Incident Analysis",
+      "description": "Investigations are conducted to ensure effective response and support forensics and recovery activities",
+      "function_id": "RS",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4850",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.AN",
+      "description": "An incident's magnitude is estimated and validated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Review other potential targets of the incident to search for indicators of compromise and evidence of persistence"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4849",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.AN",
+      "description": "Incident data and metadata are collected, and their integrity and provenance are preserved",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Collect, preserve, and safeguard the integrity of all pertinent incident data and metadata (e.g., data source, date/time of collection) based on evidence preservation and chain-of-custody procedures"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4848",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.AN",
+      "description": "Actions performed during an investigation are recorded, and the records' integrity and provenance are preserved",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Require each incident responder and others (e.g., system administrators, cybersecurity engineers) who perform incident response tasks to record their actions and make the record immutable"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4847",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.AN",
+      "description": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Determine the sequence of events that occurred during the incident and which assets and resources were involved in each event"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "RS.MA",
+      "name": "Incident Management",
+      "description": "Responses to detected cybersecurity incidents are managed",
+      "function_id": "RS",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4846",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MA",
+      "description": "The criteria for initiating incident recovery are applied",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Apply incident recovery criteria to known and assumed characteristics of the incident to determine whether incident recovery processes should be initiated"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4845",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MA",
+      "description": "Incidents are escalated or elevated as needed",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Track and validate the status of all ongoing incidents"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4844",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MA",
+      "description": "Incidents are categorized and prioritized",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Further review and categorize incidents based on the type of incident (e.g., data breach, ransomware, DDoS, account compromise)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4843",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MA",
+      "description": "Incident reports are triaged and validated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Preliminarily review incident reports to confirm that they are cybersecurity-related and necessitate incident response activities"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4842",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "RS.MA",
+      "description": "The incident response plan is executed in coordination with relevant third parties once an incident is declared",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Detection technologies automatically report confirmed incidents"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4732",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "DETECT",
+      "description": "Possible cybersecurity attacks and compromises are found and analyzed",
+      "function_id": "DE",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "DE.AE",
+      "name": "Adverse Event Analysis",
+      "description": "Anomalies, indicators of compromise, and other potentially adverse events are analyzed to characterize the events and detect cybersecurity incidents",
+      "function_id": "DE",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4841",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.AE",
+      "description": "Incidents are declared when adverse events meet the defined incident criteria",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Apply incident criteria to known and assumed characteristics of activity in order to determine whether an incident should be declared"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4840",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.AE",
+      "description": "Cyber threat intelligence and other contextual information are integrated into the analysis",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Securely provide cyber threat intelligence feeds to detection technologies, processes, and personnel"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4839",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.AE",
+      "description": "Information on adverse events is provided to authorized staff and tools",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use cybersecurity software to generate alerts and provide them to the security operations center (SOC), incident responders, and incident response tools"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4838",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.AE",
+      "description": "The estimated impact and scope of adverse events are understood",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use SIEMs or other tools to estimate impact and scope, and review and refine the estimates"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4837",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.AE",
+      "description": "Information is correlated from multiple sources",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Constantly transfer log data generated by other sources to a relatively small number of log servers"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4836",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.AE",
+      "description": "Potentially adverse events are analyzed to better understand associated activities",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use security information and event management (SIEM) or other tools to continuously monitor log events for known malicious and suspicious activity"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "DE.CM",
+      "name": "Continuous Monitoring",
+      "description": "Assets are monitored to find anomalies, indicators of compromise, and other potentially adverse events",
+      "function_id": "DE",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4835",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.CM",
+      "description": "Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Monitor email, web, file sharing, collaboration services, and other common attack vectors to detect malware, phishing, data leaks and exfiltration, and other adverse events"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4834",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.CM",
+      "description": "External service provider activities and services are monitored to find potentially adverse events",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Monitor remote and onsite administration and maintenance activities that external providers perform on organizational systems"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4833",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.CM",
+      "description": "Personnel activity and technology usage are monitored to find potentially adverse events",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use behavior analytics software to detect anomalous user activity to mitigate insider threats"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4832",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.CM",
+      "description": "The physical environment is monitored to find potentially adverse events",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Monitor logs from physical access control systems (e.g., badge readers) to find unusual access patterns (e.g., deviations from the norm) and failed access attempts"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4831",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "DE.CM",
+      "description": "Networks and network services are monitored to find potentially adverse events",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Monitor DNS, BGP, and other network services for adverse events"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "PROTECT",
+      "description": "Safeguards to manage the organization's cybersecurity risks are used",
+      "function_id": "PR",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4748",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.IR",
+      "name": "Technology Infrastructure Resilience",
+      "description": "Security architectures are managed with the organization's risk strategy to protect asset confidentiality, integrity, and availability, and organizational resilience",
+      "function_id": "PR",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4830",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.IR",
+      "description": "Adequate resource capacity to ensure availability is maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Monitor usage of storage, power, compute, network bandwidth, and other resources"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4829",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.IR",
+      "description": "Mechanisms are implemented to achieve resilience requirements in normal and adverse situations",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Avoid single points of failure in systems and infrastructure"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4828",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.IR",
+      "description": "The organization's technology assets are protected from environmental threats",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Protect organizational equipment from known environmental threats, such as flooding, fire, wind, and excessive heat and humidity"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4827",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.IR",
+      "description": "Networks and environments are protected from unauthorized logical access and usage",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Logically segment organization networks and cloud-based platforms according to trust boundaries and platform types (e.g., IT, IoT, OT, mobile, guests), and permit required communications only between segments"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.PS",
+      "name": "Platform Security",
+      "description": "The hardware, software (e.g., firmware, operating systems, applications), and services of physical and virtual platforms are managed consistent with the organization's risk strategy to protect their confidentiality, integrity, and availability",
+      "function_id": "PR",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4826",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.PS",
+      "description": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Protect all components of organization-developed software from tampering and unauthorized access"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4825",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.PS",
+      "description": "Installation and execution of unauthorized software are prevented",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "When risk warrants it, restrict software execution to permitted products only or deny the execution of prohibited and unauthorized software"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4824",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.PS",
+      "description": "Log records are generated and made available for continuous monitoring",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Configure all operating systems, applications, and services (including cloud-based services) to generate log records"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4823",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.PS",
+      "description": "Hardware is maintained, replaced, and removed commensurate with risk",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Replace hardware when it lacks needed security capabilities or when it cannot support software with needed security capabilities"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4822",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.PS",
+      "description": "Software is maintained, replaced, and removed commensurate with risk",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Perform routine and emergency patching within the timeframes specified in the vulnerability management plan"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4821",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.PS",
+      "description": "Configuration management practices are established and applied",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish, test, deploy, and maintain hardened baselines that enforce the organization's cybersecurity policies and provide only essential capabilities (i.e., principle of least functionality)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4746",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.DS",
+      "name": "Data Security",
+      "description": "Data are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information",
+      "function_id": "PR",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4820",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.DS",
+      "description": "Backups of data are created, protected, maintained, and tested",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Continuously back up critical data in near-real-time, and back up other data frequently at agreed-upon schedules"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4819",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.DS",
+      "description": "The confidentiality, integrity, and availability of data-in-use are protected",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Remove data that must remain confidential (e.g., from processors and memory) as soon as it is no longer needed"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4818",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.DS",
+      "description": "The confidentiality, integrity, and availability of data-in-transit are protected",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use encryption, digital signatures, and cryptographic hashes to protect the confidentiality and integrity of network communications"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4817",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.DS",
+      "description": "The confidentiality, integrity, and availability of data-at-rest are protected",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use encryption, digital signatures, and cryptographic hashes to protect the confidentiality and integrity of stored data in files, databases, virtual machine disk images, container images, and other resources"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4745",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.AT",
+      "name": "Awareness and Training",
+      "description": "The organization's personnel are provided with cybersecurity awareness and training so that they can perform their cybersecurity-related tasks",
+      "function_id": "PR",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4816",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AT",
+      "description": "Individuals in specialized roles are provided with awareness and training so that they possess the knowledge and skills to perform relevant tasks with cybersecurity risks in mind",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Identify the specialized roles within the organization that require additional cybersecurity training, such as physical and cybersecurity personnel, finance personnel, senior leadership, and anyone with access to business-critical data"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4815",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AT",
+      "description": "Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Provide basic cybersecurity awareness and training to employees, contractors, partners, suppliers, and all other users of the organization's non-public resources"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "PR.AA",
+      "name": "Identity Management, Authentication, and Access Control",
+      "description": "Access to physical and logical assets is limited to authorized users, services, and hardware and  managed commensurate with the assessed risk of unauthorized access",
+      "function_id": "PR",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4814",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AA",
+      "description": "Physical access to assets is managed, monitored, and enforced commensurate with risk",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use security guards, security cameras, locked entrances, alarm systems, and other physical controls to monitor facilities and restrict access"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4813",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AA",
+      "description": "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Review logical and physical access privileges periodically and whenever someone changes roles or leaves the organization, and promptly rescind privileges that are no longer needed"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4812",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AA",
+      "description": "Identity assertions are protected, conveyed, and verified",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Protect identity assertions that are used to convey authentication and user information through single sign-on systems"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4811",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AA",
+      "description": "Users, services, and hardware are authenticated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Require multifactor authentication"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4810",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AA",
+      "description": "Identities are proofed and bound to credentials based on the context of interactions",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Verify a person's claimed identity at enrollment time using government-issued identity credentials (e.g., passport, visa, driver's license)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4809",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "PR.AA",
+      "description": "Identities and credentials for authorized users, services, and hardware are managed by the organization",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Initiate requests for new access or additional access for employees, contractors, and others, and track, review, and fulfill the requests, with permission from system or data owners when needed"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4730",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "IDENTIFY",
+      "description": "The organization's current cybersecurity risks are understood",
+      "function_id": "ID",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4743",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.IM",
+      "name": "Improvement",
+      "description": "Improvements to organizational cybersecurity risk management processes, procedures and activities are identified across all CSF Functions",
+      "function_id": "ID",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4808",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.IM",
+      "description": "Incident response plans and other cybersecurity plans that affect operations are established, communicated, maintained, and improved",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish contingency plans (e.g., incident response, business continuity, disaster recovery) for responding to and recovering from adverse events that can interfere with operations, expose confidential information, or otherwise endanger the organization's mission and viability"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4807",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.IM",
+      "description": "Improvements are identified from execution of operational processes, procedures, and activities",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Conduct collaborative lessons learned sessions with suppliers"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4806",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.IM",
+      "description": "Improvements are identified from security tests and exercises, including those done in coordination with suppliers and relevant third parties",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Identify improvements for future incident response activities based on findings from incident response assessments (e.g., tabletop exercises and simulations, tests, internal reviews, independent audits)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4805",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.IM",
+      "description": "Improvements are identified from evaluations",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Perform self-assessments of critical services that take current threats and TTPs into consideration"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.RA",
+      "name": "Risk Assessment",
+      "description": "The cybersecurity risk to the organization, assets, and individuals is understood by the organization",
+      "function_id": "ID",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4804",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Critical suppliers are assessed prior to acquisition",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Conduct supplier risk assessments against business and applicable cybersecurity requirements, including the supply chain"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4803",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Assess the authenticity and cybersecurity of critical technology products and services prior to acquisition and use"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4802",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Processes for receiving, analyzing, and responding to vulnerability disclosures are established",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Conduct vulnerability information sharing between the organization and its suppliers following the rules and protocols defined in contracts"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4801",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Changes and exceptions are managed, assessed for risk impact, recorded, and tracked",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Implement and follow procedures for the formal documentation, review, testing, and approval of proposed changes and requested exceptions"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4800",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Apply the vulnerability management plan's criteria for deciding whether to accept, transfer, mitigate, or avoid risk"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4799",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Develop threat models to better understand risks to the data and identify appropriate risk responses"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4798",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Business leaders and cybersecurity risk management practitioners work together to estimate the likelihood and impact of risk scenarios and record them in risk registers"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4797",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Internal and external threats to the organization are identified and recorded",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use cyber threat intelligence to maintain awareness of the types of threat actors likely to target the organization and the TTPs they are likely to use"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4796",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Cyber threat intelligence is received from information sharing forums and sources",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Configure cybersecurity tools and technologies with detection or response capabilities to securely ingest cyber threat intelligence feeds"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4795",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.RA",
+      "description": "Vulnerabilities in assets are identified, validated, and recorded",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Use vulnerability management technologies to identify unpatched and misconfigured software"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "ID.AM",
+      "name": "Asset Management",
+      "description": "Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy",
+      "function_id": "ID",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4794",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Systems, hardware, software, services, and data are managed throughout their life cycles",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Integrate cybersecurity considerations throughout the life cycles of systems, hardware, software, and services"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4793",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Inventories of data and corresponding metadata for designated data types are maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Maintain a list of the designated data types of interest (e.g., personally identifiable information, protected health information, financial account numbers, organization intellectual property, operational technology data)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4792",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Assets are prioritized based on classification, criticality, resources, and impact on the mission",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Define criteria for prioritizing each class of assets"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4791",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Inventories of services provided by suppliers are maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Inventory all external services used by the organization, including third-party infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) offerings; APIs; and other externally hosted application services"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4790",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Representations of the organization's authorized network communication and internal and external network data flows are maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Maintain baselines of communication and data flows within the organization's wired and wireless networks"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4789",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Inventories of software, services, and systems managed by the organization are maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Maintain inventories for all types of software and services, including commercial-off-the-shelf, open-source, custom applications, API services, and cloud-based applications and services"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4788",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "ID.AM",
+      "description": "Inventories of hardware managed by the organization are maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Maintain inventories for all types of hardware, including IT, IoT, OT, and mobile devices"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "mainLabel": "Function",
+      "labels": [
+        "Function"
+      ],
+      "name": "GOVERN",
+      "description": "The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.SC",
+      "name": "Cybersecurity Supply Chain Risk Management",
+      "description": "Cyber supply chain risk management processes are identified, established, managed, monitored, and improved by organizational stakeholders",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4787",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish processes for terminating critical relationships under both normal and adverse circumstances"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4786",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the technology product and service life cycle",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Policies and procedures require provenance records for all acquired technology products and services"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4785",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Relevant suppliers and other third parties are included in incident planning, response, and recovery activities",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Define and use rules and protocols for reporting incident response and recovery activities and the status between the organization and its suppliers"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4784",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritized, assessed, responded to, and monitored over the course of the relationship",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Adjust assessment formats and frequencies based on the third party's reputation and the criticality of the products or services they provide"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4783",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Planning and due diligence are performed to reduce risks before entering into formal supplier or other third-party relationships",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Perform thorough due diligence on prospective suppliers that is consistent with procurement planning and commensurate with the level of risk, criticality, and complexity of each supplier relationship"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4782",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Requirements to address cybersecurity risks in supply chains are established, prioritized, and integrated into contracts and other types of agreements with suppliers and other relevant third parties",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish security requirements for suppliers, products, and services commensurate with their criticality level and potential impact if compromised"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4781",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Suppliers are known and prioritized by criticality",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Develop criteria for supplier criticality based on, for example, the sensitivity of data processed or possessed by suppliers, the degree of access to the organization's systems, and the importance of the products or services to the organization's mission"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4780",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Identify areas of alignment and overlap with cybersecurity and enterprise risk management"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4779",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "Cybersecurity roles and responsibilities for suppliers, customers, and partners are established, communicated, and coordinated internally and externally",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Identify one or more specific roles or positions that will be responsible and accountable for planning, resourcing, and executing cybersecurity supply chain risk management activities"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4778",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.SC",
+      "description": "A cybersecurity supply chain risk management program, strategy, objectives, policies, and processes are established and agreed to by organizational stakeholders",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish a strategy that expresses the objectives of the cybersecurity supply chain risk management program"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4739",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.OV",
+      "name": "Oversight",
+      "description": "Results of organization-wide cybersecurity risk management activities and performance are used to inform, improve, and adjust the risk management strategy",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4777",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OV",
+      "description": "Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Review key performance indicators (KPIs) to ensure that organization-wide policies and procedures achieve objectives"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4776",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OV",
+      "description": "The cybersecurity risk management strategy is reviewed and adjusted to ensure coverage of organizational requirements and risks",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Review audit findings to confirm whether the existing cybersecurity strategy has ensured compliance with internal and external requirements"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4775",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OV",
+      "description": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Measure how well the risk management strategy and risk results have helped leaders make decisions and achieve organizational objectives"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4738",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.PO",
+      "name": "Policy",
+      "description": "Organizational cybersecurity policy is established, communicated, and enforced",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4774",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.PO",
+      "description": "Policy for managing cybersecurity risks is reviewed, updated, communicated, and enforced to reflect changes in requirements, threats, technology, and organizational mission",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Update policy based on periodic reviews of cybersecurity risk management results to ensure that policy and supporting processes and procedures adequately maintain risk at an acceptable level"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4773",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.PO",
+      "description": "Policy for managing cybersecurity risks is established based on organizational context, cybersecurity strategy, and priorities and is communicated and enforced",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Create, disseminate, and maintain an understandable, usable risk management policy with statements of management intent, expectations, and direction"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4737",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.RR",
+      "name": "Roles, Responsibilities, and Authorities",
+      "description": "Cybersecurity roles, responsibilities, and authorities to foster accountability, performance assessment, and continuous improvement are established and communicated",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4772",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RR",
+      "description": "Cybersecurity is included in human resources practices",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Integrate cybersecurity risk management considerations into human resources processes (e.g., personnel screening, onboarding, change notification, offboarding)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4771",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RR",
+      "description": "Adequate resources are allocated commensurate with the cybersecurity risk strategy, roles, responsibilities, and policies",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Conduct periodic management reviews to ensure that those given cybersecurity risk management responsibilities have the necessary authority"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4770",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RR",
+      "description": "Roles, responsibilities, and authorities related to cybersecurity risk management are established, communicated, understood, and enforced",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Document risk management roles and responsibilities in policy"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4769",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RR",
+      "description": "Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Leaders (e.g., directors) agree on their roles and responsibilities in developing, implementing, and assessing the organization's cybersecurity strategy"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.RM",
+      "name": "Risk Management Strategy",
+      "description": "The organization's priorities, constraints, risk tolerance and appetite statements, and assumptions are established, communicated, and used to support operational risk decisions",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4768",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Define and communicate guidance and methods for identifying opportunities and including them in risk discussions (e.g., strengths, weaknesses, opportunities, and threats [SWOT] analysis)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4767",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish criteria for using a quantitative approach to cybersecurity risk analysis, and specify probability and exposure formulas"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4766",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Determine how to update senior executives, directors, and management on the organization's cybersecurity posture at agreed-upon intervals"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4765",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "Strategic direction that describes appropriate risk response options is established and communicated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Specify criteria for accepting and avoiding cybersecurity risk for various classifications of data"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4764",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "Cybersecurity risk management activities and outcomes are included in enterprise risk management processes",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Aggregate and manage cybersecurity risks alongside other enterprise risks (e.g., compliance, financial, operational, regulatory, reputational, safety)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4763",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "Risk appetite and risk tolerance statements are established, communicated, and maintained",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Determine and communicate risk appetite statements that convey expectations about the appropriate level of risk for the organization"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4762",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.RM",
+      "description": "Risk management objectives are established and agreed to by organizational stakeholders",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Update near-term and long-term cybersecurity risk management objectives as part of annual strategic planning and when major changes occur"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "category_id": "GV.OC",
+      "name": "Organizational Context",
+      "description": "The circumstances - mission, stakeholder expectations, dependencies, and legal, regulatory, and contractual requirements - surrounding the organization's cybersecurity risk management decisions are understood",
+      "function_id": "GV",
+      "IS_framework_standard_id": "NIST_CSF_2.0"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4761",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OC",
+      "description": "Outcomes, capabilities, and services that the organization depends on are understood and communicated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Create an inventory of the organization's dependencies on external resources (e.g., facilities, cloud-based hosting providers) and their relationships to organizational assets and business functions"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4760",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OC",
+      "description": "Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Establish criteria for determining the criticality of capabilities and services as viewed by internal and external stakeholders"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4759",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OC",
+      "description": "Legal, regulatory, and contractual requirements regarding cybersecurity - including privacy and civil liberties obligations - are understood and managed",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Determine a process to track and manage legal and regulatory requirements regarding protection of individuals' information (e.g., Health Insurance Portability and Accountability Act, California Consumer Privacy Act, General Data Protection Regulation)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4758",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OC",
+      "description": "Internal and external stakeholders are understood, and their needs and expectations regarding cybersecurity risk management are understood and considered",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Identify relevant internal stakeholders and their cybersecurity-related expectations (e.g., performance and risk expectations of officers, directors, and advisors; cultural expectations of employees)"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4757",
+      "mainLabel": "Subcategory",
+      "labels": [
+        "Subcategory"
+      ],
+      "category_id": "GV.OC",
+      "description": "The organizational mission is understood and informs cybersecurity risk management",
+      "IS_framework_standard_id": "NIST_CSF_2.0",
+      "example": "Share the organization's mission (e.g., through vision and mission statements, marketing, and service strategies) to provide a basis for identifying risks that may impede that mission"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164337733838049912",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4734",
+      "type": "FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4734",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560053374",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4756",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4756",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681172",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4862",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4756",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995924",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4861",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4734",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746368126",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422163",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4860",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736915",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4859",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051667",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4858",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366419",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4857",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681171",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4856",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4755",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995923",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4855",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162085934024364664",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4733",
+      "type": "FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4733",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159831935187423869",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4754",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4754",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681170",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4854",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4754",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995922",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4853",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4733",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738621",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4753",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4753",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681169",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4852",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4753",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995921",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4851",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4733",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560053373",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4752",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4752",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051664",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4850",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4752",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366416",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4849",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4752",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681168",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4848",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4752",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995920",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4847",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4733",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746368125",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736911",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4846",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051663",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4845",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366415",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4844",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681167",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4843",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4751",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995919",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4842",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159834134210679416",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4732",
+      "type": "FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4732",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560053372",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422158",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4841",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736910",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4840",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051662",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4839",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366414",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4838",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681166",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4837",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4750",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995918",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4836",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4732",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746368124",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736909",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4835",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051661",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4834",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366413",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4833",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681165",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4832",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4749",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995917",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4831",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157582334396994168",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "type": "FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162083735001109115",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4748",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4748",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051660",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4830",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4748",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366412",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4829",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4748",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681164",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4828",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4748",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995916",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4827",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159831935187423867",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422155",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4826",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736907",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4825",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051659",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4824",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366411",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4823",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681163",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4822",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4747",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995915",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4821",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738619",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4746",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4746",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051658",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4820",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4746",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366410",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4819",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4746",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681162",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4818",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4746",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995914",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4817",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560053371",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4745",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4745",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681161",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4816",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4745",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995913",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4815",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4731",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746368123",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422152",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4814",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736904",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4813",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051656",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4812",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366408",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4811",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681160",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4810",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4744",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995912",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4809",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155330534583308920",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4730",
+      "type": "FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4730",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738618",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4743",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4743",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051655",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4808",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4743",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366407",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4807",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4743",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681159",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4806",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4743",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995911",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4805",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4730",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560053370",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1173343833581163142",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4804",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1171092033767477894",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4803",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792646",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4802",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140107398",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4801",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422150",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4800",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736902",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4799",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051654",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4798",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366406",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4797",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681158",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4796",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4742",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995910",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4795",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4730",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746368122",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140107397",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4794",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422149",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4793",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736901",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4792",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051653",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4791",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366405",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4790",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681157",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4789",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4741",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995909",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4788",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4728",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153078734769623672",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "type": "FRAMEWORK_AND_STANDARD_CONTAINS_FUNCTIONS"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164335534814794361",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1173343833581163140",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4787",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1171092033767477892",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4786",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1168840233953792644",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4785",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140107396",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4784",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422148",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4783",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736900",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4782",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051652",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4781",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366404",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4780",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681156",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4779",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4740",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995908",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4778",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162083735001109113",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4739",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4739",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366403",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4777",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4739",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681155",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4776",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4739",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995907",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4775",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159831935187423865",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4738",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4738",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681154",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4774",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4738",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995906",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4773",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157580135373738617",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4737",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4737",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051649",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4772",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4737",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366401",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4771",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4737",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681153",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4770",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4737",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995905",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4769",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155328335560053369",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1166588434140107392",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4768",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1164336634326422144",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4767",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736896",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4766",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051648",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4765",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366400",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4764",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681152",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4763",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4736",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995904",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4762",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4729",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153076535746368121",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "type": "FUNCTION_HAS_CATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162084834512736895",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4761",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1159833034699051647",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4760",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157581234885366399",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4759",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155329435071681151",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4758",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4735",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153077635257995903",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:4757",
+      "type": "CATEGORY_CONTAINS_SUBCATEGORIES"
+    }
+  ]
+}

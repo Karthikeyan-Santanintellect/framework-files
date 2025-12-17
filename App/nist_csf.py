@@ -44,11 +44,11 @@ ON CREATE SET
 # CORRECTED: Used '=' instead of ':' for property assignment in SET clause.
 subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Subcategory {subcategory_id: row.Subcategory_Code, IS_framework_standard_id: "NIST_CSF_2.0"})
+MERGE (sc:Subcategory {id: row.Subcategory_Code, IS_framework_standard_id: "NIST_CSF_2.0"})
 ON CREATE SET
-  s.category_id = row.Category_Code,
-  s.description = row.Subcategory_Description,
-  s.example = row.Implementation_Example;
+  sc.category_id = row.Category_Code,
+  sc.description = row.Subcategory_Description,
+  sc.example = row.Implementation_Example;
 """
 
 # No changes needed here, as it now correctly matches the 'IS_framework_standard_id' property.

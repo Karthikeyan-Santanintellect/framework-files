@@ -1,6 +1,0 @@
-source_organization_id,relationship_type,target_provider_id,selection_date,criteria_considered,contract_start_date,contract_end_date,budget_agreed,primary_auditor_assigned
-ORG-001,CHOOSES_AUDIT_PROVIDER,AP-001,2023-12-15,Experience; Rating; Cost,2024-01-01,2024-12-31,40000,Dr. Hans Mueller
-ORG-002,CHOOSES_AUDIT_PROVIDER,AP-002,2021-05-25,Expertise; Availability; Geographic coverage,2023-06-01,2023-12-31,70000,Johann Schmidt
-ORG-003,CHOOSES_AUDIT_PROVIDER,AP-001,2023-02-20,AL2 capability; Cost-effectiveness; References,2024-08-01,2024-12-31,30000,Dr. Hans Mueller
-ORG-004,CHOOSES_AUDIT_PROVIDER,AP-002,2020-10-15,AL3 expertise; Industry knowledge; Reputation,2024-09-01,2024-12-31,60000,Johann Schmidt
-ORG-005,CHOOSES_AUDIT_PROVIDER,AP-003,2024-01-10,Affordability; Proximity; Accreditation,2024-10-01,2024-12-31,18000,Maria Lopez
