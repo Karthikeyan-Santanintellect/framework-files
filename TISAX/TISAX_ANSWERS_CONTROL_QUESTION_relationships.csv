@@ -1,6 +1,0 @@
-source_organization_id,relationship_type,target_question_id,response_date,answer_status,maturity_level_achieved,evidence_provided,remediation_required,remediation_due_date
-ORG-001,ANSWERS_CONTROL_QUESTION,CQ-001,2024-01-15,Compliant,3,Policy document v2.1; Board approval minutes,False,
-ORG-001,ANSWERS_CONTROL_QUESTION,CQ-003,2024-01-20,Compliant,3,Encryption config audit; Key management plan,False,
-ORG-002,ANSWERS_CONTROL_QUESTION,CQ-001,2023-06-20,Compliant,3,Policy document v3.0; Training records,False,
-ORG-002,ANSWERS_CONTROL_QUESTION,CQ-002,2023-06-25,PartiallyCompliant,2,Access control list; MFA pilot project plan,True,2024-03-15
-ORG-003,ANSWERS_CONTROL_QUESTION,CQ-004,2024-08-25,Compliant,3,Training schedule; Completion records,False,

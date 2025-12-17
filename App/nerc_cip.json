@@ -1,0 +1,936 @@
+{
+  "nodes": [
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:380",
+      "mainLabel": "IndustryStandardAndRegulation",
+      "labels": [
+        "IndustryStandardAndRegulation"
+      ],
+      "jurisdiction": "North America (Bulk Electric System)",
+      "name": "NERC Critical Infrastructure Protection",
+      "effective_date": "2016-07-01",
+      "description": "A set of mandatory cybersecurity standards enforced by the North American Electric Reliability Corporation (NERC) to secure the Bulk Electric System (BES). It requires entities to identify critical assets and apply controls for electronic and physical security, personnel training, incident response, and recovery to ensure the reliability of the North American power grid.",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "version": "NERC CIP Version 5 / V6+",
+      "enactment_date": "2008-01-17",
+      "status": "Active"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:385",
+      "mainLabel": "Organization",
+      "labels": [
+        "Organization"
+      ],
+      "ciso_contact_email": "swilliams@central.grid",
+      "registration_date": "2017-01-30",
+      "last_audit_date": "2024-07-15",
+      "organization_id": "ORG-005",
+      "name": "Central Grid Authority",
+      "bes_asset_count": "145",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Distribution Operator",
+      "region": "SPP",
+      "ciso_name": "Sarah Williams",
+      "compliance_status": "Partially-Compliant"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:393",
+      "mainLabel": "CIPStandard",
+      "labels": [
+        "CIPStandard"
+      ],
+      "standard_id": "CIP-003",
+      "release_date": "2013-02-20",
+      "control_areas": "Document Protection; Information Protection",
+      "effective_date": "2015-07-01",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "title": "Cyber Security Information Protection",
+      "version": "5.1a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:390",
+      "mainLabel": "BESCyberSystem",
+      "labels": [
+        "BESCyberSystem"
+      ],
+      "backup_recovery_capability": "No Backup",
+      "mean_time_to_recovery": "60",
+      "critical_function": "Critical system access management",
+      "operates_in_esop": "False",
+      "system_id": "SYS-005",
+      "name": "Network Access Controls",
+      "impact_level": "High",
+      "location": "Kansas City, MO",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Access Control",
+      "connected_assets_count": "28"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:409",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "operational_status": "Operational",
+      "asset_name": "Access Control Firewall",
+      "criticality_level": "Critical",
+      "asset_type": "Security Device",
+      "location": "Boston Network Center",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "asset_id": "AST-007",
+      "last_maintenance_date": "2024-09-20"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:402",
+      "mainLabel": "ElectronicSecurityPerimeter",
+      "labels": [
+        "ElectronicSecurityPerimeter"
+      ],
+      "logging_enabled": "True",
+      "intrusion_detection_active": "False",
+      "perimeter_type": "Physical",
+      "air_gapped": "False",
+      "name": "Admin Access DMZ",
+      "perimeter_id": "ESP-005",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "monitored_systems_count": "28",
+      "access_point_count": "4"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:430",
+      "mainLabel": "VulnerabilityManagement",
+      "labels": [
+        "VulnerabilityManagement"
+      ],
+      "vulnerability_id": "VM-001",
+      "responsible_team": "Security Assessment Team",
+      "name": "Annual Network Vulnerability Assessment",
+      "open_vulnerabilities_critical": "2",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "scan_frequency": "Monthly",
+      "patch_management_process": "Risk Assessment > Planning > Testing > Deployment"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "mainLabel": "Organization",
+      "labels": [
+        "Organization"
+      ],
+      "ciso_contact_email": "rtaylor@midwest.grid",
+      "registration_date": "2015-01-15",
+      "last_audit_date": "2024-06-15",
+      "organization_id": "ORG-001",
+      "name": "Midwest Electric Grid",
+      "bes_asset_count": "156",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Transmission Operator",
+      "region": "MISO",
+      "ciso_name": "Robert Taylor",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:384",
+      "mainLabel": "Organization",
+      "labels": [
+        "Organization"
+      ],
+      "ciso_contact_email": "danderson@ne.power",
+      "registration_date": "2015-11-05",
+      "last_audit_date": "2024-09-01",
+      "organization_id": "ORG-004",
+      "name": "Northeast Power Operator",
+      "bes_asset_count": "412",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Bulk Electric System Operator",
+      "region": "NPCC",
+      "ciso_name": "David Anderson",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:383",
+      "mainLabel": "Organization",
+      "labels": [
+        "Organization"
+      ],
+      "ciso_contact_email": "mjohnson@south.gen",
+      "registration_date": "2016-03-10",
+      "last_audit_date": "2024-05-10",
+      "organization_id": "ORG-003",
+      "name": "Southern Generation LLC",
+      "bes_asset_count": "89",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Generator",
+      "region": "SERC",
+      "ciso_name": "Michael Johnson",
+      "compliance_status": "Non-Compliant"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "mainLabel": "Organization",
+      "labels": [
+        "Organization"
+      ],
+      "ciso_contact_email": "jchen@western.trans",
+      "registration_date": "2014-06-20",
+      "last_audit_date": "2024-08-20",
+      "organization_id": "ORG-002",
+      "name": "Western Transmission Corp",
+      "bes_asset_count": "203",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Transmission Operator",
+      "region": "WECC",
+      "ciso_name": "Jennifer Chen",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:395",
+      "mainLabel": "CIPStandard",
+      "labels": [
+        "CIPStandard"
+      ],
+      "standard_id": "CIP-005",
+      "release_date": "2013-04-15",
+      "control_areas": "Security Management; Configuration Management",
+      "effective_date": "2015-07-01",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "title": "Cyber Security Systems Security Management",
+      "version": "5.1a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:392",
+      "mainLabel": "CIPStandard",
+      "labels": [
+        "CIPStandard"
+      ],
+      "standard_id": "CIP-002",
+      "release_date": "2013-01-15",
+      "control_areas": "Risk Assessment; Asset Identification",
+      "effective_date": "2015-07-01",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "title": "Cyber Security Planning",
+      "version": "5.1a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:391",
+      "mainLabel": "BESCyberSystem",
+      "labels": [
+        "BESCyberSystem"
+      ],
+      "backup_recovery_capability": "Hot Standby",
+      "mean_time_to_recovery": "20",
+      "critical_function": "Emergency grid backup control",
+      "operates_in_esop": "True",
+      "system_id": "SYS-006",
+      "name": "Backup Energy Control",
+      "impact_level": "Medium",
+      "location": "Houston, TX",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "SCADA",
+      "connected_assets_count": "38"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:386",
+      "mainLabel": "BESCyberSystem",
+      "labels": [
+        "BESCyberSystem"
+      ],
+      "backup_recovery_capability": "Hot Standby",
+      "mean_time_to_recovery": "15",
+      "critical_function": "Real-time grid control and monitoring",
+      "operates_in_esop": "True",
+      "system_id": "SYS-001",
+      "name": "Grid Control SCADA",
+      "impact_level": "High",
+      "location": "Chicago, IL",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "SCADA",
+      "connected_assets_count": "45"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:404",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "operational_status": "Standby",
+      "asset_name": "Backup SCADA System",
+      "criticality_level": "Critical",
+      "backup_asset_id": "AST-001",
+      "asset_type": "Server",
+      "location": "Chicago Data Center",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "asset_id": "AST-002",
+      "last_maintenance_date": "2024-08-20"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:403",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "operational_status": "Operational",
+      "asset_name": "Primary Control Server",
+      "criticality_level": "Critical",
+      "backup_asset_id": "AST-002",
+      "asset_type": "Server",
+      "location": "Chicago Data Center",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "asset_id": "AST-001",
+      "last_maintenance_date": "2024-09-15"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:398",
+      "mainLabel": "ElectronicSecurityPerimeter",
+      "labels": [
+        "ElectronicSecurityPerimeter"
+      ],
+      "logging_enabled": "True",
+      "intrusion_detection_active": "True",
+      "perimeter_type": "Network-Based",
+      "air_gapped": "False",
+      "name": "Grid Control Network",
+      "perimeter_id": "ESP-001",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "monitored_systems_count": "45",
+      "access_point_count": "12"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:415",
+      "mainLabel": "AccessPoint",
+      "labels": [
+        "AccessPoint"
+      ],
+      "access_control_method": "MFA + Smart Card",
+      "access_type": "Internal",
+      "monitoring_active": "True",
+      "access_point_id": "AP-001",
+      "approval_process": "Manager Approval",
+      "protected_system_id": "SYS-001",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "point_name": "SCADA Console Access",
+      "authentication_required": "True"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:419",
+      "mainLabel": "AccessPoint",
+      "labels": [
+        "AccessPoint"
+      ],
+      "access_control_method": "VPN + Token",
+      "access_type": "Remote",
+      "monitoring_active": "True",
+      "access_point_id": "AP-005",
+      "approval_process": "CISO Approval",
+      "protected_system_id": "SYS-004",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "point_name": "Vendor Remote Support",
+      "authentication_required": "True"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:388",
+      "mainLabel": "BESCyberSystem",
+      "labels": [
+        "BESCyberSystem"
+      ],
+      "backup_recovery_capability": "Warm Standby",
+      "mean_time_to_recovery": "45",
+      "critical_function": "System protection and fault detection",
+      "operates_in_esop": "True",
+      "system_id": "SYS-003",
+      "name": "Protection Relay System",
+      "impact_level": "High",
+      "location": "Atlanta, GA",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Protection",
+      "connected_assets_count": "32"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:406",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "operational_status": "Operational",
+      "asset_name": "PMU Data Aggregator",
+      "criticality_level": "High",
+      "backup_asset_id": "AST-003",
+      "asset_type": "Server",
+      "location": "Denver Operations",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "asset_id": "AST-004",
+      "last_maintenance_date": "2024-09-10"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:400",
+      "mainLabel": "ElectronicSecurityPerimeter",
+      "labels": [
+        "ElectronicSecurityPerimeter"
+      ],
+      "logging_enabled": "True",
+      "intrusion_detection_active": "True",
+      "perimeter_type": "Network-Based",
+      "air_gapped": "True",
+      "name": "Relay Protection Ring",
+      "perimeter_id": "ESP-003",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "monitored_systems_count": "32",
+      "access_point_count": "6"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:432",
+      "mainLabel": "VulnerabilityManagement",
+      "labels": [
+        "VulnerabilityManagement"
+      ],
+      "vulnerability_id": "VM-003",
+      "responsible_team": "Configuration Management",
+      "name": "Configuration Compliance Monitoring",
+      "open_vulnerabilities_critical": "1",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "scan_frequency": "Daily",
+      "patch_management_process": "Review > Analyze > Update > Verify"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:417",
+      "mainLabel": "AccessPoint",
+      "labels": [
+        "AccessPoint"
+      ],
+      "access_control_method": "Radio Frequency + Key",
+      "access_type": "Field",
+      "monitoring_active": "True",
+      "access_point_id": "AP-003",
+      "approval_process": "Field Supervisor",
+      "protected_system_id": "SYS-003",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "point_name": "Field Device Communication",
+      "authentication_required": "True"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:397",
+      "mainLabel": "CIPStandard",
+      "labels": [
+        "CIPStandard"
+      ],
+      "standard_id": "CIP-007",
+      "release_date": "2013-06-15",
+      "control_areas": "System Hardening; Malware Prevention; Patch Management",
+      "effective_date": "2015-07-01",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "title": "Cyber Security Systems Security Management",
+      "version": "5.1a"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:387",
+      "mainLabel": "BESCyberSystem",
+      "labels": [
+        "BESCyberSystem"
+      ],
+      "backup_recovery_capability": "Cold Standby",
+      "mean_time_to_recovery": "120",
+      "critical_function": "Energy management and optimization",
+      "operates_in_esop": "True",
+      "system_id": "SYS-002",
+      "name": "EMS Energy Management",
+      "impact_level": "High",
+      "location": "Denver, CO",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "EMS",
+      "connected_assets_count": "68"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:405",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "operational_status": "Operational",
+      "asset_name": "RTU Gateway Device",
+      "criticality_level": "High",
+      "backup_asset_id": "AST-004",
+      "asset_type": "Network Device",
+      "location": "Field - Substation A",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "asset_id": "AST-003",
+      "last_maintenance_date": "2024-10-01"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:399",
+      "mainLabel": "ElectronicSecurityPerimeter",
+      "labels": [
+        "ElectronicSecurityPerimeter"
+      ],
+      "logging_enabled": "True",
+      "intrusion_detection_active": "True",
+      "perimeter_type": "Network-Based",
+      "air_gapped": "False",
+      "name": "EMS Internal Zone",
+      "perimeter_id": "ESP-002",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "monitored_systems_count": "68",
+      "access_point_count": "8"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:431",
+      "mainLabel": "VulnerabilityManagement",
+      "labels": [
+        "VulnerabilityManagement"
+      ],
+      "vulnerability_id": "VM-002",
+      "responsible_team": "Infrastructure Team",
+      "name": "System Patch Management Program",
+      "open_vulnerabilities_critical": "0",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "scan_frequency": "Weekly",
+      "patch_management_process": "Patch > Test > Approve > Deploy"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:416",
+      "mainLabel": "AccessPoint",
+      "labels": [
+        "AccessPoint"
+      ],
+      "access_control_method": "VPN + MFA",
+      "access_type": "Remote",
+      "monitoring_active": "True",
+      "access_point_id": "AP-002",
+      "approval_process": "Director Approval",
+      "protected_system_id": "SYS-002",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "point_name": "Remote EMS Access",
+      "authentication_required": "True"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:389",
+      "mainLabel": "BESCyberSystem",
+      "labels": [
+        "BESCyberSystem"
+      ],
+      "backup_recovery_capability": "No Backup",
+      "mean_time_to_recovery": "300",
+      "critical_function": "Phasor data collection and analysis",
+      "operates_in_esop": "True",
+      "system_id": "SYS-004",
+      "name": "Phasor Measurement Units",
+      "impact_level": "Medium",
+      "location": "Boston, MA",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "type": "Monitoring",
+      "connected_assets_count": "112"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:401",
+      "mainLabel": "ElectronicSecurityPerimeter",
+      "labels": [
+        "ElectronicSecurityPerimeter"
+      ],
+      "logging_enabled": "True",
+      "intrusion_detection_active": "True",
+      "perimeter_type": "Network-Based",
+      "air_gapped": "False",
+      "name": "PMU Collection Network",
+      "perimeter_id": "ESP-004",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "monitored_systems_count": "112",
+      "access_point_count": "15"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:433",
+      "mainLabel": "VulnerabilityManagement",
+      "labels": [
+        "VulnerabilityManagement"
+      ],
+      "vulnerability_id": "VM-004",
+      "responsible_team": "Threat Analysis Center",
+      "name": "Threat Intelligence Review",
+      "open_vulnerabilities_critical": "0",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "scan_frequency": "Real-time",
+      "patch_management_process": "Evaluate > Prioritize > Implement > Monitor"
+    },
+    {
+      "id": "4:d48abbdc-159e-49ec-93de-474cfd216a81:418",
+      "mainLabel": "AccessPoint",
+      "labels": [
+        "AccessPoint"
+      ],
+      "access_control_method": "MFA + Biometric",
+      "access_type": "Internal",
+      "monitoring_active": "True",
+      "access_point_id": "AP-004",
+      "approval_process": "CTO Approval",
+      "protected_system_id": "SYS-001",
+      "industry_standard_regulation_id": "NERC_CIP",
+      "point_name": "System Administration Gateway",
+      "authentication_required": "True"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:380",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1162268452954571132",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:385",
+      "type": "REGULATION_GOVERNS_ORGANIZATION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:385",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917865478199181705",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:393",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "80",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2017-07-01",
+      "compliance_level": "Partially Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:385",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153256855653319041",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:390",
+      "type": "ORGANIZATION_OWNS_BES_CYBER_SYSTEM",
+      "ownership_start_date": "2017-01-30",
+      "operational_responsibility": "True",
+      "security_responsibility": "True",
+      "relationship_type": "OWNS_BES_CYBER_SYSTEM",
+      "maintenance_responsibility": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:390",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917867677222437273",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:409",
+      "type": "BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET",
+      "protection_start_date": "2017-01-30",
+      "protection_level": "High",
+      "relationship_type": "PROTECTS_CRITICAL_ASSET",
+      "effectiveness_rating": "0.99"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:390",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153259054676574598",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:402",
+      "type": "BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER",
+      "definition_date": "2017-01-01",
+      "relationship_type": "DEFINES_SECURITY_PERIMETER",
+      "documentation_reference": "Doc-ESP-005-v2.3",
+      "reviewed_date": "2024-06-20"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:385",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920115078989611438",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:430",
+      "type": "ORGANIZATION_MANAGES_VULNERABILITY",
+      "scanning_frequency": "Monthly",
+      "relationship_type": "MANAGES_VULNERABILITY",
+      "program_start_date": "2017-01-30",
+      "remediation_sla": "30",
+      "critical_unpatched_count": "0"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917863279175926190",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:430",
+      "type": "ORGANIZATION_MANAGES_VULNERABILITY",
+      "scanning_frequency": "Monthly",
+      "relationship_type": "MANAGES_VULNERABILITY",
+      "program_start_date": "2015-01-15",
+      "remediation_sla": "30",
+      "critical_unpatched_count": "0"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:380",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153261253699830140",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "type": "REGULATION_GOVERNS_ORGANIZATION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:380",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1160016653140885884",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:384",
+      "type": "REGULATION_GOVERNS_ORGANIZATION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:380",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1157764853327200636",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:383",
+      "type": "REGULATION_GOVERNS_ORGANIZATION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:380",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155513053513515388",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "type": "REGULATION_GOVERNS_ORGANIZATION"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917865478199181707",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:395",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "100",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2015-07-01",
+      "compliance_level": "Fully Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917865478199181704",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:392",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "100",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2015-07-01",
+      "compliance_level": "Fully Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:384",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6924620877640237448",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:392",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "100",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2015-11-01",
+      "compliance_level": "Fully Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:383",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6922369077826552200",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:392",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "75",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2016-07-01",
+      "compliance_level": "Partially Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6920117278012866952",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:392",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "100",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2015-07-01",
+      "compliance_level": "Fully Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1155508655467004285",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:391",
+      "type": "ORGANIZATION_OWNS_BES_CYBER_SYSTEM",
+      "ownership_start_date": "2015-02-01",
+      "operational_responsibility": "True",
+      "security_responsibility": "True",
+      "relationship_type": "OWNS_BES_CYBER_SYSTEM",
+      "maintenance_responsibility": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153256855653319037",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:386",
+      "type": "ORGANIZATION_OWNS_BES_CYBER_SYSTEM",
+      "ownership_start_date": "2015-01-15",
+      "operational_responsibility": "True",
+      "security_responsibility": "True",
+      "relationship_type": "OWNS_BES_CYBER_SYSTEM",
+      "maintenance_responsibility": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:386",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917867677222437268",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:404",
+      "type": "BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET",
+      "protection_start_date": "2015-02-01",
+      "protection_level": "High",
+      "relationship_type": "PROTECTS_CRITICAL_ASSET",
+      "effectiveness_rating": "0.95"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:386",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917867677222437267",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:403",
+      "type": "BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET",
+      "protection_start_date": "2015-01-15",
+      "protection_level": "High",
+      "relationship_type": "PROTECTS_CRITICAL_ASSET",
+      "effectiveness_rating": "0.98"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:386",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153259054676574594",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:398",
+      "type": "BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER",
+      "definition_date": "2015-06-01",
+      "relationship_type": "DEFINES_SECURITY_PERIMETER",
+      "documentation_reference": "Doc-ESP-001-v3.2",
+      "reviewed_date": "2024-06-01"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:381",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917862179664298399",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:415",
+      "type": "ORGANIZATION_MANAGES_ACCESS_CONTROL",
+      "relationship_type": "MANAGES_ACCESS_CONTROL",
+      "unauthorized_access_incidents": "0",
+      "access_control_type": "MFA"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:385",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917862179664298403",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:419",
+      "type": "ORGANIZATION_MANAGES_ACCESS_CONTROL",
+      "relationship_type": "MANAGES_ACCESS_CONTROL",
+      "unauthorized_access_incidents": "2",
+      "access_control_type": "Token"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:383",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153256855653319039",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:388",
+      "type": "ORGANIZATION_OWNS_BES_CYBER_SYSTEM",
+      "ownership_start_date": "2016-03-10",
+      "operational_responsibility": "True",
+      "security_responsibility": "True",
+      "relationship_type": "OWNS_BES_CYBER_SYSTEM",
+      "maintenance_responsibility": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:388",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917867677222437270",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:406",
+      "type": "BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET",
+      "protection_start_date": "2016-03-10",
+      "protection_level": "Medium",
+      "relationship_type": "PROTECTS_CRITICAL_ASSET",
+      "effectiveness_rating": "0.92"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:388",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153259054676574596",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:400",
+      "type": "BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER",
+      "definition_date": "2016-02-01",
+      "relationship_type": "DEFINES_SECURITY_PERIMETER",
+      "documentation_reference": "Doc-ESP-003-v4.0",
+      "reviewed_date": "2024-05-15"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:383",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917863279175926192",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:432",
+      "type": "ORGANIZATION_MANAGES_VULNERABILITY",
+      "scanning_frequency": "Daily",
+      "relationship_type": "MANAGES_VULNERABILITY",
+      "program_start_date": "2016-03-10",
+      "remediation_sla": "60",
+      "critical_unpatched_count": "1"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:383",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917862179664298401",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:417",
+      "type": "ORGANIZATION_MANAGES_ACCESS_CONTROL",
+      "relationship_type": "MANAGES_ACCESS_CONTROL",
+      "unauthorized_access_incidents": "0",
+      "access_control_type": "RF Secure"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917865478199181709",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:397",
+      "type": "ORGANIZATION_IMPLEMENTS_CIP_STANDARD",
+      "compliance_percentage": "95",
+      "relationship_type": "IMPLEMENTS_CIP_STANDARD",
+      "implementation_date": "2015-07-01",
+      "compliance_level": "Fully Compliant"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153256855653319038",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:387",
+      "type": "ORGANIZATION_OWNS_BES_CYBER_SYSTEM",
+      "ownership_start_date": "2014-06-20",
+      "operational_responsibility": "True",
+      "security_responsibility": "True",
+      "relationship_type": "OWNS_BES_CYBER_SYSTEM",
+      "maintenance_responsibility": "True"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:387",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917867677222437269",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:405",
+      "type": "BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET",
+      "protection_start_date": "2014-06-20",
+      "protection_level": "High",
+      "relationship_type": "PROTECTS_CRITICAL_ASSET",
+      "effectiveness_rating": "0.96"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:387",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153259054676574595",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:399",
+      "type": "BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER",
+      "definition_date": "2015-07-15",
+      "relationship_type": "DEFINES_SECURITY_PERIMETER",
+      "documentation_reference": "Doc-ESP-002-v2.1",
+      "reviewed_date": "2024-07-01"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917863279175926191",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:431",
+      "type": "ORGANIZATION_MANAGES_VULNERABILITY",
+      "scanning_frequency": "Weekly",
+      "relationship_type": "MANAGES_VULNERABILITY",
+      "program_start_date": "2014-06-20",
+      "remediation_sla": "14",
+      "critical_unpatched_count": "0"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:382",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917862179664298400",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:416",
+      "type": "ORGANIZATION_MANAGES_ACCESS_CONTROL",
+      "relationship_type": "MANAGES_ACCESS_CONTROL",
+      "unauthorized_access_incidents": "1",
+      "access_control_type": "VPN"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:384",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153256855653319040",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:389",
+      "type": "ORGANIZATION_OWNS_BES_CYBER_SYSTEM",
+      "ownership_start_date": "2015-11-05",
+      "operational_responsibility": "True",
+      "security_responsibility": "True",
+      "relationship_type": "OWNS_BES_CYBER_SYSTEM",
+      "maintenance_responsibility": "False"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:389",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:1153259054676574597",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:401",
+      "type": "BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER",
+      "definition_date": "2015-10-01",
+      "relationship_type": "DEFINES_SECURITY_PERIMETER",
+      "documentation_reference": "Doc-ESP-004-v1.5",
+      "reviewed_date": "2024-08-01"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:384",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917863279175926193",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:433",
+      "type": "ORGANIZATION_MANAGES_VULNERABILITY",
+      "scanning_frequency": "Real-time",
+      "relationship_type": "MANAGES_VULNERABILITY",
+      "program_start_date": "2015-11-05",
+      "remediation_sla": "7",
+      "critical_unpatched_count": "0"
+    },
+    {
+      "from": "4:d48abbdc-159e-49ec-93de-474cfd216a81:384",
+      "id": "5:d48abbdc-159e-49ec-93de-474cfd216a81:6917862179664298402",
+      "to": "4:d48abbdc-159e-49ec-93de-474cfd216a81:418",
+      "type": "ORGANIZATION_MANAGES_ACCESS_CONTROL",
+      "relationship_type": "MANAGES_ACCESS_CONTROL",
+      "unauthorized_access_incidents": "0",
+      "access_control_type": "Biometric"
+    }
+  ]
+}

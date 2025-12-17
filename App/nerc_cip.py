@@ -35,10 +35,10 @@ ON CREATE SET
     bs.type = row.system_type,
     bs.impact_level = row.impact_level,
     bs.critical_function = row.critical_function,
-    bs.location = row.location;
+    bs.location = row.location,
     bs.connected_assets_count = row.connected_assets_count,
     bs.operates_in_esop = row.operates_in_esop,
-    bs.backup_recovery_capability = row.backup_recovery_capability
+    bs.backup_recovery_capability = row.backup_recovery_capability,
     bs.mean_time_to_recovery = row.mean_time_to_recovery;
 """
 #CIPStandard
@@ -134,52 +134,241 @@ VulnerabilityManagement ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP', vulnerability_id: row.vuln_mgmt_id})
 ON CREATE SET
-    vm.name = row.program_name
+    vm.name = row.program_name,
     vm.responsible_team = row.responsible_team,
     vm.scan_frequency = row.scan_frequency,
-    vm.open_vulnerabilities_critical = row.open_vulnerabilities_critical
+    vm.open_vulnerabilities_critical = row.open_vulnerabilities_critical,
     vm.patch_management_process = row.patch_management_process;
 """
 #Relationships
-#organization_bes
+#regulation -> organization
+regulation_organization_rel = """
+MATCH (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP"})
+MATCH (o:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (r)-[:REGULATION_GOVERNS_ORGANIZATION]->(o);
+"""
+
+# ORGANIZATION_OWNS_BES_CYBER_SYSTEM
 organization_bes_rel = """
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP',row.source_organization_id})
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP',row.target_system_id})
-MERGE (org) -[r:ORGANIZATION_OWNS_BES_CYBER_SYSTEM{relationship_type: row.relationship_type}]-> (bs)
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
+MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.target_system_id})
+MERGE (org)-[r:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: row.relationship_type}]->(bs)
 ON CREATE SET
     r.ownership_start_date = date(row.ownership_start_date),
     r.operational_responsibility = row.operational_responsibility,
     r.maintenance_responsibility = row.maintenance_responsibility,
     r.security_responsibility = row.security_responsibility;
 """
-#IMPLEMENTS_CIP_STANDARD
+
+# ORGANIZATION_IMPLEMENTS_CIP_STANDARD
 implements_cip_standard_rel = """
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP',row.source_system_id})
-MATCH (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP',row.target_standard_id})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
+MATCH (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP', standard_id: row.target_standard_id})
+MERGE (org)-[r:ORGANIZATION_IMPLEMENTS_CIP_STANDARD {relationship_type: row.relationship_type}]->(cs)
+ON CREATE SET
+    r.implementation_date = date(row.implementation_date),
+    r.compliance_level = row.compliance_level,
+    r.compliance_percentage = row.compliance_percentage;
 """
+
+# DEFINES_SECURITY_PERIMETER 
+defines_security_perimeter_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.source_system_id})
+MATCH (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', perimeter_id: row.target_perimeter_id})
+MERGE (bs)-[r:BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER {relationship_type: row.relationship_type}]->(es)
+ON CREATE SET
+    r.definition_date = date(row.definition_date),
+    r.documentation_reference = row.documentation_reference,
+    r.reviewed_date = date(row.reviewed_date);
+"""
+
+# PROTECTS_CRITICAL_ASSET 
+protects_critical_asset_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.source_system_id})
+MATCH (a:Asset {industry_standard_regulation_id: 'NERC_CIP', asset_id: row.target_asset_id})
+MERGE (bs)-[r:BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET {relationship_type: row.relationship_type}]->(a)
+ON CREATE SET
+    r.protection_start_date = date(row.protection_start_date),
+    r.protection_level = row.protection_level,
+    r.effectiveness_rating = row.effectiveness_rating;
+"""
+
+# MANAGES_ACCESS_CONTROL
+manages_access_control_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
+MATCH (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP', access_point_id: row.target_access_point_id})
+MERGE (org)-[r:ORGANIZATION_MANAGES_ACCESS_CONTROL {relationship_type: row.relationship_type}]->(ap)
+ON CREATE SET
+    r.access_control_start_date = date(row.access_control_start_date),
+    r.access_control_type = row.access_control_type,
+    r.unauthorized_access_incidents = row.unauthorized_access_incidents;
+"""
+
+
+
+# RESPONDS_TO_INCIDENT 
+responds_to_incident_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
+MATCH (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP', incident_response_id: row.target_incident_id})
+MERGE (org)-[r:ORGANIZATION_RESPONDS_TO_INCIDENT {relationship_type: row.relationship_type}]->(ir)
+ON CREATE SET
+    r.plan_effective_date = date(row.plan_effective_date),
+    r.coverage_scope = row.coverage_scope,
+    r.test_success_percentage = row.test_success_percentage;
+"""
+
+# MANAGES_VULNERABILITY
+manages_vulnerability_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
+MATCH (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP', vulnerability_id: row.target_vuln_mgmt_id})
+MERGE (org)-[r:ORGANIZATION_MANAGES_VULNERABILITY {relationship_type: row.relationship_type}]->(vm)
+ON CREATE SET
+    r.program_start_date = date(row.program_start_date),
+    r.scanning_frequency = row.scanning_frequency,
+    r.remediation_sla = row.remediation_sla,
+    r.critical_unpatched_count = row.critical_unpatched_count;
+"""
+
+
+import os
+import time
+import logging
+import json
+import sys
+from app import Neo4jConnect
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+client = Neo4jConnect()
+
+health = client.check_health()
+if health is not True:
+    print("Neo4j connection error:", health)
+    os._exit(1)
+
+logger.info("Loading graph structure...")
+
+#Nodes
+client.query(industry_standard_regulation)
+time.sleep(2)
+
+client.query(organization.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_Organization_nodes.csv'))
+time.sleep(2)
+
+client.query(BESCyberSystem.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_BESCyberSystem_nodes.csv'))
+time.sleep(2)
+
+client.query(CIPStandard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_CIPStandard_nodes.csv'))
+time.sleep(2)
+
+client.query(ElectronicSecurityPerimeter.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_ElectronicSecurityPerimeter_nodes.csv'))
+time.sleep(2)
+
+client.query(Asset.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_Asset_nodes.csv'))
+time.sleep(2)
+
+client.query(CyberThreat.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_CyberThreat_nodes.csv'))
+time.sleep(2)
+
+client.query(AccessPoint.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_AccessPoint_nodes.csv'))
+time.sleep(2)
+
+client.query(CriticalFacility.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_CriticalFacility_nodes.csv'))
+time.sleep(2)
+
+client.query(IncidentResponse.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_IncidentResponse_nodes.csv'))
+time.sleep(2)
+
+client.query(VulnerabilityManagement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_VulnerabilityManagement_nodes.csv'))
+time.sleep(2)
+
+#Relationships
+client.query(regulation_organization_rel)
+time.sleep(2)
+
+client.query(organization_bes_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_OWNS_BES_CYBER_SYSTEM_relationships.csv'))
+time.sleep(2)
+
+client.query(implements_cip_standard_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_IMPLEMENTS_CIP_STANDARD_relationships.csv'))
+time.sleep(2) 
+
+client.query(defines_security_perimeter_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_DEFINES_SECURITY_PERIMETER_relationships.csv'))
+time.sleep(2)
+
+client.query(protects_critical_asset_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_PROTECTS_CRITICAL_ASSET_relationships.csv'))
+time.sleep(2)
+
+client.query(manages_access_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_MANAGES_ACCESS_CONTROL_relationships.csv'))
+time.sleep(2)   
+
+client.query(responds_to_incident_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_RESPONDS_TO_INCIDENT_relationships.csv'))
+time.sleep(2)
+
+client.query(manages_vulnerability_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_MANAGES_VULNERABILITY_relationships.csv'))
+time.sleep(2)
+
+ 
+logger.info("Graph structure loaded successfully.")
+
+res = client.query("""
+    MATCH path = (:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})-[*1..5]-()
+    UNWIND nodes(path) as n
+    UNWIND relationships(path) as r
+    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+    RETURN {
+      nodes: [node IN uniqueNodes | node {
+        .*,
+        id: elementId(node),
+        labels: labels(node),
+        mainLabel: head(labels(node))
+      }],
+      rels: [rel IN uniqueRels | rel {
+        .*,
+        id: elementId(rel),
+        type: type(rel),
+        from: elementId(startNode(rel)),
+        to: elementId(endNode(rel))
+      }]
+    } AS graph_data
+""")
+
+
+
+graph = res[0]["graph_data"]   
+
+import json
+with open("nerc_cip.json", "w", encoding="utf-8") as f:
+    f.write(json.dumps(graph, default=str, indent=2))
+
+logger.info("✓ Exported graph data to nerc_cip.json")
+client.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
