@@ -1,0 +1,88 @@
+SCF_Control,SCF_ID,TISAX
+Cybersecurity Data Privacy Governance,GOV,TISAX 1.1.1 Information Security Management
+Cybersecurity Data Privacy Governance,GOV,TISAX 1.1.2 Roles and Responsibilities
+Cybersecurity Data Privacy Governance,GOV,TISAX 1.2.1 Organization and Resources
+Artificial and Autonomous Technology,AAT,TISAX 1.1.1 Information Security Management
+Artificial and Autonomous Technology,AAT,TISAX 1.2.1 Organization and Resources
+Asset Management,AST,TISAX 1.1.1 Information Security Management
+Asset Management,AST,TISAX 2.2.1 Asset Management
+Business Continuity Disaster Recovery,BCD,TISAX 1.1.1 Information Security Management
+Business Continuity Disaster Recovery,BCD,TISAX 3.3.1 Business Continuity
+Capacity Performance Planning,CAP,TISAX 1.1.1 Information Security Management
+Capacity Performance Planning,CAP,TISAX 2.2.1 Asset Management
+Change Management,CHG,TISAX 1.1.1 Information Security Management
+Change Management,CHG,TISAX 2.1.1 Change Management
+Cloud Security,CLD,TISAX 1.1.1 Information Security Management
+Cloud Security,CLD,TISAX 2.1.1 Change Management
+Cloud Security,CLD,TISAX 3.1.1 Third Party Security
+Compliance,CPL,TISAX 1.1.1 Information Security Management
+Compliance,CPL,TISAX 1.1.2 Roles and Responsibilities
+Compliance,CPL,TISAX 1.3.1 Compliance Management
+Configuration Management,CFG,TISAX 1.1.1 Information Security Management
+Configuration Management,CFG,TISAX 2.1.1 Change Management
+Configuration Management,CFG,TISAX 2.2.1 Asset Management
+Continuous Monitoring,MON,TISAX 2.3.1 Monitoring and Logging
+Continuous Monitoring,MON,TISAX 3.2.1 Incident Management
+Cryptographic Protections,CRY,TISAX 2.2.1 Asset Management
+Cryptographic Protections,CRY,TISAX 3.1.1 Cryptographic Controls
+Data Classification Handling,DCH,TISAX 2.2.1 Asset Management
+Data Classification Handling,DCH,TISAX 1.1.1 Information Security Management
+Data Classification Handling,DCH,TISAX 3.1.1 Cryptographic Controls
+Embedded Technology,EMB,TISAX 1.1.1 Information Security Management
+Embedded Technology,EMB,TISAX 2.2.1 Asset Management
+Embedded Technology,EMB,TISAX 2.3.1 Monitoring and Logging
+Endpoint Security,END,TISAX 1.1.1 Information Security Management
+Endpoint Security,END,TISAX 2.2.1 Asset Management
+Endpoint Security,END,TISAX 3.1.1 Cryptographic Controls
+Human Resources Security,HRS,TISAX 1.1.1 Information Security Management
+Human Resources Security,HRS,TISAX 1.1.2 Roles and Responsibilities
+Human Resources Security,HRS,TISAX 1.2.1 Organization and Resources
+Identification Authentication,IAC,TISAX 1.1.1 Information Security Management
+Identification Authentication,IAC,TISAX 2.2.1 Asset Management
+Identification Authentication,IAC,TISAX 3.1.1 Cryptographic Controls
+Incident Response,IRO,TISAX 1.1.1 Information Security Management
+Incident Response,IRO,TISAX 3.2.1 Incident Management
+Information Assurance,IAO,TISAX 1.1.1 Information Security Management
+Information Assurance,IAO,TISAX 1.3.1 Compliance Management
+Maintenance,MNT,TISAX 1.1.1 Information Security Management
+Maintenance,MNT,TISAX 2.1.1 Change Management
+Maintenance,MNT,TISAX 2.2.1 Asset Management
+Mobile Device Management,MDM,TISAX 1.1.1 Information Security Management
+Mobile Device Management,MDM,TISAX 2.2.1 Asset Management
+Mobile Device Management,MDM,TISAX 3.1.1 Cryptographic Controls
+Network Security,NET,TISAX 1.1.1 Information Security Management
+Network Security,NET,TISAX 2.2.1 Asset Management
+Network Security,NET,TISAX 3.1.1 Cryptographic Controls
+Physical Environmental Security,PES,TISAX 1.1.1 Information Security Management
+Physical Environmental Security,PES,TISAX 2.2.1 Asset Management
+Data Privacy,PRI,TISAX 1.1.1 Information Security Management
+Data Privacy,PRI,TISAX 1.1.2 Roles and Responsibilities
+Data Privacy,PRI,TISAX 3.1.1 Cryptographic Controls
+Project Resource Management,PRM,TISAX 1.1.1 Information Security Management
+Project Resource Management,PRM,TISAX 1.2.1 Organization and Resources
+Risk Management,RSK,TISAX 1.1.1 Information Security Management
+Risk Management,RSK,TISAX 1.2.1 Organization and Resources
+Risk Management,RSK,TISAX 1.3.1 Compliance Management
+Secure Engineering Architecture,SEA,TISAX 1.1.1 Information Security Management
+Secure Engineering Architecture,SEA,TISAX 2.1.1 Change Management
+Secure Engineering Architecture,SEA,TISAX 3.1.1 Cryptographic Controls
+Security Operations,OPS,TISAX 1.1.1 Information Security Management
+Security Operations,OPS,TISAX 2.3.1 Monitoring and Logging
+Security Operations,OPS,TISAX 3.2.1 Incident Management
+Security Awareness Training,SAT,TISAX 1.1.1 Information Security Management
+Security Awareness Training,SAT,TISAX 1.1.2 Roles and Responsibilities
+Technology Development Acquisition,TDA,TISAX 1.1.1 Information Security Management
+Technology Development Acquisition,TDA,TISAX 2.1.1 Change Management
+Technology Development Acquisition,TDA,TISAX 3.1.1 Cryptographic Controls
+Third-Party Management,TPM,TISAX 1.1.1 Information Security Management
+Third-Party Management,TPM,TISAX 1.1.2 Roles and Responsibilities
+Third-Party Management,TPM,TISAX 3.1.1 Third Party Security
+Threat Management,THR,TISAX 1.1.1 Information Security Management
+Threat Management,THR,TISAX 2.3.1 Monitoring and Logging
+Threat Management,THR,TISAX 3.2.1 Incident Management
+Vulnerability Patch Management,VPM,TISAX 1.1.1 Information Security Management
+Vulnerability Patch Management,VPM,TISAX 2.1.1 Change Management
+Vulnerability Patch Management,VPM,TISAX 2.3.1 Monitoring and Logging
+Web Security,WEB,TISAX 1.1.1 Information Security Management
+Web Security,WEB,TISAX 2.2.1 Asset Management
+Web Security,WEB,TISAX 3.1.1 Cryptographic Controls

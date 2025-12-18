@@ -1,0 +1,72 @@
+SCF_Control,SCF_ID,TDPSA
+Cybersecurity Data Privacy Governance,GOV,TDPSA 521.053 Data Privacy Rights
+Cybersecurity Data Privacy Governance,GOV,TDPSA 521.151 Security Standards
+Cybersecurity Data Privacy Governance,GOV,TDPSA 521.152 Breach Notification
+Artificial and Autonomous Technology,AAT,TDPSA 521.053 Data Privacy Rights
+Artificial and Autonomous Technology,AAT,TDPSA 521.151 Security Standards
+Asset Management,AST,TDPSA 521.151 Security Standards
+Asset Management,AST,TDPSA 521.052 Sensitive Personal Information
+Business Continuity Disaster Recovery,BCD,TDPSA 521.151 Security Standards
+Business Continuity Disaster Recovery,BCD,TDPSA 521.152 Breach Notification
+Capacity Performance Planning,CAP,TDPSA 521.151 Security Standards
+Capacity Performance Planning,CAP,TDPSA 521.052 Sensitive Personal Information
+Change Management,CHG,TDPSA 521.151 Security Standards
+Change Management,CHG,TDPSA 521.052 Sensitive Personal Information
+Cloud Security,CLD,TDPSA 521.151 Security Standards
+Cloud Security,CLD,TDPSA 521.053 Data Privacy Rights
+Cloud Security,CLD,TDPSA 521.052 Sensitive Personal Information
+Compliance,CPL,TDPSA 521.053 Data Privacy Rights
+Compliance,CPL,TDPSA 521.151 Security Standards
+Compliance,CPL,TDPSA 521.152 Breach Notification
+Configuration Management,CFG,TDPSA 521.151 Security Standards
+Configuration Management,CFG,TDPSA 521.052 Sensitive Personal Information
+Continuous Monitoring,MON,TDPSA 521.151 Security Standards
+Continuous Monitoring,MON,TDPSA 521.152 Breach Notification
+Cryptographic Protections,CRY,TDPSA 521.151 Security Standards
+Cryptographic Protections,CRY,TDPSA 521.052 Sensitive Personal Information
+Data Classification Handling,DCH,TDPSA 521.052 Sensitive Personal Information
+Data Classification Handling,DCH,TDPSA 521.151 Security Standards
+Data Classification Handling,DCH,TDPSA 521.053 Data Privacy Rights
+Embedded Technology,EMB,TDPSA 521.151 Security Standards
+Embedded Technology,EMB,TDPSA 521.052 Sensitive Personal Information
+Endpoint Security,END,TDPSA 521.151 Security Standards
+Endpoint Security,END,TDPSA 521.052 Sensitive Personal Information
+Human Resources Security,HRS,TDPSA 521.053 Data Privacy Rights
+Human Resources Security,HRS,TDPSA 521.151 Security Standards
+Identification Authentication,IAC,TDPSA 521.151 Security Standards
+Identification Authentication,IAC,TDPSA 521.052 Sensitive Personal Information
+Incident Response,IRO,TDPSA 521.152 Breach Notification
+Incident Response,IRO,TDPSA 521.151 Security Standards
+Information Assurance,IAO,TDPSA 521.151 Security Standards
+Information Assurance,IAO,TDPSA 521.052 Sensitive Personal Information
+Maintenance,MNT,TDPSA 521.151 Security Standards
+Maintenance,MNT,TDPSA 521.052 Sensitive Personal Information
+Mobile Device Management,MDM,TDPSA 521.151 Security Standards
+Mobile Device Management,MDM,TDPSA 521.052 Sensitive Personal Information
+Network Security,NET,TDPSA 521.151 Security Standards
+Network Security,NET,TDPSA 521.052 Sensitive Personal Information
+Physical Environmental Security,PES,TDPSA 521.151 Security Standards
+Physical Environmental Security,PES,TDPSA 521.052 Sensitive Personal Information
+Data Privacy,PRI,TDPSA 521.053 Data Privacy Rights
+Data Privacy,PRI,TDPSA 521.151 Security Standards
+Data Privacy,PRI,TDPSA 521.052 Sensitive Personal Information
+Project Resource Management,PRM,TDPSA 521.053 Data Privacy Rights
+Project Resource Management,PRM,TDPSA 521.151 Security Standards
+Risk Management,RSK,TDPSA 521.053 Data Privacy Rights
+Risk Management,RSK,TDPSA 521.151 Security Standards
+Secure Engineering Architecture,SEA,TDPSA 521.151 Security Standards
+Secure Engineering Architecture,SEA,TDPSA 521.052 Sensitive Personal Information
+Security Operations,OPS,TDPSA 521.151 Security Standards
+Security Operations,OPS,TDPSA 521.152 Breach Notification
+Security Awareness Training,SAT,TDPSA 521.053 Data Privacy Rights
+Security Awareness Training,SAT,TDPSA 521.151 Security Standards
+Technology Development Acquisition,TDA,TDPSA 521.151 Security Standards
+Technology Development Acquisition,TDA,TDPSA 521.052 Sensitive Personal Information
+Third-Party Management,TPM,TDPSA 521.053 Data Privacy Rights
+Third-Party Management,TPM,TDPSA 521.151 Security Standards
+Threat Management,THR,TDPSA 521.151 Security Standards
+Threat Management,THR,TDPSA 521.152 Breach Notification
+Vulnerability Patch Management,VPM,TDPSA 521.151 Security Standards
+Vulnerability Patch Management,VPM,TDPSA 521.052 Sensitive Personal Information
+Web Security,WEB,TDPSA 521.151 Security Standards
+Web Security,WEB,TDPSA 521.052 Sensitive Personal Information

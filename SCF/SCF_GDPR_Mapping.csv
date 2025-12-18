@@ -1,0 +1,89 @@
+SCF_Control,SCF_ID,GDPR
+Cybersecurity Data Privacy Governance,GOV,GDPR Article 5
+Cybersecurity Data Privacy Governance,GOV,GDPR Article 32
+Cybersecurity Data Privacy Governance,GOV,GDPR Article 33
+Artificial and Autonomous Technology,AAT,GDPR Article 22
+Artificial and Autonomous Technology,AAT,GDPR Article 35
+Asset Management,AST,GDPR Article 5
+Asset Management,AST,GDPR Article 32
+Business Continuity Disaster Recovery,BCD,GDPR Article 32
+Business Continuity Disaster Recovery,BCD,GDPR Article 33
+Capacity Performance Planning,CAP,GDPR Article 5
+Capacity Performance Planning,CAP,GDPR Article 32
+Change Management,CHG,GDPR Article 5
+Change Management,CHG,GDPR Article 32
+Cloud Security,CLD,GDPR Article 5
+Cloud Security,CLD,GDPR Article 28
+Cloud Security,CLD,GDPR Article 32
+Cloud Security,CLD,GDPR Article 44
+Compliance,CPL,GDPR Article 5
+Compliance,CPL,GDPR Article 6
+Compliance,CPL,GDPR Article 32
+Compliance,CPL,GDPR Article 33
+Configuration Management,CFG,GDPR Article 5
+Configuration Management,CFG,GDPR Article 32
+Continuous Monitoring,MON,GDPR Article 5
+Continuous Monitoring,MON,GDPR Article 32
+Continuous Monitoring,MON,GDPR Article 33
+Cryptographic Protections,CRY,GDPR Article 5
+Cryptographic Protections,CRY,GDPR Article 32
+Data Classification Handling,DCH,GDPR Article 5
+Data Classification Handling,DCH,GDPR Article 6
+Data Classification Handling,DCH,GDPR Article 32
+Embedded Technology,EMB,GDPR Article 5
+Embedded Technology,EMB,GDPR Article 32
+Endpoint Security,END,GDPR Article 5
+Endpoint Security,END,GDPR Article 32
+Human Resources Security,HRS,GDPR Article 5
+Human Resources Security,HRS,GDPR Article 28
+Human Resources Security,HRS,GDPR Article 32
+Identification Authentication,IAC,GDPR Article 5
+Identification Authentication,IAC,GDPR Article 32
+Incident Response,IRO,GDPR Article 33
+Incident Response,IRO,GDPR Article 34
+Information Assurance,IAO,GDPR Article 5
+Information Assurance,IAO,GDPR Article 32
+Maintenance,MNT,GDPR Article 5
+Maintenance,MNT,GDPR Article 32
+Mobile Device Management,MDM,GDPR Article 5
+Mobile Device Management,MDM,GDPR Article 32
+Network Security,NET,GDPR Article 5
+Network Security,NET,GDPR Article 32
+Physical Environmental Security,PES,GDPR Article 5
+Physical Environmental Security,PES,GDPR Article 32
+Data Privacy,PRI,GDPR Article 5
+Data Privacy,PRI,GDPR Article 6
+Data Privacy,PRI,GDPR Article 7
+Data Privacy,PRI,GDPR Article 12
+Data Privacy,PRI,GDPR Article 13
+Data Privacy,PRI,GDPR Article 14
+Data Privacy,PRI,GDPR Article 15
+Data Privacy,PRI,GDPR Article 17
+Data Privacy,PRI,GDPR Article 18
+Data Privacy,PRI,GDPR Article 19
+Data Privacy,PRI,GDPR Article 20
+Data Privacy,PRI,GDPR Article 21
+Project Resource Management,PRM,GDPR Article 5
+Project Resource Management,PRM,GDPR Article 32
+Risk Management,RSK,GDPR Article 5
+Risk Management,RSK,GDPR Article 35
+Secure Engineering Architecture,SEA,GDPR Article 5
+Secure Engineering Architecture,SEA,GDPR Article 25
+Secure Engineering Architecture,SEA,GDPR Article 32
+Security Operations,OPS,GDPR Article 5
+Security Operations,OPS,GDPR Article 32
+Security Awareness Training,SAT,GDPR Article 5
+Security Awareness Training,SAT,GDPR Article 32
+Technology Development Acquisition,TDA,GDPR Article 5
+Technology Development Acquisition,TDA,GDPR Article 25
+Technology Development Acquisition,TDA,GDPR Article 32
+Third-Party Management,TPM,GDPR Article 5
+Third-Party Management,TPM,GDPR Article 28
+Third-Party Management,TPM,GDPR Article 32
+Threat Management,THR,GDPR Article 5
+Threat Management,THR,GDPR Article 32
+Threat Management,THR,GDPR Article 33
+Vulnerability Patch Management,VPM,GDPR Article 5
+Vulnerability Patch Management,VPM,GDPR Article 32
+Web Security,WEB,GDPR Article 5
+Web Security,WEB,GDPR Article 32

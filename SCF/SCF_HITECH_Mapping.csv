@@ -1,0 +1,82 @@
+SCF_Control,SCF_ID,HITECH
+Cybersecurity Data Privacy Governance,GOV,HITECH Breach Notification Rule
+Cybersecurity Data Privacy Governance,GOV,HITECH Security Rule
+Cybersecurity Data Privacy Governance,GOV,HITECH Enforcement Rule
+Artificial and Autonomous Technology,AAT,HITECH Security Rule
+Artificial and Autonomous Technology,AAT,HITECH Enforcement Rule
+Asset Management,AST,HITECH Security Rule
+Asset Management,AST,HITECH 13 CFR 168 Security Standards
+Business Continuity Disaster Recovery,BCD,HITECH Security Rule
+Business Continuity Disaster Recovery,BCD,HITECH Breach Notification Rule
+Capacity Performance Planning,CAP,HITECH Security Rule
+Change Management,CHG,HITECH Security Rule
+Change Management,CHG,HITECH 13 CFR 168 Security Standards
+Cloud Security,CLD,HITECH Security Rule
+Cloud Security,CLD,HITECH 13 CFR 168 Security Standards
+Cloud Security,CLD,HITECH Enforcement Rule
+Compliance,CPL,HITECH Breach Notification Rule
+Compliance,CPL,HITECH Security Rule
+Compliance,CPL,HITECH 13 CFR 168 Security Standards
+Compliance,CPL,HITECH Enforcement Rule
+Configuration Management,CFG,HITECH Security Rule
+Configuration Management,CFG,HITECH 13 CFR 168 Security Standards
+Continuous Monitoring,MON,HITECH Security Rule
+Continuous Monitoring,MON,HITECH 13 CFR 168 Security Standards
+Continuous Monitoring,MON,HITECH Breach Notification Rule
+Cryptographic Protections,CRY,HITECH Security Rule
+Cryptographic Protections,CRY,HITECH 13 CFR 168 Security Standards
+Data Classification Handling,DCH,HITECH Security Rule
+Data Classification Handling,DCH,HITECH Breach Notification Rule
+Data Classification Handling,DCH,HITECH 13 CFR 168 Security Standards
+Embedded Technology,EMB,HITECH Security Rule
+Embedded Technology,EMB,HITECH 13 CFR 168 Security Standards
+Embedded Technology,EMB,HITECH Enforcement Rule
+Endpoint Security,END,HITECH Security Rule
+Endpoint Security,END,HITECH 13 CFR 168 Security Standards
+Human Resources Security,HRS,HITECH Security Rule
+Human Resources Security,HRS,HITECH Enforcement Rule
+Human Resources Security,HRS,HITECH 13 CFR 168 Security Standards
+Identification Authentication,IAC,HITECH Security Rule
+Identification Authentication,IAC,HITECH 13 CFR 168 Security Standards
+Incident Response,IRO,HITECH Breach Notification Rule
+Incident Response,IRO,HITECH Security Rule
+Incident Response,IRO,HITECH Enforcement Rule
+Information Assurance,IAO,HITECH Security Rule
+Information Assurance,IAO,HITECH 13 CFR 168 Security Standards
+Maintenance,MNT,HITECH Security Rule
+Maintenance,MNT,HITECH 13 CFR 168 Security Standards
+Mobile Device Management,MDM,HITECH Security Rule
+Mobile Device Management,MDM,HITECH 13 CFR 168 Security Standards
+Mobile Device Management,MDM,HITECH Enforcement Rule
+Network Security,NET,HITECH Security Rule
+Network Security,NET,HITECH 13 CFR 168 Security Standards
+Physical Environmental Security,PES,HITECH Security Rule
+Physical Environmental Security,PES,HITECH 13 CFR 168 Security Standards
+Data Privacy,PRI,HITECH Breach Notification Rule
+Data Privacy,PRI,HITECH Security Rule
+Data Privacy,PRI,HITECH 13 CFR 168 Security Standards
+Data Privacy,PRI,HITECH Enforcement Rule
+Project Resource Management,PRM,HITECH Security Rule
+Project Resource Management,PRM,HITECH 13 CFR 168 Security Standards
+Risk Management,RSK,HITECH Security Rule
+Risk Management,RSK,HITECH Enforcement Rule
+Secure Engineering Architecture,SEA,HITECH Security Rule
+Secure Engineering Architecture,SEA,HITECH 13 CFR 168 Security Standards
+Security Operations,OPS,HITECH Security Rule
+Security Operations,OPS,HITECH 13 CFR 168 Security Standards
+Security Operations,OPS,HITECH Enforcement Rule
+Security Awareness Training,SAT,HITECH Security Rule
+Security Awareness Training,SAT,HITECH Enforcement Rule
+Security Awareness Training,SAT,HITECH 13 CFR 168 Security Standards
+Technology Development Acquisition,TDA,HITECH Security Rule
+Technology Development Acquisition,TDA,HITECH 13 CFR 168 Security Standards
+Third-Party Management,TPM,HITECH Security Rule
+Third-Party Management,TPM,HITECH Enforcement Rule
+Third-Party Management,TPM,HITECH 13 CFR 168 Security Standards
+Threat Management,THR,HITECH Security Rule
+Threat Management,THR,HITECH 13 CFR 168 Security Standards
+Threat Management,THR,HITECH Enforcement Rule
+Vulnerability Patch Management,VPM,HITECH Security Rule
+Vulnerability Patch Management,VPM,HITECH 13 CFR 168 Security Standards
+Web Security,WEB,HITECH Security Rule
+Web Security,WEB,HITECH 13 CFR 168 Security Standards

@@ -1,0 +1,91 @@
+SCF_Control,SCF_ID,NIST_CSF
+Cybersecurity Data Privacy Governance,GOV,NIST CSF Govern
+Cybersecurity Data Privacy Governance,GOV,NIST CSF Identify
+Cybersecurity Data Privacy Governance,GOV,NIST CSF Protect
+Artificial and Autonomous Technology,AAT,NIST CSF Govern
+Artificial and Autonomous Technology,AAT,NIST CSF Identify
+Artificial and Autonomous Technology,AAT,NIST CSF Manage
+Asset Management,AST,NIST CSF Govern
+Asset Management,AST,NIST CSF Identify
+Asset Management,AST,NIST CSF Protect
+Business Continuity Disaster Recovery,BCD,NIST CSF Govern
+Business Continuity Disaster Recovery,BCD,NIST CSF Recover
+Business Continuity Disaster Recovery,BCD,NIST CSF Respond
+Capacity Performance Planning,CAP,NIST CSF Govern
+Capacity Performance Planning,CAP,NIST CSF Identify
+Change Management,CHG,NIST CSF Govern
+Change Management,CHG,NIST CSF Protect
+Cloud Security,CLD,NIST CSF Govern
+Cloud Security,CLD,NIST CSF Identify
+Cloud Security,CLD,NIST CSF Protect
+Cloud Security,CLD,NIST CSF Respond
+Compliance,CPL,NIST CSF Govern
+Compliance,CPL,NIST CSF Identify
+Compliance,CPL,NIST CSF Protect
+Configuration Management,CFG,NIST CSF Govern
+Configuration Management,CFG,NIST CSF Protect
+Continuous Monitoring,MON,NIST CSF Detect
+Continuous Monitoring,MON,NIST CSF Identify
+Continuous Monitoring,MON,NIST CSF Respond
+Cryptographic Protections,CRY,NIST CSF Govern
+Cryptographic Protections,CRY,NIST CSF Protect
+Data Classification Handling,DCH,NIST CSF Govern
+Data Classification Handling,DCH,NIST CSF Identify
+Data Classification Handling,DCH,NIST CSF Protect
+Embedded Technology,EMB,NIST CSF Govern
+Embedded Technology,EMB,NIST CSF Identify
+Embedded Technology,EMB,NIST CSF Protect
+Embedded Technology,EMB,NIST CSF Detect
+Endpoint Security,END,NIST CSF Govern
+Endpoint Security,END,NIST CSF Protect
+Endpoint Security,END,NIST CSF Detect
+Human Resources Security,HRS,NIST CSF Govern
+Human Resources Security,HRS,NIST CSF Protect
+Identification Authentication,IAC,NIST CSF Govern
+Identification Authentication,IAC,NIST CSF Protect
+Incident Response,IRO,NIST CSF Respond
+Incident Response,IRO,NIST CSF Recover
+Information Assurance,IAO,NIST CSF Govern
+Information Assurance,IAO,NIST CSF Identify
+Information Assurance,IAO,NIST CSF Protect
+Maintenance,MNT,NIST CSF Govern
+Maintenance,MNT,NIST CSF Protect
+Mobile Device Management,MDM,NIST CSF Govern
+Mobile Device Management,MDM,NIST CSF Protect
+Mobile Device Management,MDM,NIST CSF Detect
+Network Security,NET,NIST CSF Govern
+Network Security,NET,NIST CSF Protect
+Network Security,NET,NIST CSF Detect
+Physical Environmental Security,PES,NIST CSF Govern
+Physical Environmental Security,PES,NIST CSF Protect
+Data Privacy,PRI,NIST CSF Govern
+Data Privacy,PRI,NIST CSF Identify
+Data Privacy,PRI,NIST CSF Protect
+Data Privacy,PRI,NIST CSF Manage
+Project Resource Management,PRM,NIST CSF Govern
+Project Resource Management,PRM,NIST CSF Identify
+Risk Management,RSK,NIST CSF Govern
+Risk Management,RSK,NIST CSF Identify
+Risk Management,RSK,NIST CSF Manage
+Secure Engineering Architecture,SEA,NIST CSF Govern
+Secure Engineering Architecture,SEA,NIST CSF Protect
+Security Operations,OPS,NIST CSF Govern
+Security Operations,OPS,NIST CSF Detect
+Security Operations,OPS,NIST CSF Respond
+Security Operations,OPS,NIST CSF Recover
+Security Awareness Training,SAT,NIST CSF Govern
+Security Awareness Training,SAT,NIST CSF Protect
+Technology Development Acquisition,TDA,NIST CSF Govern
+Technology Development Acquisition,TDA,NIST CSF Protect
+Third-Party Management,TPM,NIST CSF Govern
+Third-Party Management,TPM,NIST CSF Identify
+Third-Party Management,TPM,NIST CSF Protect
+Threat Management,THR,NIST CSF Identify
+Threat Management,THR,NIST CSF Detect
+Threat Management,THR,NIST CSF Respond
+Vulnerability Patch Management,VPM,NIST CSF Govern
+Vulnerability Patch Management,VPM,NIST CSF Protect
+Vulnerability Patch Management,VPM,NIST CSF Detect
+Web Security,WEB,NIST CSF Govern
+Web Security,WEB,NIST CSF Protect
+Web Security,WEB,NIST CSF Detect

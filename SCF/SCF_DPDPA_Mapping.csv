@@ -1,0 +1,243 @@
+SCF_Control,SCF_ID,DPDPA
+Cybersecurity Data Privacy Governance,GOV,DPDPA 4
+Artificial and Autonomous Technology,AAT,DPDPA 5
+Asset Management,AST,DPDPA 4
+Business Continuity Disaster Recovery,BCD,DPDPA 7
+Capacity Performance Planning,CAP,DPDPA 4
+Change Management,CHG,DPDPA 4
+Cloud Security,CLD,DPDPA 6
+Compliance,CPL,DPDPA 4
+Configuration Management,CFG,DPDPA 4
+Continuous Monitoring,MON,DPDPA 7
+Cryptographic Protections,CRY,DPDPA 6
+Data Classification Handling,DCH,DPDPA 6
+Embedded Technology,EMB,DPDPA 7
+Endpoint Security,END,DPDPA 4
+Human Resources Security,HRS,DPDPA 4
+Identification Authentication,IAC,DPDPA 6
+Incident Response,IRO,DPDPA 7
+Information Assurance,IAO,DPDPA 4
+Maintenance,MNT,DPDPA 4
+Mobile Device Management,MDM,DPDPA 6
+Network Security,NET,DPDPA 6
+Physical Environmental Security,PES,DPDPA 6
+Data Privacy,PRI,DPDPA 4
+Project Resource Management,PRM,DPDPA 4
+Risk Management,RSK,DPDPA 4
+Secure Engineering Architecture,SEA,DPDPA 6
+Security Operations,OPS,DPDPA 7
+Security Awareness Training,SAT,DPDPA 4
+Technology Development Acquisition,TDA,DPDPA 6
+Third-Party Management,TPM,DPDPA 6
+Threat Management,THR,DPDPA 7
+Vulnerability Patch Management,VPM,DPDPA 6
+Web Security,WEB,DPDPA 6
+Asset Management - IT Asset Management ITAM,AST-01,DPDPA 4
+Asset Management - Asset Inventory,AST-02,DPDPA 4
+Asset Management - Asset Categorization,AST-03,DPDPA 4
+Asset Management - Scoping,AST-04,DPDPA 4
+Asset Management - Disposal,AST-05,DPDPA 6
+Asset Management - Maintenance,AST-06,DPDPA 4
+Asset Management - Security Controls,AST-07,DPDPA 6
+Asset Management - Endpoint Protection,AST-08,DPDPA 6
+Asset Management - Media Disposal,AST-09,DPDPA 6
+Asset Management - Vendor Management,AST-10,DPDPA 6
+Business Continuity - COOP,BCD-01,DPDPA 7
+Business Continuity - RTO/RPO,BCD-02,DPDPA 7
+Business Continuity - Testing,BCD-03,DPDPA 7
+Business Continuity - Training,BCD-04,DPDPA 4
+Business Continuity - RCA,BCD-05,DPDPA 7
+Business Continuity - Review,BCD-06,DPDPA 7
+Business Continuity - Alternate Facilities,BCD-07,DPDPA 7
+Business Continuity - Communications,BCD-08,DPDPA 7
+Business Continuity - Testing,BCD-09,DPDPA 7
+Business Continuity - Responsibility,BCD-10,DPDPA 4
+Business Continuity - Backups,BCD-11,DPDPA 7
+Business Continuity - Recovery,BCD-12,DPDPA 7
+Business Continuity - Procedures,BCD-13,DPDPA 7
+Capacity Performance Planning - Planning,CAP-01,DPDPA 4
+Capacity Performance Planning - Prioritization,CAP-02,DPDPA 4
+Capacity Performance Planning - Forecasting,CAP-03,DPDPA 4
+Capacity Performance Planning - Monitoring,CAP-04,DPDPA 7
+Capacity Performance Planning - Scaling,CAP-05,DPDPA 4
+Change Management - Process,CHG-01,DPDPA 4
+Change Management - CCB,CHG-02,DPDPA 4
+Change Management - Review,CHG-03,DPDPA 4
+Change Management - Responsibility,CHG-04,DPDPA 4
+Change Management - Tracking,CHG-05,DPDPA 4
+Change Management - Emergency,CHG-06,DPDPA 4
+Cloud Security - Inventory,CLD-01,DPDPA 6
+Cloud Security - Assessment,CLD-02,DPDPA 6
+Cloud Security - Agreements,CLD-03,DPDPA 6
+Cloud Security - Architecture,CLD-04,DPDPA 6
+Cloud Security - Data,CLD-05,DPDPA 6
+Cloud Security - Access,CLD-06,DPDPA 6
+Cloud Security - Monitoring,CLD-07,DPDPA 7
+Cloud Security - Encryption,CLD-08,DPDPA 6
+Cloud Security - Location,CLD-09,DPDPA 6
+Cloud Security - Retention,CLD-10,DPDPA 6
+Compliance - Obligations,CPL-01,DPDPA 4
+Compliance - Audit,CPL-02,DPDPA 4
+Compliance - Findings,CPL-03,DPDPA 4
+Configuration Management - Baseline,CFG-01,DPDPA 4
+Configuration Management - Standards,CFG-02,DPDPA 4
+Configuration Management - Implementation,CFG-03,DPDPA 4
+Configuration Management - Changes,CFG-04,DPDPA 4
+Configuration Management - Access,CFG-05,DPDPA 6
+Configuration Management - Monitoring,CFG-06,DPDPA 7
+Configuration Management - Verification,CFG-07,DPDPA 4
+Configuration Management - Authorization,CFG-08,DPDPA 6
+Continuous Monitoring - Collection,MON-01,DPDPA 7
+Continuous Monitoring - Analysis,MON-02,DPDPA 7
+Continuous Monitoring - Alerting,MON-03,DPDPA 7
+Continuous Monitoring - Baseline,MON-04,DPDPA 7
+Continuous Monitoring - Anomalies,MON-05,DPDPA 7
+Continuous Monitoring - Logs,MON-06,DPDPA 7
+Continuous Monitoring - Retention,MON-07,DPDPA 4
+Continuous Monitoring - Review,MON-08,DPDPA 7
+Continuous Monitoring - Reporting,MON-09,DPDPA 7
+Continuous Monitoring - Retention,MON-10,DPDPA 6
+Cryptographic Protections - Standards,CRY-01,DPDPA 6
+Cryptographic Protections - Implementation,CRY-02,DPDPA 6
+Cryptographic Protections - Management,CRY-03,DPDPA 6
+Cryptographic Protections - Algorithms,CRY-04,DPDPA 6
+Data Classification Handling - Scheme,DCH-01,DPDPA 6
+Data Classification Handling - Practices,DCH-02,DPDPA 6
+Data Classification Handling - Labeling,DCH-03,DPDPA 6
+Data Classification Handling - Storage,DCH-04,DPDPA 6
+Data Classification Handling - Transmission,DCH-05,DPDPA 6
+Data Classification Handling - Access,DCH-06,DPDPA 6
+Data Classification Handling - Disposal,DCH-07,DPDPA 6
+Data Classification Handling - Destruction,DCH-08,DPDPA 6
+Data Classification Handling - Media,DCH-09,DPDPA 6
+Embedded Technology - Assessment,EMB-01,DPDPA 7
+Embedded Technology - Hardening,EMB-02,DPDPA 7
+Embedded Technology - Monitoring,EMB-03,DPDPA 7
+Endpoint Security - Inventory,END-01,DPDPA 4
+Endpoint Security - Baseline,END-02,DPDPA 4
+Endpoint Security - Protection,END-03,DPDPA 6
+Endpoint Security - Malware,END-04,DPDPA 6
+Endpoint Security - Updates,END-05,DPDPA 4
+Endpoint Security - Monitoring,END-06,DPDPA 7
+Human Resources Security - Roles,HRS-01,DPDPA 4
+Human Resources Security - Assignment,HRS-02,DPDPA 4
+Human Resources Security - Responsibilities,HRS-03,DPDPA 4
+Human Resources Security - Screening,HRS-04,DPDPA 4
+Human Resources Security - Training,HRS-05,DPDPA 4
+Human Resources Security - Agreements,HRS-06,DPDPA 4
+Human Resources Security - Conduct,HRS-07,DPDPA 4
+Identification Authentication - Policy,IAC-01,DPDPA 6
+Identification Authentication - Standards,IAC-02,DPDPA 6
+Identification Authentication - IAM,IAC-03,DPDPA 6
+Identification Authentication - Access,IAC-04,DPDPA 6
+Identification Authentication - Privileges,IAC-05,DPDPA 6
+Identification Authentication - Accounts,IAC-06,DPDPA 6
+Identification Authentication - Management,IAC-07,DPDPA 6
+Identification Authentication - Review,IAC-08,DPDPA 6
+Incident Response - Plan,IRO-01,DPDPA 7
+Incident Response - Training,IRO-02,DPDPA 4
+Incident Response - Detection,IRO-03,DPDPA 7
+Incident Response - Response,IRO-04,DPDPA 7
+Incident Response - Communication,IRO-05,DPDPA 7
+Incident Response - Evidence,IRO-06,DPDPA 7
+Information Assurance - Assessment,IAO-01,DPDPA 4
+Information Assurance - Documentation,IAO-02,DPDPA 4
+Information Assurance - Review,IAO-03,DPDPA 4
+Maintenance - Schedule,MNT-01,DPDPA 4
+Maintenance - Updates,MNT-02,DPDPA 4
+Maintenance - Tracking,MNT-03,DPDPA 4
+Maintenance - End-of-Life,MNT-04,DPDPA 4
+Mobile Device Management - Policy,MDM-01,DPDPA 6
+Mobile Device Management - Inventory,MDM-02,DPDPA 4
+Mobile Device Management - Baseline,MDM-03,DPDPA 4
+Mobile Device Management - Access,MDM-04,DPDPA 6
+Mobile Device Management - Monitoring,MDM-05,DPDPA 7
+Network Security - Architecture,NET-01,DPDPA 6
+Network Security - Diagrams,NET-02,DPDPA 6
+Network Security - Segmentation,NET-03,DPDPA 6
+Network Security - Baseline,NET-04,DPDPA 4
+Network Security - Filtering,NET-05,DPDPA 6
+Network Security - Access,NET-06,DPDPA 6
+Network Security - Monitoring,NET-07,DPDPA 7
+Physical Environmental Security - Perimeter,PES-01,DPDPA 6
+Physical Environmental Security - Entry,PES-02,DPDPA 6
+Physical Environmental Security - Surveillance,PES-03,DPDPA 6
+Physical Environmental Security - Environmental,PES-04,DPDPA 6
+Physical Environmental Security - Disposal,PES-05,DPDPA 6
+Data Privacy - Program,PRI-01,DPDPA 4
+Data Privacy - Governance,PRI-02,DPDPA 4
+Data Privacy - Assessment,PRI-03,DPDPA 4
+Data Privacy - Controls,PRI-04,DPDPA 6
+Data Privacy - Data,PRI-05,DPDPA 6
+Project Resource Management - Program,PRM-01,DPDPA 4
+Project Resource Management - Resources,PRM-02,DPDPA 4
+Risk Management - Framework,RSK-01,DPDPA 4
+Risk Management - Assessment,RSK-02,DPDPA 4
+Risk Management - Treatment,RSK-03,DPDPA 4
+Risk Management - Monitoring,RSK-04,DPDPA 7
+Secure Engineering Architecture - Engineering,SEA-01,DPDPA 6
+Secure Engineering Architecture - Architecture,SEA-02,DPDPA 6
+Secure Engineering Architecture - Design,SEA-03,DPDPA 6
+Secure Engineering Architecture - Review,SEA-04,DPDPA 4
+Security Operations - Staffing,OPS-01,DPDPA 7
+Security Operations - Procedures,OPS-02,DPDPA 7
+Security Operations - Tools,OPS-03,DPDPA 7
+Security Awareness Training - Program,SAT-01,DPDPA 4
+Security Awareness Training - Training,SAT-02,DPDPA 4
+Security Awareness Training - Refresher,SAT-03,DPDPA 4
+Security Awareness Training - Role-Based,SAT-04,DPDPA 4
+Technology Development Acquisition - Development,TDA-01,DPDPA 6
+Technology Development Acquisition - Acquisition,TDA-02,DPDPA 6
+Technology Development Acquisition - Secure SDLC,TDA-03,DPDPA 6
+Technology Development Acquisition - Code Review,TDA-04,DPDPA 6
+Technology Development Acquisition - Testing,TDA-05,DPDPA 4
+Technology Development Acquisition - Documentation,TDA-06,DPDPA 6
+Third-Party Management - Assessment,TPM-01,DPDPA 6
+Third-Party Management - Agreements,TPM-02,DPDPA 6
+Third-Party Management - Monitoring,TPM-03,DPDPA 7
+Third-Party Management - Incidents,TPM-04,DPDPA 7
+Third-Party Management - Remediation,TPM-05,DPDPA 6
+Threat Management - Identification,THR-01,DPDPA 7
+Threat Management - Assessment,THR-02,DPDPA 7
+Threat Management - Trending,THR-03,DPDPA 7
+Threat Management - Intelligence,THR-04,DPDPA 7
+Threat Management - Awareness,THR-05,DPDPA 4
+Vulnerability Patch Management - Identification,VPM-01,DPDPA 6
+Vulnerability Patch Management - Assessment,VPM-02,DPDPA 6
+Vulnerability Patch Management - Remediation,VPM-03,DPDPA 6
+Vulnerability Patch Management - Testing,VPM-04,DPDPA 4
+Web Security - Architecture,WEB-01,DPDPA 6
+Web Security - Baseline,WEB-02,DPDPA 4
+Web Security - Access,WEB-03,DPDPA 6
+Web Security - Monitoring,WEB-04,DPDPA 7
+Web Security - Input Validation,WEB-05,DPDPA 6
+Web Security - Output Encoding,WEB-06,DPDPA 6
+Web Security - Headers,WEB-07,DPDPA 6
+Web Security - WAF,WEB-08,DPDPA 6
+Web Security - SSL/TLS,WEB-09,DPDPA 6
+Web Security - Logging,WEB-10,DPDPA 7
+Web Security - Error Handling,WEB-11,DPDPA 6
+Web Security - Security Headers,WEB-12,DPDPA 6
+Web Security - Indicators,WEB-13,DPDPA 7
+Web Security - Public Content,WEB-14,DPDPA 6
+Cybersecurity Program Governance,GOV-01,DPDPA 4
+Data Protection Policies,GOV-02,DPDPA 4
+Privacy Program,GOV-03,DPDPA 4
+Organizational Roles,GOV-04,DPDPA 4
+Metrics and Monitoring,GOV-05,DPDPA 7
+Risk Management,GOV-06,DPDPA 4
+Training,GOV-07,DPDPA 4
+Incident Response,GOV-08,DPDPA 7
+Compliance,GOV-09,DPDPA 4
+AI Governance - Program,AAT-01,DPDPA 5
+AI Governance - Compliance,AAT-02,DPDPA 4
+AI Governance - Development,AAT-03,DPDPA 6
+AI Governance - Business Case,AAT-04,DPDPA 5
+AI Governance - Risk Management,AAT-05,DPDPA 5
+AI Governance - Stakeholders,AAT-06,DPDPA 4
+AI Governance - Impact,AAT-07,DPDPA 5
+AI Governance - Testing,AAT-08,DPDPA 4
+AI Governance - IP Protection,AAT-09,DPDPA 6
+AI Governance - Validation,AAT-10,DPDPA 4
+AI Governance - Transparency,AAT-11,DPDPA 5
+AI Governance - Data Quality,AAT-12,DPDPA 6

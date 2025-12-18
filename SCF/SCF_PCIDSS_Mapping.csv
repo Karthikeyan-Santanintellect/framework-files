@@ -1,0 +1,87 @@
+SCF_Control,SCF_ID,PCIDSS
+Cybersecurity Data Privacy Governance,GOV,PCI DSS 1 Network Segmentation
+Cybersecurity Data Privacy Governance,GOV,PCI DSS 2 Default Security Parameters
+Cybersecurity Data Privacy Governance,GOV,PCI DSS 12 Security Policy
+Artificial and Autonomous Technology,AAT,PCI DSS 6 Secure Development
+Artificial and Autonomous Technology,AAT,PCI DSS 2 Default Security Parameters
+Asset Management,AST,PCI DSS 1 Network Segmentation
+Asset Management,AST,PCI DSS 2 Default Security Parameters
+Asset Management,AST,PCI DSS 6 Secure Development
+Business Continuity Disaster Recovery,BCD,PCI DSS 10 Logging and Monitoring
+Business Continuity Disaster Recovery,BCD,PCI DSS 12 Security Policy
+Capacity Performance Planning,CAP,PCI DSS 1 Network Segmentation
+Capacity Performance Planning,CAP,PCI DSS 2 Default Security Parameters
+Change Management,CHG,PCI DSS 2 Default Security Parameters
+Change Management,CHG,PCI DSS 6 Secure Development
+Change Management,CHG,PCI DSS 12 Security Policy
+Cloud Security,CLD,PCI DSS 1 Network Segmentation
+Cloud Security,CLD,PCI DSS 3 Protect Cardholder Data
+Cloud Security,CLD,PCI DSS 6 Secure Development
+Cloud Security,CLD,PCI DSS 8 User Identification and Authentication
+Compliance,CPL,PCI DSS 2 Default Security Parameters
+Compliance,CPL,PCI DSS 12 Security Policy
+Compliance,CPL,PCI DSS 10 Logging and Monitoring
+Configuration Management,CFG,PCI DSS 2 Default Security Parameters
+Configuration Management,CFG,PCI DSS 6 Secure Development
+Configuration Management,CFG,PCI DSS 12 Security Policy
+Continuous Monitoring,MON,PCI DSS 10 Logging and Monitoring
+Continuous Monitoring,MON,PCI DSS 11 Security Testing
+Cryptographic Protections,CRY,PCI DSS 3 Protect Cardholder Data
+Cryptographic Protections,CRY,PCI DSS 4 Encryption of Cardholder Data
+Data Classification Handling,DCH,PCI DSS 3 Protect Cardholder Data
+Data Classification Handling,DCH,PCI DSS 4 Encryption of Cardholder Data
+Data Classification Handling,DCH,PCI DSS 12 Security Policy
+Embedded Technology,EMB,PCI DSS 1 Network Segmentation
+Embedded Technology,EMB,PCI DSS 2 Default Security Parameters
+Embedded Technology,EMB,PCI DSS 6 Secure Development
+Embedded Technology,EMB,PCI DSS 11 Security Testing
+Endpoint Security,END,PCI DSS 2 Default Security Parameters
+Endpoint Security,END,PCI DSS 6 Secure Development
+Endpoint Security,END,PCI DSS 5 Malware Protection
+Human Resources Security,HRS,PCI DSS 8 User Identification and Authentication
+Human Resources Security,HRS,PCI DSS 12 Security Policy
+Human Resources Security,HRS,PCI DSS 2 Default Security Parameters
+Identification Authentication,IAC,PCI DSS 7 Access Control Restrictions
+Identification Authentication,IAC,PCI DSS 8 User Identification and Authentication
+Incident Response,IRO,PCI DSS 10 Logging and Monitoring
+Incident Response,IRO,PCI DSS 12 Security Policy
+Information Assurance,IAO,PCI DSS 10 Logging and Monitoring
+Information Assurance,IAO,PCI DSS 11 Security Testing
+Maintenance,MNT,PCI DSS 2 Default Security Parameters
+Maintenance,MNT,PCI DSS 6 Secure Development
+Mobile Device Management,MDM,PCI DSS 2 Default Security Parameters
+Mobile Device Management,MDM,PCI DSS 7 Access Control Restrictions
+Mobile Device Management,MDM,PCI DSS 8 User Identification and Authentication
+Network Security,NET,PCI DSS 1 Network Segmentation
+Network Security,NET,PCI DSS 2 Default Security Parameters
+Network Security,NET,PCI DSS 9 Physical Access Control
+Physical Environmental Security,PES,PCI DSS 9 Physical Access Control
+Physical Environmental Security,PES,PCI DSS 2 Default Security Parameters
+Data Privacy,PRI,PCI DSS 3 Protect Cardholder Data
+Data Privacy,PRI,PCI DSS 7 Access Control Restrictions
+Data Privacy,PRI,PCI DSS 12 Security Policy
+Project Resource Management,PRM,PCI DSS 12 Security Policy
+Project Resource Management,PRM,PCI DSS 2 Default Security Parameters
+Risk Management,RSK,PCI DSS 12 Security Policy
+Risk Management,RSK,PCI DSS 11 Security Testing
+Secure Engineering Architecture,SEA,PCI DSS 6 Secure Development
+Secure Engineering Architecture,SEA,PCI DSS 2 Default Security Parameters
+Security Operations,OPS,PCI DSS 10 Logging and Monitoring
+Security Operations,OPS,PCI DSS 11 Security Testing
+Security Operations,OPS,PCI DSS 12 Security Policy
+Security Awareness Training,SAT,PCI DSS 12 Security Policy
+Security Awareness Training,SAT,PCI DSS 8 User Identification and Authentication
+Technology Development Acquisition,TDA,PCI DSS 6 Secure Development
+Technology Development Acquisition,TDA,PCI DSS 2 Default Security Parameters
+Third-Party Management,TPM,PCI DSS 12 Security Policy
+Third-Party Management,TPM,PCI DSS 8 User Identification and Authentication
+Third-Party Management,TPM,PCI DSS 1 Network Segmentation
+Threat Management,THR,PCI DSS 10 Logging and Monitoring
+Threat Management,THR,PCI DSS 11 Security Testing
+Threat Management,THR,PCI DSS 12 Security Policy
+Vulnerability Patch Management,VPM,PCI DSS 6 Secure Development
+Vulnerability Patch Management,VPM,PCI DSS 11 Security Testing
+Vulnerability Patch Management,VPM,PCI DSS 2 Default Security Parameters
+Web Security,WEB,PCI DSS 6 Secure Development
+Web Security,WEB,PCI DSS 1 Network Segmentation
+Web Security,WEB,PCI DSS 2 Default Security Parameters
