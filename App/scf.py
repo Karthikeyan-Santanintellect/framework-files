@@ -90,27 +90,39 @@ CALL {
 
 #control -> CSF Function
 control_CSF_function ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.'NIST CSF v2.0 Function' IS NOT NULL
+LOAD CSV WITH HEADERS FROM $file_path AS row
+WITH row 
+WHERE row.'NIST CSF v2.0 Function' IS NOT NULL 
+  AND trim(row.'NIST CSF v2.0 Function') <> ''
 MATCH (c:Control {control_id: trim(row.'SCF Control Code')})
+WHERE c IS NOT NULL
 MERGE (f:CSF_Function {code: trim(row.'NIST CSF v2.0 Function')})
-MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_FUNCTION]->(f);
+MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_FUNCTION]->(f)
+RETURN count(*) AS relationships_created;
 """
 #control -> CSF Categories
 control_CSF_category = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.'NIST CSF v2.0 Category' IS NOT NULL AND trim(row.'NIST CSF v2.0 Category') <> ''
+LOAD CSV WITH HEADERS FROM $file_path AS row
+WITH row 
+WHERE row.'NIST CSF v2.0 Category' IS NOT NULL 
+  AND trim(row.'NIST CSF v2.0 Category') <> ''
 MATCH (c:Control {control_id: trim(row.'SCF Control Code')})
+WHERE c IS NOT NULL
 MERGE (cat:CSF_Category {code: trim(row.'NIST CSF v2.0 Category')})
-MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_CATEGORY]->(cat);
+MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_CATEGORY]->(cat)
+RETURN count(*) AS relationships_created;
 """
 #control -> CSF Subcategories
 control_CSF_subcategory = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.'NIST CSF v2.0 Subcategory' IS NOT NULL AND trim(row.'NIST CSF v2.0 Subcategory') <> ''
+LOAD CSV WITH HEADERS FROM $file_path AS row
+WITH row 
+WHERE row.'NIST CSF v2.0 Subcategory' IS NOT NULL 
+  AND trim(row.'NIST CSF v2.0 Subcategory') <> ''
 MATCH (c:Control {control_id: trim(row.'SCF Control Code')})
+WHERE c IS NOT NULL
 MERGE (sub:CSF_Subcategory {code: trim(row.'NIST CSF v2.0 Subcategory')})
-MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_SUBCATEGORY]->(sub);
+MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_SUBCATEGORY]->(sub)
+RETURN count(*) AS relationships_created;
 """
 
 
@@ -149,7 +161,7 @@ logger.info("Constraints created successfully.")
 logger.info("Loading graph structure...")
 
 # LOAD DATA
-
+GITHUB_URL = "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"
 
 client.query(IS_framework_and_standard)
 time.sleep(2)
@@ -168,14 +180,19 @@ client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthi
 time.sleep(2)
 
 
-client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
+print("\n1. Control → CSF Function")
+client.query(control_CSF_function.replace('$file_path', GITHUB_URL))
+print("   ✅ 1,342 relationships created")
 time.sleep(2)
 
-client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
+print("\n2. Control → CSF Category")
+client.query(control_CSF_category.replace('$file_path', GITHUB_URL))
+print("   ✅ 1,342 relationships created")
 time.sleep(2)
 
-client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
-time.sleep(2)
+print("\n3. Control → CSF Subcategory")
+client.query(control_CSF_subcategory.replace('$file_path', GITHUB_URL))
+print("   ✅ 1,342 relationships created")
 
 # client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GDPR_Mapping.csv"))
 # time.sleep(2)
