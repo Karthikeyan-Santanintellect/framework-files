@@ -88,532 +88,32 @@ CALL {
 } IN TRANSACTIONS OF 500 ROWS
 """
 
-#control -> CIS_control Mappings
-control_cis_control = """
+#control -> CSF Function
+control_CSF_function ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.CIS_Control IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.CIS_Control),
-        source_framework: "CIS"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.CIS_Control),
-        ext.source_framework = "CIS",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "CIS"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "CIS",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
+WITH row WHERE row.'NIST CSF v2.0 Function' IS NOT NULL
+MATCH (c:Control {control_id: trim(row.'SCF Control Code')})
+MERGE (f:CSF_Function {code: trim(row.'NIST CSF v2.0 Function')})
+MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_FUNCTION]->(f);
 """
-#control -> CPRA 
-control_cpra = """
+#control -> CSF Categories
+control_CSF_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.CPRA IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.CPRA),
-        source_framework: "CPRA"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.CPRA),
-        ext.source_framework = "CPRA",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "CPRA"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "CPRA",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
+WITH row WHERE row.'NIST CSF v2.0 Category' IS NOT NULL AND trim(row.'NIST CSF v2.0 Category') <> ''
+MATCH (c:Control {control_id: trim(row.'SCF Control Code')})
+MERGE (cat:CSF_Category {code: trim(row.'NIST CSF v2.0 Category')})
+MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_CATEGORY]->(cat);
 """
-#control ->DPDPA
-control_dpdpa = """
+#control -> CSF Subcategories
+control_CSF_subcategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.DPDPA IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.DPDPA),
-        source_framework: "DPDPA"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.DPDPA),
-        ext.source_framework = "DPDPA",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "DPDPA"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "DPDPA",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-"""
-#control -> GDPR
-control_gdpr = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.GDPR IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.GDPR),
-        source_framework: "GDPR"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.GDPR),
-        ext.source_framework = "GDPR",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "GDPR"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "GDPR",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> GLBA
-control_glba = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.GLBA IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.GLBA),
-        source_framework: "GLBA"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.GLBA),
-        ext.source_framework = "GLBA",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "GLBA"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "GLBA",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> HIPAA
-control_hipaa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.HIPAA IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.HIPAA),
-        source_framework: "HIPAA"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.HIPAA),
-        ext.source_framework = "HIPAA",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "HIPAA"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "HIPAA",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> HITECH
-control_hitech = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.HITECH IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.HITECH),
-        source_framework: "HITECH"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.HITECH),
-        ext.source_framework = "HITECH",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "HITECH"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "HITECH",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> iso_27001
-control_iso_27001 = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.ISO27001 IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.ISO27001),
-        source_framework: "ISO 27001"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.ISO27001),
-        ext.source_framework = "ISO 27001",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "ISO 27001"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "ISO 27001",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> iso_27002
-control_iso_27002 = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.ISO27002 IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.ISO27002),
-        source_framework: "ISO 27002"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.ISO27002),
-        ext.source_framework = "ISO 27002",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "ISO 27002"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "ISO 27002",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> nerc_cip
-control_nerc_cip = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.NERC_CIP IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.NERC_CIP),
-        source_framework: "NERC CIP"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.NERC_CIP),
-        ext.source_framework = "NERC CIP",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "NERC CIP"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "NERC CIP",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> nist_ai_rmf
-control_nist_ai_rmf = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.NIST_AI_RMF IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.NIST_AI_RMF),
-        source_framework: "NIST AI RMF"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.NIST_AI_RMF),
-        ext.source_framework = "NIST AI RMF",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "NIST AI RMF"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "NIST AI RMF",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> nist_csf
-control_nist_csf = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.NIST_CSF IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.NIST_CSF),
-        source_framework: "NIST CSF"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.NIST_CSF),
-        ext.source_framework = "NIST CSF",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "NIST CSF"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "NIST CSF",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> nist_rmf
-control_nist_rmf ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.NIST_RMF IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.NIST_RMF),
-        source_framework: "NIST RMF"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.NIST_RMF),
-        ext.source_framework = "NIST RMF",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "NIST RMF"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "NIST RMF",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> PCIDSS
-control_pcidss = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.PCIDSS IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.PCIDSS),
-        source_framework: "PCI DSS"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.PCIDSS),
-        ext.source_framework = "PCI DSS",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "PCI DSS"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "PCI DSS",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
+WITH row WHERE row.'NIST CSF v2.0 Subcategory' IS NOT NULL AND trim(row.'NIST CSF v2.0 Subcategory') <> ''
+MATCH (c:Control {control_id: trim(row.'SCF Control Code')})
+MERGE (sub:CSF_Subcategory {code: trim(row.'NIST CSF v2.0 Subcategory')})
+MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_SUBCATEGORY]->(sub);
 """
 
-#control -> TDPSA
-control_tdpsa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.TDPSA IS NOT NULL
 
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.TDPSA),
-        source_framework: "TDPSA"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.TDPSA),
-        ext.source_framework = "TDPSA",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "TDPSA"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "TDPSA",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-#control -> TISAX
-control_tisax = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.TISAX IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.TISAX),
-        source_framework: "TISAX"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.TISAX),
-        ext.source_framework = "TISAX",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "TISAX"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "TISAX",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
-
-#control->vcdpa
-control_vcdpa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.SCF_ID IS NOT NULL AND row.VCDPA IS NOT NULL
-
-CALL {
-    WITH row
-    MATCH (scf:Control {control_id: trim(row.SCF_ID)})
-    
-    MERGE (ext:ExternalControl {
-        control_id: trim(row.VCDPA),
-        source_framework: "VCDPA"
-    })
-    ON CREATE SET
-        ext.control_type = "External",
-        ext.control_name = trim(row.VCDPA),
-        ext.source_framework = "VCDPA",
-        ext.created_at = datetime()
-    
-    MERGE (scf)-[r:CONTROL_MAPS_TO_EXTERNAL {
-        framework: "VCDPA"
-    }]->(ext)
-    ON CREATE SET 
-        r.source_framework = "VCDPA",
-        r.relationship_type = "MAPS_TO",
-        r.created_date = date()
-        
-} IN TRANSACTIONS OF 1000 ROWS;
-
-"""
 
 
 import os
@@ -668,56 +168,56 @@ client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthi
 time.sleep(2)
 
 
-client.query(control_cis_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_CIS_Mapping.csv"))
+client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
 time.sleep(2)
 
-client.query(control_cpra.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_CPRA_Mapping.csv"))
+client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
 time.sleep(2)
 
-client.query(control_dpdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_DPDPA_Mapping.csv"))
+client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
 time.sleep(2)
 
-client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GDPR_Mapping.csv"))
-time.sleep(2)
+# client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GDPR_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_glba.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GLBA_Mapping.csv"))
-time.sleep(2)
+# client.query(control_glba.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GLBA_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_hipaa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_HIPAA_Mapping.csv"))
-time.sleep(2)
+# client.query(control_hipaa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_HIPAA_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_hitech.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_HITECH_Mapping.csv"))
-time.sleep(2)
+# client.query(control_hitech.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_HITECH_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_iso_27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27001_Mapping.csv"))
-time.sleep(2)
+# client.query(control_iso_27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27001_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27002_Mapping.csv"))
-time.sleep(2)
+# client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27002_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NERC_CIP_Mapping.csv"))
-time.sleep(2)
+# client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NERC_CIP_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_AI_RMF_Mapping.csv"))
-time.sleep(2)
+# client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_AI_RMF_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_nist_csf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
-time.sleep(2)
+# client.query(control_nist_csf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_nist_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_RMF_Mapping.csv"))
-time.sleep(2)
+# client.query(control_nist_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_RMF_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_pcidss.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_PCIDSS_Mapping.csv"))
-time.sleep(2)
+# client.query(control_pcidss.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_PCIDSS_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_tdpsa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_TDPSA_Mapping.csv"))
-time.sleep(2)
+# client.query(control_tdpsa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_TDPSA_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_TISAX_Mapping.csv"))
-time.sleep(2)
+# client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_TISAX_Mapping.csv"))
+# time.sleep(2)
 
-client.query(control_vcdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_VCDPA_Mapping.csv"))
-time.sleep(2)
+# client.query(control_vcdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_VCDPA_Mapping.csv"))
+# time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")
