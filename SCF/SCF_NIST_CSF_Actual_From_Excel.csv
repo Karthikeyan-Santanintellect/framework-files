@@ -1,4 +1,4 @@
-SCF Domain,SCF Domain Code,SCF Control Code,SCF Control Name,NIST CSF v2.0 Function,NIST CSF v2.0 Category,NIST CSF v2.0 Subcategory
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,NIST_CSF_Function,NIST_CSF_Category,NIST_CSF_Subcategory
 Artificial & Autonomous Technology,AAT,AAT-01,Artificial Intelligence (AI) & Autonomous Technologies Governance,GV,GV.OV,GV.OV-03
 Artificial & Autonomous Technology,AAT,AAT-01.1,AI & Autonomous Technologies-Related Legal Requirements Definition,GV,GV.RR,GV.RR-02
 Artificial & Autonomous Technology,AAT,AAT-01.2,Trustworthy AI & Autonomous Technologies,PR,PR.DS,PR.DS-04
@@ -146,8 +146,8 @@ Network Security,NET,NET-03,Network Monitoring,DE,DE.CM,DE.CM-01
 Network Security,NET,NET-03.1,Network Intrusion Detection,DE,DE.AE,DE.AE-02
 Operations Security,OPS,OPS-01,Operations Security Program,PR,PR.OE,PR.OE-01
 Penetration Testing & Security Assessments,PES,PES-01,Penetration Testing Program,DE,DE.AE,DE.AE-02
-Penetration Testing & Security Assessments,PES-02,Vulnerability Scanning,DE,DE.AE,DE.AE-02
-Penetration Testing & Security Assessments,PES-03,Security Assessment,DE,DE.AE,DE.AE-01
+Penetration Testing & Security Assessments,PES-02,Vulnerability Scanning,DE,DE.AE,DE.AE-02,
+Penetration Testing & Security Assessments,PES-03,Security Assessment,DE,DE.AE,DE.AE-01,
 Data Privacy,PRI,PRI-01,Data Privacy Program,PR,PR.DS,PR.DS-04
 Data Privacy,PRI,PRI-01.1,Privacy Impact Assessment,ID,ID.IM,ID.IM-01
 Data Privacy,PRI,PRI-02,Personal Data Protection,PR,PR.DS,PR.DS-04
