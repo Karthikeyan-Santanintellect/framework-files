@@ -1,0 +1,1969 @@
+[
+  {
+    "Risk #": "R-AI-1",
+    "Risk": "Lack of AI system inventory",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain an inventory of AI models, datasets, prompts, and integrations, leading to unmanaged risk."
+  },
+  {
+    "Risk #": "R-AI-5",
+    "Risk": "Sensitive data leakage via AI outputs",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent models from disclosing confidential or personal data (memorization, retrieval, context leakage)."
+  },
+  {
+    "Risk #": "R-AI-8",
+    "Risk": "Hallucinations and unsafe decision support",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control model reliability and confidence, leading to harmful business or safety decisions."
+  },
+  {
+    "Risk #": "R-AI-9",
+    "Risk": "Bias, discrimination, and fairness failures",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to evaluate and mitigate biased outcomes, causing legal, ethical, and reputational harm."
+  },
+  {
+    "Risk #": "R-AI-10",
+    "Risk": "Lack of model monitoring and drift detection",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to monitor performance and drift, leading to degraded or unsafe outcomes over time."
+  },
+  {
+    "Risk #": "R-AI-12",
+    "Risk": "AI regulatory noncompliance",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to meet AI governance obligations (risk classification, documentation, transparency, human oversight) where applicable."
+  },
+  {
+    "Risk #": "R-AI-2",
+    "Risk": "Training data poisoning",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent or detect malicious data injection that corrupts model behavior."
+  },
+  {
+    "Risk #": "R-AI-3",
+    "Risk": "Model theft and extraction",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect models from unauthorized copying via APIs, insider actions, or supply chain compromise."
+  },
+  {
+    "Risk #": "R-AI-4",
+    "Risk": "Prompt injection and tool abuse",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent prompt injection and unsafe tool\/action execution in LLM-enabled workflows."
+  },
+  {
+    "Risk #": "R-AI-6",
+    "Risk": "Model inversion and membership inference",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent attacks that infer training data or membership from model outputs."
+  },
+  {
+    "Risk #": "R-AI-7",
+    "Risk": "Adversarial examples and evasion",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect adversarial inputs that cause incorrect or unsafe predictions."
+  },
+  {
+    "Risk #": "R-AI-11",
+    "Risk": "Inadequate AI red-teaming and evaluation",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to perform adversarial testing and safety evaluations before deployment."
+  },
+  {
+    "Risk #": "R-AP-1",
+    "Risk": "Injection vulnerabilities",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent injection (SQL\/NoSQL\/command), leading to data theft, integrity loss, or RCE."
+  },
+  {
+    "Risk #": "R-AP-2",
+    "Risk": "Broken access control in applications",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to implement authorization checks, enabling IDOR and privilege abuse."
+  },
+  {
+    "Risk #": "R-AP-3",
+    "Risk": "Security misconfiguration in apps",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to harden application and platform settings, exposing admin functions or sensitive endpoints."
+  },
+  {
+    "Risk #": "R-AP-4",
+    "Risk": "Vulnerable and outdated components",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage third-party libraries and dependencies, enabling known exploits."
+  },
+  {
+    "Risk #": "R-AP-5",
+    "Risk": "Insecure API design and abuse",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure APIs (authz, rate limiting, schema validation), enabling enumeration and abuse."
+  },
+  {
+    "Risk #": "R-AP-6",
+    "Risk": "Cross-site scripting and client-side attacks",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent XSS and client-side injection, enabling session theft and account compromise."
+  },
+  {
+    "Risk #": "R-AP-7",
+    "Risk": "Authentication and session management flaws",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure session tokens and login flows, enabling hijacking and credential abuse."
+  },
+  {
+    "Risk #": "R-AP-8",
+    "Risk": "Server-side request forgery (SSRF)",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent SSRF, enabling internal network access and cloud metadata exploitation."
+  },
+  {
+    "Risk #": "R-AP-9",
+    "Risk": "Insecure deserialization and memory safety issues",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent unsafe deserialization or memory corruption, enabling RCE."
+  },
+  {
+    "Risk #": "R-AP-10",
+    "Risk": "Insufficient application security testing",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to perform SAST\/DAST\/IAST and secure code reviews, allowing defects into production."
+  },
+  {
+    "Risk #": "R-AP-11",
+    "Risk": "Lack of runtime application protection",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and respond to attacks at runtime (WAF\/RASP), increasing dwell time."
+  },
+  {
+    "Risk #": "R-AP-12",
+    "Risk": "Insecure multi-tenancy isolation",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Application Runtime Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce tenant isolation, enabling cross-tenant data exposure."
+  },
+  {
+    "Risk #": "R-SD-2",
+    "Risk": "Insecure CI\/CD pipelines",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "DevSecOps & Automation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect build systems, code signing, secrets, and pipeline permissions, enabling tampered releases."
+  },
+  {
+    "Risk #": "R-SD-1",
+    "Risk": "Inadequate secure design reviews",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to perform threat modeling and architecture reviews for new systems and significant changes."
+  },
+  {
+    "Risk #": "R-SD-3",
+    "Risk": "Insufficient code integrity controls",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce branch protection, reviews, and signed commits, enabling unauthorized code changes."
+  },
+  {
+    "Risk #": "R-SD-4",
+    "Risk": "Weak vulnerability disclosure process",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to receive, triage, and remediate externally reported vulnerabilities responsibly."
+  },
+  {
+    "Risk #": "R-SD-5",
+    "Risk": "Inadequate product security incident response",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to coordinate PSIRT processes, advisories, and customer notifications."
+  },
+  {
+    "Risk #": "R-SD-6",
+    "Risk": "Insecure developer workstations",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure developer endpoints and credentials, enabling source\/code compromise."
+  },
+  {
+    "Risk #": "R-SD-7",
+    "Risk": "Insufficient security requirements management",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to define and test security requirements as part of product acceptance criteria."
+  },
+  {
+    "Risk #": "R-SD-8",
+    "Risk": "Inadequate security regression testing",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect re-introduced security defects before deployment."
+  },
+  {
+    "Risk #": "R-SD-9",
+    "Risk": "Inadequate dependency provenance verification",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to verify origin and integrity of dependencies and artifacts (SBOM\/provenance)."
+  },
+  {
+    "Risk #": "R-SD-10",
+    "Risk": "Unsafe feature releases (privacy\/AI)",
+    "DTOM Domain": "Application & Product Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to gate releases with privacy and AI risk reviews, causing harmful or noncompliant features to ship."
+  },
+  {
+    "Risk #": "R-CL-6",
+    "Risk": "Insufficient cloud logging and monitoring",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Governance & Strategy",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enable and centralize audit logs and detections for cloud services."
+  },
+  {
+    "Risk #": "R-CL-11",
+    "Risk": "Inadequate cloud compliance mapping",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Governance & Strategy",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to map cloud controls to regulatory requirements and produce evidence for audits."
+  },
+  {
+    "Risk #": "R-CL-12",
+    "Risk": "Overreliance on shared responsibility assumptions",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Governance & Strategy",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to understand and execute customer-side responsibilities, leaving gaps in security posture."
+  },
+  {
+    "Risk #": "R-CL-4",
+    "Risk": "Inadequate cloud network segmentation",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Infrastructure & Network Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to implement VPC\/VNet segmentation and egress controls, enabling lateral movement and exfiltration."
+  },
+  {
+    "Risk #": "R-CL-1",
+    "Risk": "Misconfigured cloud identity and permissions",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Security Posture Management (CSPM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to configure IAM (roles, policies, cross-account trust) securely, enabling privilege abuse."
+  },
+  {
+    "Risk #": "R-CL-2",
+    "Risk": "Cloud control plane compromise",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Security Posture Management (CSPM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect admin accounts and APIs, enabling attackers to alter resources and security controls."
+  },
+  {
+    "Risk #": "R-CL-3",
+    "Risk": "Public exposure of cloud storage and services",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Security Posture Management (CSPM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent public access and unintended sharing of storage, databases, and endpoints."
+  },
+  {
+    "Risk #": "R-CL-8",
+    "Risk": "Cloud-native data protection gaps",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Security Posture Management (CSPM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to apply encryption, DLP, and access control consistently across cloud data services."
+  },
+  {
+    "Risk #": "R-CL-9",
+    "Risk": "Insecure SaaS tenant configuration",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Security Posture Management (CSPM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to configure SaaS security settings (sharing, admin roles, OAuth apps), enabling compromise and data leakage."
+  },
+  {
+    "Risk #": "R-CL-10",
+    "Risk": "Cloud provider outage resilience gaps",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Security Posture Management (CSPM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to architect multi-AZ\/region resilience and failover, leading to prolonged outages."
+  },
+  {
+    "Risk #": "R-CL-7",
+    "Risk": "Key management and secret leakage in cloud",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud Workload Protection (CWPP)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect cloud KMS keys and secrets in CI\/CD and runtime environments."
+  },
+  {
+    "Risk #": "R-CL-5",
+    "Risk": "Insecure container and Kubernetes posture",
+    "DTOM Domain": "Cloud & Platform Security",
+    "DTOM Functional Domain": "Cloud-Native Application Protection (CNAPP)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to harden and monitor containers\/orchestration, enabling breakout and supply chain compromise."
+  },
+  {
+    "Risk #": "R-BC-1",
+    "Risk": "Business interruption",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "Increased latency, or a service outage, that negatively impacts business operations."
+  },
+  {
+    "Risk #": "R-BC-2",
+    "Risk": "Data loss \/ corruption",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain the confidentiality of the data (compromise) or prevent data corruption (loss)."
+  },
+  {
+    "Risk #": "R-BC-3",
+    "Risk": "Reduction in productivity",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "Diminished user productivity."
+  },
+  {
+    "Risk #": "R-BC-4",
+    "Risk": "Information loss \/ corruption or system compromise due to technical attack",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "A technical attack that compromises data, systems, applications or services (e.g., malware, phishing, hacking, etc.)."
+  },
+  {
+    "Risk #": "R-BC-5",
+    "Risk": "Information loss \/ corruption or system compromise due to non\u2011technical attack",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "A non-technical attack that compromises data, systems, applications or services (e.g., social engineering, sabotage, etc.)."
+  },
+  {
+    "Risk #": "R-BC-6",
+    "Risk": "Inadequate disaster recovery capability",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to recover critical systems within RTO\/RPO targets following disruptive events."
+  },
+  {
+    "Risk #": "R-BC-7",
+    "Risk": "Single points of failure",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to design and test redundancy, creating outages from component, region, or provider failures."
+  },
+  {
+    "Risk #": "R-BC-8",
+    "Risk": "Backup integrity failure",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to ensure backups are complete, immutable, and recoverable (including periodic restore testing)."
+  },
+  {
+    "Risk #": "R-BC-9",
+    "Risk": "Insufficient crisis management governance",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage major events (cyber, safety, operational) with clear decision rights and playbooks."
+  },
+  {
+    "Risk #": "R-BC-10",
+    "Risk": "Dependency and concentration risk",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage systemic dependency on a single vendor, cloud region, or critical service."
+  },
+  {
+    "Risk #": "R-BC-11",
+    "Risk": "Inadequate business process continuity planning",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain manual workarounds and continuity of critical processes during technology outages."
+  },
+  {
+    "Risk #": "R-BC-12",
+    "Risk": "Resilience testing gaps",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Business Continuity & Recovery",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to execute resilience exercises (tabletops, failovers, chaos testing) to validate preparedness."
+  },
+  {
+    "Risk #": "R-IR-1",
+    "Risk": "Inability to investigate \/ prosecute incidents",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "Insufficient incident response practices that prevent investigating and\/or prosecuting incidents (e.g., chain of custody corruption, insufficient evidence sources, etc.)."
+  },
+  {
+    "Risk #": "R-IR-2",
+    "Risk": "Improper response to incidents",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to appropriately respond to incidents in a timely manner."
+  },
+  {
+    "Risk #": "R-IR-3",
+    "Risk": "Ineffective remediation actions",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to ensure incident response actions were correct and\/or effective."
+  },
+  {
+    "Risk #": "R-IR-4",
+    "Risk": "Expense associated with managing a loss event",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "Financial repercussions from responding to an incident or loss."
+  },
+  {
+    "Risk #": "R-IR-5",
+    "Risk": "Inadequate incident triage and classification",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to triage and classify incidents consistently, causing delays and mismanaged escalation."
+  },
+  {
+    "Risk #": "R-IR-6",
+    "Risk": "Failure to meet reporting timelines",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to notify regulators\/customers\/partners within required incident reporting timelines."
+  },
+  {
+    "Risk #": "R-IR-7",
+    "Risk": "Inadequate communications management",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage internal\/external communications, legal holds, and stakeholder coordination during incidents."
+  },
+  {
+    "Risk #": "R-IR-8",
+    "Risk": "Insufficient forensic readiness",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to preserve evidence (time sync, logging, acquisition) and support investigations."
+  },
+  {
+    "Risk #": "R-IR-9",
+    "Risk": "Ransomware recovery failure",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to contain ransomware, protect backups, and restore operations safely."
+  },
+  {
+    "Risk #": "R-IR-10",
+    "Risk": "Third-party incident coordination failure",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Incident Management & Forensics",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to coordinate IR with vendors, cloud providers, and MSPs for containment and remediation."
+  },
+  {
+    "Risk #": "R-LM-1",
+    "Risk": "Insufficient security logging",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to log security-relevant events across endpoints, servers, identities, cloud, and applications."
+  },
+  {
+    "Risk #": "R-LM-2",
+    "Risk": "Log integrity and retention failures",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect logs from tampering and retain them for required durations."
+  },
+  {
+    "Risk #": "R-LM-3",
+    "Risk": "Inadequate SIEM\/SOAR use",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to correlate events and automate response, leading to delayed detection and response."
+  },
+  {
+    "Risk #": "R-LM-4",
+    "Risk": "Poor alert fidelity and tuning",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to reduce false positives\/negatives, leading to missed detections or analyst overload."
+  },
+  {
+    "Risk #": "R-LM-5",
+    "Risk": "Lack of monitoring for privileged actions",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to monitor admin operations, privileged role changes, and high-risk activity."
+  },
+  {
+    "Risk #": "R-LM-6",
+    "Risk": "Cloud audit log gaps",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enable and centralize cloud provider and SaaS audit logs (control plane and data plane)."
+  },
+  {
+    "Risk #": "R-LM-7",
+    "Risk": "Insufficient detection engineering",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to build and maintain detections aligned to adversary techniques and business risks."
+  },
+  {
+    "Risk #": "R-LM-8",
+    "Risk": "Inadequate threat hunting capability",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to proactively search for indicators of compromise and anomalous behavior."
+  },
+  {
+    "Risk #": "R-SA-1",
+    "Risk": "Inability to maintain situational awareness",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Security Operations (SecOps)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect cybersecurity and\/or privacy incidents (e.g., lack of situational awareness)."
+  },
+  {
+    "Risk #": "R-VM-1",
+    "Risk": "Incomplete vulnerability discovery",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to continuously discover vulnerabilities across IT, cloud, SaaS, containers, and OT where feasible."
+  },
+  {
+    "Risk #": "R-VM-2",
+    "Risk": "Ineffective remediation prioritization",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prioritize remediation using exploitability and asset criticality (e.g., known exploited vulnerabilities)."
+  },
+  {
+    "Risk #": "R-VM-3",
+    "Risk": "Patch deployment failures",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to deploy patches safely and timely due to process gaps or operational constraints."
+  },
+  {
+    "Risk #": "R-VM-4",
+    "Risk": "Compensating controls not implemented",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to apply compensating controls when patching is not feasible, leaving exposures unmanaged."
+  },
+  {
+    "Risk #": "R-VM-5",
+    "Risk": "Vulnerability scanning misconfiguration",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to configure scanners and coverage properly, resulting in false negatives and blind spots."
+  },
+  {
+    "Risk #": "R-VM-6",
+    "Risk": "Unmanaged third-party and open-source vulnerabilities",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to track vulnerabilities in vendor products, OSS dependencies, and libraries."
+  },
+  {
+    "Risk #": "R-VM-7",
+    "Risk": "Insecure configuration drift",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and remediate configuration drift leading to exposure and control regression."
+  },
+  {
+    "Risk #": "R-VM-8",
+    "Risk": "Weak penetration testing \/ validation",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to validate remediation effectiveness and exploitability through testing and verification."
+  },
+  {
+    "Risk #": "R-VM-9",
+    "Risk": "Unpatched internet-exposed services",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to remediate or restrict exposed services, increasing risk of remote exploitation."
+  },
+  {
+    "Risk #": "R-VM-10",
+    "Risk": "Poor vulnerability exception governance",
+    "DTOM Domain": "Cyber Defense & Resilience",
+    "DTOM Functional Domain": "Vulnerability Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to time-bound, approve, and track risk acceptances and exceptions."
+  },
+  {
+    "Risk #": "R-CR-1",
+    "Risk": "Weak encryption at rest",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to encrypt sensitive data at rest using strong, approved algorithms and configurations."
+  },
+  {
+    "Risk #": "R-CR-2",
+    "Risk": "Weak encryption in transit",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce modern TLS configurations and prevent downgrade\/weak cipher usage."
+  },
+  {
+    "Risk #": "R-CR-3",
+    "Risk": "Poor key management",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to generate, store, rotate, revoke, and audit cryptographic keys securely."
+  },
+  {
+    "Risk #": "R-CR-4",
+    "Risk": "Insecure secrets management",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to store and rotate secrets (API keys, tokens, passwords) securely, leading to unauthorized access."
+  },
+  {
+    "Risk #": "R-CR-5",
+    "Risk": "Certificate lifecycle failures",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage certificates (expiry, issuance, trust), causing outages or enabling MITM."
+  },
+  {
+    "Risk #": "R-CR-6",
+    "Risk": "Crypto agility gaps",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to update cryptographic primitives quickly (e.g., in response to vulnerabilities or PQC transition)."
+  },
+  {
+    "Risk #": "R-CR-7",
+    "Risk": "Inadequate signing and integrity controls",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to sign code, artifacts, and critical communications, enabling tampering and supply chain attacks."
+  },
+  {
+    "Risk #": "R-CR-8",
+    "Risk": "Weak tokenization\/anonymization controls",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to apply effective de-identification\/cryptographic protection for regulated data, increasing privacy risk."
+  },
+  {
+    "Risk #": "R-DP-9",
+    "Risk": "Improper data disposal",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to securely delete data and media (crypto-shredding, sanitization), leading to post-disposal exposure."
+  },
+  {
+    "Risk #": "R-DP-12",
+    "Risk": "Sensitive data in logs and telemetry",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to avoid storing secrets or regulated data in logs, creating secondary exposure paths."
+  },
+  {
+    "Risk #": "R-DP-1",
+    "Risk": "Data exposure due to inadequate data minimization",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to minimize collection\/retention, increasing breach impact and regulatory exposure."
+  },
+  {
+    "Risk #": "R-DP-2",
+    "Risk": "Unauthorized data access to sensitive data",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce access controls for sensitive data at rest and in use."
+  },
+  {
+    "Risk #": "R-DP-5",
+    "Risk": "Data integrity compromise",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect tampering, unauthorized modification, or corruption of critical business and safety data."
+  },
+  {
+    "Risk #": "R-DP-7",
+    "Risk": "Weak database security",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to harden databases (auth, segmentation, patching), enabling injection, credential theft, or direct access."
+  },
+  {
+    "Risk #": "R-DP-8",
+    "Risk": "Insecure data replication and backups",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect replicated data and backups (access control, immutability), enabling ransomware and data theft."
+  },
+  {
+    "Risk #": "R-DP-10",
+    "Risk": "Inadequate cross-border data controls",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage data residency\/transfer restrictions, increasing legal and compliance risk."
+  },
+  {
+    "Risk #": "R-DP-11",
+    "Risk": "Insecure API data access",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Governance & Lifecycle",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control and monitor API access to data, enabling scraping, enumeration, and mass data extraction."
+  },
+  {
+    "Risk #": "R-DP-3",
+    "Risk": "Data exfiltration undetected",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Loss Prevention (DLP)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and prevent data egress via endpoints, cloud storage, APIs, or third-party channels."
+  },
+  {
+    "Risk #": "R-DP-4",
+    "Risk": "Data leakage via misconfiguration",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Loss Prevention (DLP)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to securely configure storage (public buckets, mis-shared drives), causing unintended exposure."
+  },
+  {
+    "Risk #": "R-DP-6",
+    "Risk": "Inadequate data loss prevention (DLP)",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Data Loss Prevention (DLP)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent sensitive data from leaving approved channels (email, web, USB, SaaS)."
+  },
+  {
+    "Risk #": "R-PR-1",
+    "Risk": "Non-compliant collection and processing",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to ensure lawful basis, purpose limitation, and transparency for personal data processing."
+  },
+  {
+    "Risk #": "R-PR-2",
+    "Risk": "Insufficient consent management",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to capture, manage, and prove consent\/opt-out signals across systems and vendors."
+  },
+  {
+    "Risk #": "R-PR-3",
+    "Risk": "Failure to honor data subject rights",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to fulfill access, deletion, correction, portability, and objection requests within required timelines."
+  },
+  {
+    "Risk #": "R-PR-4",
+    "Risk": "Inadequate privacy impact assessments",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to perform DPIAs\/PIAs for high-risk processing and AI\/analytics initiatives."
+  },
+  {
+    "Risk #": "R-PR-5",
+    "Risk": "Improper third-party personal data sharing",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control and monitor onward transfers and sub-processors, violating contractual\/regulatory requirements."
+  },
+  {
+    "Risk #": "R-PR-6",
+    "Risk": "Excessive retention of personal data",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce retention schedules and deletion obligations (data lifecycle noncompliance)."
+  },
+  {
+    "Risk #": "R-PR-7",
+    "Risk": "Unauthorized re-identification",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent re-identification of de-identified data via linkage attacks or model inversion."
+  },
+  {
+    "Risk #": "R-PR-8",
+    "Risk": "Insufficient privacy notice and transparency",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to provide accurate and timely privacy disclosures and updates to individuals."
+  },
+  {
+    "Risk #": "R-PR-9",
+    "Risk": "Cross-border transfer noncompliance",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to use required transfer mechanisms and safeguards for international data transfers."
+  },
+  {
+    "Risk #": "R-PR-10",
+    "Risk": "Privacy incident response failure",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect, assess, and notify privacy incidents according to legal thresholds and timelines."
+  },
+  {
+    "Risk #": "R-AC-10",
+    "Risk": "Insufficient session control",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Access and Interaction Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage sessions (timeouts, re-authentication, device binding), increasing risk of session hijacking and persistence."
+  },
+  {
+    "Risk #": "R-ID-3",
+    "Risk": "Account takeover via social engineering",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Access and Interaction Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and resist impersonation, helpdesk bypass, or SIM-swap-driven takeover."
+  },
+  {
+    "Risk #": "R-ID-5",
+    "Risk": "Federation and SSO trust failures",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Access and Interaction Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to securely configure and monitor identity federation (SAML\/OIDC), allowing token substitution or assertion abuse."
+  },
+  {
+    "Risk #": "R-ID-6",
+    "Risk": "Token theft and replay",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Access and Interaction Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect and bind authentication tokens to devices\/sessions, enabling replay and persistence."
+  },
+  {
+    "Risk #": "R-ID-10",
+    "Risk": "Insufficient customer identity protections (CIAM)",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Access and Interaction Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect external user accounts (rate limits, bot defense, MFA options), enabling fraud and account compromise."
+  },
+  {
+    "Risk #": "R-AC-1",
+    "Risk": "Inability to maintain individual accountability",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain accountability (e.g., asset ownership, non\u2011repudiation of actions or inactions, etc.)."
+  },
+  {
+    "Risk #": "R-AC-4",
+    "Risk": "Unauthorized access",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict access to only authorized individuals, groups, or services."
+  },
+  {
+    "Risk #": "R-AC-5",
+    "Risk": "Excessive permissions (over-provisioning)",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict access rights to the minimum necessary across systems, data, and platforms (privilege sprawl)."
+  },
+  {
+    "Risk #": "R-AC-6",
+    "Risk": "Segregation of duties (SoD) violations",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to separate conflicting duties, increasing the likelihood of fraud, error, and unauthorized changes."
+  },
+  {
+    "Risk #": "R-AC-8",
+    "Risk": "Insecure service and machine identities",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control non-human identities (service accounts, API keys, certificates) and prevent misuse or privilege escalation."
+  },
+  {
+    "Risk #": "R-AC-11",
+    "Risk": "Inadequate access review and certification",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to periodically validate access appropriateness, leading to accumulation of unnecessary privileges."
+  },
+  {
+    "Risk #": "R-AC-12",
+    "Risk": "Inability to enforce conditional access",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Entitlement and Authorization Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to dynamically evaluate risk signals (location, device posture, user risk) before granting access."
+  },
+  {
+    "Risk #": "R-ID-2",
+    "Risk": "Credential compromise and reuse",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Identity Assurance, Credentials, and Decentralized Identity",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent password reuse, leaked-credential login, and credential stuffing attacks."
+  },
+  {
+    "Risk #": "R-ID-4",
+    "Risk": "Insecure identity recovery and proofing",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Identity Assurance, Credentials, and Decentralized Identity",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to securely verify identity during enrollment and recovery, enabling fraudulent resets."
+  },
+  {
+    "Risk #": "R-AC-7",
+    "Risk": "Stale access (orphaned accounts and entitlements)",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Identity and Entity Lifecycle Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to promptly revoke access after role change, termination, or vendor offboarding."
+  },
+  {
+    "Risk #": "R-ID-7",
+    "Risk": "Inadequate identity lifecycle management",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Identity and Entity Lifecycle Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to automate joiner\/mover\/leaver processes across HR, IAM, SaaS, and on-prem systems."
+  },
+  {
+    "Risk #": "R-AC-2",
+    "Risk": "Improper assignment of privileged functions",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Privileged Access Management (PAM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to implement least privilege (e.g., RBAC, Privileged Access Management (PAM), etc.)."
+  },
+  {
+    "Risk #": "R-AC-3",
+    "Risk": "Privilege escalation",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Privileged Access Management (PAM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict access to privileged functions."
+  },
+  {
+    "Risk #": "R-AC-9",
+    "Risk": "Broken access governance for SaaS\/cloud",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Privileged Access Management (PAM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to govern permissions in SaaS and cloud control planes (e.g., admin roles, delegated admin, cross-tenant trust)."
+  },
+  {
+    "Risk #": "R-ID-1",
+    "Risk": "Weak authentication controls",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Privileged Access Management (PAM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce strong authentication (e.g., phishing-resistant MFA) for users, admins, and sensitive actions."
+  },
+  {
+    "Risk #": "R-ID-8",
+    "Risk": "Privileged identity compromise",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Privileged Access Management (PAM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to isolate, monitor, and harden privileged identities (break-glass, tiering, PAWs)."
+  },
+  {
+    "Risk #": "R-ID-9",
+    "Risk": "Lack of identity telemetry and anomaly detection",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Privileged Access Management (PAM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to log and detect abnormal sign-in patterns, impossible travel, risky sign-ins, and admin actions."
+  },
+  {
+    "Risk #": "R-EX-1",
+    "Risk": "Loss of revenue",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "A negative impact on the ability to generate revenue (e.g., loss of clients or inability to generate future revenue)."
+  },
+  {
+    "Risk #": "R-EX-2",
+    "Risk": "Cancelled contract",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "A cancelled contract with a client or other entity for cause (e.g., failure to fulfill obligations for secure practices)."
+  },
+  {
+    "Risk #": "R-EX-3",
+    "Risk": "Diminished competitive advantage",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Diminished competitive advantage (e.g., loss of market share, internal dysfunction, etc.)."
+  },
+  {
+    "Risk #": "R-EX-4",
+    "Risk": "Diminished reputation",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Diminished brand value (e.g., tarnished reputation)."
+  },
+  {
+    "Risk #": "R-EX-5",
+    "Risk": "Fines and judgements",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Financial damages due to fines and\/or judgements from statutory \/ regulatory \/ contractual non-compliance."
+  },
+  {
+    "Risk #": "R-EX-6",
+    "Risk": "Unmitigated vulnerabilities",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Unmitigated technical vulnerabilities that lack compensating controls or other mitigation actions."
+  },
+  {
+    "Risk #": "R-EX-7",
+    "Risk": "System compromise",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "A compromise of a system, application, or service that affects confidentiality, integrity, availability and\/or safety."
+  },
+  {
+    "Risk #": "R-EX-8",
+    "Risk": "Litigation and class actions",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Financial and operational impact from lawsuits related to cyber\/privacy\/AI incidents."
+  },
+  {
+    "Risk #": "R-EX-9",
+    "Risk": "Increased cost of capital \/ insurance",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Higher cyber insurance premiums or reduced coverage due to poor risk posture."
+  },
+  {
+    "Risk #": "R-EX-10",
+    "Risk": "Loss of strategic partnerships",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Termination or reduction of partner relationships due to security assurance failures."
+  },
+  {
+    "Risk #": "R-EX-11",
+    "Risk": "Regulatory operating restrictions",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Restrictions, remediation mandates, or consent decrees imposed by regulators due to noncompliance."
+  },
+  {
+    "Risk #": "R-EX-12",
+    "Risk": "Safety and life-impact events",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Injury, loss of life, or environmental harm due to cyber-physical incidents."
+  },
+  {
+    "Risk #": "R-GV-5",
+    "Risk": "Inadequate third-party practices",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "Insufficient Cybersecurity Supply Chain Risk Management (C\u2011SCRM) practices that cannot securely support the organization's technologies & processes."
+  },
+  {
+    "Risk #": "R-GV-9",
+    "Risk": "Inadequate enterprise risk governance",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to align cybersecurity, privacy, and AI risk management with enterprise risk management (ERM) and board oversight."
+  },
+  {
+    "Risk #": "R-GV-13",
+    "Risk": "Inadequate risk assessment methodology",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to perform consistent qualitative\/quantitative risk assessments and maintain a defensible risk register."
+  },
+  {
+    "Risk #": "R-GV-17",
+    "Risk": "Insufficient AI governance",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to define and oversee AI policies, model inventory, risk assessments, and accountability."
+  },
+  {
+    "Risk #": "R-GV-18",
+    "Risk": "Uncontrolled exception management",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Enterprise Risk Management (ERM)",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage risk exceptions with approvals, time bounds, compensating controls, and tracking."
+  },
+  {
+    "Risk #": "R-GV-6",
+    "Risk": "Lack of oversight of internal controls",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Policy, Compliance & Audit",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to demonstrate appropriate evidence of due diligence and due care in overseeing internal cybersecurity and\/or privacy controls."
+  },
+  {
+    "Risk #": "R-GV-7",
+    "Risk": "Lack of oversight of third-party controls",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Policy, Compliance & Audit",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to demonstrate appropriate evidence of due diligence and due care in overseeing third\u2011party cybersecurity and\/or privacy controls."
+  },
+  {
+    "Risk #": "R-GV-10",
+    "Risk": "Inconsistent policies and standards",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Policy, Compliance & Audit",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain coherent, current policies\/standards across regions, business units, and platforms."
+  },
+  {
+    "Risk #": "R-GV-11",
+    "Risk": "Inadequate control testing and assurance",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Policy, Compliance & Audit",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to test controls and produce evidence for audits, certifications, and customers."
+  },
+  {
+    "Risk #": "R-GV-12",
+    "Risk": "Regulatory noncompliance management gaps",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Policy, Compliance & Audit",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to track obligations and maintain a compliance posture across jurisdictions and sectors."
+  },
+  {
+    "Risk #": "R-GV-15",
+    "Risk": "Inadequate metrics and reporting",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Security Metrics & Reporting",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to produce meaningful KRIs\/KPIs and executive reporting, weakening decision-making."
+  },
+  {
+    "Risk #": "R-GV-1",
+    "Risk": "Inability to support business processes",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "Insufficient cybersecurity and\/or privacy practices that cannot securely support the organization's technologies & processes."
+  },
+  {
+    "Risk #": "R-GV-2",
+    "Risk": "Incorrect controls scoping",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "Missing or incorrect cybersecurity and\/or privacy controls due to incorrect or inadequate control scoping practices."
+  },
+  {
+    "Risk #": "R-GV-3",
+    "Risk": "Lack of roles & responsibilities",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "Insufficient cybersecurity and\/or privacy roles & responsibilities that cannot securely support the organization's technologies & processes."
+  },
+  {
+    "Risk #": "R-GV-4",
+    "Risk": "Inadequate internal practices",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "Insufficient cybersecurity and\/or privacy practices that cannot securely support the organization's technologies & processes."
+  },
+  {
+    "Risk #": "R-GV-8",
+    "Risk": "Illegal content or abusive action",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "Disruptive content or actions that negatively affect business operations (e.g., abusive content, harmful speech, threats of violence, illegal content, etc.)."
+  },
+  {
+    "Risk #": "R-GV-14",
+    "Risk": "Insufficient security architecture governance",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce reference architectures and security-by-design reviews for new initiatives."
+  },
+  {
+    "Risk #": "R-GV-16",
+    "Risk": "Inadequate data governance",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Strategy & Oversight",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to govern data ownership, lineage, classification, retention, and access controls."
+  },
+  {
+    "Risk #": "R-AM-1",
+    "Risk": "Lost, damaged or stolen asset(s)",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "Lost, damaged or stolen assets."
+  },
+  {
+    "Risk #": "R-AM-2",
+    "Risk": "Loss of integrity through unauthorized changes",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "Unauthorized changes that corrupt the integrity of the system \/ application \/ service."
+  },
+  {
+    "Risk #": "R-AM-3",
+    "Risk": "Emergent properties and\/or unintended consequences",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "Emergent properties and\/or unintended consequences from Artificial Intelligence & Autonomous Technologies (AAT)."
+  },
+  {
+    "Risk #": "R-AM-4",
+    "Risk": "Incomplete asset inventory",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to identify and maintain an accurate inventory of hardware, software, cloud resources, identities, and data stores."
+  },
+  {
+    "Risk #": "R-AM-5",
+    "Risk": "Shadow IT and unmanaged services",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and govern unapproved applications, SaaS, infrastructure, and integrations."
+  },
+  {
+    "Risk #": "R-AM-6",
+    "Risk": "Unsupported or end-of-life technology",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to retire or isolate EOL systems, increasing exposure to unpatched vulnerabilities."
+  },
+  {
+    "Risk #": "R-AM-7",
+    "Risk": "Insecure asset configuration baselines",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to define and enforce hardened baselines for servers, endpoints, network devices, and cloud services."
+  },
+  {
+    "Risk #": "R-AM-8",
+    "Risk": "Unauthorized device introduction",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent rogue devices from connecting to corporate networks or OT environments."
+  },
+  {
+    "Risk #": "R-AM-9",
+    "Risk": "Weak configuration\/change tracking",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to record and monitor configuration changes, creating unknown drift and control failures."
+  },
+  {
+    "Risk #": "R-AM-10",
+    "Risk": "Poor data asset classification",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Asset & Inventory Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to classify and tag data assets by sensitivity, criticality, and regulatory constraints."
+  },
+  {
+    "Risk #": "R-ES-1",
+    "Risk": "Malware infection and persistence",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent\/detect malware execution, persistence mechanisms, and credential theft on endpoints."
+  },
+  {
+    "Risk #": "R-ES-2",
+    "Risk": "Insufficient endpoint hardening",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to apply hardened configurations (local admin restrictions, exploit mitigations) on endpoints."
+  },
+  {
+    "Risk #": "R-ES-3",
+    "Risk": "Unmanaged BYOD and mobile risk",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage and secure mobile\/BYOD devices, enabling data leakage and unauthorized access."
+  },
+  {
+    "Risk #": "R-ES-4",
+    "Risk": "Inadequate endpoint patching",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to patch OS and applications on endpoints promptly, increasing exploitability."
+  },
+  {
+    "Risk #": "R-ES-5",
+    "Risk": "USB\/removable media exposure",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control removable media, enabling malware introduction and data theft."
+  },
+  {
+    "Risk #": "R-ES-6",
+    "Risk": "Endpoint privilege misuse",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict local admin rights and detect privilege abuse, enabling escalation."
+  },
+  {
+    "Risk #": "R-ES-7",
+    "Risk": "Insufficient EDR coverage",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to deploy and operate endpoint detection and response uniformly, creating blind spots."
+  },
+  {
+    "Risk #": "R-ES-8",
+    "Risk": "Rogue software execution",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control application execution (allowlisting, script control), enabling unauthorized tools."
+  },
+  {
+    "Risk #": "R-ES-9",
+    "Risk": "Credential theft from endpoints",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect cached credentials, browsers, and token stores, enabling lateral movement."
+  },
+  {
+    "Risk #": "R-ES-10",
+    "Risk": "Insecure virtual desktop \/ remote workstation controls",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Endpoint Security & Hardening",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to harden and monitor VDI\/jump hosts used for privileged or OT access."
+  },
+  {
+    "Risk #": "R-NS-1",
+    "Risk": "Inadequate network segmentation",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to segment networks and enforce zone boundaries, enabling lateral movement."
+  },
+  {
+    "Risk #": "R-NS-2",
+    "Risk": "Insufficient perimeter controls",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control ingress\/egress (firewalls, WAF, DDoS protections), enabling exploitation and data exfiltration."
+  },
+  {
+    "Risk #": "R-NS-3",
+    "Risk": "Unsecured remote access",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure remote access paths (VPN, ZTNA), enabling credential theft and unauthorized entry."
+  },
+  {
+    "Risk #": "R-NS-4",
+    "Risk": "DNS security failures",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect DNS (filtering, logging, DNSSEC as applicable), enabling phishing, C2, and data exfiltration."
+  },
+  {
+    "Risk #": "R-NS-5",
+    "Risk": "Insecure wireless networks",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure Wi\u2011Fi (strong auth, segmentation), enabling rogue AP, interception, and unauthorized access."
+  },
+  {
+    "Risk #": "R-NS-6",
+    "Risk": "Inadequate network detection coverage",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to collect\/inspect network telemetry to detect C2, scanning, and data exfiltration."
+  },
+  {
+    "Risk #": "R-NS-7",
+    "Risk": "Exposure of management interfaces",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict administrative interfaces (SSH, RDP, APIs) from untrusted networks."
+  },
+  {
+    "Risk #": "R-NS-8",
+    "Risk": "Misconfigured routing and ACLs",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage routing\/ACL changes safely, leading to unintended exposure and outages."
+  },
+  {
+    "Risk #": "R-NS-9",
+    "Risk": "DDoS resilience weakness",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to absorb and mitigate volumetric and application-layer DDoS attacks."
+  },
+  {
+    "Risk #": "R-NS-10",
+    "Risk": "Insecure network device hardening",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Network Defense & Segmentation",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to baseline and patch routers, switches, firewalls, and appliances, enabling compromise."
+  },
+  {
+    "Risk #": "R-EN-1",
+    "Risk": "Grid reliability impact from cyber event",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent or contain cyber events that degrade grid reliability, frequency stability, or load balancing."
+  },
+  {
+    "Risk #": "R-EN-2",
+    "Risk": "Protective relay misoperation",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure relay settings and communications, causing misoperations and outages."
+  },
+  {
+    "Risk #": "R-EN-3",
+    "Risk": "DER \/ distributed asset compromise",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure distributed energy resources and aggregators, enabling coordinated disruption."
+  },
+  {
+    "Risk #": "R-EN-4",
+    "Risk": "SCADA telemetry manipulation",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to validate telemetry integrity, leading to incorrect operational decisions."
+  },
+  {
+    "Risk #": "R-EN-5",
+    "Risk": "Market operations manipulation",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure market\/dispatch systems, enabling fraud or manipulation of energy markets."
+  },
+  {
+    "Risk #": "R-EN-6",
+    "Risk": "Blackstart\/recovery dependency failure",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure and plan blackstart\/recovery dependencies, prolonging outages."
+  },
+  {
+    "Risk #": "R-FS-1",
+    "Risk": "Payment messaging compromise",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure payment systems and messages, enabling fraud, loss, or repudiation."
+  },
+  {
+    "Risk #": "R-FS-2",
+    "Risk": "Account fraud and identity abuse",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and prevent account fraud (ATO, synthetic identity), causing financial losses."
+  },
+  {
+    "Risk #": "R-FS-3",
+    "Risk": "Market infrastructure disruption",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect trading\/clearing\/settlement systems, causing systemic operational impact."
+  },
+  {
+    "Risk #": "R-FS-4",
+    "Risk": "Operational resilience noncompliance",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to meet resilience obligations (impact tolerances, testing, third-party oversight) where applicable."
+  },
+  {
+    "Risk #": "R-FS-5",
+    "Risk": "Data confidentiality breach of customer PII",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect regulated customer data, causing legal and reputational harm."
+  },
+  {
+    "Risk #": "R-FS-6",
+    "Risk": "Third-party concentration and systemic dependency",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage systemic dependency on a small number of critical ICT providers."
+  },
+  {
+    "Risk #": "R-OG-1",
+    "Risk": "Pipeline operational disruption",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure pipeline control systems and operations, causing shutdowns or unsafe operating conditions."
+  },
+  {
+    "Risk #": "R-OG-2",
+    "Risk": "Integrity monitoring data tampering",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect integrity monitoring systems and data, leading to undetected hazards."
+  },
+  {
+    "Risk #": "R-OG-3",
+    "Risk": "Contractor ecosystem compromise",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure contractor access and tooling across geographically distributed operations."
+  },
+  {
+    "Risk #": "R-OG-4",
+    "Risk": "Environmental and safety incident escalation",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and respond to cyber-physical events that trigger spills, releases, or safety incidents."
+  },
+  {
+    "Risk #": "R-OG-5",
+    "Risk": "Regulatory reporting noncompliance",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to meet sector regulatory reporting and security directive requirements during incidents."
+  },
+  {
+    "Risk #": "R-TC-1",
+    "Risk": "Signaling exploitation and interception",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect signaling and core network functions, enabling interception, fraud, or disruption."
+  },
+  {
+    "Risk #": "R-TC-2",
+    "Risk": "Subscriber identity\/provisioning fraud",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure provisioning workflows (SIM, eSIM), enabling account takeover and fraud."
+  },
+  {
+    "Risk #": "R-TC-3",
+    "Risk": "5G network slice isolation failure",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to isolate network slices and tenants, enabling cross-slice attacks."
+  },
+  {
+    "Risk #": "R-TC-4",
+    "Risk": "DDoS at carrier scale",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to mitigate large-scale DDoS impacting customer services and critical communications."
+  },
+  {
+    "Risk #": "R-TC-5",
+    "Risk": "Supply chain compromise in network equipment",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to validate integrity of RAN\/core equipment and updates, enabling persistent compromise."
+  },
+  {
+    "Risk #": "R-TR-1",
+    "Risk": "Disruption of transportation operations",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent cyber disruption of scheduling, dispatch, or control systems, impacting safety and continuity."
+  },
+  {
+    "Risk #": "R-TR-2",
+    "Risk": "Navigation and positioning integrity loss",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect GPS\/GNSS and navigation data, enabling spoofing\/jamming and unsafe routing."
+  },
+  {
+    "Risk #": "R-TR-3",
+    "Risk": "Aviation\/MRO ecosystem compromise",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure maintenance, repair, and operations systems and supply chain, leading to safety and compliance risk."
+  },
+  {
+    "Risk #": "R-TR-4",
+    "Risk": "Port\/terminal OT compromise",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure cranes, gates, and terminal OT systems, causing disruption and safety hazards."
+  },
+  {
+    "Risk #": "R-TR-5",
+    "Risk": "Vehicle\/rolling stock cybersecurity failures",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure connected vehicles and onboard systems, enabling remote manipulation or privacy breaches."
+  },
+  {
+    "Risk #": "R-OT-1",
+    "Risk": "Loss of view \/ loss of control",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain reliable monitoring and control of OT processes due to cyber compromise or control system failure."
+  },
+  {
+    "Risk #": "R-OT-2",
+    "Risk": "Inadequate IT\/OT network segmentation",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to enforce zones and conduits between IT and OT, enabling lateral movement into control systems."
+  },
+  {
+    "Risk #": "R-OT-3",
+    "Risk": "Insecure remote access to OT",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure vendor\/engineer remote access to OT environments, enabling unauthorized control actions."
+  },
+  {
+    "Risk #": "R-OT-4",
+    "Risk": "Compromise of engineering workstations",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect engineering workstations and tooling, enabling logic changes and unsafe configurations."
+  },
+  {
+    "Risk #": "R-OT-5",
+    "Risk": "Unauthorized PLC\/RTU logic changes",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect and prevent unauthorized changes to controller logic and setpoints."
+  },
+  {
+    "Risk #": "R-OT-6",
+    "Risk": "Insecure OT protocols",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect inherently insecure industrial protocols, enabling spoofing, replay, and manipulation."
+  },
+  {
+    "Risk #": "R-OT-7",
+    "Risk": "Patch constraints and legacy exposure",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to patch OT components due to availability\/safety constraints without compensating controls."
+  },
+  {
+    "Risk #": "R-OT-8",
+    "Risk": "Safety system interaction failure",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage interactions between cybersecurity controls and safety instrumented systems, causing unsafe states."
+  },
+  {
+    "Risk #": "R-OT-9",
+    "Risk": "Supply chain compromise of OT components",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to validate integrity of OT firmware\/software updates and vendor packages."
+  },
+  {
+    "Risk #": "R-OT-10",
+    "Risk": "Inadequate OT asset inventory",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to discover and manage OT assets, firmware versions, and network paths."
+  },
+  {
+    "Risk #": "R-OT-11",
+    "Risk": "Inadequate OT logging and detection",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to collect OT telemetry and detect abnormal process behavior and cyber indicators."
+  },
+  {
+    "Risk #": "R-OT-12",
+    "Risk": "Unauthorized physical access to OT sites",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect substations, plants, and field cabinets from tampering and rogue connections."
+  },
+  {
+    "Risk #": "R-OT-13",
+    "Risk": "OT incident response immaturity",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to execute OT-safe IR playbooks (containment, recovery) without safety\/availability harm."
+  },
+  {
+    "Risk #": "R-OT-14",
+    "Risk": "Inadequate OT resilience and recovery",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restore OT operations and configurations after compromise (golden configs, backups, re-image)."
+  },
+  {
+    "Risk #": "R-PH-3",
+    "Risk": "Loss of critical assets in transit",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure logistics and transport of sensitive assets (hardware, media), enabling compromise."
+  },
+  {
+    "Risk #": "R-PH-5",
+    "Risk": "Physical tampering with network\/OT equipment",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect field devices, cabinets, and network gear from tampering."
+  },
+  {
+    "Risk #": "R-SA-2",
+    "Risk": "Lack of a security-minded workforce",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to appropriately educate and train personnel to foster a security-minded workforce."
+  },
+  {
+    "Risk #": "R-HR-1",
+    "Risk": "Insider threat exploitation",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent, detect, and respond to malicious or negligent insider behavior."
+  },
+  {
+    "Risk #": "R-HR-2",
+    "Risk": "Inadequate background screening for sensitive roles",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to perform risk-based screening and periodic re-screening for privileged positions."
+  },
+  {
+    "Risk #": "R-HR-3",
+    "Risk": "Poor security training effectiveness",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to deliver role-based training that changes behavior, leading to persistent human-factor risk."
+  },
+  {
+    "Risk #": "R-HR-4",
+    "Risk": "Social engineering susceptibility",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to reduce susceptibility to phishing\/vishing\/smishing and impersonation attacks."
+  },
+  {
+    "Risk #": "R-HR-5",
+    "Risk": "Privileged workforce misuse",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to monitor and enforce acceptable use for privileged personnel and contractors."
+  },
+  {
+    "Risk #": "R-HR-6",
+    "Risk": "Offboarding process failures",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Personnel Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to deprovision identities, recover assets, and revoke access promptly at termination."
+  },
+  {
+    "Risk #": "R-PH-1",
+    "Risk": "Unauthorized physical access",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Physical Environmental Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict physical access to facilities, data centers, and critical rooms, enabling tampering and theft."
+  },
+  {
+    "Risk #": "R-PH-2",
+    "Risk": "Environmental control failures",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Physical Environmental Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain HVAC, power, fire suppression, and environmental controls, leading to outages and damage."
+  },
+  {
+    "Risk #": "R-PH-4",
+    "Risk": "Visitor management failures",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Physical Environmental Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control visitor access and escorting, enabling social engineering and unauthorized access."
+  },
+  {
+    "Risk #": "R-PH-6",
+    "Risk": "Insufficient surveillance and detection",
+    "DTOM Domain": "Personnel & Physical Security",
+    "DTOM Functional Domain": "Physical Environmental Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect unauthorized access attempts through monitoring and alarms."
+  },
+  {
+    "Risk #": "R-SC-1",
+    "Risk": "Third-party cybersecurity exposure",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "Loss of Confidentiality, Integrity, Availability and\/or Safety (CIAS) from third\u2011party cybersecurity practices, vulnerabilities and\/or incidents impacting products\/services."
+  },
+  {
+    "Risk #": "R-SC-2",
+    "Risk": "Third-party physical security exposure",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "Loss of CIAS from physical security exposure of third\u2011party structures, facilities and\/or physical assets impacting products\/services."
+  },
+  {
+    "Risk #": "R-SC-3",
+    "Risk": "Third-party supply chain relationships, visibility and controls",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "Loss of CIAS from downstream third\u2011party relationships, visibility, and controls impacting products\/services."
+  },
+  {
+    "Risk #": "R-SC-12",
+    "Risk": "Software supply chain compromise",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to assure integrity of software provenance, build pipelines, updates, and dependencies."
+  },
+  {
+    "Risk #": "R-SC-13",
+    "Risk": "Counterfeit or tampered hardware",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to validate hardware authenticity and secure logistics, leading to embedded compromise."
+  },
+  {
+    "Risk #": "R-SC-14",
+    "Risk": "Open-source governance failure",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage OSS use (SBOMs, vulnerability response, licensing), increasing security and legal exposure."
+  },
+  {
+    "Risk #": "R-SC-4",
+    "Risk": "Third-party compliance \/ legal exposure",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to maintain compliance due to third\u2011party non\u2011compliance, criminal acts, or other relevant legal actions."
+  },
+  {
+    "Risk #": "R-SC-5",
+    "Risk": "Use of product \/ service",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The misuse of the product\/service in a manner it was not designed for or approved for use."
+  },
+  {
+    "Risk #": "R-SC-6",
+    "Risk": "Reliance on the third-party",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to continue business operations due to reliance on a third\u2011party product and\/or service."
+  },
+  {
+    "Risk #": "R-SC-7",
+    "Risk": "Insufficient vendor due diligence",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to evaluate vendor security, privacy, and resilience controls before onboarding."
+  },
+  {
+    "Risk #": "R-SC-8",
+    "Risk": "Inadequate contract and SLA security clauses",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to require security, audit, incident notification, and right-to-test provisions in contracts."
+  },
+  {
+    "Risk #": "R-SC-9",
+    "Risk": "Insufficient ongoing monitoring",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to continuously monitor third-party risk (changes, breaches, control drift)."
+  },
+  {
+    "Risk #": "R-SC-10",
+    "Risk": "Fourth-party and sub-processor opacity",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to understand downstream dependencies and sub-processors that introduce hidden risk."
+  },
+  {
+    "Risk #": "R-SC-11",
+    "Risk": "Third-party access pathway exposure",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to control vendor remote access and privileged operations, enabling lateral entry."
+  },
+  {
+    "Risk #": "R-SC-15",
+    "Risk": "Critical vendor concentration",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to manage concentration risk in MSPs, SaaS, or critical infrastructure providers."
+  },
+  {
+    "Risk #": "R-SC-16",
+    "Risk": "Third-party incident response misalignment",
+    "DTOM Domain": "Third-Party Risk Management",
+    "DTOM Functional Domain": "Vendor Risk Governance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to integrate vendor IR processes and evidence sharing for coordinated containment."
+  },
+  {
+    "Risk #": "R-AI-13",
+    "Risk": "Agent Goal Hijack & Loop",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent attackers from manipulating an autonomous agent's goal, leading to infinite loops, resource exhaustion, or the agent pursuing malicious objectives.1"
+  },
+  {
+    "Risk #": "R-AI-14",
+    "Risk": "Unsafe Autonomous Tool Execution",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Emerging Tech Defense",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to restrict AI agents from executing high-impact actions (e.g., database deletes, financial transfers) without human-in-the-loop authorization.12"
+  },
+  {
+    "Risk #": "R-AI-15",
+    "Risk": "Multi-Agent Coordination Failure",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "AI Governance & Safety",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to prevent \"cascading failures\" where one compromised agent in a swarm corrupts the context or instructions of downstream agents.13"
+  },
+  {
+    "Risk #": "R-AI-16",
+    "Risk": "Insecure Model Serialization",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Secure Software Development (SSDLC)",
+    "Description of Possible Risk Due To Control Deficiency": "The use of unsafe serialization formats (e.g., Pickle) instead of safe alternatives (e.g., Safetensors), allowing arbitrary code execution upon model loading.45"
+  },
+  {
+    "Risk #": "R-AI-17",
+    "Risk": "Lack of AI Model Provenance",
+    "DTOM Domain": "AI & Emerging Technology Security",
+    "DTOM Functional Domain": "Acquisition & Supply Chain",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to verify the origin, training data, and integrity of third-party models using standards like C2PA or model signing, leading to the use of tampered models.67"
+  },
+  {
+    "Risk #": "R-PQ-1",
+    "Risk": "\"Harvest Now, Decrypt Later\" (HNDL) Exposure",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect long-lived sensitive data (e.g., trade secrets, genomic data) against future decryption by quantum computers, violating secrecy lifetime requirements.89"
+  },
+  {
+    "Risk #": "R-PQ-2",
+    "Risk": "Post-Quantum Migration Failure",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Cryptography & Key Management",
+    "Description of Possible Risk Due To Control Deficiency": "The failure to inventory and migrate cryptographic assets to quantum-resistant standards (FIPS 203\/204\/205) before Cryptographically Relevant Quantum Computers (CRQC) become available.1011"
+  },
+  {
+    "Risk #": "R-NEU-1",
+    "Risk": "Neural Data Privacy Violation",
+    "DTOM Domain": "Data Privacy & Protection",
+    "DTOM Functional Domain": "Privacy & Regulatory Compliance",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to segregate and protect \"neural data\" (brain activity) as a distinct, high-risk category of sensitive data, violating emerging laws in jurisdictions like Chile, Brazil, and Mexico.1213"
+  },
+  {
+    "Risk #": "R-ID-11",
+    "Risk": "Synthetic Identity & Deepfake Bypass",
+    "DTOM Domain": "Identity and Access Management",
+    "DTOM Functional Domain": "Identity Assurance, Credentials, and Decentralized Identity",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to detect AI-generated deepfakes (voice\/video) during identity verification and biometric checks, leading to fraudulent account creation or access.14"
+  },
+  {
+    "Risk #": "R-BIO-1",
+    "Risk": "Genomic Data Exfiltration",
+    "DTOM Domain": "Critical Infrastructure Protection",
+    "DTOM Functional Domain": "Bio-Economy Security",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to protect genomic sequences and bio-manufacturing data from targeted theft, risking IP loss and biosecurity events (referenced by Bio-ISAC).15"
+  },
+  {
+    "Risk #": "R-SPC-1",
+    "Risk": "Orbital Asset Command Intrusion",
+    "DTOM Domain": "Infrastructure & Network Security",
+    "DTOM Functional Domain": "Critical Infrastructure Protection",
+    "Description of Possible Risk Due To Control Deficiency": "The inability to secure command-and-control links for space assets against spoofing or jamming, leading to loss of control over satellites (referenced by Space-ISAC\/SPARTA).16"
+  },
+  {
+    "Risk #": "R-GV-19",
+    "Risk": "Lack of AI Systems Management (AIMS) Certification",
+    "DTOM Domain": "Information Security Governance",
+    "DTOM Functional Domain": "Policy, Compliance & Audit",
+    "Description of Possible Risk Due To Control Deficiency": "The failure to align with ISO\/IEC 42001, resulting in an inability to demonstrate a certifiable standard of care for AI governance to regulators and partners.1718"
+  }
+]

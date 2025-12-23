@@ -6,9 +6,9 @@ from neo4j import GraphDatabase
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-URL = 'neo4j+ssc://06a4e5ca.databases.neo4j.io'
+URL = 'neo4j+ssc://c3817e12.databases.neo4j.io'
 USER = 'neo4j'
-PASSWORD = "02nTJ1LdUkeZsp24mwimXlZjZA9omoOifRTcQQnT84g"
+PASSWORD = "SWW9jwnrevGhRXNzQhEJuam4wLOTtgkcSwtjI-yWrtE"
 
 
 class Neo4jConnect:
@@ -35,4 +35,5 @@ class Neo4jConnect:
                     result = session.run(query)
                 return [record.data() for record in result]
         except Exception as e:
+            logger.error(e)
             return str(e)
