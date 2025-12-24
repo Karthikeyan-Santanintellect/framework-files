@@ -92,8 +92,8 @@ CALL {
 control_CSF_function ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-MERGE (fun:CSF_Function {code: trim(row.'NIST CSF v2.0 Function')})
-MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_FUNCTION]->(fun)
+MERGE (fun:CSF_Function {code: trim(row.NIST_CSF_Function)})
+MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(fun)
 RETURN count(*) AS relationships_created;
 """
 #control -> CSF Categories
@@ -101,7 +101,7 @@ control_CSF_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
 MERGE (cat:CSF_Category {code: trim(row.NIST_CSF_Category)})
-MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_CATEGORY]->(cat)
+MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(cat)
 RETURN count(*) AS relationships_created;
 """
 #control -> CSF Subcategories
@@ -109,7 +109,7 @@ control_CSF_subcategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
 MERGE (sub:CSF_Subcategory {code: trim(row.NIST_CSF_Subcategory)})
-MERGE (c)-[:SCF_CONTROLS_MAPS_TO_NIST_CSF_SUBCATEGORY]->(sub)
+MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(sub)
 RETURN count(*) AS relationships_created;
 """
 

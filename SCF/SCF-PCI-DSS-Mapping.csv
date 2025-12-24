@@ -1,0 +1,222 @@
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,PCI_DSS_Requirement,PCI_DSS_Sub_Requirement
+Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,12,12.1.1
+Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,12,12.1.1
+Cybersecurity Data Privacy Governance,GOV,GOV-01.2,Executive Leadership Engagement,12,12.1.1
+Cybersecurity Data Privacy Governance,GOV,GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,12,12.1.1
+Cybersecurity Data Privacy Governance,GOV,GOV-02.1,Applicable Requirements Assessment,12,12.2.1
+Cybersecurity Data Privacy Governance,GOV,GOV-02.2,Requirements Integration,12,12.2.1
+Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,12,12.1.1
+Cybersecurity Data Privacy Governance,GOV,GOV-03.1,Risk Assessment Program,12,12.6.1
+Cybersecurity Data Privacy Governance,GOV,GOV-03.2,Risk Response Program,12,12.6.2
+Artificial and Autonomous Technology,AAT,AAT-01,Artificial Intelligence AI and Autonomous Technologies Governance,12,12.1.1
+Artificial and Autonomous Technology,AAT,AAT-01.1,AI and Autonomous Technologies-Related Legal Requirements Definition,12,12.2.1
+Artificial and Autonomous Technology,AAT,AAT-01.2,Trustworthy AI and Autonomous Technologies,2,2.1.1
+Artificial and Autonomous Technology,AAT,AAT-01.3,AI and Autonomous Technologies Value Sustainment,6,6.1.1
+Artificial and Autonomous Technology,AAT,AAT-02,Situational Awareness of AI and Autonomous Technologies,12,12.3.1
+Artificial and Autonomous Technology,AAT,AAT-02.1,AI and Autonomous Technologies Risk Mapping,12,12.6.1
+Artificial and Autonomous Technology,AAT,AAT-02.2,AI and Autonomous Technologies Internal Controls,2,2.2.1
+Artificial and Autonomous Technology,AAT,AAT-02.3,Adequate Protections For AI and Autonomous Technologies,6,6.2.1
+Artificial and Autonomous Technology,AAT,AAT-03,AI and Autonomous Technologies Context Definition,10,10.1.1
+Artificial and Autonomous Technology,AAT,AAT-04,AI and Autonomous Technologies Data Governance,3,3.1.1
+Artificial and Autonomous Technology,AAT,AAT-05,AI and Autonomous Technologies Transparency,10,10.2.1
+Artificial and Autonomous Technology,AAT,AAT-06,AI and Autonomous Technologies Impact Assessment,12,12.1.1
+Artificial and Autonomous Technology,AAT,AAT-07,AI and Autonomous Technologies Testing,6,6.3.1
+Asset Management,AST,AST-01,Asset Management Program,1,1.1.1
+Asset Management,AST,AST-01.1,Asset Dependency Analysis,2,2.1.1
+Asset Management,AST,AST-01.2,Asset Inventory Accuracy,2,2.4.1
+Asset Management,AST,AST-01.3,Asset Lifecycle Management,2,2.1.1
+Asset Management,AST,AST-02,Asset Tracking and Management,12,12.3.1
+Asset Management,AST,AST-02.1,Asset Location Monitoring,10,10.1.1
+Asset Management,AST,AST-02.2,Asset Status Tracking,10,10.3.1
+Asset Management,AST,AST-03,Device Management,2,2.1.1
+Business Continuity and Disaster Recovery,BCD,BCD-01,Business Continuity and Disaster Recovery Program,12,12.9.1
+Business Continuity and Disaster Recovery,BCD,BCD-01.1,Business Continuity Plan,12,12.10.1
+Business Continuity and Disaster Recovery,BCD,BCD-01.2,Disaster Recovery Plan,12,12.10.1
+Business Continuity and Disaster Recovery,BCD,BCD-01.3,Business Continuity Testing,12,12.11.1
+Business Continuity and Disaster Recovery,BCD,BCD-02,Recovery Time Objective RTO Definition,12,12.10.1
+Business Continuity and Disaster Recovery,BCD,BCD-02.1,Recovery Point Objective RPO Definition,12,12.10.1
+Business Continuity and Disaster Recovery,BCD,BCD-03,Business Continuity Review,12,12.11.1
+Capacity and Performance Planning,CAP,CAP-01,Capacity Assessment Program,12,12.1.1
+Capacity and Performance Planning,CAP,CAP-01.1,Capacity Planning,2,2.1.1
+Capacity and Performance Planning,CAP,CAP-02,Performance Monitoring,10,10.1.1
+Capacity and Performance Planning,CAP,CAP-02.1,Capacity Trending,10,10.3.1
+Change Management,CHG,CHG-01,Change Management Program,6,6.4.1
+Change Management,CHG,CHG-01.1,Change Authorization,6,6.5.1
+Change Management,CHG,CHG-01.2,Change Implementation,6,6.4.1
+Change Management,CHG,CHG-02,Change Tracking,10,10.2.1
+Change Management,CHG,CHG-02.1,Change Documentation,10,10.2.1
+Cloud Security,CLD,CLD-01,Cloud Security Program,12,12.1.1
+Cloud Security,CLD,CLD-01.1,Cloud Risk Assessment,12,12.6.1
+Cloud Security,CLD,CLD-01.2,Cloud Security Controls,2,2.1.1
+Cloud Security,CLD,CLD-02,Cloud Configuration Management,2,2.2.1
+Cloud Security,CLD,CLD-02.1,Cloud Asset Management,2,2.4.1
+Cloud Security,CLD,CLD-02.2,Cloud Access Control,7,7.1.1
+Compliance,CPL,CPL-01,Compliance Monitoring Program,12,12.1.1
+Compliance,CPL,CPL-01.1,Compliance Assessment,12,12.2.1
+Compliance,CPL,CPL-01.2,Compliance Remediation,12,12.12.1
+Compliance,CPL,CPL-02,Compliance Reporting,12,12.8.1
+Compliance,CPL,CPL-02.1,Audit Response,12,12.2.1
+Configuration Management,CFG,CFG-01,Configuration Management Program,2,2.1.1
+Configuration Management,CFG,CFG-01.1,Configuration Standards,2,2.2.1
+Configuration Management,CFG,CFG-01.2,Configuration Baseline,2,2.1.1
+Configuration Management,CFG,CFG-02,Configuration Change Control,6,6.5.1
+Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,10,10.1.1
+Continuous Monitoring,MON,MON-01.1,Event Log Centralized Collection,10,10.5.1
+Continuous Monitoring,MON,MON-01.2,Event Log Preservation,10,10.7.1
+Continuous Monitoring,MON,MON-01.3,Event Log Correlation and Analysis,10,10.6.1
+Continuous Monitoring,MON,MON-01.4,Event Log Anomaly Detection,10,10.6.1
+Continuous Monitoring,MON,MON-02,Continuous Monitoring Automation,10,10.3.1
+Continuous Monitoring,MON,MON-02.1,Automated Event Collection,10,10.5.1
+Continuous Monitoring,MON,MON-02.2,Automated Event Analysis,10,10.6.1
+Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,4,4.1.1
+Cryptographic Protections,CRY,CRY-01.1,Cryptographic Algorithm Standards,4,4.1.1
+Cryptographic Protections,CRY,CRY-02,Cryptographic At Rest,3,3.2.1
+Cryptographic Protections,CRY,CRY-03,Cryptographic In Transit,4,4.1.1
+Cryptographic Protections,CRY,CRY-04,Key Management,3,3.5.1
+Cryptographic Protections,CRY,CRY-04.1,Key Generation,3,3.5.1
+Cryptographic Protections,CRY,CRY-05,Key Management Practices,3,3.5.1
+Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,3,3.1.1
+Data Classification and Handling,DCH,DCH-01.1,Data Classification Standards,3,3.1.1
+Data Classification and Handling,DCH,DCH-01.2,Data Classification Implementation,3,3.1.1
+Data Classification and Handling,DCH,DCH-01.3,Sensitive Data Inventory,3,3.1.1
+Data Classification and Handling,DCH,DCH-01.4,Data Handling Practices,3,3.2.1
+Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,3,3.2.1
+Data Classification and Handling,DCH,DCH-02.1,Data Storage Standards,3,3.2.1
+Data Classification and Handling,DCH,DCH-02.2,Data Transmission Standards,4,4.1.1
+Embedded Technology,EMB,EMB-01,Embedded Systems Security Program,2,2.1.1
+Embedded Technology,EMB,EMB-01.1,Embedded Systems Risk Assessment,12,12.6.1
+Embedded Technology,EMB,EMB-01.2,Embedded Systems Security Controls,2,2.2.1
+Embedded Technology,EMB,EMB-02,Firmware Hardening,2,2.1.1
+Embedded Technology,EMB,EMB-02.1,Firmware Updates and Patches,6,6.2.1
+Endpoint Security,END,END-01,Endpoint Security Program,2,2.1.1
+Endpoint Security,END,END-01.1,Endpoint Asset Inventory,2,2.4.1
+Endpoint Security,END,END-01.2,Endpoint Security Standards,2,2.2.1
+Endpoint Security,END,END-02,Endpoint Hardening,2,2.1.1
+Endpoint Security,END,END-02.1,Malware Protection,5,5.1.1
+Endpoint Security,END,END-02.2,Host-based Firewall,1,1.2.1
+Endpoint Security,END,END-03,Endpoint Monitoring,10,10.1.1
+Human Resources Security,HRS,HRS-01,Human Resources Security Program,12,12.1.1
+Human Resources Security,HRS,HRS-01.1,Hiring Practices,12,12.7.1
+Human Resources Security,HRS,HRS-01.2,Background Checks,12,12.7.1
+Human Resources Security,HRS,HRS-02,Personnel Management,12,12.8.1
+Human Resources Security,HRS,HRS-02.1,Role-Based Responsibilities,7,7.1.1
+Human Resources Security,HRS,HRS-02.2,Termination Procedures,7,7.1.2
+Human Resources Security,HRS,HRS-03,Security Awareness Training,12,12.6.1
+Identification and Authentication,IAC,IAC-01,Identity and Access Management Program,7,7.1.1
+Identification and Authentication,IAC,IAC-01.1,Identity Management System,7,7.1.1
+Identification and Authentication,IAC,IAC-01.2,User Account Management,8,8.1.1
+Identification and Authentication,IAC,IAC-02,Authentication Mechanisms,8,8.2.1
+Identification and Authentication,IAC,IAC-02.1,Password Management,8,8.2.3
+Identification and Authentication,IAC,IAC-02.2,Multi-Factor Authentication,8,8.3.1
+Identification and Authentication,IAC,IAC-03,Access Control Enforcement,7,7.1.1
+Identification and Authentication,IAC,IAC-03.1,Least Privilege,7,7.1.2
+Identification and Authentication,IAC,IAC-03.2,Separation of Duties,7,7.1.1
+Identification and Authentication,IAC,IAC-04,Account Monitoring,10,10.2.1
+Incident Response,IRO,IRO-01,Incident Response Program,12,12.9.1
+Incident Response,IRO,IRO-01.1,Incident Response Plan,12,12.10.1
+Incident Response,IRO,IRO-01.2,Incident Response Training,12,12.6.1
+Incident Response,IRO,IRO-02,Incident Detection and Analysis,10,10.6.1
+Incident Response,IRO,IRO-02.1,Security Monitoring,10,10.1.1
+Incident Response,IRO,IRO-03,Incident Containment and Recovery,12,12.10.1
+Incident Response,IRO,IRO-03.1,Incident Communication,12,12.10.1
+Incident Response,IRO,IRO-04,Data Breach Notification,12,12.10.1
+Information Assurance,IAO,IAO-01,Information Assurance Program,6,6.1.1
+Information Assurance,IAO,IAO-01.1,Security Assessment Program,12,12.1.1
+Information Assurance,IAO,IAO-01.2,Assessment Execution,11,11.1.1
+Information Assurance,IAO,IAO-02,Control Testing,11,11.3.1
+Information Assurance,IAO,IAO-02.1,Assessment Documentation,12,12.2.1
+Information Assurance,IAO,IAO-03,Penetration Testing,11,11.4.1
+Maintenance,MNT,MNT-01,Maintenance Program,2,2.1.1
+Maintenance,MNT,MNT-01.1,Vendor Patch Management,6,6.2.1
+Maintenance,MNT,MNT-01.2,Maintenance Scheduling,6,6.3.1
+Maintenance,MNT,MNT-02,End-of-Life Asset Management,2,2.1.1
+Maintenance,MNT,MNT-02.1,Unsupported Systems,2,2.1.1
+Mobile Device Management,MDM,MDM-01,Mobile Device Management Program,2,2.1.1
+Mobile Device Management,MDM,MDM-01.1,Mobile Device Inventory,2,2.4.1
+Mobile Device Management,MDM,MDM-01.2,Mobile Device Security Controls,2,2.2.1
+Mobile Device Management,MDM,MDM-02,Mobile Device Access Control,7,7.1.1
+Mobile Device Management,MDM,MDM-02.1,Remote Access Protection,8,8.3.1
+Mobile Device Management,MDM,MDM-03,Mobile Device Monitoring,10,10.1.1
+Network Security,NET,NET-01,Network Security Program,1,1.1.1
+Network Security,NET,NET-01.1,Network Architecture,1,1.2.1
+Network Security,NET,NET-01.2,Network Design,1,1.1.1
+Network Security,NET,NET-02,Firewall Configuration,1,1.3.1
+Network Security,NET,NET-02.1,Firewall Rule Management,1,1.3.1
+Network Security,NET,NET-02.2,Network Segmentation,1,1.2.1
+Network Security,NET,NET-03,Intrusion Detection,10,10.6.1
+Network Security,NET,NET-03.1,Network Monitoring,10,10.1.1
+Network Security,NET,NET-04,Wireless Network Security,1,1.2.1
+Network Security,NET,NET-05,VPN Security,4,4.1.1
+Physical Environmental Security,PES,PES-01,Physical Security Program,12,12.1.1
+Physical Environmental Security,PES,PES-01.1,Physical Access Controls,9,9.1.1
+Physical Environmental Security,PES,PES-01.2,Physical Perimeter,9,9.1.1
+Physical Environmental Security,PES,PES-02,Environmental Controls,9,9.1.1
+Physical Environmental Security,PES,PES-02.1,Facility Monitoring,9,9.1.1
+Physical Environmental Security,PES,PES-03,Media Protection,9,9.5.1
+Physical Environmental Security,PES,PES-03.1,Media Storage,9,9.6.1
+Physical Environmental Security,PES,PES-03.2,Media Disposal,9,9.8.1
+Data Privacy,PRI,PRI-01,Data Privacy Program,12,12.1.1
+Data Privacy,PRI,PRI-01.1,Privacy by Design,12,12.1.1
+Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,12,12.6.1
+Data Privacy,PRI,PRI-02,Personal Data Protection,3,3.1.1
+Data Privacy,PRI,PRI-02.1,Data Subject Rights,12,12.1.1
+Data Privacy,PRI,PRI-03,Data Retention and Disposal,3,3.2.1
+Data Privacy,PRI,PRI-03.1,Secure Disposal,9,9.8.1
+Project Resource Management,PRM,PRM-01,Project Management Program,12,12.1.1
+Project Resource Management,PRM,PRM-01.1,Security in SDLC,6,6.1.1
+Project Resource Management,PRM,PRM-01.2,Project Planning,12,12.1.1
+Project Resource Management,PRM,PRM-02,Resource Allocation,12,12.1.1
+Project Resource Management,PRM,PRM-02.1,Budget Management,12,12.1.1
+Risk Management,RSK,RSK-01,Risk Management Program,12,12.6.1
+Risk Management,RSK,RSK-01.1,Risk Assessment,12,12.6.1
+Risk Management,RSK,RSK-01.2,Risk Prioritization,12,12.6.1
+Risk Management,RSK,RSK-02,Risk Response,12,12.6.2
+Risk Management,RSK,RSK-02.1,Risk Mitigation,12,12.6.2
+Risk Management,RSK,RSK-02.2,Risk Acceptance,12,12.6.2
+Risk Management,RSK,RSK-03,Risk Monitoring,12,12.6.1
+Secure Engineering Architecture,SEA,SEA-01,Secure Engineering Program,6,6.1.1
+Secure Engineering Architecture,SEA,SEA-01.1,Secure Design Principles,6,6.1.1
+Secure Engineering Architecture,SEA,SEA-01.2,Architecture Review,6,6.3.1
+Secure Engineering Architecture,SEA,SEA-02,Secure Code Development,6,6.3.1
+Secure Engineering Architecture,SEA,SEA-02.1,Code Review,6,6.3.1
+Secure Engineering Architecture,SEA,SEA-02.2,Secure Coding Standards,6,6.5.1
+Security Operations,OPS,OPS-01,Security Operations Program,12,12.1.1
+Security Operations,OPS,OPS-01.1,SOC Establishment,10,10.1.1
+Security Operations,OPS,OPS-01.2,SOC Operations,10,10.1.1
+Security Operations,OPS,OPS-02,Event Management,10,10.1.1
+Security Operations,OPS,OPS-02.1,Alert Handling,10,10.6.1
+Security Operations,OPS,OPS-03,Log Management,10,10.7.1
+Security Awareness Training,SAT,SAT-01,Security Awareness Program,12,12.6.1
+Security Awareness Training,SAT,SAT-01.1,Awareness Training,12,12.6.1
+Security Awareness Training,SAT,SAT-01.2,Phishing Training,12,12.6.1
+Security Awareness Training,SAT,SAT-02,Training Effectiveness,12,12.6.1
+Security Awareness Training,SAT,SAT-02.1,Training Assessment,12,12.6.1
+Technology Development Acquisition,TDA,TDA-01,Technology Development Program,6,6.1.1
+Technology Development Acquisition,TDA,TDA-01.1,Development Framework,6,6.1.1
+Technology Development Acquisition,TDA,TDA-01.2,Security Requirements,6,6.1.1
+Technology Development Acquisition,TDA,TDA-02,Acquisition Program,6,6.1.1
+Technology Development Acquisition,TDA,TDA-02.1,Vendor Evaluation,12,12.8.1
+Technology Development Acquisition,TDA,TDA-03,Secure Development Lifecycle,6,6.3.1
+Third-Party Management,TPM,TPM-01,Third-Party Management Program,12,12.8.1
+Third-Party Management,TPM,TPM-01.1,Third-Party Risk Assessment,12,12.8.2
+Third-Party Management,TPM,TPM-01.2,Third-Party Agreements,12,12.8.3
+Third-Party Management,TPM,TPM-02,Third-Party Monitoring,12,12.8.4
+Third-Party Management,TPM,TPM-02.1,Performance Evaluation,12,12.8.5
+Third-Party Management,TPM,TPM-03,Service Provider Inventory,12,12.8.1
+Threat Management,THR,THR-01,Threat Management Program,12,12.6.1
+Threat Management,THR,THR-01.1,Threat Intelligence,12,12.6.1
+Threat Management,THR,THR-01.2,Threat Assessment,12,12.6.1
+Threat Management,THR,THR-02,Threat Response,12,12.6.2
+Threat Management,THR,THR-03,Vulnerability Scanning,11,11.3.1
+Vulnerability Patch Management,VPM,VPM-01,Vulnerability Management Program,6,6.2.1
+Vulnerability Patch Management,VPM,VPM-01.1,Vulnerability Assessment,11,11.3.1
+Vulnerability Patch Management,VPM,VPM-01.2,Patch Management,6,6.2.1
+Vulnerability Patch Management,VPM,VPM-02,Vulnerability Remediation,6,6.2.1
+Vulnerability Patch Management,VPM,VPM-02.1,Vulnerability Tracking,11,11.3.1
+Vulnerability Patch Management,VPM,VPM-03,Critical Vulnerability Response,6,6.2.1
+Web Security,WEB,WEB-01,Web Security Program,6,6.5.1
+Web Security,WEB,WEB-01.1,Web Application Security,6,6.5.1
+Web Security,WEB,WEB-01.2,Web Server Hardening,2,2.1.1
+Web Security,WEB,WEB-02,Web Security Monitoring,10,10.1.1
+Web Security,WEB,WEB-02.1,Log Monitoring,10,10.1.1
+Web Security,WEB,WEB-03,Input Validation,6,6.5.1
