@@ -1,6 +1,6 @@
-#Regulation
+'GLBA 1999'#Regulation
 regulation = """
-MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA'})
+MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA 1999'})
 ON CREATE SET
   i.name = "Gramm-Leach-Bliley Act",
   i.version = "1999 (Pub. L. 106-102)",
@@ -14,7 +14,7 @@ ON CREATE SET
 #rule
 rule = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ru:Rule{industry_standard_regulation_id: 'GLBA', rule_id: row.ruleid})
+MERGE (ru:Rule{industry_standard_regulation_id: 'GLBA 1999', rule_id: row.ruleid})
 ON CREATE SET
     ru.name = row.name,
     ru.description = row.description,
@@ -24,7 +24,7 @@ ON CREATE SET
 #section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sec:Section{industry_standard_regulation_id: 'GLBA', section_id: row.sectionid})
+MERGE (sec:Section{industry_standard_regulation_id: 'GLBA 1999', section_id: row.sectionid})
 ON CREATE SET
     sec.fullcitation = row.fullcitation,
     sec.heading = row.heading,
@@ -33,7 +33,7 @@ ON CREATE SET
 #requirement
 requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement{industry_standard_regulation_id: 'GLBA', requirement_id: row.requirementid})
+MERGE (r:Requirement{industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.requirementid})
 ON CREATE SET
     r.type = row.type,
     r.text = row.text,
@@ -43,7 +43,7 @@ ON CREATE SET
 #role
 role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ro:Role{industry_standard_regulation_id: 'GLBA', role_id: row.roleid})
+MERGE (ro:Role{industry_standard_regulation_id: 'GLBA 1999', role_id: row.roleid})
 ON CREATE SET
     ro.name = row.name,
     ro.description = row.description;
@@ -51,7 +51,7 @@ ON CREATE SET
 #datacategory
 datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataCategory{industry_standard_regulation_id: 'GLBA', data_id: row.dataid})
+MERGE (dc:DataCategory{industry_standard_regulation_id: 'GLBA 1999', data_id: row.dataid})
 ON CREATE SET
     dc.name = row.name,
     dc.description = row.description,
@@ -60,7 +60,7 @@ ON CREATE SET
 #Eventype
 eventype = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (et:EventType{industry_standard_regulation_id: 'GLBA', event_id:row.eventtypeid})
+MERGE (et:EventType{industry_standard_regulation_id: 'GLBA 1999', event_id:row.eventtypeid})
 ON CREATE SET
     et.name = row.name,
     et.deadline = row.deadline;
@@ -68,7 +68,7 @@ ON CREATE SET
 #safeguard
 safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Safeguard{industry_standard_regulation_id: 'GLBA', safeguard_id: row.safeguardid})
+MERGE (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999', safeguard_id: row.safeguardid})
 ON CREATE SET
     s.name = row.name,
     s.type = row.type,
@@ -77,7 +77,7 @@ ON CREATE SET
 #enforcement_action
 enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row  
-MERGE (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA', enforcement_action_id: row.enforcementid})
+MERGE (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA 1999', enforcement_action_id: row.enforcementid})
 ON CREATE SET
     ea.authority = row.authority,
     ea.description = row.description;
@@ -85,7 +85,7 @@ ON CREATE SET
 #policy
 policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (po:Policy{industry_standard_regulation_id: 'GLBA', policy_id: row.policyid})
+MERGE (po:Policy{industry_standard_regulation_id: 'GLBA 1999', policy_id: row.policyid})
 ON CREATE SET
     po.name = row.name,
     po.owner = row.owner;
@@ -93,7 +93,7 @@ ON CREATE SET
 #control
 control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Control{industry_standard_regulation_id: 'GLBA', control_id: row.controlid})
+MERGE (co:Control{industry_standard_regulation_id: 'GLBA 1999', control_id: row.controlid})
 ON CREATE SET
     co.name = row.name,
     co.category = row.category;
@@ -101,7 +101,7 @@ ON CREATE SET
 #system
 system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sys:System{industry_standard_regulation_id: 'GLBA', system_id: row.systemid})
+MERGE (sys:System{industry_standard_regulation_id: 'GLBA 1999', system_id: row.systemid})
 ON CREATE SET
     sys.name = row.name,
     sys.holds_npi = row.holds_npi;
@@ -109,7 +109,7 @@ ON CREATE SET
 #process
 process = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pr:Process{industry_standard_regulation_id: 'GLBA', process_id: row.processid})
+MERGE (pr:Process{industry_standard_regulation_id: 'GLBA 1999', process_id: row.processid})
 ON CREATE SET
     pr.name = row.name;
 """
@@ -117,61 +117,61 @@ ON CREATE SET
 #Regulation → Rule
 regulation_rule ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id:'GLBA'})
-MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA',rule_id:row.target_rule_id})
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id:'GLBA 1999'})
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999',rule_id:row.target_rule_id})
 MERGE (i)-[:REGULATION_HAS_RULE{type:row.relationship_type}]->(ru);
 """
 #Rule → Section
 rule_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA',rule_id:row.source_rule_id})
-MATCH (sec:Section{industry_standard_regulation_id: 'GLBA',section_id:row.target_section_id})
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999',rule_id:row.source_rule_id})
+MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999',section_id:row.target_section_id})
 MERGE (ru)-[:RULE_HAS_SECTION{type:row.relationship_type}]->(sec);
 """
 #Section → Requirement
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section{industry_standard_regulation_id: 'GLBA',section_id:row.source_section_id})
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.target_requirement_id})
+MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999',section_id:row.source_section_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.target_requirement_id})
 MERGE (sec)-[:SECTION_HAS_REQUIREMENT{type:row.relationship_type}]->(r);
 """
 #Requirement → Role
 requirement_role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (ro:Role{industry_standard_regulation_id: 'GLBA',role_id:row.target_role_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (ro:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.target_role_id})
 MERGE (r)-[:REQUIREMENT_APPLIES_TO_ROLE{type:row.relationship_type}]->(ro);
 """
 #Requirement → DataCategory
 requirement_datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (dc:DataCategory{industry_standard_regulation_id: 'GLBA',data_id:row.target_data_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (dc:DataCategory{industry_standard_regulation_id: 'GLBA 1999',data_id:row.target_data_id})
 MERGE (r)-[:REQUIREMENT_APPLIES_TO_DATACATEGORY{type:row.relationship_type}]->(dc);
 """
 #Requirement → EventType
 requirement_event_type ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (et:EventType{industry_standard_regulation_id: 'GLBA',event_id:row.target_eventtype_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (et:EventType{industry_standard_regulation_id: 'GLBA 1999',event_id:row.target_eventtype_id})
 MERGE (r)-[:REQUIREMENT_TRIGGERS_EVENT_TYPE{type:row.relationship_type}]->(et);
 """
 #Requirement → Safeguard
 requirement_safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA',safeguard_id:row.target_safeguard_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999',safeguard_id:row.target_safeguard_id})
 MERGE (r)-[:REQUIREMENT_REQUIRES_SAFEGUARD{type:row.relationship_type}]->(s);
 """
 #Requirement → Policy
 requirement_policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {
-  industry_standard_regulation_id: 'GLBA',
+  industry_standard_regulation_id: 'GLBA 1999',
   requirement_id: row.source_requirement_id
 })
 MATCH (po:Policy {
-  industry_standard_regulation_id: 'GLBA',
+  industry_standard_regulation_id: 'GLBA 1999',
   policy_id: row.target_policy_id
 })
 MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY {
@@ -182,29 +182,29 @@ MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY {
 #Requirement → Control
 requirement_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (co:Control{industry_standard_regulation_id: 'GLBA',control_id:row.target_control_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999',control_id:row.target_control_id})
 MERGE (r)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL{type:row.relationship_type}]->(co);
 """
 #Control → System
 control_system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (co:Control{industry_standard_regulation_id: 'GLBA',control_id:row.source_control_id})
-MATCH (sys:System{industry_standard_regulation_id: 'GLBA',system_id:row.target_system_id})
+MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999',control_id:row.source_control_id})
+MATCH (sys:System{industry_standard_regulation_id: 'GLBA 1999',system_id:row.target_system_id})
 MERGE (co)-[:CONTROL_IMPLEMENTED_IN_SYSTEM{type:row.relationship_type}]->(sys);
 """
 #Requirement → Process
 requirement_process = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (pr:Process{industry_standard_regulation_id: 'GLBA',process_id:row.target_process_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (pr:Process{industry_standard_regulation_id: 'GLBA 1999',process_id:row.target_process_id})
 MERGE (r)-[:REQUIREMENT_IMPACTS_PROCESS{type:row.relationship_type}]->(pr);
 """
 #Role → Role (Customer → Financial Institution)
 role_role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (src:Role{industry_standard_regulation_id: 'GLBA',role_id:row.source_role_id})
-MATCH (tgt:Role{industry_standard_regulation_id: 'GLBA',role_id:row.target_role_id})
+MATCH (src:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.source_role_id})
+MATCH (tgt:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.target_role_id})
 MERGE (src)-[:ROLE_HAS_ROLE{
     type:row.relationship_type,
     description:row.relationship_description
@@ -213,8 +213,8 @@ MERGE (src)-[:ROLE_HAS_ROLE{
 #Requirement → EnforcementAction
 requirement_enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA',requirement_id:row.source_requirement_id})
-MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA',enforcement_action_id:row.target_enforcement_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA 1999',enforcement_action_id:row.target_enforcement_id})
 MERGE (r)-[:REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION{type:row.relationship_type}]->(ea);
 """
 

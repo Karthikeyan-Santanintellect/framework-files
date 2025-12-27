@@ -1,6 +1,6 @@
 # Regulation Node
 regulation = """
-MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPRA'})
+MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPRA 2.0'})
 ON CREATE SET 
     reg.name = "California Privacy Rights Act",
     reg.version = "2.0 (Amends CCPA)",
@@ -14,7 +14,7 @@ ON CREATE SET
 # Section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.section_id})
+MERGE (s:Section {regional_standard_regulation_id: 'CPRA 2.0', section_id: row.section_id})
 ON CREATE SET 
     s.heading = row.heading;
 """
@@ -22,7 +22,7 @@ ON CREATE SET
 # Requirement
 requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.requirement_id})
+MERGE (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.requirement_id})
 ON CREATE SET 
     rq.section_id = row.section_id,
     rq.text = row.text,
@@ -32,7 +32,7 @@ ON CREATE SET
 # Role
 role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ro:Role {regional_standard_regulation_id: 'CPRA', role_id: row.role_id})
+MERGE (ro:Role {regional_standard_regulation_id: 'CPRA 2.0', role_id: row.role_id})
 ON CREATE SET 
     ro.name = row.name,
     ro.description = row.description;
@@ -41,7 +41,7 @@ ON CREATE SET
 # DataCategory
 datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataCategory {regional_standard_regulation_id: 'CPRA', data_id: row.data_id})
+MERGE (dc:DataCategory {regional_standard_regulation_id: 'CPRA 2.0', data_id: row.data_id})
 ON CREATE SET
     dc.name = row.name,
     dc.sensitivity = row.sensitivity;
@@ -50,7 +50,7 @@ ON CREATE SET
 # Right
 right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Right {regional_standard_regulation_id: 'CPRA', right_id: row.right_id})
+MERGE (r:Right {regional_standard_regulation_id: 'CPRA 2.0', right_id: row.right_id})
 ON CREATE SET 
     r.section_id = row.section_id,
     r.name = row.name;
@@ -59,7 +59,7 @@ ON CREATE SET
 # Safeguard
 safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sg:Safeguard {regional_standard_regulation_id: 'CPRA', safeguard_id: row.safeguard_id})
+MERGE (sg:Safeguard {regional_standard_regulation_id: 'CPRA 2.0', safeguard_id: row.safeguard_id})
 ON CREATE SET 
     sg.type = row.type,
     sg.description = row.description;
@@ -68,7 +68,7 @@ ON CREATE SET
 # EventType
 event_type = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (et:EventType {regional_standard_regulation_id: 'CPRA', event_type_id: row.event_type_id})
+MERGE (et:EventType {regional_standard_regulation_id: 'CPRA 2.0', event_type_id: row.event_type_id})
 ON CREATE SET   
     et.name = row.name,
     et.description = row.description;
@@ -77,7 +77,7 @@ ON CREATE SET
 # EnforcementAction
 enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA', enforcement_id: row.enforcement_id})
+MERGE (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA 2.0', enforcement_id: row.enforcement_id})
 ON CREATE SET 
     ea.authority = row.authority,
     ea.max_penalty = row.max_penalty,
@@ -87,7 +87,7 @@ ON CREATE SET
 # Control
 control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Control {regional_standard_regulation_id: 'CPRA', control_id: row.control_id})
+MERGE (co:Control {regional_standard_regulation_id: 'CPRA 2.0', control_id: row.control_id})
 ON CREATE SET 
     co.name = row.name,
     co.category = row.category;
@@ -100,86 +100,86 @@ regulation_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.from_id})
 MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.to_id})
-MERGE (reg)-[:REGULATION_DEFINES_SECTION]->(s);
+MERGE (reg)-[:REGIONAL_REGULATION_DEFINES_SECTION]->(s);
 """
 
 # Section to Requirement
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.from_id})
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA 2.0', section_id: row.from_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.to_id})
 MERGE (s)-[:SECTION_DEFINES_REQUIREMENT]->(rq);
 """
 
 # Section to Right
 section_right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.from_id})
-MATCH (r:Right {regional_standard_regulation_id: 'CPRA', right_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA 2.0', section_id: row.from_id})
+MATCH (r:Right {regional_standard_regulation_id: 'CPRA 2.0', right_id: row.to_id})
 MERGE (s)-[:SECTION_ESTABLISHES_RIGHT]->(r);
 """
 
 # Section to EnforcementAction
 section_enforcement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Section {regional_standard_regulation_id: 'CPRA', section_id: row.from_id})
-MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA', enforcement_id: row.to_id})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA 2.0', section_id: row.from_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA 2.0', enforcement_id: row.to_id})
 MERGE (s)-[:SECTION_PRESCRIBES_PENALTY]->(ea);
 """
 
 # Requirement to DataCategory
 requirement_datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
-MATCH (dc:DataCategory {regional_standard_regulation_id: 'CPRA', data_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.from_id})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'CPRA 2.0', data_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY]->(dc);
 """
 
 # Requirement to Safeguard
 requirement_safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
-MATCH (sg:Safeguard {regional_standard_regulation_id: 'CPRA', safeguard_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.from_id})
+MATCH (sg:Safeguard {regional_standard_regulation_id: 'CPRA 2.0', safeguard_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_REQUIRES_SAFEGUARD]->(sg);
 """
 
 # Requirement to EventType
 requirement_event = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
-MATCH (et:EventType {regional_standard_regulation_id: 'CPRA', event_type_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.from_id})
+MATCH (et:EventType {regional_standard_regulation_id: 'CPRA 2.0', event_type_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_TRIGGERS_ON_EVENT_TYPE]->(et);
 """
 
 # Requirement to Control
 requirement_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
-MATCH (co:Control {regional_standard_regulation_id: 'CPRA', control_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.from_id})
+MATCH (co:Control {regional_standard_regulation_id: 'CPRA 2.0', control_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL]->(co);
 """
 
 # Requirement to EnforcementAction
 requirement_enforcement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
-MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA', enforcement_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.from_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA 2.0', enforcement_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT]->(ea);
 """
 
 # Role to Right
 role_right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ro:Role {regional_standard_regulation_id: 'CPRA', role_id: row.from_id})
-MATCH (r:Right {regional_standard_regulation_id: 'CPRA', right_id: row.to_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'CPRA 2.0', role_id: row.from_id})
+MATCH (r:Right {regional_standard_regulation_id: 'CPRA 2.0', right_id: row.to_id})
 MERGE (ro)-[:ROLE_HAS_RIGHT]->(r);
 """
 
 # Contract Requirements
 requirement_contract = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA', requirement_id: row.from_id})
-MATCH (ro:Role {regional_standard_regulation_id: 'CPRA', role_id: row.to_id})
+MATCH (rq:Requirement {regional_standard_regulation_id: 'CPRA 2.0', requirement_id: row.from_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'CPRA 2.0', role_id: row.to_id})
 MERGE (rq)-[:REQUIREMENT_MANDATES_CONTRACT_WITH_ROLE]->(ro);
 """
 

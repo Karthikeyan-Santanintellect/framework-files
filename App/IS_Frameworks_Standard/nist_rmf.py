@@ -2,12 +2,12 @@
 
 # UPDATED: Constraints are now composite to ensure uniqueness within a framework.
 constraints = """
-CREATE CONSTRAINT rmf_framework_id_unique IF NOT EXISTS FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_framework_standard_id IS UNIQUE;
-CREATE CONSTRAINT rmf_step_id_unique IF NOT EXISTS FOR (s:Step) REQUIRE (s.IS_framework_standard_id, s.step_id) IS UNIQUE;
-CREATE CONSTRAINT rmf_family_id_unique IF NOT EXISTS FOR (cf:ControlFamily) REQUIRE (cf.IS_framework_standard_id, cf.family_id) IS UNIQUE;
-CREATE CONSTRAINT rmf_control_id_unique IF NOT EXISTS FOR (c:Control) REQUIRE (c.IS_framework_standard_id, c.control_id) IS UNIQUE;
-CREATE CONSTRAINT rmf_role_id_unique IF NOT EXISTS FOR (r:Role) REQUIRE (r.IS_framework_standard_id, r.role_id) IS UNIQUE;
-CREATE CONSTRAINT rmf_system_id_unique IF NOT EXISTS FOR (sys:System) REQUIRE (sys.IS_framework_standard_id, sys.system_id) IS UNIQUE;
+CREATE CONSTRAINT rmf_framework_id_unique IF NOT EXISTS FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_frameworks_standard_id IS UNIQUE;
+CREATE CONSTRAINT rmf_step_id_unique IF NOT EXISTS FOR (s:Step) REQUIRE (s.IS_frameworks_standard_id, s.step_id) IS UNIQUE;
+CREATE CONSTRAINT rmf_family_id_unique IF NOT EXISTS FOR (cf:ControlFamily) REQUIRE (cf.IS_frameworks_standard_id, cf.family_id) IS UNIQUE;
+CREATE CONSTRAINT rmf_control_id_unique IF NOT EXISTS FOR (c:Control) REQUIRE (c.IS_frameworks_standard_id, c.control_id) IS UNIQUE;
+CREATE CONSTRAINT rmf_role_id_unique IF NOT EXISTS FOR (r:Role) REQUIRE (r.IS_frameworks_standard_id, r.role_id) IS UNIQUE;
+CREATE CONSTRAINT rmf_system_id_unique IF NOT EXISTS FOR (sys:System) REQUIRE (sys.IS_frameworks_standard_id, sys.system_id) IS UNIQUE;
 """
 
 indexes = """
@@ -19,9 +19,10 @@ CREATE INDEX rmf_control_category_index IF NOT EXISTS FOR (cf:ControlFamily) ON 
 
 # UPDATED: Using MERGE to prevent duplicates.
 framework_and_standard = """
-MERGE (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_RMF_2018'})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 ON CREATE SET
     f.name = 'NIST Risk Management Framework',
+    f.version = '5.2',
     f.publication = 'NIST SP 800-37 Revision 2',
     f.publication_date = date('2018-12-20'),
     f.total_steps = 7,
@@ -34,31 +35,31 @@ ON CREATE SET
 # UPDATED: Using MERGE and adding framework_id.
 steps = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Step {IS_framework_standard_id: 'NIST_RMF_2018', step_id: row.step_id})
+MERGE (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2', step_id: row.step_id})
 ON CREATE SET
-    s.step_number = toInteger(row.step_number),
-    s.step_name = row.step_name,
+    s.number = toInteger(row.step_number),
+    s.name = row.step_name,
     s.objective = row.objective,
     s.is_new_in_rev2 = CASE WHEN row.is_new_in_rev2 = 'True' THEN true ELSE false END,
-    s.step_description = row.step_description;
+    s.description = row.step_description;
 """
 
 # UPDATED: Using MERGE and adding framework_id.
 control_families = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cf:ControlFamily {IS_framework_standard_id: 'NIST_RMF_2018', family_id: row.family_id})
+MERGE (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2', family_id: row.family_id})
 ON CREATE SET
-    cf.family_name = row.family_name,
-    cf.control_count = toInteger(row.control_count),
-    cf.family_description = row.family_description,
-    cf.control_category = row.control_category,
+    cf.name = row.family_name,
+    cf.count = toInteger(row.control_count),
+    cf.description = row.family_description,
+    cf.category = row.control_category,
     cf.nist_publication = 'NIST SP 800-53 Rev 5';
 """
 
 # UPDATED: Using MERGE and adding framework_id.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {IS_framework_standard_id: 'NIST_RMF_2018', control_id: row.`Control Identifier`})
+MERGE (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2', control_id: row.`Control Identifier`})
 ON CREATE SET
     c.family_id = row.`Family`,
     c.name = row.`Control Name`,
@@ -69,21 +70,21 @@ ON CREATE SET
 # UPDATED: Using MERGE and adding framework_id.
 roles = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Role {IS_framework_standard_id: 'NIST_RMF_2018', role_id: row.role_id})
+MERGE (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2', role_id: row.role_id})
 ON CREATE SET
-    r.role_title = row.role_title,
-    r.role_description = row.role_description,
-    r.role_type = row.role_type,
+    r.name = row.role_name,
+    r.description = row.role_description,
+    r.type = row.role_type,
     r.decision_authority = row.decision_authority;
 """
 
 # UPDATED: Using MERGE and adding framework_id.
 systems = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sys:System {IS_framework_standard_id: 'NIST_RMF_2018', system_id: row.system_id})
+MERGE (sys:System {IS_frameworks_standard_id: 'NIST_RMF_5.2', system_id: row.system_id})
 ON CREATE SET
-    sys.system_name = row.system_name,
-    sys.system_type = row.system_type,
+    sys.name = row.system_name,
+    sys.type = row.system_type,
     sys.categorization = row.categorization,
     sys.authorization_status = row.authorization_status,
     sys.ato_date = date(row.ato_date),
@@ -92,44 +93,44 @@ ON CREATE SET
 
 # UPDATED: Scoped MATCH to framework_id.
 framework_standard_step_rel = """
-MATCH (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_RMF_2018'})
-MATCH (s:Step {IS_framework_standard_id: 'NIST_RMF_2018'})
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MATCH (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_STEP]->(s);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 step_step_rel = """
-MATCH (s1:Step {IS_framework_standard_id: 'NIST_RMF_2018'}), (s2:Step {IS_framework_standard_id: 'NIST_RMF_2018'})
+MATCH (s1:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'}), (s2:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 WHERE s2.step_number = s1.step_number + 1
 MERGE (s1)-[:STEP_PRECEDES_STEP]->(s2);
 """
 
 # UPDATED: Scoped MATCH and changed CREATE to MERGE.
 framework_standard_control_family_rel = """
-MATCH (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_RMF_2018'})
-MATCH (cf:ControlFamily {IS_framework_standard_id: 'NIST_RMF_2018'})
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MATCH (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 MERGE (f)-[:FRAMEWORK_REFERENCES_CONTROL_FAMILY]->(cf);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 control_family_control_rel = """
-MATCH (cf:ControlFamily {IS_framework_standard_id: 'NIST_RMF_2018'}), (c:Control {IS_framework_standard_id: 'NIST_RMF_2018'})
+MATCH (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2'}), (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 WHERE cf.family_id = c.family_id
 MERGE (cf)-[:CONTROL_FAMILY_INCLUDES_CONTROL]->(c);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 role_step_rel = """
-MATCH (r:Role {IS_framework_standard_id: 'NIST_RMF_2018', role_id: 'authorizing_official'})
-MATCH (s:Step {IS_framework_standard_id: 'NIST_RMF_2018'})
+MATCH (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2', role_id: 'authorizing_official'})
+MATCH (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 WHERE s.step_id IN ['2_categorize', '3_select', '6_authorize', '7_monitor']
 MERGE (r)-[:ROLE_INVOLVED_IN_STEP {involvement_type: 'Decision_Making'}]->(s);
 """
 
 # UPDATED: Scoped MATCH and changed CREATE to MERGE.
 control_system_rel = """
-MATCH (c:Control {IS_framework_standard_id: 'NIST_RMF_2018'})
-MATCH (sys:System {IS_framework_standard_id: 'NIST_RMF_2018'})
+MATCH (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MATCH (sys:System {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 WHERE sys.authorization_status = 'Authorized'
 MERGE (c)-[:CONTROL_IMPLEMENTED_BY_SYSTEM {
     implementation_status: 'Required',

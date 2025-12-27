@@ -2,7 +2,7 @@
 regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (reg:RegionalStandardAndRegulation {
-  regional_standard_and_regulation_id: row.regional_standard_and_regulation_id
+  regional_standard_regulation_id: row.regional_standard_regulation_id
 })
 ON CREATE SET
   reg.name = row.name,
@@ -16,25 +16,25 @@ ON CREATE SET
 #Chapter
 chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Chapter {regional_standard_and_regulation_id:'dpdpa_2023', chapter_id: row.chapter_id})
+MERGE (c:Chapter {regional_standard_regulation_id:'DPDPA 1.0', chapter_id: row.chapter_id})
 ON CREATE SET 
-  c.chapter_number = toInteger(row.chapter_number),
-  c.title = row.title,
+  c.number = toInteger(row.chapter_number),
+  c.name = row.title,
   c.description = row.description;
 """
 #Section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sec:Section {regional_standard_and_regulation_id:'dpdpa_2023', section_id: row.section_id})
+MERGE (sec:Section {regional_standard_regulation_id:'DPDPA 1.0', section_id: row.section_id})
 ON CREATE SET 
-  sec.section_number = row.section_number,
+  sec.number = row.section_number,
   sec.chapter_id = row.chapter_id,
-  sec.title = row.title;
+  sec.name = row.title;
 """
 #Requirement
 requirement ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
+MERGE (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
 ON CREATE SET 
   req.section_id = row.section_id,
   req.text = row.requirement_text,
@@ -45,7 +45,7 @@ ON CREATE SET
 #role
 role ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ro:Role {regional_standard_and_regulation_id:'dpdpa_2023', role_id: row.role_id})
+MERGE (ro:Role {regional_standard_regulation_id:'DPDPA 1.0', role_id: row.role_id})
 ON CREATE SET 
   ro.name = row.name,
   ro.description = row.description,
@@ -54,7 +54,7 @@ ON CREATE SET
 #datacategory
 datacategory ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataCategory {regional_standard_and_regulation_id:'dpdpa_2023', data_id: row.data_id})
+MERGE (dc:DataCategory {regional_standard_regulation_id:'DPDPA 1.0', data_id: row.data_id})
 ON CREATE SET 
   dc.name = row.name,
   dc.description = row.description,
@@ -65,7 +65,7 @@ ON CREATE SET
 #safeguard
 safeguard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sg:Safeguard {regional_standard_and_regulation_id:'dpdpa_2023', safeguard_id: row.safeguard_id})
+MERGE (sg:Safeguard {regional_standard_regulation_id:'DPDPA 1.0', safeguard_id: row.safeguard_id})
 ON CREATE SET 
   sg.name = row.name,
   sg.description = row.description,
@@ -75,7 +75,7 @@ ON CREATE SET
 #event_type
 event_type ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (et:EventType {regional_standard_and_regulation_id:'dpdpa_2023', event_type_id: row.event_type_id})
+MERGE (et:EventType {regional_standard_regulation_id:'DPDPA 1.0', event_type_id: row.event_type_id})
 ON CREATE SET 
   et.name = row.name,
   et.description = row.description,
@@ -87,7 +87,7 @@ ON CREATE SET
 #policy
 policy ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pol:Policy {regional_standard_and_regulation_id:'dpdpa_2023', policy_id: row.policy_id})
+MERGE (pol:Policy {regional_standard_regulation_id:'DPDPA 1.0', policy_id: row.policy_id})
 ON CREATE SET 
   pol.name = row.name,
   pol.description = row.description,
@@ -98,7 +98,7 @@ ON CREATE SET
 #control
 control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Control {regional_standard_and_regulation_id:'dpdpa_2023', control_id: row.control_id})
+MERGE (co:Control {regional_standard_regulation_id:'DPDPA 1.0', control_id: row.control_id})
 ON CREATE SET 
   co.name = row.name,
   co.category = row.category,
@@ -108,20 +108,20 @@ ON CREATE SET
 #system
 system ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sys:System {regional_standard_and_regulation_id:'dpdpa_2023', system_id: row.system_id})
+MERGE (sys:System {regional_standard_regulation_id:'DPDPA 1.0', system_id: row.system_id})
 ON CREATE SET 
   sys.name = row.name,
   sys.type = row.type,
   sys.description = row.description,
   sys.category = row.category,
-  sys.holds_personal_data = row.holds_personal_data,
-  sys.holds_sensitive_data = row.holds_sensitive_data,
+  sys.personal_data = row.holds_personal_data,
+  sys.sensitive_data = row.holds_sensitive_data,
   sys.processing_activities = row.processing_activities;
 """
 #process
 process ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pr:Process {regional_standard_and_regulation_id:'dpdpa_2023', process_id: row.process_id})
+MERGE (pr:Process {regional_standard_regulation_id:'DPDPA 1.0', process_id: row.process_id})
 ON CREATE SET 
   pr.name = row.name,
   pr.description = row.description,
@@ -133,7 +133,7 @@ ON CREATE SET
 enforcement_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (ea:EnforcementAction {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     enforcement_action_id: row.enforcement_action_id
 })
 ON CREATE SET 
@@ -141,101 +141,101 @@ ON CREATE SET
   ea.description = row.description,
   ea.type = row.type,
   ea.authority = row.authority,
-  ea.severity_level = row.severity_level,
+  ea.level = row.severity_level,
   ea.applicable_section = row.applicable_section;
 """
 regulation_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id})
-MATCH (c:Chapter {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, chapter_id: row.chapter_id})
-MERGE (reg)-[:REGULATION_HAS_CHAPTER]->(c);
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.regional_standard_regulation_id})
+MATCH (c:Chapter {regional_standard_regulation_id: row.regional_standard_regulation_id, chapter_id: row.chapter_id})
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_CHAPTER]->(c);
 """
 
 chapter_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (c:Chapter {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, chapter_id: row.chapter_id})
-MATCH (sec:Section {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, section_id: row.section_id})
+MATCH (c:Chapter {regional_standard_regulation_id: row.regional_standard_regulation_id, chapter_id: row.chapter_id})
+MATCH (sec:Section {regional_standard_regulation_id: row.regional_standard_regulation_id, section_id: row.section_id})
 MERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);
 """
 
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, section_id: row.section_id})
-MATCH (req:Requirement {regional_standard_and_regulation_id: row.regional_standard_and_regulation_id, requirement_id: row.requirement_id})
+MATCH (sec:Section {regional_standard_regulation_id: row.regional_standard_regulation_id, section_id: row.section_id})
+MATCH (req:Requirement {regional_standard_regulation_id: row.regional_standard_regulation_id, requirement_id: row.requirement_id})
 MERGE (sec)-[:SECTION_HAS_REQUIREMENT]->(req);
 """
 
 requirement_roles = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (ro:Role {regional_standard_and_regulation_id:'dpdpa_2023', role_id: row.role_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (ro:Role {regional_standard_regulation_id:'DPDPA 1.0', role_id: row.role_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_ROLES]->(ro);
 """
 
 requirement_datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (dc:DataCategory {regional_standard_and_regulation_id:'dpdpa_2023', data_id: row.data_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (dc:DataCategory {regional_standard_regulation_id:'DPDPA 1.0', data_id: row.data_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_DATACATEGORY]->(dc);
 """
 
 requirement_safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (sg:Safeguard {regional_standard_and_regulation_id:'dpdpa_2023', safeguard_id: row.safeguard_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (sg:Safeguard {regional_standard_regulation_id:'DPDPA 1.0', safeguard_id: row.safeguard_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_SAFEGUARD]->(sg);
 """
 
 requirement_event_type = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (et:EventType {regional_standard_and_regulation_id:'dpdpa_2023', event_type_id: row.event_type_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (et:EventType {regional_standard_regulation_id:'DPDPA 1.0', event_type_id: row.event_type_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_EVENTTYPE]->(et);
 """
 
 requirement_policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (pol:Policy {regional_standard_and_regulation_id:'dpdpa_2023', policy_id: row.policy_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (pol:Policy {regional_standard_regulation_id:'DPDPA 1.0', policy_id: row.policy_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_POLICY]->(pol);
 """
 
 requirement_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (co:Control {regional_standard_and_regulation_id:'dpdpa_2023', control_id: row.control_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (co:Control {regional_standard_regulation_id:'DPDPA 1.0', control_id: row.control_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_CONTROL]->(co);
 """
 
 control_system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (co:Control {regional_standard_and_regulation_id:'dpdpa_2023', control_id: row.control_id})
-MATCH (sys:System {regional_standard_and_regulation_id:'dpdpa_2023', system_id: row.system_id})
+MATCH (co:Control {regional_standard_regulation_id:'DPDPA 1.0', control_id: row.control_id})
+MATCH (sys:System {regional_standard_regulation_id:'DPDPA 1.0', system_id: row.system_id})
 MERGE (co)-[:CONTROLS_CONTROLS_SYSTEM]->(sys);
 """
 
 requirement_process = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_and_regulation_id:'dpdpa_2023', requirement_id: row.requirement_id})
-MATCH (pr:Process {regional_standard_and_regulation_id:'dpdpa_2023', process_id: row.process_id})
+MATCH (req:Requirement {regional_standard_regulation_id:'DPDPA 1.0', requirement_id: row.requirement_id})
+MATCH (pr:Process {regional_standard_regulation_id:'DPDPA 1.0', process_id: row.process_id})
 MERGE (req)-[:REQUIREMENTS_REQUIRES_PROCESS]->(pr);
 """
 
 process_system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pr:Process {regional_standard_and_regulation_id:'dpdpa_2023', process_id: row.process_id})
-MATCH (sys:System {regional_standard_and_regulation_id:'dpdpa_2023', system_id: row.system_id})
+MATCH (pr:Process {regional_standard_regulation_id:'DPDPA 1.0', process_id: row.process_id})
+MATCH (sys:System {regional_standard_regulation_id:'DPDPA 1.0', system_id: row.system_id})
 MERGE (pr)-[:PROCESSES_PROCESSES_SYSTEM]->(sys);
 """
 
 enforcement_action_requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     enforcement_action_id: row.enforcement_action_id
 })
 MATCH (req:Requirement {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     requirement_id: row.requirement_id
 })
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS]->(req);
@@ -244,11 +244,11 @@ MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS]->(req);
 enforcement_action_role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     enforcement_action_id: row.enforcement_action_id
 })
 MATCH (ro:Role {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     role_id: row.role_id
 })
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES]->(ro);
@@ -257,11 +257,11 @@ MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES]->(ro);
 enforcement_action_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     enforcement_action_id: row.enforcement_action_id
 })
 MATCH (sec:Section {
-    regional_standard_and_regulation_id: 'dpdpa_2023', 
+    regional_standard_regulation_id: 'DPDPA 1.0', 
     section_id: row.section_id
 })
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION]->(sec);

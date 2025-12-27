@@ -3,16 +3,16 @@
 # UPDATED: Constraints are now composite to ensure uniqueness within a framework.
 constraints = """
 // Create all unique constraints for data integrity
-CREATE CONSTRAINT ai_rmf_framework_id_unique IF NOT EXISTS FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_framework_standard_id IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_function_id_unique IF NOT EXISTS FOR (fn:Function) REQUIRE (fn.IS_framework_standard_id, fn.function_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_category_id_unique IF NOT EXISTS FOR (c:Category) REQUIRE (c.IS_framework_standard_id, c.category_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_subcategory_id_unique IF NOT EXISTS FOR (s:Subcategory) REQUIRE (s.IS_framework_standard_id, s.subcategory_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_characteristic_id_unique IF NOT EXISTS FOR (tc:TrustworthyCharacteristic) REQUIRE (tc.IS_framework_standard_id, tc.characteristic_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_lifecycle_stage_id_unique IF NOT EXISTS FOR (ls:LifecycleStage) REQUIRE (ls.IS_framework_standard_id, ls.stage_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_risk_type_id_unique IF NOT EXISTS FOR (rt:RiskType) REQUIRE (rt.IS_framework_standard_id, rt.risk_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_ai_system_id_unique IF NOT EXISTS FOR (ai:AISystem) REQUIRE (ai.IS_framework_standard_id, ai.system_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_org_id_unique IF NOT EXISTS FOR (o:Organization) REQUIRE (o.IS_framework_standard_id, o.org_id) IS UNIQUE;
-CREATE CONSTRAINT ai_rmf_stakeholder_id_unique IF NOT EXISTS FOR (sh:Stakeholder) REQUIRE (sh.IS_framework_standard_id, sh.stakeholder_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_framework_id_unique IF NOT EXISTS FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_frameworks_standard_id IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_function_id_unique IF NOT EXISTS FOR (fn:Function) REQUIRE (fn.IS_frameworks_standard_id, fn.function_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_category_id_unique IF NOT EXISTS FOR (c:Category) REQUIRE (c.IS_frameworks_standard_id, c.category_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_subcategory_id_unique IF NOT EXISTS FOR (s:Subcategory) REQUIRE (s.IS_frameworks_standard_id, s.subcategory_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_characteristic_id_unique IF NOT EXISTS FOR (tc:TrustworthyCharacteristic) REQUIRE (tc.IS_frameworks_standard_id, tc.characteristic_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_lifecycle_stage_id_unique IF NOT EXISTS FOR (ls:LifecycleStage) REQUIRE (ls.IS_frameworks_standard_id, ls.stage_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_risk_type_id_unique IF NOT EXISTS FOR (rt:RiskType) REQUIRE (rt.IS_frameworks_standard_id, rt.risk_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_ai_system_id_unique IF NOT EXISTS FOR (ai:AISystem) REQUIRE (ai.IS_frameworks_standard_id, ai.system_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_org_id_unique IF NOT EXISTS FOR (o:Organization) REQUIRE (o.IS_frameworks_standard_id, o.org_id) IS UNIQUE;
+CREATE CONSTRAINT ai_rmf_stakeholder_id_unique IF NOT EXISTS FOR (sh:Stakeholder) REQUIRE (sh.IS_frameworks_standard_id, sh.stakeholder_id) IS UNIQUE;
 """
 
 indexes = """
@@ -26,7 +26,7 @@ CREATE INDEX ai_rmf_org_adoption_maturity IF NOT EXISTS FOR (o:Organization) ON 
 # UPDATED: Using MERGE to prevent duplicates.
 framework_and_standards = """
 // Load NIST AI RMF Framework
-MERGE (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
 ON CREATE SET
     f.name = 'NIST AI Risk Management Framework',
     f.version = '1.0',
@@ -42,16 +42,16 @@ ON CREATE SET
 # UPDATED: Using MERGE and adding framework_id.
 functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (fn:Function {IS_framework_standard_id: 'NIST_AI_RMF_2023', function_id: row.Function_ID})
+MERGE (fn:Function {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0', function_id: row.Function_ID})
 ON CREATE SET
-    fn.function_name = row.Function,
-    fn.function_definition = row.Function_Description;
+    fn.name = row.Function,
+    fn.definition = row.Function_Description;
 """
 
 # UPDATED: Using MERGE and adding framework_id.
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {IS_framework_standard_id: 'NIST_AI_RMF_2023', category_id: row.Category_ID})
+MERGE (c:Category {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0', category_id: row.Category_ID})
 ON CREATE SET
     c.function_id = row.Function_ID,
     c.name = row.Category;
@@ -60,7 +60,7 @@ ON CREATE SET
 # UPDATED: Using MERGE and adding framework_id.
 subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Subcategory {IS_framework_standard_id: 'NIST_AI_RMF_2023', subcategory_id: row.Subcategory_ID})
+MERGE (s:Subcategory {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0', subcategory_id: row.Subcategory_ID})
 ON CREATE SET
     s.function_id = row.Function_ID,
     s.category_id = row.Category_ID,
@@ -68,21 +68,21 @@ ON CREATE SET
 """
 
 framework_functions_rel = """
-MATCH (f:ISFrameworksAndStandard {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
-MATCH (fn:Function {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_FUNCTIONS]->(fn);
 """
 
 function_categories_rel = """
-MATCH (fn:Function {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
-MATCH (c:Category {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
+MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MATCH (c:Category {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
 WHERE fn.function_id = c.function_id
 MERGE (fn)-[:FUNCTION_HAS_CATEGORY]->(c);
 """
 
 category_subcategories_rel = """
-MATCH (c:Category {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
-MATCH (s:Subcategory {IS_framework_standard_id: 'NIST_AI_RMF_2023'})
+MATCH (c:Category {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MATCH (s:Subcategory {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
 WHERE c.category_id = s.category_id
 MERGE (c)-[:CATEGORY_CONTAINS_SUBCATEGORIES]->(s);
 """

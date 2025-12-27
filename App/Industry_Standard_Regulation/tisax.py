@@ -1,6 +1,6 @@
 #Regulation
 regulation = """
-MERGE (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX'})
+MERGE (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
 ON CREATE SET
     reg.name = "Trusted Information Security Assessment Exchange",
     reg.version = "VDA ISA 6 / TISAX",
@@ -13,7 +13,7 @@ ON CREATE SET
 #organization 
 organization = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (org:Organization {industry_standard_regulation_id: 'TISAX', organization_id: row.organization_id})
+MERGE (org:Organization {industry_standard_regulation_id: 'TISAX 6.0', organization_id: row.organization_id})
 ON CREATE SET
   org.name                      = row.name,
   org.type                      = row.type,
@@ -30,12 +30,12 @@ ON CREATE SET
 #assessment
 assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ass:Assessment {industry_standard_regulation_id: 'TISAX', assessment_id: row.assessment_id})
+MERGE (ass:Assessment {industry_standard_regulation_id: 'TISAX 6.0', assessment_id: row.assessment_id})
 ON CREATE SET
   ass.start_date             = date(row.start_date),
   ass.completion_date        = date(row.completion_date),
   ass.planned_duration_days  = row.planned_duration_days,
-  ass.assessment_level       = row.assessment_level,
+  ass.level       = row.assessment_level,
   ass.status                 = row.status,
   ass.scope_description      = row.scope_description,
   ass.scope_type             = row.scope_type,
@@ -47,7 +47,7 @@ ON CREATE SET
 #assessment_level
 assessment_level = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (al:AssessmentLevel {industry_standard_regulation_id: 'TISAX', assessment_level_id: row.level_id})
+MERGE (al:AssessmentLevel {industry_standard_regulation_id: 'TISAX 6.0', assessment_level_id: row.level_id})
 ON CREATE SET
   al.name                        = row.name,
   al.description                 = row.description,
@@ -64,31 +64,31 @@ ON CREATE SET
 #Assessment_objective
 assessment_objective = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ao:AssessmentObjective {industry_standard_regulation_id: 'TISAX', assessment_objective_id: row.objective_id})
+MERGE (ao:AssessmentObjective {industry_standard_regulation_id: 'TISAX 6.0', assessment_objective_id: row.objective_id})
 ON CREATE SET
   ao.name                   = row.name,
   ao.category               = row.category,
   ao.description            = row.description,
-  ao.isa_catalogue_ref      = row.isa_catalogue_ref,
-  ao.control_questions_count = row.control_questions_count,
-  ao.criticality_level      = row.criticality_level,
+  ao.ref      = row.isa_catalogue_ref,
+  ao.count = row.control_questions_count,
+  ao.level      = row.criticality_level,
   ao.risk_area              = row.risk_area,
-  ao.requirements_version   = row.requirements_version,
-  ao.related_standards      = row.related_standards,
+  ao.version   = row.requirements_version,
+  ao.standards      = row.related_standards,
   ao.evidence_types_required = row.evidence_types_required,
   ao.typical_effort_hours   = row.typical_effort_hours;
 """
 #audit_provider
 audit_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ap:AuditProvider {industry_standard_regulation_id: 'TISAX', audit_provider_id: row.provider_id})
+MERGE (ap:AuditProvider {industry_standard_regulation_id: 'TISAX 6.0', audit_provider_id: row.provider_id})
 ON CREATE SET
-  ap.provider_name                = row.provider_name,
-  ap.registration_number          = row.registration_number,
-  ap.accreditation_status         = row.accreditation_status,
-  ap.accreditation_date           = date(row.accreditation_date),
-  ap.accreditation_expiry         = date(row.accreditation_expiry),
-  ap.supported_assessment_levels  = row.supported_assessment_levels,
+  ap.name                         = row.provider_name,
+  ap.number                       = row.registration_number,
+  ap.status                       = row.accreditation_status,
+  ap.date                         = date(row.accreditation_date),
+  ap.expiry                       = date(row.accreditation_expiry),
+  ap.levels  = row.supported_assessment_levels,
   ap.geographic_coverage          = row.geographic_coverage,
   ap.industry_specialization      = row.industry_specialization,
   ap.max_concurrent_assessments   = row.max_concurrent_assessments,
@@ -101,7 +101,7 @@ ON CREATE SET
 #ISA_catalogue
 isa_catalogue = """ 
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ic:ISACatalogue {industry_standard_regulation_id: 'TISAX', isa_catalogue_id: row.catalogue_id})
+MERGE (ic:ISACatalogue {industry_standard_regulation_id: 'TISAX 6.0', isa_catalogue_id: row.catalogue_id})
 ON CREATE SET
   ic.name                    = row.name,
   ic.type                    = row.type,
@@ -109,77 +109,77 @@ ON CREATE SET
   ic.release_date            = date(row.release_date),
   ic.last_updated            = date(row.last_updated),
   ic.total_control_questions = row.total_control_questions,
-  ic.requirement_categories  = row.requirement_categories,
+  ic.categories  = row.requirement_categories,
   ic.scope_coverage          = row.scope_coverage,
-  ic.maturity_model_levels   = row.maturity_model_levels,
+  ic.levels   = row.maturity_model_levels,
   ic.alignment_with_standards = row.alignment_with_standards,
   ic.geographic_applicability = row.geographic_applicability,
   ic.language_support        = row.language_support,
-  ic.documentation_url       = row.documentation_url;
+  ic.url       = row.documentation_url;
 """
 #control_question
 control_question = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cq:ControlQuestion {industry_standard_regulation_id: 'TISAX', control_question_id: row.question_id})
+MERGE (cq:ControlQuestion {industry_standard_regulation_id: 'TISAX 6.0', control_question_id: row.question_id})
 ON CREATE SET
-  cq.sequence_number         = row.sequence_number,
-  cq.question_text           = row.question_text,
-  cq.question_category       = row.question_category,
+  cq.number         = row.sequence_number,
+  cq.text           = row.question_text,
+  cq.category       = row.question_category,
   cq.criticality             = row.criticality,
   cq.applies_to_al1          = row.applies_to_al1,
   cq.applies_to_al2          = row.applies_to_al2,
   cq.applies_to_al3          = row.applies_to_al3,
-  cq.expected_evidence_types = row.expected_evidence_types,
-  cq.maturity_levels         = row.maturity_levels,
-  cq.typical_response_options = row.typical_response_options,
+  cq.types = row.expected_evidence_types,
+  cq.levels         = row.maturity_levels,
+  cq.options = row.typical_response_options,
   cq.guidance_url            = row.guidance_url,
   cq.last_revision_date      = row.last_revision_date,
-  cq.related_control_ids     = row.related_control_ids;
+  cq.ids     = row.related_control_ids;
 """
 #Protection Object
 protection_object = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (po:ProtectionObject {industry_standard_regulation_id: 'TISAX', protection_object_id: row.object_id})
+MERGE (po:ProtectionObject {industry_standard_regulation_id: 'TISAX 6.0', protection_object_id: row.object_id})
 ON CREATE SET
   po.name                       = row.name,
   po.type                       = row.type,
   po.classification             = row.classification,
-  po.protection_level           = row.protection_level,
+  po.level           = row.protection_level,
   po.is_sensitive               = row.is_sensitive,
-  po.data_categories_contained  = row.data_categories_contained,
-  po.owner_department           = row.owner_department,
+  po.contained  = row.data_categories_contained,
+  po.department           = row.owner_department,
   po.criticality_to_business    = row.criticality_to_business,
   po.location                   = row.location,
-  po.last_assessment_date       = date(row.last_assessment_date),
-  po.protection_controls_implemented = row.protection_controls_implemented,
+  po.last_date       = date(row.last_assessment_date),
+  po.implemented = row.protection_controls_implemented,
   po.remaining_risk             = row.remaining_risk;
 """
 #Participant
 participant = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pa:Participant {industry_standard_regulation_id: 'TISAX', participant_id: row.participant_id})
+MERGE (pa:Participant {industry_standard_regulation_id: 'TISAX 6.0', participant_id: row.participant_id})
 ON CREATE SET
-  pa.organization_name               = row.organization_name,
-  pa.participant_type                = row.participant_type,
+  pa.name               = row.organization_name,
+  pa.type                = row.participant_type,
   pa.joining_date                    = date(row.joining_date),
-  pa.assessment_result_access_level  = row.assessment_result_access_level,
-  pa.data_sharing_status             = row.data_sharing_status,
-  pa.trusted_relationship            = row.trusted_relationship,
-  pa.shared_assessments_count        = row.shared_assessments_count,
-  pa.received_assessments_count      = row.received_assessments_count,
-  pa.exchange_agreements_count       = row.exchange_agreements_count,
+  pa.level  = row.assessment_result_access_level,
+  pa.status             = row.data_sharing_status,
+  pa.relationship            = row.trusted_relationship,
+  pa.shared_count        = row.shared_assessments_count,
+  pa.received_count      = row.received_assessments_count,
+  pa.exchange_count       = row.exchange_agreements_count,
   pa.last_exchange_date              = date(row.last_exchange_date),
-  pa.quality_incidents_reported      = row.quality_incidents_reported;
+  pa.incidents_reported      = row.quality_incidents_reported;
 """
 #Assessment_result
 assessment_result = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ar:AssessmentResult {industry_standard_regulation_id: 'TISAX', assessment_result_id: row.result_id})
+MERGE (ar:AssessmentResult {industry_standard_regulation_id: 'TISAX 6.0', assessment_result_id: row.result_id})
 ON CREATE SET
   ar.certification_date            = date(row.certification_date),
-  ar.validity_start                = date(row.validity_start),
-  ar.validity_end                  = date(row.validity_end),
-  ar.assessment_level_achieved     = row.assessment_level_achieved,
+  ar.start_date               = date(row.validity_start),
+  ar.end_date               = date(row.validity_end),
+  ar.level_achieved     = row.assessment_level_achieved,
   ar.overall_compliance_percentage = row.overall_compliance_percentage,
   ar.findings_critical_count       = row.findings_critical_count,
   ar.findings_major_count          = row.findings_major_count,
@@ -187,10 +187,10 @@ ON CREATE SET
   ar.findings_observations_count   = row.findings_observations_count,
   ar.non_conformities              = row.non_conformities,
   ar.corrective_actions_required   = row.corrective_actions_required,
-  ar.label_status                  = row.label_status,
-  ar.label_validity_months         = row.label_validity_months,
-  ar.auditor_name                  = row.auditor_name,
-  ar.auditor_sign_off_date         = date(row.auditor_sign_off_date),
+  ar.status                  = row.label_status,
+  ar.validity_months         = row.label_validity_months,
+  ar.name                  = row.auditor_name,
+  ar.sign_off_date         = date(row.auditor_sign_off_date),
   ar.confidentiality_level         = row.confidentiality_level,
   ar.result_documentation_url      = row.result_documentation_url,
   ar.issuing_body                  = row.issuing_body;
@@ -199,7 +199,7 @@ ON CREATE SET
 #Exchange_node
 exchange_node = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ex:TisaxExchange {industry_standard_regulation_id: 'TISAX',exchange_id: row.exchange_id})
+MERGE (ex:TisaxExchange {industry_standard_regulation_id: 'TISAX 6.0', exchange_id: row.exchange_id})
 ON CREATE SET
   ex.name        = row.name,
   ex.description = row.description,

@@ -1,8 +1,8 @@
 # Create HITRUST Standard Node
 industry_standard_regulation = """
-MERGE (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST'})
+MERGE (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
 ON CREATE SET
-    s.standard_name = "Health Information Trust Alliance",
+    s.name = "Health Information Trust Alliance",
     s.version = "11.6.0",
     s.publication_date = date("2025-08-22"),
     s.type = "Industrial",
@@ -14,7 +14,7 @@ ON CREATE SET
 # Load HITRUST Category
 hitrust_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {industry_standard_regulation_id: 'HITRUST', category_id: row.id})
+MERGE (c:Category {industry_standard_regulation_id: 'HITRUST 11.6.0', category_id: row.id})
 ON CREATE SET
     c.number = toInteger(row.number),
     c.name = row.name,
@@ -24,7 +24,7 @@ ON CREATE SET
 # Load HITRUST Control
 hitrust_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctrl:Control {industry_standard_regulation_id: 'HITRUST', control_id: row.id})
+MERGE (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0', control_id: row.id})
 ON CREATE SET
     ctrl.name = row.name,
     ctrl.category_id = row.category_id,
@@ -34,7 +34,7 @@ ON CREATE SET
 # Load HITRUST Control_objective
 hitrust_control_objective = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:ControlObjective {industry_standard_regulation_id: 'HITRUST', objective_id: row.id})
+MERGE (co:ControlObjective {industry_standard_regulation_id: 'HITRUST 11.6.0', objective_id: row.id})
 ON CREATE SET
     co.control_id = row.control_id,
     co.description = row.text;
@@ -43,7 +43,7 @@ ON CREATE SET
 # Load HITRUST Control_specification
 hitrust_control_specification = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cs:ControlSpecification {industry_standard_regulation_id: 'HITRUST', specification_id: row.id})
+MERGE (cs:ControlSpecification {industry_standard_regulation_id: 'HITRUST 11.6.0', specification_id: row.id})
 ON CREATE SET
     cs.control_id = row.control_id,
     cs.description = row.text;
@@ -51,32 +51,32 @@ ON CREATE SET
 
 # Create CONTAINS relationships (standard -> category)
 hitrust_standard_category_rel = """
-MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST'})
-MATCH (c:Category {industry_standard_regulation_id: 'HITRUST'})
+MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (c:Category {industry_standard_regulation_id: 'HITRUST 11.6.0'})
 MERGE (s)-[:INDUSTRY_STANDARD_CONTAINS_CATEGORY]->(c);
 """
 
 # Create HAS_CONTROL relationships (Category -> Control)
 hitrust_category_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (c:Category {industry_standard_regulation_id: 'HITRUST', category_id: row.start_id})
-MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST', control_id: row.end_id})
+MATCH (c:Category {industry_standard_regulation_id: 'HITRUST 11.6.0', category_id: row.start_id})
+MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0', control_id: row.end_id})
 MERGE (c)-[:CATEGORY_HAS_CONTROL]->(ctrl);
 """
 
 # Create HAS_OBJECTIVE relationships (Control -> ControlObjective)
 hitrust_control_ControlObjective = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST', control_id: row.start_id})
-MATCH (co:ControlObjective {industry_standard_regulation_id: 'HITRUST', objective_id: row.end_id})
+MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0', control_id: row.start_id})
+MATCH (co:ControlObjective {industry_standard_regulation_id: 'HITRUST 11.6.0', objective_id: row.end_id})
 MERGE (ctrl)-[:CONTROL_HAS_CONTROL_OBJECTIVE]->(co);
 """
 
 # Create HAS_SPECIFICATION relationships (ControlObjective -> ControlSpecification)
 hitrust_ControlObjective_specification = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (co:ControlObjective {industry_standard_regulation_id: 'HITRUST', objective_id: row.start_id})
-MATCH (cs:ControlSpecification {industry_standard_regulation_id: 'HITRUST', specification_id: row.end_id})
+MATCH (co:ControlObjective {industry_standard_regulation_id: 'HITRUST 11.6.0', objective_id: row.start_id})
+MATCH (cs:ControlSpecification {industry_standard_regulation_id: 'HITRUST 11.6.0', specification_id: row.end_id})
 MERGE (co)-[:CONTROL_OBJECTIVE_HAS_SPECIFICATION]->(cs);
 """
 
@@ -84,7 +84,7 @@ hitrust_controls_nist_CSF_subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ctrl:Control {
   control_id: row.start_id,
-  industry_standard_regulation_id: 'HITRUST'
+  industry_standard_regulation_id: 'HITRUST 11.6.0'
 })
 MATCH (sc:Subcategory {
   id: row.end_id,

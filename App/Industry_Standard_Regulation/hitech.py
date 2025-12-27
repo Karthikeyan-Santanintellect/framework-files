@@ -156,7 +156,7 @@ external_framework_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (efr:ExternalFrameworkRequirement {industry_standard_regulation_id: "HITECH_ACT_2009",requirement_id: row.requirement_id})
 ON CREATE SET
-    efr.source_framework = row.source_framework,
+    efr.framework = row.source_framework,
     efr.text = row.text;
 """
 #regulation_title_rel

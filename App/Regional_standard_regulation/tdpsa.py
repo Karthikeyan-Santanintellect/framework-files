@@ -1,8 +1,8 @@
 #Regulation 
 regulation = """
-MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA'})
+MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA 2023'})
 ON CREATE SET
-    reg.name = "Texas Data Privacy and Security Act ",
+    reg.name = "Texas Data Privacy and Security Act",
     reg.version = "2023",
     reg.status = "Active",
     reg.jurisdiction = "Texas, United States",
@@ -14,19 +14,19 @@ ON CREATE SET
 #Business_entity
 business_entity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (be:BusinessEntity {regional_standard_regulation_id: 'TDPSA', entity_id: row.entity_id})
+MERGE (be:BusinessEntity {regional_standard_regulation_id: 'TDPSA 2023', entity_id: row.entity_id})
 ON CREATE SET
-    be.legal_name = row.legal_name,
-    be.entity_type = row.entity_type,
+    be.name = row.legal_name,
+    be.type = row.entity_type,
     be.industry_classification = row.industry_classification,
     be.employee_count = toInteger(row.employee_count),
-    be.annual_revenue = toFloat(row.annual_revenue),
-    be.sba_small_business_status = toBoolean(row.sba_small_business_status),
-    be.gdpr_tdpsa_compliance_status = toBoolean(row.gdpr_tdpsa_compliance_status),
+    be.revenue = toFloat(row.annual_revenue),
+    be.sba_status = toBoolean(row.sba_small_business_status),
+    be.gdpr_status = toBoolean(row.gdpr_tdpsa_compliance_status),
     be.data_controller_designation = toBoolean(row.data_controller_designation),
     be.data_processor_designation = toBoolean(row.data_processor_designation),
     be.registration_date = date(row.registration_date),
-    be.headquarters_location = row.headquarters_location,
+    be.location = row.headquarters_location,
     be.texas_operations_presence = toBoolean(row.texas_operations_presence),
     be.personal_data_processing = toBoolean(row.personal_data_processing),
     be.sensitive_data_processing = toBoolean(row.sensitive_data_processing),
@@ -36,19 +36,13 @@ ON CREATE SET
     be.profiling_processing = toBoolean(row.profiling_processing),
     be.last_compliance_audit_date = date(row.last_compliance_audit_date),
     be.compliance_status = row.compliance_status,
-    be.designated_compliance_officer = row.designated_compliance_officer
-ON MATCH SET
-    be.last_compliance_audit_date = date(row.last_compliance_audit_date),
-    be.compliance_status = row.compliance_status,
-    be.employee_count = toInteger(row.employee_count),
-    be.annual_revenue = toFloat(row.annual_revenue),
-    be.gdpr_tdpsa_compliance_status = toBoolean(row.gdpr_tdpsa_compliance_status);
+    be.designated_compliance_officer = row.designated_compliance_officer;
 """
 
 #Consumer 
 consumer = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Consumer {regional_standard_regulation_id: 'TDPSA', consumer_id: row.consumer_id})
+MERGE (c:Consumer {regional_standard_regulation_id: 'TDPSA 2023', consumer_id: row.consumer_id})
 ON CREATE SET
     c.texas_residency_status = toBoolean(row.texas_residency_status),
     c.age_group = row.age_group,
@@ -77,18 +71,18 @@ ON CREATE SET
     c.response_received = toBoolean(row.response_received),
     c.satisfaction_rating = toInteger(row.satisfaction_rating),
     c.has_legal_representative = toBoolean(row.has_legal_representative),
-    c.record_created_date = date(row.record_created_date),
-    c.record_updated_date = date(row.record_updated_date),
+    c.created_date = date(row.record_created_date),
+    c.updated_date = date(row.record_updated_date),
     c.account_status = row.account_status;
 """
 
 #Personal_data
 personal_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pd:PersonalData {regional_standard_regulation_id: 'TDPSA', data_id: row.data_id})
+MERGE (pd:PersonalData {regional_standard_regulation_id: 'TDPSA 2023', data_id: row.data_id})
 ON CREATE SET
     pd.data_category = row.data_category,
-    pd.classification_level = row.classification_level,
+    pd.level = row.classification_level,
     pd.is_sensitive_data = toBoolean(row.is_sensitive_data),
     pd.collection_method = row.collection_method,
     pd.collection_purpose = row.collection_purpose,
@@ -107,9 +101,9 @@ ON CREATE SET
 #Sensitive_data 
 sensitive_data = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sd:SensitiveData {regional_standard_regulation_id: 'TDPSA', sensitive_id: row.sensitive_id})
+MERGE (sd:SensitiveData {regional_standard_regulation_id: 'TDPSA 2023', sensitive_id: row.sensitive_id})
 ON CREATE SET
-    sd.data_type = row.data_type,
+    sd.type = row.data_type,
     sd.description = row.description,
     sd.protection_level = row.protection_level,
     sd.encryption_required = toBoolean(row.encryption_required),
@@ -128,10 +122,10 @@ ON CREATE SET
 #Datacategory 
 data_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataCategory {regional_standard_regulation_id: 'TDPSA', category_id: row.category_id})
+MERGE (dc:DataCategory {regional_standard_regulation_id: 'TDPSA 2023', category_id: row.category_id})
 ON CREATE SET
-    dc.category_name = row.category_name,
-    dc.category_code = row.category_code,
+    dc.name = row.category_name,
+    dc.code = row.category_code,
     dc.description = row.description,
     dc.requires_consent = toBoolean(row.requires_consent),
     dc.gdpr_equivalent = row.gdpr_equivalent,
@@ -145,10 +139,10 @@ ON CREATE SET
 #processing_activity 
 processing_activity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pa:ProcessingActivity {regional_standard_regulation_id: 'TDPSA', activity_id: row.activity_id})
+MERGE (pa:ProcessingActivity {regional_standard_regulation_id: 'TDPSA 2023', activity_id: row.activity_id})
 ON CREATE SET
-    pa.activity_name = row.activity_name,
-    pa.processing_type = row.processing_type,
+    pa.name = row.activity_name,
+    pa.type = row.processing_type,
     pa.description = row.description,
     pa.disclosed_purpose = row.disclosed_purpose,
     pa.compatible_purpose = toBoolean(row.compatible_purpose),
@@ -169,12 +163,12 @@ ON CREATE SET
 #consent
 consent = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Consent {regional_standard_regulation_id: 'TDPSA', consent_id: row.consent_id})
+MERGE (co:Consent {regional_standard_regulation_id: 'TDPSA 2023', consent_id: row.consent_id})
 ON CREATE SET
-    co.consent_timestamp = row.consent_timestamp,
+    co.timestamp = row.consent_timestamp,
     co.affirmative_action_taken = row.affirmative_action_taken,
-    co.consent_type = row.consent_type,
-    co.consent_valid = row.consent_valid,
+    co.type = row.consent_type,
+    co.valid = row.consent_valid,
     co.dark_pattern_used = row.dark_pattern_used,
     co.consent_method = row.consent_method,
     co.scope_of_consent = row.scope_of_consent,
@@ -196,14 +190,14 @@ ON CREATE SET
 #privacy_notice 
 privacy_notice = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pn:PrivacyNotice {regional_standard_regulation_id: 'TDPSA', notice_id: row.notice_id})
+MERGE (pn:PrivacyNotice {regional_standard_regulation_id: 'TDPSA 2023', notice_id: row.notice_id})
 ON CREATE SET
-    pn.notice_version = row.notice_version,
+    pn.version = row.notice_version,
     pn.effective_date = date(row.effective_date),
     pn.last_updated_date = date(row.last_updated_date),
-    pn.notice_format = row.notice_format,
-    pn.notice_accessibility = toBoolean(row.notice_accessibility),
-    pn.notice_clarity = row.notice_clarity,
+    pn.format = row.notice_format,
+    pn.accessibility = toBoolean(row.notice_accessibility),
+    pn.clarity = row.notice_clarity,
     pn.categories_disclosed = toBoolean(row.categories_disclosed),
     pn.purposes_disclosed = toBoolean(row.purposes_disclosed),
     pn.third_party_sharing_disclosed = toBoolean(row.third_party_sharing_disclosed),
@@ -228,17 +222,18 @@ ON CREATE SET
 #Data_protection_assessment 
 data_protection_assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'TDPSA', assessment_id: row.assessment_id})
+MERGE (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'TDPSA 2023', assessment_id: row.assessment_id})
 ON CREATE SET
-    dpa.assessment_type = row.assessment_type,
-    dpa.assessment_date = date(row.assessment_date),
+    dpa.type = row.assessment_type,
+    dpa.date = date(row.assessment_date),
     dpa.assigned_to = row.assigned_to,
     dpa.processing_activity_ref = row.processing_activity_ref,
     dpa.scope_description = row.scope_description,
     dpa.benefits_identified = row.benefits_identified,
     dpa.risks_identified = row.risks_identified,
     dpa.unfair_treatment_risk = toBoolean(row.unfair_treatment_risk),
-    dpa.disparate_impact_risk = toBoolean(row.disparate_iconsumer_requestmpact_risk),
+    dpa.disparate_impact_risk = toBoolean(row.disparate_impact_risk),
+    dpa.discrimination_risk = toBoolean(row.discrimination_risk),
     dpa.financial_harm_risk = toBoolean(row.financial_harm_risk),
     dpa.physical_harm_risk = toBoolean(row.physical_harm_risk),
     dpa.reputation_harm_risk = toBoolean(row.reputation_harm_risk),
@@ -266,12 +261,12 @@ ON CREATE SET
 #consumer_request
 consumer_request = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cr:ConsumerRequest {regional_standard_regulation_id: 'TDPSA', request_id: row.request_id})
+MERGE (cr:ConsumerRequest {regional_standard_regulation_id: 'TDPSA 2023', request_id: row.request_id})
 ON CREATE SET
-    cr.request_type = row.request_type,
-    cr.request_submission_date = row.request_submission_date,
+    cr.type = row.request_type,
+    cr.submission_date = row.request_submission_date,
     cr.submission_method = row.submission_method,
-    cr.consumer_identification = row.consumer_identification,
+    cr.identification = row.consumer_identification,
     cr.authorized_agent_status = row.authorized_agent_status,
     cr.agent_authorization_verified = row.agent_authorization_verified,
     cr.authentication_method = row.authentication_method,
@@ -286,7 +281,7 @@ ON CREATE SET
     cr.free_request_count = row.free_request_count,
     cr.fee_charged = row.fee_charged,
     cr.completion_status = row.completion_status,
-    cr.consumer_satisfied = row.consumer_satisfied,
+    cr.satisfied = row.consumer_satisfied,
     cr.appeal_submitted = row.appeal_submitted,
     cr.appeal_deadline = row.appeal_deadline;
 """
@@ -298,12 +293,12 @@ ON CREATE SET
 #Data_processor 
 data_processor = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dp:DataProcessor {regional_standard_regulation_id: 'TDPSA', processor_id: row.processor_id})
+MERGE (dp:DataProcessor {regional_standard_regulation_id: 'TDPSA 2023', processor_id: row.processor_id})
 ON CREATE SET
-    dp.processor_name = row.processor_name,
-    dp.processor_type = row.processor_type,
-    dp.contract_signed_date = date(row.contract_signed_date),
-    dp.contract_status = row.contract_status,
+    dp.name = row.processor_name,
+    dp.type = row.processor_type,
+    dp.signed_date = date(row.contract_signed_date),
+    dp.status = row.contract_status,
     dp.processing_instructions_provided = toBoolean(row.processing_instructions_provided),
     dp.instruction_clarity = row.instruction_clarity,
     dp.purpose_nature_agreed = row.purpose_nature_agreed,
@@ -312,8 +307,8 @@ ON CREATE SET
     dp.rights_obligations_documented = toBoolean(row.rights_obligations_documented),
     dp.confidentiality_required = toBoolean(row.confidentiality_required),
     dp.confidentiality_enforcement = toBoolean(row.confidentiality_enforcement),
-    dp.subprocessor_prohibition = toBoolean(row.subprocessor_prohibition),
-    dp.subprocessor_contracts_conforming = toBoolean(row.subprocessor_contracts_conforming),
+    dp.prohibition = toBoolean(row.subprocessor_prohibition),
+    dp.contracts_conforming = toBoolean(row.subprocessor_contracts_conforming),
     dp.data_deletion_required = toBoolean(row.data_deletion_required),
     dp.data_return_required = toBoolean(row.data_return_required),
     dp.compliance_cooperation = toBoolean(row.compliance_cooperation),
@@ -340,15 +335,15 @@ ON CREATE SET
 #Data_breach 
 data_breach = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (db:DataBreach {regional_standard_regulation_id: 'TDPSA', breach_id: row.breach_id})
+MERGE (db:DataBreach {regional_standard_regulation_id: 'TDPSA 2023', breach_id: row.breach_id})
 ON CREATE SET
     db.discovery_date = row.discovery_date,
     db.occurrence_date = row.occurrence_date,
-    db.notification_deadline_date = row.notification_deadline_date,
-    db.notification_completed_date = row.notification_completed_date,
-    db.breach_type = row.breach_type,
-    db.cause_description = row.cause_description,
-    db.affected_consumer_count = row.affected_consumer_count,
+    db.deadline_date = row.notification_deadline_date,
+    db.completed_date = row.notification_completed_date,
+    db.type = row.breach_type,
+    db.description = row.cause_description,
+    db.count = row.affected_consumer_count,
     db.data_types_compromised = row.data_types_compromised,
     db.sensitive_data_compromised = row.sensitive_data_compromised,
     db.encryption_status_bypassed = row.encryption_status_bypassed,
@@ -372,20 +367,20 @@ ON CREATE SET
 #opt_out_mechanism
 opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA', optout_id: row.optout_id})
+MERGE (om:OptOutMechanism {regional_standard_regulation_id: 'TDPSA 2023', optout_id: row.optout_id})
 ON CREATE SET
-    om.optout_type = row.optout_type,
-    om.optout_method = row.optout_method,
-    om.optout_request_date = row.optout_request_date,
-    om.optout_effective_date = row.optout_effective_date,
+    om.type = row.optout_type,
+    om.method = row.optout_method,
+    om.request_date = row.optout_request_date,
+    om.effective_date = row.optout_effective_date,
     om.universal_opt_out_signal = row.universal_opt_out_signal,
     om.signal_type = row.signal_type,
     om.signal_verified = row.signal_verified,
     om.commercial_reasonableness = row.commercial_reasonableness,
-    om.optout_confirmation_provided = row.optout_confirmation_provided,
-    om.optout_scope_explained = row.optout_scope_explained,
-    om.optout_duration = row.optout_duration,
-    om.optout_revocation_allowed = row.optout_revocation_allowed,
+    om._confirmation_provided = row.optout_confirmation_provided,
+    om.scope_explained = row.optout_scope_explained,
+    om.duration = row.optout_duration,
+    om.revocation_allowed = row.optout_revocation_allowed,
     om.revocation_method = row.revocation_method,
     om.enforcement_status = row.enforcement_status,
     om.violation_date = row.violation_date,
@@ -399,24 +394,24 @@ ON CREATE SET
 #Compliance audit 
 compliance_audit = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ca:ComplianceAudit {regional_standard_regulation_id: 'TDPSA', audit_id: row.audit_id})
+MERGE (ca:ComplianceAudit {regional_standard_regulation_id: 'TDPSA 2023', audit_id: row.audit_id})
 ON CREATE SET
-    ca.audit_type = row.audit_type,
-    ca.audit_start_date = date(row.audit_start_date),
-    ca.audit_completion_date = date(row.audit_completion_date),
-    ca.audit_scope = row.audit_scope,
+    ca.type = row.audit_type,
+    ca.start_date = date(row.audit_start_date),
+    ca.completion_date = date(row.audit_completion_date),
+    ca.scope = row.audit_scope,
     ca.conducted_by = row.conducted_by,
     ca.focus_areas = row.focus_areas,
-    ca.audit_results = row.audit_results,
-    ca.tdpsa_compliance_checked = toBoolean(row.tdpsa_compliance_checked),
-    ca.findings_count = toInteger(row.findings_count),
+    ca.results = row.audit_results,
+    ca.compliance_checked = toBoolean(row.tdpsa_compliance_checked),
+    ca.count = toInteger(row.findings_count),
     ca.critical_findings = toInteger(row.critical_findings),
     ca.major_findings = toInteger(row.major_findings),
     ca.minor_findings = toInteger(row.minor_findings),
     ca.findings_summary = row.findings_summary,
     ca.risk_assessment_conducted = toBoolean(row.risk_assessment_conducted),
     ca.identified_risks = row.identified_risks,
-    ca.remediation_recommended = toBoolean(row.remediation_recommended),
+    ca.recommended = toBoolean(row.remediation_recommended),
     ca.remediation_plan_deadline = CASE 
         WHEN row.remediation_plan_deadline = '' OR row.remediation_plan_deadline IS NULL 
         THEN null 
@@ -431,7 +426,7 @@ ON CREATE SET
     END,
     ca.full_compliance_achieved = toBoolean(row.full_compliance_achieved),
     ca.repeat_violations = toBoolean(row.repeat_violations),
-    ca.audit_report_filed = toBoolean(row.audit_report_filed),
+    ca.report_filed = toBoolean(row.audit_report_filed),
     ca.regulatory_follow_up_required = toBoolean(row.regulatory_follow_up_required),
     ca.continuous_monitoring_implemented = toBoolean(row.continuous_monitoring_implemented),
     ca.next_audit_date = date(row.next_audit_date);
@@ -688,7 +683,7 @@ ON CREATE SET
 exercises_consumer_right = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:Consumer {consumer_id: row.source_consumer_id})
-MATCH (target:ConsumerRequest {regional_standard_regulation_id: 'TDPSA', request_id: row.target_request_id})
+MATCH (target:ConsumerRequest {regional_standard_regulation_id: 'TDPSA 2023', request_id: row.target_request_id})
 MERGE (source)-[r:CONSUMER_EXERCISES_CONSUMER_RIGHT {
     source_id: row.source_consumer_id,
     target_id: row.target_request_id
@@ -709,8 +704,8 @@ ON CREATE SET
 #sensitive_data_belongs_to_category
 sensitive_data_belongs_to_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA', sensitive_id: row.source_sensitive_id})
-MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA', category_id: row.target_category_id})
+MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA 2023', sensitive_id: row.source_sensitive_id})
+MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA 2023', category_id: row.target_category_id})
 MERGE (source)-[r:BELONGS_TO_CATEGORY {
     source_id: row.source_sensitive_id,
     target_id: row.target_category_id   
@@ -725,7 +720,7 @@ ON CREATE SET
 #governed_by
 governed_by = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (source:BusinessEntity {regional_standard_regulation_id: 'TDPSA', entity_id: row.source_entity_id})
+MATCH (source:BusinessEntity {regional_standard_regulation_id: 'TDPSA 2023', entity_id: row.source_entity_id})
 MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: row.target_regulation_id})
 MERGE (source)-[r:BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION {
     source_id: row.source_entity_id,
@@ -740,8 +735,8 @@ ON CREATE SET
 # Personal data belongs to category
 personal_data_belongs_to_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (source:PersonalData {regional_standard_regulation_id: 'TDPSA', data_id: row.source_data_id})
-MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA', category_id: row.target_category_id})
+MATCH (source:PersonalData {regional_standard_regulation_id: 'TDPSA 2023', data_id: row.source_data_id})
+MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA 2023', category_id: row.target_category_id})
 MERGE (source)-[r:BELONGS_TO_CATEGORY {
     source_id: row.source_data_id,
     target_id: row.target_category_id

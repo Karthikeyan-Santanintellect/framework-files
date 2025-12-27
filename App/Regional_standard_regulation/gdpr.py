@@ -1,9 +1,9 @@
 # Create GDPR Regulation Node
 regional_standard_and_regulation = """
-MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR'})
+MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 ON CREATE SET
-    reg.regional_standard_regulation_name = "General Data Protection Regulation",
-    reg.official_citation = "Regulation (EU) 2016/679",
+    reg.name = "General Data Protection Regulation",
+    reg.citation = "Regulation (EU) 2016/679",
     reg.version = "2016/679",
     reg.publication_date = date("2018-05-25"),
     reg.effective_date = date("2018-05-25"),
@@ -15,7 +15,7 @@ ON CREATE SET
 # Create GDPR chapter Node
 gdpr_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Chapter {id: row.Node_ID})
+MERGE (c:Chapter {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   c.number = toInteger(row.Chapter_Number),
   c.type = row.Node_Type,
@@ -28,10 +28,10 @@ ON CREATE SET
 # Create GDPR Section Node
 gdpr_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Section {id: row.Node_ID})
+MERGE (s:Section {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   s.type = row.Node_Type,
-  s.sectionNumber = row.Section_Number,
+  s.number = row.Section_Number,
   s.chapter = row.Chapter,
   s.name = row.Name,
   s.articleRange = row.Article_Range;
@@ -40,7 +40,7 @@ ON CREATE SET
 # Create GDPR Article Node
 gdpr_article = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Article {id: row.Node_ID})
+MERGE (a:Article {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   a.type = row.Node_Type,
   a.number = toInteger(row.Article_Number),
@@ -52,7 +52,7 @@ ON CREATE SET
 # Create GDPR Recital Node
 gdpr_recital = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Recital {id: row.Node_ID})
+MERGE (r:Recital {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   r.type = row.Node_Type,
   r.number  = toInteger(row.Recital_Number),
@@ -62,7 +62,7 @@ ON CREATE SET
 # Create GDPR Paragraph Node
 gdpr_paragraph = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Paragraph {id: row.Node_ID})
+MERGE (p:Paragraph {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
     p.articleId = row.Article_ID,
     p.type = row.Node_Type,
@@ -74,7 +74,7 @@ ON CREATE SET
 # Create GDPR Sub_Paragraph Node
 gdpr_sub_paragraph = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sp:SubParagraph {id: row.Node_ID})
+MERGE (sp:SubParagraph {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   sp.type = row.Node_Type,
   sp.letter = row.Sub_Paragraph_Letter,
@@ -87,7 +87,7 @@ ON CREATE SET
 # Create GDPR Legistlative_Action Node
 gdpr_legislative_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (la:LegislativeAction {id: row.Node_ID})
+MERGE (la:LegislativeAction {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   la.type = row.Node_Type,
   la.actionType = row.Action_Type,
@@ -98,7 +98,7 @@ ON CREATE SET
 # Create GDPR Concept Node
 gdpr_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Concept {id: row.Node_ID})
+MERGE (co:Concept {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   co.type = row.Node_Type,
   co.name = row.Concept_Name,
@@ -109,11 +109,11 @@ ON CREATE SET
 # Create GDPR Framework Node
 gdpr_framework = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Framework {id: row.Node_ID})
+MERGE (f:Framework {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
   f.type = row.Node_Type,
   f.name = row.Framework_Name,
-  f.frameworkType = row.Type,
+  f.type = row.Type,
   f.version = row.Version,
   f.region = row.Region,
   f.effectiveDate = row.Effective_Date,
@@ -123,7 +123,7 @@ ON CREATE SET
 # Regulation → Chapter Relationships 
 regional_standard_regulation_chapter ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (c:Chapter {id: row.Target_ID})
 MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_HAS_CHAPTER {order: row.Properties}]->(c);
 """
@@ -139,7 +139,7 @@ MERGE (f)-[:FRAMEWORK_HAS_CHAPTER {order: toString(c.number)}]->(c);
 # Regulation → Recital Relationships 
 regional_standard_regulation_recital ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (r:Recital {id: row.Target_ID})
 MERGE (reg)-[:REGIONAL_STANDARD_REGULATION_HAS_RECITAL {order: row.Properties}]->(r);
 """
@@ -199,7 +199,7 @@ MERGE (p)-[:PARAGRAPH_HAS_SUB_PARAGRAPH {order: row.Properties}]->(sp);
 # Regulation → LegislativeAction Relationships
 regional_standard_regulation_legislative_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (la:LegislativeAction {id: row.Target_ID})
 MERGE (reg)-[:REGIONAL_REGULATION_HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
 """
@@ -207,7 +207,7 @@ MERGE (reg)-[:REGIONAL_REGULATION_HAS_LEGISLATIVE_ACTION {order: row.Properties}
 # Regulation → Framework Relationships
 regional_standard_regulation_framework ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (f:Framework {id: row.Target_ID})
 MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_IS_PART_OF_FRAMEWORK {properties: row.Properties}]->(f);
 """

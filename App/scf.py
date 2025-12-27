@@ -1,6 +1,6 @@
 constraint_is_framework = """
 CREATE CONSTRAINT is_framework_unique IF NOT EXISTS
-FOR (f:ISFrameworksAndStandard) REQUIRE f.ISframework_standard_id IS NODE KEY
+FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_frameworks_standard_id IS NODE KEY
 """
 
 constraint_domain = """
@@ -15,7 +15,7 @@ FOR (c:Control) REQUIRE c.control_id IS NODE KEY
 
 # Load Framework
 IS_framework_and_standard = """
-MERGE (f:ISFrameworksAndStandard {ISframework_standard_id:"SCF-2025.2.2"})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id:"SCF-2025.2.2"})
 ON CREATE SET
     f.name            = "SCF",
     f.full_name       = "Secure Controls Framework",
@@ -67,7 +67,7 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row WHERE row.framework_name IS NOT NULL AND row.domain_identifier IS NOT NULL
 CALL {
     WITH row
-    MATCH (f:ISFrameworksAndStandard {ISframework_standard_id:"SCF-2025.2.2"})
+    MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id:"SCF-2025.2.2"})
     MATCH (d:Domain {identifier: trim(row.domain_identifier)})
     MERGE (f)-[r:IS_FRAMEWORKS_AND_STANDARD_CONTAINS_DOMAIN]->(d)
     ON CREATE SET r.created_at = datetime()
@@ -112,6 +112,35 @@ MERGE (sub:CSF_Subcategory {code: trim(row.NIST_CSF_Subcategory)})
 MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(sub)
 RETURN count(*) AS relationships_created;
 """
+#control -> PCIDSS - Requirements
+control_pcidss_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.PCI_DSS_Requirement IS NOT NULL 
+  AND trim(row.PCI_DSS_Requirement) <> ''
+OPTIONAL MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+OPTIONAL MATCH (req:PCIDSS_Requirement {code: trim(row.PCI_DSS_Requirement)})
+WITH c, req, row
+WHERE c IS NOT NULL AND req IS NOT NULL
+MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(req)
+RETURN count(*) AS relationships_created;
+"""
+#control -> PCIDSS - Sub_Requirements
+control_pcidss_sub_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.PCI_DSS_Sub_Requirement IS NOT NULL 
+  AND trim(row.PCI_DSS_Sub_Requirement) <> ''
+OPTIONAL MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+OPTIONAL MATCH (subreq:PCIDSS_Sub_Requirement {code: trim(row.PCI_DSS_Sub_Requirement)})
+WITH c, subreq, row
+WHERE c IS NOT NULL AND subreq IS NOT NULL
+MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(subreq)
+RETURN count(*) AS relationships_created;
+"""
+
+
+
 
 
 
@@ -168,20 +197,20 @@ client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthi
 time.sleep(2)
 
 
-client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
-time.sleep(2)
-
-client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
-time.sleep(2)
-
-client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
-time.sleep(2)
-
-# client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GDPR_Mapping.csv"))
+# client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
 # time.sleep(2)
 
-# client.query(control_glba.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_GLBA_Mapping.csv"))
+# client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
 # time.sleep(2)
+
+# client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+# time.sleep(2)
+
+client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+time.sleep(2)
+
+client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+time.sleep(2)
 
 # client.query(control_hipaa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_HIPAA_Mapping.csv"))
 # time.sleep(2)

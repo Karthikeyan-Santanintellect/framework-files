@@ -1,6 +1,6 @@
 #Industry_standard_regulation
 industry_standard_regulation ="""
-MERGE (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP"})
+MERGE (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP 5"})
 ON CREATE SET
   r.name = "NERC Critical Infrastructure Protection",
   r.version = "NERC CIP Version 5 / V6+",
@@ -13,7 +13,7 @@ ON CREATE SET
 #Organization Node
 organization ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.organization_id})
+MERGE (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.organization_id})
 ON CREATE SET
   org.name                    = row.name,
   org.type                    = row.entity_type,
@@ -29,7 +29,7 @@ ON CREATE SET
 #BESCyberSystem Node
 BESCyberSystem ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.system_id})
+MERGE (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.system_id})
 ON CREATE SET
     bs.name = row.system_name,
     bs.type = row.system_type,
@@ -44,10 +44,10 @@ ON CREATE SET
 #CIPStandard
 CIPStandard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP', standard_id: row.standard_id})
+MERGE (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP 5', standard_id: row.standard_id})
 ON CREATE SET
     cs.version = row.version,
-    cs.title = row.title,
+    cs.name = row.title,
     cs.release_date = date(row.release_date),
     cs.effective_date = date(row.effective_date),
     cs.control_areas = row.control_areas;
@@ -55,10 +55,10 @@ ON CREATE SET
 #ElectronicSecurityPerimeter
 ElectronicSecurityPerimeter ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', perimeter_id: row.perimeter_id})
+MERGE (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP 5', perimeter_id: row.perimeter_id})
 ON CREATE SET
     es.name = row.name,
-    es.perimeter_type = row.perimeter_type,
+    es.type = row.perimeter_type,
     es.access_point_count = row.access_point_count,
     es.monitored_systems_count = row.monitored_systems_count,
     es.logging_enabled = row.logging_enabled,
@@ -68,10 +68,10 @@ ON CREATE SET
 #Asset
 Asset ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Asset {industry_standard_regulation_id: 'NERC_CIP', asset_id: row.asset_id})
+MERGE (a:Asset {industry_standard_regulation_id: 'NERC_CIP 5', asset_id: row.asset_id})
 ON CREATE SET
-    a.asset_name = row.asset_name,
-    a.asset_type = row.asset_type,
+    a.name = row.asset_name,
+    a.type = row.asset_type,
     a.location = row.location,
     a.criticality_level = row.criticality_level,
     a.operational_status = row.operational_status,
@@ -81,12 +81,12 @@ ON CREATE SET
 #CyberThreat
 CyberThreat ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ct:CyberThreat {industry_standard_regulation_id: 'NERC_CIP', threat_id: row.threat_id})
+MERGE (ct:CyberThreat {industry_standard_regulation_id: 'NERC_CIP 5', threat_id: row.threat_id})
 ON CREATE SET
     ct.name = row.threat_name,
-    ct.threat_category = row.threat_category,
+    ct.category = row.threat_category,
     ct.severity_level = row.severity_level,
-    ct.affected_systems_count = row.affected_systems_count,
+    ct.count = row.affected_systems_count,
     ct.description = row.threat_description,
     ct.attack_vector = row.attack_vector,
     ct.remediation_status = row.remediation_status;
@@ -94,10 +94,10 @@ ON CREATE SET
 #AccessPoint
 AccessPoint ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP', access_point_id: row.access_point_id})
+MERGE (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP 5', access_point_id: row.access_point_id})
 ON CREATE SET
-    ap.point_name = row.point_name,
-    ap.access_type = row.access_type,
+    ap.name = row.point_name,
+    ap.type = row.access_type,
     ap.protected_system_id = row.protected_system_id,
     ap.access_control_method = row.access_control_method,
     ap.authentication_required = row.authentication_required,
@@ -107,32 +107,32 @@ ON CREATE SET
 #CriticalFacility
 CriticalFacility ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cf:CriticalFacility {industry_standard_regulation_id: 'NERC_CIP', facility_id: row.facility_id})
+MERGE (cf:CriticalFacility {industry_standard_regulation_id: 'NERC_CIP 5', facility_id: row.facility_id})
 ON CREATE SET
     cf.name = row.facility_name,
     cf.type = row.facility_type,
     cf.location = row.location,
-    cf.criticality_rating = row.criticality_rating,
+    cf.rating = row.criticality_rating,
     cf.backup_facility_id = row.backup_facility_id,
-    cf.physical_security_level = row.physical_security_level,
+    cf.level = row.physical_security_level,
     cf.cctv_monitoring_active = row.cctv_monitoring_active;
 """
 #IncidentResponse
 IncidentResponse ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP', incident_id: row.response_plan_id})
+MERGE (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP 5', incident_id: row.response_plan_id})
 ON CREATE SET
-    ir.plan_name = row.plan_name,
-    ir.incident_category = row.incident_category,
-    ir.response_team_size = row.response_team_size,
-    ir.response_time_minutes = row.response_time_minutes,
+    ir.name = row.plan_name,
+    ir.category = row.incident_category,
+    ir.size = row.response_team_size,
+    ir.time_minutes = row.response_time_minutes,
     ir.last_drill_date = date(row.last_drill_date),
     ir.nerc_notification_required = row.nerc_notification_required;
 """
 #VulnerabilityManagement
 VulnerabilityManagement ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP', vulnerability_id: row.vuln_mgmt_id})
+MERGE (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP 5', vulnerability_id: row.vuln_mgmt_id})
 ON CREATE SET
     vm.name = row.program_name,
     vm.responsible_team = row.responsible_team,
@@ -143,16 +143,16 @@ ON CREATE SET
 #Relationships
 #regulation -> organization
 regulation_organization_rel = """
-MATCH (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP"})
-MATCH (o:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP 5"})
+MATCH (o:Organization {industry_standard_regulation_id: 'NERC_CIP 5'})
 MERGE (r)-[:REGULATION_GOVERNS_ORGANIZATION]->(o);
 """
 
 # ORGANIZATION_OWNS_BES_CYBER_SYSTEM
 organization_bes_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.target_system_id})
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
+MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.target_system_id})
 MERGE (org)-[r:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: row.relationship_type}]->(bs)
 ON CREATE SET
     r.ownership_start_date = date(row.ownership_start_date),
@@ -164,8 +164,8 @@ ON CREATE SET
 # ORGANIZATION_IMPLEMENTS_CIP_STANDARD
 implements_cip_standard_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
-MATCH (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP', standard_id: row.target_standard_id})
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
+MATCH (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP 5', standard_id: row.target_standard_id})
 MERGE (org)-[r:ORGANIZATION_IMPLEMENTS_CIP_STANDARD {relationship_type: row.relationship_type}]->(cs)
 ON CREATE SET
     r.implementation_date = date(row.implementation_date),
@@ -176,8 +176,8 @@ ON CREATE SET
 # DEFINES_SECURITY_PERIMETER 
 defines_security_perimeter_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.source_system_id})
-MATCH (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', perimeter_id: row.target_perimeter_id})
+MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.source_system_id})
+MATCH (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP 5', perimeter_id: row.target_perimeter_id})
 MERGE (bs)-[r:BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER {relationship_type: row.relationship_type}]->(es)
 ON CREATE SET
     r.definition_date = date(row.definition_date),
@@ -188,8 +188,8 @@ ON CREATE SET
 # PROTECTS_CRITICAL_ASSET 
 protects_critical_asset_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', system_id: row.source_system_id})
-MATCH (a:Asset {industry_standard_regulation_id: 'NERC_CIP', asset_id: row.target_asset_id})
+MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.source_system_id})
+MATCH (a:Asset {industry_standard_regulation_id: 'NERC_CIP 5', asset_id: row.target_asset_id})
 MERGE (bs)-[r:BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET {relationship_type: row.relationship_type}]->(a)
 ON CREATE SET
     r.protection_start_date = date(row.protection_start_date),
@@ -200,8 +200,8 @@ ON CREATE SET
 # MANAGES_ACCESS_CONTROL
 manages_access_control_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
-MATCH (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP', access_point_id: row.target_access_point_id})
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
+MATCH (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP 5', access_point_id: row.target_access_point_id})
 MERGE (org)-[r:ORGANIZATION_MANAGES_ACCESS_CONTROL {relationship_type: row.relationship_type}]->(ap)
 ON CREATE SET
     r.access_control_start_date = date(row.access_control_start_date),
@@ -214,8 +214,8 @@ ON CREATE SET
 # RESPONDS_TO_INCIDENT 
 responds_to_incident_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
-MATCH (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP', incident_response_id: row.target_incident_id})
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
+MATCH (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP 5', incident_response_id: row.target_incident_id})
 MERGE (org)-[r:ORGANIZATION_RESPONDS_TO_INCIDENT {relationship_type: row.relationship_type}]->(ir)
 ON CREATE SET
     r.plan_effective_date = date(row.plan_effective_date),
@@ -226,8 +226,8 @@ ON CREATE SET
 # MANAGES_VULNERABILITY
 manages_vulnerability_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.source_organization_id})
-MATCH (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP', vulnerability_id: row.target_vuln_mgmt_id})
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
+MATCH (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP 5', vulnerability_id: row.target_vuln_mgmt_id})
 MERGE (org)-[r:ORGANIZATION_MANAGES_VULNERABILITY {relationship_type: row.relationship_type}]->(vm)
 ON CREATE SET
     r.program_start_date = date(row.program_start_date),

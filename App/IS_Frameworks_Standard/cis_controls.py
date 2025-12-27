@@ -1,10 +1,12 @@
 #Load Framework
 framework_and_standard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:ISFrameworksAndStandard {framework_standard_id : 'CIS CONTROLS'})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id : 'CIS CONTROLS 8.1'})
 ON CREATE SET
   f.name = row.name,
   f.version = row.version,
+  f.publication_date = date('2022-10-25'),
+  f.status = 'Active',
   f.description = row.description,
   f.total_controls = toInteger(row.total_controls),
   f.total_safeguards = toInteger(row.total_safeguards);
@@ -62,14 +64,14 @@ ON CREATE SET
 # 1.CREATE FRAMEWORK -> GOVERNING BODY RELATIONSHIPS 
 framework_and_standard_governing_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:ISFrameworksAndStandard {framework_standard_id: row.from_node_id}) 
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: row.from_node_id}) 
 MATCH (gb:GoverningBody {name: row.to_node_id})
 MERGE (f)-[:FRAMEWORK_PUBLISHED_BY_GOVERNING_BODY]->(gb);
 """
 # 2.CREATE FRAMEWORK -> CONTROL RELATIONSHIPS 
 framework_and_standard_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:ISFrameworksAndStandard {framework_standard_id: row.from_node_id})
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: row.from_node_id})
 MATCH (c:Control {control_id: row.to_node_id})
 MERGE (f)-[:FRAMEWORK_HAS_CONTROL]->(c);
 """

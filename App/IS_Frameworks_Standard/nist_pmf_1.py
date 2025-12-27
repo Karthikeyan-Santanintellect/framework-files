@@ -49,7 +49,7 @@ FOR (s:Subcategory) ON (s.type);
 
 # ISFrameworksAndStandard
 IS_framework_and_standard = """
-MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 SET
     f.name = 'NIST Privacy Framework 1.0',
     f.full_title = 'A Tool for Improving Privacy through Enterprise Risk Management',
@@ -64,10 +64,10 @@ RETURN f;
 # Functions
 functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (fn:Function {function_id: row.function_id, IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
+MERGE (fn:Function {function_id: row.function_id, IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 ON CREATE SET 
-    fn.function_name = row.function_name,
-    fn.function_definition = row.function_definition,
+    fn.name = row.function_name,
+    fn.definition = row.function_definition,
     fn.is_foundational = CASE row.is_foundational WHEN 'True' THEN true ELSE false END,
     fn.category_count = toInteger(row.category_count),
     fn.subcategory_count = toInteger(row.subcategory_count),
@@ -79,43 +79,43 @@ ON CREATE SET
 #categories
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {category_id: row.category_id, IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
+MERGE (c:Category {category_id: row.category_id, IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 ON CREATE SET  
     c.function_id = row.function_id,
-    c.category_name = row.category_name,
+    c.name = row.category_name,
     c.subcategory_count = toInteger(row.subcategory_count),
-    c.category_description = row.category_description;
+    c.description = row.category_description;
 """
 
 #subcategories
 subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Subcategory { subcategory_id: row.`Sub-Category`, IS_frameworks_standard_id: 'NIST_PRIVACY_2020' })
+MERGE (s:Subcategory { subcategory_id: row.`Sub-Category`, IS_frameworks_standard_id: 'NIST_PMF_1.0' })
 ON CREATE SET 
     s.category_id = row.Category,
     s.function_id = row.Function,
-    s.subcategory_name = row.subcategory_name,
-    s.subcategory_type = row.subcategory_type;
+    s.name = row.subcategory_name,
+    s.type = row.subcategory_type;
 """
 
 # Relationships
 framework_standard_functions_rel = """
-MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
-MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_FUNCTIONS]->(fn)
 RETURN count(*) as created;
 """
 
 function_categories_rel = """
-MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
-MATCH (c:Category {IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
+MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MATCH (c:Category {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 WHERE fn.function_id = c.function_id
 MERGE (fn)-[:FUNCTION_HAS_CATEGORIES]->(c)
 RETURN count(*) as created;
 """
 category_subcategories_rel = """
-MATCH (c:Category {IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
-MATCH (s:Subcategory{ IS_frameworks_standard_id: 'NIST_PRIVACY_2020'})
+MATCH (c:Category {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MATCH (s:Subcategory{ IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 WHERE c.category_id = s.category_id
 MERGE (c)-[:CATEGORY_CONTAINS_SUBCATEGORIES]->(s)
 RETURN count(*) as created;
