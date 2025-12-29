@@ -149,6 +149,16 @@ MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
 MATCH (cis:CIS_Control_Title {control_title: trim(row.CIS_Control_Title), IS_frameworks_standard_id: 'CIS CONTROLS 8.1'})
 MERGE (c)-[:HAS_EXTERNAL_CONTROLS]->(cis);
 """
+#4a.control->iso_27001
+control_iso_27001 = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.ISO_27001_Control IS NOT NULL 
+  AND trim(row.ISO_27001_Control) <> '' 
+MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+MATCH (iso:ISO_27001_Control {code: trim(row.ISO_27001_Control), IS_frameworks_standard_id: 'ISO/IEC 27001:2022'})
+MERGE (c)-[:HAS_EXTERNAL_CONTROLS]->(iso);
+"""
 
 
 
