@@ -113,7 +113,7 @@ MERGE (f:Framework {Node_ID: row.Node_ID, regional_standard_regulation_id: 'GDPR
 ON CREATE SET
   f.type = row.Node_Type,
   f.frameworkName = row.Framework_Name,
-  f.legalType = row.Type,
+  f.legalType = row.Type,s
   f.version = row.Version,
   f.region = row.Region,
   f.effectiveDate = row.Effective_Date,
@@ -200,31 +200,26 @@ MERGE (p)-[:PARAGRAPH_HAS_SUB_PARAGRAPH {order: row.Properties}]->(sp);
 regional_standard_regulation_legislative_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
-MATCH (la:LegislativeAction {id: row.Target_ID})
+MATCH (la:LegislativeAction {Node_ID: row.Target_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (reg)-[:REGIONAL_REGULATION_HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
 """
 
-# Regulation → Framework Relationships
-regional_standard_regulation_framework ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
-MATCH (f:Framework {id: row.Target_ID})
-MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_IS_PART_OF_FRAMEWORK {properties: row.Properties}]->(f);
-"""
+
+
 
 # Article → Concept Relationships 
 article_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (a:Article {id: row.Source_ID})
-MATCH (co:Concept {id: row.Target_ID})
-MERGE (a)-[:ARTICLE_DEFINES_CONCEPT{properties: row.Properties}]->(co);
+MATCH (a:Article {Node_ID: row.Source_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (co:Concept {Node_ID: row.Target_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_DEFINES_CONCEPT {properties: row.Properties}]->(co);
 """
 # Recital → Concept Relationships 
 recital_concept ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Recital {id: row.Source_ID})
-MATCH (co:Concept {id: row.Target_ID})
-MERGE (r)-[:RECITAL_DEFINES_CONCEPT{properties:row.Properties}]->(co);
+MATCH (r:Recital {Node_ID: row.Source_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (co:Concept {Node_ID: row.Target_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (r)-[:RECITAL_DEFINES_CONCEPT {properties: row.Properties}]->(co);
 """
 
 
@@ -282,7 +277,7 @@ time.sleep(2)
 client.query(regional_standard_regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
 time.sleep(2)
 
-client.query(framework_chapter)
+client.query(framework_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/16_relationships_framework_to_chapter_UNIQUE.csv"))
 time.sleep(2)
 
 client.query(regional_standard_regulation_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/7_relationships_regulation_to_recital.csv"))
@@ -312,9 +307,6 @@ time.sleep(2)
 client.query(regional_standard_regulation_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/19_relationships_regulation_to_legislative_action.csv"))
 time.sleep(2)
 
-client.query(regional_standard_regulation_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/20_relationships_regulation_to_framework_CORRECTED.csv"))
-time.sleep(2)
-
 client.query(article_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/21_relationships_article_to_concepts.csv"))
 time.sleep(2)
 
@@ -326,7 +318,7 @@ logger.info("Graph structure loaded successfully.")
 output_filename = "gdpr.json"
 
 res = client.query("""
-    MATCH path = (:RegionalStandardAndRegulation)-[*]-()
+    MATCH path = (:RegionalStandardAndRegulation)-[*]->()
     WITH path
     UNWIND nodes(path) AS n
     UNWIND relationships(path) AS r
