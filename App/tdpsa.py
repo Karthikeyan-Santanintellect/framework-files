@@ -629,12 +629,13 @@ ON CREATE SET
     r.relationship_type = row.relationship_type,
     r.mechanism_implementation_date = date(row.mechanism_implementation_date),
     r.mechanism_types = row.mechanism_types,
-    r.consumer_friendly = row.consumer_friendly,
-    r.easy_to_use = row.easy_to_use,
-    r.universal_opt_out_supported = row.universal_opt_out_supported,
-    r.gpc_support_enabled = row.gpc_support_enabled
-    r.merchant_reasonableness_standard = row.merchant_reasonableness_standard;
+    r.consumer_friendly = toBoolean(row.consumer_friendly),
+    r.easy_to_use = toBoolean(row.easy_to_use),
+    r.universal_opt_out_supported = toBoolean(row.universal_opt_out_supported),
+    r.gpc_support_enabled = toBoolean(row.gpc_support_enabled),
+    r.merchant_reasonableness_standard = toBoolean(row.merchant_reasonableness_standard);
 """
+
 
 #EXPERIENCES_DATA_BREACH
 experiences_data_breach = """
