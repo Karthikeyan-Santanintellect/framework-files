@@ -705,11 +705,11 @@ ON CREATE SET
 #sensitive_data_belongs_to_category
 sensitive_data_belongs_to_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA 2023', sensitive_id: row.source_sensitive_id})
+MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA 2023', sensitive_id: replace(row.source_sensitive_id, 'SENS-', 'SD-')})
 MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA 2023', category_id: row.target_category_id})
-MERGE (source)-[r:BELONGS_TO_CATEGORY {
+MERGE (source)-[r:SENSITIVE_DATA_BELONGS_TO_CATEGORY {
     source_id: row.source_sensitive_id,
-    target_id: row.target_category_id   
+    target_id: row.target_category_id
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
@@ -722,7 +722,7 @@ ON CREATE SET
 governed_by = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:BusinessEntity {regional_standard_regulation_id: 'TDPSA 2023', entity_id: row.source_entity_id})
-MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: row.target_regulation_id})
+MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA 2023'})
 MERGE (source)-[r:BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION {
     source_id: row.source_entity_id,
     target_id: row.target_regulation_id
@@ -738,7 +738,7 @@ personal_data_belongs_to_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:PersonalData {regional_standard_regulation_id: 'TDPSA 2023', data_id: row.source_data_id})
 MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA 2023', category_id: row.target_category_id})
-MERGE (source)-[r:BELONGS_TO_CATEGORY {
+MERGE (source)-[r:PERSONAL_DATA_BELONGS_TO_CATEGORY {
     source_id: row.source_data_id,
     target_id: row.target_category_id
 }]->(target)
