@@ -3,8 +3,7 @@ regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (reg:RegionalStandardAndRegulation {
   regional_standard_regulation_id: 'DPDPA 1.0', 
-  regulation_id: row.regulation_id
-})
+  regulation_id: row.regulation_id})
 ON CREATE SET
   reg.name = row.name,
   reg.citation = row.citation,
@@ -148,22 +147,22 @@ ON CREATE SET
 """
 regulation_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.regional_standard_regulation_id})
-MATCH (c:Chapter {regional_standard_regulation_id: row.regional_standard_regulation_id, chapter_id: row.chapter_id})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0', regulation_id: row.regulation_id})
+MATCH (c:Chapter {regional_standard_regulation_id: 'DPDPA 1.0', chapter_id: row.chapter_id})
 MERGE (reg)-[:REGIONAL_REGULATION_HAS_CHAPTER]->(c);
 """
 
 chapter_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (c:Chapter {regional_standard_regulation_id: row.regional_standard_regulation_id, chapter_id: row.chapter_id})
-MATCH (sec:Section {regional_standard_regulation_id: row.regional_standard_regulation_id, section_id: row.section_id})
+MATCH (c:Chapter {regional_standard_regulation_id: 'DPDPA 1.0', chapter_id: row.chapter_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0', section_id: row.section_id})
 MERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);
 """
 
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: row.regional_standard_regulation_id, section_id: row.section_id})
-MATCH (req:Requirement {regional_standard_regulation_id: row.regional_standard_regulation_id, requirement_id: row.requirement_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0', section_id: row.section_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0', requirement_id: row.requirement_id})
 MERGE (sec)-[:SECTION_HAS_REQUIREMENT]->(req);
 """
 
