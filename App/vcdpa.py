@@ -189,9 +189,8 @@ ON CREATE SET
 """
 #Regulation → Section
 regulation_section = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.regulation_id})
-MATCH (sec:Section {regional_standard_regulation_id: row.regulation_id, section_id: row.section_id})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'VCDPA 2023'}) 
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
 MERGE (reg)-[:REGULATION_HAS_SECTION]->(sec);
 """
 
