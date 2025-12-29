@@ -1,0 +1,3771 @@
+{
+  "nodes": [
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20315",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 1,
+      "name": "Preliminary",
+      "description": "Definitions and scope of applicability",
+      "chapter_id": "CHAP-1"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20316",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 2,
+      "name": "Obligations of Data Fiduciary",
+      "description": "Core responsibilities including consent, notice, and data handling",
+      "chapter_id": "CHAP-2"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20317",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 3,
+      "name": "Rights and Duties of Data Principal",
+      "description": "Rights to access, correction, erasure, and grievance redressal",
+      "chapter_id": "CHAP-3"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20318",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 4,
+      "name": "Special Provisions",
+      "description": "Exemptions for state security, research, and startups",
+      "chapter_id": "CHAP-4"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20319",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 5,
+      "name": "Data Protection Board of India",
+      "description": "Establishment, composition, and powers of the Board",
+      "chapter_id": "CHAP-5"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20320",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 6,
+      "name": "Powers and Functions of Board",
+      "description": "Inquiry, penalty imposition, and direction issuance",
+      "chapter_id": "CHAP-6"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20321",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 7,
+      "name": "Appeal and Alternative Dispute Resolution",
+      "description": "Appellate Tribunal procedures and mediation options",
+      "chapter_id": "CHAP-7"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20322",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 8,
+      "name": "Penalties and Adjudication",
+      "description": "Schedule of penalties for non-compliance",
+      "chapter_id": "CHAP-8"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20323",
+      "mainLabel": "Chapter",
+      "labels": [
+        "Chapter"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": 9,
+      "name": "Miscellaneous",
+      "description": "Power to make rules, amendments, and override effect",
+      "chapter_id": "CHAP-9"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20324",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "1",
+      "section_id": "SEC-01",
+      "name": "Short title, extent and commencement",
+      "chapter_id": "CH-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20325",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "2",
+      "section_id": "SEC-02",
+      "name": "Definitions",
+      "chapter_id": "CH-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20326",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "3",
+      "section_id": "SEC-03",
+      "name": "Applicability",
+      "chapter_id": "CH-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20327",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "4",
+      "section_id": "SEC-04",
+      "name": "Data Fiduciary to provide notice",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20328",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "5",
+      "section_id": "SEC-05",
+      "name": "Consent to processing",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20329",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "6",
+      "section_id": "SEC-06",
+      "name": "Processing of personal data",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20330",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "7",
+      "section_id": "SEC-07",
+      "name": "Reasonable security practices",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20331",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "8",
+      "section_id": "SEC-08",
+      "name": "Personal data breach notification",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20332",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "9",
+      "section_id": "SEC-09",
+      "name": "Grievance redressal",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20333",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "10",
+      "section_id": "SEC-10",
+      "name": "Retention of personal data",
+      "chapter_id": "CH-02"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20334",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "11",
+      "section_id": "SEC-11",
+      "name": "Right to access personal data",
+      "chapter_id": "CH-03"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20335",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "12",
+      "section_id": "SEC-12",
+      "name": "Right to correction of personal data",
+      "chapter_id": "CH-03"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20336",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "13",
+      "section_id": "SEC-13",
+      "name": "Right to erasure of personal data",
+      "chapter_id": "CH-03"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20337",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "14",
+      "section_id": "SEC-14",
+      "name": "Right to grievance redressal",
+      "chapter_id": "CH-03"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20338",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "15",
+      "section_id": "SEC-15",
+      "name": "Data Principal duties",
+      "chapter_id": "CH-03"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20339",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "16",
+      "section_id": "SEC-16",
+      "name": "Significant Data Fiduciary",
+      "chapter_id": "CH-04"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20340",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "17",
+      "section_id": "SEC-17",
+      "name": "Obligations of Significant Data Fiduciaries",
+      "chapter_id": "CH-04"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20341",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "18",
+      "section_id": "SEC-18",
+      "name": "Consent Manager",
+      "chapter_id": "CH-04"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20342",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "19",
+      "section_id": "SEC-19",
+      "name": "Data Protection Impact Assessment",
+      "chapter_id": "CH-04"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20343",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "20",
+      "section_id": "SEC-20",
+      "name": "Audit of Significant Data Fiduciaries",
+      "chapter_id": "CH-04"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20344",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "21",
+      "section_id": "SEC-21",
+      "name": "Data Processor",
+      "chapter_id": "CH-05"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20345",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "22",
+      "section_id": "SEC-22",
+      "name": "Processor to be bound by contract",
+      "chapter_id": "CH-05"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20346",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "23",
+      "section_id": "SEC-23",
+      "name": "Sub-processing",
+      "chapter_id": "CH-05"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20347",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "24",
+      "section_id": "SEC-24",
+      "name": "Transfer of personal data",
+      "chapter_id": "CH-05"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20348",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "25",
+      "section_id": "SEC-25",
+      "name": "International transfers",
+      "chapter_id": "CH-05"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20349",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "26",
+      "section_id": "SEC-26",
+      "name": "Data Protection Impact Assessment",
+      "chapter_id": "CH-06"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20350",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "27",
+      "section_id": "SEC-27",
+      "name": "Board of Fiduciary",
+      "chapter_id": "CH-06"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20351",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "28",
+      "section_id": "SEC-28",
+      "name": "Data Protection Officer",
+      "chapter_id": "CH-06"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20352",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "29",
+      "section_id": "SEC-29",
+      "name": "Personal data of children",
+      "chapter_id": "CH-07"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20353",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "30",
+      "section_id": "SEC-30",
+      "name": "Parental consent for children",
+      "chapter_id": "CH-07"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20354",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "31",
+      "section_id": "SEC-31",
+      "name": "Personal data of other vulnerable persons",
+      "chapter_id": "CH-07"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20355",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "32",
+      "section_id": "SEC-32",
+      "name": "Exemptions",
+      "chapter_id": "CH-08"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20356",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "33",
+      "section_id": "SEC-33",
+      "name": "Processing for certain purposes",
+      "chapter_id": "CH-08"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20357",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "34",
+      "section_id": "SEC-34",
+      "name": "Restricted processing",
+      "chapter_id": "CH-08"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20358",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "35",
+      "section_id": "SEC-35",
+      "name": "Authority",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "36",
+      "section_id": "SEC-36",
+      "name": "Powers of Authority",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "37",
+      "section_id": "SEC-37",
+      "name": "Investigation and enforcement",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20361",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "38",
+      "section_id": "SEC-38",
+      "name": "Appeal",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20362",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "39",
+      "section_id": "SEC-39",
+      "name": "Penalties for failure to protect personal data",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20363",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "40",
+      "section_id": "SEC-40",
+      "name": "Penalties for unauthorized processing",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20364",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "41",
+      "section_id": "SEC-41",
+      "name": "Penalties for non-compliance",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20365",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "42",
+      "section_id": "SEC-42",
+      "name": "Offence and penalty for obstruction",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20366",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "43",
+      "section_id": "SEC-43",
+      "name": "Compensation",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20367",
+      "mainLabel": "Section",
+      "labels": [
+        "Section"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "number": "44",
+      "section_id": "SEC-44",
+      "name": "Rules and regulations",
+      "chapter_id": "CH-09"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20368",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-04",
+      "text": "Provide clear notice before processing",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S4-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20369",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-04",
+      "text": "Notice must include purpose of processing",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S4-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20370",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-04",
+      "text": "Notice must identify fiduciary and processor",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S4-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-05",
+      "text": "Obtain explicit consent for processing",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S5-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20372",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-05",
+      "text": "Consent must be freely given",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S5-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20373",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-05",
+      "text": "Maintain evidence of consent",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S5-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20374",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-06",
+      "text": "Process only for specified purposes",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S6-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20375",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-06",
+      "text": "Process only personal data that is necessary",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S6-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20376",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-06",
+      "text": "Do not process without legal basis",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S6-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-07",
+      "text": "Implement reasonable security practices",
+      "type": "Mandatory",
+      "priority": "Critical",
+      "requirement_id": "REQ-S7-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20378",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-07",
+      "text": "Encrypt personal data",
+      "type": "Mandatory",
+      "priority": "Critical",
+      "requirement_id": "REQ-S7-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20379",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-07",
+      "text": "Implement access controls",
+      "type": "Mandatory",
+      "priority": "Critical",
+      "requirement_id": "REQ-S7-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20380",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-07",
+      "text": "Maintain audit logs",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S7-004",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20381",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-07",
+      "text": "Use authentication mechanisms",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S7-005",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20382",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-07",
+      "text": "Ensure data integrity",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S7-006",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-08",
+      "text": "Notify breach within 72 hours",
+      "type": "Mandatory",
+      "priority": "Critical",
+      "requirement_id": "REQ-S8-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20384",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-08",
+      "text": "Include impact assessment in notice",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S8-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20385",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-08",
+      "text": "Notify Authority and data principals",
+      "type": "Mandatory",
+      "priority": "Critical",
+      "requirement_id": "REQ-S8-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20386",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-08",
+      "text": "Maintain breach notification records",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S8-004",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-09",
+      "text": "Establish grievance redressal mechanism",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S9-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20388",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-09",
+      "text": "Respond to grievances within 30 days",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S9-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20389",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-09",
+      "text": "Maintain grievance records",
+      "type": "Mandatory",
+      "priority": "Medium",
+      "requirement_id": "REQ-S9-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-10",
+      "text": "Retain data only as long as necessary",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S10-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20391",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-10",
+      "text": "Define retention periods",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S10-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20392",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-10",
+      "text": "Delete data after retention period",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S10-003",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20393",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-11",
+      "text": "Provide access to personal data",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S11-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20394",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-11",
+      "text": "Respond to access requests within 30 days",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S11-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20395",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-12",
+      "text": "Allow correction of inaccurate data",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S12-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20396",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-12",
+      "text": "Process correction within 30 days",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S12-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20397",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-13",
+      "text": "Allow erasure of personal data",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S13-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20398",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-13",
+      "text": "Process erasure within 30 days",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S13-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20399",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-14",
+      "text": "Provide grievance redressal",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S14-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20400",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-15",
+      "text": "Data principal responsible for their actions",
+      "type": "Advisory",
+      "priority": "Medium",
+      "requirement_id": "REQ-S15-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20401",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-15",
+      "text": "Principal liable for false information",
+      "type": "Advisory",
+      "priority": "Medium",
+      "requirement_id": "REQ-S15-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20402",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-16",
+      "text": "Identify Significant Data Fiduciaries",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S16-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20403",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-17",
+      "text": "SDFs must conduct DPIA",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S17-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20404",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-17",
+      "text": "SDFs must implement additional safeguards",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S17-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20405",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-18",
+      "text": "SDFs must appoint Consent Manager",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S18-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20406",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-19",
+      "text": "Conduct DPIA for high-risk processing",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S19-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20407",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-20",
+      "text": "Audit SDF compliance",
+      "type": "Mandatory",
+      "priority": "Medium",
+      "requirement_id": "REQ-S20-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20408",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-21",
+      "text": "Bind processor with contract",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S21-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20409",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-21",
+      "text": "Processor obligated by contract",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S21-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20410",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-23",
+      "text": "Obtain fiduciary approval for sub-processing",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S23-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20411",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-24",
+      "text": "Transfer data only with fiduciary approval",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S24-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20412",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-25",
+      "text": "International transfers require approval",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S25-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20413",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-26",
+      "text": "DPIA for high-risk processing",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S26-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20414",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-27",
+      "text": "Establish Board of Fiduciary",
+      "type": "Mandatory",
+      "priority": "Medium",
+      "requirement_id": "REQ-S27-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20415",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-28",
+      "text": "Appoint Data Protection Officer",
+      "type": "Mandatory",
+      "priority": "Medium",
+      "requirement_id": "REQ-S28-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20416",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-29",
+      "text": "Obtain parental consent for children",
+      "type": "Mandatory",
+      "priority": "Critical",
+      "requirement_id": "REQ-S29-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20417",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-29",
+      "text": "Do not use children for profiling",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S29-002",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20418",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-30",
+      "text": "Verify parental consent",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S30-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20419",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "section_id": "SEC-31",
+      "text": "Additional protections for vulnerable persons",
+      "type": "Mandatory",
+      "priority": "High",
+      "requirement_id": "REQ-S31-001",
+      "status": "Active"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-DF",
+      "name": "Data Fiduciary",
+      "description": "Entity determining purposes and means of processing personal data",
+      "category": "Primary"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-SDF",
+      "name": "Significant Data Fiduciary",
+      "description": "Large-scale data processors with enhanced obligations",
+      "category": "Primary"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20422",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-DP",
+      "name": "Data Processor",
+      "description": "Entity processing personal data on behalf of fiduciary",
+      "category": "Secondary"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20423",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-DPR",
+      "name": "Data Principal",
+      "description": "Individual to whom personal data relates",
+      "category": "Individual"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20424",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-CM",
+      "name": "Consent Manager",
+      "description": "Facilitates collection and management of consent",
+      "category": "Infrastructure"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20425",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-DPO",
+      "name": "Data Protection Officer",
+      "description": "Appointed by SDFs for compliance oversight",
+      "category": "Compliance"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20426",
+      "mainLabel": "Role",
+      "labels": [
+        "Role"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "role_id": "ROLE-AUTH",
+      "name": "Data Protection Authority",
+      "description": "Regulatory and enforcement body under DPDPA",
+      "category": "Regulatory"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-PII",
+      "name": "Personal Identifiable Information",
+      "description": "Name, email, phone, address",
+      "requires_consent": "Yes",
+      "definition_section": "Section 2",
+      "category": "Personal"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20428",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-SENS",
+      "name": "Sensitive Personal Data",
+      "description": "Biometric, genetic, financial, health data",
+      "requires_consent": "Yes",
+      "definition_section": "Section 2",
+      "category": "Sensitive"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20429",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-CHILD",
+      "name": "Data of Children",
+      "description": "Personal data of persons under 18 years",
+      "requires_consent": "Yes",
+      "definition_section": "Section 29",
+      "category": "Special"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20430",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-VULN",
+      "name": "Data of Vulnerable Persons",
+      "description": "Data of disabled or vulnerable individuals",
+      "requires_consent": "Yes",
+      "definition_section": "Section 31",
+      "category": "Special"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20431",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-TRACK",
+      "name": "Location/Tracking Data",
+      "description": "GPS, movement tracking information",
+      "requires_consent": "No",
+      "definition_section": "Section 2",
+      "category": "Location"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20432",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-COMM",
+      "name": "Communication Data",
+      "description": "Emails, messages, call logs",
+      "requires_consent": "Yes",
+      "definition_section": "Section 2",
+      "category": "Communication"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20433",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-TRANS",
+      "name": "Transaction Data",
+      "description": "Payment and transaction information",
+      "requires_consent": "Yes",
+      "definition_section": "Section 2",
+      "category": "Financial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20434",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-DEVICE",
+      "name": "Device Data",
+      "description": "Device IDs, IP addresses, cookies",
+      "requires_consent": "No",
+      "definition_section": "Section 2",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20435",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-BEHAV",
+      "name": "Behavioral Data",
+      "description": "Browsing history, preferences, interactions",
+      "requires_consent": "No",
+      "definition_section": "Section 2",
+      "category": "Behavioral"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20436",
+      "mainLabel": "DataCategory",
+      "labels": [
+        "DataCategory"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "data_id": "DATA-DEMOG",
+      "name": "Demographic Data",
+      "description": "Age, gender, ethnicity, religion",
+      "requires_consent": "No",
+      "definition_section": "Section 2",
+      "category": "Demographic"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20437",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 7",
+      "safeguard_id": "SG-ENC",
+      "name": "Encryption",
+      "description": "Encrypt personal data in transit and at rest",
+      "type": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20438",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 7",
+      "safeguard_id": "SG-ACCESS",
+      "name": "Access Controls",
+      "description": "Restrict access to authorized personnel only",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20439",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 7",
+      "safeguard_id": "SG-AUTH",
+      "name": "Authentication",
+      "description": "Multi-factor authentication and strong passwords",
+      "type": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20440",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 7",
+      "safeguard_id": "SG-AUDIT",
+      "name": "Audit Logs",
+      "description": "Maintain logs of all data access and modifications",
+      "type": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20441",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 7",
+      "safeguard_id": "SG-BACKUP",
+      "name": "Data Backup",
+      "description": "Regular backups with secure storage",
+      "type": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20442",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 7",
+      "safeguard_id": "SG-TRAIN",
+      "name": "Employee Training",
+      "description": "Data protection and privacy training programs",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20443",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 4",
+      "safeguard_id": "SG-POLICY",
+      "name": "Data Protection Policy",
+      "description": "Written data protection and processing policy",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20444",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 8",
+      "safeguard_id": "SG-NOTIFY",
+      "name": "Breach Notification",
+      "description": "Notify authority and principals of breaches",
+      "type": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20445",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 5",
+      "safeguard_id": "SG-CONSENT",
+      "name": "Consent Management",
+      "description": "Manage and track consent for processing",
+      "type": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20446",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 10",
+      "safeguard_id": "SG-RETENTION",
+      "name": "Retention Limits",
+      "description": "Delete data when retention purpose is met",
+      "type": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20447",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 26",
+      "safeguard_id": "SG-DPIA",
+      "name": "DPIA Requirement",
+      "description": "Conduct Data Protection Impact Assessment",
+      "type": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20448",
+      "mainLabel": "Safeguard",
+      "labels": [
+        "Safeguard"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "applies_to_section": "Section 9",
+      "safeguard_id": "SG-GRIEVANCE",
+      "name": "Grievance Mechanism",
+      "description": "Establish grievance redressal system",
+      "type": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20449",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Personal Data Breach",
+      "description": "Unauthorized access or disclosure of personal data",
+      "extension_period": "30 days",
+      "extendable": "Yes",
+      "deadline": "3 days",
+      "event_type_id": "EVT-BREACH"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20450",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Consent Withdrawal",
+      "description": "Data principal withdraws consent for processing",
+      "extension_period": "N/A",
+      "extendable": "No",
+      "deadline": "Immediate",
+      "event_type_id": "EVT-CONSENT"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20451",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Grievance Raised",
+      "description": "Data principal raises grievance against fiduciary",
+      "extension_period": "45 days",
+      "extendable": "No",
+      "deadline": "30 days",
+      "event_type_id": "EVT-GRIEV"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20452",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Data Access Request",
+      "description": "Data principal requests access to personal data",
+      "extension_period": "45 days",
+      "extendable": "No",
+      "deadline": "30 days",
+      "event_type_id": "EVT-ACCESS"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20453",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Erasure Request",
+      "description": "Data principal requests erasure of personal data",
+      "extension_period": "45 days",
+      "extendable": "No",
+      "deadline": "30 days",
+      "event_type_id": "EVT-ERASE"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20454",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Correction Request",
+      "description": "Data principal requests correction of inaccurate data",
+      "extension_period": "45 days",
+      "extendable": "No",
+      "deadline": "30 days",
+      "event_type_id": "EVT-CORRECT"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20455",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Authority Inquiry",
+      "description": "DPDPA Authority initiates investigation or inquiry",
+      "extension_period": "60 days",
+      "extendable": "No",
+      "deadline": "Varies",
+      "event_type_id": "EVT-INQUIRY"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20456",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Data Transfer",
+      "description": "Transfer of personal data to third party",
+      "extension_period": "N/A",
+      "extendable": "No",
+      "deadline": "Varies",
+      "event_type_id": "EVT-TRANSFER"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20457",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "0",
+      "name": "Compliance Audit",
+      "description": "Audit of compliance with DPDPA obligations",
+      "extension_period": "90 days",
+      "extendable": "No",
+      "deadline": "Annual",
+      "event_type_id": "EVT-AUDIT"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20458",
+      "mainLabel": "EventType",
+      "labels": [
+        "EventType"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "cost": "Variable",
+      "name": "Sanction/Penalty",
+      "description": "Authority issues penalty or sanction",
+      "extension_period": "30 days",
+      "extendable": "No",
+      "deadline": "Varies",
+      "event_type_id": "EVT-SANCTION"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20459",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Organization",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-DPP",
+      "name": "Data Protection Policy",
+      "effective_date": "2024-01-01",
+      "description": "Primary policy for data protection governance",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20460",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Operational",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-BREACH",
+      "name": "Breach Notification Policy",
+      "effective_date": "2024-01-01",
+      "description": "Procedures for notifying breach incidents",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20461",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Operational",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-CONSENT",
+      "name": "Consent Management Policy",
+      "effective_date": "2024-01-01",
+      "description": "Framework for managing consent collection and withdrawal",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20462",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Operational",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-TRANSFER",
+      "name": "Data Transfer Policy",
+      "effective_date": "2024-01-01",
+      "description": "Guidelines for transferring data to third parties",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20463",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Operational",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-RETENTION",
+      "name": "Data Retention Policy",
+      "effective_date": "2024-01-01",
+      "description": "Defines retention periods and deletion procedures",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20464",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Operational",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-GRIEVANCE",
+      "name": "Grievance Redressal Policy",
+      "effective_date": "2024-01-01",
+      "description": "Process for handling data principal grievances",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20465",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-ACCESS",
+      "name": "Data Access Policy",
+      "effective_date": "2024-01-01",
+      "description": "Controls for accessing personal data by authorized personnel",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20466",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Compliance",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-CHILD",
+      "name": "Children Data Policy",
+      "effective_date": "2024-01-01",
+      "description": "Special protections for children under 18 years",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20467",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Governance",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-AUDIT",
+      "name": "Audit and Monitoring Policy",
+      "effective_date": "2024-01-01",
+      "description": "Framework for internal and external audits",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20468",
+      "mainLabel": "Policy",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Vendor",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "policy_id": "POL-THIRD",
+      "name": "Third Party Policy",
+      "effective_date": "2024-01-01",
+      "description": "Requirements for data processors and sub-processors",
+      "version": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20469",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-ENC",
+      "name": "AES-256 Encryption",
+      "description": "Implement AES-256 for all stored data",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20470",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-TLS",
+      "name": "TLS/SSL in Transit",
+      "description": "Enforce TLS 1.2+ for data transmission",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20471",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-MFA",
+      "name": "Multi-Factor Authentication",
+      "description": "Require MFA for all system access",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20472",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-RBAC",
+      "name": "Role-Based Access Control",
+      "description": "Implement RBAC with principle of least privilege",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20473",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-AUDIT",
+      "name": "Automated Audit Logging",
+      "description": "Log all data access and modifications",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20474",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-DLP",
+      "name": "Data Loss Prevention",
+      "description": "Deploy DLP tools to prevent unauthorized exfiltration",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20475",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "IT Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-SIEM",
+      "name": "SIEM Monitoring",
+      "description": "Real-time monitoring and alerting",
+      "category": "Technical"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20476",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "HR",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-TRAINING",
+      "name": "Data Protection Training",
+      "description": "Annual mandatory training for all staff",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20477",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "HR",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-BACKGROUND",
+      "name": "Background Screening",
+      "description": "Background checks for data-handling staff",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20478",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Legal",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-NDA",
+      "name": "Confidentiality Agreements",
+      "description": "NDAs for all staff and contractors",
+      "category": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20479",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-CONSENT",
+      "name": "Consent Management System",
+      "description": "Automated consent tracking system",
+      "category": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20480",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-GRIEVANCE",
+      "name": "Grievance Tracking System",
+      "description": "Manage grievance resolution process",
+      "category": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20481",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-BREACH",
+      "name": "Incident Response Plan",
+      "description": "Documented breach response procedures",
+      "category": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20482",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-DPIA",
+      "name": "DPIA Assessment Tool",
+      "description": "Automated DPIA evaluation system",
+      "category": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20483",
+      "mainLabel": "Control",
+      "labels": [
+        "Control"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "control_id": "CTRL-RETENTION",
+      "name": "Data Retention Management",
+      "description": "Automated data deletion based on retention periods",
+      "category": "Procedural"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20484",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Consent management",
+      "personal_data": "Yes",
+      "system_id": "SYS-CMS",
+      "sensitive_data": "Yes",
+      "name": "Consent Management System",
+      "description": "Centralized platform for managing consent collection and revocation",
+      "category": "Technical",
+      "type": "Software"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20485",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Impact assessment",
+      "personal_data": "No",
+      "system_id": "SYS-DPIA",
+      "sensitive_data": "No",
+      "name": "DPIA Assessment Platform",
+      "description": "Automated DPIA assessment and reporting tool",
+      "category": "Analysis",
+      "type": "Software"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20486",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Grievance tracking",
+      "personal_data": "Yes",
+      "system_id": "SYS-GRIEVANCE",
+      "sensitive_data": "No",
+      "name": "Grievance Management Portal",
+      "description": "Portal for data principals to lodge grievances",
+      "category": "Operations",
+      "type": "Software"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20487",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Security monitoring",
+      "personal_data": "No",
+      "system_id": "SYS-AUDIT",
+      "sensitive_data": "No",
+      "name": "Audit Logging System",
+      "description": "Centralized audit log aggregation and analysis",
+      "category": "Security",
+      "type": "Infrastructure"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20488",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Access control",
+      "personal_data": "Yes",
+      "system_id": "SYS-IAM",
+      "sensitive_data": "No",
+      "name": "Identity and Access Management",
+      "description": "Central authentication and authorization system",
+      "category": "Security",
+      "type": "Infrastructure"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20489",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Data storage",
+      "personal_data": "Yes",
+      "system_id": "SYS-VAULT",
+      "sensitive_data": "Yes",
+      "name": "Data Vault/Repository",
+      "description": "Encrypted database for storing personal data",
+      "category": "Storage",
+      "type": "Infrastructure"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20490",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Data protection",
+      "personal_data": "Yes",
+      "system_id": "SYS-BACKUP",
+      "sensitive_data": "Yes",
+      "name": "Backup and Recovery System",
+      "description": "Backup and disaster recovery infrastructure",
+      "category": "Operations",
+      "type": "Infrastructure"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20491",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Data protection",
+      "personal_data": "No",
+      "system_id": "SYS-DLP",
+      "sensitive_data": "No",
+      "name": "Data Loss Prevention Suite",
+      "description": "Tools for preventing unauthorized data exfiltration",
+      "category": "Security",
+      "type": "Software"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20492",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Threat detection",
+      "personal_data": "No",
+      "system_id": "SYS-SIEM",
+      "sensitive_data": "No",
+      "name": "Security Information Event Management",
+      "description": "Real-time security monitoring and alerting",
+      "category": "Security",
+      "type": "Software"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20493",
+      "mainLabel": "System",
+      "labels": [
+        "System"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "processing_activities": "Data access",
+      "personal_data": "Yes",
+      "system_id": "SYS-API",
+      "sensitive_data": "No",
+      "name": "Data Access API",
+      "description": "APIs for authorized access to personal data",
+      "category": "Integration",
+      "type": "Software"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20494",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-CONSENT",
+      "name": "Consent Collection",
+      "description": "Collect and record consent from data principals",
+      "deadline": "2024-12-31",
+      "frequency": "Daily"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20495",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Security",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-NOTIFY",
+      "name": "Breach Notification",
+      "description": "Notify authority and data principals of breaches",
+      "deadline": "2024-12-31",
+      "frequency": "On-demand"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20496",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-GRIEVANCE",
+      "name": "Grievance Resolution",
+      "description": "Receive, track, and resolve grievances",
+      "deadline": "2024-12-31",
+      "frequency": "Daily"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20497",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-ACCESS",
+      "name": "Data Access Request",
+      "description": "Process data principal access requests",
+      "deadline": "2024-12-31",
+      "frequency": "Daily"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20498",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-ERASE",
+      "name": "Data Erasure",
+      "description": "Process and execute data erasure requests",
+      "deadline": "2024-12-31",
+      "frequency": "Weekly"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20499",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Privacy",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-CORRECT",
+      "name": "Data Correction",
+      "description": "Process and execute data correction requests",
+      "deadline": "2024-12-31",
+      "frequency": "Weekly"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20500",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Operations",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-TRANSFER",
+      "name": "Data Transfer",
+      "description": "Transfer personal data to third parties with consent",
+      "deadline": "2024-12-31",
+      "frequency": "As needed"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20501",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Governance",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-AUDIT",
+      "name": "Internal Audit",
+      "description": "Conduct compliance audits and assessments",
+      "deadline": "2024-12-31",
+      "frequency": "Quarterly"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20502",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Governance",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-TRAINING",
+      "name": "Compliance Training",
+      "description": "Deliver data protection training to staff",
+      "deadline": "2024-12-31",
+      "frequency": "Annually"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20503",
+      "mainLabel": "Process",
+      "labels": [
+        "Process"
+      ],
+      "owner": "Governance",
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "process_id": "PROC-DPIA",
+      "name": "DPIA Execution",
+      "description": "Conduct data protection impact assessments",
+      "deadline": "2024-12-31",
+      "frequency": "As required"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Low",
+      "applicable_section": "Section 36",
+      "authority": "Data Protection Authority",
+      "name": "Warning Notice",
+      "description": "Initial warning to non-compliant fiduciary",
+      "enforcement_action_id": "EA-WARNING",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Medium",
+      "applicable_section": "Section 36",
+      "authority": "Data Protection Authority",
+      "name": "Suspension Order",
+      "description": "Suspension of data processing activities",
+      "enforcement_action_id": "EA-SUSPEND",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "High",
+      "applicable_section": "Section 36",
+      "authority": "Data Protection Authority",
+      "name": "Cease Processing Order",
+      "description": "Order to cease processing immediately",
+      "enforcement_action_id": "EA-CEASE",
+      "type": "Judicial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Medium",
+      "applicable_section": "Section 39",
+      "authority": "Data Protection Authority",
+      "name": "Fine - Low Tier",
+      "description": "Monetary penalty up to \u20b95 crores",
+      "enforcement_action_id": "EA-FINE-LOW",
+      "type": "Financial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "High",
+      "applicable_section": "Section 40",
+      "authority": "Data Protection Authority",
+      "name": "Fine - High Tier",
+      "description": "Monetary penalty up to \u20b910 crores",
+      "enforcement_action_id": "EA-FINE-HIGH",
+      "type": "Financial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Critical",
+      "applicable_section": "Section 36",
+      "authority": "Data Protection Authority",
+      "name": "Data Destruction Order",
+      "description": "Order to destroy collected personal data",
+      "enforcement_action_id": "EA-DESTROY",
+      "type": "Judicial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Medium",
+      "applicable_section": "Section 20",
+      "authority": "Data Protection Authority",
+      "name": "Compliance Audit Order",
+      "description": "Mandatory compliance audit at fiduciary expense",
+      "enforcement_action_id": "EA-AUDIT",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "High",
+      "applicable_section": "Section 36",
+      "authority": "Data Protection Authority",
+      "name": "Transfer Barrier",
+      "description": "Prohibition on data transfers to third parties",
+      "enforcement_action_id": "EA-BARRIER",
+      "type": "Administrative"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Medium",
+      "applicable_section": "Section 43",
+      "authority": "Data Protection Authority",
+      "name": "Compensation Order",
+      "description": "Order to pay compensation to data principal",
+      "enforcement_action_id": "EA-COMPENSATION",
+      "type": "Judicial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20513",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "High",
+      "applicable_section": "Section 38",
+      "authority": "Data Protection Authority",
+      "name": "Appeal Rejection",
+      "description": "Rejection of appeal against penalty",
+      "enforcement_action_id": "EA-APPEAL",
+      "type": "Judicial"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20514",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Critical",
+      "applicable_section": "Section 42",
+      "authority": "Law Enforcement",
+      "name": "Criminal Referral",
+      "description": "Referral for criminal prosecution",
+      "enforcement_action_id": "EA-CRIMINAL",
+      "type": "Criminal"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:20515",
+      "mainLabel": "EnforcementAction",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "regional_standard_regulation_id": "DPDPA 1.0",
+      "level": "Medium",
+      "applicable_section": "Section 36",
+      "authority": "Data Protection Authority",
+      "name": "Public Notice",
+      "description": "Publication of enforcement action in public domain",
+      "enforcement_action_id": "EA-PUBLICITY",
+      "type": "Administrative"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20368",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300240",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20368",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928016",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20368",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555792",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20443",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20368",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811344",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20459",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20369",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300241",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300243",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928019",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155444883792613267",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20428",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555795",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20445",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183571",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20479",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811347",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20461",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322451",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20494",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20372",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300244",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20423",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20372",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694676",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20450",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20374",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300246",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20374",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928022",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300249",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928025",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155444883792613273",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20428",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555801",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20437",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183577",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20469",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811353",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20459",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322457",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20502",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20378",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300250",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20378",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555802",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20437",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20378",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183578",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20469",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20379",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555803",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20438",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20379",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183579",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20472",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20380",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555804",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20440",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20380",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183580",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20473",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20381",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555805",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20439",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20381",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183581",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20471",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20382",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555806",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20441",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300255",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928031",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555807",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20444",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183583",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20481",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811359",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20460",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694687",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20449",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322463",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20495",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20385",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300257",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20426",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300259",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555811",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20448",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183587",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20480",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811363",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20464",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694691",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20451",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20387",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322467",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20496",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20388",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300260",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300262",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928038",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155444883792613286",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20428",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153194183490555814",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20446",
+      "type": "REQUIREMENTS_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183590",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20483",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20390",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811366",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20463",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20393",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300265",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20393",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928041",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20393",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811369",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20465",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20393",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694697",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20452",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20393",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322473",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20497",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20394",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300266",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20423",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20395",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300267",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20395",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928043",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20395",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694699",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20454",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20395",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322475",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20499",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20397",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300269",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20397",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928045",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20427",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20397",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694701",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20453",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20397",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322477",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20498",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20399",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300271",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20402",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300274",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20403",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300275",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20403",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153195283002183603",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20482",
+      "type": "REQUIREMENTS_REQUIRES_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20403",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694707",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20457",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20404",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300276",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20405",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300277",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20405",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155443784280985525",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20424",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20406",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322486",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20503",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20407",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811383",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20467",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20407",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322487",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20501",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20408",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300280",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20422",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20409",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300281",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20422",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20410",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300282",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20422",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20411",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300283",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20411",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811387",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20462",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20411",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694715",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20456",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20411",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153200780560322491",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20500",
+      "type": "REQUIREMENTS_REQUIRES_PROCESS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20412",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300284",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20413",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153199681048694717",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20455",
+      "type": "REQUIREMENTS_REQUIRES_EVENTTYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20415",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300287",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20425",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20416",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300288",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20416",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928064",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20429",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20416",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153196382513811392",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20466",
+      "type": "REQUIREMENTS_REQUIRES_POLICY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20417",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928065",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20429",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20418",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153191984467300290",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20423",
+      "type": "REQUIREMENTS_REQUIRES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20419",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153193083978928067",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20430",
+      "type": "REQUIREMENTS_REQUIRES_DATACATEGORY"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20469",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439221",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20489",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20471",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439223",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20488",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20472",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439224",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20488",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20473",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439225",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20487",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20474",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439226",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20491",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20475",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439227",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20492",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20479",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439231",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20484",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20480",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439232",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20486",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439233",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20487",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439234",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20485",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153197482025439235",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20489",
+      "type": "CONTROLS_CONTROLS_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20494",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067022",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20484",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20495",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067023",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20487",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20496",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067024",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20486",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20497",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067025",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20489",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20498",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067026",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20489",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20499",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067027",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20489",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20500",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067028",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20493",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20501",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067029",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20492",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20502",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067030",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20488",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20503",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153198581537067031",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20485",
+      "type": "PROCESSES_PROCESSES_SYSTEM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950360",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635608",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20383",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578136",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263384",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205912",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20504",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891160",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950361",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20376",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635609",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578137",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263385",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205913",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20505",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891161",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950362",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20371",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635610",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20376",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578138",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263386",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205914",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20506",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891162",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950363",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20378",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635611",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20385",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578139",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263387",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891163",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20507",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205915",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20362",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950364",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20374",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635612",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20377",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578140",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263388",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891164",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20508",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205916",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20363",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950365",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20392",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635613",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20397",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578141",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263389",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205917",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20509",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891165",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635614",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20403",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950366",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20407",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578142",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20421",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263390",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20425",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205918",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20343",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20510",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891166",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20360",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950367",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20411",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635615",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20412",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578143",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263391",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20422",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891167",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20347",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20511",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205919",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153201880071950368",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20385",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155453679885635616",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20399",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_REQUIREMENTS"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578144",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155454779397263392",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20423",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155455878908891168",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20337",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20512",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205920",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20366",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20513",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578145",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20420",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20513",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205921",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20361",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20514",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578146",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20426",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20514",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205922",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20365",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20515",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153202979583578147",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20426",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:20515",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153204079095205923",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:20359",
+      "type": "ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION"
+    }
+  ]
+}

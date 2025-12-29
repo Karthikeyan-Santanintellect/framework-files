@@ -2,16 +2,18 @@
 regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (reg:RegionalStandardAndRegulation {
-  regional_standard_regulation_id: row.regional_standard_regulation_id
+  regional_standard_regulation_id: 'DPDPA 1.0', 
+  regulation_id: row.regulation_id
 })
 ON CREATE SET
   reg.name = row.name,
   reg.citation = row.citation,
   reg.version = row.version,
   reg.status = row.status,
-  reg.effective_date = date(row.effective_date),
+  reg.effective_date = row.effective_date,  
   reg.jurisdiction = row.jurisdiction,
-  reg.description = row.description;
+  reg.description = row.description
+RETURN count(reg) AS regulations_created;
 """
 #Chapter
 chapter = """
