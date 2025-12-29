@@ -329,10 +329,10 @@ time.sleep(2)
 client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Chapter_Relationship_FIXED.csv"))
 time.sleep(2)
 
-client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Chapter_Section_Relationship_FULL.csv"))
+client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA-Chap-Sec-Rel.csv"))
 time.sleep(2)
 
-client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Section_Requirement_Relationship_CORRECT.csv"))
+client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA-Sec-Req-Rel.csv"))
 time.sleep(2)
                                         
 client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Roles.csv"))
