@@ -1,14 +1,15 @@
 
 # Load Framework
 IS_framework_and_standard = """
-MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id:"SCF 2.2"})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.2.2"})
 ON CREATE SET
-    f.name = "SCF",
+    f.name = "Secure Controls Framework",
     f.full_name = "Secure Controls Framework",
-    f.version = "2.2",
-    f.publication_date = date("2025-06-12"),
+    f.version = "2025.2.2",
+    f.publication_date = date("2025-01-01"),
     f.status = "Active",
     f.total_controls = 1342,
+    f.url = "https://securecontrolsframework.com/",
     f.description = "A comprehensive cybersecurity and data privacy control framework organized into multiple domains."
 RETURN f;
 """
@@ -20,7 +21,7 @@ MERGE (d:Domain {identifier: row.identifier})
 ON CREATE SET 
     d.name = row.name,
     d.description = row.description,
-    d.created_at = datetime()
+    d.created_at = datetime();
 """
 
 # Load Controls
@@ -43,7 +44,7 @@ CALL {
         c.is_dsr = toBoolean(row.is_dsr),
         c.control_type = row.control_type,
         c.created_at = datetime()
-} IN TRANSACTIONS OF 500 ROWS
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
 
@@ -51,81 +52,139 @@ CALL {
 # Create Framework→Domain Relationships
 framework_domain_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.framework_name IS NOT NULL AND row.domain_identifier IS NOT NULL
+WITH row WHERE row.domain_identifier IS NOT NULL
 CALL {
     WITH row
-    MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id:"SCF-2025.2.2"})
+    MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.2.2"})
     MATCH (d:Domain {identifier: trim(row.domain_identifier)})
     MERGE (f)-[r:IS_FRAMEWORKS_AND_STANDARD_CONTAINS_DOMAIN]->(d)
     ON CREATE SET r.created_at = datetime()
-} IN TRANSACTIONS OF 500 ROWS
+} IN TRANSACTIONS OF 500 ROWS;
 """
+
 
 # Create Domain → Controls Relationships
 domain_controls_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row WHERE row.domain_identifier IS NOT NULL AND row.control_id IS NOT NULL
-    AND trim(row.domain_identifier) <> '' AND trim(row.control_id) <> ''
 CALL {
     WITH row
     MATCH (d:Domain {identifier: trim(row.domain_identifier)})
     MATCH (c:Control {control_id: trim(row.control_id)})
     MERGE (d)-[r:DOMAIN_CONTAINS_CONTROL]->(c)
     ON CREATE SET r.created_at = datetime()
-} IN TRANSACTIONS OF 500 ROWS
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-#control -> CSF Function
+
+#1a.control -> CSF Function
 control_CSF_function ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.NIST_CSF_Function IS NOT NULL 
+  AND trim(row.NIST_CSF_Function) <> ''
 MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-MERGE (fun:CSF_Function {code: trim(row.NIST_CSF_Function)})
-MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(fun)
-RETURN count(*) AS relationships_created;
-"""
-#control -> CSF Categories
+CREATE (c)-[rel:SCF_CONTROLS_MAPS_TO_EXTERNAL_CONTROLS {
+    function_code: trim(row.NIST_CSF_Function),
+    function_name: trim(row.NIST_CSF_Function),
+    mapping_type: 'CSF_FUNCTION',
+    framework: 'NIST_CSF_2.0',
+    created_date: date()
+}]->(m:ExternalControl {id: 'CSF_' + trim(row.NIST_CSF_Function), type: 'CSF_FUNCTION'})
+RETURN count(rel) as relationships_created;
+""" 
+#1b.control -> CSF Categories
 control_CSF_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.NIST_CSF_Category IS NOT NULL 
+  AND trim(row.NIST_CSF_Category) <> ''
 MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-MERGE (cat:CSF_Category {code: trim(row.NIST_CSF_Category)})
-MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(cat)
-RETURN count(*) AS relationships_created;
+CREATE (c)-[rel:SCF_CONTROLS_MAPS_TO_EXTERNAL_CONTROLS {
+    category_code: trim(row.NIST_CSF_Category),
+    mapping_type: 'CSF_CATEGORY',
+    framework: 'NIST_CSF_2.0',
+    created_date: date()
+}]->(m:ExternalControl {id: 'CSF_' + trim(row.NIST_CSF_Category), type: 'CSF_CATEGORY'})
+RETURN count(rel) as relationships_created;
 """
-#control -> CSF Subcategories
+#1c.control -> CSF Subcategories
 control_CSF_subcategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.NIST_CSF_Subcategory IS NOT NULL 
+  AND trim(row.NIST_CSF_Subcategory) <> ''
 MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-MERGE (sub:CSF_Subcategory {code: trim(row.NIST_CSF_Subcategory)})
-MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(sub)
-RETURN count(*) AS relationships_created;
+CREATE (c)-[rel:SCF_CONTROLS_MAPS_TO_EXTERNAL_CONTROLS {
+    subcategory_code: trim(row.NIST_CSF_Subcategory),
+    mapping_type: 'CSF_SUBCATEGORY',
+    framework: 'NIST_CSF_2.0',
+    created_date: date()
+}]->(m:ExternalControl {id: 'CSF_' + trim(row.NIST_CSF_Subcategory), type: 'CSF_SUBCATEGORY'})
+RETURN count(rel) as relationships_created;
 """
-#control -> PCIDSS - Requirements
+#2a.control -> PCIDSS - Requirements
 control_pcidss_requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row 
 WHERE row.PCI_DSS_Requirement IS NOT NULL 
   AND trim(row.PCI_DSS_Requirement) <> ''
-OPTIONAL MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-OPTIONAL MATCH (req:PCIDSS_Requirement {code: trim(row.PCI_DSS_Requirement)})
-WITH c, req, row
-WHERE c IS NOT NULL AND req IS NOT NULL
-MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(req)
-RETURN count(*) AS relationships_created;
+MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+CREATE (c)-[rel:SCF_CONTROLS_MAPS_TO_EXTERNAL_CONTROLS {
+    requirement_code: trim(row.PCI_DSS_Requirement),
+    mapping_type: 'PCI_DSS_REQUIREMENT',
+    framework: 'PCI_DSS_4.0',
+    created_date: date()
+}]->(m:ExternalControl {id: 'PCI_' + trim(row.PCI_DSS_Requirement), type: 'PCI_REQUIREMENT'})
+RETURN count(rel) as relationships_created;
 """
-#control -> PCIDSS - Sub_Requirements
+#2b.control -> PCIDSS - Sub_Requirements
 control_pcidss_sub_requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row 
 WHERE row.PCI_DSS_Sub_Requirement IS NOT NULL 
   AND trim(row.PCI_DSS_Sub_Requirement) <> ''
-OPTIONAL MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-OPTIONAL MATCH (subreq:PCIDSS_Sub_Requirement {code: trim(row.PCI_DSS_Sub_Requirement)})
-WITH c, subreq, row
-WHERE c IS NOT NULL AND subreq IS NOT NULL
-MERGE (c)-[:SCF_CONTROLS_HAS_EXTERNAL_CONTROL]->(subreq)
-RETURN count(*) AS relationships_created;
+MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+CREATE (c)-[rel:SCF_CONTROLS_MAPS_TO_EXTERNAL_CONTROLS {
+    sub_requirement_code: trim(row.PCI_DSS_Sub_Requirement),
+    mapping_type: 'PCI_DSS_SUB_REQUIREMENT',
+    framework: 'PCI_DSS_4.0',
+    created_date: date()
+}]->(m:ExternalControl {id: 'PCI_' + trim(row.PCI_DSS_Sub_Requirement), type: 'PCI_SUB_REQUIREMENT'})
+RETURN count(rel) as relationships_created;
 """
-
+#3a.control->cis_controls_number
+control_cis_controls_number = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.CIS_Control_Number IS NOT NULL 
+  AND trim(row.CIS_Control_Number) <> ''
+MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+CREATE (c)-[rel:MAPS_TO_CIS_CONTROL_NUMBER {
+    cis_control_number: trim(row.CIS_Control_Number),
+    cis_control_title: trim(row.CIS_Control_Title),
+    mapping_type: 'CIS_CONTROL_NUMBER',
+    framework: 'CIS_Controls_v8',
+    created_date: date()
+}]->(m:ExternalControl {id: 'CIS_' + trim(row.CIS_Control_Number), type: 'CIS_CONTROL'})
+RETURN count(rel) as relationships_created;
+"""
+#3b.control->cis_controls_title
+control_cis_controls_title = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row 
+WHERE row.CIS_Control_Title IS NOT NULL 
+  AND trim(row.CIS_Control_Title) <> ''
+MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
+CREATE (c)-[rel:MAPS_TO_CIS_CONTROL_TITLE {
+    cis_control_number: trim(row.CIS_Control_Number),
+    cis_control_title: trim(row.CIS_Control_Title),
+    mapping_type: 'CIS_CONTROL_TITLE',
+    framework: 'CIS_Controls_v8',
+    created_date: date()
+}]->(m:ExternalControl {id: 'CIS_TITLE_' + trim(row.CIS_Control_Title), type: 'CIS_CONTROL_TITLE'})
+RETURN count(rel) as relationships_created;
+"""
 
 
 
@@ -136,6 +195,7 @@ import os
 import time
 import logging
 import json
+import sys
 from app import Neo4jConnect
 
 logging.basicConfig(level=logging.INFO)
@@ -153,9 +213,9 @@ logger.info("Loading graph structure...")
 
 # LOAD DATA
 
-
 client.query(IS_framework_and_standard)
 time.sleep(2)
+
 
 client.query(domain.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/neo4j_domains_simplified.csv"))
 time.sleep(2)
@@ -171,14 +231,14 @@ client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthi
 time.sleep(2)
 
 
-# client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
-# time.sleep(2)
+client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+time.sleep(2)
 
-# client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
-# time.sleep(2)
+client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+time.sleep(2)
 
-# client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
-# time.sleep(2)
+client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+time.sleep(2)
 
 client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
 time.sleep(2)
