@@ -1,10 +1,10 @@
 chapter_id,chapter_number,title,description
-CHAP-1,1,Preliminary,"Definitions and scope of applicability"
-CHAP-2,2,Obligations of Data Fiduciary,"Core responsibilities including consent, notice, and data handling"
-CHAP-3,3,Rights and Duties of Data Principal,"Rights to access, correction, erasure, and grievance redressal"
-CHAP-4,4,Special Provisions,"Exemptions for state security, research, and startups"
-CHAP-5,5,Data Protection Board of India,"Establishment, composition, and powers of the Board"
-CHAP-6,6,Powers and Functions of Board,"Inquiry, penalty imposition, and direction issuance"
-CHAP-7,7,Appeal and Alternative Dispute Resolution,"Appellate Tribunal procedures and mediation options"
-CHAP-8,8,Penalties and Adjudication,"Schedule of penalties for non-compliance"
-CHAP-9,9,Miscellaneous,"Power to make rules, amendments, and override effect"
+CHAP-01,1,Preliminary,Definitions and scope of applicability
+CHAP-02,2,Obligations of Data Fiduciary,"Core responsibilities including consent, notice, and data handling"
+CHAP-03,3,Rights and Duties of Data Principal,"Rights to access, correction, erasure, and grievance redressal"
+CHAP-04,4,Special Provisions,"Exemptions for state security, research, and startups"
+CHAP-05,5,Data Protection Board of India,"Establishment, composition, and powers of the Board"
+CHAP-06,6,Powers and Functions of Board,"Inquiry, penalty imposition, and direction issuance"
+CHAP-07,7,Appeal and Alternative Dispute Resolution,Appellate Tribunal procedures and mediation options
+CHAP-08,8,Penalties and Adjudication,Schedule of penalties for non-compliance
+CHAP-09,9,Miscellaneous,"Power to make rules, amendments, and override effect"
