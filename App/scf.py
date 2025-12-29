@@ -1,29 +1,16 @@
-constraint_is_framework = """
-CREATE CONSTRAINT is_framework_unique IF NOT EXISTS
-FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_frameworks_standard_id IS NODE KEY
-"""
-
-constraint_domain = """
-CREATE CONSTRAINT domain_unique IF NOT EXISTS 
-FOR (d:Domain) REQUIRE d.identifier IS NODE KEY
-"""
-
-constraint_control = """
-CREATE CONSTRAINT control_unique IF NOT EXISTS 
-FOR (c:Control) REQUIRE c.control_id IS NODE KEY
-"""
 
 # Load Framework
 IS_framework_and_standard = """
-MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id:"SCF-2025.2.2"})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id:"SCF 2.2"})
 ON CREATE SET
-    f.name            = "SCF",
-    f.full_name       = "Secure Controls Framework",
-    f.version         = "2025.2.2",
+    f.name = "SCF",
+    f.full_name = "Secure Controls Framework",
+    f.version = "2.2",
     f.publication_date = date("2025-06-12"),
-    f.status          = "Active",
-    f.total_controls  = 1342,
-    f.description     = "A comprehensive cybersecurity and data privacy control framework organized into multiple domains.";
+    f.status = "Active",
+    f.total_controls = 1342,
+    f.description = "A comprehensive cybersecurity and data privacy control framework organized into multiple domains."
+RETURN f;
 """
 
 # Load Domain 
@@ -161,19 +148,6 @@ if health is not True:
     print("Neo4j connection error:", health)
     os._exit(1)
 
-logger.info("Creating constraints...")
-
-# CREATE CONSTRAINTS 
-client.query(constraint_is_framework)
-time.sleep(1)
-
-client.query(constraint_domain)
-time.sleep(1)
-
-client.query(constraint_control)
-time.sleep(1)
-
-logger.info("Constraints created successfully.")
 
 logger.info("Loading graph structure...")
 

@@ -111,7 +111,7 @@ gdpr_framework = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (f:Framework {id: row.Node_ID}, regional_standard_regulation_id: 'GDPR 2016/679')
 ON CREATE SET
-  f.type = row.Node_Type,
+  f.Node_type = row.Node_Type,
   f.name = row.Framework_Name,
   f.type = row.Type,
   f.version = row.Version,
