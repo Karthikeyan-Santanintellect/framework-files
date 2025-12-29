@@ -691,11 +691,11 @@ MERGE (source)-[r:CONSUMER_EXERCISES_CONSUMER_RIGHT {
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
-    r.request_date = date(row.request_date),
+    r.request_date = row.request_date,
     r.right_exercised = row.right_exercised,
     r.request_authenticated = row.request_authenticated,
     r.request_fulfilled = row.request_fulfilled,
-    r.fulfillment_date = date(row.fulfillment_date),
+    r.fulfillment_date = row.fulfillment_date,
     r.free_request_used = row.free_request_used,
     r.fee_charged = row.fee_charged,
     r.appeal_available = row.appeal_available;
@@ -705,7 +705,7 @@ ON CREATE SET
 #sensitive_data_belongs_to_category
 sensitive_data_belongs_to_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA 2023', sensitive_id: replace(row.source_sensitive_id, 'SENS-', 'SD-')})
+MATCH (source:SensitiveData {regional_standard_regulation_id: 'TDPSA 2023', sensitive_id: row.source_sensitive_id})
 MATCH (target:DataCategory {regional_standard_regulation_id: 'TDPSA 2023', category_id: row.target_category_id})
 MERGE (source)-[r:SENSITIVE_DATA_BELONGS_TO_CATEGORY {
     source_id: row.source_sensitive_id,
@@ -713,7 +713,7 @@ MERGE (source)-[r:SENSITIVE_DATA_BELONGS_TO_CATEGORY {
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
-    r.classification_date = date(row.classification_date),
+    r.classification_date = row.classification_date,
     r.sensitive_category_type = row.sensitive_category_type;
 """
 
@@ -722,17 +722,19 @@ ON CREATE SET
 governed_by = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (source:BusinessEntity {regional_standard_regulation_id: 'TDPSA 2023', entity_id: row.source_entity_id})
-MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA 2023'})
+MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: row.target_regulation_id})
 MERGE (source)-[r:BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION {
     source_id: row.source_entity_id,
     target_id: row.target_regulation_id
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
-    r.compliance_start_date = date(row.compliance_start_date),
+    r.compliance_start_date = row.compliance_start_date,
     r.jurisdiction = row.jurisdiction,
     r.mandatory = row.mandatory;
 """
+
+
 # Personal data belongs to category
 personal_data_belongs_to_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -744,8 +746,8 @@ MERGE (source)-[r:PERSONAL_DATA_BELONGS_TO_CATEGORY {
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
-    r.classification_date = date(row.classification_date),
-    r.primary_category = toBoolean(row.primary_category);
+    r.classification_date = row.classification_date,
+    r.primary_category = row.primary_category;
 """
 
 
@@ -864,7 +866,7 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]-()
+res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
 WITH path
 UNWIND nodes(path) AS n
 UNWIND relationships(path) AS r
