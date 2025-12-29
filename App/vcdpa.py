@@ -1,7 +1,7 @@
 #Regulation
 regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE(reg:RegionalStandardAndRegulation {regional_standard_regulation_id: "vcdpa 2023"})
+MERGE(reg:RegionalStandardAndRegulation {regional_standard_regulation_id: "VCDPA 2023"})
 ON CREATE SET
   reg.name = row.name,
   reg.citation =row.citation,
@@ -15,7 +15,7 @@ ON CREATE SET
 #section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sec:Section {regional_standard_regulation_id: 'vcdpa 2023', section_id: row.section_id})
+MERGE (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
 ON CREATE SET
     sec.citation = row.full_citation,
     sec.heading = row.heading,
@@ -26,7 +26,7 @@ ON CREATE SET
 #Requirement
 requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
+MERGE (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
 ON CREATE SET
     req.section_id = row.section_id,
     req.text = row.requirement_text,
@@ -40,7 +40,7 @@ ON CREATE SET
 #Role
 role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ro:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.role_id})
+MERGE (ro:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.role_id})
 ON CREATE SET
     ro.name = row.name,
     ro.description = row.description,
@@ -50,7 +50,7 @@ ON CREATE SET
 #Data Category
 data_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataCategory {regional_standard_regulation_id: 'vcdpa 2023', data_id: row.data_id})
+MERGE (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023', data_id: row.data_id})
 ON CREATE SET
     dc.type = row.category_type,
     dc.name = row.name,
@@ -61,7 +61,7 @@ ON CREATE SET
 #Event_Type
 event_type = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (et:EventType {regional_standard_regulation_id: 'vcdpa 2023', event_type_id: row.event_type_id})
+MERGE (et:EventType {regional_standard_regulation_id: 'VCDPA 2023', event_type_id: row.event_type_id})
 ON CREATE SET
     et.name = row.name,
     et.description = row.description,
@@ -73,7 +73,7 @@ ON CREATE SET
 #Safeguard
 safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sg:Safeguard {regional_standard_regulation_id: 'vcdpa 2023', safeguard_id: row.safeguard_id})
+MERGE (sg:Safeguard {regional_standard_regulation_id: 'VCDPA 2023', safeguard_id: row.safeguard_id})
 ON CREATE SET
     sg.name = row.name,
     sg.description = row.description,
@@ -83,7 +83,7 @@ ON CREATE SET
 #enforcement_action
 enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ea:EnforcementAction {regional_standard_regulation_id: 'vcdpa 2023', enforcement_id: row.enforcement_id})
+MERGE (ea:EnforcementAction {regional_standard_regulation_id: 'VCDPA 2023', enforcement_id: row.enforcement_id})
 ON CREATE SET
     ea.type = row.type,
     ea.authority = row.authority,
@@ -96,7 +96,7 @@ ON CREATE SET
 #data_protection_assessment
 data_protection_assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'vcdpa 2023', dpa_id: row.dpa_id})
+MERGE (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
 ON CREATE SET
     dpa.trigger = row.trigger,
     dpa.description = row.description,
@@ -106,7 +106,7 @@ ON CREATE SET
 #implementation_spec
 implementation_spec = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ispec:ImplementationSpec {regional_standard_regulation_id: 'vcdpa 2023', impl_id: row.impl_id})
+MERGE (ispec:ImplementationSpec {regional_standard_regulation_id: 'VCDPA 2023', impl_id: row.impl_id})
 ON CREATE SET
     ispec.requirement_id = row.requirement_id,
     ispec.name = row.name,
@@ -116,7 +116,7 @@ ON CREATE SET
 #policy
 policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pol:Policy {regional_standard_regulation_id: 'vcdpa 2023', policy_id: row.policy_id})
+MERGE (pol:Policy {regional_standard_regulation_id: 'VCDPA 2023', policy_id: row.policy_id})
 ON CREATE SET
     pol.name = row.name,
     pol.description = row.description,
@@ -127,7 +127,7 @@ ON CREATE SET
 #control
 control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Control {regional_standard_regulation_id: 'vcdpa 2023', control_id: row.control_id})
+MERGE (co:Control {regional_standard_regulation_id: 'VCDPA 2023', control_id: row.control_id})
 ON CREATE SET
     co.name = row.name,
     co.description = row.description,
@@ -137,7 +137,7 @@ ON CREATE SET
 #system
 system = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sy:System {regional_standard_regulation_id: 'vcdpa 2023', system_id: row.system_id})
+MERGE (sy:System {regional_standard_regulation_id: 'VCDPA 2023', system_id: row.system_id})
 ON CREATE SET
     sy.name = row.name,
     sy.type = row.type,
@@ -150,7 +150,7 @@ ON CREATE SET
 #process
 process ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pro:Process {regional_standard_regulation_id: 'vcdpa 2023', process_id: row.process_id})
+MERGE (pro:Process {regional_standard_regulation_id: 'VCDPA 2023', process_id: row.process_id})
 ON CREATE SET
     pro.name = row.name,
     pro.description = row.description,
@@ -161,7 +161,7 @@ ON CREATE SET
 #External Framework Requirements
 External_Framework_Requirements ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (efr:ExternalFrameworkRequirement {regional_standard_regulation_id: 'vcdpa 2023', external_id: row.external_id})
+MERGE (efr:ExternalFrameworkRequirement {regional_standard_regulation_id: 'VCDPA 2023', external_id: row.external_id})
 ON CREATE SET
     efr.source_framework = row.source_framework,
     efr.text = row.text;
@@ -169,7 +169,7 @@ ON CREATE SET
 #threshold
 Threshold = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (th:Threshold {regional_standard_regulation_id: 'vcdpa 2023', threshold_id: row.threshold_id})
+MERGE (th:Threshold {regional_standard_regulation_id: 'VCDPA 2023', threshold_id: row.threshold_id})
 ON CREATE SET
     th.type = row.type,
     th.name = row.name,
@@ -180,7 +180,7 @@ ON CREATE SET
 #Exemption
 Exemption ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ex:Exemption {regional_standard_regulation_id: 'vcdpa 2023', exemption_id: row.exemption_id})
+MERGE (ex:Exemption {regional_standard_regulation_id: 'VCDPA 2023', exemption_id: row.exemption_id})
 ON CREATE SET
     ex.type = row.type,
     ex.name = row.name,
@@ -198,134 +198,134 @@ MERGE (reg)-[:REGULATION_HAS_SECTION]->(sec);
 #Section → Requirement
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: 'vcdpa 2023',section_id : row.section_id})
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023',section_id : row.section_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
 MERGE (sec)-[:SECTION_HAS_REQUIREMENT]->(req);
 """
 #Requirement → Role
 requirement_role ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (ro:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.role_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.role_id})
 MERGE (req)-[:REQUIREMENT_APPLIES_TO_ROLE {applicability: row.applicability}]->(ro);
 """
 #Requirement → DataCategory
 requirement_datacategory ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (dc:DataCategory {regional_standard_regulation_id: 'vcdpa 2023', data_id: row.data_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023', data_id: row.data_id})
 MERGE (req)-[:REQUIREMENT_APPLIES_TO_DATA {scope: row.scope}]->(dc);
 """
 #Requirement → EventType
 requirement_event_type ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (et:EventType {regional_standard_regulation_id: 'vcdpa 2023', event_type_id: row.event_type_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (et:EventType {regional_standard_regulation_id: 'VCDPA 2023', event_type_id: row.event_type_id})
 MERGE (req)-[:REQUIREMENT_TRIGGERS_EVENT_TYPE {trigger_condition: row.trigger_condition}]->(et);
 """
 #Role → ThresholdDefinition
 role_threshold ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ro:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.role_id})
-MATCH (th:Threshold {regional_standard_regulation_id: 'vcdpa 2023', threshold_id: row.threshold_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.role_id})
+MATCH (th:Threshold {regional_standard_regulation_id: 'VCDPA 2023', threshold_id: row.threshold_id})
 MERGE (ro)-[:ROLE_MEETS_THRESHOLD {status: row.status}]->(th);
 """
 #Role → Exemption
 role_exemption ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ro:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.role_id})
-MATCH (ex:Exemption {regional_standard_regulation_id: 'vcdpa 2023', exemption_id: row.exemption_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.role_id})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'VCDPA 2023', exemption_id: row.exemption_id})
 MERGE (ro)-[:ROLE_QUALIFIES_FOR_EXEMPTION {exemption_type: row.exemption_type}]->(ex);
 """
 #Requirement → Safeguard
 requirement_safeguard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (sg:Safeguard {regional_standard_regulation_id: 'vcdpa 2023', safeguard_id: row.safeguard_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (sg:Safeguard {regional_standard_regulation_id: 'VCDPA 2023', safeguard_id: row.safeguard_id})
 MERGE (req)-[:REQUIREMENT_REQUIRES_SAFEGUARD]->(sg);
 """
 #Requirement → Policy
 requirement_policy ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (pol:Policy {regional_standard_regulation_id: 'vcdpa 2023', policy_id: row.policy_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (pol:Policy {regional_standard_regulation_id: 'VCDPA 2023', policy_id: row.policy_id})
 MERGE (req)-[:REQUIREMENT_SUPPORTED_BY_POLICY]->(pol);
 """
 #Requirement → Control
 requirement_control ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (co:Control {regional_standard_regulation_id: 'vcdpa 2023', control_id: row.control_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (co:Control {regional_standard_regulation_id: 'VCDPA 2023', control_id: row.control_id})
 MERGE (req)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL]->(co);
 """
 #Control → System
 control_system ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (co:Control {regional_standard_regulation_id: 'vcdpa 2023', control_id: row.control_id})
-MATCH (sy:System {regional_standard_regulation_id: 'vcdpa 2023', system_id: row.system_id})
+MATCH (co:Control {regional_standard_regulation_id: 'VCDPA 2023', control_id: row.control_id})
+MATCH (sy:System {regional_standard_regulation_id: 'VCDPA 2023', system_id: row.system_id})
 MERGE (co)-[:CONTROL_IMPLEMENTED_IN_SYSTEM]->(sy);
 """
 #Requirement → Process
 requirement_process ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (pro:Process {regional_standard_regulation_id: 'vcdpa 2023', process_id: row.process_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (pro:Process {regional_standard_regulation_id: 'VCDPA 2023', process_id: row.process_id})
 MERGE (req)-[:REQUIREMENT_IMPACTS_PROCESS]->(pro);
 """
 #Process → System
 process_system ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pro:Process {regional_standard_regulation_id: 'vcdpa 2023', process_id: row.process_id})
-MATCH (sy:System {regional_standard_regulation_id: 'vcdpa 2023', system_id: row.system_id})
+MATCH (pro:Process {regional_standard_regulation_id: 'VCDPA 2023', process_id: row.process_id})
+MATCH (sy:System {regional_standard_regulation_id: 'VCDPA 2023', system_id: row.system_id})
 MERGE (pro)-[:PROCESS_SUPPORTED_BY_SYSTEM]->(sy);
 """
 #Requirement → DataProtectionAssessment
 requirement_dataprotectionassessment ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'vcdpa 2023', dpa_id: row.dpa_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
 MERGE (req)-[:REQUIREMENT_REQUIRES_DATA_PROTECTION_ASSESSMENT {trigger: row.trigger}]->(dpa);
 """
 #DPA → Systems
 dpa_systems = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'vcdpa 2023', dpa_id: row.dpa_id})
-MATCH (sy:System {regional_standard_regulation_id: 'vcdpa 2023', system_id: row.system_id})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MATCH (sy:System {regional_standard_regulation_id: 'VCDPA 2023', system_id: row.system_id})
 MERGE (dpa)-[:DATA_PROTECTION_ASSESSMENT_APPLIES_SYSTEM]->(sy);
 """
 #DPA → Processes
 dpa_process ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'vcdpa 2023', dpa_id: row.dpa_id})
-MATCH (pro:Process {regional_standard_regulation_id: 'vcdpa 2023', process_id: row.process_id})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MATCH (pro:Process {regional_standard_regulation_id: 'VCDPA 2023', process_id: row.process_id})
 MERGE (dpa)-[:DATA_PROTECTION_ASSESSMENT_ASSESSES_PROCESS]->(pro);
 """
 #Requirement → EnforcementAction
 requirement_enforcementaction = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.requirement_id})
-MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'vcdpa 2023', enforcement_id: row.enforcement_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'VCDPA 2023', enforcement_id: row.enforcement_id})
 MERGE (req)-[:REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION]->(ea);
 """
 #EnforcementAction → Role
 enforcement_action_role ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'vcdpa 2023', enforcement_id: row.enforcement_id})
-MATCH (ro:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.role_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'VCDPA 2023', enforcement_id: row.enforcement_id})
+MATCH (ro:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.role_id})
 MERGE (ea)-[:ENFORCEMENT_ACTION_APPLIES_TO_ROLE {applicability: row.applicability}]->(ro);
 """
 #Section → EnforcementAction
 section_enforcement_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: 'vcdpa 2023',section_id : row.section_id})
-MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'vcdpa 2023', enforcement_id: row.enforcement_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023',section_id : row.section_id})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'VCDPA 2023', enforcement_id: row.enforcement_id})
 MERGE (sec)-[:SECTION_DEFINES_ENFORCEMENT_ACTION]->(ea);
 """
 #Processor–Controller Relationships
 processor_controller = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (proc:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.processor_role_id})
-MATCH (ctrl:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.controller_role_id})
+MATCH (proc:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.processor_role_id})
+MATCH (ctrl:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.controller_role_id})
 MERGE (proc)-[:PROCESSES_ON_BEHALF_OF_CONTROLLER {
   relationship_type: row.relationship_type,
   contractual_basis: row.contractual_basis,
@@ -335,8 +335,8 @@ MERGE (proc)-[:PROCESSES_ON_BEHALF_OF_CONTROLLER {
 #Processor ENGAGES_SUBCONTRACTOR Processor
 processor_subcontractor ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (proc:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.processor_role_id})
-MATCH (subproc:Role {regional_standard_regulation_id: 'vcdpa 2023', role_id: row.subcontractor_role_id})
+MATCH (proc:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.processor_role_id})
+MATCH (subproc:Role {regional_standard_regulation_id: 'VCDPA 2023', role_id: row.subcontractor_role_id})
 MERGE (proc)-[:PROCESSOR_ENGAGES_SUBCONTRACTOR {
   authorization_type: row.authorization_type,
   notification_required: row.notification_required,
@@ -346,15 +346,15 @@ MERGE (proc)-[:PROCESSOR_ENGAGES_SUBCONTRACTOR {
 #Cross‑Framework Mapping
 requirement_external_frameworks ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'vcdpa 2023', requirement_id: row.source_requirement_id})
-MATCH (efr:ExternalFrameworkRequirement {regional_standard_regulation_id: 'vcdpa 2023', external_id: row.target_external_id})
-MERGE (req)-[:REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK {
-  source_framework: row.source_framework,
-  target_framework: row.target_framework,
-  strength: row.strength,
-  justification: row.justification,
-  mapping_type: row.mapping_type
-}]->(efr);
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.source_requirement_id})
+MATCH (efr:ExternalFrameworkRequirement {regional_standard_regulation_id: 'VCDPA 2023', external_id: row.target_requirement_id})
+MERGE (req)-[r:REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK]->(efr)
+ON CREATE SET
+    r.source_framework = row.source_framework,
+    r.target_framework = row.target_framework,
+    r.strength = row.strength,
+    r.justification = row.justification,
+    r.mapping_type = row.mapping_type;
 """
 
 
@@ -503,62 +503,36 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-export_query = """
-MATCH (n)
-WHERE n.regional_standard_regulation_id = 'vcdpa'
-WITH collect(n {
-  .*,
-  id: elementId(n),
-  labels: labels(n),
-  mainLabel: head(labels(n))
-}) AS allNodes
-
-MATCH (start)-[r]->(end)
-WHERE start.regional_standard_regulation_id = 'vcdpa'
-  AND end.regional_standard_regulation_id = 'vcdpa'
-WITH allNodes, collect(r {
-  .*,
-  id: elementId(r),
-  type: type(r),
-  from: elementId(start),
-  to: elementId(end)
-}) AS allRels
+res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 
 RETURN {
-  nodes: allNodes,
-  rels: allRels
-} AS graph_data
-"""
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data""")
 
-try:
-    logger.info("Exporting graph to JSON...")
-    res = client.query(export_query)
-    
-    if not res or len(res) == 0:
-        raise Exception("Export failed - no data returned")
-    
-    graph_data = res[0]['graph_data']
-    
-    if 'nodes' not in graph_data or 'rels' not in graph_data:
-        raise Exception("Invalid export data structure")
-    
-    node_count = len(graph_data['nodes'])
-    rel_count = len(graph_data['rels'])
-    logger.info(f"Exporting {node_count} nodes and {rel_count} relationships")
-    
-    with open('vcdpa.json', 'w', encoding='utf-8') as f:
-        json.dump(graph_data, f, default=str, indent=2)
-    
-    logger.info(f"✓ Successfully exported graph data to vcdpa.json")
-    logger.info(f"  - Nodes: {node_count}")
-    logger.info(f"  - Relationships: {rel_count}")
-    
-except Exception as e:
-    logger.error(f"Export failed: {e}")
-    raise
-finally:
-    client.close()
-    logger.info("Neo4j connection closed")
+res = res[-1]['graph_data']
+
+import json
+with open('VCDPA.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
+logger.info("✓ Exported graph data to VCDPA.json")
+
+client.close()
 
 
 

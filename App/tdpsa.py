@@ -721,11 +721,11 @@ ON CREATE SET
 #governed_by
 governed_by = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (source:BusinessEntity {regional_standard_regulation_id: 'TDPSA 2023', entity_id: row.source_entity_id})
-MATCH (target:RegionalStandardAndRegulation {regional_standard_regulation_id: row.target_regulation_id})
-MERGE (source)-[r:BUISNESS_ENTITY_GOVERNED_BY_REGIONAL_STANDARD_AND_REGULATION {
-    source_id: row.source_entity_id,
-    target_id: row.target_regulation_id
+MATCH (source:RegionalStandardAndRegulation {regional_standard_regulation_id: row.source_regulation_id})
+MATCH (target:BusinessEntity {entity_id: row.target_entity_id})
+MERGE (source)-[r:REGIONAL_STANDARD_AND_REGULATION_GOVERNS_BUSINESS_ENTITY {
+    source_id: row.source_regulation_id,
+    target_id: row.target_entity_id
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
@@ -733,6 +733,7 @@ ON CREATE SET
     r.jurisdiction = row.jurisdiction,
     r.mandatory = row.mandatory;
 """
+
 
 
 # Personal data belongs to category
@@ -860,7 +861,7 @@ time.sleep(2)
 client.query(sensitive_data_belongs_to_category.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_BELONGS_TO_CATEGORY_SensitiveData.csv'))
 time.sleep(2)
 
-client.query(governed_by.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_GOVERNED_BY_relationships.csv'))
+client.query(governed_by.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_GOVERNED_BY_relationships_fixed.csv'))
 time.sleep(2)
 
 
