@@ -1,0 +1,63 @@
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,NIST_AI_RMF_Function,NIST_AI_RMF_Category,NIST_AI_RMF_Activity,AI_RMF_Purpose
+Artificial and Autonomous Technology,AAT,AAT-01,Artificial Intelligence AI Autonomous Technologies AAT Governance Program,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish governance over AI systems
+Artificial and Autonomous Technology,AAT,AAT-01.1,Compliance Obligations for AI and Autonomous Technologies,GOVERN,GAI-1 AI Design and Development,GAI-1.2-Requirements-Definition,Define compliance requirements for AI
+Artificial and Autonomous Technology,AAT,AAT-01.2,Secure Development Practices for AI and Autonomous Technologies,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Implement secure AI development practices
+Artificial and Autonomous Technology,AAT,AAT-02,AI Risk Management Program,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish risk management program for AI
+Artificial and Autonomous Technology,AAT,AAT-02.1,AI Risk Assessment,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.1-Metrics-Definition,Define AI system metrics and measurements
+Artificial and Autonomous Technology,AAT,AAT-03,AI Incident Response Capability,GOVERN,GAI-3 Incident Response,GAI-3.1-Response-Planning,Establish AI incident response capability
+Artificial and Autonomous Technology,AAT,AAT-03.1,AI Incident Response Testing,GOVERN,GAI-3 Incident Response,GAI-3.2-Testing-Validation,Test AI incident response procedures
+Artificial and Autonomous Technology,AAT,AAT-04,AI Business Case Development,GOVERN,GAI-1 AI Design and Development,GAI-1.3-Business-Case,Develop business case for AI systems
+Artificial and Autonomous Technology,AAT,AAT-05,AI Risk Management Decision Making,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish decision-making structure for AI risks
+Artificial and Autonomous Technology,AAT,AAT-06,AI Impact Assessment,MEASURE,MEAI-2 AI Impact Assessment,MEAI-2.1-Impact-Evaluation,Assess AI system impacts on stakeholders
+Artificial and Autonomous Technology,AAT,AAT-07,AI Testing Evaluation Validation Verification,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.2-Testing-Evaluation,Test and evaluate AI system performance
+Artificial and Autonomous Technology,AAT,AAT-07.1,AI Model Validation,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.2-Testing-Evaluation,Validate AI model outputs and predictions
+Artificial and Autonomous Technology,AAT,AAT-07.2,AI System Verification,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.3-System-Verification,Verify AI system functionality
+Artificial and Autonomous Technology,AAT,AAT-08,AI Stakeholder Involvement,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.2-Stakeholder-Engagement,Engage stakeholders in AI system decisions
+Artificial and Autonomous Technology,AAT,AAT-09,AI Intellectual Property Assessment,GOVERN,GAI-1 AI Design and Development,GAI-1.2-Requirements-Definition,Assess IP infringement risks for AI
+Artificial and Autonomous Technology,AAT,AAT-10,AI Source Data Identification,MEASURE,MEAI-2 AI Impact Assessment,MEAI-2.2-Data-Assessment,Identify and document AI training data sources
+Artificial and Autonomous Technology,AAT,AAT-11,AI Transparency and Explainability,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.3-Transparency,Ensure AI system transparency and explainability
+Artificial and Autonomous Technology,AAT,AAT-12,AI Fairness and Bias Mitigation,MEASURE,MEAI-2 AI Impact Assessment,MEAI-2.3-Fairness-Bias,Assess and mitigate AI fairness and bias issues
+Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Program Governance,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish governance program for AI-enabled systems
+Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Program Execution,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Execute governance program for AI systems
+Cybersecurity Data Privacy Governance,GOV,GOV-02,Statutory Regulatory Contractual Requirements,GOVERN,GAI-1 AI Design and Development,GAI-1.2-Requirements-Definition,Define regulatory requirements for AI
+Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Apply risk-based approach to AI governance
+Risk Management,RSK,RSK-01,Risk Management Program,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish risk management program
+Risk Management,RSK,RSK-01.1,Risk Assessment,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.1-Metrics-Definition,Assess AI system risks
+Risk Management,RSK,RSK-02,Risk Response,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Respond to identified AI risks
+Risk Management,RSK,RSK-03,Risk Monitoring,MONITOR,MOAI-1 Continuous Monitoring,MOAI-1.1-Monitoring-Plan,Monitor AI system risks continuously
+Secure Engineering Architecture,SEA,SEA-01,Secure Engineering Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Implement secure AI engineering practices
+Secure Engineering Architecture,SEA,SEA-01.1,Secure Design Principles,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Apply secure design principles to AI
+Secure Engineering Architecture,SEA,SEA-01.2,Resilience Requirements,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Achieve resilience in AI systems
+Secure Engineering Architecture,SEA,SEA-02,Secure Code Development,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Implement secure coding for AI systems
+Technology Development Acquisition,TDA,TDA-01,Technology Development Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Govern AI technology development
+Technology Development Acquisition,TDA,TDA-02,Acquisition Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.2-Stakeholder-Engagement,Establish acquisition controls for AI systems
+Technology Development Acquisition,TDA,TDA-03,Secure Development Lifecycle,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Implement secure SDLC for AI
+Data Privacy,PRI,PRI-01,Data Privacy Program,GOVERN,GAI-1 AI Design and Development,GAI-1.2-Requirements-Definition,Establish privacy program for AI systems
+Data Privacy,PRI,PRI-01.1,Privacy by Design,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Implement privacy by design for AI
+Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,MEASURE,MEAI-2 AI Impact Assessment,MEAI-2.2-Data-Assessment,Conduct privacy impact assessment for AI
+Data Privacy,PRI,PRI-02,Personal Data Protection,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.3-Transparency,Protect personal data in AI systems
+Data Privacy,PRI,PRI-05,Personal Data Processing,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Control personal data processing in AI
+Data Privacy,PRI,PRI-05.1,Data Collection Limitation,MEASURE,MEAI-2 AI Impact Assessment,MEAI-2.2-Data-Assessment,Limit AI training data collection
+Data Privacy,PRI,PRI-05.2,Data Use Limitation,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.3-Transparency,Limit personal data use in AI
+Data Privacy,PRI,PRI-05.3,Data Masking,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Mask sensitive data in AI systems
+Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,MEASURE,MEAI-2 AI Impact Assessment,MEAI-2.2-Data-Assessment,Classify training data for AI systems
+Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Handle AI training and operational data securely
+Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Protect AI data with cryptography
+Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,MONITOR,MOAI-1 Continuous Monitoring,MOAI-1.2-Monitoring-Execution,Monitor AI system events continuously
+Continuous Monitoring,MON,MON-01.1,Centralized Event Log Collection,MONITOR,MOAI-1 Continuous Monitoring,MOAI-1.2-Monitoring-Execution,Collect AI event logs centrally
+Incident Response,IRO,IRO-01,Incident Response Program,GOVERN,GAI-3 Incident Response,GAI-3.1-Response-Planning,Establish IR program for AI systems
+Incident Response,IRO,IRO-02,Incident Detection and Analysis,MONITOR,MOAI-1 Continuous Monitoring,MOAI-1.2-Monitoring-Execution,Detect AI system incidents
+Incident Response,IRO,IRO-03,Incident Containment and Recovery,GOVERN,GAI-3 Incident Response,GAI-3.3-Incident-Response,Contain and recover from AI incidents
+Threat Management,THR,THR-01,Threat Management Program,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.1-Metrics-Definition,Identify threats to AI systems
+Human Resources Security,HRS,HRS-01,Human Resources Security Program,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish HR security for AI teams
+Human Resources Security,HRS,HRS-03,Security Awareness Training,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.2-Stakeholder-Engagement,Train personnel on AI security and privacy
+Information Assurance,IAO,IAO-01,Information Assurance Program,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.2-Testing-Evaluation,Assess AI system security controls
+Information Assurance,IAO,IAO-02,Control Testing,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.2-Testing-Evaluation,Test AI system controls and performance
+Compliance,CPL,CPL-01,Compliance Monitoring Program,MONITOR,MOAI-1 Continuous Monitoring,MOAI-1.1-Monitoring-Plan,Monitor AI compliance continuously
+Compliance,CPL,CPL-02,Compliance Reporting,MEASURE,MEAI-1 AI Performance Monitoring,MEAI-1.1-Metrics-Definition,Report AI system compliance metrics
+Configuration Management,CFG,CFG-01,Configuration Management Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Manage AI system configurations
+Asset Management,AST,AST-01,Asset Management Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Manage AI system assets and components
+Network Security,NET,NET-01,Network Security Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Secure AI system network access
+Physical Environmental Security,PES,PES-01,Physical Security Program,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Protect physical AI infrastructure
+Third-Party Management,TPM,TPM-01,Third-Party Management Program,GOVERN,GAI-1 AI Design and Development,GAI-1.2-Requirements-Definition,Manage third-party AI risks
+Third-Party Management,TPM,TPM-02,Third-Party Monitoring,MONITOR,MOAI-1 Continuous Monitoring,MOAI-1.2-Monitoring-Execution,Monitor third-party AI system risks

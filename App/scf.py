@@ -166,6 +166,70 @@ MATCH (iso2c:Clause {clause_id: trim(row.ISO27002_Clause), IS_frameworks_standar
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(iso2c)
 RETURN count(*) AS relationships_created;
 """
+#5a.control->pmf_1_functions
+control_pmf_1 = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_PMF_Function IS NOT NULL 
+  AND trim(row.NIST_PMF_Function) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (f:Function {function_id: trim(row.NIST_PMF_Function), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f);
+"""
+#5b.control->pmf_1_categories
+control_pmf_1_categories = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_PMF_Category IS NOT NULL 
+  AND trim(row.NIST_PMF_Category) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (cat:Category {category_id: trim(row.NIST_PMF_Category), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
+"""
+#5c.control->pmf_1_subcategories
+control_pmf_1_subcategories = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_PMF_Subcategory IS NOT NULL 
+  AND trim(row.NIST_PMF_Subcategory) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_PMF_Subcategory), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
+"""
+#6a.control_pmf_1.1_functions
+control_pmf_1_1_functions= """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_PMF_1_1_Function IS NOT NULL 
+  AND trim(row.NIST_PMF_1_1_Function) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (f:Function {function_id: trim(row.NIST_PMF_1_1_Function), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f);
+"""
+#6b.control_pmf_1.1_categories
+control_pmf_1_1_categories = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_PMF_1_1_Category IS NOT NULL 
+  AND trim(row.NIST_PMF_1_1_Category) <> '' 
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control)})
+MATCH (cat:Category {category_id: trim(row.NIST_PMF_1_1_Category), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
+"""
+#6c.control_pmf_1.1_subcategories
+control_pmf_1_1_subcategories = """ 
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_PMF_1_1_Subcategory IS NOT NULL 
+  AND trim(row.NIST_PMF_1_1_Subcategory) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control)})
+MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_PMF_1_1_Subcategory), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
+"""
+
+
+
+
 
 # #3c.control->pcidss_requirements
 # control_pcidss_requirements = """
@@ -191,6 +255,7 @@ RETURN count(*) AS relationships_created;
 
 
 import os
+from pydoc import cli
 import time
 import logging
 import json
@@ -251,10 +316,28 @@ time.sleep(2)
 # client.query(control_iso_27001_clause.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27001-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27002-Mapping.csv"))
+# client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27002-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_iso_27002_clause.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27002-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_pmf_1.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_pmf_1_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_pmf_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_pmf_1_1_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
 time.sleep(2)
 
-client.query(control_iso_27002_clause.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27002-Mapping.csv"))
+client.query(control_pmf_1_1_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
+time.sleep(2)
+
+client.query(control_pmf_1_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
 time.sleep(2)
 
 
