@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "nodes": [],
-  "rels": []
-=======
   "nodes": [
     {
       "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:189",
@@ -39067,5 +39063,4 @@
       "type": "FRAMEWORK_CONTAINS_STEP"
     }
   ]
->>>>>>> aa91f0c0850b719753f6859eff0bce39c93e058c
 }
