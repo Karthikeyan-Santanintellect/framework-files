@@ -338,7 +338,7 @@ res = client.query("""
         labels: labels(n),      
         mainLabel: head(labels(n)) 
       }],
-      links: [r IN uniqueRels | r {
+      rels: [r IN uniqueRels | r {
         .*,
         id: elementId(r),     
         type: type(r),         
@@ -364,7 +364,7 @@ with open(output_filename, 'w', encoding='utf-8') as f:
     json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
 
 node_count = len(graph_data.get('nodes', []))
-link_count = len(graph_data.get('links', []))
+link_count = len(graph_data.get('rels', []))
 
 logger.info(f" Exported {node_count} nodes and {link_count} relationships")
 logger.info(f" Graph data saved to: {output_filename}") 
