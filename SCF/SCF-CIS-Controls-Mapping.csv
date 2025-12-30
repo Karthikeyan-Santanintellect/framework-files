@@ -1,4 +1,4 @@
-SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,CIS_Control_Number,CIS_Control_Title
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,CIS_Control_Id,CIS_Control_Name
 Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,1,Inventory and Control of Enterprise Assets
 Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,2,Inventory and Control of Software Assets
 Cybersecurity Data Privacy Governance,GOV,GOV-01.2,Executive Leadership Engagement,3,Data Protection
