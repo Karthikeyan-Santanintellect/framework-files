@@ -229,23 +229,46 @@ MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
 #7a.control->NIST_RMF_controls
 control_nist_rmf_step = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_RMF_Step IS NOT NULL 
-  AND trim(row.NIST_RMF_Step) <> ''
+WITH row 
+WHERE row.NIST_RMF_Step_ID IS NOT NULL 
+  AND trim(row.NIST_RMF_Step_ID) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (step:Step {step_name: trim(row.NIST_RMF_Step), IS_frameworks_standard_id: 'NIST_RMF'})
+MATCH (step:Step {step_id: trim(row.NIST_RMF_Step_ID), IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(step)
 RETURN count(*) AS relationships_created;
 """
-#7b.control->NIST RMF Activities (ControlFamilies)
-control_nist_rmf_activity = """
+
+#8a.control->nist_ai_rmf_functions
+control_nist_rmf_functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
-WHERE row.NIST_RMF_Activity IS NOT NULL 
-  AND trim(row.NIST_RMF_Activity) <> ''
+WHERE row.NIST_AI_RMF_Function IS NOT NULL 
+  AND trim(row.NIST_AI_RMF_Function) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cf:ControlFamily {family_id: trim(row.NIST_RMF_Activity), IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cf)
+MATCH (f:Function {function_id: trim(row.NIST_AI_RMF_Function), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f)
+RETURN count(*) AS relationships_created;
+"""
+#8b.control->nist_ai_rmf_categories
+control_nist_rmf_categories = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_AI_RMF_Category IS NOT NULL 
+  AND trim(row.NIST_AI_RMF_Category) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (cat:Category {category_id: trim(row.NIST_AI_RMF_Category), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat)
+RETURN count(*) AS relationships_created;
+"""
+#8c.control->nist_ai_rmf_activities
+control_nist_rmf_activities = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_AI_RMF_SubCategory IS NOT NULL 
+  AND trim(row.NIST_AI_RMF_SubCategory) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (subc:Subcategory {subcategory_id: trim(row.NIST_AI_RMF_SubCategory), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(subc)
 RETURN count(*) AS relationships_created;
 """
 
@@ -365,9 +388,6 @@ time.sleep(2)
 # time.sleep(2)
 
 client.query(control_nist_rmf_step.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_RMF-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_nist_rmf_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_RMF-Mapping.csv"))
 time.sleep(2)
 
 

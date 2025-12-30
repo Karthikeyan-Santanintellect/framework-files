@@ -1,4 +1,4 @@
-SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,NIST_AI_RMF_Function,NIST_AI_RMF_Category,NIST_AI_RMF_Activity,AI_RMF_Purpose
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,NIST_AI_RMF_Function,NIST_AI_RMF_Category,NIST_AI_RMF_SubCategory,AI_RMF_Purpose
 Artificial and Autonomous Technology,AAT,AAT-01,Artificial Intelligence AI Autonomous Technologies AAT Governance Program,GOVERN,GAI-1 AI Design and Development,GAI-1.1-Governance-Oversight,Establish governance over AI systems
 Artificial and Autonomous Technology,AAT,AAT-01.1,Compliance Obligations for AI and Autonomous Technologies,GOVERN,GAI-1 AI Design and Development,GAI-1.2-Requirements-Definition,Define compliance requirements for AI
 Artificial and Autonomous Technology,AAT,AAT-01.2,Secure Development Practices for AI and Autonomous Technologies,GOVERN,GAI-2 AI Lifecycle Management,GAI-2.1-Development-Control,Implement secure AI development practices
