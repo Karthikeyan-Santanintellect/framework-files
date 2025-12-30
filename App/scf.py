@@ -196,7 +196,7 @@ MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
 MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_PMF_Subcategory), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
 """
-#6a.control_pmf_1.1_functions
+#6a.control->pmf_1.1_functions
 control_pmf_1_1_functions= """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
@@ -206,7 +206,7 @@ MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
 MATCH (f:Function {function_id: trim(row.NIST_PMF_1_1_Function), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f);
 """
-#6b.control_pmf_1.1_categories
+#6b.control->pmf_1.1_categories
 control_pmf_1_1_categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
@@ -216,7 +216,7 @@ MATCH (sc:SCFControl {control_id: trim(row.SCF_Control)})
 MATCH (cat:Category {category_id: trim(row.NIST_PMF_1_1_Category), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
 """
-#6c.control_pmf_1.1_subcategories
+#6c.control->pmf_1.1_subcategories
 control_pmf_1_1_subcategories = """ 
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
@@ -226,6 +226,30 @@ MATCH (sc:SCFControl {control_id: trim(row.SCF_Control)})
 MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_PMF_1_1_Subcategory), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
 """
+#7a.control->NIST_RMF_controls
+control_nist_rmf_step = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_RMF_Step IS NOT NULL 
+  AND trim(row.NIST_RMF_Step) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (step:Step {step_name: trim(row.NIST_RMF_Step), IS_frameworks_standard_id: 'NIST_RMF'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(step)
+RETURN count(*) AS relationships_created;
+"""
+#7b.control->NIST RMF Activities (ControlFamilies)
+control_nist_rmf_activity = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.NIST_RMF_Activity IS NOT NULL 
+  AND trim(row.NIST_RMF_Activity) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (cf:ControlFamily {family_id: trim(row.NIST_RMF_Activity), IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cf)
+RETURN count(*) AS relationships_created;
+"""
+
+
 
 
 
@@ -331,14 +355,21 @@ time.sleep(2)
 # client.query(control_pmf_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_pmf_1_1_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
+# client.query(control_pmf_1_1_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_pmf_1_1_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_pmf_1_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_nist_rmf_step.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_RMF-Mapping.csv"))
 time.sleep(2)
 
-client.query(control_pmf_1_1_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
+client.query(control_nist_rmf_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_RMF-Mapping.csv"))
 time.sleep(2)
 
-client.query(control_pmf_1_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
-time.sleep(2)
 
 
 # client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))

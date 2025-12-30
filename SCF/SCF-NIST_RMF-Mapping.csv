@@ -1,103 +1,103 @@
-SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,NIST_RMF_Step,NIST_RMF_Activity,RMF_Purpose
-Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,P-Risk Management Framework,P1-Readiness Assessment,Establish organizational readiness to implement RMF
-Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,P-Risk Management Framework,P2-Organizational Context,Establish organizational context for risk management
-Cybersecurity Data Privacy Governance,GOV,GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,C-Categorize System,C2-Information Sensitivity,Categorize system information based on impact analysis
-Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,C-Categorize System,C1-Categorization,Determine security categorization of system
-Cybersecurity Data Privacy Governance,GOV,GOV-03.1,Risk Assessment Program,C-Categorize System,C3-Impact Analysis,Conduct impact analysis for unauthorized disclosure
-Cybersecurity Data Privacy Governance,GOV,GOV-03.2,Risk Response Program,S-Select Controls,S2-Control Selection,Select appropriate security controls
-Asset Management,AST,AST-01,Asset Management Program,P-Risk Management Framework,P3-Business Processes,Define business processes and information flows
-Asset Management,AST,AST-01.1,Asset Dependency Analysis,C-Categorize System,C1-Categorization,Determine security categorization of system
-Asset Management,AST,AST-01.2,Asset Inventory Accuracy,P-Risk Management Framework,P3-Business Processes,Document system boundaries and information flows
-Asset Management,AST,AST-02,Asset Tracking and Management,M-Monitor Controls,M1-Continuous Monitoring,Implement continuous monitoring of controls
-Asset Management,AST,AST-02.1,Asset Location Monitoring,M-Monitor Controls,M2-Assessment,Conduct ongoing security assessments
-Business Continuity and Disaster Recovery,BCD,BCD-01,Business Continuity and Disaster Recovery Program,P-Risk Management Framework,P4-System Boundaries,Define system boundaries and information flows
-Business Continuity and Disaster Recovery,BCD,BCD-01.1,Business Continuity Plan,S-Select Controls,S2-Control Selection,Select recovery controls for system availability
-Business Continuity and Disaster Recovery,BCD,BCD-01.3,Business Continuity Testing,A-Assess Controls,A2-Control Assessment,Test and assess control effectiveness
-Capacity and Performance Planning,CAP,CAP-01,Capacity Assessment Program,C-Categorize System,C3-Impact Analysis,Analyze system availability impact
-Compliance,CPL,CPL-01,Compliance Monitoring Program,M-Monitor Controls,M1-Continuous Monitoring,Implement continuous monitoring program
-Compliance,CPL,CPL-01.1,Compliance Assessment,A-Assess Controls,A2-Control Assessment,Conduct periodic control assessments
-Compliance,CPL,CPL-02,Compliance Reporting,A-Assess Controls,A3-Assessment Report,Develop control assessment reports
-Configuration Management,CFG,CFG-01,Configuration Management Program,S-Select Controls,S2-Control Selection,Select configuration management controls
-Configuration Management,CFG,CFG-01.1,Configuration Standards,I-Implement Controls,I2-Control Implementation,Implement configuration controls
-Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,M-Monitor Controls,M1-Continuous Monitoring,Monitor security-related events continuously
-Continuous Monitoring,MON,MON-01.1,Event Log Centralized Collection,I-Implement Controls,I3-Documentation,Document control implementation
-Continuous Monitoring,MON,MON-01.3,Event Log Correlation and Analysis,M-Monitor Controls,M2-Assessment,Analyze collected monitoring data
-Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,S-Select Controls,S2-Control Selection,Select cryptographic controls
-Cryptographic Protections,CRY,CRY-02,Cryptographic At Rest,I-Implement Controls,I2-Control Implementation,Implement cryptographic protections for data at rest
-Cryptographic Protections,CRY,CRY-03,Cryptographic In Transit,I-Implement Controls,I2-Control Implementation,Implement cryptographic protections for data in transit
-Cryptographic Protections,CRY,CRY-04,Key Management,S-Select Controls,S2-Control Selection,Select key management controls
-Cryptographic Protections,CRY,CRY-05,Key Management Practices,I-Implement Controls,I2-Control Implementation,Implement key management practices
-Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,C-Categorize System,C2-Information Sensitivity,Define information sensitivity levels
-Data Classification and Handling,DCH,DCH-01.1,Data Classification Standards,S-Select Controls,S2-Control Selection,Select controls based on classification
-Data Classification and Handling,DCH,DCH-01.3,Sensitive Data Inventory,P-Risk Management Framework,P3-Business Processes,Inventory sensitive information
-Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,I-Implement Controls,I2-Control Implementation,Implement data handling controls
-Data Classification and Handling,DCH,DCH-06,Media Storage,I-Implement Controls,I2-Control Implementation,Implement media protection controls
-Endpoint Security,END,END-01,Endpoint Security Program,S-Select Controls,S2-Control Selection,Select endpoint security controls
-Endpoint Security,END,END-02,Endpoint Hardening,I-Implement Controls,I2-Control Implementation,Implement endpoint hardening measures
-Endpoint Security,END,END-02.1,Malware Protection,I-Implement Controls,I2-Control Implementation,Implement malware protection controls
-Human Resources Security,HRS,HRS-01,Human Resources Security Program,P-Risk Management Framework,P2-Organizational Context,Establish organizational security roles
-Human Resources Security,HRS,HRS-01.1,Hiring Practices,S-Select Controls,S2-Control Selection,Select personnel security controls
-Human Resources Security,HRS,HRS-03,Security Awareness Training,I-Implement Controls,I4-Information Awareness,Implement security awareness programs
-Identification and Authentication,IAC,IAC-01,Identity and Access Management Program,S-Select Controls,S2-Control Selection,Select identification and authentication controls
-Identification and Authentication,IAC,IAC-02,Authentication Mechanisms,I-Implement Controls,I2-Control Implementation,Implement authentication mechanisms
-Identification and Authentication,IAC,IAC-03,Access Control Enforcement,M-Monitor Controls,M2-Assessment,Monitor access control effectiveness
-Incident Response,IRO,IRO-01,Incident Response Program,P-Risk Management Framework,P2-Organizational Context,Establish incident response capability
-Incident Response,IRO,IRO-01.1,Incident Response Plan,S-Select Controls,S2-Control Selection,Select incident response controls
-Incident Response,IRO,IRO-02,Incident Detection and Analysis,M-Monitor Controls,M1-Continuous Monitoring,Detect security incidents
-Incident Response,IRO,IRO-03,Incident Containment and Recovery,R-Respond to Risks,R1-Risk Response,Respond to identified incidents
-Incident Response,IRO,IRO-04,Data Breach Notification,R-Respond to Risks,R2-Risk Communication,Communicate incident findings
-Information Assurance,IAO,IAO-01,Information Assurance Program,A-Assess Controls,A1-Assessment Planning,Plan control assessments
-Information Assurance,IAO,IAO-01.1,Security Assessment Program,A-Assess Controls,A2-Control Assessment,Conduct security control assessments
-Information Assurance,IAO,IAO-02,Control Testing,A-Assess Controls,A2-Control Assessment,Test control effectiveness
-Information Assurance,IAO,IAO-03,Penetration Testing,A-Assess Controls,A2-Control Assessment,Conduct penetration testing assessments
-Mobile Device Management,MDM,MDM-01,Mobile Device Management Program,S-Select Controls,S2-Control Selection,Select mobile device controls
-Mobile Device Management,MDM,MDM-02,Mobile Device Access Control,I-Implement Controls,I2-Control Implementation,Implement mobile device access controls
-Network Security,NET,NET-01,Network Security Program,S-Select Controls,S2-Control Selection,Select network security controls
-Network Security,NET,NET-02,Firewall Configuration,I-Implement Controls,I2-Control Implementation,Implement firewall controls
-Network Security,NET,NET-02.2,Network Segmentation,I-Implement Controls,I2-Control Implementation,Implement network segmentation
-Physical Environmental Security,PES,PES-01,Physical Security Program,S-Select Controls,S2-Control Selection,Select physical security controls
-Physical Environmental Security,PES,PES-01.1,Physical Access Controls,I-Implement Controls,I2-Control Implementation,Implement physical access controls
-Physical Environmental Security,PES,PES-03,Media Protection,I-Implement Controls,I2-Control Implementation,Implement media protection measures
-Data Privacy,PRI,PRI-01,Data Privacy Program,P-Risk Management Framework,P2-Organizational Context,Establish privacy governance context
-Data Privacy,PRI,PRI-01.1,Privacy by Design,S-Select Controls,S1-Control Baselines,Incorporate privacy into control selection
-Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,C-Categorize System,C3-Impact Analysis,Assess privacy impact of system
-Data Privacy,PRI,PRI-02,Personal Data Protection,S-Select Controls,S2-Control Selection,Select privacy protection controls
-Data Privacy,PRI,PRI-02.1,Data Subject Rights,S-Select Controls,S2-Control Selection,Select controls for data subject access
-Data Privacy,PRI,PRI-03,Data Retention and Disposal,I-Implement Controls,I2-Control Implementation,Implement data retention and disposal controls
-Data Privacy,PRI,PRI-05,Personal Data Processing,I-Implement Controls,I2-Control Implementation,Implement controls for data processing
-Data Privacy,PRI,PRI-05.1,Data Collection Limitation,C-Categorize System,C2-Information Sensitivity,Define collection scope and limitation
-Data Privacy,PRI,PRI-05.2,Data Use Limitation,S-Select Controls,S2-Control Selection,Select controls for limiting data use
-Data Privacy,PRI,PRI-05.3,Data Masking,I-Implement Controls,I2-Control Implementation,Implement data masking controls
-Data Privacy,PRI,PRI-05.5,Inventory of Personal Data,P-Risk Management Framework,P3-Business Processes,Inventory personal data assets
-Project Resource Management,PRM,PRM-01,Project Management Program,P-Risk Management Framework,P2-Organizational Context,Establish project security governance
-Project Resource Management,PRM,PRM-01.1,Security in SDLC,I-Implement Controls,I2-Control Implementation,Integrate security into development lifecycle
-Risk Management,RSK,RSK-01,Risk Management Program,P-Risk Management Framework,P1-Readiness Assessment,Establish risk management readiness
-Risk Management,RSK,RSK-01.1,Risk Assessment,C-Categorize System,C1-Categorization,Conduct risk assessment
-Risk Management,RSK,RSK-02,Risk Response,S-Select Controls,S2-Control Selection,Select controls to mitigate identified risks
-Risk Management,RSK,RSK-03,Risk Monitoring,M-Monitor Controls,M1-Continuous Monitoring,Monitor risk throughout system lifecycle
-Secure Engineering Architecture,SEA,SEA-01,Secure Engineering Program,S-Select Controls,S1-Control Baselines,Incorporate security into design
-Secure Engineering Architecture,SEA,SEA-01.1,Secure Design Principles,I-Implement Controls,I1-System Development,Implement secure architecture principles
-Secure Engineering Architecture,SEA,SEA-02,Secure Code Development,I-Implement Controls,I2-Control Implementation,Implement secure development practices
-Security Operations,OPS,OPS-01,Security Operations Program,I-Implement Controls,I4-Information Awareness,Establish security operations function
-Security Operations,OPS,OPS-01.1,SOC Establishment,I-Implement Controls,I2-Control Implementation,Establish security operations center
-Security Operations,OPS,OPS-02,Event Management,M-Monitor Controls,M1-Continuous Monitoring,Monitor and manage security events
-Security Awareness Training,SAT,SAT-01,Security Awareness Program,I-Implement Controls,I4-Information Awareness,Implement awareness and training program
-Security Awareness Training,SAT,SAT-01.1,Awareness Training,I-Implement Controls,I4-Information Awareness,Conduct security awareness training
-Security Awareness Training,SAT,SAT-01.2,Phishing Training,I-Implement Controls,I4-Information Awareness,Conduct phishing awareness training
-Technology Development Acquisition,TDA,TDA-01,Technology Development Program,P-Risk Management Framework,P4-System Boundaries,Define development system boundaries
-Technology Development Acquisition,TDA,TDA-02,Acquisition Program,S-Select Controls,S2-Control Selection,Select acquisition security controls
-Technology Development Acquisition,TDA,TDA-03,Secure Development Lifecycle,I-Implement Controls,I1-System Development,Implement secure SDLC
-Third-Party Management,TPM,TPM-01,Third-Party Management Program,P-Risk Management Framework,P2-Organizational Context,Establish third-party governance
-Third-Party Management,TPM,TPM-01.1,Third-Party Risk Assessment,C-Categorize System,C1-Categorization,Assess third-party risk and categorization
-Third-Party Management,TPM,TPM-01.2,Third-Party Agreements,S-Select Controls,S2-Control Selection,Select third-party contract controls
-Third-Party Management,TPM,TPM-02,Third-Party Monitoring,M-Monitor Controls,M1-Continuous Monitoring,Monitor third-party control effectiveness
-Third-Party Management,TPM,TPM-03,Service Provider Inventory,P-Risk Management Framework,P3-Business Processes,Maintain service provider inventory
-Threat Management,THR,THR-01,Threat Management Program,C-Categorize System,C3-Impact Analysis,Assess system threat vulnerabilities
-Threat Management,THR,THR-01.1,Threat Intelligence,C-Categorize System,C1-Categorization,Incorporate threat intelligence into categorization
-Threat Management,THR,THR-01.2,Threat Assessment,A-Assess Controls,A2-Control Assessment,Assess threats and vulnerabilities
-Vulnerability Patch Management,VPM,VPM-01,Vulnerability Management Program,M-Monitor Controls,M1-Continuous Monitoring,Monitor system vulnerabilities continuously
-Vulnerability Patch Management,VPM,VPM-01.1,Vulnerability Assessment,A-Assess Controls,A2-Control Assessment,Conduct vulnerability assessments
-Vulnerability Patch Management,VPM,VPM-02,Vulnerability Remediation,I-Implement Controls,I2-Control Implementation,Implement vulnerability remediation controls
-Web Security,WEB,WEB-01,Web Security Program,S-Select Controls,S2-Control Selection,Select web application security controls
-Web Security,WEB,WEB-01.1,Web Application Security,I-Implement Controls,I2-Control Implementation,Implement web application security controls
-Web Security,WEB,WEB-03,Input Validation,I-Implement Controls,I2-Control Implementation,Implement input validation controls
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,NIST_RMF_Step_ID,NIST_RMF_Step_Name,NIST_RMF_Activity_ID,NIST_RMF_Activity_Name,RMF_Purpose
+Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,1_prepare,Prepare,P1,Readiness Assessment,Establish organizational readiness to implement RMF
+Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,1_prepare,Prepare,P2,Organizational Context,Establish organizational context for risk management
+Cybersecurity Data Privacy Governance,GOV,GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,2_categorize,Categorize System,C2,Information Sensitivity,Categorize system information based on impact analysis
+Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,2_categorize,Categorize System,C1,Categorization,Determine security categorization of system
+Cybersecurity Data Privacy Governance,GOV,GOV-03.1,Risk Assessment Program,2_categorize,Categorize System,C3,Impact Analysis,Conduct impact analysis for unauthorized disclosure
+Cybersecurity Data Privacy Governance,GOV,GOV-03.2,Risk Response Program,3_select,Select Controls,S2,Control Selection,Select appropriate security controls
+Asset Management,AST,AST-01,Asset Management Program,1_prepare,Prepare,P3,Business Processes,Define business processes and information flows
+Asset Management,AST,AST-01.1,Asset Dependency Analysis,2_categorize,Categorize System,C1,Categorization,Determine security categorization of system
+Asset Management,AST,AST-01.2,Asset Inventory Accuracy,1_prepare,Prepare,P3,Business Processes,Document system boundaries and information flows
+Asset Management,AST,AST-02,Asset Tracking and Management,7_monitor,Monitor Controls,M1,Continuous Monitoring,Implement continuous monitoring of controls
+Asset Management,AST,AST-02.1,Asset Location Monitoring,7_monitor,Monitor Controls,M2,Assessment,Conduct ongoing security assessments
+Business Continuity and Disaster Recovery,BCD,BCD-01,Business Continuity and Disaster Recovery Program,1_prepare,Prepare,P4,System Boundaries,Define system boundaries and information flows
+Business Continuity and Disaster Recovery,BCD,BCD-01.1,Business Continuity Plan,3_select,Select Controls,S2,Control Selection,Select recovery controls for system availability
+Business Continuity and Disaster Recovery,BCD,BCD-01.3,Business Continuity Testing,5_assess,Assess Controls,A2,Control Assessment,Test and assess control effectiveness
+Capacity and Performance Planning,CAP,CAP-01,Capacity Assessment Program,2_categorize,Categorize System,C3,Impact Analysis,Analyze system availability impact
+Compliance,CPL,CPL-01,Compliance Monitoring Program,7_monitor,Monitor Controls,M1,Continuous Monitoring,Implement continuous monitoring program
+Compliance,CPL,CPL-01.1,Compliance Assessment,5_assess,Assess Controls,A2,Control Assessment,Conduct periodic control assessments
+Compliance,CPL,CPL-02,Compliance Reporting,5_assess,Assess Controls,A3,Assessment Report,Develop control assessment reports
+Configuration Management,CFG,CFG-01,Configuration Management Program,3_select,Select Controls,S2,Control Selection,Select configuration management controls
+Configuration Management,CFG,CFG-01.1,Configuration Standards,4_implement,Implement Controls,I2,Control Implementation,Implement configuration controls
+Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,7_monitor,Monitor Controls,M1,Continuous Monitoring,Monitor security-related events continuously
+Continuous Monitoring,MON,MON-01.1,Event Log Centralized Collection,4_implement,Implement Controls,I3,Documentation,Document control implementation
+Continuous Monitoring,MON,MON-01.3,Event Log Correlation and Analysis,7_monitor,Monitor Controls,M2,Assessment,Analyze collected monitoring data
+Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,3_select,Select Controls,S2,Control Selection,Select cryptographic controls
+Cryptographic Protections,CRY,CRY-02,Cryptographic At Rest,4_implement,Implement Controls,I2,Control Implementation,Implement cryptographic protections for data at rest
+Cryptographic Protections,CRY,CRY-03,Cryptographic In Transit,4_implement,Implement Controls,I2,Control Implementation,Implement cryptographic protections for data in transit
+Cryptographic Protections,CRY,CRY-04,Key Management,3_select,Select Controls,S2,Control Selection,Select key management controls
+Cryptographic Protections,CRY,CRY-05,Key Management Practices,4_implement,Implement Controls,I2,Control Implementation,Implement key management practices
+Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,2_categorize,Categorize System,C2,Information Sensitivity,Define information sensitivity levels
+Data Classification and Handling,DCH,DCH-01.1,Data Classification Standards,3_select,Select Controls,S2,Control Selection,Select controls based on classification
+Data Classification and Handling,DCH,DCH-01.3,Sensitive Data Inventory,1_prepare,Prepare,P3,Business Processes,Inventory sensitive information
+Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,4_implement,Implement Controls,I2,Control Implementation,Implement data handling controls
+Data Classification and Handling,DCH,DCH-06,Media Storage,4_implement,Implement Controls,I2,Control Implementation,Implement media protection controls
+Endpoint Security,END,END-01,Endpoint Security Program,3_select,Select Controls,S2,Control Selection,Select endpoint security controls
+Endpoint Security,END,END-02,Endpoint Hardening,4_implement,Implement Controls,I2,Control Implementation,Implement endpoint hardening measures
+Endpoint Security,END,END-02.1,Malware Protection,4_implement,Implement Controls,I2,Control Implementation,Implement malware protection controls
+Human Resources Security,HRS,HRS-01,Human Resources Security Program,1_prepare,Prepare,P2,Organizational Context,Establish organizational security roles
+Human Resources Security,HRS,HRS-01.1,Hiring Practices,3_select,Select Controls,S2,Control Selection,Select personnel security controls
+Human Resources Security,HRS,HRS-03,Security Awareness Training,4_implement,Implement Controls,I4,Information Awareness,Implement security awareness programs
+Identification and Authentication,IAC,IAC-01,Identity and Access Management Program,3_select,Select Controls,S2,Control Selection,Select identification and authentication controls
+Identification and Authentication,IAC,IAC-02,Authentication Mechanisms,4_implement,Implement Controls,I2,Control Implementation,Implement authentication mechanisms
+Identification and Authentication,IAC,IAC-03,Access Control Enforcement,7_monitor,Monitor Controls,M2,Assessment,Monitor access control effectiveness
+Incident Response,IRO,IRO-01,Incident Response Program,1_prepare,Prepare,P2,Organizational Context,Establish incident response capability
+Incident Response,IRO,IRO-01.1,Incident Response Plan,3_select,Select Controls,S2,Control Selection,Select incident response controls
+Incident Response,IRO,IRO-02,Incident Detection and Analysis,7_monitor,Monitor Controls,M1,Continuous Monitoring,Detect security incidents
+Incident Response,IRO,IRO-03,Incident Containment and Recovery,6_authorize,Authorize System,R1,Risk Response,Respond to identified incidents
+Incident Response,IRO,IRO-04,Data Breach Notification,6_authorize,Authorize System,R2,Risk Communication,Communicate incident findings
+Information Assurance,IAO,IAO-01,Information Assurance Program,5_assess,Assess Controls,A1,Assessment Planning,Plan control assessments
+Information Assurance,IAO,IAO-01.1,Security Assessment Program,5_assess,Assess Controls,A2,Control Assessment,Conduct security control assessments
+Information Assurance,IAO,IAO-02,Control Testing,5_assess,Assess Controls,A2,Control Assessment,Test control effectiveness
+Information Assurance,IAO,IAO-03,Penetration Testing,5_assess,Assess Controls,A2,Control Assessment,Conduct penetration testing assessments
+Mobile Device Management,MDM,MDM-01,Mobile Device Management Program,3_select,Select Controls,S2,Control Selection,Select mobile device controls
+Mobile Device Management,MDM,MDM-02,Mobile Device Access Control,4_implement,Implement Controls,I2,Control Implementation,Implement mobile device access controls
+Network Security,NET,NET-01,Network Security Program,3_select,Select Controls,S2,Control Selection,Select network security controls
+Network Security,NET,NET-02,Firewall Configuration,4_implement,Implement Controls,I2,Control Implementation,Implement firewall controls
+Network Security,NET,NET-02.2,Network Segmentation,4_implement,Implement Controls,I2,Control Implementation,Implement network segmentation
+Physical Environmental Security,PES,PES-01,Physical Security Program,3_select,Select Controls,S2,Control Selection,Select physical security controls
+Physical Environmental Security,PES,PES-01.1,Physical Access Controls,4_implement,Implement Controls,I2,Control Implementation,Implement physical access controls
+Physical Environmental Security,PES,PES-03,Media Protection,4_implement,Implement Controls,I2,Control Implementation,Implement media protection measures
+Data Privacy,PRI,PRI-01,Data Privacy Program,1_prepare,Prepare,P2,Organizational Context,Establish privacy governance context
+Data Privacy,PRI,PRI-01.1,Privacy by Design,3_select,Select Controls,S1,Control Baselines,Incorporate privacy into control selection
+Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,2_categorize,Categorize System,C3,Impact Analysis,Assess privacy impact of system
+Data Privacy,PRI,PRI-02,Personal Data Protection,3_select,Select Controls,S2,Control Selection,Select privacy protection controls
+Data Privacy,PRI,PRI-02.1,Data Subject Rights,3_select,Select Controls,S2,Control Selection,Select controls for data subject access
+Data Privacy,PRI,PRI-03,Data Retention and Disposal,4_implement,Implement Controls,I2,Control Implementation,Implement data retention and disposal controls
+Data Privacy,PRI,PRI-05,Personal Data Processing,4_implement,Implement Controls,I2,Control Implementation,Implement controls for data processing
+Data Privacy,PRI,PRI-05.1,Data Collection Limitation,2_categorize,Categorize System,C2,Information Sensitivity,Define collection scope and limitation
+Data Privacy,PRI,PRI-05.2,Data Use Limitation,3_select,Select Controls,S2,Control Selection,Select controls for limiting data use
+Data Privacy,PRI,PRI-05.3,Data Masking,4_implement,Implement Controls,I2,Control Implementation,Implement data masking controls
+Data Privacy,PRI,PRI-05.5,Inventory of Personal Data,1_prepare,Prepare,P3,Business Processes,Inventory personal data assets
+Project Resource Management,PRM,PRM-01,Project Management Program,1_prepare,Prepare,P2,Organizational Context,Establish project security governance
+Project Resource Management,PRM,PRM-01.1,Security in SDLC,4_implement,Implement Controls,I2,Control Implementation,Integrate security into development lifecycle
+Risk Management,RSK,RSK-01,Risk Management Program,1_prepare,Prepare,P1,Readiness Assessment,Establish risk management readiness
+Risk Management,RSK,RSK-01.1,Risk Assessment,2_categorize,Categorize System,C1,Categorization,Conduct risk assessment
+Risk Management,RSK,RSK-02,Risk Response,3_select,Select Controls,S2,Control Selection,Select controls to mitigate identified risks
+Risk Management,RSK,RSK-03,Risk Monitoring,7_monitor,Monitor Controls,M1,Continuous Monitoring,Monitor risk throughout system lifecycle
+Secure Engineering Architecture,SEA,SEA-01,Secure Engineering Program,3_select,Select Controls,S1,Control Baselines,Incorporate security into design
+Secure Engineering Architecture,SEA,SEA-01.1,Secure Design Principles,4_implement,Implement Controls,I1,System Development,Implement secure architecture principles
+Secure Engineering Architecture,SEA,SEA-02,Secure Code Development,4_implement,Implement Controls,I2,Control Implementation,Implement secure development practices
+Security Operations,OPS,OPS-01,Security Operations Program,4_implement,Implement Controls,I4,Information Awareness,Establish security operations function
+Security Operations,OPS,OPS-01.1,SOC Establishment,4_implement,Implement Controls,I2,Control Implementation,Establish security operations center
+Security Operations,OPS,OPS-02,Event Management,7_monitor,Monitor Controls,M1,Continuous Monitoring,Monitor and manage security events
+Security Awareness Training,SAT,SAT-01,Security Awareness Program,4_implement,Implement Controls,I4,Information Awareness,Implement awareness and training program
+Security Awareness Training,SAT,SAT-01.1,Awareness Training,4_implement,Implement Controls,I4,Information Awareness,Conduct security awareness training
+Security Awareness Training,SAT,SAT-01.2,Phishing Training,4_implement,Implement Controls,I4,Information Awareness,Conduct phishing awareness training
+Technology Development Acquisition,TDA,TDA-01,Technology Development Program,1_prepare,Prepare,P4,System Boundaries,Define development system boundaries
+Technology Development Acquisition,TDA,TDA-02,Acquisition Program,3_select,Select Controls,S2,Control Selection,Select acquisition security controls
+Technology Development Acquisition,TDA,TDA-03,Secure Development Lifecycle,4_implement,Implement Controls,I1,System Development,Implement secure SDLC
+Third-Party Management,TPM,TPM-01,Third-Party Management Program,1_prepare,Prepare,P2,Organizational Context,Establish third-party governance
+Third-Party Management,TPM,TPM-01.1,Third-Party Risk Assessment,2_categorize,Categorize System,C1,Categorization,Assess third-party risk and categorization
+Third-Party Management,TPM,TPM-01.2,Third-Party Agreements,3_select,Select Controls,S2,Control Selection,Select third-party contract controls
+Third-Party Management,TPM,TPM-02,Third-Party Monitoring,7_monitor,Monitor Controls,M1,Continuous Monitoring,Monitor third-party control effectiveness
+Third-Party Management,TPM,TPM-03,Service Provider Inventory,1_prepare,Prepare,P3,Business Processes,Maintain service provider inventory
+Threat Management,THR,THR-01,Threat Management Program,2_categorize,Categorize System,C3,Impact Analysis,Assess system threat vulnerabilities
+Threat Management,THR,THR-01.1,Threat Intelligence,2_categorize,Categorize System,C1,Categorization,Incorporate threat intelligence into categorization
+Threat Management,THR,THR-01.2,Threat Assessment,5_assess,Assess Controls,A2,Control Assessment,Assess threats and vulnerabilities
+Vulnerability Patch Management,VPM,VPM-01,Vulnerability Management Program,7_monitor,Monitor Controls,M1,Continuous Monitoring,Monitor system vulnerabilities continuously
+Vulnerability Patch Management,VPM,VPM-01.1,Vulnerability Assessment,5_assess,Assess Controls,A2,Control Assessment,Conduct vulnerability assessments
+Vulnerability Patch Management,VPM,VPM-02,Vulnerability Remediation,4_implement,Implement Controls,I2,Control Implementation,Implement vulnerability remediation controls
+Web Security,WEB,WEB-01,Web Security Program,3_select,Select Controls,S2,Control Selection,Select web application security controls
+Web Security,WEB,WEB-01.1,Web Application Security,4_implement,Implement Controls,I2,Control Implementation,Implement web application security controls
+Web Security,WEB,WEB-03,Input Validation,4_implement,Implement Controls,I2,Control Implementation,Implement input validation controls
