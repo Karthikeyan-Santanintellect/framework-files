@@ -1,0 +1,110 @@
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,HITECH_Act_Section,HITECH_Requirement_ID,HITECH_Requirement_Description
+Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,Title II,13401,Develop implement and maintain comprehensive information security program for protected health information
+Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,Title II,13402,Designate security official responsible for security program development and implementation
+Cybersecurity Data Privacy Governance,GOV,GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,Title II,13401,Ensure compliance with administrative technical and physical safeguards
+Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,Title II,13402,Conduct risk analysis based on potential risks and vulnerabilities to protected health information
+Cybersecurity Data Privacy Governance,GOV,GOV-03.1,Risk Assessment Program,Title II,13402,Document risk analysis and assessment of protected health information systems
+Cybersecurity Data Privacy Governance,GOV,GOV-03.2,Risk Response Program,Title II,13402,Implement risk management safeguards to address identified risks
+Cybersecurity Data Privacy Governance,GOV,GOV-04,Management Reporting,Title II,13409,Report security incidents to board or governing body and federal authorities if required
+Risk Management,RSK,RSK-01,Risk Management Program,Title II,13402,Conduct comprehensive risk analysis and assessment
+Risk Management,RSK,RSK-01.1,Risk Assessment,Title II,13402,Perform periodic risk assessments of protected health information
+Risk Management,RSK,RSK-02,Risk Response,Title II,13402,Implement safeguards to control identified risks to protected health information
+Risk Management,RSK,RSK-03,Risk Monitoring,Title II,13409,Monitor and adjust program based on security incident analysis
+Asset Management,AST,AST-01,Asset Management Program,Title II,13402,Maintain information systems storing protected health information
+Asset Management,AST,AST-01.1,Asset Dependency Analysis,Title II,13402,Document systems that store process or transmit protected health information
+Asset Management,AST,AST-01.2,Asset Inventory Accuracy,Title II,13402,Maintain accurate inventory of information systems with protected health information
+Business Continuity Disaster Recovery,BCD,BCD-01,Business Continuity and Disaster Recovery Program,Title II,13402,Establish disaster recovery procedures for systems containing protected health information
+Business Continuity Disaster Recovery,BCD,BCD-01.1,Business Continuity Plan,Title II,13402,Develop written disaster recovery plan for emergency situations
+Business Continuity Disaster Recovery,BCD,BCD-01.3,Business Continuity Testing,Title II,13402,Test and revise disaster recovery plan periodically
+Change Management,CHG,CHG-01,Change Management Program,Title II,13402,Manage changes to ensure no disruption to security safeguards
+Cloud Security,CLD,CLD-01,Cloud Security Governance,Title II,13406,Oversee business associate arrangements for handling protected health information
+Cloud Security,CLD,CLD-01.1,Secured Development Within Cloud Environments,Title II,13406,Require business associates to implement safeguards
+Compliance,CPL,CPL-01,Compliance Monitoring Program,Title II,13402,Monitor and test effectiveness of security safeguards
+Compliance,CPL,CPL-01.1,Compliance Assessment,Title II,13402,Conduct periodic security evaluations and reviews
+Compliance,CPL,CPL-02,Compliance Reporting,Title II,13408,Report compliance status to leadership and affected parties
+Configuration Management,CFG,CFG-01,Configuration Management Program,Title II,13402,Implement standard secure configurations for systems with protected health information
+Configuration Management,CFG,CFG-01.1,Configuration Standards,Title II,13402,Apply baseline security configurations across organization
+Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,Title II,13402,Monitor for unauthorized access to protected health information
+Continuous Monitoring,MON,MON-01.1,Event Log Centralized Collection,Title II,13402,Implement centralized audit logging and monitoring
+Continuous Monitoring,MON,MON-01.3,Event Log Correlation and Analysis,Title II,13409,Analyze logs to detect and respond to security incidents
+Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,Title II,13402,Implement encryption of protected health information
+Cryptographic Protections,CRY,CRY-02,Cryptographic At Rest,Title II,13402,Encrypt protected health information stored on systems
+Cryptographic Protections,CRY,CRY-03,Cryptographic In Transit,Title II,13402,Encrypt protected health information transmitted over networks
+Cryptographic Protections,CRY,CRY-04,Key Management,Title II,13402,Manage encryption keys to protect sensitive data
+Cryptographic Protections,CRY,CRY-05,Key Management Practices,Title II,13402,Implement secure key generation rotation and distribution
+Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,Title II,13402,Classify protected health information by sensitivity
+Data Classification and Handling,DCH,DCH-01.1,Data Classification Standards,Title II,13402,Align safeguards with data classification levels
+Data Classification and Handling,DCH,DCH-01.3,Sensitive Data Inventory,Title II,13402,Identify and document locations of protected health information
+Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,Title II,13402,Implement secure disposal procedures for protected health information
+Data Classification and Handling,DCH,DCH-06,Media Storage,Title II,13402,Securely store and dispose of media containing protected health information
+Endpoint Security,END,END-01,Endpoint Security Program,Title II,13402,Secure endpoints that access protected health information
+Endpoint Security,END,END-02,Endpoint Hardening,Title II,13402,Apply security baselines and hardening to endpoints
+Endpoint Security,END,END-02.1,Malware Protection,Title II,13402,Implement tools to detect and prevent malicious software
+Human Resources Security,HRS,HRS-01,Human Resources Security Program,Title II,13402,Execute personnel management practices for security
+Human Resources Security,HRS,HRS-03,Security Awareness Training,Title II,13402,Provide security awareness training to all workforce members
+Identification and Authentication,IAC,IAC-01,Identity and Access Management Program,Title II,13402,Implement authentication controls for protected health information systems
+Identification and Authentication,IAC,IAC-02,Authentication Mechanisms,Title II,13402,Use unique identification and authentication procedures
+Identification and Authentication,IAC,IAC-03,Access Control Enforcement,Title II,13402,Enforce access controls limiting access to authorized users
+Incident Response,IRO,IRO-01,Incident Response Program,Title II,13409,Establish incident response procedures for security breaches
+Incident Response,IRO,IRO-01.1,Incident Response Plan,Title II,13409,Document response procedures and responsibilities for incidents
+Incident Response,IRO,IRO-02,Incident Detection and Analysis,Title II,13409,Detect and analyze security incidents affecting protected health information
+Incident Response,IRO,IRO-03,Incident Containment and Recovery,Title II,13409,Contain mitigate and recover from security incidents
+Incident Response,IRO,IRO-04,Data Breach Notification,Title II,13404,Notify affected individuals of security breaches of protected health information
+Information Assurance,IAO,IAO-01,Information Assurance Program,Title II,13402,Coordinate security evaluations and testing
+Information Assurance,IAO,IAO-01.1,Security Assessment Program,Title II,13402,Plan and execute periodic security assessments
+Information Assurance,IAO,IAO-02,Control Testing,Title II,13402,Test effectiveness of security safeguards and controls
+Information Assurance,IAO,IAO-03,Penetration Testing,Title II,13402,Conduct penetration testing to identify vulnerabilities
+Mobile Device Management,MDM,MDM-01,Mobile Device Management Program,Title II,13402,Control mobile device access to protected health information
+Mobile Device Management,MDM,MDM-02,Mobile Device Access Control,Title II,13402,Enforce security controls on mobile devices
+Network Security,NET,NET-01,Network Security Program,Title II,13402,Secure networks transmitting protected health information
+Network Security,NET,NET-02,Firewall Configuration,Title II,13402,Implement firewalls to limit network access
+Network Security,NET,NET-02.2,Network Segmentation,Title II,13402,Segment networks based on security requirements
+Physical Environmental Security,PES,PES-01,Physical Security Program,Title II,13402,Limit physical access to facilities containing protected health information
+Physical Environmental Security,PES,PES-01.1,Physical Access Controls,Title II,13402,Implement procedures to control and validate facility access
+Physical Environmental Security,PES,PES-03,Media Protection,Title II,13402,Protect and securely dispose of media with protected health information
+Data Privacy,PRI,PRI-01,Data Privacy Program,Title II,13401,Establish privacy management process for protected health information
+Data Privacy,PRI,PRI-01.1,Privacy by Design,Title II,13401,Incorporate privacy into system and process design
+Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,Title II,13402,Assess privacy risks to protected health information
+Data Privacy,PRI,PRI-02,Personal Data Protection,Title II,13401,Protect protected health information from unauthorized access and disclosure
+Data Privacy,PRI,PRI-03,Data Retention and Disposal,Title II,13402,Define retention periods and secure disposal for protected health information
+Data Privacy,PRI,PRI-05,Personal Data Processing,Title II,13402,Ensure protected health information used only for permitted purposes
+Third-Party Management,TPM,TPM-01,Third-Party Management Program,Title II,13406,Establish business associate management policies and procedures
+Third-Party Management,TPM,TPM-01.1,Third-Party Risk Assessment,Title II,13406,Assess security risks of business associates
+Third-Party Management,TPM,TPM-01.2,Third-Party Agreements,Title II,13406,Execute business associate agreements ensuring safeguard implementation
+Third-Party Management,TPM,TPM-02,Third-Party Monitoring,Title II,13406,Monitor business associates for safeguard compliance
+Third-Party Management,TPM,TPM-03,Service Provider Inventory,Title II,13406,Maintain inventory of business associates with protected health information
+Security Awareness Training,SAT,SAT-01,Security Awareness Program,Title II,13402,Implement security awareness and training program
+Security Awareness Training,SAT,SAT-01.1,Awareness Training,Title II,13402,Deliver periodic security training to workforce
+Security Awareness Training,SAT,SAT-01.2,Phishing Training,Title II,13402,Train staff on security threats and social engineering
+Security Operations,OPS,OPS-01,Security Operations Program,Title II,13402,Execute security operations for protected health information
+Security Operations,OPS,OPS-02,Event Management,Title II,13409,Respond to and document security events and incidents
+Vulnerability Patch Management,VPM,VPM-01,Vulnerability Management Program,Title II,13402,Manage vulnerabilities in systems containing protected health information
+Vulnerability Patch Management,VPM,VPM-01.1,Vulnerability Assessment,Title II,13402,Conduct periodic vulnerability assessments and scans
+Vulnerability Patch Management,VPM,VPM-02,Vulnerability Remediation,Title II,13402,Remediate identified vulnerabilities promptly
+Maintenance,MNT,MNT-01,Maintenance Program,Title II,13402,Maintain systems containing protected health information
+Maintenance,MNT,MNT-02,Patch Management,Title II,13402,Apply security patches and updates to systems
+Web Security,WEB,WEB-01,Web Security Program,Title II,13402,Secure web applications processing protected health information
+Web Security,WEB,WEB-02,Web Application Security,Title II,13402,Implement web application security controls
+Web Security,WEB,WEB-03,Input Validation,Title II,13402,Validate web application inputs to prevent attacks
+Project Resource Management,PRM,PRM-01,Project Management Program,Title II,13402,Support security objectives with adequate resources
+Project Resource Management,PRM,PRM-01.1,Security in SDLC,Title II,13402,Integrate security into development lifecycle
+Threat Management,THR,THR-01,Threat Management Program,Title II,13402,Identify threats to protected health information
+Threat Management,THR,THR-01.1,Threat Intelligence,Title II,13402,Incorporate threat intelligence into risk assessment
+Threat Management,THR,THR-01.2,Threat Assessment,Title II,13402,Assess threats and vulnerabilities to protected health information
+Breach Response,IRO,IRO-05,Breach Notification Process,Title II,13404,Notify affected individuals without unreasonable delay of breach
+Breach Response,IRO,IRO-06,Media Breach Notification,Title II,13405,Notify media outlets of large breaches affecting more than 500 individuals
+Breach Response,IRO,IRO-07,Federal Breach Notification,Title II,13403,Notify Department of Health and Human Services of breaches
+Breach Response,IRO,IRO-08,Mitigation Measures,Title II,13404,Provide credit monitoring and mitigation for breach victims
+Enforcement,GOV,GOV-05,Business Associate Audit Control,Title II,13410,Cooperate with audits and investigations by DHHS
+Enforcement,GOV,GOV-06,Enforcement Actions,Title II,13410,Address corrective actions issued by enforcement authorities
+Privacy Management,PRI,PRI-06,Minimum Necessary Rule,Title II,13406,Limit protected health information access to minimum necessary for permitted use
+Privacy Management,PRI,PRI-07,Patient Access Rights,Title II,13404,Enable individuals to access their protected health information
+Privacy Management,PRI,PRI-08,Amendment Rights,Title II,13405,Allow individuals to request and obtain amendments to protected health information
+Privacy Management,PRI,PRI-09,Accounting of Disclosures,Title II,13405,Maintain and provide accounting of protected health information disclosures
+Genetic Information Protection,PRI,PRI-10,Genetic Discrimination Prevention,Title II,13405,Prohibit use of genetic information for underwriting health insurance
+Notification Requirements,IRO,IRO-09,Notification Without Unreasonable Delay,Title II,13404,Notify individuals of breach as quickly as possible without unreasonable delay
+Notification Requirements,IRO,IRO-10,Notification Content Requirements,Title II,13404,Include specific required information in breach notification
+Notification Requirements,IRO,IRO-11,Notification Methods,Title II,13404,Use methods to contact individuals including email postal mail and prominent media
+Enforcement Penalties,GOV,GOV-07,Penalty Assessment,Title II,13409,Assess penalties for violations and non-compliance
+Enforcement Penalties,GOV,GOV-08,Civil Monetary Penalties,Title II,13409,Impose civil penalties for violations of safeguards rule
+Enforcement Penalties,GOV,GOV-09,Criminal Penalties,Title II,13410,Enforce criminal penalties for violations with criminal intent
