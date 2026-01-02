@@ -271,8 +271,26 @@ MATCH (subc:Subcategory {subcategory_id: trim(row.NIST_AI_RMF_SubCategory), IS_f
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(subc)
 RETURN count(*) AS relationships_created;
 """
-
-
+#9a.controls->GLBA_sections
+control_glba_sections = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.GLBA_Section IS NOT NULL  
+  AND trim(row.GLBA_Section) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (glba:Section {section_id: trim(row.GLBA_Section), industry_standard_regulation_id: 'GLBA_1999'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(glba);
+"""
+#9b.controls->GLBA_requirements
+control_glba_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.GLBA_Requirement IS NOT NULL  
+  AND trim(row.GLBA_Requirement) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (glba:Requirement {requirement_id: trim(row.GLBA_Requirement), industry_standard_regulation_id: 'GLBA_1999'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(glba);
+"""
 
 
 
@@ -398,6 +416,14 @@ time.sleep(2)
 
 client.query(control_nist_ai_rmf_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
 time.sleep(2)
+
+
+client.query(control_glba_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GLBA-Mapping.csv"))
+time.sleep(2)
+
+client.query(control_glba_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GLBA-Mapping.csv"))
+time.sleep(2)
+
 
 # client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
 # time.sleep(2)
