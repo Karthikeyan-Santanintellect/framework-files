@@ -278,19 +278,46 @@ WITH row
 WHERE row.GLBA_Section IS NOT NULL  
   AND trim(row.GLBA_Section) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (glba:Section {section_id: trim(row.GLBA_Section), industry_standard_regulation_id: 'GLBA_1999'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(glba);
+MATCH (sec:Section {section_id: trim(row.GLBA_Section), industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sec)
+RETURN count(*) AS relationships_created;
 """
 #9b.controls->GLBA_requirements
 control_glba_requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
-WHERE row.GLBA_Requirement IS NOT NULL  
-  AND trim(row.GLBA_Requirement) <> ''
+WHERE row.GLBA_Requirement_ID IS NOT NULL  
+  AND trim(row.GLBA_Requirement_ID) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (glba:Requirement {requirement_id: trim(row.GLBA_Requirement), industry_standard_regulation_id: 'GLBA_1999'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(glba);
+MATCH (req:Requirement {requirement_id: trim(row.GLBA_Requirement_ID), industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
+RETURN count(*) AS relationships_created;
 """
+
+#10a.control->hippa_rules
+control_hipaa_rules = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.HIPAA_Rule IS NOT NULL  
+  AND trim(row.HIPAA_Rule) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (rule:Rule {rule_id: trim(row.HIPAA_Rule)})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(rule)
+RETURN count(*) AS relationships_created;
+"""
+#10b.control->safeguards
+control_hipaa_safeguards = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.HIPAA_Requirement_ID IS NOT NULL  
+  AND trim(row.HIPAA_Requirement_ID) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (safeguard:Safeguard {id: trim(row.HIPAA_Requirement_ID)})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(safeguard)
+RETURN count(*) AS relationships_created;
+"""
+
+
 
 
 
