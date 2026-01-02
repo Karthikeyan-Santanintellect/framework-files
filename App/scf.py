@@ -303,7 +303,7 @@ MATCH (std:Standard {section: trim(row.HIPAA_Rule), industry_standard_regulation
 MERGE (sc)-[:STANDARD_MAPS_TO_MAPPING]->(std)
 RETURN count(*) AS rules_linked;
 """
-#10b.control->safeguards
+#10b.control->hipaa_safeguards
 control_hipaa_safeguards = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WHERE row.HIPAA_Requirement_ID IS NOT NULL AND trim(row.HIPAA_Requirement_ID) <> ''
@@ -313,9 +313,26 @@ MERGE (sc)-[:STANDARD_MAPS_TO_MAPPING]->(std)
 RETURN count(*) AS safeguards_linked;
 """
 
-
-
-
+#11a.control->hitech_requirements
+control_hitech_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.HITECH_Requirement_ID IS NOT NULL AND trim(row.HITECH_Requirement_ID) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (req:Requirement {requirement_id: trim(row.HITECH_Requirement_ID), industry_standard_regulation_id: 'HITECH_ACT_2009'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
+RETURN count(*) AS hitech_requirements_linked;
+"""
+#12a.control->hitrust
+control_hitrust = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.HITRUST_Control_ID IS NOT NULL AND trim(row.HITRUST_Control_ID) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (req:Requirement {requirement_id: trim(row.HITRUST_Control_ID), industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
+RETURN count(*) AS hitrust_requirements_linked;
+"""
 
 
 
@@ -447,11 +464,15 @@ time.sleep(2)
 # client.query(control_glba_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GLBA-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_hipaa_rules.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
+# client.query(control_hipaa_rules.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_hipaa_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
 time.sleep(2)
 
-client.query(control_hipaa_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
-time.sleep(2)
 
 
 

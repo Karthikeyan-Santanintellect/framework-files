@@ -1,0 +1,93 @@
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,HITRUST_Module,HITRUST_Control_ID,HITRUST_Control_Name,HITRUST_Requirement
+Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,Risk Management,03.a,Risk Management Program Development,Organizations must conduct comprehensive risk assessments
+Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,Risk Management,03.a,Risk Management Program Development,Assign responsibility for risk management
+Cybersecurity Data Privacy Governance,GOV,GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,Compliance,06.a,Identification of Applicable Legislation,Monitor and adjust security program
+Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,Risk Management,03.b,Performing Risk Assessments,Document all identified risks
+Cybersecurity Data Privacy Governance,GOV,GOV-03.1,Risk Assessment Program,Risk Management,03.b,Performing Risk Assessments,Perform periodic risk assessments
+Cybersecurity Data Privacy Governance,GOV,GOV-03.2,Risk Response Program,Risk Management,03.c,Risk Mitigation,Implement controls to address risks
+Cybersecurity Data Privacy Governance,GOV,GOV-04,Management Reporting,Risk Management,03.d,Risk Evaluation,Report risk status to leadership
+Risk Management,RSK,RSK-01,Risk Management Program,Risk Management,03.a,Risk Management Program Development,Conduct comprehensive risk analysis
+Risk Management,RSK,RSK-01.1,Risk Assessment,Risk Management,03.b,Performing Risk Assessments,Perform periodic risk assessments
+Risk Management,RSK,RSK-02,Risk Response,Risk Management,03.c,Risk Mitigation,Implement safeguards to control risks
+Risk Management,RSK,RSK-03,Risk Monitoring,Risk Management,03.d,Risk Evaluation,Monitor and adjust security program
+Asset Management,AST,AST-01,Asset Management Program,Asset Management,07.a,Inventory of Assets,Maintain inventory of all assets
+Asset Management,AST,AST-01.1,Asset Dependency Analysis,Asset Management,07.a,Inventory of Assets,Document system dependencies
+Asset Management,AST,AST-01.2,Asset Inventory Accuracy,Asset Management,07.a,Inventory of Assets,Keep asset inventory current
+Business Continuity Disaster Recovery,BCD,BCD-01,Business Continuity and Disaster Recovery Program,Business Continuity Management,12.c,Developing and Implementing Continuity Plans,Establish disaster recovery procedures
+Business Continuity Disaster Recovery,BCD,BCD-01.1,Business Continuity Plan,Business Continuity Management,12.c,Developing and Implementing Continuity Plans,Develop written recovery plans
+Business Continuity Disaster Recovery,BCD,BCD-01.3,Business Continuity Testing,Business Continuity Management,12.e,Testing Maintaining and Re-assessing Business Continuity Plans,Test disaster recovery plan regularly
+Change Management,CHG,CHG-01,Change Management Program,Communications and Operations Management,09.b,Change Management,Manage changes to prevent disruptions
+Cloud Security,CLD,CLD-01,Cloud Security Governance,Organization of Information Security,05.f,Identification of Risks from Third Party Access,Oversee cloud service security
+Cloud Security,CLD,CLD-01.1,Secured Development Within Cloud Environments,Organization of Information Security,05.g,Addressing Security in Third Party Agreements,Require safeguards for cloud services
+Compliance,CPL,CPL-01,Compliance Monitoring Program,Compliance,06.g,Compliance with Security Policies and Standards,Conduct periodic security assessments
+Compliance,CPL,CPL-01.1,Compliance Assessment,Compliance,06.h,Technical Compliance Checking,Plan and execute assessments
+Compliance,CPL,CPL-02,Compliance Reporting,Compliance,06.g,Compliance with Security Policies and Standards,Report compliance status to leadership
+Configuration Management,CFG,CFG-01,Configuration Management Program,Communications and Operations Management,09.ad,Baseline Configuration and Standards,Implement secure configurations
+Configuration Management,CFG,CFG-01.1,Configuration Standards,Communications and Operations Management,09.ad,Baseline Configuration and Standards,Apply baseline configurations
+Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,Communications and Operations Management,09.m,Operator Logs,Monitor for unauthorized access
+Continuous Monitoring,MON,MON-01.1,Event Log Centralized Collection,Communications and Operations Management,09.m,Operator Logs,Implement centralized logging
+Continuous Monitoring,MON,MON-01.3,Event Log Correlation and Analysis,Communications and Operations Management,09.p,System Monitoring and Performance Tracking,Analyze logs to detect incidents
+Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,Information Systems Acquisition Development and Maintenance,10.d,Policy on Use of Cryptographic Controls,Implement encryption protections
+Cryptographic Protections,CRY,CRY-02,Cryptographic At Rest,Information Systems Acquisition Development and Maintenance,10.e,Encryption,Encrypt stored sensitive data
+Cryptographic Protections,CRY,CRY-03,Cryptographic In Transit,Information Systems Acquisition Development and Maintenance,10.e,Encryption,Encrypt data in transmission
+Cryptographic Protections,CRY,CRY-04,Key Management,Information Systems Acquisition Development and Maintenance,10.f,Management of Encryption Keys,Manage encryption keys securely
+Cryptographic Protections,CRY,CRY-05,Key Management Practices,Information Systems Acquisition Development and Maintenance,10.f,Management of Encryption Keys,Implement secure key generation and rotation
+Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,Asset Management,07.d,Classification Guidelines,Classify sensitive data
+Data Classification and Handling,DCH,DCH-01.1,Data Classification Standards,Asset Management,07.d,Classification Guidelines,Align safeguards to classification
+Data Classification and Handling,DCH,DCH-01.3,Sensitive Data Inventory,Asset Management,07.a,Inventory of Assets,Identify locations of sensitive data
+Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,Asset Management,07.e,Information Labeling and Handling,Implement secure disposal procedures
+Data Classification and Handling,DCH,DCH-06,Media Storage,Communications and Operations Management,09.t,Handling of Removable Media,Securely store and dispose media
+Endpoint Security,END,END-01,Endpoint Security Program,Access Control,01.x,Mobile Computing and Communications,Secure endpoints accessing data
+Endpoint Security,END,END-02,Endpoint Hardening,Communications and Operations Management,09.z,System Hardening,Apply security baselines to endpoints
+Endpoint Security,END,END-02.1,Malware Protection,Communications and Operations Management,09.j,Protection Against Malicious Code,Implement malware detection and prevention
+Human Resources Security,HRS,HRS-01,Human Resources Security Program,Human Resources Security,02.a,Roles and Responsibilities,Execute personnel management practices
+Human Resources Security,HRS,HRS-03,Security Awareness Training,Human Resources Security,02.e,Information Security Awareness Education and Training,Provide security awareness training
+Identification and Authentication,IAC,IAC-01,Identity and Access Management Program,Access Control,01.a,Access Control Policy,Implement authentication controls
+Identification and Authentication,IAC,IAC-02,Authentication Mechanisms,Access Control,01.q,User Identification and Authentication,Use unique identification and authentication
+Identification and Authentication,IAC,IAC-03,Access Control Enforcement,Access Control,01.u,Information Access Restriction,Enforce access controls based on need
+Incident Response,IRO,IRO-01,Incident Response Program,Information Security Incident Management,11.c,Responsibilities and Procedures,Establish incident response procedures
+Incident Response,IRO,IRO-01.1,Incident Response Plan,Information Security Incident Management,11.c,Responsibilities and Procedures,Document response procedures and responsibilities
+Incident Response,IRO,IRO-02,Incident Detection and Analysis,Information Security Incident Management,11.a,Reporting Information Security Events,Detect and analyze security incidents
+Incident Response,IRO,IRO-03,Incident Containment and Recovery,Information Security Incident Management,11.c,Responsibilities and Procedures,Contain and recover from incidents
+Incident Response,IRO,IRO-04,Data Breach Notification,Privacy Practices,13.q,Data Breach Notification,Notify individuals of data breaches
+Information Assurance,IAO,IAO-01,Information Assurance Program,Compliance,06.i,Information Systems Audit Controls,Coordinate security evaluations
+Information Assurance,IAO,IAO-01.1,Security Assessment Program,Compliance,06.i,Information Systems Audit Controls,Plan and execute assessments
+Information Assurance,IAO,IAO-02,Control Testing,Compliance,06.h,Technical Compliance Checking,Test effectiveness of controls
+Information Assurance,IAO,IAO-03,Penetration Testing,Compliance,06.h,Technical Compliance Checking,Perform penetration testing
+Mobile Device Management,MDM,MDM-01,Mobile Device Management Program,Access Control,01.x,Mobile Computing and Communications,Control mobile device access
+Mobile Device Management,MDM,MDM-02,Mobile Device Access Control,Access Control,01.x,Mobile Computing and Communications,Enforce security on mobile devices
+Network Security,NET,NET-01,Network Security Program,Access Control,01.i,Policy on the Use of Network Services,Secure networks and communications
+Network Security,NET,NET-02,Firewall Configuration,Access Control,01.n,Network Connection Control,Implement firewalls to limit access
+Network Security,NET,NET-02.2,Network Segmentation,Access Control,01.m,Segregation in Networks,Segment networks based on requirements
+Physical Environmental Security,PES,PES-01,Physical Security Program,Physical and Environmental Security,08.a,Physical Security Perimeter,Limit physical access to facilities
+Physical Environmental Security,PES,PES-01.1,Physical Access Controls,Physical and Environmental Security,08.b,Physical Entry Controls,Control and validate facility access
+Physical Environmental Security,PES,PES-03,Media Protection,Physical and Environmental Security,08.j,Secure Disposal or Re-use of Equipment,Protect and dispose of media securely
+Data Privacy,PRI,PRI-01,Data Privacy Program,Privacy Practices,13.f,Accountability,Establish privacy management process
+Data Privacy,PRI,PRI-01.1,Privacy by Design,Privacy Practices,13.o,Privacy by Design,Incorporate privacy into design
+Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,Privacy Practices,13.i,Privacy Impact Assessment,Assess privacy risks
+Data Privacy,PRI,PRI-02,Personal Data Protection,Privacy Practices,13.m,Sensitive Personal Information Protection,Protect personal data from unauthorized access
+Data Privacy,PRI,PRI-03,Data Retention and Disposal,Privacy Practices,13.h,Data Retention and Disposal,Define retention and disposal schedules
+Data Privacy,PRI,PRI-05,Personal Data Processing,Privacy Practices,13.b,Purpose Specification and Minimization,Limit use of personal data
+Third-Party Management,TPM,TPM-01,Third-Party Management Program,Organization of Information Security,05.f,Identification of Risks from Third Party Access,Establish business associate policies
+Third-Party Management,TPM,TPM-01.1,Third-Party Risk Assessment,Organization of Information Security,05.f,Identification of Risks from Third Party Access,Assess security risks of providers
+Third-Party Management,TPM,TPM-01.2,Third-Party Agreements,Organization of Information Security,05.g,Addressing Security in Third Party Agreements,Execute agreements with safeguards
+Third-Party Management,TPM,TPM-02,Third-Party Monitoring,Organization of Information Security,05.h,Third Party Service Delivery Management,Monitor provider compliance
+Third-Party Management,TPM,TPM-03,Service Provider Inventory,Organization of Information Security,05.f,Identification of Risks from Third Party Access,Maintain service provider inventory
+Security Awareness Training,SAT,SAT-01,Security Awareness Program,Human Resources Security,02.e,Information Security Awareness Education and Training,Implement security training program
+Security Awareness Training,SAT,SAT-01.1,Awareness Training,Human Resources Security,02.e,Information Security Awareness Education and Training,Deliver periodic training
+Security Awareness Training,SAT,SAT-01.2,Phishing Training,Human Resources Security,02.e,Information Security Awareness Education and Training,Train on security threats
+Security Operations,OPS,OPS-01,Security Operations Program,Communications and Operations Management,09.a,Documented Operating Procedures,Execute security operations
+Security Operations,OPS,OPS-02,Event Management,Information Security Incident Management,11.a,Reporting Information Security Events,Respond to security events
+Vulnerability Patch Management,VPM,VPM-01,Vulnerability Management Program,Communications and Operations Management,09.v,Patch Management and Updates,Manage system vulnerabilities
+Vulnerability Patch Management,VPM,VPM-01.1,Vulnerability Assessment,Compliance,06.h,Technical Compliance Checking,Conduct periodic assessments
+Vulnerability Patch Management,VPM,VPM-02,Vulnerability Remediation,Communications and Operations Management,09.v,Patch Management and Updates,Remediate vulnerabilities promptly
+Maintenance,MNT,MNT-01,Maintenance Program,Physical and Environmental Security,08.i,Equipment Maintenance,Maintain systems properly
+Maintenance,MNT,MNT-02,Patch Management,Communications and Operations Management,09.v,Patch Management and Updates,Apply patches and updates
+Web Security,WEB,WEB-01,Web Security Program,Information Systems Acquisition Development and Maintenance,10.a,Security Requirements of Information Systems,Secure web applications
+Web Security,WEB,WEB-02,Web Application Security,Information Systems Acquisition Development and Maintenance,10.b,Securing Application Services on Public Networks,Implement application controls
+Web Security,WEB,WEB-03,Input Validation,Information Systems Acquisition Development and Maintenance,10.c,Protecting Application Services Transactions,Validate application inputs
+Project Resource Management,PRM,PRM-01,Project Management Program,Organization of Information Security,05.e,Information Security in Project Management,Support security with resources
+Project Resource Management,PRM,PRM-01.1,Security in SDLC,Information Systems Acquisition Development and Maintenance,10.a,Security Requirements of Information Systems,Integrate security in development
+Threat Management,THR,THR-01,Threat Management Program,Risk Management,03.b,Performing Risk Assessments,Identify threats to systems
+Threat Management,THR,THR-01.1,Threat Intelligence,Risk Management,03.b,Performing Risk Assessments,Incorporate threat intelligence
+Threat Management,THR,THR-01.2,Threat Assessment,Risk Management,03.d,Risk Evaluation,Assess threats and vulnerabilities
