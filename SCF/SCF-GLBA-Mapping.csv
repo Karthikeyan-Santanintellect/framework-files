@@ -1,0 +1,97 @@
+SCF_Domain,SCF_Domain_Code,SCF_Control_Code,SCF_Control_Name,GLBA_Section,GLBA_Requirement_ID,GLBA_Requirement_Description
+Cybersecurity Data Privacy Governance,GOV,GOV-01,Cybersecurity Data Privacy Program Governance,314.3,314.3(a),Develop implement and maintain a comprehensive information security program
+Cybersecurity Data Privacy Governance,GOV,GOV-01.1,Governance Program Execution,314.4,314.4(a),Designate a qualified individual to oversee the information security program
+Cybersecurity Data Privacy Governance,GOV,GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,314.4,314.4(c)(6),Develop implement and maintain written policies and procedures
+Cybersecurity Data Privacy Governance,GOV,GOV-03,Risk-Based Program Definition,314.4,314.4(b)(1),Identify reasonably foreseeable internal and external risks
+Cybersecurity Data Privacy Governance,GOV,GOV-03.1,Risk Assessment Program,314.4,314.4(b)(2),Assess the sufficiency of existing policies procedures and safeguards
+Cybersecurity Data Privacy Governance,GOV,GOV-03.2,Risk Response Program,314.4,314.4(c),Design and implement safeguards to control identified risks
+Cybersecurity Data Privacy Governance,GOV,GOV-04,Management Reporting,314.5,314.5(a),Report in writing to board or governing body at least annually
+Risk Management,RSK,RSK-01,Risk Management Program,314.4,314.4(b)(1),Conduct risk assessment to identify risks to customer information
+Risk Management,RSK,RSK-01.1,Risk Assessment,314.4,314.4(b)(2),Perform periodic risk assessments of customer information
+Risk Management,RSK,RSK-02,Risk Response,314.4,314.4(c),Implement safeguards to control assessed risks
+Risk Management,RSK,RSK-03,Risk Monitoring,314.4,314.4(h),Adjust information security program based on test results and changes
+Asset Management,AST,AST-01,Asset Management Program,314.4,314.4(b)(1),Identify information systems storing customer information
+Asset Management,AST,AST-01.1,Asset Dependency Analysis,314.4,314.4(b)(1),Analyze dependencies of systems processing customer information
+Asset Management,AST,AST-01.2,Asset Inventory Accuracy,314.4,314.4(c)(2),Maintain inventory of information systems with customer information
+Asset Management,AST,AST-02,Asset Tracking and Management,314.4,314.4(d)(2),Monitor information systems that store customer information
+Asset Management,AST,AST-02.1,Asset Location Monitoring,314.4,314.4(d)(2),Track location of systems processing customer information
+Business Continuity Disaster Recovery,BCD,BCD-01,Business Continuity and Disaster Recovery Program,314.4,314.4(c)(7),Implement incident response plan
+Business Continuity Disaster Recovery,BCD,BCD-01.1,Business Continuity Plan,314.4,314.4(c)(7),Develop procedures to respond to security events
+Business Continuity Disaster Recovery,BCD,BCD-01.3,Business Continuity Testing,314.4,314.4(d)(1),Test key controls and safeguards periodically
+Change Management,CHG,CHG-01,Change Management Program,314.4,314.4(c)(6),Maintain policies for secure change management
+Cloud Security,CLD,CLD-01,Cloud Security Governance,314.4,314.4(f)(2),Oversee service provider arrangements
+Cloud Security,CLD,CLD-01.1,Secured Development Within Cloud Environments,314.4,314.4(f)(2),Ensure service providers maintain appropriate safeguards
+Compliance,CPL,CPL-01,Compliance Monitoring Program,314.4,314.4(d)(1),Monitor and test effectiveness of safeguards
+Compliance,CPL,CPL-01.1,Compliance Assessment,314.4,314.4(d)(1),Regularly test or otherwise monitor key controls
+Compliance,CPL,CPL-02,Compliance Reporting,314.5,314.5(a),Report compliance status to board or governing body
+Configuration Management,CFG,CFG-01,Configuration Management Program,314.4,314.4(c)(1),Implement access controls for customer information
+Configuration Management,CFG,CFG-01.1,Configuration Standards,314.4,314.4(c)(2),Document secure system configurations
+Continuous Monitoring,MON,MON-01,Event Log Review and Analysis,314.4,314.4(d)(2),Implement continuous monitoring or periodic penetration testing
+Continuous Monitoring,MON,MON-01.1,Event Log Centralized Collection,314.4,314.4(d)(2),Monitor for unauthorized access to customer information
+Continuous Monitoring,MON,MON-01.3,Event Log Correlation and Analysis,314.4,314.4(d)(2),Detect security events affecting customer information
+Cryptographic Protections,CRY,CRY-01,Cryptographic Controls Program,314.4,314.4(c)(3),Implement encryption of customer information
+Cryptographic Protections,CRY,CRY-02,Cryptographic At Rest,314.4,314.4(c)(3),Encrypt customer information at rest
+Cryptographic Protections,CRY,CRY-03,Cryptographic In Transit,314.4,314.4(c)(3),Encrypt customer information in transit
+Cryptographic Protections,CRY,CRY-04,Key Management,314.4,314.4(c)(3),Manage cryptographic keys securely
+Cryptographic Protections,CRY,CRY-05,Key Management Practices,314.4,314.4(c)(3),Implement secure key generation and rotation procedures
+Data Classification and Handling,DCH,DCH-01,Data Classification Scheme,314.4,314.4(b)(1),Classify customer information by sensitivity
+Data Classification and Handling,DCH,DCH-01.1,Data Classification Standards,314.4,314.4(c),Align safeguards to customer information classification
+Data Classification and Handling,DCH,DCH-01.3,Sensitive Data Inventory,314.4,314.4(b)(1),Identify locations of all customer information
+Data Classification and Handling,DCH,DCH-02,Data Handling Procedures,314.4,314.4(c)(5),Implement secure disposal of customer information
+Data Classification and Handling,DCH,DCH-06,Media Storage,314.4,314.4(c)(5),Securely dispose of media containing customer information
+Endpoint Security,END,END-01,Endpoint Security Program,314.4,314.4(c)(2),Secure endpoints accessing customer information
+Endpoint Security,END,END-02,Endpoint Hardening,314.4,314.4(c)(2),Apply baseline security configurations to endpoints
+Endpoint Security,END,END-02.1,Malware Protection,314.4,314.4(c)(8),Implement malware detection and response capabilities
+Human Resources Security,HRS,HRS-01,Human Resources Security Program,314.4,314.4(e),Train personnel on information security
+Human Resources Security,HRS,HRS-03,Security Awareness Training,314.4,314.4(e),Provide security awareness training to personnel
+Identification and Authentication,IAC,IAC-01,Identity and Access Management Program,314.4,314.4(c)(1),Limit access to customer information to authorized individuals
+Identification and Authentication,IAC,IAC-02,Authentication Mechanisms,314.4,314.4(c)(1),Implement authentication to validate user identity
+Identification and Authentication,IAC,IAC-03,Access Control Enforcement,314.4,314.4(c)(1),Enforce access controls on customer information systems
+Incident Response,IRO,IRO-01,Incident Response Program,314.4,314.4(c)(7),Establish and maintain incident response plan
+Incident Response,IRO,IRO-01.1,Incident Response Plan,314.4,314.4(c)(7),Document incident response procedures and responsibilities
+Incident Response,IRO,IRO-02,Incident Detection and Analysis,314.4,314.4(d)(2),Detect security incidents affecting customer information
+Incident Response,IRO,IRO-03,Incident Containment and Recovery,314.4,314.4(c)(7),Contain and recover from security incidents
+Incident Response,IRO,IRO-04,Data Breach Notification,314.4,314.4(c)(7),Include notification procedures in incident response plan
+Information Assurance,IAO,IAO-01,Information Assurance Program,314.4,314.4(d)(1),Coordinate testing of safeguards
+Information Assurance,IAO,IAO-01.1,Security Assessment Program,314.4,314.4(d)(1),Plan and execute security assessments
+Information Assurance,IAO,IAO-02,Control Testing,314.4,314.4(d)(1),Test effectiveness of safeguards and controls
+Information Assurance,IAO,IAO-03,Penetration Testing,314.4,314.4(d)(2),Conduct periodic penetration testing
+Mobile Device Management,MDM,MDM-01,Mobile Device Management Program,314.4,314.4(c)(1),Control mobile device access to customer data
+Mobile Device Management,MDM,MDM-02,Mobile Device Access Control,314.4,314.4(c)(1),Enforce security controls on mobile devices
+Network Security,NET,NET-01,Network Security Program,314.4,314.4(c)(2),Secure networks transmitting customer information
+Network Security,NET,NET-02,Firewall Configuration,314.4,314.4(c)(2),Use firewalls to limit network access
+Network Security,NET,NET-02.2,Network Segmentation,314.4,314.4(c)(2),Segment networks based on risk and data sensitivity
+Physical Environmental Security,PES,PES-01,Physical Security Program,314.4,314.4(c)(2),Limit physical access to systems with customer information
+Physical Environmental Security,PES,PES-01.1,Physical Access Controls,314.4,314.4(c)(2),Control and log physical access to secure areas
+Physical Environmental Security,PES,PES-03,Media Protection,314.4,314.4(c)(5),Protect and securely dispose of physical media
+Data Privacy,PRI,PRI-01,Data Privacy Program,314.4,314.4(c)(4),Implement data minimization for customer information
+Data Privacy,PRI,PRI-01.1,Privacy by Design,314.4,314.4(c)(4),Incorporate data minimization into system design
+Data Privacy,PRI,PRI-01.2,Privacy Impact Assessment,314.4,314.4(b)(1),Assess privacy risks to customer information
+Data Privacy,PRI,PRI-02,Personal Data Protection,314.3,314.3(a),Protect customer information from unauthorized access
+Data Privacy,PRI,PRI-03,Data Retention and Disposal,314.4,314.4(c)(5),Define retention periods and disposal schedules
+Data Privacy,PRI,PRI-05,Personal Data Processing,314.4,314.4(c)(4),Limit customer data use to authorized purposes
+Data Privacy,PRI,PRI-05.1,Data Collection Limitation,314.4,314.4(c)(4),Limit collection of customer information
+Data Privacy,PRI,PRI-05.2,Data Use Limitation,314.4,314.4(c)(4),Ensure customer data used only for permitted purposes
+Data Privacy,PRI,PRI-05.3,Data Masking,314.4,314.4(c)(3),Mask sensitive customer data when appropriate
+Data Privacy,PRI,PRI-05.5,Inventory of Personal Data,314.4,314.4(b)(1),Maintain inventory of customer information
+Third-Party Management,TPM,TPM-01,Third-Party Management Program,314.4,314.4(f)(1),Adopt policies for selecting service providers
+Third-Party Management,TPM,TPM-01.1,Third-Party Risk Assessment,314.4,314.4(f)(2),Assess service provider security risks
+Third-Party Management,TPM,TPM-01.2,Third-Party Agreements,314.4,314.4(f)(2),Require service providers to maintain safeguards
+Third-Party Management,TPM,TPM-02,Third-Party Monitoring,314.4,314.4(f)(3),Monitor service provider compliance with safeguards
+Third-Party Management,TPM,TPM-03,Service Provider Inventory,314.4,314.4(f)(2),Maintain inventory of service providers with customer data
+Security Awareness Training,SAT,SAT-01,Security Awareness Program,314.4,314.4(e),Implement security awareness training program
+Security Awareness Training,SAT,SAT-01.1,Awareness Training,314.4,314.4(e),Deliver periodic security training to staff
+Security Awareness Training,SAT,SAT-01.2,Phishing Training,314.4,314.4(e),Train staff to recognize social engineering attacks
+Security Operations,OPS,OPS-01,Security Operations Program,314.4,314.4(d)(2),Operate security processes to detect events
+Security Operations,OPS,OPS-02,Event Management,314.4,314.4(d)(2),Respond to and document security events
+Vulnerability Patch Management,VPM,VPM-01,Vulnerability Management Program,314.4,314.4(c)(8),Manage vulnerabilities in systems and applications
+Vulnerability Patch Management,VPM,VPM-01.1,Vulnerability Assessment,314.4,314.4(d)(1),Conduct periodic vulnerability scans
+Vulnerability Patch Management,VPM,VPM-02,Vulnerability Remediation,314.4,314.4(c)(8),Remediate identified vulnerabilities promptly
+Web Security,WEB,WEB-01,Web Security Program,314.4,314.4(c)(8),Implement web application security controls
+Web Security,WEB,WEB-01.1,Web Application Security,314.4,314.4(c)(8),Secure web applications processing customer information
+Web Security,WEB,WEB-03,Input Validation,314.4,314.4(c)(8),Implement input validation to prevent attacks
+Project Resource Management,PRM,PRM-01,Project Management Program,314.4,314.4(a),Support qualified individual with adequate resources
+Project Resource Management,PRM,PRM-01.1,Security in SDLC,314.4,314.4(c)(4),Integrate security and data minimization into projects
+Threat Management,THR,THR-01,Threat Management Program,314.4,314.4(b)(1),Identify threats to customer information
+Threat Management,THR,THR-01.1,Threat Intelligence,314.4,314.4(b)(1),Incorporate threat intelligence into risk assessment
+Threat Management,THR,THR-01.2,Threat Assessment,314.4,314.4(b)(2),Assess threats and vulnerabilities to customer information

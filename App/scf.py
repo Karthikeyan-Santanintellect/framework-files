@@ -390,13 +390,13 @@ time.sleep(2)
 # client.query(control_nist_rmf_step.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_RMF-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_nist_ai_rmf_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_AI_RMF-Mapping.csv"))
+client.query(control_nist_ai_rmf_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
 time.sleep(2)
 
-client.query(control_nist_ai_rmf_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_AI_RMF-Mapping.csv"))
+client.query(control_nist_ai_rmf_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
 time.sleep(2)
 
-client.query(control_nist_ai_rmf_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_AI_RMF-Mapping.csv"))
+client.query(control_nist_ai_rmf_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
 time.sleep(2)
 
 # client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
