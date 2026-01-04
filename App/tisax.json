@@ -50,6 +50,29 @@
       "levels": "Partial; Complete; Regular review"
     },
     {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:24333",
+      "mainLabel": "AuditProvider",
+      "labels": [
+        "AuditProvider"
+      ],
+      "date": "2021-03-15",
+      "geographic_coverage": "Germany,Austria,Switzerland",
+      "website": "www.global-audit.de",
+      "contact_person": "Dr. Hans Mueller",
+      "number": "AP-REG-2021-001",
+      "industry_specialization": "Automotive,Electronics",
+      "audit_provider_id": "AP-001",
+      "quality_rating": "4.8",
+      "max_concurrent_assessments": "15",
+      "name": "Global Audit Services GmbH",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "certification_count": "156",
+      "expiry": "2025-03-15",
+      "levels": "AL1,AL2,AL3",
+      "status": "Accredited",
+      "average_audit_duration_days": "120"
+    },
+    {
       "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:24325",
       "mainLabel": "AssessmentLevel",
       "labels": [
@@ -175,6 +198,29 @@
       "industry_standard_regulation_id": "TISAX 6.0"
     },
     {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:24334",
+      "mainLabel": "AuditProvider",
+      "labels": [
+        "AuditProvider"
+      ],
+      "date": "2020-06-01",
+      "geographic_coverage": "EU,UK",
+      "website": "www.tisax-auditors.at",
+      "contact_person": "Johann Schmidt",
+      "number": "AP-REG-2020-002",
+      "industry_specialization": "Automotive",
+      "audit_provider_id": "AP-002",
+      "quality_rating": "4.9",
+      "max_concurrent_assessments": "25",
+      "name": "TISAX Certified Auditors AG",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "certification_count": "245",
+      "expiry": "2025-06-01",
+      "levels": "AL1,AL2,AL3",
+      "status": "Accredited",
+      "average_audit_duration_days": "100"
+    },
+    {
       "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:24327",
       "mainLabel": "AssessmentLevel",
       "labels": [
@@ -298,6 +344,29 @@
       "name": "Tech Solutions GmbH",
       "location": "Switzerland",
       "industry_standard_regulation_id": "TISAX 6.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:24335",
+      "mainLabel": "AuditProvider",
+      "labels": [
+        "AuditProvider"
+      ],
+      "date": "2022-01-10",
+      "geographic_coverage": "Germany,Poland,Czech",
+      "website": "www.security-partners.eu",
+      "contact_person": "Maria Lopez",
+      "number": "AP-REG-2022-003",
+      "industry_specialization": "Manufacturing",
+      "audit_provider_id": "AP-003",
+      "quality_rating": "4.5",
+      "max_concurrent_assessments": "10",
+      "name": "Security Assessment Partners",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "certification_count": "78",
+      "expiry": "2026-01-10",
+      "levels": "AL1,AL2",
+      "status": "Accredited",
+      "average_audit_duration_days": "90"
     },
     {
       "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:24326",
@@ -669,6 +738,18 @@
     },
     {
       "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24318",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920102984361729805",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24333",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-03-31",
+      "criteria_considered": "Cost optimization, Geographic reach, New supplier program",
+      "selection_date": "2024-03-05",
+      "budget_agreed": "\u20ac28000",
+      "primary_auditor_assigned": "Dr. Hans Mueller",
+      "contract_start_date": "2024-04-01"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24318",
       "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917850085036416773",
       "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24325",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
@@ -746,6 +827,18 @@
     },
     {
       "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24317",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920102984361729806",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24334",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-06-30",
+      "criteria_considered": "Automotive specialization, AL3 capability, Track record",
+      "selection_date": "2022-06-15",
+      "budget_agreed": "\u20ac85000",
+      "primary_auditor_assigned": "Johann Schmidt",
+      "contract_start_date": "2022-07-01"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24317",
       "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920101884850102023",
       "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24327",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
@@ -820,6 +913,18 @@
       "evidence_provided": "Encryption config audit; Key management plan",
       "maturity_level_achieved": "3",
       "answer_status": "Compliant"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24316",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917851184548044559",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24335",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-02-28",
+      "criteria_considered": "Geographic proximity, AL2 support, Service providers focus",
+      "selection_date": "2024-02-10",
+      "budget_agreed": "\u20ac35000",
+      "primary_auditor_assigned": "Maria Lopez",
+      "contract_start_date": "2024-03-01"
     },
     {
       "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24316",
@@ -918,6 +1023,18 @@
       "maturity_level_achieved": "2",
       "remediation_due_date": "2024-03-15",
       "answer_status": "PartiallyCompliant"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24315",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917851184548044558",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24334",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-10-14",
+      "criteria_considered": "Industry specialization, Quality rating, Certification count",
+      "selection_date": "2023-09-20",
+      "budget_agreed": "\u20ac75000",
+      "primary_auditor_assigned": "Johann Schmidt",
+      "contract_start_date": "2023-10-15"
     },
     {
       "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24315",
@@ -1025,6 +1142,18 @@
       "evidence_provided": "Policy document v2.1; Board approval minutes",
       "maturity_level_achieved": "3",
       "answer_status": "Compliant"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24314",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917851184548044557",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:24333",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-12-31",
+      "criteria_considered": "Technical expertise, Cost-effectiveness, Geographic coverage",
+      "selection_date": "2024-01-15",
+      "budget_agreed": "\u20ac45000",
+      "primary_auditor_assigned": "Dr. Hans Mueller",
+      "contract_start_date": "2024-02-01"
     },
     {
       "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:24314",

@@ -1,0 +1,171 @@
+SCF_Control_Code,TISAX_FDE,SCF_Control_Name,TISAX_Requirement_Name,TISAX_FDE_Full,Relationship_Type,Relationship_Strength,Mapping_Quality
+GOV-01,1.2.1,Cybersecurity & Data Protection Governance Program,Organization of Information Security,1.2.1 - Organization of Information Security,Subset Of,10,Excellent
+GOV-01.1,1.2.1,Steering Committee & Program Oversight,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-02,1.1.1,Publishing Cybersecurity & Data Protection Documentation,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+GOV-02,1.5.1,Publishing Cybersecurity & Data Protection Documentation,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+GOV-02.1,1.5.1,Exception Management,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+GOV-03,1.5.1,Periodic Review & Update of Cybersecurity Program,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+GOV-04,1.2.1,Assigned Cybersecurity & Data Protection Responsibilities,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-04,1.2.2,Assigned Cybersecurity & Data Protection Responsibilities,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+GOV-04.1,1.2.1,Stakeholder Accountability Structure,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-04.1,1.2.2,Stakeholder Accountability Structure,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+GOV-04.1,1.2.4,Stakeholder Accountability Structure,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+GOV-04.2,1.2.1,Authoritative Chain of Command,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-04.2,1.2.2,Authoritative Chain of Command,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+GOV-05,1.2.1,Measures of Performance,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-08,1.1.1,Defining Business Context & Mission,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+GOV-09,1.1.1,Define Control Objectives,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+GOV-15,1.2.1,Operationalizing Cybersecurity & Data Protection Practices,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-15.1,1.2.1,Select Controls,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-15.1,1.2.4,Select Controls,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+HRS-02,1.2.2,Position Categorization,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+HRS-03,1.2.2,Roles & Responsibilities,Organization of Information Security,1.2.2 - Organization of Information Security,Subset Of,10,Excellent
+HRS-03,1.2.4,Roles & Responsibilities,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+HRS-03.2,1.2.2,Competency Requirements for Security-Related Positions,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+HRS-04,2.1.1,Personnel Screening,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
+HRS-04.1,2.1.1,Roles With Special Protection Measures,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
+HRS-05,2.1.2,Terms of Employment,Personnel & Training,2.1.2 - Personnel & Training,Subset Of,10,Excellent
+HRS-06,2.1.2,Access Agreements,Personnel & Training,2.1.2 - Personnel & Training,Intersects With,5,Good
+HRS-06.1,2.1.2,Confidentiality Agreements,Personnel & Training,2.1.2 - Personnel & Training,Equal,10,Excellent
+HRS-02.1,2.1.1,Users With Elevated Privileges,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
+IAC-01,4.1.1,Identity & Access Management (IAM),Identity & Access Management,4.1.1 - Identity & Access Management,Subset Of,10,Excellent
+IAC-02,4.1.2,Identification & Authentication for Organizational Users,Identity & Access Management,4.1.2 - Identity & Access Management,Intersects With,5,Good
+IAC-02,4.1.3,Identification & Authentication for Organizational Users,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-07,4.1.3,User Provisioning & De-Provisioning,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-08,4.2.1,Role-Based Access Control (RBAC),Access Control,4.2.1 - Access Control,Intersects With,5,Good
+IAC-10.5,4.1.3,Protection of Authenticators,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-10.8,4.1.3,Default Authenticators,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-15.5,4.1.3,Restrictions on Shared Groups / Accounts,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-17,4.2.1,Periodic Review of Account Privileges,Access Control,4.2.1 - Access Control,Intersects With,5,Good
+IAC-21,4.2.1,Least Privilege,Access Control,4.2.1 - Access Control,Intersects With,5,Good
+IAC-28.1,4.2.1,Management Approval For New or Changed Accounts,Access Control,4.2.1 - Access Control,Intersects With,5,Good
+AST-01,3.1.3,Asset Governance,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
+AST-01.1,1.3.1,Asset-Service Dependencies,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
+AST-01.2,1.2.2,Stakeholder Identification & Involvement,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+AST-01.2,1.3.1,Stakeholder Identification & Involvement,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
+AST-02.7,1.3.4,Software Licensing Restrictions,Asset Management,1.3.4 - Asset Management,Intersects With,5,Good
+AST-03,1.3.1,Asset Ownership Assignment,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
+AST-04.1,1.2.3,Asset Scope Classification,Organization of Information Security,1.2.3 - Organization of Information Security,Intersects With,5,Good
+AST-04.1,1.2.4,Asset Scope Classification,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+AST-09,3.1.3,Secure Disposal Destruction or Re-Use of Equipment,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
+DCH-01,5.1.2,Data Protection,Cryptography & Key Management,5.1.2 - Cryptography & Key Management,Intersects With,5,Good
+DCH-01.2,1.3.2,Sensitive / Regulated Data Protection,Asset Management,1.3.2 - Asset Management,Intersects With,5,Good
+DCH-01.4,1.3.2,Defining Access Authorizations for Sensitive/Regulated Data,Asset Management,1.3.2 - Asset Management,Intersects With,5,Good
+DCH-02,1.2.3,Data & Asset Classification,Organization of Information Security,1.2.3 - Organization of Information Security,Intersects With,5,Good
+DCH-02,1.3.2,Data & Asset Classification,Asset Management,1.3.2 - Asset Management,Intersects With,5,Good
+DCH-06,8.2.6,Media Storage,Prototype Protection,8.2.6 - Prototype Protection,Intersects With,5,Good
+DCH-07.1,8.2.7,Custodians,Prototype Protection,8.2.7 - Prototype Protection,Intersects With,5,Good
+DCH-09.3,8.2.6,Sanitization of Personal Data (PD),Prototype Protection,8.2.6 - Prototype Protection,Intersects With,5,Good
+PRI-01.5,9.5.1,Binding Corporate Rules (BCR),Data Protection - International Transfer,9.5.1 - Data Protection - International Transfer,Subset Of,10,Excellent
+PRI-01.5,9.5.2,Binding Corporate Rules (BCR),Data Protection - International Transfer,9.5.2 - Data Protection - International Transfer,Subset Of,10,Excellent
+PRI-01.5,9.5.3,Binding Corporate Rules (BCR),Data Protection - International Transfer,9.5.3 - Data Protection - International Transfer,Subset Of,10,Excellent
+PRI-01.6,7.1.2,Security of Personal Data (PD),Data Protection,7.1.2 - Data Protection,Intersects With,5,Good
+PRI-01.7,9.2.1,Limiting Personal Data (PD) Disclosures,Data Protection - Disclosure to Third Parties,9.2.1 - Data Protection - Disclosure to Third Parties,Subset Of,10,Excellent
+PRI-04.1,9.5.2,Authority To Collect Process Store & Share Personal Data,Data Protection - International Transfer,9.5.2 - Data Protection - International Transfer,Intersects With,5,Good
+PRI-06.4,9.6.1,User Feedback Management,Data Protection - Complaint Management,9.6.1 - Data Protection - Complaint Management,Equal,10,Excellent
+PRI-07,9.5.2,Information Sharing With Third Parties,Data Protection - International Transfer,9.5.2 - Data Protection - International Transfer,Intersects With,5,Good
+PRI-07.1,9.5.2,Data Privacy Requirements for Contractors & Service Providers,Data Protection - International Transfer,9.5.2 - Data Protection - International Transfer,Intersects With,8,Excellent
+PRI-15,9.3.1,Register As A Data Controller and/or Data Processor,Data Protection - Register,9.3.1 - Data Protection - Register,Subset Of,10,Excellent
+RSK-01,1.4.1,Risk Management Program,IS Risk Management,1.4.1 - IS Risk Management,Subset Of,10,Excellent
+RSK-01.1,1.4.1,Risk Framing,IS Risk Management,1.4.1 - IS Risk Management,Intersects With,5,Good
+RSK-03,1.4.1,Risk Identification,IS Risk Management,1.4.1 - IS Risk Management,Intersects With,5,Good
+RSK-03.1,1.4.1,Risk Catalog,IS Risk Management,1.4.1 - IS Risk Management,Intersects With,5,Good
+RSK-04,1.4.1,Risk Assessment,IS Risk Management,1.4.1 - IS Risk Management,Intersects With,5,Good
+RSK-04.1,1.4.1,Risk Register,IS Risk Management,1.4.1 - IS Risk Management,Intersects With,5,Good
+RSK-10,9.4.1,Data Protection Impact Assessment (DPIA),Data Protection - DPIA,9.4.1 - Data Protection - DPIA,Equal,10,Excellent
+CPL-01,1.1.1,Statutory Regulatory & Contractual Compliance,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+CPL-01,1.2.1,Statutory Regulatory & Contractual Compliance,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+CPL-01.1,1.5.1,Non-Compliance Oversight,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+CPL-01.2,1.2.1,Compliance Scope,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+CPL-02,1.5.1,Cybersecurity & Data Protection Controls Oversight,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+CPL-02.1,1.5.1,Internal Audit Function,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+CPL-03,1.5.2,Cybersecurity & Data Protection Assessments,Assessments,1.5.2 - Assessments,Equal,10,Excellent
+CPL-03.2,1.5.2,Functional Review Of Cybersecurity & Data Protection Controls,Assessments,1.5.2 - Assessments,Intersects With,5,Good
+IRO-02,1.6.1,Incident Handling,Incident Response Management,1.6.1 - Incident Response Management,Subset Of,10,Excellent
+IRO-02,1.6.2,Incident Handling,Incident Response Management,1.6.2 - Incident Response Management,Subset Of,10,Excellent
+IRO-02,1.6.3,Incident Handling,Incident Response Management,1.6.3 - Incident Response Management,Subset Of,10,Excellent
+IRO-03,1.6.1,Indicators of Compromise (IOC),Incident Response Management,1.6.1 - Incident Response Management,Intersects With,5,Good
+IRO-04,1.6.3,Incident Response Plan (IRP),Incident Response Management,1.6.3 - Incident Response Management,Intersects With,5,Good
+IRO-07,1.6.3,Integrated Security Incident Response Team (ISIRT),Incident Response Management,1.6.3 - Incident Response Management,Intersects With,5,Good
+IRO-09,1.6.2,Situational Awareness For Incidents,Incident Response Management,1.6.2 - Incident Response Management,Intersects With,5,Good
+IRO-10,1.6.2,Incident Stakeholder Reporting,Incident Response Management,1.6.2 - Incident Response Management,Intersects With,5,Good
+IRO-10.2,9.6.2,Cyber Incident Reporting for Sensitive Data,Data Protection - Incident Management,9.6.2 - Data Protection - Incident Management,Intersects With,5,Good
+IRO-13,1.6.2,Root Cause Analysis (RCA) & Lessons Learned,Incident Response Management,1.6.2 - Incident Response Management,Intersects With,5,Good
+IAO-02,5.3.1,Assessments,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+IAO-05,1.5.2,Plan of Action & Milestones (POA&M),Assessments,1.5.2 - Assessments,Intersects With,5,Good
+PES-01,8.1.2,Physical & Environmental Protections,Physical Security,8.1.2 - Physical Security,Subset Of,10,Excellent
+PES-01.1,8.1.1,Physical Security Plan (PSP),Physical Security,8.1.1 - Physical Security,Intersects With,3,Fair
+PES-01.2,3.1.1,Zone-Based Physical Security,Physical Security Zones,3.1.1 - Physical Security Zones,Equal,10,Excellent
+PES-03,8.1.3,Physical Access Control,Physical Security,8.1.3 - Physical Security,Subset Of,10,Excellent
+PES-03.4,5.3.4,Access To Information Systems,Security Assessment,5.3.4 - Security Assessment,Intersects With,5,Good
+PES-04,5.3.4,Physical Security of Offices Rooms & Facilities,Security Assessment,5.3.4 - Security Assessment,Subset Of,10,Excellent
+PES-04,8.1.5,Physical Security of Offices Rooms & Facilities,Physical Security,8.1.5 - Physical Security,Intersects With,5,Good
+PES-04,8.1.8,Physical Security of Offices Rooms & Facilities,Physical Security,8.1.8 - Physical Security,Intersects With,5,Good
+PES-05,8.1.6,Monitoring Physical Access,Physical Security,8.1.6 - Physical Security,Intersects With,5,Good
+PES-05.1,8.1.6,Intrusion Alarms / Surveillance Equipment,Physical Security,8.1.6 - Physical Security,Intersects With,5,Good
+PES-06,8.1.7,Visitor Control,Physical Security,8.1.7 - Physical Security,Equal,10,Excellent
+PES-10,3.1.3,Delivery & Removal,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
+PES-10,5.3.3,Delivery & Removal,Security Assessment,5.3.3 - Security Assessment,Intersects With,5,Good
+PES-12,8.1.4,Equipment Siting & Protection,Physical Security,8.1.4 - Physical Security,Subset Of,10,Excellent
+PES-18,5.3.4,On-Site Client Segregation,Security Assessment,5.3.4 - Security Assessment,Intersects With,5,Good
+PES-18,8.1.8,On-Site Client Segregation,Physical Security,8.1.8 - Physical Security,Intersects With,5,Good
+PRM-04,1.2.3,Cybersecurity & Data Protection In Project Management,Organization of Information Security,1.2.3 - Organization of Information Security,Subset Of,10,Excellent
+PRM-04,5.3.1,Cybersecurity & Data Protection In Project Management,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+PRM-05,1.2.3,Cybersecurity & Data Protection Requirements Definition,Organization of Information Security,1.2.3 - Organization of Information Security,Intersects With,5,Good
+PRM-05,5.3.2,Cybersecurity & Data Protection Requirements Definition,Security Assessment,5.3.2 - Security Assessment,Intersects With,5,Good
+PRM-07,5.3.1,Secure Development Life Cycle (SDLC) Management,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+CFG-01,5.3.1,Configuration Management Program,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+CFG-02,3.1.4,System Hardening Through Baseline Configurations,System Configuration,3.1.4 - System Configuration,Intersects With,5,Good
+CFG-03.2,1.3.4,Prevent Unauthorized Software Execution,Asset Management,1.3.4 - Asset Management,Intersects With,5,Good
+CFG-04,1.3.4,Software Usage Restrictions,Asset Management,1.3.4 - Asset Management,Intersects With,5,Good
+CFG-05,1.3.4,User-Installed Software,Asset Management,1.3.4 - Asset Management,Intersects With,5,Good
+CHG-01,5.2.1,Change Management Program,Change Management,5.2.1 - Change Management,Intersects With,5,Good
+CHG-02,5.2.1,Configuration Change Control,Change Management,5.2.1 - Change Management,Intersects With,5,Good
+CHG-02.3,5.2.2,Cybersecurity & Data Protection Representative,Change Management,5.2.2 - Change Management,Intersects With,5,Good
+CHG-03,5.2.2,Security Impact Analysis for Changes,Change Management,5.2.2 - Change Management,Intersects With,5,Good
+CHG-03,5.3.1,Security Impact Analysis for Changes,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+END-02,5.2.3,Endpoint Protection Measures,Malware Protection,5.2.3 - Malware Protection,Intersects With,5,Good
+END-04,5.2.3,Malicious Code Protection (Anti-Malware),Malware Protection,5.2.3 - Malware Protection,Subset Of,10,Excellent
+END-13.2,8.2.6,Notice of Collection,Prototype Protection,8.2.6 - Prototype Protection,Intersects With,5,Good
+MON-01,5.2.4,Continuous Monitoring,Logging & Monitoring,5.2.4 - Logging & Monitoring,Intersects With,5,Good
+MON-01.4,5.2.4,System Generated Alerts,Logging & Monitoring,5.2.4 - Logging & Monitoring,Intersects With,5,Good
+MON-02,5.2.4,Centralized Collection of Security Event Logs,Logging & Monitoring,5.2.4 - Logging & Monitoring,Intersects With,5,Good
+MON-02.1,5.2.4,Correlate Monitoring Information,Logging & Monitoring,5.2.4 - Logging & Monitoring,Intersects With,5,Good
+MON-02.2,5.2.4,Central Review & Analysis,Logging & Monitoring,5.2.4 - Logging & Monitoring,Intersects With,5,Good
+THR-03,5.2.5,Threat Intelligence Feeds,Vulnerability Management,5.2.5 - Vulnerability Management,Intersects With,5,Good
+VPM-01.1,5.2.5,Attack Surface Scope,Vulnerability Management,5.2.5 - Vulnerability Management,Intersects With,5,Good
+VPM-02,5.2.5,Vulnerability Remediation Process,Vulnerability Management,5.2.5 - Vulnerability Management,Intersects With,5,Good
+VPM-03,5.2.5,Vulnerability Ranking,Vulnerability Management,5.2.5 - Vulnerability Management,Intersects With,5,Good
+VPM-03.1,5.2.5,Vulnerability Exploitation Analysis,Vulnerability Management,5.2.5 - Vulnerability Management,Intersects With,5,Good
+NET-01,5.1.2,Network Security Controls (NSC),Cryptography & Key Management,5.1.2 - Cryptography & Key Management,Intersects With,5,Good
+NET-01,5.2.7,Network Security Controls (NSC),Network Security,5.2.7 - Network Security,Intersects With,5,Good
+NET-06,5.2.7,Network Segmentation (macrosegmentation),Network Security,5.2.7 - Network Security,Intersects With,5,Good
+NET-14,2.1.4,Remote Access,Personnel & Training,2.1.4 - Personnel & Training,Intersects With,5,Good
+NET-14.5,2.1.4,Work From Anywhere (WFA) - Telecommuting Security,Personnel & Training,2.1.4 - Personnel & Training,Intersects With,5,Good
+MNT-04.3,3.1.3,Prevent Unauthorized Removal,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
+BCD-01,5.2.8,Business Continuity Management System (BCMS),Business Continuity,5.2.8 - Business Continuity,Intersects With,5,Good
+BCD-02,5.2.8,Identify Critical Assets,Business Continuity,5.2.8 - Business Continuity,Intersects With,5,Good
+BCD-11,5.2.9,Data Backups,Business Continuity,5.2.9 - Business Continuity,Subset Of,10,Excellent
+CRY-01,5.1.1,Use of Cryptographic Controls,Cryptography & Key Management,5.1.1 - Cryptography & Key Management,Subset Of,10,Excellent
+MDM-01,3.1.4,Centralized Management Of Mobile Devices,System Configuration,3.1.4 - System Configuration,Intersects With,5,Good
+TPM-01,1.3.3,Third-Party Management,Asset Management,1.3.3 - Asset Management,Intersects With,5,Good
+TPM-04.1,1.3.3,Third-Party Risk Assessments & Approvals,Asset Management,1.3.3 - Asset Management,Intersects With,5,Good
+TPM-05,1.2.4,Third-Party Contract Requirements,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+TPM-05,1.3.3,Third-Party Contract Requirements,Asset Management,1.3.3 - Asset Management,Intersects With,5,Good
+TPM-05.1,8.3.1,Security Compromise Notification Agreements,Supply Chain Protection,8.3.1 - Supply Chain Protection,Intersects With,5,Good
+TPM-05.2,6.1.1,Contract Flow-Down Requirements,Third-Party Management,6.1.1 - Third-Party Management,Intersects With,5,Good
+TPM-05.4,1.2.4,Responsible Accountable Supportive Consulted & Informed,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+TPM-05.4,1.3.3,Responsible Accountable Supportive Consulted & Informed,Asset Management,1.3.3 - Asset Management,Intersects With,5,Good
+TPM-05.6,8.2.2,First-Party Declaration (1PD),Prototype Protection,8.2.2 - Prototype Protection,Intersects With,3,Fair
+TPM-05.8,8.2.2,Third-Party Attestation,Prototype Protection,8.2.2 - Prototype Protection,Intersects With,3,Fair
+TPM-08,6.1.1,Review of Third-Party Services,Third-Party Management,6.1.1 - Third-Party Management,Intersects With,5,Good
+SAT-01,8.2.3,Cybersecurity & Data Protection-Minded Workforce,Prototype Protection,8.2.3 - Prototype Protection,Subset Of,10,Excellent
+SAT-02,2.1.3,Cybersecurity & Data Protection Awareness Training,Personnel & Training,2.1.3 - Personnel & Training,Subset Of,10,Excellent
+SAT-02,8.2.3,Cybersecurity & Data Protection Awareness Training,Prototype Protection,8.2.3 - Prototype Protection,Intersects With,8,Excellent
+SAT-03,2.1.4,Role-Based Cybersecurity & Data Protection Training,Personnel & Training,2.1.4 - Personnel & Training,Intersects With,5,Good
+SAT-03.3,2.1.4,Sensitive / Regulated Data Storage Handling & Processing,Personnel & Training,2.1.4 - Personnel & Training,Intersects With,5,Good
+SAT-03.6,2.1.4,Cyber Threat Environment,Personnel & Training,2.1.4 - Personnel & Training,Intersects With,5,Good
+SAT-04,8.2.3,Cybersecurity & Data Protection Training Records,Prototype Protection,8.2.3 - Prototype Protection,Intersects With,5,Good
+SEA-01,5.3.1,Secure Engineering Principles,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+SEA-01.1,5.3.1,Centralized Management of Cybersecurity Controls,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good
+SEA-02,5.3.1,Alignment With Enterprise Architecture,Security Assessment,5.3.1 - Security Assessment,Intersects With,5,Good

@@ -374,7 +374,7 @@ participant_to_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pa:Participant {participant_id: row.source_participant_id})
 MATCH (tisax:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_regulation_id})
-MERGE (pa)-[r:PARTICIPATES_IN_EXCHANGE {type: row.relationship_type}]->(tisax)
+MERGE (pa)-[r:PARTICIPANT_PARTICIPATES_IN_TISAX {type: row.relationship_type}]->(tisax)
 ON CREATE SET
   r.registration_date       = date(row.registration_date),
   r.participation_status    = row.participation_status,
@@ -468,7 +468,7 @@ client.query(undergoes_assessment.replace('$file_path', 'https://github.com/Kart
 client.query(selects_assessment_level.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_SELECTS_ASSESSMENT_LEVEL_relationships.csv'))
 time.sleep(2)
 
-client.query(chooses_audit_provider.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_CHOOSES_AUDIT_CLEAN.csv'))
+client.query(chooses_audit_provider.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_Organisation_Chooses_AuditProvider_relationships.csv'))
 time.sleep(2)
 
 client.query(subject_to_isa_catalogue.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CATALOGUE_relationships.csv'))
