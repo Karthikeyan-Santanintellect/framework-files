@@ -1,0 +1,6 @@
+source_organization_id,target_provider_id,relationship_type,selection_date,criteria_considered,contract_start_date,contract_end_date,budget_agreed,primary_auditor_assigned
+ORG-001,AP-001,CHOOSES_AUDIT_PROVIDER,2024-01-15,"Technical expertise, Cost-effectiveness, Geographic coverage",2024-02-01,2025-12-31,€45000,Dr. Hans Mueller
+ORG-002,AP-002,CHOOSES_AUDIT_PROVIDER,2023-09-20,"Industry specialization, Quality rating, Certification count",2023-10-15,2025-10-14,€75000,Johann Schmidt
+ORG-003,AP-003,CHOOSES_AUDIT_PROVIDER,2024-02-10,"Geographic proximity, AL2 support, Service providers focus",2024-03-01,2025-02-28,€35000,Maria Lopez
+ORG-004,AP-002,CHOOSES_AUDIT_PROVIDER,2022-06-15,"Automotive specialization, AL3 capability, Track record",2022-07-01,2025-06-30,€85000,Johann Schmidt
+ORG-005,AP-001,CHOOSES_AUDIT_PROVIDER,2024-03-05,"Cost optimization, Geographic reach, New supplier program",2024-04-01,2025-03-31,€28000,Dr. Hans Mueller

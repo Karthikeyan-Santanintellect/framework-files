@@ -356,6 +356,16 @@ MATCH (sr:SubRequirement {req_id: trim(row.PCI_DSS_Sub_Requirement)})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sr)
 RETURN count(*) as SCF_SubRequirement_Links_Created;
 """
+#14a.control->NERC_CIP
+control_nerc_cip = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.CIP_Standard_ID IS NOT NULL AND trim(row.CIP_Standard_ID) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (cip:CIPStandard {standard_id: trim(row.CIP_Standard_ID)})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cip)
+RETURN count(*) AS scf_to_cip_relationships;
+"""
 
 
 
@@ -476,12 +486,16 @@ time.sleep(2)
 # client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
-time.sleep(2)
+# client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+# time.sleep(2)
 
 
-client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+# client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NERC-CIP-Mapping.csv"))
 time.sleep(2)
+
 
 # client.query(control_iso_27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27001_Mapping.csv"))
 # time.sleep(2)
@@ -489,8 +503,6 @@ time.sleep(2)
 # client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27002_Mapping.csv"))
 # time.sleep(2)
 
-# client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NERC_CIP_Mapping.csv"))
-# time.sleep(2)
 
 # client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_AI_RMF_Mapping.csv"))
 # time.sleep(2)

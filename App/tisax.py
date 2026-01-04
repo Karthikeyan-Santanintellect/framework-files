@@ -210,15 +210,10 @@ ON CREATE SET
 #REGISTERS_IN_TISAX
 registers_in_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {
-  organization_id: row.source_organization_id
-})
-MATCH (tisax:IndustryStandardAndRegulation {
-  industry_standard_regulation_id: row.target_tisax
-})
-MERGE (tisax)-[r:ORGANISATION_REGISTERS_IN_TISAX {
-  type: row.relationship_type
-}]->(org)
+MATCH (org:Organization)
+WHERE org.organization_id = row.source_organization_id OR org.name = row.source_organization_id
+MATCH (tisax:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_tisax})
+MERGE (tisax)-[r:ORGANISATION_REGISTERS_IN_TISAX {type: row.relationship_type}]->(org)
 ON CREATE SET
   r.registration_date      = date(row.registration_date),
   r.initial_al_target      = row.initial_al_target,
