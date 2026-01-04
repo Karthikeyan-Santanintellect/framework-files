@@ -366,8 +366,15 @@ MATCH (cip:CIPStandard {standard_id: trim(row.CIP_Standard_ID)})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cip)
 RETURN count(*) AS scf_to_cip_relationships;
 """
-
-
+#15a.control->TISAX
+control_tisax = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WHERE row.TISAX_FDE IS NOT NULL
+MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code), industry_standard_regulation_id: 'TISAX 6.0'})
+MATCH (ao:AssessmentObjective {industry_standard_regulation_id: 'TISAX 6.0', ref: trim(row.TISAX_FDE)})
+MERGE (scf)-[rel:MAPS_TO_ASSESSMENT_OBJECTIVE]->(ao)
+RETURN count(rel) AS created;
+"""
 
 import os
 from pydoc import cli
@@ -493,7 +500,10 @@ time.sleep(2)
 # client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NERC-CIP-Mapping.csv"))
+# client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NERC-CIP-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-TISAX-Mapping.csv"))
 time.sleep(2)
 
 
