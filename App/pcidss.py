@@ -14,7 +14,7 @@ ON CREATE SET
 #Organization Nodes
 organization = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (o:Organization {name: row.name},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (o:Organization {name: row.name, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   o.type = row.type,
   o.date = date(row.founded),
@@ -25,14 +25,14 @@ ON CREATE SET
 #RequirementGroup Nodes
 requirement_group = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (rg:RequirementGroup {group_id:row.group_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (rg:RequirementGroup {group_id:row.group_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   rg.name = row.name;
 """
 # Requirement Nodes
 requirement ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement {req_id: toInteger(row.req_id)},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (r:Requirement {req_id: toInteger(row.req_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   r.name = row.name,
   r.group = row.requirement_group;
@@ -40,7 +40,7 @@ ON CREATE SET
 # SubRequirement Nodes 
 sub_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sr:SubRequirement {req_id: row.req_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sr:SubRequirement {req_id: row.req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   sr.name = row.name,
   sr.milestone = toInteger(row.milestone),
@@ -49,14 +49,14 @@ ON CREATE SET
 # DefinedApproach Nodes 
 defined_approach ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (da:DefinedApproach {req_id: row.req_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (da:DefinedApproach {req_id: row.req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   da.name = row.name;
 """
 # TestingProcedure Nodes 
 testing_procedure ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (tp:TestingProcedure {test_id: row.test_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (tp:TestingProcedure {test_id: row.test_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   tp.name = row.name,
   tp.approach = row.related_defined_approach;
@@ -64,14 +64,14 @@ ON CREATE SET
 # CustomizedApproachObjective Nodes 
 customized_approach_objective = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cao:CustomizedApproachObjective {req_id: row.req_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cao:CustomizedApproachObjective {req_id: row.req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   cao.name = row.name;
 """
 # TargetedRiskAnalysis Nodes
 target_risk_analysis ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (tra:TargetedRiskAnalysis {tra_id: row.tra_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (tra:TargetedRiskAnalysis {tra_id: row.tra_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   tra.name = row.name,
   tra.type = row.type,
@@ -83,7 +83,7 @@ ON CREATE SET
 #  CustomizedControl Nodes 
 customized_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cc:CustomizedControl {control_id: row.control_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cc:CustomizedControl {control_id: row.control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   cc.name = row.name,
   cc.description = row.description,
@@ -94,7 +94,7 @@ ON CREATE SET
 #  Guidance Nodes
 guidance ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (g:Guidance {guidance_id: row.guidance_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (g:Guidance {guidance_id: row.guidance_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   g.name = row.name,
   g.related_subrequirement = row.related_subrequirement;
@@ -103,84 +103,84 @@ ON CREATE SET
 # 1. PUBLISHES (Organization -> Standard) 
 pcidss_publishes ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (o:Organization {name: row.source_name},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (o:Organization {name: row.source_name, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (s:IndustryStandardAndRegulation {name: row.target_name, version: row.target_version})
-MERGE (o)-[:PUBLISHES_STANDARD]->(s);
+MERGE (o)-[:ORGANIZATION_PUBLISHES_STANDARD]->(s);
 """
 # 2. HAS_GROUP (Standard -> RequirementGroup) 
 pcidss_has_group ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:IndustryStandardAndRegulation {version: row.source_standard_version})
-MATCH (rg:RequirementGroup {group_id: row.target_group_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (rg:RequirementGroup {group_id: row.target_group_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (s)-[:INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP]->(rg);
 """
 
 # 3. HAS_REQUIREMENT (RequirementGroup -> Requirement) 
 pcidss_has_requirement ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rg:RequirementGroup {group_id: row.source_group_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (r:Requirement {req_id: toInteger(row.target_req_id)},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (rg:RequirementGroup {group_id: row.source_group_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {req_id: toInteger(row.target_req_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (rg)-[:REQUIREMENT_GROUP_HAS_REQUIREMENT]->(r);
 """
 # 4. HAS_SUB_REQUIREMENT (Requirement -> SubRequirement) 
 pcidss_has_sub_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement {req_id: toInteger(row.source_req_id)},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (sr:SubRequirement {req_id: row.target_subreq_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {req_id: toInteger(row.source_req_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sr:SubRequirement {req_id: row.target_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (r)-[:REQUIREMENT_HAS_SUB_REQUIREMENT]->(sr);
 """
 # 5. HAS_DEFINED_APPROACH (SubRequirement -> DefinedApproach) 
 pcidss_has_defined_approach = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {req_id: row.source_subreq_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (da:DefinedApproach {req_id: row.target_defined_approach_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sr:SubRequirement {req_id: row.source_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (da:DefinedApproach {req_id: row.target_defined_approach_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (sr)-[:SUB_REQUIREMENT_HAS_DEFINED_APPROACH]->(da);
 """
 
 # 6. HAS_TEST (DefinedApproach -> TestingProcedure) 
 pcidss_has_test ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (da:DefinedApproach {req_id: row.source_defined_approach_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (tp:TestingProcedure {test_id: row.target_test_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (da:DefinedApproach {req_id: row.source_defined_approach_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (tp:TestingProcedure {test_id: row.target_test_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (da)-[:DEFINED_APPROACH_TESTS_TESTING_PROCEDURE]->(tp);
 """
 
 # 7. HAS_CUSTOMIZED_OBJECTIVE (SubRequirement -> CustomizedApproachObjective) 
 pcidss_has_customized_objective ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {req_id: row.source_subreq_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sr:SubRequirement {req_id: row.source_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (sr)-[:SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE]->(cao);
 """
 # 8. HAS_GUIDANCE (SubRequirement -> Guidance) 
 pcidss_has_guidance = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {req_id: row.source_subreq_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (g:Guidance {guidance_id: row.target_guidance_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sr:SubRequirement {req_id: row.source_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (g:Guidance {guidance_id: row.target_guidance_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (sr)-[:SUB_REQUIREMENT_HAS_GUIDANCE]->(g);
 """
 
 # 9. REQUIRES_TRA (CustomizedApproachObjective -> TargetedRiskAnalysis) 
 pcidss_requires_tra = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (cao:CustomizedApproachObjective {req_id: row.source_customized_objective_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (tra:TargetedRiskAnalysis {tra_id: row.target_tra_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cao:CustomizedApproachObjective {req_id: row.source_customized_objective_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (tra:TargetedRiskAnalysis {tra_id: row.target_tra_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (cao)-[:REQUIRES_TARGETED_RISK_ANALYSIS]->(tra);
 """
 
 # 10. VALIDATES (TargetedRiskAnalysis -> CustomizedControl) 
 pcidss_validates ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (tra:TargetedRiskAnalysis {tra_id: row.source_tra_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (cc:CustomizedControl {control_id: row.target_control_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (tra:TargetedRiskAnalysis {tra_id: row.source_tra_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cc:CustomizedControl {control_id: row.target_control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (tra)-[:VALIDATES_CUSTOMIZED_CONTROL]->(cc);
 """
 
 # 11. ADDRESSES (CustomizedControl -> CustomizedApproachObjective) 
 pcidss_addresses ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (cc:CustomizedControl {control_id: row.source_control_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id},s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cc:CustomizedControl {control_id: row.source_control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (cc)-[:ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE]->(cao);
 """
 

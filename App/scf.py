@@ -329,33 +329,33 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
 WHERE row.HITRUST_Control_ID IS NOT NULL AND trim(row.HITRUST_Control_ID) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (req:Requirement {requirement_id: trim(row.HITRUST_Control_ID), industry_standard_regulation_id: 'HITRUST 11.6.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
+MATCH (hc:Control {control_id: trim(row.HITRUST_Control_ID), industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(hc)
 RETURN count(*) AS hitrust_requirements_linked;
 """
 
 
+#13a.control->pcidss_requirements
+control_pcidss_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.PCI_DSS_Requirement IS NOT NULL AND trim(row.PCI_DSS_Requirement) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (r:Requirement {req_id: toInteger(trim(row.PCI_DSS_Requirement))})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(r)
+RETURN count(*) as SCF_Requirement_Links_Created;
+"""
 
-# #3c.control->pcidss_requirements
-# control_pcidss_requirements = """
-# LOAD CSV WITH HEADERS FROM '$file_path' AS row
-# WITH row 
-# WHERE row.PCI_DSS_Requirement IS NOT NULL 
-#   AND trim(row.PCI_DSS_Requirement) <> ''
-# MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-# MATCH (req:PCIDSS_Requirement {code: trim(row.PCI_DSS_Requirement), industry_standard_regulation_id: 'PCI_DSS_4.0'})
-# MERGE (c)-[:HAS_EXTERNAL_CONTROLS]->(req);
-# """
-
-# control_pcidss_sub_requirements = """
-# LOAD CSV WITH HEADERS FROM '$file_path' AS row
-# WITH row 
-# WHERE row.PCI_DSS_Sub_Requirement IS NOT NULL 
-#   AND trim(row.PCI_DSS_Sub_Requirement) <> ''
-# MATCH (c:Control {control_id: trim(row.SCF_Control_Code)})
-# MATCH (sub:PCIDSS_Sub_Requirement {code: trim(row.PCI_DSS_Sub_Requirement), industry_standard_regulation_id: 'PCI_DSS_4.0'})
-# MERGE (c)-[:HAS_EXTERNAL_CONTROLS]->(sub);
-# """
+#13b.control->pcidss_sub_requirements = """
+control_pcidss_sub_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.PCI_DSS_Sub_Requirement IS NOT NULL AND trim(row.PCI_DSS_Sub_Requirement) <> ''
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (sr:SubRequirement {req_id: trim(row.PCI_DSS_Sub_Requirement)})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sr)
+RETURN count(*) as SCF_SubRequirement_Links_Created;
+"""
 
 
 
@@ -470,14 +470,18 @@ time.sleep(2)
 # client.query(control_hipaa_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
+# client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
+# time.sleep(2)
+
+# client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
 time.sleep(2)
 
 
-
-
-# client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
-# time.sleep(2)
+client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+time.sleep(2)
 
 # client.query(control_iso_27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27001_Mapping.csv"))
 # time.sleep(2)

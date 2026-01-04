@@ -1,0 +1,82 @@
+SCF_Control_Code,CIP_Standard_ID,SCF_Control_Name,CIP_Standard_Title,Mapping_Type
+RSK-02.1,CIP-002,Impact-Level Prioritization,Cyber Security Planning,Direct Mapping
+GOV-03,CIP-002,Periodic Review & Update of Cybersecurity Program,Cyber Security Planning,Direct Mapping
+GOV-03,CIP-003,Periodic Review & Update of Cybersecurity Program,Cyber Security Information Protection,Direct Mapping
+AST-01,CIP-003,Asset Governance,Cyber Security Information Protection,Direct Mapping
+HRS-01,CIP-003,Human Resources Security Management,Cyber Security Information Protection,Direct Mapping
+IAC-01,CIP-003,Identity & Access Management (IAM),Cyber Security Information Protection,Direct Mapping
+NET-01,CIP-003,Network Security Controls (NSC),Cyber Security Information Protection,Direct Mapping
+PES-01,CIP-003,Physical & Environmental Protections,Cyber Security Information Protection,Direct Mapping
+GOV-01,CIP-003,Cybersecurity & Data Protection Governance Program,Cyber Security Information Protection,Direct Mapping
+SEA-01,CIP-003,Secure Engineering Principles,Cyber Security Information Protection,Direct Mapping
+IRO-01,CIP-003,Incident Response Operations,Cyber Security Information Protection,Direct Mapping
+BCD-01,CIP-003,Business Continuity Management System (BCMS),Cyber Security Information Protection,Direct Mapping
+CFG-01,CIP-003,Configuration Management Program,Cyber Security Information Protection,Direct Mapping
+CHG-01,CIP-003,Change Management Program,Cyber Security Information Protection,Direct Mapping
+VPM-01,CIP-003,Vulnerability & Patch Management Program (VPMP),Cyber Security Information Protection,Direct Mapping
+DCH-01,CIP-003,Data Protection,Cyber Security Information Protection,Direct Mapping
+CPL-01,CIP-003,Statutory Regulatory & Contractual Compliance,Cyber Security Information Protection,Direct Mapping
+SAT-01,CIP-003,Cybersecurity & Data Privacy-Minded Workforce,Cyber Security Information Protection,Direct Mapping
+AST-01.2,CIP-003,Stakeholder Identification & Involvement,Cyber Security Information Protection,Direct Mapping
+GOV-04,CIP-003,Assigned Cybersecurity & Data Protection Responsibilities,Cyber Security Information Protection,Direct Mapping
+SAT-02,CIP-004,Cybersecurity & Data Privacy Awareness Training,Cyber Security Personnel and Training,Direct Mapping
+HRS-03.1,CIP-004,User Awareness,Cyber Security Personnel and Training,Direct Mapping
+SAT-03,CIP-004,Role-Based Cybersecurity & Data Privacy Training,Cyber Security Personnel and Training,Direct Mapping
+RSK-04,CIP-004,Risk Assessment,Cyber Security Personnel and Training,Direct Mapping
+HRS-04,CIP-004,Personnel Screening,Cyber Security Personnel and Training,Direct Mapping
+IAC-08,CIP-004,Role-Based Access Control (RBAC),Cyber Security Personnel and Training,Direct Mapping
+PES-02,CIP-004,Physical Access Authorizations,Cyber Security Personnel and Training,Direct Mapping
+PES-06.3,CIP-004,Restrict Unescorted Access,Cyber Security Personnel and Training,Direct Mapping
+IAC-17,CIP-004,Periodic Review of Account Privileges,Cyber Security Personnel and Training,Direct Mapping
+IAC-20.6,CIP-004,Revocation of Access Authorizations,Cyber Security Personnel and Training,Direct Mapping
+HRS-01.1,CIP-004,Onboarding Transferring & Offboarding Personnel,Cyber Security Personnel and Training,Direct Mapping
+IAC-28.1,CIP-004,Management Approval For New or Changed Accounts,Cyber Security Personnel and Training,Direct Mapping
+IAC-07,CIP-004,User Provisioning & De-Provisioning,Cyber Security Personnel and Training,Direct Mapping
+NET-04,CIP-005,Data Flow Enforcement - Access Control Lists (ACLs),Cyber Security Systems Security Management,Direct Mapping
+IAC-04,CIP-005,Identification & Authentication for Devices,Cyber Security Systems Security Management,Direct Mapping
+NET-03,CIP-005,Boundary Protection,Cyber Security Systems Security Management,Direct Mapping
+NET-08,CIP-005,Network Intrusion Detection / Prevention Systems (NIDS / NIPS),Cyber Security Systems Security Management,Direct Mapping
+NET-14,CIP-005,Remote Access,Cyber Security Systems Security Management,Direct Mapping
+NET-14.2,CIP-005,Remote Access - Cryptographic Mechanisms,Cyber Security Systems Security Management,Direct Mapping
+IAC-06,CIP-005,Multi-Factor Authentication (MFA),Cyber Security Systems Security Management,Direct Mapping
+NET-14.6,CIP-005,Third-Party Remote Access,Cyber Security Systems Security Management,Direct Mapping
+IAC-25,CIP-005,Session Logout,Cyber Security Systems Security Management,Direct Mapping
+NET-14.8,CIP-005,Remote Access - Disconnect User Session,Cyber Security Systems Security Management,Direct Mapping
+MNT-05.5,CIP-005,Remote Maintenance,Cyber Security Systems Security Management,Direct Mapping
+PES-01.1,CIP-006,Site Security Plan (SitePlan),Cyber Security Physical Security,Direct Mapping
+OPS-01.1,CIP-006,Standardized Operating Procedures (SOP),Cyber Security Physical Security,Direct Mapping
+PES-03,CIP-006,Physical Access Control,Cyber Security Physical Security,Direct Mapping
+PES-01.2,CIP-006,Zone-Based Physical Security,Cyber Security Physical Security,Direct Mapping
+PES-02.1,CIP-006,Physical Access Authorization Based on Position/Role,Cyber Security Physical Security,Direct Mapping
+PES-06,CIP-006,Visitor Control,Cyber Security Physical Security,Direct Mapping
+PES-05,CIP-006,Physical Security Monitoring,Cyber Security Physical Security,Direct Mapping
+PES-03.3,CIP-006,Physical Access Log Entry,Cyber Security Physical Security,Direct Mapping
+MON-16.3,CIP-006,Monitoring for Unauthorized Activities,Cyber Security Physical Security,Direct Mapping
+PES-03.1,CIP-006,Monitor Physical Access,Cyber Security Physical Security,Direct Mapping
+PES-05.1,CIP-006,Monitor Physical Intrusion Alarms,Cyber Security Physical Security,Direct Mapping
+MON-10,CIP-006,Event Log Retention,Cyber Security Physical Security,Direct Mapping
+DCH-18,CIP-006,Media Retention,Cyber Security Physical Security,Direct Mapping
+CRY-01,CIP-006,Cryptographic Controls Program,Cyber Security Physical Security,Direct Mapping
+PES-12,CIP-006,Protect System Components from Physical Damage,Cyber Security Physical Security,Direct Mapping
+PES-12.1,CIP-006,Protect Cabling Infrastructure,Cyber Security Physical Security,Direct Mapping
+CPL-03.2,CIP-006,Review Technology Assets for Compliance,Cyber Security Physical Security,Direct Mapping
+CFG-03,CIP-007,Restrict Use of Ports Protocols and Services,Cyber Security Systems Security Management,Direct Mapping
+END-12,CIP-007,Physical Disable of Connection Ports,Cyber Security Systems Security Management,Direct Mapping
+VPM-05,CIP-007,Software Patching,Cyber Security Systems Security Management,Direct Mapping
+VPM-02,CIP-007,Vulnerability Remediation,Cyber Security Systems Security Management,Direct Mapping
+IAO-05,CIP-007,Plan of Action and Milestones (POA&M),Cyber Security Systems Security Management,Direct Mapping
+END-04,CIP-007,Malware Protection,Cyber Security Systems Security Management,Direct Mapping
+END-14.5,CIP-007,Malicious Links and Files Detection,Cyber Security Systems Security Management,Direct Mapping
+END-04.4,CIP-007,Heuristic Antimalware Detection,Cyber Security Systems Security Management,Direct Mapping
+MON-01.4,CIP-007,Integrated Situational Awareness,Cyber Security Systems Security Management,Direct Mapping
+MON-03,CIP-007,Generate Event Logs,Cyber Security Systems Security Management,Direct Mapping
+MON-05,CIP-007,Alert on Log Processing Failure,Cyber Security Systems Security Management,Direct Mapping
+MON-17,CIP-007,Event Log Analysis,Cyber Security Systems Security Management,Direct Mapping
+IAC-01.2,CIP-007,Authenticate Authorize and Audit (AAA) Solutions,Cyber Security Systems Security Management,Direct Mapping
+IAC-01.3,CIP-007,Maintain List of Authorized Users and Service Accounts,Cyber Security Systems Security Management,Direct Mapping
+IAC-15,CIP-007,Account Management,Cyber Security Systems Security Management,Direct Mapping
+IAC-15.5,CIP-007,Shared/Group Account Authorization,Cyber Security Systems Security Management,Direct Mapping
+IAC-10.8,CIP-007,Change Default Authenticators,Cyber Security Systems Security Management,Direct Mapping
+IAC-10.1,CIP-007,Password Complexity Length and Lifespan,Cyber Security Systems Security Management,Direct Mapping
+IAC-10,CIP-007,Authenticator Management,Cyber Security Systems Security Management,Direct Mapping
+IAC-22,CIP-007,Account Lockout,Cyber Security Systems Security Management,Direct Mapping

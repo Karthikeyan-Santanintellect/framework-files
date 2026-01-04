@@ -211,17 +211,7 @@ ON CREATE SET
 
 
 
-# RESPONDS_TO_INCIDENT 
-responds_to_incident_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
-MATCH (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP 5', incident_response_id: row.target_incident_id})
-MERGE (org)-[r:ORGANIZATION_RESPONDS_TO_INCIDENT {relationship_type: row.relationship_type}]->(ir)
-ON CREATE SET
-    r.plan_effective_date = date(row.plan_effective_date),
-    r.coverage_scope = row.coverage_scope,
-    r.test_success_percentage = row.test_success_percentage;
-"""
+
 
 # MANAGES_VULNERABILITY
 manages_vulnerability_rel = """
@@ -309,8 +299,6 @@ time.sleep(2)
 client.query(manages_access_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_MANAGES_ACCESS_CONTROL_relationships.csv'))
 time.sleep(2)   
 
-client.query(responds_to_incident_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_RESPONDS_TO_INCIDENT_relationships.csv'))
-time.sleep(2)
 
 client.query(manages_vulnerability_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_MANAGES_VULNERABILITY_relationships.csv'))
 time.sleep(2)
@@ -318,37 +306,36 @@ time.sleep(2)
  
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""
-    MATCH path = (:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})-[*1..5]-()
-    UNWIND nodes(path) as n
-    UNWIND relationships(path) as r
-    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-    RETURN {
-      nodes: [node IN uniqueNodes | node {
-        .*,
-        id: elementId(node),
-        labels: labels(node),
-        mainLabel: head(labels(node))
-      }],
-      rels: [rel IN uniqueRels | rel {
-        .*,
-        id: elementId(rel),
-        type: type(rel),
-        from: elementId(startNode(rel)),
-        to: elementId(endNode(rel))
-      }]
-    } AS graph_data
-""")
+res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data""")
 
-
-graph = res[0]["graph_data"]   
+res = res[-1]['graph_data']
 
 import json
-with open("nerc_cip.json", "w", encoding="utf-8") as f:
-    f.write(json.dumps(graph, default=str, indent=2))
-
+with open('nerc_cip.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
 logger.info("✓ Exported graph data to nerc_cip.json")
+
+
 client.close()
 
 
