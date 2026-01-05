@@ -327,16 +327,16 @@ RETURN count(*) AS hitech_requirements_linked;
 control_hitrust = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
+WITH row
 WHERE row.HITRUST_Control_ID IS NOT NULL AND trim(row.HITRUST_Control_ID) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
 MATCH (hc:Control {
     control_id: trim(row.HITRUST_Control_ID),
-    industry_standard_regulation_id: 'HITRUST 11.6.0' 
+    industry_standard_regulation_id: 'HITRUST 11.6.0'
 })
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(hc)
 RETURN count(*) AS hitrust_requirements_linked;
 """
-
 
 #13a.control->pcidss_requirements
 control_pcidss_requirements = """
