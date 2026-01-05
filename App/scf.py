@@ -327,15 +327,14 @@ RETURN count(*) AS hitech_requirements_linked;
 control_hitrust = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
-WITH row
-WHERE row.HITRUST_Control_ID IS NOT NULL AND trim(row.HITRUST_Control_ID) <> ''
+WHERE row.HITECH_Requirement_ID IS NOT NULL AND trim(row.HITECH_Requirement_ID) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (hc:Control {
-    control_id: trim(row.HITRUST_Control_ID),
-    industry_standard_regulation_id: 'HITRUST 11.6.0'
+MATCH (req:Requirement {
+    requirement_id: trim(row.HITECH_Requirement_ID),
+    industry_standard_regulation_id: 'HITECH_ACT_2009'
 })
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(hc)
-RETURN count(*) AS hitrust_requirements_linked;
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
+RETURN count(*) AS hitech_requirements_linked;
 """
 
 #13a.control->pcidss_requirements
@@ -381,6 +380,20 @@ MATCH (ao:AssessmentObjective {
 MERGE (scf)-[rel:HAS_EXTERNAL_CONTROLS]->(ao)
 RETURN count(*) AS relationships_created;
 """
+#16a.control->cpra_sections
+control_cpra_sections = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (scf:SCFControl {control_code: trim(row.scf_control_code)})
+MATCH (section:Section {section_id: trim(row.CPRA_Section), regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(section)
+RETURN count(*) AS relationships_created;
+"""
+
+
+
+
+
+
 
 import os
 from pydoc import cli
@@ -493,11 +506,11 @@ time.sleep(2)
 # client.query(control_hipaa_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
 # time.sleep(2)
 
-# client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
-# time.sleep(2)
-
-client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
+client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
 time.sleep(2)
+
+# client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
+# time.sleep(2)
 
 # client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
 # time.sleep(2)
