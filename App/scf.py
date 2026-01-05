@@ -527,11 +527,6 @@ time.sleep(2)
 # client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
 # time.sleep(2)
 
-
-client.query(control_cpra_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CPRA-Mapping.csv"))
-time.sleep(2)
-
-
 # client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
 # time.sleep(2)
 
@@ -547,6 +542,13 @@ time.sleep(2)
 
 # client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-TISAX-Mapping.csv"))
 # time.sleep(2)
+
+
+# client.query(control_cpra_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CPRA-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_dpdpa_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-DPDPA-Mapping.csv"))
+time.sleep(2)
 
 
 
