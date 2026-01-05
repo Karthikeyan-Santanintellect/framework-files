@@ -393,7 +393,19 @@ MATCH (section:Section {
 MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(section)
 RETURN count(*) AS relationships_created;
 """
-
+#17a.control->dpdpa_sections
+control_dpdpa_sections = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.dpdpa_section_id IS NOT NULL AND trim(row.dpdpa_section_id) <> ''
+MATCH (scf:SCFControl {control_id: trim(row.scf_control_code)})
+MATCH (sec:Section {
+    section_id: trim(row.dpdpa_section_id),
+    regional_standard_regulation_id: 'DPDPA 1.0'
+})
+MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(sec)
+RETURN count(*) AS relationships_created;
+"""
 
 
 
