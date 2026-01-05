@@ -369,11 +369,14 @@ RETURN count(*) AS scf_to_cip_relationships;
 #15a.control->TISAX
 control_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WHERE row.TISAX_FDE IS NOT NULL
+WITH row WHERE row.TISAX_FDE IS NOT NULL
 MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (ao:AssessmentObjective {industry_standard_regulation_id: 'TISAX 6.0', ref: trim(row.TISAX_FDE)})
+MATCH (ao:AssessmentObjective {
+  industry_standard_regulation_id: 'TISAX 6.0', 
+  ref: trim(row.TISAX_FDE)
+})
 MERGE (scf)-[rel:HAS_EXTERNAL_CONTROLS]->(ao)
-RETURN count(rel) AS created;
+RETURN count(*) AS relationships_created;
 """
 
 import os

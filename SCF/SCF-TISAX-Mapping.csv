@@ -1,51 +1,51 @@
 SCF_Control_Code,TISAX_FDE,SCF_Control_Name,TISAX_Requirement_Name,TISAX_FDE_Full,Relationship_Type,Relationship_Strength,Mapping_Quality
-GOV-01,ISA 1.2.1,Cybersecurity & Data Protection Governance Program,Organization of Information Security,1.2.1 - Organization of Information Security,Subset Of,10,Excellent
-GOV-01.1,ISA 1.2.1,Steering Committee & Program Oversight,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-02,ISA 1.1.1,Publishing Cybersecurity & Data Protection Documentation,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
-GOV-02,ISA 1.5.1,Publishing Cybersecurity & Data Protection Documentation,Assessments,1.5.1 - Assessments,Intersects With,5,Good
-GOV-02.1,ISA 1.5.1,Exception Management,Assessments,1.5.1 - Assessments,Intersects With,5,Good
-GOV-03,ISA 1.5.1,Periodic Review & Update of Cybersecurity Program,Assessments,1.5.1 - Assessments,Intersects With,5,Good
-GOV-04,ISA 1.2.1,Assigned Cybersecurity & Data Protection Responsibilities,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-04,ISA 1.2.2,Assigned Cybersecurity & Data Protection Responsibilities,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
-GOV-04.1,ISA 1.2.1,Stakeholder Accountability Structure,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-04.1,ISA 1.2.2,Stakeholder Accountability Structure,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
-GOV-04.1,ISA 1.2.4,Stakeholder Accountability Structure,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
-GOV-04.2,ISA 1.2.1,Authoritative Chain of Command,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-04.2,ISA 1.2.2,Authoritative Chain of Command,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
-GOV-05,ISA 1.2.1,Measures of Performance,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-08,ISA 1.1.1,Defining Business Context & Mission,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
-GOV-09,ISA 1.1.1,Define Control Objectives,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
-GOV-15,ISA 1.2.1,Operationalizing Cybersecurity & Data Protection Practices,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-15.1,ISA 1.2.1,Select Controls,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
-GOV-15.1,ISA 1.2.4,Select Controls,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
-HRS-02,ISA 1.2.2,Position Categorization,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
-HRS-03,ISA 1.2.2,Roles & Responsibilities,Organization of Information Security,1.2.2 - Organization of Information Security,Subset Of,10,Excellent
-HRS-03,ISA 1.2.4,Roles & Responsibilities,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
-HRS-03.2,ISA 1.2.2,Competency Requirements for Security-Related Positions,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
-HRS-04,ISA 2.1.1,Personnel Screening,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
-HRS-04.1,ISA 2.1.1,Roles With Special Protection Measures,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
-HRS-05,ISA 2.1.2,Terms of Employment,Personnel & Training,2.1.2 - Personnel & Training,Subset Of,10,Excellent
-HRS-06,ISA 2.1.2,Access Agreements,Personnel & Training,2.1.2 - Personnel & Training,Intersects With,5,Good
-HRS-06.1,ISA 2.1.2,Confidentiality Agreements,Personnel & Training,2.1.2 - Personnel & Training,Equal,10,Excellent
-HRS-02.1,ISA 2.1.1,Users With Elevated Privileges,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
-IAC-01,ISA 4.1.1,Identity & Access Management (IAM),Identity & Access Management,4.1.1 - Identity & Access Management,Subset Of,10,Excellent
-IAC-02,ISA 4.1.2,Identification & Authentication for Organizational Users,Identity & Access Management,4.1.2 - Identity & Access Management,Intersects With,5,Good
-IAC-02,ISA 4.1.3,Identification & Authentication for Organizational Users,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
-IAC-07,ISA 4.1.3,User Provisioning & De-Provisioning,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
-IAC-08,ISA 4.2.1,Role-Based Access Control (RBAC),Access Control,4.2.1 - Access Control,Intersects With,5,Good
-IAC-10.5,ISA 4.1.3,Protection of Authenticators,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
-IAC-10.8,ISA 4.1.3,Default Authenticators,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
-IAC-15.5,ISA 4.1.3,Restrictions on Shared Groups / Accounts,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
-IAC-17,ISA 4.2.1,Periodic Review of Account Privileges,Access Control,4.2.1 - Access Control,Intersects With,5,Good
-IAC-21,ISA 4.2.1,Least Privilege,Access Control,4.2.1 - Access Control,Intersects With,5,Good
-IAC-28.1,ISA 4.2.1,Management Approval For New or Changed Accounts,Access Control,4.2.1 - Access Control,Intersects With,5,Good
-AST-01,ISA 3.1.3,Asset Governance,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
-AST-01.1,ISA 1.3.1,Asset-Service Dependencies,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
-AST-01.2,ISA 1.2.2,Stakeholder Identification & Involvement,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
-AST-01.2,ISA 1.3.1,Stakeholder Identification & Involvement,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
-AST-02.7,ISA 1.3.4,Software Licensing Restrictions,Asset Management,1.3.4 - Asset Management,Intersects With,5,Good
-AST-03,ISA 1.3.1,Asset Ownership Assignment,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
-AST-04.1,ISA 1.2.3,Asset Scope Classification,Organization of Information Security,1.2.3 - Organization of Information Security,Intersects With,5,Good
-AST-04.1,ISA 1.2.4,Asset Scope Classification,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
-AST-09,ISA 3.1.3,Secure Disposal Destruction or Re-Use of Equipment,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
-DCH-01,ISA 5.1.2,Data Protection,Cryptography & Key Management,5.1.2 - Cryptography & Key Management,Intersects With,5,Good
+GOV-01,ISA 1.2,Cybersecurity & Data Protection Governance Program,Organization of Information Security,1.2.1 - Organization of Information Security,Subset Of,10,Excellent
+GOV-01.1,ISA 1.2,Steering Committee & Program Oversight,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-02,ISA 1.1,Publishing Cybersecurity & Data Protection Documentation,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+GOV-02,ISA 1.5,Publishing Cybersecurity & Data Protection Documentation,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+GOV-02.1,ISA 1.5,Exception Management,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+GOV-03,ISA 1.5,Periodic Review & Update of Cybersecurity Program,Assessments,1.5.1 - Assessments,Intersects With,5,Good
+GOV-04,ISA 1.2,Assigned Cybersecurity & Data Protection Responsibilities,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-04,ISA 1.2,Assigned Cybersecurity & Data Protection Responsibilities,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+GOV-04.1,ISA 1.2,Stakeholder Accountability Structure,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-04.1,ISA 1.2,Stakeholder Accountability Structure,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+GOV-04.1,ISA 1.2,Stakeholder Accountability Structure,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+GOV-04.2,ISA 1.2,Authoritative Chain of Command,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-04.2,ISA 1.2,Authoritative Chain of Command,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+GOV-05,ISA 1.2,Measures of Performance,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-08,ISA 1.1,Defining Business Context & Mission,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+GOV-09,ISA 1.1,Define Control Objectives,IS Policies,1.1.1 - IS Policies,Intersects With,5,Good
+GOV-15,ISA 1.2,Operationalizing Cybersecurity & Data Protection Practices,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-15.1,ISA 1.2,Select Controls,Organization of Information Security,1.2.1 - Organization of Information Security,Intersects With,5,Good
+GOV-15.1,ISA 1.2,Select Controls,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+HRS-02,ISA 1.2,Position Categorization,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+HRS-03,ISA 1.2,Roles & Responsibilities,Organization of Information Security,1.2.2 - Organization of Information Security,Subset Of,10,Excellent
+HRS-03,ISA 1.2,Roles & Responsibilities,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+HRS-03.2,ISA 1.2,Competency Requirements for Security-Related Positions,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+HRS-04,ISA 2.1,Personnel Screening,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
+HRS-04.1,ISA 2.1,Roles With Special Protection Measures,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
+HRS-05,ISA 2.1,Terms of Employment,Personnel & Training,2.1.2 - Personnel & Training,Subset Of,10,Excellent
+HRS-06,ISA 2.1,Access Agreements,Personnel & Training,2.1.2 - Personnel & Training,Intersects With,5,Good
+HRS-06.1,ISA 2.1,Confidentiality Agreements,Personnel & Training,2.1.2 - Personnel & Training,Equal,10,Excellent
+HRS-02.1,ISA 2.1,Users With Elevated Privileges,Personnel & Training,2.1.1 - Personnel & Training,Intersects With,5,Good
+IAC-01,ISA 4.1,Identity & Access Management (IAM),Identity & Access Management,4.1.1 - Identity & Access Management,Subset Of,10,Excellent
+IAC-02,ISA 4.1,Identification & Authentication for Organizational Users,Identity & Access Management,4.1.2 - Identity & Access Management,Intersects With,5,Good
+IAC-02,ISA 4.1,Identification & Authentication for Organizational Users,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-07,ISA 4.1,User Provisioning & De-Provisioning,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-08,ISA 4.2,Role-Based Access Control (RBAC),Access Control,4.2.1 - Access Control,Intersects With,5,Good
+IAC-10.5,ISA 4.1,Protection of Authenticators,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-10.8,ISA 4.1,Default Authenticators,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-15.5,ISA 4.1,Restrictions on Shared Groups / Accounts,Identity & Access Management,4.1.3 - Identity & Access Management,Intersects With,5,Good
+IAC-17,ISA 4.2,Periodic Review of Account Privileges,Access Control,4.2.1 - Access Control,Intersects With,5,Good
+IAC-21,ISA 4.2,Least Privilege,Access Control,4.2.1 - Access Control,Intersects With,5,Good
+IAC-28.1,ISA 4.2,Management Approval For New or Changed Accounts,Access Control,4.2.1 - Access Control,Intersects With,5,Good
+AST-01,ISA 3.1,Asset Governance,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
+AST-01.1,ISA 1.3,Asset-Service Dependencies,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
+AST-01.2,ISA 1.2,Stakeholder Identification & Involvement,Organization of Information Security,1.2.2 - Organization of Information Security,Intersects With,5,Good
+AST-01.2,ISA 1.3,Stakeholder Identification & Involvement,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
+AST-02.7,ISA 1.3,Software Licensing Restrictions,Asset Management,1.3.4 - Asset Management,Intersects With,5,Good
+AST-03,ISA 1.3,Asset Ownership Assignment,Asset Management,1.3.1 - Asset Management,Intersects With,5,Good
+AST-04.1,ISA 1.2,Asset Scope Classification,Organization of Information Security,1.2.3 - Organization of Information Security,Intersects With,5,Good
+AST-04.1,ISA 1.2,Asset Scope Classification,Organization of Information Security,1.2.4 - Organization of Information Security,Intersects With,5,Good
+AST-09,ISA 3.1,Secure Disposal Destruction or Re-Use of Equipment,Asset Management,3.1.3 - Asset Management,Intersects With,5,Good
+DCH-01,ISA 5.1,Data Protection,Cryptography & Key Management,5.1.2 - Cryptography & Key Management,Intersects With,5,Good
