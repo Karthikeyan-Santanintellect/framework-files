@@ -2,17 +2,16 @@
 regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (reg:RegionalStandardAndRegulation {
-  regional_standard_regulation_id: 'DPDPA 1.0', 
-  regulation_id: row.regulation_id})
+  regional_standard_regulation_id: row.regulation_id
+})
 ON CREATE SET
   reg.name = row.name,
   reg.citation = row.citation,
   reg.version = row.version,
   reg.status = row.status,
-  reg.effective_date = row.effective_date,  
+  reg.effective_date = row.effective_date,
   reg.jurisdiction = row.jurisdiction,
-  reg.description = row.description
-RETURN count(reg) AS regulations_created;
+  reg.description = row.description;
 """
 #Chapter
 chapter = """
@@ -147,7 +146,7 @@ ON CREATE SET
 """
 regulation_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0', regulation_id: row.regulation_id})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.regulation_id})
 MATCH (c:Chapter {regional_standard_regulation_id: 'DPDPA 1.0', chapter_id: row.chapter_id})
 MERGE (reg)-[:REGIONAL_REGULATION_HAS_CHAPTER]->(c);
 """
@@ -155,9 +154,10 @@ MERGE (reg)-[:REGIONAL_REGULATION_HAS_CHAPTER]->(c);
 chapter_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Chapter {regional_standard_regulation_id: 'DPDPA 1.0', chapter_id: row.chapter_id})
-MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0', section_id: row.section_id})
+MATCH (sec:Section {regional_standard_regulation_id:'DPDPA 1.0', section_id: row.section_id})
 MERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);
 """
+
 
 section_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row

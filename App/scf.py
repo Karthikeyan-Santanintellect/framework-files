@@ -383,11 +383,17 @@ RETURN count(*) AS relationships_created;
 #16a.control->cpra_sections
 control_cpra_sections = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (scf:SCFControl {control_code: trim(row.scf_control_code)})
-MATCH (section:Section {section_id: trim(row.CPRA_Section), regional_standard_regulation_id: 'CPRA 2.0'})
+WITH row
+WHERE row.CPRA_Section IS NOT NULL AND trim(row.CPRA_Section) <> ''
+MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (section:Section {
+    section_id: trim(row.CPRA_Section),
+    regional_standard_regulation_id: 'CPRA 2.0'
+})
 MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(section)
 RETURN count(*) AS relationships_created;
 """
+
 
 
 
@@ -506,8 +512,13 @@ time.sleep(2)
 # client.query(control_hipaa_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
+# client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
+# time.sleep(2)
+
+
+client.query(control_cpra_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CPRA-Mapping.csv"))
 time.sleep(2)
+
 
 # client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
 # time.sleep(2)

@@ -1,0 +1,57 @@
+scf_control_code,scf_control_name,scf_domain,section_id,relationship_type,relationship_strength,mapping_quality,mapping_notes
+GOV-01,Cybersecurity Data Privacy Program Governance,Governance,SEC-17,Subset Of,10,Excellent,Aligns with reasonable security practices requirement
+GOV-02,Applicable Statutory Regulatory Contractual Requirements Definition,Governance,SEC-03,Intersects With,5,Good,Relates to applicability determination
+GOV-03,Risk-Based Program Definition,Governance,SEC-19,Subset Of,10,Excellent,Core to Data Protection Impact Assessment
+GOV-04,Established and Governed Operational Controls,Governance,SEC-17,Intersects With,5,Good,Supports security practice governance
+GOV-05,Applicable Laws Determination,Governance,SEC-03,Intersects With,5,Good,Supports applicability analysis
+PRI-01,Data Privacy Program,Data Privacy,SEC-04,Subset Of,10,Excellent,Implements fiduciary notice obligations
+PRI-02,Personal Data Protection,Data Privacy,SEC-17,Subset Of,10,Excellent,Core security practice requirement
+PRI-03,Data Retention and Disposal,Data Privacy,SEC-10,Subset Of,10,Excellent,Direct mapping to retention obligations
+PRI-04,Privacy by Design,Data Privacy,SEC-07,Equal,10,Excellent,Directly mirrors privacy by design principle
+PRI-05,Personal Data Processing,Data Privacy,SEC-06,Intersects With,5,Good,Supports processing guidelines
+PRI-06,Minimum Necessary Rule,Data Privacy,SEC-06,Equal,10,Excellent,Direct alignment with data minimization
+PRI-07,Sensitive Information Classification,Data Privacy,SEC-19,Subset Of,10,Excellent,Part of impact assessment
+PRI-08,Data Minimization,Data Privacy,SEC-06,Intersects With,5,Good,Related to processing restrictions
+PRI-09,Third Party Data Sharing Restrictions,Data Privacy,SEC-24,Subset Of,10,Excellent,Direct mapping to transfer restrictions
+PRI-10,Genetic Information Protection,Data Privacy,SEC-29,Equal,10,Excellent,Directly addresses vulnerable data categories
+PRI-11,Right to Know Implementation,Data Privacy,SEC-11,Subset Of,10,Excellent,Implements access rights
+PRI-12,Right to Know Sales Implementation,Data Privacy,SEC-11,Subset Of,10,Excellent,Supports access implementation
+PRI-13,Opt-Out Mechanism Implementation,Data Privacy,SEC-06,Subset Of,10,Excellent,Enables processing control
+PRI-14,Opt-Out Response Procedures,Data Privacy,SEC-06,Subset Of,10,Excellent,Supports opt-out compliance
+PRI-15,Non-Discrimination Implementation,Data Privacy,SEC-04,Subset Of,10,Excellent,Ensures fair notice and processing
+DCH-01,Data Classification Scheme,Data Classification and Handling,SEC-02,Subset Of,10,Excellent,Implements definitions framework
+DCH-02,Data Handling Procedures,Data Classification and Handling,SEC-17,Intersects With,5,Good,Supports security practices
+DCH-03,Sensitive Data Inventory,Data Classification and Handling,SEC-19,Intersects With,5,Good,Supports impact assessment
+DCH-04,Data Quality Management,Data Classification and Handling,SEC-12,Intersects With,5,Good,Related to correction rights
+DCH-05,Data Disposal Procedures,Data Classification and Handling,SEC-13,Subset Of,10,Excellent,Implements erasure rights
+DCH-06,Sensitive Data Handling,Data Classification and Handling,SEC-29,Subset Of,10,Excellent,Protects vulnerable groups
+CRY-01,Cryptographic Controls Program,Cryptographic Protections,SEC-17,Subset Of,10,Excellent,Core security practice
+CRY-02,Encryption At Rest,Cryptographic Protections,SEC-17,Intersects With,5,Good,Supports encryption requirements
+CRY-03,Encryption In Transit,Cryptographic Protections,SEC-17,Intersects With,5,Good,Supports transmission security
+CRY-04,Key Management Program,Cryptographic Protections,SEC-17,Intersects With,5,Good,Supports cryptographic control
+CRY-05,Sensitive Data Encryption,Cryptographic Protections,SEC-17,Subset Of,10,Excellent,Direct encryption requirement
+AST-01,Asset Management Program,Asset Management,SEC-19,Subset Of,10,Excellent,Supports impact assessment
+AST-02,Asset Classification,Asset Management,SEC-02,Intersects With,5,Good,Related to definitions
+AST-03,Sensitive Data Inventory,Asset Management,SEC-11,Intersects With,5,Good,Supports access control
+IAC-01,Identity and Access Management Program,Identification and Authentication,SEC-17,Subset Of,10,Excellent,Core security control
+IAC-02,Authentication Mechanisms,Identification and Authentication,SEC-17,Intersects With,5,Good,Supports access control
+IAC-03,Access Control Enforcement,Identification and Authentication,SEC-17,Subset Of,10,Excellent,Direct security requirement
+IAC-04,Identity Provisioning and Deprovisioning,Identification and Authentication,SEC-21,Intersects With,5,Good,Supports processor obligations
+IAC-05,Sensitive Data Access Control,Identification and Authentication,SEC-19,Subset Of,10,Excellent,Part of impact assessment
+END-01,Endpoint Security Program,Endpoint Security,SEC-17,Subset Of,10,Excellent,Implements security practices
+END-02,Endpoint Hardening,Endpoint Security,SEC-17,Intersects With,5,Good,Supports endpoint security
+END-03,Mobile Device Management,Endpoint Security,SEC-17,Intersects With,5,Good,Addresses mobile security
+END-04,Sensitive Data Endpoint Protection,Endpoint Security,SEC-29,Intersects With,5,Good,Protects vulnerable data
+NET-01,Network Security Program,Network Security,SEC-17,Subset Of,10,Excellent,Implements network security
+NET-02,Network Segmentation,Network Security,SEC-17,Intersects With,5,Good,Supports network controls
+NET-03,Firewall Configuration,Network Security,SEC-17,Intersects With,5,Good,Implements network protection
+MON-01,Event Log Review and Analysis,Continuous Monitoring,SEC-17,Subset Of,10,Excellent,Supports security monitoring
+MON-02,Centralized Collection of Security Event Logs,Continuous Monitoring,SEC-08,Intersects With,5,Good,Supports breach notification
+MON-03,Event Log Correlation and Analysis,Continuous Monitoring,SEC-17,Intersects With,5,Good,Enhances monitoring
+MON-04,Sensitive Data Monitoring,Continuous Monitoring,SEC-19,Intersects With,5,Good,Supports impact assessment
+MON-05,Data Breach Monitoring,Continuous Monitoring,SEC-08,Subset Of,10,Excellent,Directly supports breach detection
+VPM-01,Vulnerability Management Program,Vulnerability and Patch Management,SEC-17,Subset Of,10,Excellent,Core security practice
+VPM-02,Vulnerability Assessment,Vulnerability and Patch Management,SEC-19,Intersects With,5,Good,Supports impact assessment
+VPM-03,Patch Management,Vulnerability and Patch Management,SEC-17,Intersects With,5,Good,Maintains security posture
+VPM-04,Security Measures Implementation,Vulnerability and Patch Management,SEC-17,Subset Of,10,Excellent,Implements security updates
+IRO-01,Incident Response Program,Incident Response,SEC-08,Subset Of,10,Excellent,Implements breach response

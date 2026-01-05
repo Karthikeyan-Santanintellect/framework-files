@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
       "mainLabel": "RegionalStandardAndRegulation",
       "labels": [
         "RegionalStandardAndRegulation"
@@ -16,7 +16,7 @@
       "base_regulation": "California Consumer Privacy Act (CCPA)"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3022",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5444",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -26,7 +26,7 @@
       "heading": "Functions of the California Privacy Protection Agency"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3021",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5443",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -36,7 +36,7 @@
       "heading": "Rulemaking Authority of the CPPA"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3019",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -46,7 +46,7 @@
       "heading": "Administrative Enforcement and Fines"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3073",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5495",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -58,7 +58,7 @@
       "enforcement_id": "AdminFine-Minor"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3072",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5494",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -70,7 +70,7 @@
       "enforcement_id": "AdminFine-Intentional"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3071",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5493",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -82,7 +82,7 @@
       "enforcement_id": "AdminFine-Unintentional"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3016",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5438",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -92,7 +92,7 @@
       "heading": "Mechanisms for Opting Out of Sale or Sharing"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3036",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5458",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -104,7 +104,7 @@
       "requirement_id": "REQ-135-1"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3014",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -114,7 +114,7 @@
       "heading": "The Right to Non-Discrimination for the Exercise of a Consumer's Privacy Rights"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3061",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5483",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -125,7 +125,7 @@
       "right_id": "Right-to-Non-Discrimination"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3034",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5456",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -137,7 +137,7 @@
       "requirement_id": "REQ-125-1"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3013",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -147,7 +147,7 @@
       "heading": "The Right to Limit the Use and Disclosure of Sensitive Personal Information"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3060",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5482",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -158,7 +158,7 @@
       "right_id": "Right-to-Limit-SPI"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3033",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5455",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -170,7 +170,7 @@
       "requirement_id": "REQ-121-2"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3046",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5468",
       "mainLabel": "DataCategory",
       "labels": [
         "DataCategory"
@@ -181,7 +181,7 @@
       "sensitivity": "High"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3032",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -193,7 +193,7 @@
       "requirement_id": "REQ-121-1"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3069",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5491",
       "mainLabel": "EventType",
       "labels": [
         "EventType"
@@ -204,7 +204,7 @@
       "event_type_id": "OptOutSignal"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3076",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5498",
       "mainLabel": "Control",
       "labels": [
         "Control"
@@ -215,7 +215,7 @@
       "category": "Consent Management"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3011",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5433",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -225,7 +225,7 @@
       "heading": "The Right to Know What Personal Information is Sold or Shared and to Whom"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3009",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -235,7 +235,7 @@
       "heading": "Consumers' Right to Correct Inaccurate Personal Information"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3058",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5480",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -246,7 +246,7 @@
       "right_id": "Right-to-Correct"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3030",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -258,7 +258,7 @@
       "requirement_id": "REQ-106-1"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3068",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5490",
       "mainLabel": "EventType",
       "labels": [
         "EventType"
@@ -269,7 +269,7 @@
       "event_type_id": "VerifiableConsumerRequest"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3078",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5500",
       "mainLabel": "Control",
       "labels": [
         "Control"
@@ -280,7 +280,7 @@
       "category": "Consumer Rights"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3008",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -290,7 +290,7 @@
       "heading": "Consumers' Right to Delete Personal Information"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3057",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5479",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -301,7 +301,7 @@
       "right_id": "Right-to-Delete"
     },
     {
-      "id": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3029",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -315,189 +315,189 @@
   ],
   "rels": [
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1171075541093059518",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3022",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171296542930244916",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5444",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1168823741279374270",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3021",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1169044743116559668",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5443",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1166571941465689022",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3019",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166792943302874420",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3019",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1157517463210953675",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3073",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157691186048144705",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5495",
       "type": "SECTION_PRESCRIBES_PENALTY"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3019",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1155265663397268427",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3072",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155439386234459457",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5494",
       "type": "SECTION_PRESCRIBES_PENALTY"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3019",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153013863583583179",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3071",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153187586420774209",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5493",
       "type": "SECTION_PRESCRIBES_PENALTY"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1164320141652003774",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3016",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164541143489189172",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5438",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3016",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153011664560327624",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3036",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5438",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890878",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5458",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1162068341838318526",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3014",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162289343675503924",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3014",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153012764071955398",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3061",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146428",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5483",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3014",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153011664560327622",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3034",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890876",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5456",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1159816542024633278",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3013",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160037543861818676",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3013",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153012764071955397",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3060",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146427",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5482",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3013",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1155263464374012869",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3033",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155436087699576123",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5455",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3033",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153014963095210969",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3046",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5455",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153180989351007567",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5468",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3013",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153011664560327621",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3032",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890875",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3032",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153017162118466520",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3072",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153183188374263118",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5494",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3032",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153016062606838744",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3069",
-      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
-    },
-    {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3032",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153014963095210968",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3046",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153180989351007566",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5468",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3032",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1152961087025449944",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3076",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1157564742210948030",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3011",
-      "type": "REGIONAL_REGULATION_DEFINES_SECTION"
-    },
-    {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1155312942397262782",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3009",
-      "type": "REGIONAL_REGULATION_DEFINES_SECTION"
-    },
-    {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3009",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153012764071955393",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3058",
-      "type": "SECTION_ESTABLISHES_RIGHT"
-    },
-    {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3009",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153011664560327617",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3030",
-      "type": "SECTION_DEFINES_REQUIREMENT"
-    },
-    {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3030",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153016062606838742",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3068",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327752014",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5491",
       "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3030",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1152961087025449942",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3078",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978918734",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5498",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3006",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153061142583577534",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3008",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157785744048133428",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5433",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3008",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153012764071955392",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3057",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155533944234448180",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
+      "type": "REGIONAL_REGULATION_DEFINES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146423",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5480",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3008",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153011664560327616",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3029",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890871",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3029",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1153016062606838741",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3068",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327752012",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5490",
       "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
     },
     {
-      "from": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3029",
-      "id": "5:5671a034-d722-4cbb-8511-1e384567dd8e:1152961087025449941",
-      "to": "4:5671a034-d722-4cbb-8511-1e384567dd8e:3078",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978918732",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5500",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153282144420762932",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
+      "type": "REGIONAL_REGULATION_DEFINES_SECTION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146422",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5479",
+      "type": "SECTION_ESTABLISHES_RIGHT"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890870",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
+      "type": "SECTION_DEFINES_REQUIREMENT"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327752011",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5490",
+      "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978918731",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5500",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     }
   ]
