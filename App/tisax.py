@@ -210,15 +210,15 @@ ON CREATE SET
 #REGISTERS_IN_TISAX
 registers_in_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization)
-WHERE org.organization_id = row.source_organization_id OR org.name = row.source_organization_id
-MATCH (tisax:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_tisax})
-MERGE (tisax)-[r:ORGANISATION_REGISTERS_IN_TISAX {type: row.relationship_type}]->(org)
+MATCH (org:Organization {organization_id: row.source_organization_id})
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_tisax})
+MERGE (org)-[r:ORGANISATION_REGISTERS_IN_TISAX]->(reg)
 ON CREATE SET
-  r.registration_date      = date(row.registration_date),
+  r.type                   = row.relationship_type,
+  r.registration_date      = row.registration_date,
   r.initial_al_target      = row.initial_al_target,
   r.scope_declaration      = row.scope_declaration,
-  r.terms_acceptance_date  = date(row.terms_acceptance_date),
+  r.terms_acceptance_date  = row.terms_acceptance_date,
   r.registration_number    = row.registration_number;
 """
 #UNDERGOES_ASSESSMENT
@@ -373,12 +373,14 @@ ON CREATE SET
 participant_to_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pa:Participant {participant_id: row.source_participant_id})
-MATCH (tisax:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_regulation_id})
-MERGE (pa)-[r:PARTICIPANT_PARTICIPATES_IN_TISAX {type: row.relationship_type}]->(tisax)
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_regulation_id})
+MERGE (pa)-[r:PARTICIPANT_PARTICIPATES_IN_TISAX]->(reg)
 ON CREATE SET
+  r.type                    = row.relationship_type,
   r.registration_date       = date(row.registration_date),
   r.participation_status    = row.participation_status,
-  r.agreement_signed_date   = date(row.agreement_signed_date);
+  r.agreement_signed_date   = date(row.agreement_signed_date)
+RETURN count(*) as relationships_created;
 """
 #ISA -> control_question
 ISA_control = """

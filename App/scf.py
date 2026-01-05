@@ -372,7 +372,7 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WHERE row.TISAX_FDE IS NOT NULL
 MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code), industry_standard_regulation_id: 'TISAX 6.0'})
 MATCH (ao:AssessmentObjective {industry_standard_regulation_id: 'TISAX 6.0', ref: trim(row.TISAX_FDE)})
-MERGE (scf)-[rel:MAPS_TO_ASSESSMENT_OBJECTIVE]->(ao)
+MERGE (scf)-[rel:HAS_EXTERNAL_CONTROLS]->(ao)
 RETURN count(rel) AS created;
 """
 
