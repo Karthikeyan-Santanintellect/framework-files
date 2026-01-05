@@ -113,7 +113,7 @@ MERGE (f:Framework {Node_ID: row.Node_ID, regional_standard_regulation_id: 'GDPR
 ON CREATE SET
   f.type = row.Node_Type,
   f.frameworkName = row.Framework_Name,
-  f.legalType = row.Type,s
+  f.legalType = row.Type,
   f.version = row.Version,
   f.region = row.Region,
   f.effectiveDate = row.Effective_Date,

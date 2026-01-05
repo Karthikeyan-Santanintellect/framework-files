@@ -77,27 +77,27 @@ CALL {
 """
 
 
-# #1a.control -> CSF Function
-# control_CSF_function ="""
-# LOAD CSV WITH HEADERS FROM '$file_path' AS row
-# MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-# MATCH (fn:Function {function_id: trim(row.NIST_CSF_Function), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
-# MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(fn);
-# """
-# #1b.control -> CSF Categories
-# control_CSF_category = """
-# LOAD CSV WITH HEADERS FROM '$file_path' AS row
-# MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-# MATCH (cat:Category {category_id: trim(row.NIST_CSF_Category), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
-# MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
-# """
-# #1c.control -> CSF Subcategories
-# control_CSF_subcategory = """
-# LOAD CSV WITH HEADERS FROM '$file_path' AS row
-# MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-# MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_CSF_Subcategory), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
-# MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
-# """
+#1a.control -> CSF Function
+control_CSF_function ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (fn:Function {function_id: trim(row.NIST_CSF_Function), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(fn);
+"""
+#1b.control -> CSF Categories
+control_CSF_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (cat:Category {category_id: trim(row.NIST_CSF_Category), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
+"""
+#1c.control -> CSF Subcategories
+control_CSF_subcategory = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
+MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_CSF_Subcategory), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
+MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
+"""
 
 #2a.control->cis_controls_number
 control_cis_controls_id = """
@@ -406,6 +406,19 @@ MATCH (sec:Section {
 MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(sec)
 RETURN count(*) AS relationships_created;
 """
+#18a.control->gdpr_sections
+control_gdpr_sections = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row
+WHERE row.gdpr_section IS NOT NULL AND trim(row.gdpr_section) <> ''
+MATCH (scf:SCFControl {control_id: trim(row.scf_control_code)})
+MATCH (section:Section {section_id: trim(row.gdpr_section), regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(section)
+RETURN count(*) AS relationships_created;
+"""
+
+
+
 
 
 
@@ -547,8 +560,12 @@ time.sleep(2)
 # client.query(control_cpra_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CPRA-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_dpdpa_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-DPDPA-Mapping.csv"))
+# client.query(control_dpdpa_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-DPDPA-Mapping.csv"))
+# time.sleep(2)
+
+client.query(control_gdpr_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GDPR-Mapping.csv"))
 time.sleep(2)
+
 
 
 
