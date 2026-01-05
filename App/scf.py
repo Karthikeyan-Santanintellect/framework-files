@@ -329,7 +329,10 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row
 WHERE row.HITRUST_Control_ID IS NOT NULL AND trim(row.HITRUST_Control_ID) <> ''
 MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (hc:Control {control_id: trim(row.HITRUST_Control_ID), industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (hc:Control {
+    control_id: trim(row.HITRUST_Control_ID),
+    industry_standard_regulation_id: 'HITRUST 11.6.0' 
+})
 MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(hc)
 RETURN count(*) AS hitrust_requirements_linked;
 """
@@ -493,8 +496,8 @@ time.sleep(2)
 # client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
 # time.sleep(2)
 
-# client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
-# time.sleep(2)
+client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
+time.sleep(2)
 
 # client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
 # time.sleep(2)
@@ -506,8 +509,8 @@ time.sleep(2)
 # client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NERC-CIP-Mapping.csv"))
 # time.sleep(2)
 
-client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-TISAX-Mapping.csv"))
-time.sleep(2)
+# client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-TISAX-Mapping.csv"))
+# time.sleep(2)
 
 
 
