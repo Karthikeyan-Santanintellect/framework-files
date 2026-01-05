@@ -210,9 +210,9 @@ ON CREATE SET
 #REGISTERS_IN_TISAX
 registers_in_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {organization_id: row.source_organization_id})
 MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_tisax})
-MERGE (org)-[r:ORGANISATION_REGISTERS_IN_TISAX]->(reg)
+MATCH (org:Organization {organization_id: row.source_organization_id})
+MERGE (reg)-[r:REGISTERS_IN_TISAX]->(org)
 ON CREATE SET
   r.type                   = row.relationship_type,
   r.registration_date      = row.registration_date,
@@ -337,7 +337,7 @@ shares_results_with = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pa:Participant {participant_id: row.source_participant_id})
 MATCH (tp:Participant {participant_id: row.target_participant_id})
-MERGE (pa)-[r:PARTICIPANT_SHARES_RESULTS_WITH {type: row.relationship_type}]->(tp)
+MERGE (pa)-[r:PARTICIPANT_SHARES_RESULTS {type: row.relationship_type}]->(tp)
 ON CREATE SET
   r.sharing_date                 = row.sharing_date,
   r.shared_by                    = row.shared_by,
@@ -377,10 +377,9 @@ MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: row.t
 MERGE (pa)-[r:PARTICIPANT_PARTICIPATES_IN_TISAX]->(reg)
 ON CREATE SET
   r.type                    = row.relationship_type,
-  r.registration_date       = date(row.registration_date),
+  r.registration_date       = row.registration_date,
   r.participation_status    = row.participation_status,
-  r.agreement_signed_date   = date(row.agreement_signed_date)
-RETURN count(*) as relationships_created;
+  r.agreement_signed_date   = row.agreement_signed_date;
 """
 #ISA -> control_question
 ISA_control = """

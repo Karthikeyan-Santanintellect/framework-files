@@ -370,7 +370,7 @@ RETURN count(*) AS scf_to_cip_relationships;
 control_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WHERE row.TISAX_FDE IS NOT NULL
-MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code), industry_standard_regulation_id: 'TISAX 6.0'})
+MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code)})
 MATCH (ao:AssessmentObjective {industry_standard_regulation_id: 'TISAX 6.0', ref: trim(row.TISAX_FDE)})
 MERGE (scf)-[rel:HAS_EXTERNAL_CONTROLS]->(ao)
 RETURN count(rel) AS created;
@@ -507,33 +507,6 @@ client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-
 time.sleep(2)
 
 
-# client.query(control_iso_27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27001_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_ISO27002_Mapping.csv"))
-# time.sleep(2)
-
-
-# client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_AI_RMF_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_nist_csf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_nist_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_RMF_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_pcidss.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_PCIDSS_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_tdpsa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_TDPSA_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_TISAX_Mapping.csv"))
-# time.sleep(2)
-
-# client.query(control_vcdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_VCDPA_Mapping.csv"))
-# time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")
