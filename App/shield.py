@@ -277,7 +277,7 @@ Load CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (ra:RiskAssessment {assessment_id: row.assessment_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
 ON CREATE SET 
     ra.name = row.assessment_name,
-    ra._type = row.assessment_type,
+    ra.type = row.assessment_type,
     ra.assessment_date = row.assessment_date,
     ra.completion_date = row.completion_date,
     ra.assessor_name = row.assessor_name,
@@ -295,7 +295,7 @@ ON CREATE SET
 regulation_data_controller = """
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (dc)-[:GOVERNED_BY]->(reg);
+MERGE (dc)-[:REGULATION_GOVERNED_BY_DATA_CONTROLLER]->(reg);
 """
 #data_controller_data_breach
 data_controller_data_breach = """
@@ -322,8 +322,8 @@ MERGE (spg)-[:SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD]->
 #security_program_risk_assessment
 security_program_risk_assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (spg:SecurityProgram {program_id: row.source_program_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MATCH (ra:RiskAssessment {assessment_id: row.target_assessment_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (spg:SecurityProgram {program_id: row.source_program_id})
+MATCH (ra:RiskAssessment {assessment_id: row.target_assessment_id})
 MERGE (spg)-[:SECURITY_PROGRAM_CONDUCTS_RISK_ASSESSMENT]->(ra);
 """
 #datacontroller_securitypolicy
@@ -345,7 +345,7 @@ datacontroller_security_program = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (dc:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MATCH (spg:SecurityProgram {program_id: row.target_program_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (dc)-[:DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROGRAM_]->(spg);
+MERGE (dc)-[:DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROGRAM]->(spg);
 """
 #datacontroller_service provider
 datacontroller_service_provider = """
@@ -357,15 +357,15 @@ MERGE (dc)-[:DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROVIDER]->(spv);
 #databreach_nyresident
 databreach_nyresident="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (br:DataBreach {breach_id: row.source_breach_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MATCH (nr:NYResident {resident_id: row.target_resident_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (br:DataBreach {breach_id: row.source_breach_id})
+MATCH (nr:NYResident {resident_id: row.target_resident_id})
 MERGE (br)-[:DATA_BREACH_NOTIFIES_AFFECTED_INDIVIDUAL_NY_RESIDENT]->(nr);
 """
 #datacontroller_privateinformation
 datacontroller_private_information = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (dc:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MATCH (pi:PrivateInformation {info_id: row.target_info_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (dc:DataController {controller_id: row.source_controller_id})
+MATCH (pi:PrivateInformation {info_id: row.target_info_id})
 MERGE (dc)-[:DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION]->(pi);
 """
 
@@ -477,7 +477,7 @@ time.sleep(2)
 client.query(private_inforamtion_private_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_COMBINES_WITH_DATA_ELEMENT_relationships.csv"))
 time.sleep(2)
 
-client.query(security_program_administrative_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_APPLIES_SAFEGUARDS_TO_relationships.csv"))
+client.query(security_program_administrative_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_AppliesSafeguards_Updated.csv"))
 time.sleep(2)
 
 client.query(security_program_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_CONDUCTS_RISK_ASSESSMENT.csv"))
