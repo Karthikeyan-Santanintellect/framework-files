@@ -1,0 +1,10 @@
+Node_ID,Node_Type,right_id,name,definition,regulated_by_articles,applies_to_actors,enforcement_mechanism
+DR001,DataSubjectRight,GDPR-AR,Right of Access,"Right to obtain confirmation of whether data is being processed and access to the data","Article 15",Data Subject,Request to Controller
+DR002,DataSubjectRight,GDPR-RR,Right to Rectification,"Right to correct inaccurate or incomplete personal data","Article 16",Data Subject,Request to Controller
+DR003,DataSubjectRight,GDPR-ER,Right to Erasure (Right to be Forgotten),"Right to have personal data deleted under certain circumstances","Article 17",Data Subject,Request to Controller
+DR004,DataSubjectRight,GDPR-RSTOR,Right to Restrict Processing,"Right to limit processing of personal data","Article 18",Data Subject,Request to Controller
+DR005,DataSubjectRight,GDPR-NPR,Right to Data Portability,"Right to receive personal data in structured, commonly used machine-readable format and transmit to another controller","Article 20",Data Subject,Request to Controller
+DR006,DataSubjectRight,GDPR-OR,Right to Object,"Right to object to processing on grounds relating to particular situation or for direct marketing","Article 21",Data Subject,Written Objection
+DR007,DataSubjectRight,GDPR-AADR,Right to Automated Decision Making,"Right not to be subject to decision based solely on automated processing with legal/significant effects","Article 22",Data Subject,Request to Controller
+DR008,DataSubjectRight,GDPR-ITR,Right to Information,"Right to receive transparent information about data processing","Article 13-14",Data Subject,Privacy Notice
+DR009,DataSubjectRight,GDPR-DSR,Data Subject Rights Framework,"Collection of all rights granted to individuals regarding personal data",Article 5,Data Subject,Multiple Mechanisms

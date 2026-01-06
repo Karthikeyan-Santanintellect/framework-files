@@ -1,0 +1,11 @@
+Node_ID,Node_Type,principle_id,name,definition,aspect,regulated_by_articles,applies_to_processing,applies_to_data_category
+PR001,Principle,GDPR-PRIN,Data Protection Principles,"Core principles governing lawful, fair and transparent data processing",Framework,"Article 5",true,true
+PR002,Principle,GDPR-LAWF,Lawfulness,"Personal data must be processed lawfully and on a lawful basis",Legality,"Article 5(1)(a)",true,true
+PR003,Principle,GDPR-FAIR,Fairness,"Personal data must be processed fairly without discrimination",Ethics,"Article 5(1)(a)",true,true
+PR004,Principle,GDPR-TRANS,Transparency,"Data processing must be transparent to data subject with clear privacy notices",Disclosure,"Article 5(1)(a)",true,false
+PR005,Principle,GDPR-PURLIM,Purpose Limitation,"Personal data collected for specified purposes cannot be reprocessed for incompatible purposes",Scope,"Article 5(1)(b)",true,true
+PR006,Principle,GDPR-DAMIN,Data Minimization,"Personal data must be adequate, relevant, limited to what is necessary (necessity and proportionality)",Necessity,"Article 5(1)(c)",true,true
+PR007,Principle,GDPR-ACC,Accuracy,"Personal data must be accurate, complete and kept up to date with reasonable efforts to correct or delete inaccurate data",Quality,"Article 5(1)(d)",true,true
+PR008,Principle,GDPR-STORLIM,Storage Limitation,"Personal data kept in form which permits identification of data subject only as long as necessary",Duration,"Article 5(1)(e)",true,true
+PR009,Principle,GDPR-INTCONF,Integrity and Confidentiality,"Personal data processed in manner ensuring appropriate security through technical and organizational measures",Security,"Article 5(1)(f)",true,false
+PR010,Principle,GDPR-ACCNB,Accountability,"Controller responsible for demonstrating compliance with all principles through documentation and implementation",Responsibility,"Article 5(2)",true,false

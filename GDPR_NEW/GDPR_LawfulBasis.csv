@@ -1,0 +1,8 @@
+Node_ID,Node_Type,lawful_basis_id,name,definition,type,restricted,regulated_by_articles,use_cases
+LB001,LawfulBasis,GDPR-LB,Lawful Basis,"Legal ground required to lawfully process personal data",Framework,false,"Article 6","All processing"
+LB002,LawfulBasis,GDPR-CONS,Consent,"Freely given, specific, informed voluntary indication of wishes by data subject",Voluntary,false,"Article 4(11), Article 6(1)(a), Article 7","Marketing, Non-essential Processing"
+LB003,LawfulBasis,GDPR-CONTRACT,Contract,"Processing necessary for performance of contract with data subject or pre-contract obligations",Mandatory,false,"Article 6(1)(b)","Customer Contracts, Service Delivery"
+LB004,LawfulBasis,GDPR-LEGAL,Legal Obligation,"Processing necessary to comply with legal obligation applicable to controller",Mandatory,false,"Article 6(1)(c)","Tax Compliance, Legal Reporting"
+LB005,LawfulBasis,GDPR-VITAL,Vital Interests,"Processing necessary to protect vital interests of data subject or another person",Exceptional,false,"Article 6(1)(d)","Emergency Situations, Health Protection"
+LB006,LawfulBasis,GDPR-PUBLIC,Public Task,"Processing necessary for performance of task carried out in public interest or official authority",Public,false,"Article 6(1)(e)","Government Operations, Public Services"
+LB007,LawfulBasis,GDPR-LEGINT,Legitimate Interests,"Processing necessary for legitimate interests pursued by controller except where overridden by rights of data subject",Conditional,false,"Article 6(1)(f)","Business Operations, Fraud Prevention"

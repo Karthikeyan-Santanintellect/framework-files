@@ -1,0 +1,9 @@
+Node_ID,Node_Type,mechanism_id,name,definition,type,regulated_by_articles,applies_to_countries,effectiveness_level
+TM001,TransferMechanism,GDPR-TRANS,Data Transfer Mechanisms,"Framework for lawful international transfers of personal data outside EU/EEA",Framework,Chapter V,"All non-EEA countries",N/A
+TM002,TransferMechanism,GDPR-ADEQ,Adequacy Decision,"Commission decision that third country provides adequate protection level equivalent to GDPR",Automatic,Article 45,"Countries with Adequacy Decision","High - Direct Transfer Allowed"
+TM003,TransferMechanism,GDPR-SCC,Standard Contractual Clauses (SCCs),"Pre-approved contractual terms and clauses for international transfers with data protection safeguards",Contractual,Article 46(2)(c),"All non-adequate countries","High - With Supplementary Measures"
+TM004,TransferMechanism,GDPR-BCR,Binding Corporate Rules (BCRs),"Intra-group internal policies and rules with adequacy assessment for multinational organizations",Contractual,Article 46(2)(b),"All non-adequate countries","High - For Related Entities Only"
+TM005,TransferMechanism,GDPR-CERT,Certification Mechanism,"Approved certification and monitoring mechanism approved by supervisory authority",Certification,Article 46(2)(f),"Certified recipients worldwide","Medium - Based on Certification"
+TM006,TransferMechanism,GDPR-DEROG,Derogation for Specific Situations,"Limited exceptions for transfers on case-by-case basis where safeguards not otherwise available",Exceptional,Article 49,"All non-adequate countries","Low - Very Limited Use"
+TM007,TransferMechanism,GDPR-ADEQUACY,Adequacy Decision Country,"Third country with Commission adequacy decision providing sufficient protection",Classification,Article 45,"Designated countries","High"
+TM008,TransferMechanism,GDPR-NOADEQUACY,Non-Adequate Country,"Third country without adequacy decision requiring transfer mechanism for lawful data transfer",Classification,"Chapter V","All other countries","Variable"

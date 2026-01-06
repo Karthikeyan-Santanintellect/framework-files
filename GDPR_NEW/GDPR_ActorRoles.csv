@@ -1,0 +1,10 @@
+Node_ID,Node_Type,actor_role_id,name,type,definition,parent_concept,regulated_by_articles
+AR001,ActorRole,GDPR-DS,Data Subject,Individual,"Any natural person to whom personal data relates",Rights_Holder,"Article 4(1),Article 12-23"
+AR002,ActorRole,GDPR-CTRL,Data Controller,Organization,"Entity that determines purposes and means of personal data processing",DutyBearer,"Article 4(7),Chapter III"
+AR003,ActorRole,GDPR-PROC,Data Processor,Service Provider,"Entity that processes personal data on behalf of a controller",DutyBearer,"Article 4(8),Article 28"
+AR004,ActorRole,GDPR-DPO,Data Protection Officer,Governance Role,"Individual designated to monitor GDPR compliance",Compliance,"Article 37-39"
+AR005,ActorRole,GDPR-AUTH,Data Protection Authority,Regulatory Body,"National authority enforcing GDPR requirements",Enforcement,"Article 51-59"
+AR006,ActorRole,GDPR-JC,Joint Controller,Shared Responsibility,"Multiple entities jointly determining processing purposes and means",Control,"Article 26"
+AR007,ActorRole,GDPR-THRP,Third Party Recipient,Data Recipient,"Entity receiving disclosed personal data",Processing,"Article 4(10)"
+AR008,ActorRole,GDPR-SUBPROC,Sub-Processor,Processor Sub-contractor,"Processor that further processes data on behalf of primary processor",Processing,"Article 28(2-4)"
+AR009,ActorRole,GDPR-REPR,EU Representative,Compliance Agent,"Entity designated to handle data protection matters for non-EU controllers",Compliance,Article 27

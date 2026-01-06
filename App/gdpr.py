@@ -120,6 +120,142 @@ ON CREATE SET
   f.description = row.Description;
 """
 
+#ActorRole
+gdpr_actor_role ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ar:ActorRole {actor_role_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  ar.name = row.name,
+  ar.type = row.type,
+  ar.definition = row.definition,
+  ar.parent_concept = row.parent_concept,
+  ar.regulated_by_articles = row.regulated_by_articles;
+  """
+#Datacategory
+gdpr_data_category ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dc:DataCategory {data_category_id: row.Node_ID,regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+dc.name = row.name,
+  dc.definition = row.definition,
+  dc.level = row.level,
+  dc.parent_category = row.parent_category,
+  dc.is_restricted = row.is_restricted,
+  dc.regulated_by_articles = row.regulated_by_articles;
+"""
+#Data Subjects
+gdpr_data_subject ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ds:DataSubjectRight {data_subject_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  ds.name = row.name,
+  ds.definition = row.definition,
+  ds.regulated_by_articles = row.regulated_by_articles,
+  ds.applies_to_actors = row.applies_to_actors,
+  ds.enforcement_mechanism = row.enforcement_mechanism;
+"""
+#Lawful_basis
+gdpr_lawful_basis ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (lb:LawfulBasis {lawful_basis_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  lb.name = row.name,
+  lb.definition = row.definition,
+  lb.type = row.type,
+  lb.restricted = row.restricted,
+  lb.regulated_by_articles = row.regulated_by_articles,
+  lb.use_cases = row.use_cases;
+"""
+#Principle 
+gdpr_principle ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pl:Principle {principle_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  pl.name = row.name,
+  pl.definition = row.definition,
+  pl.aspect = row.aspect,
+  pl.regulated_by_articles = row.regulated_by_articles,
+  pl.applies_to_processing = row.applies_to_processing,
+  pl.applies_to_data_category = row.applies_to_data_category;
+"""
+#Processing_activity
+gdpr_processing_activity ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pa:ProcessingActivity {processing_id : row.Node_ID,regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  pa.name = row.name,
+  pa.definition = row.definition,
+  pa.category = row.category,
+  pa.regulated_by_articles = row.regulated_by_articles,
+  pa.requires_lawful_basis = row.requires_lawful_basis,
+  pa.requires_principle_compliance = row.requires_principle_compliance;
+"""
+
+#ComplianceMechanism
+gdpr_compliance_mechanism ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cm:ComplianceMechanism {mechanism_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  cm.name = row.name,
+  cm.definition = row.definition,
+  cm.category = row.category,
+  cm.is_mandatory = row.is_mandatory,
+  cm.regulated_by_articles = row.regulated_by_articles,
+  cm.applicable_to_roles = row.applicable_to_roles;
+"""
+#ProcessingContext
+gdpr_processing_context ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pc:ProcessingContext {context_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  pc.name = row.name,
+  pc.description = row.description,
+  pc.special_requirements = row.special_requirements,
+  pc.regulated_by_articles = row.regulated_by_articles,
+  pc.applies_to_data_categories = row.applies_to_data_categories,
+  pc.applies_to_processing_activities = row.applies_to_processing_activities;
+"""
+#Penalty 
+gdpr_penalty ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pen:Penalty {penalty_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  pen.type = row.penalty_type,
+  pen.name = row.name,
+  pen.definition = row.definition,
+  pen.max_amount = row.max_amount,
+  pen.min_amount = row.min_amount,
+  pen.violation_category = row.violation_category,
+  pen.regulated_by_articles = row.regulated_by_articles,
+  pen.applicable_to_actors = row.applicable_to_actors;
+"""
+
+#TRANSFER MECHANISM
+gdpr_transfer_mechanism ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tm:TransferMechanism {transfer_id : Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  tm.name = row.name,
+  tm.definition = row.definition,
+  tm.type = row.type,
+  tm.regulated_by_articles = (row.regulated_by_articles,
+  tm.applies_to_countries = row.applies_to_countries,
+  tm.effectiveness_level = row.effectiveness_level;
+"""
+#EnforcementAuthority
+gdpr_enforcement_authority ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ea:EnforcementAuthority {enforcement_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  ea.Node_ID = row.Node_ID,
+  ea.name = row.name,
+  ea.definition = row.definition,
+  ea.role = row.role,
+  ea.powers = row.powers,
+  ea.regulated_by_articles = row.regulated_by_articles,
+  ea.applies_to_jurisdictions = row.applies_to_jurisdictions;
+  """
+
 # Regulation → Chapter Relationships 
 regional_standard_regulation_chapter ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -220,6 +356,189 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Recital {Node_ID: row.Source_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (co:Concept {Node_ID: row.Target_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (r)-[:RECITAL_DEFINES_CONCEPT {properties: row.Properties}]->(co);
+"""
+
+#Data_category -> RegionalStandardRegulation
+datacategory_regulation ="""
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (dc)-[:DATA_CATEGORY_PROTECTED_BY_REGULATION]->(reg);
+"""
+#Processing_activity ->RegionalStandardRegulation
+processing_activity_regulation ="""
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pa)-[:PROCESSING_ACTIVITY_REGULATED_BY_REGULATION]->(reg);
+"""
+#LawfulBasis -> RegionalStandardAndRegulation
+lawful_basis_regulation ="""
+MATCH (lb:LawfulBasis {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (lb)-[:LAWFUL_BASIS_REQUIRED_BY_REGULATION]->(reg);
+"""
+# Principle → RegionalStandardAndRegulation
+principle_regulation ="""
+MATCH (pl:Principle {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (p)-[:EMBODIED_IN]->(reg);
+"""
+#ComplianceMechanism → RegionalStandardAndRegulation
+compliance_mechanism_regulation ="""
+MATCH (cm:ComplianceMechanism {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (cm)-[:COMPLIANCE_MECHANISM_DEFINED_BY_REGULATION]->(reg);
+"""
+#DataSubjectRight→ ActorRole (Data Subject)
+data_subject_actor_role ="""
+MATCH (ds:DataSubjectRight {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (dr)-[:DATA_SUBJECT_RIGHT_HELD_BY_ACTOR_ROLE]->(ar);
+"""
+#Article → ActorRole
+article_actor_role ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ar:ActorRole{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_DEFINES_ACTOR_ROLE]->(ar);
+"""
+#Article → DataCategory
+article_data_category ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (dc:DataCategory{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_DEFINES_DATA_CATEGORY]->(dc);
+"""
+#Article → DataSubjectRight
+article_data_subject ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ds:DataSubjectRight{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_DEFINES_DATA_SUBJECT_RIGHT]->(ds);
+"""
+#Article → LawfulBasis
+article_lawful_basis ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (lb:LawfulBasis{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_SPECIFIES_LAWFUL_BASIS]->(lb);
+"""
+#Article → Principle
+article_principle ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pl:Principle{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_EMBODIES_PRINCIPLE]->(pl);
+"""
+#Article → ProcessingActivity
+article_processing_activity ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pa:ProcessingActivity{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_REGULATES_PROCESSING_ACTIVITY]->(pa);
+"""
+#Article → ComplianceMechanism
+article_compliance_mechanism ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (cm:ComplianceMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_DEFINES_OBLIGATION]->(cm);
+"""
+#Article → TransferMechanism
+article_transfer_mechanism ="""
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (tm:TransferMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[:ARTICLE_REGULATES_TRANSFER]->(tm);
+"""
+# Penalty → Article
+penalty_article ="""
+MATCH (pen:Penalty {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (a:Article{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pen)-[:PENALTY_DEFINED_BY_ARTICLE]->(a);
+"""
+
+# DataSubjectRight → Article
+datasubject_right_article ="""
+MATCH (ds:DataSubjectRight {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (a:Article{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ds)-[:DATA_SUBJECT_RIGHT_ENFORCED_BY_ARTICLE]->(a);
+"""
+
+# DataSubjectRight → EnforcementAuthority
+datasubject_right_enforcement_authority ="""
+MATCH (ds:DataSubjectRight {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ea:EnforcementAuthority{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ds)-[:DATA_SUBJECT_RIGHT_ENFORCED_BY_ENFORCEMENT_AUTHORITY]->(ea);
+"""
+#EnforcementAuthority → Article
+enforcement_authority_article ="""
+MATCH (ea:EnforcementAuthority {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (a:Article{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ea)-[:ENFORCEMENT_AUTHORITY_ENFORCES_ARTICLE]->(a);
+"""
+#EnforcementAuthority → Penalty
+enforcement_authority_penalty ="""
+MATCH (ea:EnforcementAuthority {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pen:Penalty{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ea)-[:ENFORCEMENT_AUTHORITY_IMPOSES_PENALTY ]->(pen);
+"""
+#Penalty → ComplianceMechanism
+penalty_compliance_mechanism = """
+MATCH (pen:Penalty{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (MATCH (cm:ComplianceMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pen)-[:PENALTY_IMPOSES_COMPLIANCE_MECHANISM]->(cm)
+"""
+#Penalty → Article
+penalty_article ="""
+MATCH (pen:Penalty{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (a:Article{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pen)-[:PENALTY_FOR_VIOLATION_OF_ARTICLE]->(a);
+"""
+#Article → ProcessingContext
+article_processing_context ="""
+MATCH (a:Article{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pc:ProcessingContext{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (a)-[: ARTICLE_APPLIES_TO_PROCESSING_CONTEXT]->(pc);
+"""
+#ProcessingContext →  Principle
+processing_context_principle ="""
+MATCH (pc:ProcessingContext{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pl:Principle{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pc)-[:PROCESSING_CONTEXT_SUBJECT_TO_PRINCIPLE]->(pl);
+"""
+#ProcessingContext -> ComplianceMechanism
+processing_context_compliance_mechanism ="""
+MATCH (pc:ProcessingContext{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (cm:ComplianceMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pc)-[:PROCESSING_CONTEXT_REQUIRES_MECHANISM]->(cm);
+"""
+#ProcessingContext -> TransferMechanism
+processing_context_transfer_mechanism =""" 
+MATCH (pc:ProcessingContext{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (tm:TransferMechanism {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (pc)-[:PROCESSING_CONTEXT_REQUIRES_TRANSFER_MECHANISM]->(tm);
+"""
+#DataCategory → TransferMechanism
+datacategory_transfer_mechanism ="""
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (tm:TransferMechanism {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (dc)-[:DATA_CATEGORY_CAN_BE_TRANSFERRED]->(tm);
+"""
+#ActorRole → ProcessingActivity
+actor_role_processing_activity ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pa:ProcessingActivity{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:ACTOR_ROLE_PERFORMS_PROCESSING_ACTIVITY]->(pa);
+"""
+#ActorRole → DataCategory
+actor_role_data_category ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:ACTOR_ROLE_RESPONSIBLE_FOR_DATA_CATEGORY]->(dc);
+"""
+#ActorRole → ComplianceMechanism
+actor_role_compliance_mechanism ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (cm:ComplianceMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:ACTOR_ROLE_OVERSEES_COMPLIANCE_MECHANISM]->(cm);
+"""
+#ActorRole → Principle
+actor_role_principle ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pl:Principle{regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:ACTOR_ROLE_MUST_COMPLY_WITH_PRINCIPLE]->(pl);
 """
 
 
