@@ -160,9 +160,9 @@ ON CREATE SET
 #data protection assessment node
 data_protection_assessment ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dpa:DataProtectionAssessment {assessment_id: row.assessment_id,regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (dpa:DataProtectionAssessment {dpa_id: row.dpa_id,regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET
- dpa.assessment_date = row.assessment_date,
+  dpa.assessment_date = row.assessment_date,
   dpa.assessment_status = row.assessment_status,
   dpa.processing_activity_assessed = row.processing_activity_assessed,
   dpa.risk_level_overall = row.risk_level_overall,
@@ -214,7 +214,7 @@ ON CREATE SET
 #personal_data node
 personal_data ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pd:PersonalDataRecord {data_record_id: row.data_record_id,regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (pd:PersonalDataRecord {data_id: row.data_id,regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET
   pd.datatype = row.data_type,
   pd.category = row.data_category,
@@ -263,7 +263,7 @@ ON CREATE SET
   pn.completeness_score = row.completeness_score,
   pn.transparency_level = row.transparency_level,
   pn.enforcement_risk = row.enforcement_risk,
-  pn.accessibility = row.languages_supported.split;
+  pn.accessibility = row.languages_supported;
 """
 #processing_activity node
 processing_activity ="""
@@ -291,12 +291,12 @@ ON CREATE SET
   pa.enforcement_priority = row.enforcement_priority,
   pa.consumer_transparency_required =row.consumer_transparency_required,
   pa.available = row.opt_out_available,
-  pa.recipient_count = row.recipients_count;
+  pa.count = row.recipients_count;
 """
 #sensitive_data node
 sensitive_data ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sd:SensitiveData {data_record_id: row.data_record_id,regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (sd:SensitiveData {data_id: row.sensitive_data_id,regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET
   sd.type = row.sensitive_type,
   sd.definition = row.definition,
@@ -325,21 +325,21 @@ ON CREATE SET
 regulation_data_controller ="""
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (reg)-[:REGULATION_DATA_CONTROLLER]->(dc);
+MERGE (reg)-[:REGULATION_HAS_DATA_CONTROLLER]->(dc);
 """
 #data_controller_consumer relationship
 data_controller_consumer ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (controller:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (consumer:Consumer {consumer_id: row.target_consumer_id, regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (controller)-[:DATA_CONTROLLER_CONSUMER]->(consumer);
+MERGE (controller)-[:DATA_CONTROLLER_CONTROLS_CONSUMER]->(consumer);
 """
 #data_controller_DataProtectionAssessment relationship
 data_controller_dataProtectionAssessment ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (controller:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (dpa:DataProtectionAssessment {dpa_id: row.target_dpa_id, regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (controller)-[:DATA_CONTROLLER_DATA_PROTECTION_ASSESSMENT]->(dpa);
+MERGE (controller)-[:DATA_CONTROLLER_DATA_PROTECTS_DATA_PROTECTION_ASSESSMENT]->(dpa);
 """
 #data_controller_OptOutMechanism relationship
 data_controller_optOutMechanism ="""
@@ -353,7 +353,7 @@ data_controller_consent ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (controller:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (ct:ConsentRecord {consent_id: row.target_consent_id, regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (controller)-[:DATA_CONTROLLER_CONSENT]->(ct);
+MERGE (controller)-[:DATA_CONTROLLER_HAS_CONSENT_RECORD]->(ct);
 """
 
 #data_controller_processingActivity relationship
@@ -368,79 +368,28 @@ data_controller_dataBreach ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (controller:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (db:DataBreachIncident {breach_id: row.target_breach_id, regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (controller)-[:DATA_CONTROLLER_DATA_BREACH]->(db);
+MERGE (controller)-[:DATA_CONTROLLER_BREACH_DATA_BREACH]->(db);
 """
 #data_controller_consumerRequest relationship
 data_controller_consumerRequest ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (controller:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (cr:ConsumerRequest {request_id: row.target_request_id, regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (controller)-[:DATA_CONTROLLER_CONSUMER_REQUEST]->(cr);
+MERGE (controller)-[:DATA_CONTROLLER_RESPONDS_TO_CONSUMER_REQUEST]->(cr);
 """
 #data_controller_dataProcessor relationship
 data_controller_dataProcessor ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (controller:DataController {controller_id: row.source_controller_id, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (dp:DataProcessor {processor_id: row.target_processor_id, regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (controller)-[:DATA_CONTROLLER_DATA_PROCESSOR]->(dp);
+MERGE (controller)-[:DATA_CONTROLLER_PROCESSES_DATA_PROCESSOR]->(dp);
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#delete orphan relationships nodes
+orphan_nodes_cleanup ="""
+MATCH (n)
+WHERE NOT (n)--()
+DETACH DELETE n;
+"""
 
 
 
@@ -467,71 +416,74 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_and_regulation)
 time.sleep(2)
 
-client.query(gdpr_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/2_chapter_nodes.csv"))
+client.query(consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Consent_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/3_section_nodes.csv"))
+client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Consumer_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/article_node.csv"))
+client.query(consumer_request.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ConsumerRequest_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/5_recital_nodes.csv"))
+client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataBreach_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/12_paragraph_nodes.csv"))
+client.query(data_controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataController_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_sub_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/13_subparagraph_nodes.csv"))
+client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProcessor_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/14_legislative_action_nodes.csv"))
+client.query(data_protection_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProtectionAssessment_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/15_concept_nodes_COMPLETE.csv"))
+client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_OptOutMechanism_nodes.csv"))
 time.sleep(2)
 
-client.query(gdpr_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/1_framework_nodes_CORRECTED.csv"))
+client.query(personal_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_PersonalData_nodes.csv"))
 time.sleep(2)
 
-client.query(regional_standard_regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
+client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_PrivacyNotice_nodes.csv"))
 time.sleep(2)
 
-client.query(framework_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/16_relationships_framework_to_chapter_UNIQUE.csv"))
+client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ProcessingActivity_nodes.csv"))
 time.sleep(2)
 
-client.query(regional_standard_regulation_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/7_relationships_regulation_to_recital.csv"))
+client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_SensitiveData_nodes.csv"))
 time.sleep(2)
 
-client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/8_relationships_chapter_to_section.csv"))
+client.query(regulation_data_controller)
 time.sleep(2)
 
-client.query(chapter_article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/9_relationships_chapter_to_article.csv"))
+client.query(data_controller_consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_COLLECTS_PERSONAL_DATA_relationships.csv"))
 time.sleep(2)
 
-client.query(section_article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/10_relationships_section_to_article.csv"))
+
+client.query(data_controller_dataProtectionAssessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_CONDUCTS_DATA_PROTECTION_ASSESSMENT_relationships.csv"))
 time.sleep(2)
 
-client.query(article_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/11_relationships_article_to_recital.csv"))
+client.query(data_controller_optOutMechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ENFORCES_OPT_OUT_relationships.csv"))
 time.sleep(2)
 
-client.query(article_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/17_relationships_article_to_paragraph.csv"))
+client.query(data_controller_consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_OBTAINS_CONSENT_relationships.csv"))
 time.sleep(2)
 
-client.query(recital_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/23_relationships_recital_to_paragraph_CLEANED.csv"))
+client.query(data_controller_processingActivity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_PROCESSES_PERSONAL_DATA_relationships.csv"))
 time.sleep(2)
 
-client.query(paragraph_sub_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/18_relationships_paragraph_to_subparagraph.csv"))
+client.query(data_controller_dataBreach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_REPORTS_DATA_BREACH_relationships.csv"))
 time.sleep(2)
 
-client.query(regional_standard_regulation_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/19_relationships_regulation_to_legislative_action.csv"))
+client.query(data_controller_consumerRequest.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_RESPONDS_TO_REQUEST_relationships.csv"))
 time.sleep(2)
 
-client.query(article_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/21_relationships_article_to_concepts.csv"))
+client.query(data_controller_dataProcessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_SHARES_WITH_PROCESSOR_relationships.csv"))
 time.sleep(2)
 
-client.query(recital_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/22_relationships_recital_to_concepts.csv"))
+#Orphan
+client.query(orphan_nodes_cleanup)
 time.sleep(2)
+
 
 logger.info("Graph structure loaded successfully.")
 

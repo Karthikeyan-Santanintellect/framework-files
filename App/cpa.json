@@ -1,0 +1,1244 @@
+{
+  "nodes": [
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10532",
+      "mainLabel": "RegionalStandardAndRegulation",
+      "labels": [
+        "RegionalStandardAndRegulation"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "enforcement_date": "2023-07-01",
+      "jurisdiction": "Colorado (State)",
+      "codification": "Colorado Revised Statutes § 6-1-1303 through § 6-1-1313",
+      "name": "Colorado Privacy Act",
+      "effective_date": "2023-07-01",
+      "description": "The CPA is Colorado's comprehensive consumer privacy law that protects the privacy rights of Colorado residents, establishes controller and processor obligations, and grants enforcement authority to the Colorado Attorney General and District Attorneys.",
+      "version": "1.0",
+      "enactment_date": "2021-07-07",
+      "status": "Active",
+      "base_regulation": "Colorado Consumer Protection Act"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "industry_sector": "Media/Advertising",
+      "organization_name": "Media & Analytics Co",
+      "subject_to_biometric_rules": "True",
+      "type": "Commercial",
+      "registration_date": "2023-07-31",
+      "controller_id": "CTRL-005",
+      "last_audit_date": "2024-06-15",
+      "data_from_sale_revenue": "True",
+      "privacy_officer_contact": "tbd@media-analytics.com",
+      "location": "Aurora, CO",
+      "dpa_count": "3",
+      "privacy_officer_assigned": "False",
+      "privacy_policy_published_date": "2023-07-25",
+      "annual_data_volume_consumers": "200000",
+      "compliance_status": "UnderReview"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10537",
+      "mainLabel": "ConsentRecord",
+      "labels": [
+        "ConsentRecord"
+      ],
+      "date": "2023-09-01",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "dark_pattern_used": "False",
+      "method": "ExplicitOptIn",
+      "type": "SensitiveDataConsent",
+      "expiration_date": "2024-12-01",
+      "freely_given": "True",
+      "consent_proof_documentation": "Pending collection",
+      "refresh_required": "True",
+      "specificity_level": "Specific",
+      "unambiguous_agreement": "True",
+      "consent_id": "CONS-005",
+      "status": "Pending",
+      "informed_status": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10550",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "date": "2024-04-05",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "response_status": "Granted",
+      "response_date": "2024-05-15",
+      "actual_cost_charged": "0.0",
+      "channel": "Email",
+      "verified": "True",
+      "documentation_maintained": "True",
+      "type": "OptOutRequest",
+      "portable_format_provided": "False",
+      "verification_method": "PasswordVerification",
+      "estimated_cost": "0.0",
+      "response_deadline": "2024-05-20",
+      "appeal_submitted": "False",
+      "request_id": "REQ-005",
+      "status": "Processed"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10568",
+      "mainLabel": "DataProtectionAssessment",
+      "labels": [
+        "DataProtectionAssessment"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "remediation_required": "True",
+      "due_date": "2025-05-15",
+      "processing_activity_assessed": "Sensitive Data Processing",
+      "ag_request_received": "False",
+      "assessment_status": "Planned",
+      "external_experts_engaged": "False",
+      "risk_level_overall": "High",
+      "risk_description": "Health data processing; Parental consent required",
+      "benefits_identified": "Medical research; Health improvement",
+      "documentation_complete": "False",
+      "dpa_id": "DPA-005",
+      "risks_identified": "Breach exposure; Sensitive information loss",
+      "risk_identified": "True",
+      "deadline": "2024-12-01",
+      "risk_mitigation_measures": "Encryption; Access controls; Audit trails; Consent",
+      "assessment_date": "2024-05-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10588",
+      "mainLabel": "ProcessingActivity",
+      "labels": [
+        "ProcessingActivity"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "high_risk_flag": "False",
+      "purpose": "Customer service and support",
+      "legal_basis": "Contract",
+      "profiling_involved": "False",
+      "recipients_of_data": "Support staff; CRM system",
+      "type": "Communication",
+      "frequency": "As Needed",
+      "dpa_required": "False",
+      "data_retention_period": "6 months",
+      "automated_decision_making": "False",
+      "name": "Customer Support Communication",
+      "activity_id": "ACT-005",
+      "cross_border_transfer": "False",
+      "impact_assessment_status": "Completed",
+      "start_date": "2023-07-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10543",
+      "mainLabel": "Consumer",
+      "labels": [
+        "Consumer"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "has_sensitive_data": "False",
+      "portability_request_count": "0",
+      "age_group": "Adult",
+      "location_state": "Colorado",
+      "deletion_request_count": "1",
+      "correction_request_count": "2",
+      "consumer_id": "CON-005",
+      "complaint_filed": "False",
+      "is_minor": "False",
+      "last_engagement_date": "2024-10-18",
+      "access_request_count": "3",
+      "status": "Consented"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "industry_sector": "Financial Services",
+      "organization_name": "Finance Solutions LLC",
+      "subject_to_biometric_rules": "False",
+      "type": "Commercial",
+      "registration_date": "2023-09-10",
+      "controller_id": "CTRL-004",
+      "last_audit_date": "2024-10-01",
+      "data_from_sale_revenue": "True",
+      "privacy_officer_contact": "privacy@finance-sol.com",
+      "location": "Fort Collins, CO",
+      "dpa_count": "15",
+      "privacy_officer_assigned": "True",
+      "privacy_policy_published_date": "2023-09-05",
+      "annual_data_volume_consumers": "320000",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10536",
+      "mainLabel": "ConsentRecord",
+      "labels": [
+        "ConsentRecord"
+      ],
+      "date": "2023-08-25",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "dark_pattern_used": "False",
+      "method": "SignedDocument",
+      "type": "ProfilingConsent",
+      "expiration_date": "2024-08-25",
+      "last_refresh_date": "2024-02-25",
+      "freely_given": "True",
+      "consent_proof_documentation": "Signed form",
+      "refresh_required": "False",
+      "specificity_level": "Specific",
+      "unambiguous_agreement": "True",
+      "consent_id": "CONS-004",
+      "status": "Given",
+      "informed_status": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10563",
+      "mainLabel": "DataProcessor",
+      "labels": [
+        "DataProcessor"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "liability_insurance": "True",
+      "contact_person": "Robert Martinez",
+      "max_data_records": "1000000",
+      "gdpr_compliant": "True",
+      "breach_history": "0",
+      "count": "5",
+      "services": "Compliance auditing; Security assessment",
+      "subprocessor_count": "2",
+      "type": "ServiceProvider",
+      "certifications": "ISO 27001; ISO 27035",
+      "security_measures_implemented": "Vulnerability scanning; Penetration testing; SIEM",
+      "name": "Security Audit Corp",
+      "processor_id": "PROC-004",
+      "audit_frequency": "Quarterly",
+      "ccpa_compliant": "True",
+      "location": "Colorado Springs, CO"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10549",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "date": "2024-03-21",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "response_status": "Granted",
+      "response_date": "2024-04-28",
+      "actual_cost_charged": "0.0",
+      "channel": "OnlinePortal",
+      "verified": "True",
+      "data_format_requested": "JSON",
+      "documentation_maintained": "True",
+      "type": "PortabilityRequest",
+      "portable_format_provided": "True",
+      "verification_method": "EmailConfirmation",
+      "estimated_cost": "0.0",
+      "response_deadline": "2024-05-04",
+      "appeal_submitted": "False",
+      "request_id": "REQ-004",
+      "status": "Processed"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10567",
+      "mainLabel": "DataProtectionAssessment",
+      "labels": [
+        "DataProtectionAssessment"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "remediation_required": "False",
+      "due_date": "2025-04-05",
+      "processing_activity_assessed": "Performance Analytics",
+      "ag_request_received": "False",
+      "assessment_status": "In Progress",
+      "external_experts_engaged": "True",
+      "risk_level_overall": "Moderate",
+      "risk_description": "Limited risk identified",
+      "benefits_identified": "Platform optimization; Better recommendations",
+      "documentation_complete": "False",
+      "dpa_id": "DPA-004",
+      "risks_identified": "Data accuracy; Inference errors",
+      "risk_identified": "False",
+      "risk_mitigation_measures": "Data validation; Bias testing; Monitoring",
+      "assessment_date": "2024-04-05"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10587",
+      "mainLabel": "ProcessingActivity",
+      "labels": [
+        "ProcessingActivity"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "high_risk_flag": "True",
+      "purpose": "Behavioral analysis and user profiling",
+      "legal_basis": "Consent",
+      "profiling_involved": "True",
+      "recipients_of_data": "Internal analytics team",
+      "type": "Analysis",
+      "frequency": "Continuous",
+      "dpa_required": "True",
+      "data_retention_period": "1 year",
+      "automated_decision_making": "True",
+      "name": "Behavioral Profiling Analysis",
+      "activity_id": "ACT-004",
+      "cross_border_transfer": "False",
+      "impact_assessment_status": "Completed",
+      "start_date": "2023-08-20"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10569",
+      "mainLabel": "OptOutMechanism",
+      "labels": [
+        "OptOutMechanism"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "request_tracking": "True",
+      "technical_standard_compliant": "CPA_Standard",
+      "mechanism_id": "OPTOUT-001",
+      "method_type": "PrivacyPortal",
+      "compliance_rate": "98.5",
+      "verified": "True",
+      "no_account_required": "True",
+      "type": "SaleOfData",
+      "name": "Data Sale Opt-Out",
+      "audit_frequency": "Quarterly",
+      "single_request_only": "True",
+      "location": "Homepage; Account settings; Footer",
+      "placement": "True",
+      "consumer_count_": "8500",
+      "response_timeline": "Within 15 days",
+      "implementation_date": "2023-07-01",
+      "retention": "12 months minimum"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10542",
+      "mainLabel": "Consumer",
+      "labels": [
+        "Consumer"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "has_sensitive_data": "True",
+      "portability_request_count": "1",
+      "age_group": "Adult",
+      "location_state": "Colorado",
+      "deletion_request_count": "1",
+      "correction_request_count": "0",
+      "consumer_id": "CON-004",
+      "complaint_filed": "False",
+      "is_minor": "False",
+      "last_engagement_date": "2024-09-01",
+      "access_request_count": "2",
+      "status": "NeverAsked"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "industry_sector": "Healthcare",
+      "organization_name": "HealthCare Plus",
+      "subject_to_biometric_rules": "True",
+      "type": "Commercial",
+      "registration_date": "2023-07-20",
+      "controller_id": "CTRL-003",
+      "last_audit_date": "2024-07-10",
+      "data_from_sale_revenue": "False",
+      "privacy_officer_contact": "dpa@healthcareplus.com",
+      "location": "Colorado Springs, CO",
+      "dpa_count": "5",
+      "privacy_officer_assigned": "True",
+      "privacy_policy_published_date": "2023-07-15",
+      "annual_data_volume_consumers": "150000",
+      "compliance_status": "PartiallyCompliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10554",
+      "mainLabel": "DataBreachIncident",
+      "labels": [
+        "DataBreachIncident"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "occurrence_date": "2024-08-05",
+      "notification_date": "2024-08-15",
+      "regulatory_penalty_amount": "0.0",
+      "notification_status": "NotifiedConsumers",
+      "law_enforcement_involved": "False",
+      "type": "InternalError",
+      "immediate_actions_taken": "Notified consumer; File recovered; Enhanced backups",
+      "remediation_status": "Completed",
+      "children_data_involved": "False",
+      "affected_consumer_count": "50",
+      "credit_monitoring_provided": "False",
+      "data_types_compromised": "Single email address; Contact info",
+      "sensitive_data_involved": "False",
+      "scope": "SingleRecord",
+      "lessons_learned": "Improved access controls; Better recovery procedures",
+      "total_costs": "5000.0",
+      "insurance_claim_filed": "False",
+      "compensation_offered": "False",
+      "litigation_risk": "Low",
+      "breach_id": "BREACH-003",
+      "discovery_date": "2024-08-10",
+      "root_cause": "Accidental deletion reversal"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10535",
+      "mainLabel": "ConsentRecord",
+      "labels": [
+        "ConsentRecord"
+      ],
+      "date": "2023-08-20",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "dark_pattern_used": "False",
+      "method": "ClearAffirmativeAction",
+      "type": "TargetedAdvertisingConsent",
+      "withdrawal_date": "2024-08-20",
+      "last_refresh_date": "2024-08-20",
+      "freely_given": "True",
+      "consent_proof_documentation": "Checkbox record",
+      "refresh_required": "False",
+      "specificity_level": "Specific",
+      "unambiguous_agreement": "True",
+      "consent_id": "CONS-003",
+      "status": "Withdrawn",
+      "informed_status": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10562",
+      "mainLabel": "DataProcessor",
+      "labels": [
+        "DataProcessor"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "liability_insurance": "True",
+      "contact_person": "Jennifer Kim",
+      "max_data_records": "8000000",
+      "gdpr_compliant": "True",
+      "breach_history": "1",
+      "count": "15",
+      "services": "Campaign management; Reporting",
+      "subprocessor_count": "5",
+      "type": "Vendor",
+      "certifications": "ISO 27001",
+      "security_measures_implemented": "Encryption; Segmentation; Audit trails",
+      "name": "Marketing Partners Inc",
+      "processor_id": "PROC-003",
+      "audit_frequency": "Annual",
+      "ccpa_compliant": "True",
+      "location": "Austin, TX"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10548",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "date": "2024-03-02",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "response_status": "Denied",
+      "response_date": "2024-04-10",
+      "actual_cost_charged": "0.0",
+      "channel": "Phone",
+      "verified": "True",
+      "documentation_maintained": "True",
+      "type": "CorrectionRequest",
+      "portable_format_provided": "False",
+      "verification_method": "TwoFactor",
+      "estimated_cost": "0.0",
+      "denial_reason": "Data still necessary for contract",
+      "response_deadline": "2024-04-15",
+      "appeal_submitted": "True",
+      "request_id": "REQ-003",
+      "status": "Denied"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10566",
+      "mainLabel": "DataProtectionAssessment",
+      "labels": [
+        "DataProtectionAssessment"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "remediation_required": "True",
+      "due_date": "2025-03-10",
+      "processing_activity_assessed": "Behavioral Profiling",
+      "ag_request_received": "False",
+      "assessment_status": "Completed",
+      "external_experts_engaged": "False",
+      "risk_level_overall": "High",
+      "review_date": "2024-12-10",
+      "risk_description": "Extensive profiling; Automated decisions",
+      "benefits_identified": "Service improvement; User insights",
+      "documentation_complete": "True",
+      "dpa_id": "DPA-003",
+      "risks_identified": "Automated discrimination; Profiling harms",
+      "risk_identified": "True",
+      "deadline": "2024-06-10",
+      "risk_mitigation_measures": "Human review; Transparency; Opt-out rights",
+      "assessment_date": "2024-03-10"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10586",
+      "mainLabel": "ProcessingActivity",
+      "labels": [
+        "ProcessingActivity"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "high_risk_flag": "True",
+      "purpose": "Revenue generation through data sales",
+      "legal_basis": "Consent",
+      "profiling_involved": "False",
+      "recipients_of_data": "Data brokers; Analytics firms",
+      "type": "Sale",
+      "frequency": "Monthly",
+      "dpa_required": "True",
+      "data_retention_period": "90 days",
+      "automated_decision_making": "False",
+      "name": "Data Sale to Third Parties",
+      "activity_id": "ACT-003",
+      "cross_border_transfer": "True",
+      "impact_assessment_status": "Completed",
+      "start_date": "2023-09-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10571",
+      "mainLabel": "OptOutMechanism",
+      "labels": [
+        "OptOutMechanism"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "request_tracking": "True",
+      "technical_standard_compliant": "CPA_Standard",
+      "mechanism_id": "OPTOUT-003",
+      "method_type": "DirectRequest",
+      "compliance_rate": "97.2",
+      "verified": "True",
+      "no_account_required": "False",
+      "type": "Profiling",
+      "name": "Behavioral Profiling Opt-Out",
+      "audit_frequency": "BiAnnual",
+      "single_request_only": "True",
+      "location": "Email opt-out link",
+      "placement": "True",
+      "consumer_count_": "4200",
+      "response_timeline": "Within 30 days",
+      "implementation_date": "2023-08-01",
+      "retention": "Indefinite"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10541",
+      "mainLabel": "Consumer",
+      "labels": [
+        "Consumer"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "has_sensitive_data": "True",
+      "portability_request_count": "0",
+      "age_group": "Minor",
+      "location_state": "Colorado",
+      "deletion_request_count": "0",
+      "correction_request_count": "0",
+      "consumer_id": "CON-003",
+      "complaint_filed": "False",
+      "is_minor": "True",
+      "last_engagement_date": "2024-10-20",
+      "access_request_count": "0",
+      "status": "Consented"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "industry_sector": "Retail",
+      "organization_name": "RetailMax Corporation",
+      "subject_to_biometric_rules": "False",
+      "type": "Commercial",
+      "registration_date": "2023-08-01",
+      "controller_id": "CTRL-002",
+      "last_audit_date": "2024-08-20",
+      "data_from_sale_revenue": "True",
+      "privacy_officer_contact": "dpo@retailmax.com",
+      "location": "Boulder, CO",
+      "dpa_count": "12",
+      "privacy_officer_assigned": "True",
+      "privacy_policy_published_date": "2023-07-28",
+      "annual_data_volume_consumers": "180000",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10553",
+      "mainLabel": "DataBreachIncident",
+      "labels": [
+        "DataBreachIncident"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "ag_notification_date": "2024-07-26",
+      "occurrence_date": "2024-07-15",
+      "notification_date": "2024-07-25",
+      "regulatory_penalty_amount": "50000.0",
+      "notification_status": "NotifiedConsumers",
+      "law_enforcement_involved": "True",
+      "type": "Ransomware",
+      "immediate_actions_taken": "Systems isolated; Ransom negotiated; Data restored",
+      "remediation_status": "In Progress",
+      "children_data_involved": "True",
+      "affected_consumer_count": "45000",
+      "credit_monitoring_provided": "True",
+      "data_types_compromised": "Email; Names; Payment info; Medical records",
+      "sensitive_data_involved": "True",
+      "scope": "MassExposure",
+      "lessons_learned": "Segmented networks; Advanced threat detection",
+      "total_costs": "850000.0",
+      "insurance_claim_filed": "True",
+      "compensation_offered": "True",
+      "litigation_risk": "High",
+      "breach_id": "BREACH-002",
+      "discovery_date": "2024-07-20",
+      "root_cause": "Ransomware infection"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10534",
+      "mainLabel": "ConsentRecord",
+      "labels": [
+        "ConsentRecord"
+      ],
+      "date": "2023-08-15",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "dark_pattern_used": "False",
+      "method": "ClearAffirmativeAction",
+      "type": "SaleConsent",
+      "expiration_date": "2024-08-15",
+      "last_refresh_date": "2024-08-15",
+      "freely_given": "True",
+      "consent_proof_documentation": "Checkbox record",
+      "refresh_required": "False",
+      "specificity_level": "Specific",
+      "unambiguous_agreement": "True",
+      "consent_id": "CONS-002",
+      "status": "Given",
+      "informed_status": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10561",
+      "mainLabel": "DataProcessor",
+      "labels": [
+        "DataProcessor"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "liability_insurance": "True",
+      "contact_person": "Michael Rodriguez",
+      "max_data_records": "5000000",
+      "gdpr_compliant": "True",
+      "breach_history": "0",
+      "count": "8",
+      "services": "Data analysis; Insights generation",
+      "subprocessor_count": "1",
+      "type": "ServiceProvider",
+      "certifications": "SOC 2 Type II; ISO 27018",
+      "security_measures_implemented": "Encryption; Access controls; Logging",
+      "name": "Analytics Engine Ltd",
+      "processor_id": "PROC-002",
+      "audit_frequency": "BiAnnual",
+      "ccpa_compliant": "True",
+      "location": "Boulder, CO"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10547",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "date": "2024-02-16",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "response_status": "Granted",
+      "response_date": "2024-03-30",
+      "actual_cost_charged": "0.0",
+      "channel": "Email",
+      "verified": "True",
+      "data_format_requested": "CSV",
+      "documentation_maintained": "True",
+      "type": "DeletionRequest",
+      "portable_format_provided": "True",
+      "verification_method": "IdentityDocuments",
+      "estimated_cost": "0.0",
+      "response_deadline": "2024-04-01",
+      "appeal_submitted": "False",
+      "request_id": "REQ-002",
+      "status": "Processed"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10565",
+      "mainLabel": "DataProtectionAssessment",
+      "labels": [
+        "DataProtectionAssessment"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "remediation_required": "True",
+      "due_date": "2025-02-20",
+      "processing_activity_assessed": "Data Sale Operations",
+      "ag_request_received": "True",
+      "assessment_status": "Completed",
+      "submission_date": "2024-03-01",
+      "external_experts_engaged": "True",
+      "risk_level_overall": "CriticallyHigh",
+      "review_date": "2024-11-01",
+      "risk_description": "Sale of sensitive data; Inadequate safeguards",
+      "benefits_identified": "Revenue generation; Data monetization",
+      "documentation_complete": "True",
+      "dpa_id": "DPA-002",
+      "risks_identified": "Data breaches; Third-party risks; Misuse",
+      "risk_identified": "True",
+      "deadline": "2024-05-01",
+      "risk_mitigation_measures": "Encryption; Vendor vetting; Retention limits",
+      "assessment_date": "2024-02-20"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10585",
+      "mainLabel": "ProcessingActivity",
+      "labels": [
+        "ProcessingActivity"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "high_risk_flag": "True",
+      "purpose": "Personalized ad targeting",
+      "legal_basis": "Consent",
+      "profiling_involved": "True",
+      "recipients_of_data": "Ad networks; Marketing partners",
+      "type": "Sharing",
+      "frequency": "Ongoing",
+      "dpa_required": "True",
+      "data_retention_period": "1 year",
+      "automated_decision_making": "True",
+      "name": "Targeted Advertising Campaign",
+      "activity_id": "ACT-002",
+      "cross_border_transfer": "True",
+      "impact_assessment_status": "Completed",
+      "start_date": "2023-08-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10570",
+      "mainLabel": "OptOutMechanism",
+      "labels": [
+        "OptOutMechanism"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "request_tracking": "True",
+      "technical_standard_compliant": "GPC",
+      "mechanism_id": "OPTOUT-002",
+      "method_type": "BrowserSignal",
+      "compliance_rate": "99.8",
+      "verified": "True",
+      "no_account_required": "True",
+      "type": "TargetedAdvertising",
+      "name": "Ad Personalization Opt-Out",
+      "audit_frequency": "Quarterly",
+      "single_request_only": "True",
+      "location": "Browser header detection",
+      "placement": "True",
+      "consumer_count_": "12300",
+      "response_timeline": "Immediate",
+      "implementation_date": "2023-07-15",
+      "retention": "24 months"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10540",
+      "mainLabel": "Consumer",
+      "labels": [
+        "Consumer"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "has_sensitive_data": "False",
+      "portability_request_count": "0",
+      "age_group": "Senior",
+      "location_state": "Colorado",
+      "deletion_request_count": "0",
+      "correction_request_count": "0",
+      "consumer_id": "CON-002",
+      "complaint_filed": "True",
+      "opt_out_date": "2024-08-15",
+      "is_minor": "False",
+      "last_engagement_date": "2024-08-15",
+      "access_request_count": "0",
+      "status": "WithheldConsent"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "industry_sector": "Technology",
+      "organization_name": "TechFlow Inc",
+      "subject_to_biometric_rules": "False",
+      "type": "Commercial",
+      "registration_date": "2023-07-15",
+      "controller_id": "CTRL-001",
+      "last_audit_date": "2024-09-15",
+      "data_from_sale_revenue": "False",
+      "privacy_officer_contact": "privacy@techflow.com",
+      "location": "Denver, CO",
+      "dpa_count": "8",
+      "privacy_officer_assigned": "True",
+      "privacy_policy_published_date": "2023-07-10",
+      "annual_data_volume_consumers": "250000",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10552",
+      "mainLabel": "DataBreachIncident",
+      "labels": [
+        "DataBreachIncident"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "ag_notification_date": "2024-06-26",
+      "occurrence_date": "2024-06-10",
+      "notification_date": "2024-06-25",
+      "regulatory_penalty_amount": "0.0",
+      "notification_status": "NotifiedConsumers",
+      "law_enforcement_involved": "True",
+      "type": "UnauthorizedAccess",
+      "immediate_actions_taken": "Accounts secured; Passwords reset",
+      "remediation_status": "Completed",
+      "children_data_involved": "False",
+      "affected_consumer_count": "1250",
+      "credit_monitoring_provided": "True",
+      "data_types_compromised": "Email addresses; Names; Addresses",
+      "sensitive_data_involved": "False",
+      "scope": "LimitedScope",
+      "lessons_learned": "Implemented MFA; Enhanced monitoring",
+      "total_costs": "125000.0",
+      "insurance_claim_filed": "True",
+      "compensation_offered": "True",
+      "litigation_risk": "Low",
+      "breach_id": "BREACH-001",
+      "discovery_date": "2024-06-15",
+      "root_cause": "Credential compromise"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10533",
+      "mainLabel": "ConsentRecord",
+      "labels": [
+        "ConsentRecord"
+      ],
+      "date": "2023-07-10",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "dark_pattern_used": "False",
+      "method": "ExplicitOptIn",
+      "type": "DataCollectionConsent",
+      "expiration_date": "2024-07-10",
+      "last_refresh_date": "2024-07-10",
+      "freely_given": "True",
+      "consent_proof_documentation": "Email confirmation",
+      "refresh_required": "False",
+      "specificity_level": "Specific",
+      "unambiguous_agreement": "True",
+      "consent_id": "CONS-001",
+      "status": "Given",
+      "informed_status": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10560",
+      "mainLabel": "DataProcessor",
+      "labels": [
+        "DataProcessor"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "liability_insurance": "True",
+      "contact_person": "Sarah Chen",
+      "max_data_records": "10000000",
+      "gdpr_compliant": "True",
+      "breach_history": "0",
+      "count": "12",
+      "services": "Cloud storage; Data backup; Analytics",
+      "subprocessor_count": "3",
+      "type": "CloudProvider",
+      "certifications": "ISO 27001; SOC 2 Type II",
+      "security_measures_implemented": "Encryption; MFA; Firewall; Intrusion Detection",
+      "name": "CloudData Services",
+      "processor_id": "PROC-001",
+      "audit_frequency": "Annual",
+      "ccpa_compliant": "True",
+      "location": "Denver, CO"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10546",
+      "mainLabel": "ConsumerRequest",
+      "labels": [
+        "ConsumerRequest"
+      ],
+      "date": "2024-01-10",
+      "regional_standard_regulation_id": "CPA 1.0",
+      "response_status": "Granted",
+      "response_date": "2024-02-20",
+      "actual_cost_charged": "0.0",
+      "channel": "OnlinePortal",
+      "verified": "True",
+      "data_format_requested": "PDF",
+      "documentation_maintained": "True",
+      "type": "AccessRequest",
+      "portable_format_provided": "True",
+      "verification_method": "PasswordVerification",
+      "estimated_cost": "0.0",
+      "response_deadline": "2024-02-24",
+      "appeal_submitted": "False",
+      "request_id": "REQ-001",
+      "status": "Processed"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10564",
+      "mainLabel": "DataProtectionAssessment",
+      "labels": [
+        "DataProtectionAssessment"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "remediation_required": "True",
+      "due_date": "2025-01-15",
+      "processing_activity_assessed": "Targeted Advertising",
+      "ag_request_received": "False",
+      "assessment_status": "Completed",
+      "external_experts_engaged": "False",
+      "risk_level_overall": "High",
+      "review_date": "2024-10-15",
+      "risk_description": "Targeting minors; Cross-border transfers",
+      "benefits_identified": "Personalized user experience; Revenue",
+      "documentation_complete": "True",
+      "dpa_id": "DPA-001",
+      "risks_identified": "Privacy invasion; Profiling risks; Minor protection",
+      "risk_identified": "True",
+      "deadline": "2024-04-15",
+      "risk_mitigation_measures": "Age-gating; Parental consent; Data minimization",
+      "assessment_date": "2024-01-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10589",
+      "mainLabel": "ProcessingActivity",
+      "labels": [
+        "ProcessingActivity"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "high_risk_flag": "True",
+      "purpose": "Service improvement and analytics",
+      "legal_basis": "Legitimate Interests",
+      "profiling_involved": "True",
+      "recipients_of_data": "Analytics platform; Insights dashboard",
+      "type": "Analysis",
+      "frequency": "Daily",
+      "dpa_required": "True",
+      "data_retention_period": "Ongoing",
+      "automated_decision_making": "True",
+      "name": "Performance Analytics",
+      "activity_id": "ACT-006",
+      "cross_border_transfer": "False",
+      "impact_assessment_status": "In Progress",
+      "start_date": "2023-07-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10584",
+      "mainLabel": "ProcessingActivity",
+      "labels": [
+        "ProcessingActivity"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "high_risk_flag": "False",
+      "purpose": "Account creation and management",
+      "legal_basis": "Consent",
+      "profiling_involved": "False",
+      "recipients_of_data": "Internal teams only",
+      "type": "Collection",
+      "frequency": "Ongoing",
+      "dpa_required": "True",
+      "data_retention_period": "3 years",
+      "automated_decision_making": "False",
+      "name": "Customer Account Registration",
+      "activity_id": "ACT-001",
+      "cross_border_transfer": "False",
+      "impact_assessment_status": "Completed",
+      "start_date": "2023-07-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10539",
+      "mainLabel": "Consumer",
+      "labels": [
+        "Consumer"
+      ],
+      "regional_standard_regulation_id": "CPA 1.0",
+      "has_sensitive_data": "False",
+      "portability_request_count": "0",
+      "age_group": "Adult",
+      "location_state": "Colorado",
+      "deletion_request_count": "0",
+      "correction_request_count": "1",
+      "consumer_id": "CON-001",
+      "complaint_filed": "False",
+      "is_minor": "False",
+      "last_engagement_date": "2024-10-15",
+      "access_request_count": "1",
+      "status": "Consented"
+    }
+  ],
+  "links": [
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162315731954575652",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10532",
+      "type": "REGULATION_HAS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153309632211462463",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559",
+      "type": "DATA_CONTROLLER_HAS_CONSENT_RECORD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10537"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153306333676579135",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559",
+      "type": "DATA_CONTROLLER_RESPONDS_TO_CONSUMER_REQUEST",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10550"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153305234164951359",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559",
+      "type": "DATA_CONTROLLER_DATA_PROTECTS_DATA_PROTECTION_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10568"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153300836118440255",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559",
+      "type": "DATA_CONTROLLER_PROCESSING_ACTIVITY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10588"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153297537583556927",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10559",
+      "type": "DATA_CONTROLLER_CONTROLS_CONSUMER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10543"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160063932140890404",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10532",
+      "type": "REGULATION_HAS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153309632211462462",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_HAS_CONSENT_RECORD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10536"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153307433188206910",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_PROCESSES_DATA_PROCESSOR",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10563"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153306333676579134",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_RESPONDS_TO_CONSUMER_REQUEST",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10549"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153305234164951358",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_DATA_PROTECTS_DATA_PROTECTION_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10567"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153300836118440254",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_PROCESSING_ACTIVITY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10587"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153298637095184702",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_FORCES_OPT_OUT_MECHANISM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10569"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153297537583556926",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10558",
+      "type": "DATA_CONTROLLER_CONTROLS_CONSUMER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10542"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157812132327205156",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10532",
+      "type": "REGULATION_HAS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153310731723090237",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_BREACH_DATA_BREACH",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10554"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153309632211462461",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_HAS_CONSENT_RECORD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10535"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917914956222441794",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_PROCESSES_DATA_PROCESSOR",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10562"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153306333676579133",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_RESPONDS_TO_CONSUMER_REQUEST",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10548"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153305234164951357",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_DATA_PROTECTS_DATA_PROTECTION_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10566"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153300836118440253",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_PROCESSING_ACTIVITY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10586"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153298637095184701",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_FORCES_OPT_OUT_MECHANISM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10571"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153297537583556925",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10557",
+      "type": "DATA_CONTROLLER_CONTROLS_CONSUMER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10541"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155560332513519908",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10532",
+      "type": "REGULATION_HAS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153310731723090236",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_BREACH_DATA_BREACH",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10553"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153309632211462460",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_HAS_CONSENT_RECORD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10534"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917914956222441793",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_PROCESSES_DATA_PROCESSOR",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10561"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153306333676579132",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_RESPONDS_TO_CONSUMER_REQUEST",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10547"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153305234164951356",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_DATA_PROTECTS_DATA_PROTECTION_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10565"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153300836118440252",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_PROCESSING_ACTIVITY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10585"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153298637095184700",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_FORCES_OPT_OUT_MECHANISM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10570"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153297537583556924",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10556",
+      "type": "DATA_CONTROLLER_CONTROLS_CONSUMER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10540"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153308532699834660",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10532",
+      "type": "REGULATION_HAS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153310731723090235",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_BREACH_DATA_BREACH",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10552"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153309632211462459",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_HAS_CONSENT_RECORD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10533"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917914956222441792",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_PROCESSES_DATA_PROCESSOR",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10560"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153306333676579131",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_RESPONDS_TO_CONSUMER_REQUEST",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10546"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153305234164951355",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_DATA_PROTECTS_DATA_PROTECTION_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10564"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155552635932125499",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_PROCESSING_ACTIVITY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10589"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153300836118440251",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_PROCESSING_ACTIVITY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10584"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153298637095184699",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_FORCES_OPT_OUT_MECHANISM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10569"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153297537583556923",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10555",
+      "type": "DATA_CONTROLLER_CONTROLS_CONSUMER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10539"
+    }
+  ]
+}
