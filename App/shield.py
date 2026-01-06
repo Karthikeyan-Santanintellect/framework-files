@@ -274,7 +274,7 @@ ON CREATE SET
 #risk_assessment
 risk_assesment ="""
 Load CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ra:RiskAssessment {assessment_id: row.assessment_id})
+MERGE (ra:RiskAssessment {assessment_id: row.assessment_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
 ON CREATE SET 
     ra.name = row.assessment_name,
     ra._type = row.assessment_type,
@@ -398,6 +398,7 @@ MERGE (dc)-[:DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT]->(ca);
 """
 
 
+
 import sys
 import os
 import time
@@ -497,13 +498,13 @@ time.sleep(2)
 client.query(databreach_nyresident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_NOTIFIES_AFFECTED_INDIVIDUAL_relationships.csv"))
 time.sleep(2)
 
-client.query(datacontroller_private_information)
+client.query(datacontroller_private_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_OwnsLicenses_PrivateInfo.csv"))
 time.sleep(2)
 
 client.query(security_program_training_employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_PROVIDES_TRAINING_TO_relationships.csv"))
 time.sleep(2)
 
-client.query(data_breach_government_agency)
+client.query(data_breach_government_agency.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_REPORTS_TO_GOVERNMENT_relationships.csv"))
 time.sleep(2)
 
 client.query(datacontroller_compliance_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_UNDERGOES_COMPLIANCE_ASSESSMENT_relationships.csv"))
