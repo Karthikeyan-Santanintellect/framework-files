@@ -295,7 +295,7 @@ ON CREATE SET
 regulation_data_controller = """
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (dc)-[:REGULATION_GOVERNED_BY_DATA_CONTROLLER]->(reg);
+MERGE (reg)-[:REGULATION_GOVERNS_DATA_CONTROLLER]->(dc);
 """
 #data_controller_data_breach
 data_controller_data_breach = """
@@ -365,7 +365,7 @@ MERGE (br)-[:DATA_BREACH_NOTIFIES_AFFECTED_INDIVIDUAL_NY_RESIDENT]->(nr);
 datacontroller_private_information = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (dc:DataController {controller_id: row.source_controller_id})
-MATCH (pi:PrivateInformation {info_id: row.target_info_id})
+MATCH (pi:PrivateInformation {info_id: row.target_private_information_id})
 MERGE (dc)-[:DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION]->(pi);
 """
 
@@ -498,7 +498,7 @@ time.sleep(2)
 client.query(databreach_nyresident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_NOTIFIES_AFFECTED_INDIVIDUAL_relationships.csv"))
 time.sleep(2)
 
-client.query(datacontroller_private_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_OwnsLicenses_PrivateInfo.csv"))
+client.query(datacontroller_private_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_OwnsLicenses_Corrected.csv"))
 time.sleep(2)
 
 client.query(security_program_training_employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_PROVIDES_TRAINING_TO_relationships.csv"))

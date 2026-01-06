@@ -1,4 +1,1466 @@
 {
-  "nodes": [],
-  "links": []
+  "nodes": [
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "mainLabel": "RegionalStandardAndRegulation",
+      "labels": [
+        "RegionalStandardAndRegulation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "enforcement_date": "2020-03-21",
+      "jurisdiction": "New York (State)",
+      "codification": "New York General Business Law Article 39-F §§ 899-aa and 899-bb",
+      "name": "New York Stop Hacks and Improve Electronic Data Security (SHIELD) Act",
+      "effective_date": "2020-03-21",
+      "description": "The SHIELD Act is New York's data security and breach notification law that amends the state's Information Security Breach and Notification Act, expands the scope of 'private information', and requires any person or business that owns or licenses private information of New York residents to implement reasonable administrative, technical, and physical safeguards, enforced by the New York Attorney General.",
+      "version": "1.0",
+      "enactment_date": "2019-07-25",
+      "status": "Active",
+      "base_regulation": "New York Information Security Breach and Notification Act"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10832",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "employee_count": "800",
+      "total_assets": "550000000.0",
+      "hipaa_compliant": "False",
+      "contact_phone": "+1-212-555-0600",
+      "nysag_regulated": "False",
+      "security_program_coordinator": "Thomas Kelly",
+      "type": "FinancialInstitution",
+      "business_size": "LargeBusiness",
+      "contact_email": "security@empireins.com",
+      "glba_compliant": "True",
+      "data_classification_implemented": "True",
+      "controller_id": "CTR-006",
+      "nysdfs_regulated": "True",
+      "state_jurisdiction": "New York",
+      "name": "Empire Insurance Co",
+      "last_security_audit_date": "2024-09-01",
+      "annual_revenue": "95000000.0",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873",
+      "mainLabel": "PrivateInformation",
+      "labels": [
+        "PrivateInformation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "retention_guidance": "1 year",
+      "examples": "user@email.com + password",
+      "requires_combination_with_pi": "True",
+      "sensitivity_level": "Critical",
+      "name": "Credential Combination",
+      "info_id": "PI-006",
+      "protection_level_required": "Maximum",
+      "description": "Username/email + password/security question",
+      "type": "CredentialData",
+      "breach_notification_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10870",
+      "mainLabel": "PrivateInformation",
+      "labels": [
+        "PrivateInformation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "retention_guidance": "3 years",
+      "examples": "Account: xxxx-xxxx-xxxx-1234",
+      "requires_combination_with_pi": "True",
+      "sensitivity_level": "Critical",
+      "name": "Financial Account",
+      "info_id": "PI-003",
+      "protection_level_required": "Maximum",
+      "description": "Bank account or credit card with credentials",
+      "type": "FinancialData",
+      "breach_notification_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10868",
+      "mainLabel": "PrivateInformation",
+      "labels": [
+        "PrivateInformation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "retention_guidance": "5 years",
+      "examples": "SSN: 123-45-6789",
+      "requires_combination_with_pi": "True",
+      "sensitivity_level": "Critical",
+      "name": "Social Security Number",
+      "info_id": "PI-001",
+      "protection_level_required": "Maximum",
+      "description": "Social Security Number or tax ID",
+      "type": "IdentificationData",
+      "breach_notification_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10849",
+      "mainLabel": "NYResident",
+      "labels": [
+        "NYResident"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "data_collection_date": "2020-09-15",
+      "data_retention_status": "Active",
+      "count": "1",
+      "last_interaction_date": "2024-10-01",
+      "consent_status": "Consented",
+      "state": "New York",
+      "has_exercised_rights": "True",
+      "resident_id": "RES-006",
+      "status": "Exercising_Rights",
+      "notification_received": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10831",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "employee_count": "45",
+      "total_assets": "15000000.0",
+      "hipaa_compliant": "False",
+      "contact_phone": "+1-718-555-0500",
+      "nysag_regulated": "False",
+      "security_program_coordinator": "Amanda Foster",
+      "type": "NonProfit",
+      "business_size": "SmallBusiness",
+      "contact_email": "data@brooklynnpo.org",
+      "glba_compliant": "False",
+      "data_classification_implemented": "False",
+      "controller_id": "CTR-005",
+      "nysdfs_regulated": "False",
+      "state_jurisdiction": "New York",
+      "name": "Brooklyn NonProfit Org",
+      "last_security_audit_date": "2024-05-15",
+      "annual_revenue": "5000000.0",
+      "compliance_status": "NonCompliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10848",
+      "mainLabel": "NYResident",
+      "labels": [
+        "NYResident"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "data_collection_date": "2022-02-01",
+      "data_retention_status": "Active",
+      "count": "0",
+      "last_interaction_date": "2024-10-18",
+      "consent_status": "Consented",
+      "state": "New York",
+      "has_exercised_rights": "True",
+      "resident_id": "RES-005",
+      "status": "Active",
+      "notification_received": "False"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "employee_count": "450",
+      "total_assets": "120000000.0",
+      "hipaa_compliant": "False",
+      "contact_phone": "+1-212-555-0400",
+      "nysag_regulated": "True",
+      "security_program_coordinator": "Robert Williams",
+      "type": "Business",
+      "business_size": "MediumBusiness",
+      "contact_email": "privacy@manhattanretail.com",
+      "glba_compliant": "True",
+      "data_classification_implemented": "False",
+      "controller_id": "CTR-004",
+      "nysdfs_regulated": "False",
+      "state_jurisdiction": "New York",
+      "name": "Manhattan Retail Group",
+      "last_security_audit_date": "2024-07-10",
+      "annual_revenue": "42000000.0",
+      "compliance_status": "InProgress"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10858",
+      "mainLabel": "SecurityProgram",
+      "labels": [
+        "SecurityProgram"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "coordinator": "Robert Williams",
+      "employee_training_completion_rate": "72.0",
+      "program_id": "PROG-004",
+      "rating": "NotAssessed",
+      "last_risk_assessment_date": "2024-08-10",
+      "training_frequency": "Annual",
+      "establishment_date": "2022-01-15",
+      "risk_assessment_frequency": "BiAnnual",
+      "third_party_assessment_conducted": "False",
+      "incident_response_plan_exists": "True",
+      "disaster_recovery_plan_exists": "False",
+      "name": "Retail Security Operations",
+      "documentation_complete": "False",
+      "last_update_date": "2024-09-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10877",
+      "mainLabel": "RiskAssessment",
+      "labels": [
+        "RiskAssessment"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "mitigation_deadline": "2025-08-10",
+      "assessment_id": "RISK-004",
+      "type": "Comprehensive",
+      "last_review_date": "2024-08-22",
+      "next_review_date": "2025-08-10",
+      "risk_level": "High",
+      "scope": "Retail systems; Cardholder data",
+      "internal_risks_identified": "7",
+      "external_risks_identified": "4",
+      "name": "Retail Systems Risk Assessment",
+      "risk_mitigation_plan_exists": "False",
+      "completion_date": "2024-08-22",
+      "assessor_name": "Robert Williams",
+      "assessment_date": "2024-08-10"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10833",
+      "mainLabel": "EmployeeTraining",
+      "labels": [
+        "EmployeeTraining"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "qualified": "True",
+      "last_delivery_date": "2024-09-15",
+      "target_audience": "AllEmployees",
+      "certification_earned": "False",
+      "test_requirement": "True",
+      "required_frequency": "AnnualMandatory",
+      "type": "DataSecurityAwareness",
+      "average_test_score": "88.5",
+      "completion_rate": "95.0",
+      "completion_tracking": "True",
+      "training_id": "TRAIN-001",
+      "delivery_method": "Online",
+      "training_materials_available": "True",
+      "effectiveness_feedback_score": "4.2",
+      "name": "Data Security Awareness",
+      "compliance_with_shield": "True",
+      "next_scheduled_date": "2025-09-15",
+      "duration_hours": "2.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10818",
+      "mainLabel": "AdministrativeSafeguard",
+      "labels": [
+        "AdministrativeSafeguard"
+      ],
+      "date": "2023-01-15",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "score": "78.0",
+      "responsible_person": "Robert Williams",
+      "safeguard_id": "ADMIN-004",
+      "name": "Vendor Management Program",
+      "frequency_of_review": "Quarterly",
+      "compliance_with_shield": "False",
+      "description": "Vendor security assessment and monitoring",
+      "category": "ServiceProviderManagement",
+      "last_review_date": "2024-08-10",
+      "status": "InProgress"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10862",
+      "mainLabel": "SecurityProvider",
+      "labels": [
+        "SecurityProvider"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "incident_history_count": "2",
+      "has_security_agreement": "False",
+      "engagement_date": "2023-01-05",
+      "contract_end_date": "2025-12-31",
+      "access_level": "FullAccess",
+      "audit_rights": "False",
+      "data_security_clauses": "False",
+      "security_assessment_completed": "False",
+      "last_incident_date": "2023-06-15",
+      "data_deletion": "False",
+      "name": "Network Solutions LLC",
+      "provider_id": "PROV-004",
+      "services_provided": "IT infrastructure; Support",
+      "breach_notification": "False"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10847",
+      "mainLabel": "NYResident",
+      "labels": [
+        "NYResident"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "data_collection_date": "2018-11-05",
+      "data_retention_status": "Deleted",
+      "count": "2",
+      "last_interaction_date": "2024-06-01",
+      "consent_status": "Withdrawn",
+      "state": "New York",
+      "has_exercised_rights": "True",
+      "resident_id": "RES-004",
+      "status": "Requesting_Deletion",
+      "notification_received": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10853",
+      "mainLabel": "SecurityPolicy",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "accessible_to_all_staff": "True",
+      "acknowledgment_required": "True",
+      "policy_id": "POL-003",
+      "last_revision_date": "2024-09-01",
+      "rating": "PartiallyEffective",
+      "description": "Mandatory annual security training",
+      "creation_date": "2021-01-15",
+      "type": "EmployeeTrainingPolicy",
+      "version": "2.1",
+      "next_review_date": "2025-09-01",
+      "key_procedures": "Annual training; Phishing; Password security",
+      "name": "Employee Training Policy",
+      "regulatory_mandate": "SHIELD",
+      "training_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "employee_count": "350",
+      "total_assets": "85000000.0",
+      "hipaa_compliant": "False",
+      "contact_phone": "+1-212-555-0300",
+      "nysag_regulated": "True",
+      "security_program_coordinator": "Jennifer Adams",
+      "type": "Business",
+      "business_size": "MediumBusiness",
+      "contact_email": "ciso@metrotech.com",
+      "glba_compliant": "False",
+      "data_classification_implemented": "True",
+      "controller_id": "CTR-003",
+      "nysdfs_regulated": "False",
+      "state_jurisdiction": "New York",
+      "name": "Metro Tech Solutions",
+      "last_security_audit_date": "2024-10-01",
+      "annual_revenue": "18000000.0",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10869",
+      "mainLabel": "PrivateInformation",
+      "labels": [
+        "PrivateInformation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "retention_guidance": "3 years",
+      "examples": "NY DL: D1234567",
+      "requires_combination_with_pi": "True",
+      "sensitivity_level": "Critical",
+      "name": "Driver License Number",
+      "info_id": "PI-002",
+      "protection_level_required": "Maximum",
+      "description": "Driver license or state ID number",
+      "type": "IdentificationData",
+      "breach_notification_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10857",
+      "mainLabel": "SecurityProgram",
+      "labels": [
+        "SecurityProgram"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "coordinator": "Jennifer Adams",
+      "employee_training_completion_rate": "87.0",
+      "program_id": "PROG-003",
+      "rating": "PartiallyEffective",
+      "last_risk_assessment_date": "2024-09-01",
+      "training_frequency": "SemiAnnual",
+      "establishment_date": "2021-03-01",
+      "risk_assessment_frequency": "Annual",
+      "third_party_assessment_conducted": "True",
+      "incident_response_plan_exists": "True",
+      "disaster_recovery_plan_exists": "True",
+      "name": "Tech Infrastructure Protection",
+      "documentation_complete": "True",
+      "last_update_date": "2024-10-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10876",
+      "mainLabel": "RiskAssessment",
+      "labels": [
+        "RiskAssessment"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "mitigation_deadline": "2025-09-01",
+      "assessment_id": "RISK-003",
+      "type": "Comprehensive",
+      "last_review_date": "2024-09-15",
+      "next_review_date": "2025-09-01",
+      "risk_level": "High",
+      "scope": "IT infrastructure; Customer data",
+      "internal_risks_identified": "5",
+      "external_risks_identified": "3",
+      "name": "IT Infrastructure Risk Assessment",
+      "risk_mitigation_plan_exists": "True",
+      "completion_date": "2024-09-15",
+      "assessor_name": "Jennifer Adams",
+      "assessment_date": "2024-09-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10834",
+      "mainLabel": "EmployeeTraining",
+      "labels": [
+        "EmployeeTraining"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "qualified": "True",
+      "last_delivery_date": "2024-09-10",
+      "target_audience": "AllEmployees",
+      "certification_earned": "False",
+      "test_requirement": "True",
+      "required_frequency": "AnnualMandatory",
+      "type": "PhishingDetection",
+      "average_test_score": "85.0",
+      "completion_rate": "92.0",
+      "completion_tracking": "True",
+      "training_id": "TRAIN-002",
+      "delivery_method": "Video",
+      "training_materials_available": "True",
+      "effectiveness_feedback_score": "4.0",
+      "name": "Phishing Detection",
+      "compliance_with_shield": "True",
+      "next_scheduled_date": "2025-09-10",
+      "duration_hours": "1.5"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10816",
+      "mainLabel": "AdministrativeSafeguard",
+      "labels": [
+        "AdministrativeSafeguard"
+      ],
+      "date": "2020-06-15",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "score": "88.0",
+      "responsible_person": "Jennifer Adams",
+      "safeguard_id": "ADMIN-002",
+      "name": "Data Classification Scheme",
+      "frequency_of_review": "Quarterly",
+      "compliance_with_shield": "True",
+      "description": "Classification of data by sensitivity level",
+      "category": "PolicyAndProcedures",
+      "last_review_date": "2024-09-20",
+      "status": "Implemented"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10822",
+      "mainLabel": "ComplianceAssessment",
+      "labels": [
+        "ComplianceAssessment"
+      ],
+      "date": "2024-07-01",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "recommendation_count": "6",
+      "shield_compliance_result": "True",
+      "rating": "Low",
+      "assessment_id": "ASSESS-003",
+      "critical_gaps_count": "0",
+      "type": "GapAnalysis",
+      "compliant_areas": "Administrative safeguards; Monitoring",
+      "non_compliant_areas": "Physical security gaps",
+      "overall_compliance_rating": "Compliant",
+      "scope": "Identification of SHIELD compliance gaps",
+      "organization": "Internal",
+      "gaps_identified_count": "4",
+      "name": "CISO & Compliance",
+      "remediation_timeline": "60 days",
+      "remediation_plan_developed": "True",
+      "reassessment_date": "2024-10-01"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10861",
+      "mainLabel": "SecurityProvider",
+      "labels": [
+        "SecurityProvider"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "incident_history_count": "0",
+      "has_security_agreement": "True",
+      "engagement_date": "2022-03-10",
+      "contract_end_date": "2025-03-10",
+      "access_level": "ViewOnly",
+      "audit_rights": "True",
+      "data_security_clauses": "True",
+      "security_assessment_completed": "True",
+      "data_deletion": "True",
+      "name": "SecureIT Consulting",
+      "provider_id": "PROV-003",
+      "services_provided": "Security assessment; Consulting",
+      "security_assessment_date": "2024-07-20",
+      "compliance_certifications": "ISO27001",
+      "breach_notification": "True",
+      "assessment_result": "Approved"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10846",
+      "mainLabel": "NYResident",
+      "labels": [
+        "NYResident"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "data_collection_date": "2021-03-10",
+      "data_retention_status": "Marked_For_Deletion",
+      "count": "0",
+      "last_interaction_date": "2023-08-10",
+      "consent_status": "Not_Required",
+      "state": "New York",
+      "has_exercised_rights": "False",
+      "resident_id": "RES-003",
+      "status": "Inactive",
+      "notification_received": "False"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10851",
+      "mainLabel": "SecurityPolicy",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "accessible_to_all_staff": "True",
+      "acknowledgment_required": "True",
+      "policy_id": "POL-001",
+      "last_revision_date": "2024-09-15",
+      "rating": "Effective",
+      "description": "Comprehensive data security requirements",
+      "creation_date": "2020-01-01",
+      "type": "DataSecurityPolicy",
+      "version": "3.2",
+      "next_review_date": "2025-09-15",
+      "key_procedures": "Classification; Encryption; Access controls",
+      "name": "Data Security Policy",
+      "regulatory_mandate": "SHIELD",
+      "training_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10825",
+      "mainLabel": "DataBreach",
+      "labels": [
+        "DataBreach"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "root_cause_identified": "True",
+      "access": "False",
+      "individuals_count": "50",
+      "description": "Accidental exposure via misconfigured S3 bucket",
+      "residents_count": "50",
+      "recovery_status": "Resolved",
+      "government_notification_status": "Not_Required",
+      "estimated_damages": "5000.0",
+      "actual_notification_date": "2024-09-15",
+      "consumer_reporting_agency_notification": "False",
+      "determination_date": "2024-08-12",
+      "investigation_status": "Completed",
+      "vector": "AccessFailure",
+      "acquisition": "False",
+      "deadline": "2024-09-10",
+      "remediation_completed": "True",
+      "breach_id": "BREACH-003",
+      "discovery_date": "2024-08-10 09:15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "employee_count": "2100",
+      "total_assets": "600000000.0",
+      "hipaa_compliant": "True",
+      "contact_phone": "+1-212-555-0200",
+      "nysag_regulated": "True",
+      "security_program_coordinator": "Michael Rodriguez",
+      "type": "Healthcare",
+      "business_size": "LargeBusiness",
+      "contact_email": "compliance@empirehealth.org",
+      "glba_compliant": "False",
+      "data_classification_implemented": "True",
+      "controller_id": "CTR-002",
+      "nysdfs_regulated": "False",
+      "state_jurisdiction": "New York",
+      "name": "Empire State Healthcare",
+      "last_security_audit_date": "2024-08-20",
+      "annual_revenue": "125000000.0",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10872",
+      "mainLabel": "PrivateInformation",
+      "labels": [
+        "PrivateInformation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "retention_guidance": "Per healthcare law",
+      "examples": "Cancer diagnosis",
+      "requires_combination_with_pi": "False",
+      "sensitivity_level": "Critical",
+      "name": "Health Information",
+      "info_id": "PI-005",
+      "protection_level_required": "Maximum",
+      "description": "Medical diagnoses, treatment records",
+      "type": "HealthData",
+      "breach_notification_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10871",
+      "mainLabel": "PrivateInformation",
+      "labels": [
+        "PrivateInformation"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "retention_guidance": "3 years",
+      "examples": "Fingerprint hash",
+      "requires_combination_with_pi": "True",
+      "sensitivity_level": "Critical",
+      "name": "Biometric Data",
+      "info_id": "PI-004",
+      "protection_level_required": "Maximum",
+      "description": "Fingerprints, facial recognition, iris scan",
+      "type": "BiometricData",
+      "breach_notification_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856",
+      "mainLabel": "SecurityProgram",
+      "labels": [
+        "SecurityProgram"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "coordinator": "Michael Rodriguez",
+      "employee_training_completion_rate": "98.0",
+      "program_id": "PROG-002",
+      "rating": "Effective",
+      "last_risk_assessment_date": "2024-09-20",
+      "training_frequency": "Annual",
+      "establishment_date": "2019-06-15",
+      "risk_assessment_frequency": "Quarterly",
+      "third_party_assessment_conducted": "True",
+      "incident_response_plan_exists": "True",
+      "disaster_recovery_plan_exists": "True",
+      "name": "Healthcare Privacy Security Program",
+      "documentation_complete": "True",
+      "last_update_date": "2024-08-20"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10875",
+      "mainLabel": "RiskAssessment",
+      "labels": [
+        "RiskAssessment"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "mitigation_deadline": "2024-12-20",
+      "assessment_id": "RISK-002",
+      "type": "Comprehensive",
+      "last_review_date": "2024-10-10",
+      "next_review_date": "2024-12-20",
+      "risk_level": "Medium",
+      "scope": "Healthcare systems; Patient data",
+      "internal_risks_identified": "2",
+      "external_risks_identified": "1",
+      "name": "Healthcare Privacy Risk Assessment",
+      "risk_mitigation_plan_exists": "True",
+      "completion_date": "2024-10-10",
+      "assessor_name": "Michael Rodriguez",
+      "assessment_date": "2024-09-20"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10835",
+      "mainLabel": "EmployeeTraining",
+      "labels": [
+        "EmployeeTraining"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "qualified": "True",
+      "last_delivery_date": "2024-08-30",
+      "target_audience": "AllEmployees",
+      "certification_earned": "False",
+      "test_requirement": "True",
+      "required_frequency": "AnnualMandatory",
+      "type": "PasswordSecurity",
+      "average_test_score": "82.0",
+      "completion_rate": "88.0",
+      "completion_tracking": "True",
+      "training_id": "TRAIN-003",
+      "delivery_method": "Online",
+      "training_materials_available": "True",
+      "effectiveness_feedback_score": "3.8",
+      "name": "Password Security",
+      "compliance_with_shield": "True",
+      "next_scheduled_date": "2025-08-30",
+      "duration_hours": "1.0"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10819",
+      "mainLabel": "AdministrativeSafeguard",
+      "labels": [
+        "AdministrativeSafeguard"
+      ],
+      "date": "2020-12-01",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "score": "90.0",
+      "responsible_person": "Thomas Kelly",
+      "safeguard_id": "ADMIN-005",
+      "name": "Incident Response Plan",
+      "frequency_of_review": "Biennial",
+      "compliance_with_shield": "True",
+      "description": "Documented procedures for breach response",
+      "category": "IncidentResponse",
+      "last_review_date": "2024-07-15",
+      "status": "Implemented"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10817",
+      "mainLabel": "AdministrativeSafeguard",
+      "labels": [
+        "AdministrativeSafeguard"
+      ],
+      "date": "2021-03-01",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "score": "85.0",
+      "responsible_person": "Michael Rodriguez",
+      "safeguard_id": "ADMIN-003",
+      "name": "Employee Security Training",
+      "frequency_of_review": "Annual",
+      "compliance_with_shield": "True",
+      "description": "Annual mandatory security awareness training",
+      "category": "StaffTraining",
+      "last_review_date": "2024-09-01",
+      "status": "Implemented"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10821",
+      "mainLabel": "ComplianceAssessment",
+      "labels": [
+        "ComplianceAssessment"
+      ],
+      "date": "2024-09-20",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "recommendation_count": "12",
+      "shield_compliance_result": "False",
+      "rating": "Medium",
+      "assessment_id": "ASSESS-002",
+      "critical_gaps_count": "1",
+      "type": "ExternalAudit",
+      "compliant_areas": "Policies; Procedures; Safeguards",
+      "non_compliant_areas": "Disaster recovery plan gaps",
+      "overall_compliance_rating": "PartiallyCompliant",
+      "scope": "Complete SHIELD Act compliance review",
+      "organization": "Deloitte",
+      "gaps_identified_count": "5",
+      "name": "Third Party Auditors",
+      "remediation_timeline": "120 days",
+      "remediation_plan_developed": "True",
+      "reassessment_date": "2025-06-20"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10860",
+      "mainLabel": "SecurityProvider",
+      "labels": [
+        "SecurityProvider"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "incident_history_count": "0",
+      "has_security_agreement": "True",
+      "engagement_date": "2020-06-20",
+      "contract_end_date": "2025-12-31",
+      "access_level": "LimitedAccess",
+      "audit_rights": "True",
+      "data_security_clauses": "True",
+      "security_assessment_completed": "True",
+      "data_deletion": "True",
+      "name": "DataGuard Analytics",
+      "provider_id": "PROV-002",
+      "services_provided": "Analytics; Reporting",
+      "security_assessment_date": "2024-09-15",
+      "compliance_certifications": "SOC2",
+      "breach_notification": "True",
+      "assessment_result": "Approved_With_Conditions"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10845",
+      "mainLabel": "NYResident",
+      "labels": [
+        "NYResident"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "data_collection_date": "2019-06-20",
+      "data_retention_status": "Active",
+      "count": "1",
+      "last_interaction_date": "2024-09-20",
+      "consent_status": "Consented",
+      "state": "New York",
+      "has_exercised_rights": "False",
+      "resident_id": "RES-002",
+      "status": "Active",
+      "notification_received": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10852",
+      "mainLabel": "SecurityPolicy",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "accessible_to_all_staff": "True",
+      "acknowledgment_required": "True",
+      "policy_id": "POL-002",
+      "last_revision_date": "2024-08-20",
+      "rating": "Effective",
+      "description": "Procedures for detecting and responding to breaches",
+      "creation_date": "2020-12-01",
+      "type": "IncidentResponsePolicy",
+      "version": "2.5",
+      "next_review_date": "2025-08-20",
+      "key_procedures": "Detection; Notification; Investigation; Recovery",
+      "name": "Incident Response Policy",
+      "regulatory_mandate": "SHIELD",
+      "training_required": "True"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10824",
+      "mainLabel": "DataBreach",
+      "labels": [
+        "DataBreach"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "root_cause_identified": "True",
+      "access": "True",
+      "individuals_count": "50000",
+      "description": "Ransomware infection encrypted databases",
+      "residents_count": "45000",
+      "recovery_status": "Resolved",
+      "government_notification_status": "Notified",
+      "estimated_damages": "850000.0",
+      "actual_notification_date": "2024-08-20",
+      "consumer_reporting_agency_notification": "True",
+      "determination_date": "2024-07-25",
+      "investigation_status": "Completed",
+      "vector": "Malware",
+      "acquisition": "True",
+      "deadline": "2024-08-25",
+      "remediation_completed": "True",
+      "breach_id": "BREACH-002",
+      "discovery_date": "2024-07-20 14:30"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "mainLabel": "DataController",
+      "labels": [
+        "DataController"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "employee_count": "1250",
+      "total_assets": "450000000.0",
+      "hipaa_compliant": "False",
+      "contact_phone": "+1-212-555-0100",
+      "nysag_regulated": "True",
+      "security_program_coordinator": "Dr. Sarah Chen",
+      "type": "Business",
+      "business_size": "LargeBusiness",
+      "contact_email": "security@nyfin.com",
+      "glba_compliant": "True",
+      "data_classification_implemented": "True",
+      "controller_id": "CTR-001",
+      "nysdfs_regulated": "False",
+      "state_jurisdiction": "New York",
+      "name": "NewYork Financial Services",
+      "last_security_audit_date": "2024-09-15",
+      "annual_revenue": "85000000.0",
+      "compliance_status": "Compliant"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "mainLabel": "SecurityProgram",
+      "labels": [
+        "SecurityProgram"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "coordinator": "Dr. Sarah Chen",
+      "employee_training_completion_rate": "95.0",
+      "program_id": "PROG-001",
+      "rating": "Effective",
+      "last_risk_assessment_date": "2024-08-15",
+      "training_frequency": "Annual",
+      "establishment_date": "2020-01-01",
+      "risk_assessment_frequency": "Annual",
+      "third_party_assessment_conducted": "True",
+      "incident_response_plan_exists": "True",
+      "disaster_recovery_plan_exists": "True",
+      "name": "Enterprise Data Security Program",
+      "documentation_complete": "True",
+      "last_update_date": "2024-09-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10874",
+      "mainLabel": "RiskAssessment",
+      "labels": [
+        "RiskAssessment"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "mitigation_deadline": "2024-11-15",
+      "assessment_id": "RISK-001",
+      "type": "Comprehensive",
+      "last_review_date": "2024-08-25",
+      "next_review_date": "2025-08-15",
+      "risk_level": "Medium",
+      "scope": "All systems; All data types",
+      "internal_risks_identified": "3",
+      "external_risks_identified": "2",
+      "name": "Enterprise Data Security Risk Assessment",
+      "risk_mitigation_plan_exists": "True",
+      "completion_date": "2024-08-25",
+      "assessor_name": "Dr. Sarah Chen",
+      "assessment_date": "2024-08-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10815",
+      "mainLabel": "AdministrativeSafeguard",
+      "labels": [
+        "AdministrativeSafeguard"
+      ],
+      "date": "2020-01-01",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "score": "92.0",
+      "responsible_person": "Dr. Sarah Chen",
+      "safeguard_id": "ADMIN-001",
+      "name": "Annual Risk Assessment",
+      "frequency_of_review": "Annual",
+      "compliance_with_shield": "True",
+      "description": "Formal annual risk assessment of data security",
+      "category": "RiskAssessment",
+      "last_review_date": "2024-08-15",
+      "status": "Implemented"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10820",
+      "mainLabel": "ComplianceAssessment",
+      "labels": [
+        "ComplianceAssessment"
+      ],
+      "date": "2024-08-15",
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "recommendation_count": "8",
+      "shield_compliance_result": "True",
+      "rating": "Low",
+      "assessment_id": "ASSESS-001",
+      "critical_gaps_count": "0",
+      "type": "InternalAudit",
+      "compliant_areas": "Encryption; Access controls; Training",
+      "non_compliant_areas": "Vendor assessments incomplete",
+      "overall_compliance_rating": "Compliant",
+      "scope": "All systems containing NY resident data",
+      "organization": "Internal",
+      "gaps_identified_count": "3",
+      "name": "Internal Audit Team",
+      "remediation_timeline": "90 days",
+      "remediation_plan_developed": "True",
+      "reassessment_date": "2025-02-15"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10859",
+      "mainLabel": "SecurityProvider",
+      "labels": [
+        "SecurityProvider"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "incident_history_count": "0",
+      "has_security_agreement": "True",
+      "engagement_date": "2021-01-15",
+      "contract_end_date": "2026-01-15",
+      "access_level": "FullAccess",
+      "audit_rights": "True",
+      "data_security_clauses": "True",
+      "security_assessment_completed": "True",
+      "data_deletion": "True",
+      "name": "CloudSecure Services",
+      "provider_id": "PROV-001",
+      "services_provided": "Cloud backup; Data storage",
+      "security_assessment_date": "2024-08-01",
+      "compliance_certifications": "ISO27001; SOC2",
+      "breach_notification": "True",
+      "assessment_result": "Approved"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10844",
+      "mainLabel": "NYResident",
+      "labels": [
+        "NYResident"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "data_collection_date": "2020-01-15",
+      "data_retention_status": "Active",
+      "count": "0",
+      "last_interaction_date": "2024-10-15",
+      "consent_status": "Consented",
+      "state": "New York",
+      "has_exercised_rights": "False",
+      "resident_id": "RES-001",
+      "status": "Active",
+      "notification_received": "False"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:10823",
+      "mainLabel": "DataBreach",
+      "labels": [
+        "DataBreach"
+      ],
+      "regional_standard_regulation_id": "NY SHIELD 1.0",
+      "root_cause_identified": "True",
+      "access": "True",
+      "individuals_count": "1250",
+      "description": "Unauthorized access via compromised credentials",
+      "residents_count": "1250",
+      "recovery_status": "Resolved",
+      "government_notification_status": "Notified",
+      "estimated_damages": "125000.0",
+      "actual_notification_date": "2024-07-10",
+      "consumer_reporting_agency_notification": "True",
+      "determination_date": "2024-06-20",
+      "investigation_status": "Completed",
+      "vector": "HackingCyberattack",
+      "acquisition": "True",
+      "deadline": "2024-07-15",
+      "remediation_completed": "True",
+      "breach_id": "BREACH-001",
+      "discovery_date": "2024-06-15 10:00"
+    }
+  ],
+  "links": [
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164590621512444478",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "type": "REGULATION_GOVERNS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10832"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157834122559760976",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10832",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155582322746075728",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10832",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10870"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153316229281229430",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10870",
+      "type": "PRIVATE_INFORMATION_COMBINES_WITH_DATA_ELEMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153330522932390480",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10832",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10868"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153316229281229428",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10868",
+      "type": "PRIVATE_INFORMATION_COMBINES_WITH_DATA_ELEMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153319527816112720",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10832",
+      "type": "DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10849"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162338821698759230",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "type": "REGULATION_GOVERNS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10831"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153330522932390479",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10831",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153319527816112719",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10831",
+      "type": "DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10848"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160087021885073982",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "type": "REGULATION_GOVERNS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155582322746075726",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153330522932390478",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10868"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153329423420762702",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROGRAM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10858"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153328323909134954",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10858",
+      "type": "SECURITY_PROGRAM_CONDUCTS_RISK_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10877"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153323925862623850",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10858",
+      "type": "SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10833"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153317328792857194",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10858",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10818"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153321726839368270",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROVIDER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10862"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153319527816112718",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "type": "DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10847"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153318428304484942",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10830",
+      "type": "DATA_CONTROLLER_ENFORCES_SECURITY_POLICY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10853"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157835222071388734",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "type": "REGULATION_GOVERNS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155582322746075725",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10870"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153330522932390477",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10869"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153316229281229429",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10869",
+      "type": "PRIVATE_INFORMATION_COMBINES_WITH_DATA_ELEMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153329423420762701",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROGRAM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10857"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153328323909134953",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10857",
+      "type": "SECURITY_PROGRAM_CONDUCTS_RISK_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10876"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153323925862623849",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10857",
+      "type": "SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10834"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153317328792857193",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10857",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10816"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153326124885879373",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10822"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153321726839368269",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROVIDER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10861"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153319527816112717",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10846"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153318428304484941",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_ENFORCES_SECURITY_POLICY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10851"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153315129769601613",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10829",
+      "type": "DATA_CONTROLLER_DETECTS_DATA_BREACH",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10825"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153322826350996041",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10825",
+      "type": "DATA_BREACH_NOTIFIES_AFFECTED_INDIVIDUAL_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10847"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155583422257703486",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "type": "REGULATION_GOVERNS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155582322746075724",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10872"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157834122559760972",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10871"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153316229281229431",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10871",
+      "type": "PRIVATE_INFORMATION_COMBINES_WITH_DATA_ELEMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153330522932390476",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10868"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153329423420762700",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROGRAM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153328323909134952",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856",
+      "type": "SECURITY_PROGRAM_CONDUCTS_RISK_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10875"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155575725676309096",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856",
+      "type": "SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10835"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153323925862623848",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856",
+      "type": "SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10833"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155569128606542440",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10819"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153317328792857192",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10856",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10817"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917933647920114245",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10821"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153321726839368268",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROVIDER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10860"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153319527816112716",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10845"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153318428304484940",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_ENFORCES_SECURITY_POLICY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10852"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153315129769601612",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10828",
+      "type": "DATA_CONTROLLER_DETECTS_DATA_BREACH",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10824"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153322826350996040",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10824",
+      "type": "DATA_BREACH_NOTIFIES_AFFECTED_INDIVIDUAL_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10846"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153331622444018238",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10814",
+      "type": "REGULATION_GOVERNS_DATA_CONTROLLER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157834122559760971",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10873"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155582322746075723",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10870"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153330522932390475",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10868"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153329423420762699",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROGRAM",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153328323909134951",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "type": "SECURITY_PROGRAM_CONDUCTS_RISK_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10874"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155575725676309095",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "type": "SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10834"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153323925862623847",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "type": "SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10833"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157820928420227687",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10817"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155569128606542439",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10816"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153317328792857191",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10855",
+      "type": "SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_ADMINISTRATIVE_SAFEGUARD",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10815"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917933647920114244",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10820"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153321726839368267",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_IMPLEMENTS_SECURITY_PROVIDER",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10859"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153319527816112715",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10844"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153318428304484939",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_ENFORCES_SECURITY_POLICY",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10851"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153315129769601611",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10827",
+      "type": "DATA_CONTROLLER_DETECTS_DATA_BREACH",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10823"
+    },
+    {
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153322826350996039",
+      "source": "4:933b1b58-e496-4df8-90cf-592c911f843f:10823",
+      "type": "DATA_BREACH_NOTIFIES_AFFECTED_INDIVIDUAL_NY_RESIDENT",
+      "target": "4:933b1b58-e496-4df8-90cf-592c911f843f:10845"
+    }
+  ]
 }
