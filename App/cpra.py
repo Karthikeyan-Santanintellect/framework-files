@@ -585,46 +585,46 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(title.replace)
+client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Title.csv"))
 time.sleep(2)
 
-client.query(subdivision.replace)
+client.query(subdivision.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Subdivision.csv"))
 time.sleep(2)
 
-client.query(paragraph.replace)
+client.query(paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Paragraph.csv"))
 time.sleep(2)
 
-client.query(consumer.replace)
+client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Consumer.csv"))
 time.sleep(2)
 
-client.query(business.replace)
+client.query(business.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Business.csv"))
 time.sleep(2)
 
-client.query(service_provider.replace)
+client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/ServiceProvider.csv"))
 time.sleep(2)
 
-client.query(contractor.replace)
+client.query(contractor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Contractor.csv"))
 time.sleep(2)
 
-client.query(third_party.replace)
+client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/ThirdParty.csv"))
 time.sleep(2)
 
-client.query(threshold.replace)
+client.query(threshold.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Threshold.csv"))
 time.sleep(2)
 
-client.query(cppa.replace)
+client.query(cppa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/EnforcementAuthority.csv"))
 time.sleep(2)
 
-client.query(pi_roots.replace)
+client.query(pi_roots.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/DataRoot.csv"))
 time.sleep(2)
 
-client.query(SPI.replace)
+client.query(SPI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/DataRoot.csv"))
 time.sleep(2)
 
-client.query(pi_category.replace)
+client.query(pi_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/PICategory.csv"))
 time.sleep(2)
 
-client.query(spi_category.replace)
+client.query(spi_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/SPICategory.csv"))
 time.sleep(2)
 
                                  
