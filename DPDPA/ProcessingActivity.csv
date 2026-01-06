@@ -1,0 +1,8 @@
+processing_id,name,category,description
+PA-001,Account Creation,Collection,Collection of identity and contact data to open an account.
+PA-002,Transaction Processing,Use,Use of personal data to execute and record transactions.
+PA-003,Marketing Communication,Use,Use of contact data for direct marketing communications.
+PA-004,Analytics and Reporting,Use,Use of pseudonymized or aggregated data for analytics and reporting.
+PA-005,Third-Party Sharing,Sharing,Sharing personal data with third-party service providers.
+PA-006,Data Retention,Storage,Storage and archival of personal data for defined retention periods.
+PA-007,Data Deletion,Deletion,Deletion or anonymization of personal data on expiry or request.

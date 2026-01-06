@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
       "mainLabel": "RegionalStandardAndRegulation",
       "labels": [
         "RegionalStandardAndRegulation"
@@ -16,7 +16,7 @@
       "base_regulation": "California Consumer Privacy Act (CCPA)"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5444",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -26,7 +26,167 @@
       "heading": "Functions of the California Privacy Protection Agency"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5443",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "mainLabel": "Subdivision",
+      "labels": [
+        "Subdivision"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "section_id": "SEC-1798121",
+      "subdivision_id": "SD-1798121",
+      "name": "Right to Limit Use of Sensitive Personal Information",
+      "text": "A consumer has the right to limit the use of sensitive personal information."
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "Information concerning a consumer's sex life or sexual orientation.",
+      "paragraph_id": "PARA-1798140-ae-8"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "Information concerning a consumer's health.",
+      "paragraph_id": "PARA-1798140-ae-7"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "A consumer's genetic data.",
+      "paragraph_id": "PARA-1798140-ae-6"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "The contents of a consumer's mail or email messages.",
+      "paragraph_id": "PARA-1798140-ae-5"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "A consumer's racial or ethnic origin or religious beliefs.",
+      "paragraph_id": "PARA-1798140-ae-4"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "Precise geolocation data within 1850-foot radius.",
+      "paragraph_id": "PARA-1798140-ae-3"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "Account access credentials including financial account number or credit card number with security code.",
+      "paragraph_id": "PARA-1798140-ae-2"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "mainLabel": "Paragraph",
+      "labels": [
+        "Paragraph"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "subdivision_id": "SD-1798140-ae",
+      "text": "A consumer's social security number or driver's license number.",
+      "paragraph_id": "PARA-1798140-ae-1"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "mainLabel": "Subdivision",
+      "labels": [
+        "Subdivision"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "section_id": "SEC-1798120",
+      "subdivision_id": "SD-1798120",
+      "name": "Right to Opt-Out of Sale or Sharing",
+      "text": "A consumer has the right to opt-out of the sale or sharing of personal information."
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "mainLabel": "Subdivision",
+      "labels": [
+        "Subdivision"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "section_id": "SEC-1798140",
+      "subdivision_id": "SD-1798140-ah",
+      "name": "Sharing",
+      "text": "Communicating personal information to a third party for cross-context behavioral advertising."
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "mainLabel": "Subdivision",
+      "labels": [
+        "Subdivision"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "section_id": "SEC-1798140",
+      "subdivision_id": "SD-1798140-ad",
+      "name": "Sale",
+      "text": "Selling or renting personal information to a third party for valuable consideration."
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "mainLabel": "Subdivision",
+      "labels": [
+        "Subdivision"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "section_id": "SEC-1798140",
+      "subdivision_id": "SD-1798140-ac",
+      "name": "Commercial information",
+      "text": "Records of personal property or products or services purchased."
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "mainLabel": "Subdivision",
+      "labels": [
+        "Subdivision"
+      ],
+      "regional_standard_regulation_id": "CPRA 2.0",
+      "section_id": "SEC-1798140",
+      "subdivision_id": "SD-1798140-ae",
+      "name": "Sensitive personal information",
+      "text": "A consumer's social security number or driver's license number."
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -36,7 +196,7 @@
       "heading": "Rulemaking Authority of the CPPA"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -46,7 +206,7 @@
       "heading": "Administrative Enforcement and Fines"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5495",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13916",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -58,7 +218,7 @@
       "enforcement_id": "AdminFine-Minor"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5494",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13915",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -70,7 +230,7 @@
       "enforcement_id": "AdminFine-Intentional"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5493",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13914",
       "mainLabel": "EnforcementAction",
       "labels": [
         "EnforcementAction"
@@ -82,7 +242,7 @@
       "enforcement_id": "AdminFine-Unintentional"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5438",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -92,7 +252,7 @@
       "heading": "Mechanisms for Opting Out of Sale or Sharing"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5458",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13879",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -104,7 +264,7 @@
       "requirement_id": "REQ-135-1"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -114,7 +274,7 @@
       "heading": "The Right to Non-Discrimination for the Exercise of a Consumer's Privacy Rights"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5483",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13904",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -125,7 +285,7 @@
       "right_id": "Right-to-Non-Discrimination"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5456",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13877",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -137,7 +297,7 @@
       "requirement_id": "REQ-125-1"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -147,7 +307,7 @@
       "heading": "The Right to Limit the Use and Disclosure of Sensitive Personal Information"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5482",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13903",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -158,7 +318,7 @@
       "right_id": "Right-to-Limit-SPI"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5455",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13876",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -170,7 +330,7 @@
       "requirement_id": "REQ-121-2"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5468",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13889",
       "mainLabel": "DataCategory",
       "labels": [
         "DataCategory"
@@ -181,7 +341,7 @@
       "sensitivity": "High"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13875",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -193,7 +353,7 @@
       "requirement_id": "REQ-121-1"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5491",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13912",
       "mainLabel": "EventType",
       "labels": [
         "EventType"
@@ -204,7 +364,7 @@
       "event_type_id": "OptOutSignal"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5498",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13919",
       "mainLabel": "Control",
       "labels": [
         "Control"
@@ -215,7 +375,7 @@
       "category": "Consent Management"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5433",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -225,7 +385,7 @@
       "heading": "The Right to Know What Personal Information is Sold or Shared and to Whom"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -235,7 +395,7 @@
       "heading": "Consumers' Right to Correct Inaccurate Personal Information"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5480",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13901",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -246,7 +406,7 @@
       "right_id": "Right-to-Correct"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13873",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -258,7 +418,7 @@
       "requirement_id": "REQ-106-1"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5490",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13911",
       "mainLabel": "EventType",
       "labels": [
         "EventType"
@@ -269,7 +429,7 @@
       "event_type_id": "VerifiableConsumerRequest"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5500",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13921",
       "mainLabel": "Control",
       "labels": [
         "Control"
@@ -280,7 +440,7 @@
       "category": "Consumer Rights"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
       "mainLabel": "Section",
       "labels": [
         "Section"
@@ -290,7 +450,7 @@
       "heading": "Consumers' Right to Delete Personal Information"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5479",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13900",
       "mainLabel": "Right",
       "labels": [
         "Right"
@@ -301,7 +461,7 @@
       "right_id": "Right-to-Delete"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:13872",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -315,189 +475,801 @@
   ],
   "rels": [
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171296542930244916",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5444",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171296542930253291",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1169044743116559668",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5443",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908585",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771194",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771193",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771192",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771191",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771190",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771189",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771188",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6929233328918771187",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223337",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085946",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085945",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085944",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085943",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085942",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085941",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085940",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926981529105085939",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538089",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400698",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400697",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400696",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400695",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400694",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400693",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400692",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924729729291400691",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852841",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715450",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715449",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715448",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715447",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715446",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715445",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715444",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922477929477715443",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167593",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030202",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030201",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030200",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030199",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030198",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030197",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030196",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920226129664030195",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13865",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482345",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344954",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13818",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344953",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13817",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344952",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13816",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344951",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13815",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344950",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13814",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344949",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13813",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344948",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13812",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917974329850344947",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13811",
+      "type": "SUBDIVISION_CONTAINS_PARAGRAPH"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1169044743116568043",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166792943302874420",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908584",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223336",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538088",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852840",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167592",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13864",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482344",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166792943302882795",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157691186048144705",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5495",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908582",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223334",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538086",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852838",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167590",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482342",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157691186048153126",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13916",
       "type": "SECTION_PRESCRIBES_PENALTY"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155439386234459457",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5494",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155439386234467878",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13915",
       "type": "SECTION_PRESCRIBES_PENALTY"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5441",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153187586420774209",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5493",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13862",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153187586420782630",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13914",
       "type": "SECTION_PRESCRIBES_PENALTY"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164541143489189172",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5438",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164541143489197547",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5438",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890878",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5458",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908579",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223331",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538083",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852835",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167587",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482339",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13859",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885899299",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13879",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162289343675503924",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162289343675512299",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146428",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5483",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908577",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223329",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538081",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852833",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167585",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482337",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909154849",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13904",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5436",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890876",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5456",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13857",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885899297",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13877",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160037543861818676",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160037543861827051",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146427",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5482",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908576",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223328",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538080",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852832",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167584",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482336",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909154848",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13903",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155436087699576123",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5455",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155436087699584544",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13876",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5455",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153180989351007567",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5468",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13876",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153180989351015988",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13889",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5435",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890875",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13856",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885899296",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13875",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153183188374263118",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5494",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13875",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153183188374271539",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13915",
       "type": "REQUIREMENT_CARRIES_PENALTY_ON_ENFORCEMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153180989351007566",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5468",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13875",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153180989351015987",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13889",
       "type": "REQUIREMENT_REGULATES_USE_OF_DATA_CATEGORY"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327752014",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5491",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13875",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327760435",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13912",
       "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5454",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978918734",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5498",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13875",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978927155",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13919",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157785744048133428",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5433",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157785744048141803",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155533944234448180",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908574",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223326",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538078",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852830",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167582",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13854",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482334",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155533944234456555",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146423",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5480",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908572",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223324",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538076",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852828",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167580",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482332",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909154844",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13901",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5431",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890871",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13852",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885899292",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13873",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327752012",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5490",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13873",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327760433",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13911",
       "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5452",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978918732",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5500",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13873",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978927153",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13921",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5428",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153282144420762932",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13803",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153282144420771307",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
       "type": "REGIONAL_REGULATION_DEFINES_SECTION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909146422",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5479",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164624706372908571",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13810",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162372906559223323",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13809",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160121106745538075",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13808",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157869306931852827",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13807",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155617507118167579",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13806",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153365707304482331",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13805",
+      "type": "SECTION_DEFINES_SUBDIVISION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153186486909154843",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13900",
       "type": "SECTION_ESTABLISHES_RIGHT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5430",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885890870",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13851",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153184287885899291",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13872",
       "type": "SECTION_DEFINES_REQUIREMENT"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327752011",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5490",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13872",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153178790327760432",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13911",
       "type": "REQUIREMENT_TRIGGERS_ON_EVENT_TYPE"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:5451",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978918731",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:5500",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:13872",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978927152",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:13921",
       "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
     }
   ]

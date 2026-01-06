@@ -514,8 +514,8 @@ MERGE (b)-[:BUSINESS_REQUIRES_RISK_ASSESSMENT]->(ra);
 """
 # PrivacyPolicy to ProcessingActivity
 privacy_policy_processing_activity = """
-MATCH (pp:PrivacyPolicy{regional_standard_id: 'CPRA 2.0'})
-MATCH (pa:ProcessingActivity{regional_standard_id: 'CPRA 2.0'})
+MATCH (pp:PrivacyPolicy{regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (pa:ProcessingActivity{regional_standard_regulation_id: 'CPRA 2.0'})
 MERGE (pp)-[:PRIVACY_POLICY_USES_PROCESSING_ACTIVITY]->(pa);
 """
 # Business to cybersecurity_audit
@@ -656,34 +656,34 @@ time.sleep(2)
 client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA_Controls.csv"))
 time.sleep(2)
 
-client.query(processing_activity)
+client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/ProcessingActivity.csv"))
 time.sleep(2)
 
-client.query(business_purpose)
+client.query(business_purpose.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/BusinessPurpose.csv"))
 time.sleep(2)   
 
-client.query(notice_at_collection)
+client.query(notice_at_collection.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/NoticeAtCollection.csv"))
 time.sleep(2)
 
-client.query(privacy_policy)
+client.query(privacy_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/PrivacyPolicy.csv"))
 time.sleep(2)
 
-client.query(risk_assessment)
+client.query(risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/RiskAssessment.csv"))
 time.sleep(2)
 
-client.query(cybersecurity_audit)
+client.query(cybersecurity_audit.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CybersecurityAudit.csv"))
 time.sleep(2)
 
-client.query(optout_link)
+client.query(optout_link.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/OptOutLink.csv"))
 time.sleep(2)
 
-client.query(optout_signal)
+client.query(optout_signal.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/OptOutPreferenceSignal.csv"))
 time.sleep(2)
 
-client.query(administrative_fine)
+client.query(administrative_fine.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/AdministrativeFine.csv"))
 time.sleep(2)
 
-client.query(data_breach)
+client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/DataBreach.csv"))
 time.sleep(2)
 
 

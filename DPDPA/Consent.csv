@@ -1,0 +1,4 @@
+consent_id,name,description
+CONSENT-GENERAL,General Consent,General consent for processing personal data for primary stated purposes.
+CONSENT-MARKETING,Marketing Consent,Specific consent for receiving marketing and promotional communications.
+CONSENT-PROFILING,Profiling Consent,Explicit consent for profiling or automated decision-making.

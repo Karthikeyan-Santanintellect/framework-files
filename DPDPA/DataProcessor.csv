@@ -1,0 +1,4 @@
+data_processor_id,name,description
+DPR-001,Cloud Processing Vendor,Processes personal data on behalf of data fiduciaries using cloud infrastructure.
+DPR-002,Analytics Service Provider,Performs analytics and reporting on datasets under instructions from data fiduciaries.
+DPR-003,Call Centre Vendor,Provides contact centre and customer support services as a processor.

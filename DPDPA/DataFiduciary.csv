@@ -1,0 +1,4 @@
+data_fiduciary_id,name,description,category
+DF-001,Generic Data Fiduciary,A generic organization that determines the purpose and means of processing personal data,Standard
+DF-002,Significant Data Fiduciary,A data fiduciary classified as significant based on volume and risk,Significant
+DF-003,Government Department,A public authority processing data for state functions,Government

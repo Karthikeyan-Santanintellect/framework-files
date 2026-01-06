@@ -1,0 +1,4 @@
+data_principal_id,name,description
+DP-001,Generic Data Principal,An individual whose personal data is processed under DPDPA.
+DP-002,Child Data Principal,A data principal below the age threshold requiring guardian consent.
+DP-003,Employee Data Principal,An individual whose data is processed in an employment context.
