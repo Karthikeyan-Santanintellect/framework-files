@@ -1,0 +1,9 @@
+data_id,data_type,data_category,data_value_sample,is_sensitive,sensitivity_level,collection_method,retention_days,is_required_for_service,processing_purpose,contains_pii,encryption_status,classification_date
+PD-001,Identifier,Full Name,John Smith,False,Internal,Direct,1095,True,Account management,True,Not Encrypted,2023-07-10
+PD-002,Contact,Email Address,john@example.com,False,Internal,Direct,1095,True,Communication,True,Encrypted,2023-07-10
+PD-003,Demographic,Age Group,25-34,False,Confidential,Direct,1095,False,Demographic analysis,True,Not Encrypted,2023-07-10
+PD-004,Financial,Credit Card Number,****1234,True,Restricted,Direct,730,True,Payment processing,True,Encrypted,2023-07-10
+PD-005,Behavioral,Purchase History,"Electronics, Clothing",False,Internal,Inferred,365,False,Personalization,True,Encrypted,2023-08-01
+PD-006,Location,GPS Location,"39.7392°N, 104.9903°W",False,Confidential,Direct,90,False,Location services,True,Encrypted,2023-08-15
+PD-007,Biometric,Fingerprint,[biometric hash],True,Restricted,Direct,365,True,Authentication,True,Encrypted,2023-08-20
+PD-008,Health,Medical Records,[encrypted],True,Restricted,Third Party,2555,True,Healthcare,True,Encrypted,2023-09-01

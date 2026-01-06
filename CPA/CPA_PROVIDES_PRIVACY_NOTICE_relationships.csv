@@ -1,0 +1,5 @@
+source_controller_id,relationship_type,target_notice_id,notice_publication_date,notice_location,notice_accessibility,required_elements_included,plain_language_used,consumer_friendly_format,update_frequency,consumer_notification_of_changes
+CTRL-001,PROVIDES_PRIVACY_NOTICE,NOTICE-001,2023-07-10,Website homepage,True,12,True,True,Annually,True
+CTRL-002,PROVIDES_PRIVACY_NOTICE,NOTICE-002,2023-08-01,Website footer,True,10,True,True,BiAnnually,True
+CTRL-003,PROVIDES_PRIVACY_NOTICE,NOTICE-003,2023-08-15,Mobile app,True,11,True,True,Quarterly,True
+CTRL-004,PROVIDES_PRIVACY_NOTICE,NOTICE-004,2024-06-25,Email notification,True,8,True,True,AsNeeded,True

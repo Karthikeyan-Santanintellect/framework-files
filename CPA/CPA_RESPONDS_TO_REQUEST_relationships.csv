@@ -1,0 +1,6 @@
+source_controller_id,relationship_type,target_request_id,response_received_date,response_sent_date,processing_time_days,request_status,response_completeness,format_provided,portable_format,cost_charged,denial_reason,appeal_available
+CTRL-001,RESPONDS_TO_REQUEST,REQ-001,2024-01-10,2024-02-20,41,Granted,Complete,PDF,True,0.0,,False
+CTRL-002,RESPONDS_TO_REQUEST,REQ-002,2024-02-15,2024-03-30,43,Granted,Complete,CSV,True,0.0,,False
+CTRL-003,RESPONDS_TO_REQUEST,REQ-003,2024-03-01,2024-04-10,40,Denied,Complete,N/A,False,0.0,Data required for contract,True
+CTRL-004,RESPONDS_TO_REQUEST,REQ-004,2024-03-20,2024-04-28,39,Granted,Complete,JSON,True,0.0,,False
+CTRL-005,RESPONDS_TO_REQUEST,REQ-005,2024-04-05,2024-05-15,40,Granted,Complete,N/A,False,0.0,,False

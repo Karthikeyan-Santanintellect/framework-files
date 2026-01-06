@@ -1,0 +1,6 @@
+source_controller_id,relationship_type,target_consent_id,consent_request_date,consent_obtained_date,consent_type,consent_method,consent_specificity,informed_disclosure,affirmative_action_taken,freely_given_confirmation,withdrawal_allowed,granular_consent_provided
+CTRL-001,OBTAINS_CONSENT,CONS-001,2023-07-01,2023-07-10,DataCollectionConsent,ExplicitOptIn,Specific,True,True,True,True,True
+CTRL-002,OBTAINS_CONSENT,CONS-002,2023-08-10,2023-08-15,SaleConsent,ClearAffirmativeAction,Specific,True,True,True,True,True
+CTRL-003,OBTAINS_CONSENT,CONS-003,2023-08-15,2023-08-20,TargetedAdvertisingConsent,ClearAffirmativeAction,Specific,True,True,True,True,True
+CTRL-004,OBTAINS_CONSENT,CONS-004,2023-08-20,2023-08-25,ProfilingConsent,SignedDocument,Specific,True,True,True,True,True
+CTRL-005,OBTAINS_CONSENT,CONS-005,2023-08-25,2023-09-01,SensitiveDataConsent,ExplicitOptIn,Specific,True,True,True,True,True

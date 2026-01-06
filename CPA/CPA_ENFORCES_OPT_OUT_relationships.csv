@@ -1,0 +1,5 @@
+source_controller_id,relationship_type,target_mechanism_id,opt_out_request_date,opt_out_effective_date,opt_out_purpose,processing_ceased,cessation_confirmation_date,opt_out_duration,re_engagement_allowed,data_retention_status
+CTRL-001,ENFORCES_OPT_OUT,OPTOUT-001,2024-04-01,2024-04-15,Data Sale,True,2024-04-20,Indefinite,True,Deleted per law
+CTRL-002,ENFORCES_OPT_OUT,OPTOUT-002,2024-05-15,2024-05-20,Targeted Advertising,True,2024-05-25,Indefinite,True,Not used for ads
+CTRL-003,ENFORCES_OPT_OUT,OPTOUT-003,2024-06-01,2024-06-15,Profiling,True,2024-06-20,Indefinite,True,Not analyzed
+CTRL-004,ENFORCES_OPT_OUT,OPTOUT-001,2024-07-10,2024-07-25,Data Sale,True,2024-08-01,Indefinite,True,Deleted per law

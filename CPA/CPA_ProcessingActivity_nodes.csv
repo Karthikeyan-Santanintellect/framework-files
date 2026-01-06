@@ -1,0 +1,7 @@
+activity_id,activity_name,activity_type,processing_purpose,legal_basis,start_date,end_date,data_retention_period,frequency,recipients_of_data,cross_border_transfer,automated_decision_making,profiling_involved,dpa_required,high_risk_flag,impact_assessment_status
+ACT-001,Customer Account Registration,Collection,Account creation and management,Consent,2023-07-01,,3 years,Ongoing,Internal teams only,False,False,False,True,False,Completed
+ACT-002,Targeted Advertising Campaign,Sharing,Personalized ad targeting,Consent,2023-08-15,,1 year,Ongoing,Ad networks; Marketing partners,True,True,True,True,True,Completed
+ACT-003,Data Sale to Third Parties,Sale,Revenue generation through data sales,Consent,2023-09-01,,90 days,Monthly,Data brokers; Analytics firms,True,False,False,True,True,Completed
+ACT-004,Behavioral Profiling Analysis,Analysis,Behavioral analysis and user profiling,Consent,2023-08-20,,1 year,Continuous,Internal analytics team,False,True,True,True,True,Completed
+ACT-005,Customer Support Communication,Communication,Customer service and support,Contract,2023-07-01,,6 months,As Needed,Support staff; CRM system,False,False,False,False,False,Completed
+ACT-006,Performance Analytics,Analysis,Service improvement and analytics,Legitimate Interests,2023-07-15,,Ongoing,Daily,Analytics platform; Insights dashboard,False,True,True,True,True,In Progress

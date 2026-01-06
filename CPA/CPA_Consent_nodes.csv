@@ -1,0 +1,7 @@
+consent_id,consent_type,consent_date,consent_method,consent_status,consent_expiration_date,last_refresh_date,refresh_required,specificity_level,informed_status,freely_given,unambiguous_agreement,dark_pattern_used,withdrawal_date,consent_proof_documentation
+CONS-001,DataCollectionConsent,2023-07-10,ExplicitOptIn,Given,2024-07-10,2024-07-10,False,Specific,True,True,True,False,,Email confirmation
+CONS-002,SaleConsent,2023-08-15,ClearAffirmativeAction,Given,2024-08-15,2024-08-15,False,Specific,True,True,True,False,,Checkbox record
+CONS-003,TargetedAdvertisingConsent,2023-08-20,ClearAffirmativeAction,Withdrawn,,2024-08-20,False,Specific,True,True,True,False,2024-08-20,Checkbox record
+CONS-004,ProfilingConsent,2023-08-25,SignedDocument,Given,2024-08-25,2024-02-25,False,Specific,True,True,True,False,,Signed form
+CONS-005,SensitiveDataConsent,2023-09-01,ExplicitOptIn,Pending,2024-12-01,,True,Specific,True,True,True,False,,Pending collection
+CONS-006,CookieConsent,2023-07-05,ElectronicConsent,Given,2025-07-05,2024-10-05,False,Broad,True,True,True,False,,Cookie consent banner

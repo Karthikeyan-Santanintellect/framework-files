@@ -1,0 +1,6 @@
+source_controller_id,relationship_type,target_consumer_id,collection_date,collection_method,data_categories_collected,primary_purpose,consent_required,consent_obtained,consent_date,retention_start_date,retention_period_days
+CTRL-001,COLLECTS_PERSONAL_DATA,CON-001,2023-07-10,Website,Name; Email; Address,Account management,True,True,2023-07-10,2023-07-10,1095
+CTRL-002,COLLECTS_PERSONAL_DATA,CON-002,2023-08-01,InPerson,Name; Phone; Purchase History,Customer service,True,True,2023-08-01,2023-08-01,730
+CTRL-003,COLLECTS_PERSONAL_DATA,CON-003,2023-07-20,App,Medical records; SSN; Insurance,Healthcare treatment,True,True,2023-07-20,2023-07-20,2555
+CTRL-004,COLLECTS_PERSONAL_DATA,CON-004,2023-09-10,Phone,Account info; Financial data,Financial services,True,True,2023-09-10,2023-09-10,1095
+CTRL-005,COLLECTS_PERSONAL_DATA,CON-005,2023-07-31,Website,Behavioral data; Location,Personalization,True,True,2023-07-31,2023-07-31,365

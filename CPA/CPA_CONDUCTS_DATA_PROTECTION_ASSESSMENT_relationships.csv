@@ -1,0 +1,6 @@
+source_controller_id,relationship_type,target_dpa_id,assessment_start_date,assessment_completion_date,processing_activities_assessed_count,risk_level_found,heightened_risk_identified,benefits_documented,risks_documented,mitigations_implemented,stakeholders_involved_count,external_experts_engaged
+CTRL-001,CONDUCTS_DATA_PROTECTION_ASSESSMENT,DPA-001,2023-12-01,2024-01-15,2,High,True,True,True,True,3,False
+CTRL-002,CONDUCTS_DATA_PROTECTION_ASSESSMENT,DPA-002,2024-01-15,2024-02-20,3,CriticallyHigh,True,True,True,False,5,True
+CTRL-003,CONDUCTS_DATA_PROTECTION_ASSESSMENT,DPA-003,2024-02-01,2024-03-10,2,High,True,True,True,True,2,False
+CTRL-004,CONDUCTS_DATA_PROTECTION_ASSESSMENT,DPA-004,2024-03-01,,1,Moderate,False,True,True,False,4,True
+CTRL-005,CONDUCTS_DATA_PROTECTION_ASSESSMENT,DPA-005,2024-04-01,,1,High,True,True,True,False,2,False

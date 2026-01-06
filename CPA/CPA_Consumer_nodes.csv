@@ -1,0 +1,8 @@
+consumer_id,consumer_status,location_state,is_minor,age_group,consent_status,opt_out_date,access_request_count,deletion_request_count,correction_request_count,portability_request_count,complaint_filed,has_sensitive_data,last_engagement_date
+CON-001,Active,Colorado,False,Adult,Consented,,1,0,1,0,False,False,2024-10-15
+CON-002,Opted_Out,Colorado,False,Senior,WithheldConsent,2024-08-15,0,0,0,0,True,False,2024-08-15
+CON-003,Active,Colorado,True,Minor,Consented,,0,0,0,0,False,True,2024-10-20
+CON-004,Requested_Deletion,Colorado,False,Adult,NeverAsked,,2,1,0,1,False,True,2024-09-01
+CON-005,Active,Colorado,False,Adult,Consented,,3,1,2,0,False,False,2024-10-18
+CON-006,Dormant,Colorado,False,Senior,ConsentExpired,,0,0,0,0,True,False,2024-05-10
+CON-007,Active,Colorado,False,Adult,Consented,,1,0,1,1,False,True,2024-10-22

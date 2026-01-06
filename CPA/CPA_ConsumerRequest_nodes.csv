@@ -1,0 +1,7 @@
+request_id,request_type,request_date,request_status,request_channel,consumer_verification_method,consumer_verified,verification_date,response_deadline,response_date,response_status,denial_reason,data_format_requested,portable_format_provided,estimated_cost,actual_cost_charged,appeal_submitted,documentation_maintained
+REQ-001,AccessRequest,2024-01-10,Processed,OnlinePortal,PasswordVerification,True,2024-01-10,2024-02-24,2024-02-20,Granted,,PDF,True,0.0,0.0,False,True
+REQ-002,DeletionRequest,2024-02-15,Processed,Email,IdentityDocuments,True,2024-02-16,2024-04-01,2024-03-30,Granted,,CSV,True,0.0,0.0,False,True
+REQ-003,CorrectionRequest,2024-03-01,Denied,Phone,TwoFactor,True,2024-03-02,2024-04-15,2024-04-10,Denied,Data still necessary for contract,,False,0.0,0.0,True,True
+REQ-004,PortabilityRequest,2024-03-20,Processed,OnlinePortal,EmailConfirmation,True,2024-03-21,2024-05-04,2024-04-28,Granted,,JSON,True,0.0,0.0,False,True
+REQ-005,OptOutRequest,2024-04-05,Processed,Email,PasswordVerification,True,2024-04-05,2024-05-20,2024-05-15,Granted,,,False,0.0,0.0,False,True
+REQ-006,AccessRequest,2024-09-01,Under Review,OnlinePortal,TwoFactor,True,2024-09-02,2024-10-16,,Pending,,CSV,False,0.0,0.0,False,True

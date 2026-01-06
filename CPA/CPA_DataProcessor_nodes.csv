@@ -1,0 +1,5 @@
+processor_id,processor_name,processor_type,location,certifications,data_processing_services,subprocessor_count,max_data_records,security_measures_implemented,breach_history,dpa_count,audit_frequency,liability_insurance,gdpr_compliant,ccpa_compliant,contact_person
+PROC-001,CloudData Services,CloudProvider,"Denver, CO",ISO 27001; SOC 2 Type II,Cloud storage; Data backup; Analytics,3,10000000,Encryption; MFA; Firewall; Intrusion Detection,0,12,Annual,True,True,True,Sarah Chen
+PROC-002,Analytics Engine Ltd,ServiceProvider,"Boulder, CO",SOC 2 Type II; ISO 27018,Data analysis; Insights generation,1,5000000,Encryption; Access controls; Logging,0,8,BiAnnual,True,True,True,Michael Rodriguez
+PROC-003,Marketing Partners Inc,Vendor,"Austin, TX",ISO 27001,Campaign management; Reporting,5,8000000,Encryption; Segmentation; Audit trails,1,15,Annual,True,True,True,Jennifer Kim
+PROC-004,Security Audit Corp,ServiceProvider,"Colorado Springs, CO",ISO 27001; ISO 27035,Compliance auditing; Security assessment,2,1000000,Vulnerability scanning; Penetration testing; SIEM,0,5,Quarterly,True,True,True,Robert Martinez

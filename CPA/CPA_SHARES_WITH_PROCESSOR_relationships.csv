@@ -1,0 +1,5 @@
+source_controller_id,relationship_type,target_processor_id,sharing_date,dpa_signed_date,dpa_status,processing_instructions_provided,security_requirements_specified,data_return_deletion_clause,audit_rights_granted,sub_processor_allowed,data_categories_shared,termination_conditions_specified
+CTRL-001,SHARES_WITH_PROCESSOR,PROC-001,2023-07-05,2023-07-01,Active,True,True,True,True,True,Customer data; Transaction data,True
+CTRL-002,SHARES_WITH_PROCESSOR,PROC-002,2023-08-10,2023-08-05,Active,True,True,True,True,False,Behavioral data; User preferences,True
+CTRL-003,SHARES_WITH_PROCESSOR,PROC-003,2023-08-25,2023-08-20,Active,True,True,True,True,True,Purchase history; Contact info,True
+CTRL-004,SHARES_WITH_PROCESSOR,PROC-004,2023-09-01,2023-08-28,Active,True,True,True,True,True,Sensitive data; Assessment records,True

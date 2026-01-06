@@ -1,0 +1,4 @@
+source_controller_id,relationship_type,target_breach_id,breach_discovery_date,breach_report_date,reported_to_ag,affected_consumer_count,notification_method,notification_completion_date,sensitive_data_exposed,law_enforcement_involved,remediation_initiated
+CTRL-001,REPORTS_DATA_BREACH,BREACH-001,2024-06-15,2024-06-20,True,1250,Email,2024-06-25,False,True,True
+CTRL-002,REPORTS_DATA_BREACH,BREACH-002,2024-07-20,2024-07-25,True,45000,Email,2024-07-25,True,True,True
+CTRL-003,REPORTS_DATA_BREACH,BREACH-003,2024-08-10,2024-08-12,False,50,Email,2024-08-15,False,False,True

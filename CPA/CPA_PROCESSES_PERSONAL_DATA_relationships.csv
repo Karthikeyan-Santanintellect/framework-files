@@ -1,0 +1,7 @@
+source_controller_id,relationship_type,target_activity_id,processing_start_date,processing_method,processing_purpose,processing_frequency,data_sources,data_recipients,cross_border_transfer,retention_days,dpa_required
+CTRL-001,PROCESSES_PERSONAL_DATA,ACT-001,2023-07-01,Automated,Account management,Continuous,Direct input; Website forms,Internal team,False,1095,True
+CTRL-002,PROCESSES_PERSONAL_DATA,ACT-002,2023-08-15,Automated,Ad personalization,Continuous,Behavioral tracking; Third-party data,Ad networks; Marketing partners,True,365,True
+CTRL-003,PROCESSES_PERSONAL_DATA,ACT-003,2023-09-01,Automated,Revenue generation,Monthly,Purchase history; User activity,Data brokers; Analytics firms,True,90,True
+CTRL-004,PROCESSES_PERSONAL_DATA,ACT-004,2023-08-20,Automated,User profiling,Continuous,Behavioral tracking; Inferred data,Internal analytics,False,365,True
+CTRL-005,PROCESSES_PERSONAL_DATA,ACT-005,2023-07-01,Manual,Support interaction,AsNeeded,Support tickets; Chat logs,Support staff,False,180,False
+CTRL-001,PROCESSES_PERSONAL_DATA,ACT-006,2023-07-15,Automated,Service improvement,Daily,Platform analytics; System logs,Analytics dashboard,False,730,True

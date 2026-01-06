@@ -1,0 +1,6 @@
+controller_id,organization_name,controller_type,location,industry_sector,registration_date,compliance_status,annual_data_volume_consumers,data_from_sale_revenue,privacy_officer_assigned,privacy_officer_contact,privacy_policy_published_date,dpa_count,subject_to_biometric_rules,last_audit_date
+CTRL-001,TechFlow Inc,Commercial,"Denver, CO",Technology,2023-07-15,Compliant,250000,False,True,privacy@techflow.com,2023-07-10,8,False,2024-09-15
+CTRL-002,RetailMax Corporation,Commercial,"Boulder, CO",Retail,2023-08-01,Compliant,180000,True,True,dpo@retailmax.com,2023-07-28,12,False,2024-08-20
+CTRL-003,HealthCare Plus,Commercial,"Colorado Springs, CO",Healthcare,2023-07-20,PartiallyCompliant,150000,False,True,dpa@healthcareplus.com,2023-07-15,5,True,2024-07-10
+CTRL-004,Finance Solutions LLC,Commercial,"Fort Collins, CO",Financial Services,2023-09-10,Compliant,320000,True,True,privacy@finance-sol.com,2023-09-05,15,False,2024-10-01
+CTRL-005,Media & Analytics Co,Commercial,"Aurora, CO",Media/Advertising,2023-07-31,UnderReview,200000,True,False,tbd@media-analytics.com,2023-07-25,3,True,2024-06-15

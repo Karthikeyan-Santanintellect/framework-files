@@ -1,0 +1,5 @@
+notice_id,notice_type,publication_date,last_updated,distribution_method,accessibility_level,covers_data_collection,covers_data_use,covers_data_sharing,covers_consumer_rights,covers_sale_sharing,covers_profiling,covers_opt_out_mechanism,language_count,languages_supported,readability_score,compliance_status,ag_review_date,revisions_required
+NOTICE-001,PrivacyPolicy,2023-07-10,2024-10-01,Website,Public,True,True,True,True,True,True,True,2,English; Spanish,8.5,Compliant,,False
+NOTICE-002,DataSaleNotice,2023-08-01,2024-09-15,Website,Public,False,False,True,True,True,True,True,1,English,7.2,Compliant,2024-08-20,False
+NOTICE-003,TargetedAdsNotice,2023-08-15,2024-09-20,InApp,RegisteredUsers,True,True,False,False,False,True,True,2,English; Spanish,8.0,Compliant,,False
+NOTICE-004,BreachNotification,2024-06-25,2024-06-25,Email,Authorized,False,False,False,True,False,False,False,1,English,7.8,Compliant,,False

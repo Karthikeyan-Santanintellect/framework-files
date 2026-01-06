@@ -1,0 +1,4 @@
+mechanism_id,opt_out_type,mechanism_name,implementation_date,method_type,clear_conspicuous_placement,placement_location,single_request_only,no_account_required,response_timeline,technical_standard_compliant,effectiveness_verified,consumer_count_opted_out,opt_out_request_tracking,retention_of_opt_out_data,audit_frequency,compliance_rate
+OPTOUT-001,SaleOfData,Data Sale Opt-Out,2023-07-01,PrivacyPortal,True,Homepage; Account settings; Footer,True,True,Within 15 days,CPA_Standard,True,8500,True,12 months minimum,Quarterly,98.5
+OPTOUT-002,TargetedAdvertising,Ad Personalization Opt-Out,2023-07-15,BrowserSignal,True,Browser header detection,True,True,Immediate,GPC,True,12300,True,24 months,Quarterly,99.8
+OPTOUT-003,Profiling,Behavioral Profiling Opt-Out,2023-08-01,DirectRequest,True,Email opt-out link,True,False,Within 30 days,CPA_Standard,True,4200,True,Indefinite,BiAnnual,97.2

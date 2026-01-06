@@ -1,0 +1,6 @@
+source_controller_id,relationship_type,target_system,implementation_date,measure_type,measure_name,coverage_scope,effectiveness_level,cost_invested,certification_obtained,annual_review_date,compliance_verified
+CTRL-001,IMPLEMENTS_SECURITY_MEASURES,Encryption,2023-07-01,Technical,AES-256 Encryption,All PII databases,Enhanced,125000,True,2024-07-01,True
+CTRL-002,IMPLEMENTS_SECURITY_MEASURES,MFA,2023-06-15,Technical,Multi-Factor Authentication,Admin accounts,Enhanced,45000,True,2024-06-15,True
+CTRL-003,IMPLEMENTS_SECURITY_MEASURES,Access Controls,2023-08-01,Administrative,Role-Based Access Control,All systems,Standard,80000,False,2024-08-01,True
+CTRL-004,IMPLEMENTS_SECURITY_MEASURES,Data Backup,2023-07-20,Technical,Automated Daily Backup,Critical systems,Enhanced,30000,True,2024-07-20,True
+CTRL-005,IMPLEMENTS_SECURITY_MEASURES,Audit Logging,2023-07-10,Technical,Real-time Audit Logging,All platforms,Enhanced,55000,False,2024-07-10,True

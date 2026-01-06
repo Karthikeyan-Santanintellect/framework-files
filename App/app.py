@@ -37,4 +37,5 @@ class Neo4jConnect:
                     result = session.run(query)
                 return [record.data() for record in result]
         except Exception as e:
+            print(f"Error executing query: {e}")
             return str(e)
