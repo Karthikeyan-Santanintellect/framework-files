@@ -1,0 +1,10 @@
+spi_category_id,code,name,text
+SPI-CAT-1A,1A,Government identifiers,Consumer's social security number driver's license state ID card or passport number
+SPI-CAT-1B,1B,Account access credentials,Account log-in financial account number or credit card number with security code or password
+SPI-CAT-1C,1C,Precise geolocation,Consumer's precise geolocation within 1850-foot radius
+SPI-CAT-1D,1D,Protected characteristics,Consumer's racial or ethnic origin religious or philosophical beliefs or union membership
+SPI-CAT-1E,1E,Mail and messages,Contents of consumer's mail email and text messages unless business is intended recipient
+SPI-CAT-1F,1F,Genetic data,Consumer's genetic data
+SPI-CAT-2A,2A,Biometric identification,Processing of biometric information for purpose of uniquely identifying consumer
+SPI-CAT-2B,2B,Health information,Personal information collected and analyzed concerning consumer's health
+SPI-CAT-2C,2C,Sex life or sexual orientation,Personal information collected and analyzed concerning consumer's sex life or sexual orientation

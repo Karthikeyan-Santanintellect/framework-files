@@ -1,0 +1,7 @@
+subdivision_id,section_id,name,text
+SD-1798140-ae,SEC-1798140,Sensitive personal information,A consumer's social security number or driver's license number.
+SD-1798140-ac,SEC-1798140,Commercial information,Records of personal property or products or services purchased.
+SD-1798140-ad,SEC-1798140,Sale,Selling or renting personal information to a third party for valuable consideration.
+SD-1798140-ah,SEC-1798140,Sharing,Communicating personal information to a third party for cross-context behavioral advertising.
+SD-1798120,SEC-1798120,Right to Opt-Out of Sale or Sharing,A consumer has the right to opt-out of the sale or sharing of personal information.
+SD-1798121,SEC-1798121,Right to Limit Use of Sensitive Personal Information,A consumer has the right to limit the use of sensitive personal information.

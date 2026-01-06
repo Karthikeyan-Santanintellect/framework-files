@@ -1,0 +1,2 @@
+breach_id,scope,damages_range,private_right_of_action_section,cure_period_days
+BREACH-001,Unauthorized access/exfiltration of nonencrypted/nonredacted PI due to failure to maintain reasonable security,$107–$799 per consumer per incident or actual damages whichever is greater,§1798.150,30

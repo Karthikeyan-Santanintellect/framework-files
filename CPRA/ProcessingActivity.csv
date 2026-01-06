@@ -1,0 +1,10 @@
+processing_id,name,type,description
+PA-001,Email Collection,Collection,Collection of email addresses from online forms and customer signup
+PA-002,Purchase Recording,Recording,Recording consumer purchase transactions and payment information
+PA-003,Marketing Use,Use,Using consumer email and purchase history for targeted marketing campaigns
+PA-004,Data Retention,Retention,Storing consumer personal information for 3-year retention period
+PA-005,Third-Party Disclosure,Disclosure,Disclosing consumer data to third-party analytics and marketing partners
+PA-006,Behavioral Advertising,Sharing,Sharing consumer browsing history with advertising networks for cross-context behavioral advertising
+PA-007,Sale of Data,Sale,Selling aggregated consumer purchasing data to data brokers
+PA-008,Data Deletion,Deletion,Deleting consumer personal information upon request or expiration of retention period
+PA-009,Profiling Inferences,Inference,Creating behavioral inferences from consumer transaction history

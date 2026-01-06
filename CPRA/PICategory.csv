@@ -1,0 +1,12 @@
+pi_category_id,code,name,examples
+PI-CAT-A,A,Identifiers,Name alias postal address unique personal identifier online identifier IP address email account name SSN driver's license passport
+PI-CAT-B,B,Cal. Civ. Code 1798.80(e) categories,Name signature SSN physical characteristics address telephone passport driver's license insurance policy education employment bank account credit card financial information medical information
+PI-CAT-C,C,Protected classifications,Age race color ancestry national origin citizenship religion marital status medical condition physical disability mental disability sex sexual orientation gender identity veteran status genetic information
+PI-CAT-D,D,Commercial information,Records of personal property products or services purchased obtained or considered purchasing or consuming histories
+PI-CAT-E,E,Biometric information,DNA imagery of iris retina fingerprint face hand vein patterns voice recordings identifier templates keystroke patterns gait patterns
+PI-CAT-F,F,Internet or network activity,Browsing history search history consumer interaction with website application advertisement
+PI-CAT-G,G,Geolocation data,Data locating consumer's physical location or movements over time
+PI-CAT-H,H,Sensory data,Audio electronic visual thermal olfactory or similar information
+PI-CAT-I,I,Professional/employment information,Title responsibilities experience salary range performance evaluations
+PI-CAT-J,J,Non-public education information,Personally identifiable information as defined in FERPA
+PI-CAT-K,K,Inferences,Inferences drawn to create profile about consumer preferences characteristics psychological trends predispositions behavior attitudes intelligence abilities

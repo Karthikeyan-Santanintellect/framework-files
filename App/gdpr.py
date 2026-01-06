@@ -233,12 +233,16 @@ ON CREATE SET
 #TRANSFER MECHANISM
 gdpr_transfer_mechanism ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (tm:TransferMechanism {transfer_id : Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (tm:TransferMechanism {
+  transfer_id: row.Node_ID,
+  regional_standard_regulation_id: 'GDPR 2016/679'
+})
 ON CREATE SET
   tm.name = row.name,
   tm.definition = row.definition,
-  tm.type = row.type,
-  tm.regulated_by_articles = (row.regulated_by_articles,
+  tm.type = row.Node_Type,
+  tm.mechanism_id = row.mechanism_id,
+  tm.regulated_by_articles = row.regulated_by_articles,
   tm.applies_to_countries = row.applies_to_countries,
   tm.effectiveness_level = row.effectiveness_level;
 """
@@ -277,7 +281,7 @@ regional_standard_regulation_recital ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (r:Recital {Node_ID: row.Target_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
-MERGE (reg)-[:REGIONAL_STANDARD_REGULATION_HAS_RECITAL {order: row.Properties}]->(r);
+MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_HAS_RECITAL {order: row.Properties}]->(r);
 """
 # Chapter → Section Relationships 
 chapter_section ="""
@@ -337,7 +341,7 @@ regional_standard_regulation_legislative_action ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (la:LegislativeAction {Node_ID: row.Target_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
-MERGE (reg)-[:REGIONAL_REGULATION_HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
+MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_HAS_LEGISLATIVE_ACTION {order: row.Properties}]->(la);
 """
 
 
@@ -380,7 +384,7 @@ MERGE (lb)-[:LAWFUL_BASIS_REQUIRED_BY_REGULATION]->(reg);
 principle_regulation ="""
 MATCH (pl:Principle {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
-MERGE (p)-[:EMBODIED_IN]->(reg);
+MERGE (p)-[:PRINCIPLE_EMBODIED_IN_REGULATION]->(reg);
 """
 #ComplianceMechanism → RegionalStandardAndRegulation
 compliance_mechanism_regulation ="""
@@ -477,7 +481,7 @@ MERGE (ea)-[:ENFORCEMENT_AUTHORITY_IMPOSES_PENALTY ]->(pen);
 #Penalty → ComplianceMechanism
 penalty_compliance_mechanism = """
 MATCH (pen:Penalty{regional_standard_regulation_id: 'GDPR 2016/679'})
-MATCH (MATCH (cm:ComplianceMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (cm:ComplianceMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (pen)-[:PENALTY_IMPOSES_COMPLIANCE_MECHANISM]->(cm)
 """
 #Penalty → Article
@@ -593,6 +597,42 @@ time.sleep(2)
 client.query(gdpr_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/1_framework_nodes_CORRECTED.csv"))
 time.sleep(2)
 
+client.query(gdpr_actor_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_ActorRoles.csv"))
+time.sleep(2)
+
+client.query(gdpr_data_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_DataCategories.csv"))
+time.sleep(2)
+
+client.query(gdpr_data_subject.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_DataSubjectRights.csv"))
+time.sleep(2)
+
+client.query(gdpr_lawful_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_LawfulBasis.csv"))
+time.sleep(2)
+
+client.query(gdpr_principle.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_Principles.csv"))
+time.sleep(2)
+
+client.query(gdpr_processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_ProcessingActivities.csv"))
+time.sleep(2)
+
+client.query(gdpr_compliance_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_ComplianceMechanisms.csv"))
+time.sleep(2)
+
+client.query(gdpr_processing_context.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_ProcessingContexts.csv"))
+time.sleep(2)
+
+client.query(gdpr_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_Penalties.csv"))
+time.sleep(2)
+
+client.query(gdpr_transfer_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_TransferMechanisms.csv"))
+time.sleep(2)
+
+
+client.query(gdpr_enforcement_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_EnforcementAuthorities.csv"))
+time.sleep(2)
+
+
+
 client.query(regional_standard_regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
 time.sleep(2)
 
@@ -630,6 +670,96 @@ client.query(article_concept.replace('$file_path',"https://github.com/Karthikeya
 time.sleep(2)
 
 client.query(recital_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/22_relationships_recital_to_concepts.csv"))
+time.sleep(2)
+
+client.query(datacategory_regulation)
+time.sleep(2)
+
+client.query(processing_activity_regulation)
+time.sleep(2)
+
+client.query(lawful_basis_regulation)
+time.sleep(2)
+
+client.query(principle_regulation)
+time.sleep(2)
+
+client.query(compliance_mechanism_regulation)
+time.sleep(2)
+
+client.query(data_subject_actor_role)
+time.sleep(2)
+
+client.query(article_actor_role)
+time.sleep(2)
+
+client.query(article_data_category)
+time.sleep(2)
+
+client.query(article_data_subject)
+time.sleep(2)
+
+client.query(article_lawful_basis)
+time.sleep(2)
+
+client.query(article_principle)
+time.sleep(2)
+
+client.query(article_processing_activity)
+time.sleep(2)
+
+client.query(article_compliance_mechanism)
+time.sleep(2)
+
+client.query(article_transfer_mechanism)
+time.sleep(2)
+
+client.query(penalty_article)
+time.sleep(2)
+
+client.query(datasubject_right_article)
+time.sleep(2)
+
+client.query(datasubject_right_enforcement_authority)
+time.sleep(2)
+
+client.query(enforcement_authority_article)
+time.sleep(2)
+
+client.query(enforcement_authority_penalty)
+time.sleep(2)
+
+client.query(penalty_compliance_mechanism)
+time.sleep(2)
+
+client.query(penalty_article)
+time.sleep(2)
+
+client.query(article_processing_context)
+time.sleep(2)
+
+client.query(processing_context_principle)  
+time.sleep(2)
+
+client.query(processing_context_compliance_mechanism)
+time.sleep(2)
+
+client.query(processing_context_transfer_mechanism)
+time.sleep(2)
+
+client.query(datacategory_transfer_mechanism)
+time.sleep(2)
+
+client.query(actor_role_processing_activity)
+time.sleep(2)
+
+client.query(actor_role_data_category)
+time.sleep(2)
+
+client.query(actor_role_compliance_mechanism)
+time.sleep(2)
+
+client.query(actor_role_principle)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")

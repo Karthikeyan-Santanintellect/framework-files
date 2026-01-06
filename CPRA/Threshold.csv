@@ -1,0 +1,4 @@
+threshold_id,type,value,description,effective_year
+THRESHOLD-001,Revenue,$26625000,Annual gross revenues greater than $26625000,2025
+THRESHOLD-002,DataVolume,100000,Buys/sells/shares PI of 100000 or more consumers or households annually,2023
+THRESHOLD-003,SaleSharingRevenue,50%,Derives 50% or more of annual revenue from selling or sharing PI,2023

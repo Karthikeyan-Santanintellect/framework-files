@@ -1,0 +1,3 @@
+data_root_id,node_label,name,description
+PI,PersonalInformation,Personal Information,Information that identifies or relates to a consumer or household.
+SPI,SensitivePersonalInformation,Sensitive Personal Information,Subset of PI subject to heightened protections and Right to Limit Use.

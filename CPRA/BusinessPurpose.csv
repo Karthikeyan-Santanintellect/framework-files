@@ -1,0 +1,9 @@
+purpose_id,code,name,text
+BP-E1,e(1),Auditing and Interactions,Auditing related to current consumer interaction including counting ad impressions and verifying positioning and quality
+BP-E2,e(2),Security and Fraud Prevention,Detecting security incidents protecting against malicious deceptive fraudulent or illegal activity
+BP-E3,e(3),Debugging,Debugging to identify and repair errors that impair existing intended functionality
+BP-E4,e(4),Short-term Transient Use,Short-term transient use not disclosed to third party and not used to build consumer profile
+BP-E5,e(5),Performing Services,Performing services on behalf of business including account customer service order fulfillment financing advertising marketing and analytics
+BP-E6,e(6),Internal Research,Undertaking internal research for technological development and demonstration
+BP-E7,e(7),Quality and Safety,Undertaking activities to verify or maintain quality or safety of services or devices
+BP-E8,e(8),Operational Purposes,Other notified purposes that are reasonably necessary and proportionate to business purposes or consumer expectations
