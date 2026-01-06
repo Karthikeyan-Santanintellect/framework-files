@@ -1,5 +1,5 @@
 #Regional Regulation 
-regional_regulation = """
+regional_standard_and_regulation = """
 MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 ON CREATE SET 
     reg.name = "New York Stop Hacks and Improve Electronic Data Security (SHIELD) Act",
@@ -271,6 +271,25 @@ ON CREATE SET
     pi.breach_notification_required = row.breach_notification_required,
     pi.retention_guidance = row.retention_guidance;
 """
+#risk_assessment
+risk_assesment ="""
+Load CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ra:RiskAssessment {assessment_id: row.assessment_id})
+ON CREATE SET 
+    ra.name = row.assessment_name,
+    ra._type = row.assessment_type,
+    ra.assessment_date = row.assessment_date,
+    ra.completion_date = row.completion_date,
+    ra.assessor_name = row.assessor_name,
+    ra.scope = row.assessment_scope,
+    ra.internal_risks_identified = row.internal_risks_identified,
+    ra.external_risks_identified = row.external_risks_identified,
+    ra.risk_level = row.risk_level,
+    ra.risk_mitigation_plan_exists = row.risk_mitigation_plan_exists,
+    ra.mitigation_deadline = row.mitigation_deadline,
+    ra.last_review_date = row.last_review_date,
+    ra.next_review_date = row.next_review_date;
+"""
 #Relationships
 #regulation_data_controller
 regulation_data_controller = """
@@ -285,6 +304,14 @@ MATCH (dc:DataController {controller_id: row.source_controller_id, regional_stan
 MATCH (br:DataBreach {breach_id: row.target_breach_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MERGE (dc)-[:DATA_CONTROLLER_DETECTS_DATA_BREACH]->(br);
 """
+#private_inforamtion_private_information
+private_inforamtion_private_information = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (SourceInfo:PrivateInformation {info_id: row.source_info_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (TargetInfo:PrivateInformation {info_id:row.target_info_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (SourceInfo)-[:PRIVATE_INFORMATION_COMBINES_WITH_DATA_ELEMENT]->(TargetInfo);
+"""
+
 #security_program_administrative_safeguard
 security_program_administrative_safeguard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -371,7 +398,168 @@ MERGE (dc)-[:DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT]->(ca);
 """
 
 
+import sys
+import os
+import time
+import logging
+import json
+from app import Neo4jConnect
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+client = Neo4jConnect()
+
+health = client.check_health()
+if health is not True:
+    print("Neo4j connection error:", health)
+    client.close()
+    sys.exit(1)
+
+logger.info("Loading graph structure...")
+
+client.query(regional_standard_and_regulation)
+time.sleep(2)
+
+client.query(administrative_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_AdministrativeSafeguard_nodes.csv"))
+time.sleep(2)
+
+client.query(compliance_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_ComplianceAssessment_nodes.csv"))
+time.sleep(2)
+
+client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_DataBreach_nodes.csv"))
+time.sleep(2)
+
+client.query(data_controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataBreach_nodes.csv"))
+time.sleep(2)
+
+client.query(data_controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_DataController_nodes.csv"))
+time.sleep(2)
+
+client.query(employee_training.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_EmployeeTraining_nodes.csv"))
+time.sleep(2)
+
+client.query(incident_response.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_IncidentResponse_nodes.csv"))
+time.sleep(2)
+
+client.query(notification_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_NotificationProcess_nodes.csv"))
+time.sleep(2)
+
+client.query(ny_resident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_NYResident_nodes.csv"))
+time.sleep(2)
+
+client.query(security_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_SecurityPolicy_nodes.csv"))
+time.sleep(2)
+
+client.query(security_program.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_SecurityProgram_nodes.csv"))
+time.sleep(2)
+
+client.query(security_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_ServiceProvider_nodes.csv"))
+time.sleep(2)
+
+client.query(technical_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_TechnicalSafeguard_nodes.csv"))
+time.sleep(2)
+
+client.query(private_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_PrivateInformation_nodes.csv"))
+time.sleep(2)
+
+client.query(risk_assesment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_RiskAssessment_nodes.csv"))
+time.sleep(2)
+
+#Relationships
+client.query(regulation_data_controller)
+time.sleep(2)
+
+client.query(data_controller_data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_DETECTS_DATA_BREACH_relationships.csv"))
+time.sleep(2)
+
+client.query(private_inforamtion_private_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_COMBINES_WITH_DATA_ELEMENT_relationships.csv"))
+time.sleep(2)
+
+client.query(security_program_administrative_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_APPLIES_SAFEGUARDS_TO_relationships.csv"))
+time.sleep(2)
+
+client.query(security_program_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_CONDUCTS_RISK_ASSESSMENT.csv"))
+time.sleep(2)
+
+client.query(datacontroller_securitypolicy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_ENFORCES_POLICY_relationships.csv"))
+time.sleep(2)
+
+client.query(datacontroller_nyresident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_HOLDS_PERSONAL_DATA_OF_relationships.csv"))
+time.sleep(2)
+
+client.query(datacontroller_security_program.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_IMPLEMENTS_SECURITY_PROGRAM_relationships.csv"))
+time.sleep(2)
+
+client.query(datacontroller_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_MANAGES_THIRD_PARTY_relationships.csv"))
+time.sleep(2)
+
+client.query(databreach_nyresident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_NOTIFIES_AFFECTED_INDIVIDUAL_relationships.csv"))
+time.sleep(2)
+
+client.query(datacontroller_private_information)
+time.sleep(2)
+
+client.query(security_program_training_employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_PROVIDES_TRAINING_TO_relationships.csv"))
+time.sleep(2)
+
+client.query(data_breach_government_agency)
+time.sleep(2)
+
+client.query(datacontroller_compliance_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_UNDERGOES_COMPLIANCE_ASSESSMENT_relationships.csv"))
+time.sleep(2)
+
+
+
+logger.info("Graph structure loaded successfully.")
+
+output_filename = "shield.json"
+
+res = client.query("""
+    MATCH path = (:RegionalStandardAndRegulation)-[*]->()
+    WITH path
+    UNWIND nodes(path) AS n
+    UNWIND relationships(path) AS r
+    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+    RETURN {
+      nodes: [n IN uniqueNodes | n {
+        .*, 
+        id: elementId(n),     
+        labels: labels(n),      
+        mainLabel: head(labels(n)) 
+      }],
+      links: [r IN uniqueRels | r {
+        .*,
+        id: elementId(r),     
+        type: type(r),         
+        source: elementId(startNode(r)), 
+        target: elementId(endNode(r)) 
+      }]
+    } AS graph_data
+""")
+
+if isinstance(res, str):
+    logger.error(f"✗ Export query failed: {res}")
+    client.close()
+    sys.exit(1)
+
+if not res or len(res) == 0:
+    logger.warning(" No data returned from export query")
+    client.close()
+    sys.exit(1)
+
+graph_data = res[0].get('graph_data', res[0])
+
+with open(output_filename, 'w', encoding='utf-8') as f:
+    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
+
+node_count = len(graph_data.get('nodes', []))
+link_count = len(graph_data.get('links', []))
+
+logger.info(f" Exported {node_count} nodes and {link_count} relationships")
+logger.info(f" Graph data saved to: {output_filename}") 
+
+client.close()
 
 
 
