@@ -1,0 +1,5 @@
+assessment_id,assessment_name,assessment_type,assessment_date,completion_date,assessor_name,assessment_scope,internal_risks_identified,external_risks_identified,risk_level,risk_mitigation_plan_exists,mitigation_deadline,last_review_date,next_review_date
+RISK-001,Enterprise Data Security Risk Assessment,Comprehensive,2024-08-15,2024-08-25,Dr. Sarah Chen,"All systems; All data types",3,2,Medium,True,2024-11-15,2024-08-25,2025-08-15
+RISK-002,Healthcare Privacy Risk Assessment,Comprehensive,2024-09-20,2024-10-10,Michael Rodriguez,"Healthcare systems; Patient data",2,1,Medium,True,2024-12-20,2024-10-10,2024-12-20
+RISK-003,IT Infrastructure Risk Assessment,Comprehensive,2024-09-01,2024-09-15,Jennifer Adams,"IT infrastructure; Customer data",5,3,High,True,2025-09-01,2024-09-15,2025-09-01
+RISK-004,Retail Systems Risk Assessment,Comprehensive,2024-08-10,2024-08-22,Robert Williams,"Retail systems; Cardholder data",7,4,High,False,2025-08-10,2024-08-22,2025-08-10
