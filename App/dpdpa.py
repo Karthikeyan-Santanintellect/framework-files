@@ -627,34 +627,34 @@ time.sleep(2)
 client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction.csv"))
 time.sleep(2)
 
-client.query(data_principal)
+client.query(data_principal.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataPrincipal.csv"))
 time.sleep(2)
 
-client.query(data_fiduciary)
+client.query(data_fiduciary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataFiduciary.csv"))
 time.sleep(2)
 
-client.query(data_processor)
+client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataProcessor.csv"))
 time.sleep(2)
 
-client.query(data_protection_board)
+client.query(data_protection_board.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataProtectionBoard.csv"))
 time.sleep(2)
 
-client.query(right)
+client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Right.csv"))
 time.sleep(2)
 
-client.query(legal_basis)
+client.query(legal_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/LegalBasis.csv"))
 time.sleep(2) 
 
-client.query(processing_activity)
+client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/ProcessingActivity.csv"))
 time.sleep(2)
 
-client.query(consent)
+client.query(consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Consent.csv"))
 time.sleep(2)
 
-client.query(exemption)
+client.query(exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Exemption.csv"))
 time.sleep(2)
 
-client.query(complaint)
+client.query(complaint.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Complaint.csv"))
 time.sleep(2)
 
 
@@ -779,6 +779,37 @@ time.sleep(2)
 
 client.query(role_requirement)
 time.sleep(2)
+
+client.query(section_exemption)
+time.sleep(2)
+
+client.query(requirement_exemption)
+time.sleep(2)
+
+client.query(enforcement_action_section)
+time.sleep(2)
+
+client.query(data_protection_board_right)
+time.sleep(2)
+
+client.query(chapter_exemption) 
+time.sleep(2)
+
+client.query(system_datacategory)
+time.sleep(2)
+
+client.query(control_processing_activity)
+time.sleep(2)
+
+client.query(safeguard_processing_activity)
+time.sleep(2)
+
+client.query(policy_processing_activity)
+time.sleep(2)
+
+client.query(processing_activity_right)
+time.sleep(2)
+
 
 
 

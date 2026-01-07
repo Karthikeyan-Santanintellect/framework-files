@@ -1,0 +1,6 @@
+processing_id,name,type,description
+PA-TARGET-ADS,Targeted Advertising,TargetedAdvertising,"Displaying advertisements to a consumer where the advertisement is selected based on personal data obtained from that consumer's activities over time and across nonaffiliated websites or applications to predict preferences or interests."
+PA-SALE,Sale of Personal Data,SaleOfPersonalData,"Exchange of personal data for monetary consideration by the controller to a third party."
+PA-PROFILING,Profiling,Profiling,"Automated processing of personal data to evaluate or predict aspects relating to a consumer, where such profiling produces legal or similarly significant effects."
+PA-SENSITIVE,Sensitive Data Processing,SensitiveDataProcessing,"Processing of sensitive data, including health, biometric, child, and precise geolocation data."
+PA-GENERAL,General Processing,Processing,"General collection, use, storage, disclosure, analysis, or deletion of personal data by the controller.",

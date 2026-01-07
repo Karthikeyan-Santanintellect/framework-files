@@ -12,6 +12,33 @@ ON CREATE SET
   reg.description = row.description;
 """
 
+#title
+title = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (t:Title {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    title_id: row.title_id
+})
+ON CREATE SET
+    t.number = row.title_number,
+    t.name = row.name,
+    t.citation = row.citation,
+    t.description = row.description;
+"""
+#chapter
+chapter = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ch:Chapter {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    chapter_id: row.chapter_id
+})
+ON CREATE SET
+    ch.number = row.chapter_number,
+    ch.name = row.name,
+    ch.citation = row.citation,
+    ch.description = row.description;
+"""
+
 #section
 section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -25,6 +52,19 @@ ON CREATE SET
     sec.text = row.text,
     sec.topic = row.topic;
 """
+#subsection
+subsection = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sub:Subsection {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    subsection_id: row.subsection_id
+})
+ON CREATE SET
+    sub.section_id = row.section_id,
+    sub.label = row.label,          
+    sub.text = row.text;
+"""
+
 
 #Requirement
 requirement = """
@@ -190,6 +230,311 @@ ON CREATE SET
     ex.description = row.description,
     ex.section = row.section;
 """
+#definition
+definition = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (def:Definition {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    definition_id: row.definition_id
+})
+ON CREATE SET
+    def.term = row.term,
+    def.text = row.text,
+    def.section_id = row.section_id;
+"""
+#consumer
+consumer = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (c:Consumer {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    consumer_id: row.consumer_id
+})
+ON CREATE SET
+    c.description = row.description,
+    c.scope = row.scope;   
+"""
+
+#controller
+controller = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ctrl:Controller {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    controller_id: row.controller_id
+})
+ON CREATE SET
+    ctrl.name = row.name,
+    ctrl.description = row.description,
+    ctrl.industry = row.industry;
+"""
+#processor
+processor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (proc:Processor {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    processor_id: row.processor_id
+})
+ON CREATE SET
+    proc.name = row.name,
+    proc.description = row.description,
+    proc.services = row.services;
+"""
+#third party
+third_party = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tp:ThirdParty {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    third_party_id: row.third_party_id
+})
+ON CREATE SET
+    tp.name = row.name,
+    tp.description = row.description;
+"""
+#attorney general
+attorney_general = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ag:AttorneyGeneral {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    ag_id: row.ag_id
+})
+ON CREATE SET
+    ag.name = row.name,
+    ag.jurisdiction = row.jurisdiction,
+    ag.description = row.description;
+"""
+#employee
+employee = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (e:Employee {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    employee_id: row.employee_id
+})
+ON CREATE SET
+    e.description = row.description;
+"""
+#commercial_entity
+commercial_entity = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ce:CommercialEntity {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    entity_id: row.entity_id
+})
+ON CREATE SET
+    ce.description = row.description;
+"""
+#right 
+right = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (r:Right {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    right_id: row.right_id
+})
+ON CREATE SET
+    r.name = row.name,                
+    r.description = row.description,
+    r.section_id = row.section_id;    
+"""
+#personal data
+personal_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pd:PersonalData {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    personal_data_id: row.personal_data_id
+})
+ON CREATE SET
+    pd.name = row.name,
+    pd.description = row.description;
+"""
+
+#sensitive data
+sensitive_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sd:SensitiveData {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    sensitive_data_id: row.sensitive_data_id
+})
+ON CREATE SET
+    sd.name = row.name,
+    sd.description = row.description;
+"""
+
+#sensitive category
+sensitive_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sc:SensitiveCategory {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    sensitive_category_id: row.sensitive_category_id
+})
+ON CREATE SET
+    sc.name = row.name,
+    sc.description = row.description;
+"""
+#deidentified_data
+deidentified_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dd:DeidentifiedData {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    deid_id: row.deid_id
+})
+ON CREATE SET
+    dd.description = row.description;
+"""
+#public_data
+public_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pub:PubliclyAvailableInformation {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    public_id: row.public_id
+})
+ON CREATE SET
+    pub.description = row.description;
+"""
+#processing_activity
+processing_activity = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pa:ProcessingActivity {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    processing_id: row.processing_id
+})
+ON CREATE SET
+    pa.name = row.name,
+    pa.type = row.type,             
+    pa.description = row.description;
+"""
+
+#privacy notice
+privacy_notice = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pn:PrivacyNotice {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    notice_id: row.notice_id
+})
+ON CREATE SET
+    pn.name = row.name,
+    pn.description = row.description,
+    pn.section_id = row.section_id;
+"""
+
+#consent
+consent = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (con:Consent {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    consent_id: row.consent_id
+})
+ON CREATE SET
+    con.type = row.type,         // e.g., 'OptIn'
+    con.description = row.description;
+"""
+#opt_in_consent
+opt_in_consent = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (oc:OptInConsent {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    optin_id: row.optin_id
+})
+ON CREATE SET
+    oc.description = row.description;
+"""
+#security_measures
+security_measures = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sm:SecurityMeasures {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    security_id: row.security_id
+})
+ON CREATE SET
+    sm.description = row.description,
+    sm.section_id = row.section_id;
+"""
+#rights_request_process
+rights_request_process = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rrp:RightsRequestProcess {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    process_id: row.process_id
+})
+ON CREATE SET
+    rrp.name = row.name,
+    rrp.description = row.description;
+"""
+#duty 
+duty = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (du:Duty {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    duty_id: row.duty_id
+})
+ON CREATE SET
+    du.type = row.type,          
+    du.description = row.description;
+"""
+#opt_out_mechanism
+opt_out_mechanism = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (oom:OptOutMechanism {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    mechanism_id: row.mechanism_id
+})
+ON CREATE SET
+    oom.name = row.name,
+    oom.description = row.description;
+"""
+#violation_notice
+violation_notice = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (vn:ViolationNotice {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    notice_id: row.notice_id
+})
+ON CREATE SET
+    vn.description = row.description;
+"""
+#civil_penalty
+civil_penalty = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cp:CivilPenalty {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    penalty_id: row.penalty_id
+})
+ON CREATE SET
+    cp.amount = row.amount,
+    cp.description = row.description;
+"""
+
+#civil_investigative_demand
+civil_investigative_demand = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cid:CivilInvestigativeDemand {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    cid_id: row.cid_id
+})
+ON CREATE SET
+    cid.description = row.description;
+"""
+#injunction
+injunction = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (inj:Injunction {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    injunction_id: row.injunction_id
+})
+ON CREATE SET
+    inj.description = row.description;
+"""
+
+#cure_period 
+cure_period = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cpd:CurePeriod {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    cure_id: row.cure_id
+})
+ON CREATE SET
+    cpd.duration = row.duration,       
+    cpd.description = row.description;
+"""
+
+
 #Regulation → Section
 regulation_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -359,6 +704,241 @@ ON CREATE SET
     r.justification = row.justification,
     r.mapping_type = row.mapping_type;
 """
+
+#regulation_title
+regulation_title = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (t:Title {regional_standard_regulation_id: 'VCDPA 2023', title_id: row.title_id})
+MERGE (reg)-[:REGULATION_HAS_TITLE]->(t);
+"""
+
+#title_chapter
+title_chapter = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (t:Title {regional_standard_regulation_id: 'VCDPA 2023', title_id: row.title_id})
+MATCH (ch:Chapter {regional_standard_regulation_id: 'VCDPA 2023', chapter_id: row.chapter_id})
+MERGE (t)-[:TITLE_HAS_CHAPTER]->(ch);
+"""
+
+#chapter_section_rel
+chapter_section_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ch:Chapter {regional_standard_regulation_id: 'VCDPA 2023', chapter_id: row.chapter_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
+MERGE (ch)-[:CHAPTER_HAS_SECTION]->(sec);
+"""
+#section_subsection_rel
+section_subsection_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
+MATCH (sub:Subsection {regional_standard_regulation_id: 'VCDPA 2023', subsection_id: row.subsection_id})
+MERGE (sec)-[:SECTION_HAS_SUBSECTION]->(sub);
+"""
+
+#section_definition_rel
+section_definition_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
+MATCH (def:Definition {regional_standard_regulation_id: 'VCDPA 2023', definition_id: row.definition_id})
+MERGE (sec)-[:SECTION_DEFINES_TERM]->(def);
+"""
+#section_right_rel
+section_right_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
+MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023', right_id: row.right_id})
+MERGE (sec)-[:SECTION_ESTABLISHES_RIGHT]->(r);
+"""
+
+#section_dpa_rel
+section_dpa_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MERGE (sec)-[:SECTION_MANDATES_DPA]->(dpa);
+"""
+
+#consumer_right
+consumer_right = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (c:Consumer {regional_standard_regulation_id: 'VCDPA 2023', consumer_id: row.consumer_id})
+MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023', right_id: row.right_id})
+MERGE (c)-[:CONSUMER_HAS_RIGHT]->(r);
+"""
+
+#controller_consumer_duty
+controller_consumer_duty = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (c:Consumer {regional_standard_regulation_id: 'VCDPA 2023', consumer_id: row.consumer_id})
+MATCH (du:Duty {regional_standard_regulation_id: 'VCDPA 2023', duty_id: row.duty_id})
+MERGE (ctrl)-[:OWES_DUTY_TO_CONSUMER]->(c);
+MERGE (du)-[:DUTY_DERIVED_FROM_SECTION]->(sec)
+"""
+
+#controller_threshold
+controller_threshold = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (th:Threshold {regional_standard_regulation_id: 'VCDPA 2023', threshold_id: row.threshold_id})
+MERGE (ctrl)-[:CONTROLLER_MEETS_THRESHOLD]->(th);
+"""
+
+#controller_processor
+controller_processor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (proc:Processor {regional_standard_regulation_id: 'VCDPA 2023', processor_id: row.processor_id})
+MERGE (ctrl)-[:ENGAGES_PROCESSOR]->(proc);
+"""
+
+#controller_excludes_context
+controller_excludes_context = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (e:Employee {regional_standard_regulation_id: 'VCDPA 2023', employee_id: row.employee_id})
+MERGE (ctrl)-[:EXCLUDES_EMPLOYEE_CONTEXT]->(e);
+"""
+
+#sensitive_subtype_of_personal
+sensitive_subtype_of_personal = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023', sensitive_data_id: row.sensitive_data_id})
+MATCH (pd:PersonalData {regional_standard_regulation_id: 'VCDPA 2023', personal_data_id: row.personal_data_id})
+MERGE (sd)-[:SUBTYPE_OF_PERSONAL_DATA]->(pd);
+"""
+
+#sensitive_includes_category_rel
+sensitive_includes_category_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023', sensitive_data_id: row.sensitive_data_id})
+MATCH (sc:SensitiveCategory {regional_standard_regulation_id: 'VCDPA 2023', sensitive_category_id: row.sensitive_category_id})
+MERGE (sd)-[:INCLUDES_SENSITIVE_CATEGORY]->(sc);
+"""
+
+#sensitive_requires_consent_rel
+sensitive_requires_consent_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023', sensitive_data_id: row.sensitive_data_id})
+MATCH (oc:OptInConsent {regional_standard_regulation_id: 'VCDPA 2023', optin_id: row.optin_id})
+MERGE (sd)-[:REQUIRES_OPT_IN_CONSENT]->(oc);
+"""
+
+#controller_processing 
+controller_processing = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
+MERGE (ctrl)-[:CONDUCTS_PROCESSING]->(pa);
+"""
+
+#processing_operates_on_data
+processing_operates_on_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023', data_id: row.data_id})
+MERGE (pa)-[:PROCESSING_OPERATES_ON_DATACATEGORY]->(dc);
+"""
+
+#processing_subject_to_right
+processing_subject_to_right = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
+MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023', right_id: row.right_id})
+MERGE (pa)-[:PROCESSING_SUBJECT_TO_RIGHT]->(r);
+"""
+
+#processing_requires_dpa
+processing_requires_dpa = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MERGE (pa)-[:PROCESSING_REQUIRES_DPA]->(dpa);
+"""
+#controller_privacy_notice
+controller_privacy_notice = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MERGE (ctrl)-[:CONTROLLER_PUBLISHES_PRIVACY_NOTICE]->(pn);
+"""
+
+#privacy_notice_discloses_datacategory 
+privacy_notice_discloses_datacategory = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023', data_id: row.data_id})
+MERGE (pn)-[:PRIVACY_NOTICE_DISCLOSES_DATACATEGORY]->(dc);
+"""
+#privacy_notice_optout_mechanism
+privacy_notice_optout_mechanism = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MATCH (oom:OptOutMechanism {regional_standard_regulation_id: 'VCDPA 2023', mechanism_id: row.mechanism_id})
+MERGE (pn)-[:PRIVACY_NOTICE_INCLUDES_OPTOUT_MECHANISM]->(oom);
+"""
+
+#controller_must_obtain_optin
+controller_must_obtain_optin = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
+MATCH (oc:OptInConsent {regional_standard_regulation_id: 'VCDPA 2023', optin_id: row.optin_id})
+MERGE (ctrl)-[:CONTROLLER_MUST_OBTAIN_OPTIN_CONSENT]->(oc);
+"""
+
+#ag_enforces_regulation
+ag_enforces_regulation = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (ag)-[:ENFORCES_REGULATION]->(reg);
+"""
+#ag_issues_violation_notice
+ag_issues_violation_notice = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MERGE (ag)-[:ISSUES_VIOLATION_NOTICE]->(vn);
+"""
+#violation_triggers_cure
+violation_triggers_cure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MATCH (cpd:CurePeriod {regional_standard_regulation_id: 'VCDPA 2023', cure_id: row.cure_id})
+MERGE (vn)-[:VIOLATION_TRIGGERS_CURE_PERIOD]->(cpd);
+"""
+#ag_seeks_penalty
+ag_seeks_penalty = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (cp:CivilPenalty {regional_standard_regulation_id: 'VCDPA 2023', penalty_id: row.penalty_id})
+MERGE (ag)-[:ATTORNEY_GENERAL_CAN_SEEK_CIVIL_PENALTY]->(cp);
+"""
+#ag_can_issue_cid
+ag_can_issue_cid = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (cid:CivilInvestigativeDemand {regional_standard_regulation_id: 'VCDPA 2023', cid_id: row.cid_id})
+MERGE (ag)-[:ATTORNEY_GENERAL_CAN_ISSUE_CID]->(cid);
+"""
+
+#ag_can_seek_injunction
+ag_can_seek_injunction = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (inj:Injunction {regional_standard_regulation_id: 'VCDPA 2023', injunction_id: row.injunction_id})
+MERGE (ag)-[:ATTORNEY_GENERAL_CAN_SEEK_INJUNCTION]->(inj);
+"""
+
+#violation_requests_dpa
+violation_requests_dpa = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MERGE (ag)-[:ATTORNEY_GENERAL_REQUESTS_DPA_FROM_CONTROLLER]->(dpa);
+"""
+
 
 
 import os

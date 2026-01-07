@@ -1,0 +1,3 @@
+processor_id,name,description,services
+PROC-CLOUD,Cloud Processor,"Processor providing cloud hosting and data storage services under controller instructions.","Cloud hosting and storage"
+PROC-ANALYTICS,Analytics Processor,"Processor performing analytics and reporting on personal data on behalf of controllers.","Analytics and reporting"

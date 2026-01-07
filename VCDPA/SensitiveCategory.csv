@@ -1,0 +1,9 @@
+sensitive_category_id,name,description
+SC-RACE,Racial or Ethnic Origin,"Sensitive data revealing a consumer's racial or ethnic origin."
+SC-RELIGION,Religious Beliefs,"Sensitive data revealing a consumer's religious beliefs."
+SC-HEALTH,Mental or Physical Health Diagnosis,"Sensitive data concerning a consumer's mental or physical health diagnosis."
+SC-SEXUAL-ORIENT,Sexual Orientation,"Sensitive data revealing a consumer's sexual orientation."
+SC-CITIZENSHIP,Citizenship or Immigration Status,"Sensitive data revealing a consumer's citizenship or immigration status."
+SC-GEN-BIOMETRIC,Genetic or Biometric Data,"Genetic or biometric data processed for the purpose of uniquely identifying a natural person."
+SC-CHILD,Child Data,"Personal data collected from a known child under the age of 13."
+SC-PRECISE-GEO,Precise Geolocation Data,"Precise geolocation data identifying a consumer's location within a radius of 1,750 feet."
