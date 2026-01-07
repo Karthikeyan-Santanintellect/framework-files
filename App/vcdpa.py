@@ -705,243 +705,222 @@ ON CREATE SET
     r.mapping_type = row.mapping_type;
 """
 
-#regulation_title
+# Regulation → Title
 regulation_title = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'VCDPA 2023'})
-MATCH (t:Title {regional_standard_regulation_id: 'VCDPA 2023', title_id: row.title_id})
+MATCH (t:Title {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (reg)-[:REGULATION_HAS_TITLE]->(t);
 """
 
-#title_chapter
+# Title → Chapter
 title_chapter = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (t:Title {regional_standard_regulation_id: 'VCDPA 2023', title_id: row.title_id})
-MATCH (ch:Chapter {regional_standard_regulation_id: 'VCDPA 2023', chapter_id: row.chapter_id})
+MATCH (t:Title {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (ch:Chapter {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (t)-[:TITLE_HAS_CHAPTER]->(ch);
 """
 
-#chapter_section_rel
+# Chapter → Section
 chapter_section_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ch:Chapter {regional_standard_regulation_id: 'VCDPA 2023', chapter_id: row.chapter_id})
-MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
+MATCH (ch:Chapter {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ch)-[:CHAPTER_HAS_SECTION]->(sec);
 """
-#section_subsection_rel
+
+# Section → Subsection
 section_subsection_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
-MATCH (sub:Subsection {regional_standard_regulation_id: 'VCDPA 2023', subsection_id: row.subsection_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (sub:Subsection {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sec)-[:SECTION_HAS_SUBSECTION]->(sub);
 """
 
-#section_definition_rel
+# Section → Definition
 section_definition_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
-MATCH (def:Definition {regional_standard_regulation_id: 'VCDPA 2023', definition_id: row.definition_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (def:Definition {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sec)-[:SECTION_DEFINES_TERM]->(def);
 """
-#section_right_rel
+
+# Section → Right
 section_right_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
-MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023', right_id: row.right_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sec)-[:SECTION_ESTABLISHES_RIGHT]->(r);
 """
 
-#section_dpa_rel
+# Section → DataProtectionAssessment
 section_dpa_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023', section_id: row.section_id})
-MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MATCH (sec:Section {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sec)-[:SECTION_MANDATES_DPA]->(dpa);
 """
 
-#consumer_right
+# Consumer → Right
 consumer_right = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (c:Consumer {regional_standard_regulation_id: 'VCDPA 2023', consumer_id: row.consumer_id})
-MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023', right_id: row.right_id})
+MATCH (c:Consumer {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (c)-[:CONSUMER_HAS_RIGHT]->(r);
 """
 
-#controller_consumer_duty
+# Controller → Consumer (Duty)
 controller_consumer_duty = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (c:Consumer {regional_standard_regulation_id: 'VCDPA 2023', consumer_id: row.consumer_id})
-MATCH (du:Duty {regional_standard_regulation_id: 'VCDPA 2023', duty_id: row.duty_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (c:Consumer {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:OWES_DUTY_TO_CONSUMER]->(c);
-MERGE (du)-[:DUTY_DERIVED_FROM_SECTION]->(sec)
 """
 
-#controller_threshold
+# Controller → Threshold
 controller_threshold = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (th:Threshold {regional_standard_regulation_id: 'VCDPA 2023', threshold_id: row.threshold_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (th:Threshold {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:CONTROLLER_MEETS_THRESHOLD]->(th);
 """
 
-#controller_processor
+# Controller → Processor
 controller_processor = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (proc:Processor {regional_standard_regulation_id: 'VCDPA 2023', processor_id: row.processor_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (proc:Processor {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:ENGAGES_PROCESSOR]->(proc);
 """
 
-#controller_excludes_context
+# Controller excludes Employee context
 controller_excludes_context = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (e:Employee {regional_standard_regulation_id: 'VCDPA 2023', employee_id: row.employee_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (e:Employee {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:EXCLUDES_EMPLOYEE_CONTEXT]->(e);
 """
 
-#sensitive_subtype_of_personal
+# SensitiveData → PersonalData (Subtype)
 sensitive_subtype_of_personal = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023', sensitive_data_id: row.sensitive_data_id})
-MATCH (pd:PersonalData {regional_standard_regulation_id: 'VCDPA 2023', personal_data_id: row.personal_data_id})
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (pd:PersonalData {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sd)-[:SUBTYPE_OF_PERSONAL_DATA]->(pd);
 """
 
-#sensitive_includes_category_rel
+# SensitiveData → SensitiveCategory
 sensitive_includes_category_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023', sensitive_data_id: row.sensitive_data_id})
-MATCH (sc:SensitiveCategory {regional_standard_regulation_id: 'VCDPA 2023', sensitive_category_id: row.sensitive_category_id})
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (sc:SensitiveCategory {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sd)-[:INCLUDES_SENSITIVE_CATEGORY]->(sc);
 """
 
-#sensitive_requires_consent_rel
+# SensitiveData → OptInConsent
 sensitive_requires_consent_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023', sensitive_data_id: row.sensitive_data_id})
-MATCH (oc:OptInConsent {regional_standard_regulation_id: 'VCDPA 2023', optin_id: row.optin_id})
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (oc:OptInConsent {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (sd)-[:REQUIRES_OPT_IN_CONSENT]->(oc);
 """
 
-#controller_processing 
+# Controller → ProcessingActivity
 controller_processing = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:CONDUCTS_PROCESSING]->(pa);
 """
 
-#processing_operates_on_data
+# ProcessingActivity → DataCategory
 processing_operates_on_data = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
-MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023', data_id: row.data_id})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (pa)-[:PROCESSING_OPERATES_ON_DATACATEGORY]->(dc);
 """
 
-#processing_subject_to_right
+# ProcessingActivity → Right (subject to)
 processing_subject_to_right = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
-MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023', right_id: row.right_id})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (r:Right {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (pa)-[:PROCESSING_SUBJECT_TO_RIGHT]->(r);
 """
 
-#processing_requires_dpa
+# ProcessingActivity → DataProtectionAssessment
 processing_requires_dpa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023', processing_id: row.processing_id})
-MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (pa)-[:PROCESSING_REQUIRES_DPA]->(dpa);
 """
-#controller_privacy_notice
+
+# Controller → PrivacyNotice
 controller_privacy_notice = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:CONTROLLER_PUBLISHES_PRIVACY_NOTICE]->(pn);
 """
 
-#privacy_notice_discloses_datacategory 
+# PrivacyNotice → DataCategory
 privacy_notice_discloses_datacategory = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
-MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023', data_id: row.data_id})
+MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (pn)-[:PRIVACY_NOTICE_DISCLOSES_DATACATEGORY]->(dc);
 """
-#privacy_notice_optout_mechanism
+
+# PrivacyNotice → OptOutMechanism
 privacy_notice_optout_mechanism = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
-MATCH (oom:OptOutMechanism {regional_standard_regulation_id: 'VCDPA 2023', mechanism_id: row.mechanism_id})
+MATCH (pn:PrivacyNotice {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (oom:OptOutMechanism {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (pn)-[:PRIVACY_NOTICE_INCLUDES_OPTOUT_MECHANISM]->(oom);
 """
 
-#controller_must_obtain_optin
+# Controller → OptInConsent
 controller_must_obtain_optin = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023', controller_id: row.controller_id})
-MATCH (oc:OptInConsent {regional_standard_regulation_id: 'VCDPA 2023', optin_id: row.optin_id})
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (oc:OptInConsent {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ctrl)-[:CONTROLLER_MUST_OBTAIN_OPTIN_CONSENT]->(oc);
 """
 
-#ag_enforces_regulation
+# AttorneyGeneral → Regulation
 ag_enforces_regulation = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ag)-[:ENFORCES_REGULATION]->(reg);
 """
-#ag_issues_violation_notice
+
+# AttorneyGeneral → ViolationNotice
 ag_issues_violation_notice = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
-MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ag)-[:ISSUES_VIOLATION_NOTICE]->(vn);
 """
-#violation_triggers_cure
+
+# ViolationNotice → CurePeriod
 violation_triggers_cure = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023', notice_id: row.notice_id})
-MATCH (cpd:CurePeriod {regional_standard_regulation_id: 'VCDPA 2023', cure_id: row.cure_id})
+MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (cpd:CurePeriod {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (vn)-[:VIOLATION_TRIGGERS_CURE_PERIOD]->(cpd);
 """
-#ag_seeks_penalty
+
+# AttorneyGeneral → CivilPenalty
 ag_seeks_penalty = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
-MATCH (cp:CivilPenalty {regional_standard_regulation_id: 'VCDPA 2023', penalty_id: row.penalty_id})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (cp:CivilPenalty {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ag)-[:ATTORNEY_GENERAL_CAN_SEEK_CIVIL_PENALTY]->(cp);
 """
-#ag_can_issue_cid
+
+# AttorneyGeneral → CivilInvestigativeDemand
 ag_can_issue_cid = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
-MATCH (cid:CivilInvestigativeDemand {regional_standard_regulation_id: 'VCDPA 2023', cid_id: row.cid_id})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (cid:CivilInvestigativeDemand {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ag)-[:ATTORNEY_GENERAL_CAN_ISSUE_CID]->(cid);
 """
 
-#ag_can_seek_injunction
+# AttorneyGeneral → Injunction
 ag_can_seek_injunction = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
-MATCH (inj:Injunction {regional_standard_regulation_id: 'VCDPA 2023', injunction_id: row.injunction_id})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (inj:Injunction {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ag)-[:ATTORNEY_GENERAL_CAN_SEEK_INJUNCTION]->(inj);
 """
 
-#violation_requests_dpa
+# AttorneyGeneral → DataProtectionAssessment
 violation_requests_dpa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023', ag_id: row.ag_id})
-MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023', dpa_id: row.dpa_id})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (ag)-[:ATTORNEY_GENERAL_REQUESTS_DPA_FROM_CONTROLLER]->(dpa);
 """
 
 
 
+
 import os
+from pydoc import cli
+import re
 import time
 import logging
 import json
@@ -963,8 +942,15 @@ logger.info("Loading graph structure...")
 client.query(regulation.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Node.csv'))
 time.sleep(2)
 
+client.query(title.replace('$file_path'))
+time.sleep(2)
+
 client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Sections.csv'))
 time.sleep(2)
+
+client.query(subsection.replace('$file_path'))
+time.sleep(2)
+
 
 client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirements.csv'))
 time.sleep(2)
@@ -1012,72 +998,224 @@ time.sleep(2)
 client.query(Exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Exemptions.csv'))
 time.sleep(2)
 
+client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Definition.csv"))
+time.sleep(2)
+
+client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Right.csv"))
+time.sleep(2)
+
+client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consumer.csv"))
+time.sleep(2)
+
+client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Duty.csv"))
+time.sleep(2)
+
+client.query(employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Employee.csv"))
+time.sleep(2)
+
+client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SensitiveData.csv"))
+time.sleep(2)
+
+client.query(personal_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PersonalData.csv"))
+time.sleep(2)
+
+client.query(sensitive_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SensitiveCategory.csv"))
+time.sleep(2)
+
+client.query(opt_in_consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/OptInConsent.csv"))
+time.sleep(2)
+
+client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ProcessingActivity.csv"))
+time.sleep(2)
+
+client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PrivacyNotice.csv"))
+time.sleep(2)
+
+client.query(cure_period.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CurePeriod.csv"))
+time.sleep(2)
+
+client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CivilPenalty.csv"))
+time.sleep(2)
+
+client.query(civil_investigative_demand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CivilInvestigativeDemand.csv"))
+time.sleep(2)
+
+client.query(injunction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Injunction.csv"))
+time.sleep(2)
+
+client.query(controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Controller.csv"))
+time.sleep(2)
+
+client.query(processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Processor.csv"))
+time.sleep(2)
+
+client.query(attorney_general.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/AttorneyGeneral.csv"))
+time.sleep(2)
+
+client.query(violation_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ViolationNotice.csv"))
+time.sleep(2)
+
+
+
+
+
+
+#Relationships
 client.query(regulation_section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Section_Relationship.csv'))
 time.sleep(2)
 
-# client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Requirements.csv'))
-# time.sleep(2)
+client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Requirements.csv'))
+time.sleep(2)
 
-# client.query(requirement_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Roles.csv'))
-# time.sleep(2)
+client.query(requirement_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Roles.csv'))
+time.sleep(2)
 
-# client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Data.csv'))
-# time.sleep(2)   
+client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Data.csv'))
+time.sleep(2)   
 
-# client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Events.csv'))
-# time.sleep(2)   
+client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Events.csv'))
+time.sleep(2)   
 
-# client.query(role_threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Thresholds.csv'))    
-# time.sleep(2)   
+client.query(role_threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Thresholds.csv'))    
+time.sleep(2)   
 
-# client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Exemptions.csv'))    
-# time.sleep(2)
+client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Exemptions.csv'))    
+time.sleep(2)
 
-# client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Safeguards.csv'))
-# time.sleep(2)   
+client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Safeguards.csv'))
+time.sleep(2)   
 
-# client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Policies.csv'))
-# time.sleep(2)
+client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Policies.csv'))
+time.sleep(2)
 
-# client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Controls.csv'))
-# time.sleep(2)
+client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Controls.csv'))
+time.sleep(2)
 
-# client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Control_Systems.csv'))
-# time.sleep(2)
+client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Control_Systems.csv'))
+time.sleep(2)
 
-# client.query(requirement_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Processes.csv'))
-# time.sleep(2)
+client.query(requirement_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Processes.csv'))
+time.sleep(2)
 
-# client.query(process_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Process_Systems.csv'))
-# time.sleep(2)
+client.query(process_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Process_Systems.csv'))
+time.sleep(2)
 
-# client.query(requirement_dataprotectionassessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_DPAs.csv'))
-# time.sleep(2)
+client.query(requirement_dataprotectionassessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_DPAs.csv'))
+time.sleep(2)
 
-# client.query(dpa_systems.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Systems.csv'))
-# time.sleep(2)
+client.query(dpa_systems.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Systems.csv'))
+time.sleep(2)
 
-# client.query(dpa_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Processes.csv'))
-# time.sleep(2)
+client.query(dpa_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Processes.csv'))
+time.sleep(2)
 
-# client.query(requirement_enforcementaction.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Enforcement.csv'))
-# time.sleep(2)
+client.query(requirement_enforcementaction.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Enforcement.csv'))
+time.sleep(2)
 
-# client.query(enforcement_action_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EnforcementAction_Roles.csv'))
-# time.sleep(2)
+client.query(enforcement_action_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EnforcementAction_Roles.csv'))
+time.sleep(2)
 
-# client.query(section_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Enforcement.csv'))
-# time.sleep(2)
+client.query(section_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Enforcement.csv'))
+time.sleep(2)
 
-# client.query(processor_controller.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Controller.csv'))
-# time.sleep(2)   
+client.query(processor_controller.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Controller.csv'))
+time.sleep(2)   
 
-# client.query(processor_subcontractor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Subcontractor.csv'))
-# time.sleep(2)  
+client.query(processor_subcontractor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Subcontractor.csv'))
+time.sleep(2)  
 
-# client.query(requirement_external_frameworks.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_ExternalFramework_Mapping.csv'))
-# time.sleep(2)  
+client.query(requirement_external_frameworks.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_ExternalFramework_Mapping.csv'))
+time.sleep(2)  
 
+client.query(regulation_title)
+time.sleep(2)
+
+client.query(title_chapter)
+time.sleep(2)
+
+client.query(chapter_section_rel)
+time.sleep(2)
+
+client.query(section_subsection_rel)
+time.sleep(2)
+
+client.query(section_definition_rel)
+time.sleep(2)
+
+client.query(section_right_rel)
+time.sleep(2)
+
+client.query(section_dpa_rel)
+time.sleep(2)
+
+client.query(consumer_right)
+time.sleep(2)
+
+client.query(controller_consumer_duty)
+time.sleep(2)
+
+client.query(controller_threshold)
+time.sleep(2)
+
+client.query(controller_processor)
+time.sleep(2)
+
+client.query(controller_excludes_context)
+time.sleep(2)
+
+client.query(sensitive_subtype_of_personal)
+time.sleep(2)
+
+client.query(sensitive_includes_category_rel)
+time.sleep(2)
+
+client.query(sensitive_requires_consent_rel)
+time.sleep(2)
+
+client.query(controller_processing)
+time.sleep(2)
+
+client.query(processing_operates_on_data)
+time.sleep(2)
+
+client.query(processing_subject_to_right)
+time.sleep(2)
+
+client.query(processing_requires_dpa)
+time.sleep(2)
+
+client.query(controller_privacy_notice)
+time.sleep(2)
+
+client.query(privacy_notice_discloses_datacategory)
+time.sleep(2)
+
+client.query(privacy_notice_optout_mechanism)
+time.sleep(2)
+
+client.query(controller_must_obtain_optin)
+time.sleep(2)
+
+client.query(ag_enforces_regulation)
+time.sleep(2)
+
+client.query(ag_issues_violation_notice)
+time.sleep(2)
+
+client.query(violation_triggers_cure)
+time.sleep(2)
+
+client.query(ag_seeks_penalty)
+time.sleep(2)
+
+client.query(ag_can_issue_cid)
+time.sleep(2)
+
+client.query(ag_can_seek_injunction)
+time.sleep(2)
+
+client.query(violation_requests_dpa)
+time.sleep(2)
 
 
 
