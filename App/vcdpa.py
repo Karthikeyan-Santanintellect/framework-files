@@ -942,13 +942,13 @@ logger.info("Loading graph structure...")
 client.query(regulation.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Node.csv'))
 time.sleep(2)
 
-client.query(title.replace('$file_path'))
+client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Title.csv"))
 time.sleep(2)
 
 client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Sections.csv'))
 time.sleep(2)
 
-client.query(subsection.replace('$file_path'))
+client.query(subsection.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Subsection.csv"))
 time.sleep(2)
 
 
