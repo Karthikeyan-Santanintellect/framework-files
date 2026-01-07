@@ -144,6 +144,126 @@ ON CREATE SET
   ea.level = row.severity_level,
   ea.applicable_section = row.applicable_section;
 """
+#DataPrincipal
+data_principal = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dp:DataPrincipal {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  data_principal_id: row.data_principal_id
+})
+ON CREATE SET
+  dp.name = row.name,
+  dp.description = row.description;
+"""
+#DataFiduciary
+data_fiduciary = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (df:DataFiduciary {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  data_fiduciary_id: row.data_fiduciary_id
+})
+ON CREATE SET
+  df.name = row.name,
+  df.description = row.description,
+  df.category = row.category;
+"""
+#DataProcessor
+data_processor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dp:DataProcessor {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  data_processor_id: row.data_processor_id
+})
+ON CREATE SET
+  dp.name = row.name,
+  dp.description = row.description;
+"""
+#DataProtectionBoard(DPB)
+data_protection_board = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (b:DataProtectionBoard {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  board_id: row.board_id
+})
+ON CREATE SET
+  b.name = row.name,
+  b.description = row.description;
+"""
+#Right (DPDPA data principal rights)
+right = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (r:Right {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  right_id: row.right_id
+})
+ON CREATE SET
+  r.name = row.name,
+  r.section_id = row.section_id;
+"""
+# LegalBasis (lawful grounds for processing)
+legal_basis = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (lb:LegalBasis {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  legal_basis_id: row.legal_basis_id
+})
+ON CREATE SET
+  lb.name = row.name,
+  lb.description = row.description;
+"""
+#ProcessingActivity
+processing_activity = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pa:ProcessingActivity {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  processing_id: row.processing_id
+})
+ON CREATE SET
+  pa.name = row.name,
+  pa.category = row.category,        
+  pa.description = row.description;
+"""
+# Consent
+consent = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (c:Consent {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  consent_id: row.consent_id
+})
+ON CREATE SET
+  c.name = row.name,
+  c.description = row.description;
+"""
+# Exemption
+exemption = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ex:Exemption {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  exemption_id: row.exemption_id
+})
+ON CREATE SET
+  ex.name = row.name,
+  ex.description = row.description,
+  ex.section_id = row.section_id;
+"""
+#Complaint (grievance)
+complaint = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cm:Complaint {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  complaint_id: row.complaint_id
+})
+ON CREATE SET
+  cm.channel = row.channel,
+  cm.description = row.description;
+"""
+
+
+
+
+
+
+#Relationships
 regulation_chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: row.regulation_id})
@@ -156,6 +276,11 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Chapter {regional_standard_regulation_id: 'DPDPA 1.0', chapter_id: row.chapter_id})
 MATCH (sec:Section {regional_standard_regulation_id:'DPDPA 1.0', section_id: row.section_id})
 MERGE (c)-[:CHAPTER_HAS_SECTION]->(sec);
+"""
+section_right = """
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sec)-[:SECTION_ESTABLISHES_RIGHT]->(r);
 """
 
 
@@ -267,6 +392,182 @@ MATCH (sec:Section {
 })
 MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION]->(sec);
 """
+
+requirement_right = """
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (req)-[:REQUIREMENT_SUPPORTS_RIGHT]->(r);
+"""
+role_right ="""
+MATCH (ro:Role {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (ro)-[:ROLE_HAS_RIGHT]->(r);
+"""
+data_principal_right ="""
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dp)-[:DATA_PRINCIPAL_HAS_RIGHT]->(r);
+"""
+data_fiduciary_data_principal ="""
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_OWES_DUTY_TO_DATA_PRINCIPAL]->(dp);
+"""
+data_fiduciary_data_processor ="""
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (dpr:DataProcessor {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_OWES_DUTY_TO_DATA_PROCESSOR]->(dpr);
+"""
+data_protection_board_enforcement_action ="""
+MATCH (b:DataProtectionBoard {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (b)-[:DATA_PROTECTION_BOARD_OWES_DUTY_TO_ENFORCEMENT_ACTION]->(ea);
+"""
+
+data_principal_complaint ="""
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (cm:Complaint {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dp)-[:DATA_PRINCIPAL_FILES_COMPLAINT]->(cm);
+"""
+complaint_data_protection_board ="""
+MATCH (cm:Complaint {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (b:DataProtectionBoard {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (cm)-[:COMPLAINT_RECEIVED_BY_DATA_PROTECTION_BOARD]->(b);
+"""
+requirement_processing_activity ="""
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (req)-[:REQUIREMENT_REGULATES_PROCESSING]->(pa);
+"""
+processing_activity_data_category ="""
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pa)-[:PROCESSING_USES_DATACATEGORY]->(dc);
+"""
+processing_activity_legal_basis ="""
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (lb:LegalBasis {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pa)-[:PROCESSING_ACTIVATES_LEGAL_BASIS]->(lb);
+"""
+process_processing_activity ="""
+MATCH (pr:Process {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pr)-[:PROCESS_INCLUDES_ACTIVITY]->(pa);
+"""
+processing_activity_system ="""
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (sys:System {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pa)-[:ACTIVITY_EXECUTED_ON_SYSTEM]->(sys);
+"""
+data_principal_consent ="""
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (c:Consent {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dp)-[:GIVES_CONSENT]->(c);
+"""
+consent_processing_activity ="""
+MATCH (c:Consent {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (c)-[:CONSENT_FOR_PROCESSING]->(pa);
+"""
+exemption_section ="""
+MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (ex)-[:EXEMPTION_DEFINED_IN_SECTION]->(sec);
+"""
+processing_activity_exemption ="""
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pa)-[:PROCESSING_EXEMPT_UNDER]->(ex);
+"""
+section_legal_basis ="""
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (lb:LegalBasis {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sec)-[:SECTION_DEFINES_LEGAL_BASIS]->(lb);
+"""
+
+requirement_consent ="""
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (c:Consent {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (req)-[:REQUIREMENT_REQUIRES_CONSENT]->(c);
+"""
+requirement_legal_basis ="""
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (lb:LegalBasis {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (req)-[:REQUIREMENT_REQUIRES_LEGAL_BASIS]->(lb);
+"""
+
+data_fiduciary_processing_activity ="""
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_CONDUCTS_PROCESSING]->(pa);
+"""
+data_processor_processing_activity ="""
+MATCH (dpr:DataProcessor {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dpr)-[:PERFORMS_PROCESSING]->(pa);
+"""
+role_requirement ="""
+MATCH (ro:Role {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (ro)-[:ROLE_IMPLEMENTS_REQUIREMENT]->(req);
+"""
+
+section_exemption ="""
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sec)-[:SECTION_PROVIDES_EXEMPTION]->(ex);
+"""
+
+requirement_exemption ="""
+MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (req)-[:REQUIREMENT_SUBJECT_TO_EXEMPTION]->(ex);
+"""
+enforcement_action_section ="""
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (ea)-[:ENFORCEMENT_APPLIES_TO_SECTION]->(sec);
+"""
+
+data_protection_board_right ="""
+MATCH (b:DataProtectionBoard {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (b)-[:BOARD_ENFORCES_RIGHT]->(r);
+"""
+
+chapter_exemption ="""
+MATCH (c:Chapter {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (c)-[:CHAPTER_DEFINES_EXEMPTION]->(ex);
+"""
+
+system_datacategory ="""
+MATCH (sys:System {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (dc:DataCategory {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sys)-[:SYSTEM_STORES_DATACATEGORY]->(dc);
+"""
+
+control_processing_activity ="""
+MATCH (co:Control {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (co)-[:CONTROL_PROTECTS_PROCESSING]->(pa);
+"""
+safeguard_processing_activity ="""
+MATCH (sg:Safeguard {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sg)-[:SAFEGUARD_PROTECTS_PROCESSING]->(pa);
+"""
+policy_processing_activity ="""
+MATCH (pol:Policy {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pol)-[:POLICY_GOVERNS_PROCESSING]->(pa);
+"""
+processing_activity_right ="""
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (pa)-[:PROCESSING_SUBJECT_TO_RIGHT]->(r);
+"""
+
 import sys
 import os
 import time
@@ -326,14 +627,52 @@ time.sleep(2)
 client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction.csv"))
 time.sleep(2)
 
+client.query(data_principal)
+time.sleep(2)
+
+client.query(data_fiduciary)
+time.sleep(2)
+
+client.query(data_processor)
+time.sleep(2)
+
+client.query(data_protection_board)
+time.sleep(2)
+
+client.query(right)
+time.sleep(2)
+
+client.query(legal_basis)
+time.sleep(2) 
+
+client.query(processing_activity)
+time.sleep(2)
+
+client.query(consent)
+time.sleep(2)
+
+client.query(exemption)
+time.sleep(2)
+
+client.query(complaint)
+time.sleep(2)
+
+
+
+
+#Relationship
 client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Chapter_Relationship_FIXED.csv"))
 time.sleep(2)
 
 client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA-Chap-Sec-Rel.csv"))
 time.sleep(2)
 
+client.query(section_right)
+time.sleep(2)
+
 client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA-Sec-Req-Rel.csv"))
 time.sleep(2)
+
                                         
 client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Roles.csv"))
 time.sleep(2)
@@ -370,6 +709,75 @@ client.query(enforcement_action_role.replace('$file_path',"https://github.com/Ka
 time.sleep(2)
 
 client.query(enforcement_action_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Section_Relationship.csv"))
+time.sleep(2)
+
+client.query(requirement_right)
+time.sleep(2)
+
+client.query(role_right)
+time.sleep(2)
+
+client.query(data_principal_right)
+time.sleep(2)
+
+client.query(data_fiduciary_data_principal)
+time.sleep(2)
+
+client.query(data_fiduciary_data_processor)
+time.sleep(2)
+
+client.query(data_protection_board_enforcement_action)
+time.sleep(2)
+
+client.query(data_principal_complaint)
+time.sleep(2)
+
+client.query(complaint_data_protection_board)
+time.sleep(2)
+
+client.query(requirement_processing_activity)
+time.sleep(2)
+
+client.query(processing_activity_data_category)
+time.sleep(2)
+
+client.query(processing_activity_legal_basis)
+time.sleep(2)
+
+client.query(process_processing_activity)
+time.sleep(2)
+
+client.query(processing_activity_system)
+time.sleep(2)
+
+client.query(data_principal_consent)
+time.sleep(2)
+
+client.query(consent_processing_activity)
+time.sleep(2)
+
+client.query(exemption_section)
+time.sleep(2)
+
+client.query(processing_activity_exemption)
+time.sleep(2)
+
+client.query(section_legal_basis)
+time.sleep(2)
+
+client.query(requirement_consent)
+time.sleep(2)
+
+client.query(requirement_legal_basis)
+time.sleep(2)
+
+client.query(data_fiduciary_processing_activity)
+time.sleep(2)
+
+client.query(data_processor_processing_activity)
+time.sleep(2)
+
+client.query(role_requirement)
 time.sleep(2)
 
 
