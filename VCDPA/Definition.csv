@@ -1,0 +1,11 @@
+definition_id,term,text,section_id
+DEF-CONSUMER,Consumer,"Natural person who is a resident of the Commonwealth acting only in an individual or household context (and not acting in a commercial or employment context).","59.1-575"
+DEF-CONTROLLER,Controller,"Natural or legal person that, alone or jointly with others, determines the purpose and means of processing personal data.","59.1-575"
+DEF-PROCESSOR,Processor,"Natural or legal person that processes personal data on behalf of a controller.","59.1-575"
+DEF-PERSONAL-DATA,Personal Data,"Any information that is linked or reasonably linkable to an identified or identifiable natural person.","59.1-575"
+DEF-SENSITIVE-DATA,Sensitive Data,"A category of personal data including racial or ethnic origin, religious beliefs, mental or physical health diagnosis, sexual orientation, citizenship or immigration status, genetic or biometric data for identification, personal data collected from a known child, and precise geolocation data.","59.1-575"
+DEF-TARGETED-ADS,Targeted Advertising,"Displaying advertisements to a consumer where the advertisement is selected based on personal data obtained from that consumer's activities over time and across nonaffiliated websites or online applications to predict such consumer's preferences or interests.","59.1-575"
+DEF-SALE,Sale of Personal Data,"The exchange of personal data for monetary consideration by the controller to a third party.","59.1-575"
+DEF-PROFILING,Profiling,"Any form of automated processing performed on personal data to evaluate, analyze, or predict personal aspects concerning an identified or identifiable natural person, where such profiling produces legal or similarly significant effects.","59.1-575"
+DEF-CONSENT,Consent,"A clear affirmative act signifying a consumer's freely given, specific, informed, and unambiguous agreement to the processing of personal data.","59.1-575"
+DEF-DPA,Data Protection Assessment,"An assessment of the benefits that may flow, directly and indirectly, from processing to the controller, consumer, other stakeholders, and the public, as compared against the potential risks to the rights of the consumer associated with that processing activity.","59.1-580"
