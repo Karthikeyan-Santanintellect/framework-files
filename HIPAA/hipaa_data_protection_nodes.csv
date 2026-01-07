@@ -1,0 +1,36 @@
+rule_id,node_type,node_id,name,description,properties_count,category,type,sensitivity_level,regulated,parent_node,cfr_citation,industry_standard_regulation_id
+PHI_CLASSIFICATION_1,DataClassification,PHI,Protected Health Information,"Health information that identifies an individual or for which there is a reasonable basis to believe can be used to identify an individual",6,Data Protection,PHI Classification,High,true,HIPAA_1996,,HIPAA 1996
+PHI_CLASSIFICATION_2,DataClassification,ePHI,Electronic Protected Health Information,"PHI that is stored, transmitted, or maintained in electronic form",7,Data Protection,ePHI,High,true,HIPAA_1996,,HIPAA 1996
+PHI_CATEGORY_1,PHICategory,MEDICAL_RECORDS,Medical Records,"Patient clinical information, diagnoses, treatments, medical history",4,Data Protection,PHICategory,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_CATEGORY_2,PHICategory,BILLING_INFO,Billing Information,"Invoice, payment, insurance claim, financial information",4,Data Protection,PHICategory,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_CATEGORY_3,PHICategory,GENETIC_DATA,Genetic Data,"Genetic testing results, hereditary information",4,Data Protection,PHICategory,Very High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_CATEGORY_4,PHICategory,MENTAL_HEALTH,Mental Health Records,"Psychiatric treatment, counseling, behavioral health information",4,Data Protection,PHICategory,Very High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_CATEGORY_5,PHICategory,SUBSTANCE_ABUSE,Substance Abuse Treatment,"Substance abuse diagnosis and treatment information",4,Data Protection,PHICategory,Very High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_FORM_1,PHIForm,PAPER_RECORDS,Paper Records,"Physical documents containing PHI",5,Data Protection,PHIForm,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_FORM_2,PHIForm,ELECTRONIC_FORM,Electronic Form,"PHI stored in digital/electronic systems",5,Data Protection,PHIForm,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_FORM_3,PHIForm,VERBAL,Verbal Communication,"Spoken PHI in conversations, phone calls",5,Data Protection,PHIForm,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+PHI_FORM_4,PHIForm,IMAGING,Imaging/Visual,"Imaging, photographs, visual media containing PHI",5,Data Protection,PHIForm,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_1,SensitiveDataElement,ELEMENT_NAME,Name,"Patient full name, first name, last name",5,Data Protection,SensitiveDataElement,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_2,SensitiveDataElement,ELEMENT_SSN,Social Security Number,"9-digit identifier for U.S. citizens",5,Data Protection,SensitiveDataElement,Very High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_3,SensitiveDataElement,ELEMENT_MRN,Medical Record Number,"Unique identifier assigned to patient medical records",5,Data Protection,SensitiveDataElement,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_4,SensitiveDataElement,ELEMENT_ACCOUNT,Account Number,"Billing or insurance account identifier",5,Data Protection,SensitiveDataElement,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_5,SensitiveDataElement,ELEMENT_BIOMETRIC,Biometric Data,"Fingerprints, facial recognition, iris scans",5,Data Protection,SensitiveDataElement,Very High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_6,SensitiveDataElement,ELEMENT_DOB,Date of Birth,"Patient birth date",5,Data Protection,SensitiveDataElement,High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_7,SensitiveDataElement,ELEMENT_EMAIL,Email Address,"Patient electronic mail address",5,Data Protection,SensitiveDataElement,Medium,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_8,SensitiveDataElement,ELEMENT_PHONE,Phone Number,"Patient contact phone number",5,Data Protection,SensitiveDataElement,Medium,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_9,SensitiveDataElement,ELEMENT_ADDRESS,Address,"Patient street address, city, state, zip",5,Data Protection,SensitiveDataElement,Medium,true,PHI,45 CFR §164.500-534,HIPAA 1996
+SDE_10,SensitiveDataElement,ELEMENT_LICENSE,Driver License Number,"State-issued driver license number",5,Data Protection,SensitiveDataElement,Very High,true,PHI,45 CFR §164.500-534,HIPAA 1996
+LS_1,PHILifecycleStage,STAGE_CREATION,Creation,"PHI is initially created or generated",4,Data Protection,LifecycleStage,N/A,true,PHI,45 CFR §164.500-534,HIPAA 1996
+LS_2,PHILifecycleStage,STAGE_STORAGE,Storage,"PHI is stored in systems and repositories",4,Data Protection,LifecycleStage,N/A,true,PHI,45 CFR §164.500-534,HIPAA 1996
+LS_3,PHILifecycleStage,STAGE_TRANSMISSION,Transmission,"PHI is transmitted or shared between entities",4,Data Protection,LifecycleStage,N/A,true,PHI,45 CFR §164.500-534,HIPAA 1996
+LS_4,PHILifecycleStage,STAGE_DESTRUCTION,Destruction,"PHI is securely destroyed or de-identified",4,Data Protection,LifecycleStage,N/A,true,PHI,45 CFR §164.500-534,HIPAA 1996
+AU_1,AuthorizedUse,USE_TREATMENT,Treatment,"Direct healthcare delivery to patient",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_2,AuthorizedUse,USE_PAYMENT,Payment,"Healthcare billing, claims, insurance processing",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_3,AuthorizedUse,USE_OPERATIONS,Healthcare Operations,"Administrative, quality improvement, compliance activities",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_4,AuthorizedUse,USE_PUBLIC_HEALTH,Public Health Activities,"Disease surveillance, health monitoring, public health reporting",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_5,AuthorizedUse,USE_LAW_ENFORCEMENT,Law Enforcement,"Criminal investigation, legal subpoena compliance",6,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_6,AuthorizedUse,USE_MARKETING,Marketing,"Marketing communications and promotional activities",5,Data Protection,AuthorizedUse,N/A,false,PHI,45 CFR §164.502,HIPAA 1996
+AU_7,AuthorizedUse,USE_RESEARCH,Research,"Health research and clinical studies",6,Data Protection,AuthorizedUse,N/A,false,PHI,45 CFR §164.502,HIPAA 1996
+AU_8,AuthorizedUse,USE_ORGAN_DONATION,Organ/Tissue Donation,"Facilitation of organ or tissue donation",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_9,AuthorizedUse,USE_WORKERS_COMP,Workers Compensation,"Workplace injury claims and benefits",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996
+AU_10,AuthorizedUse,USE_JUDICIAL,Judicial/Administrative Proceedings,"Court orders and litigation support",5,Data Protection,AuthorizedUse,N/A,true,PHI,45 CFR §164.502,HIPAA 1996

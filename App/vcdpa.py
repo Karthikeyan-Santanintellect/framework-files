@@ -1055,6 +1055,27 @@ time.sleep(2)
 client.query(violation_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ViolationNotice.csv"))
 time.sleep(2)
 
+client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Chapter.csv"))
+time.sleep(2)
+
+client.query(commercial_entity.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CommercialEntity.csv"))
+time.sleep(2)
+
+client.query(deidentified_data.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/DeidentifiedData.csv"))
+time.sleep(2)
+
+client.query(public_data.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PubliclyAvailableInformation.csv"))
+time.sleep(2)
+
+client.query(rights_request_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/RightsRequestProcess.csv"))
+time.sleep(2)
+
+client.query(security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SecurityMeasures.csv"))
+time.sleep(2)
+
+client.query(consent.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consent.csv"))
+time.sleep(2)
+
 
 
 

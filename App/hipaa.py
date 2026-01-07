@@ -1,5 +1,8 @@
 # UPDATED: Using MERGE to prevent errors on re-runs.
 #Industry Standard & Regulations: HIPAA
+import re
+
+
 industry_standard_and_regulations = """
 MERGE(i:IndustryStandardAndRegulation{industry_standard_regulation_id:'HIPAA 1996'})
 ON CREATE SET
@@ -38,6 +41,137 @@ ON CREATE SET
     m.source_section = row.source_section;
 """
 
+#primary entity
+primary_entity= """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (r:Rule{rule_id: row.rule_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET
+    r.name = row.name,
+    r.cfr_citation = row.cfr_citation,
+    r.cfr_parts = row.cfr_parts,
+    r.description = row.description,
+    r.long_description = row.long_description,
+    r.type = row.type,
+    r.rule_category = row.rule_category,
+    r.enacted_date = row.enacted_date,
+    r.effective_date = row.effective_date,
+    r.last_amended_date = row.last_amended_date,
+    r.applicable_entities = row.applicable_entities,
+    r.primary_requirements = row.primary_requirements,
+    r.authorization_required = row.authorization_required,
+    r.minimum_necessary_applies = row.minimum_necessary_applies,
+    r.documentation_required = row.documentation_required,
+    r.audit_required = row.action_required,
+    r.encryption_required = row.encryption_required,
+    r.audit_logging_required =row.audit_logging_required,
+    r.risk_assessment_frequency = row.risk_assessment_frequency,
+    r.enforcement_authority = row.enforcement_authority,
+    r.url = row.url,
+    r.reference_url = row.reference_url,
+    r.industry_standard_regulation_id = row.industry_standard_regulation_id,
+    r.status = row.status,
+    r.compliance_complexity = row.compliance_complexity,
+    r.severity_rating = row.severity_rating;
+  """
+#data_protection_nodes
+data_protection_nodes ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (d:DataProtectionNode{node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET
+    d.name = row.name,
+    d.description = row.description,
+    d.node_type = row.node_type,
+    d.category = row.category,
+    d.type = row.type,
+    d.sensitivity_level = row.sensitivity_level,
+    d.regulated = row.regulated,
+    d.properties_count = row.properties_count,
+    d.cfr_citation = row.cfr_citation,
+    d.parent_node = row.parent_node;
+"""
+#privacy_rule
+privacy_rule ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (p:PrivacyRule{node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET
+    p.name = row.name,
+    p.description = row.description,
+    p.node_type = row.node_type,
+    p.category = row.category,
+    p.type = row.type,
+    p.properties_count = row.properties_count,
+    p.regulated = row.regulated,
+    p.cfr_citation = row.cfr_citation,
+    p.sensitivity_level = row.sensitivity_level,
+    p.parent_node = row.parent_node;
+"""
+
+#security_rule 
+security_rule ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sr:SecurityRule{node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET
+    sr.name = row.name,
+    sr.description = row.description,
+    sr.node_type = row.node_type,
+    sr.category = row.category,
+    sr.type = row.type,
+    sr.properties_count = row.properties_count,
+    sr.regulated = row.regulated,
+    sr.cfr_citation = row.cfr_citation,
+    sr.sensitivity_level = row.sensitivity_level,
+    sr.parent_node = row.parent_node;
+"""
+#Breach_notifications
+breach_notifications ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (bn:BreachNotification{node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996})
+ON CREATE SET
+    bn.name = row.name,
+    bn.description = row.description,
+    bn.node_type = row.node_type,
+    bn.category = row.category,
+    bn.type = row.type,
+    bn.properties_count = row.properties_count,
+    bn.regulated = row.regulated,
+    bn.cfr_citation = row.cfr_citation,
+    bn.sensitivity_level = row.sensitivity_level,
+    bn.parent_node = row.parent_node;
+"""
+#compliance_enforcement
+compliance_enforcement ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ce:ComplianceEnforcement{node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET
+    ce.name = row.name,
+    ce.description = row.description,
+    ce.node_type = row.node_type,
+    ce.category = row.category,
+    ce.type = row.type,
+    ce.properties_count = row.properties_count,
+    ce.regulated = row.regulated,
+    ce.cfr_citation = row.cfr_citation,
+    ce.sensitivity_level = row.sensitivity_level,
+    ce.parent_node = row.parent_node;
+"""
+#organizational_governance
+organizational_governance ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (og:OrganizationalGovernance {node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET
+    og.name = row.name,
+    og.description = row.description,
+    og.node_type = row.node_type,
+    og.category = row.category,
+    og.type = row.type,
+    og.properties_count = row.properties_count,
+    og.regulated = row.regulated,
+    og.cfr_citation = row.cfr_citation,
+    og.sensitivity_level = row.sensitivity_level,
+    og.parent_node = row.parent_node;
+"""
+
+
 #Relationships
 industry_standard_and_regulations_hipaa_standards_rel = """
 MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA 1996'})
@@ -68,6 +202,92 @@ MATCH (m:Mapping {mapping_id: row.source_mapping_id})
 MATCH (sc:Subcategory {id: row.target_subcategory_id, IS_framework_standard_id: 'NIST_CSF_2.0'})
 MERGE (m)-[:MAPPING_TARGETS_SUB_CATEGORY]->(sc);
 """
+
+regulation_privacy_rules = """
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (pr:PrivacyRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (i)-[:REGULATION_REGULATES_PRIVACY_RULE]->(pr);
+"""
+regulation_security_rules = """
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (sr:SecurityRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (i)-[:REGULATION_CONTAINS_SECURITY_RULE]->(sr);
+"""
+regulation_breach_notifications = """
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (br:BreachNotificationRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (i)-[:REGULATION_CONTAINS_BREACH_NOTIFICATION_RULE]->(br);
+"""
+regulation_compliance_enforcement = """
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (ce:ComplianceEnforcementRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (i)-[:REGULATION_CONTAINS_COMPLIANCE_ENFORCEMENT_RULE]->(ce);
+"""
+regulation_organizational_governance ="""
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (og:OrganizationalGovernanceRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (i)-[:REGULATION_CONTAINS_ORGANIZATIONAL_GOVERNANCE_RULE]->(og);
+"""
+privacy_security_rules = """
+MATCH (p:PrivacyRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (sr:SecurityRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (p)-[:PRIVACY_RULE_REFERENCES_SECURITY_RULE]->(sr);
+"""
+security_rules_breach_notifications = """
+MATCH (sr:SecurityRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (bn:BreachNotification{industry_standard_regulation_id: 'HIPAA 1996})
+MERGE (sr)-[:SECURITY_RULE_REFERENCES_BREACH_NOTIFICATION]->(bn);
+"""
+
+breach_notifications_compliance_enforcement = """
+MATCH (bn:BreachNotification{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (ce:ComplianceEnforcement{node_type: 'EnforcementAuthority', industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (bn)-[:BREACH_NOTIFICATION_REFERENCES_COMPLIANCE_ENFORCEMENT]->(ce);
+"""
+data_protection_privacy_rules ="""
+MATCH (d:DataProtectionNode{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (pr:PrivacyRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (d)-[:DATA_PROTECTION_NODE_REFERENCES_PRIVACY_RULE]->(pr);
+"""
+data_protection_security_rules ="""
+MATCH (d:DataProtectionNode{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (sr:SecurityRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (d)-[:DATA_PROTECTION_NODE_REFERENCES_SECURITY_RULE]->(sr);
+"""
+data_protection_breach_notifications ="""
+MATCH (d:DataProtectionNode{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (bn:BreachNotification{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (d)-[:DATA_PROTECTION_NODE_REFERENCES_BREACH_NOTIFICATION]->(bn);
+"""
+privacy_rule_data_protection="""
+MATCH (pr:PrivacyRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (d:DataProtectionNode{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (pr)-[:PRIVACY_RULE_REFERENCES_DATA_PROTECTION_NODE]->(d);
+"""
+privacy_rule_breach_notifications ="""
+MATCH (pr:PrivacyRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (bn:BreachNotification{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (pr)-[:PRIVACY_RULE_REFERENCES_BREACH_NOTIFICATION]->(bn);
+"""
+security_rule_data_protection ="""
+MATCH (sr:SecurityRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (d:DataProtectionNode{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (sr)-[:SECURITY_RULE_REFERENCES_DATA_PROTECTION_NODE]->(d);
+"""
+security_rule_breach_notifications ="""
+MATCH (sr:SecurityRule{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (bn:BreachNotification{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (sr)-[:SECURITY_RULE_REFERENCES_BREACH_NOTIFICATION]->(bn);
+"""
+breach_notifications_data_protection ="""
+MATCH (bn:BreachNotification{industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (d:DataProtectionNode{industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (bn)-[:BREACH_NOTIFICATION_REFERENCES_DATA_PROTECTION_NODE]->(d);
+"""
+
+
+
+
 
 
 import os
