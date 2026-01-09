@@ -1,0 +1,10 @@
+lifecycle_id,stage_name,description,safeguards_required,sequence_order,cfr_citation
+PHI-LC-001,Creation,Initial PHI data creation,Data classification,1,45 CFR 164.308
+PHI-LC-002,Collection,PHI collection from patients,Consent + Notice,2,45 CFR 164.520
+PHI-LC-003,Storage,PHI storage in systems,Encryption + Access controls,3,45 CFR 164.312
+PHI-LC-004,Access,Authorized access to PHI,Authentication + Audit logging,4,45 CFR 164.312(b)
+PHI-LC-005,Transfer,Transfer between systems,Encryption + Integrity verification,5,45 CFR 164.312(c)
+PHI-LC-006,Use,PHI use for treatment/payment,Minimum necessary,6,45 CFR 164.514(d)
+PHI-LC-007,Disclosure,Disclosure to authorized entities,Authorization + Audit trail,7,45 CFR 164.502
+PHI-LC-008,Retention,Storage during retention period,Secure storage,8,45 CFR 164.530
+PHI-LC-009,Disposal,Destruction of PHI,Secure destruction,9,45 CFR 164.310(d)(2)

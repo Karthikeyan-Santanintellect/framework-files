@@ -1,0 +1,8 @@
+subject_id,subject_type,description,rights,cfr_citation
+DS-001,Patient,Individual receiving healthcare services,All Privacy Rights,45 CFR 164.502
+DS-002,Healthcare Provider Employee,Staff member with access to PHI,Limited Privacy Rights,45 CFR 164.530
+DS-003,Business Associate Employee,Third-party staff with PHI access,Limited Privacy Rights,45 CFR 164.504
+DS-004,Deceased Patient Family,Family of deceased patient,Limited Privacy Rights,45 CFR 164.510(g)
+DS-005,Prisoner,Incarcerated individual receiving healthcare,Limited Privacy Rights,45 CFR 164.502(g)
+DS-006,Minor,Child patient receiving healthcare,Parental/Guardian Rights,45 CFR 164.502(g)
+DS-007,Participant in Research,Individual in clinical research study,Research-specific Rights,45 CFR 164.508

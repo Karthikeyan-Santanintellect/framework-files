@@ -1,0 +1,7 @@
+authorization_id,description,required_elements,expiration_rules,revocation_allowed,cfr_citation,valid_for
+AUTH-001,Standard Authorization,Uses/disclosures + expiration date,Specific expiration date,True,45 CFR 164.508(b),Specific purpose
+AUTH-002,Research Authorization,Uses/disclosures for research,Study completion or date,True,45 CFR 164.508(i),Research only
+AUTH-003,Psychotherapy Notes Authorization,Access to psychotherapy notes,Specific expiration date,True,45 CFR 164.508(b),Notes only
+AUTH-004,Marketing Authorization,Marketing communications,Revocable anytime,True,45 CFR 164.514(e),Marketing only
+AUTH-005,Sale of PHI Authorization,Sale of PHI disclosure,Specific expiration,True,45 CFR 164.508(a)(4),Sale only
+AUTH-006,General Release,General PHI release,Specific expiration date,True,45 CFR 164.508,Multiple purposes

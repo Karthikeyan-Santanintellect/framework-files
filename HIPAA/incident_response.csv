@@ -1,0 +1,9 @@
+response_id,name,description,procedures,timeline,cfr_citation
+IR-001,Incident Detection,Detecting security incidents,Monitoring and alerting,Continuous,45 CFR 164.308(a)(6)(i)
+IR-002,Incident Reporting,Reporting incident discovery,Internal notification,Immediately,45 CFR 164.308(a)(6)(ii)
+IR-003,Incident Investigation,Investigating incident scope,Analysis and assessment,24-48 hours,45 CFR 164.308(a)(6)
+IR-004,Incident Containment,Containing incident impact,Isolation and remediation,Immediately,45 CFR 164.308(a)(1)(ii)(B)
+IR-005,Incident Recovery,Recovering from incident,System restoration,As needed,45 CFR 164.308(a)(7)
+IR-006,Incident Documentation,Documenting incident details,Record keeping,Concurrent,45 CFR 164.308(a)(6)(ii)
+IR-007,Incident Communication,Communicating about incident,Notification procedures,As required,45 CFR 164.400
+IR-008,Incident Lessons Learned,Learning from incidents,Process improvement,Post-incident,45 CFR 164.308(a)(1)(ii)(B)

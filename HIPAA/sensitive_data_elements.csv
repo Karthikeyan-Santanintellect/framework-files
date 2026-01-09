@@ -1,0 +1,11 @@
+element_id,name,description,data_type,identifier_type,protected,cfr_citation
+SDE-001,Social Security Number,Individual's SSN,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(F)
+SDE-002,Patient Name,Individual's full name,Text,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(A)
+SDE-003,Medical Record Number,Patient's medical record identifier,Alphanumeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(G)
+SDE-004,Date of Birth,Patient's birth date,Date,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(C)
+SDE-005,Telephone Number,Patient's phone number,Numeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(D)
+SDE-006,Email Address,Patient's email address,Text,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(E)
+SDE-007,Street Address,Patient's street address,Text,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(B)
+SDE-008,Health Plan ID,Health insurance plan number,Alphanumeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(H)
+SDE-009,Diagnosis Code,Medical diagnosis code,Alphanumeric,Clinical Identifier,True,45 CFR 164.512
+SDE-010,Medication Name,Prescribed medication,Text,Clinical Identifier,True,45 CFR 164.512

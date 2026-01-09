@@ -1,0 +1,9 @@
+safeguard_id,name,description,safeguard_type,implementation_specifications,cfr_citation,required_addressable
+AS-001,Security Management Process,Risk analysis and management procedures,Required,Risk analysis + Risk management,45 CFR 164.308(a)(1),Required
+AS-002,Assigned Security Responsibility,Designate security officer,Required,Workforce roles,45 CFR 164.308(a)(2),Required
+AS-003,Workforce Security,Workforce member access management,Required,Authorization/supervision,45 CFR 164.308(a)(3),Required
+AS-004,Information Access Management,Limit access based on role,Required,Access establishment/modification,45 CFR 164.308(a)(4),Required
+AS-005,Security Awareness Training,Security training and education,Required,Training programs,45 CFR 164.308(a)(5),Required
+AS-006,Security Incident Procedures,Incident response procedures,Required,Incident reporting,45 CFR 164.308(a)(6),Required
+AS-007,Contingency Planning,Emergency response and recovery,Required,Contingency plans + testing,45 CFR 164.308(a)(7),Required
+AS-008,Business Associate Agreements,Contracts with vendors,Required,Written agreements,45 CFR 164.308(b),Required

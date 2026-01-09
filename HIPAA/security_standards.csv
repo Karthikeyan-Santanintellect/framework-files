@@ -1,0 +1,9 @@
+standard_id,title,description,standard_type,safeguard_category,required_addressable,cfr_citation
+SS-001,Administrative Safeguards,Policies and procedures for security,Organizational,Administrative,Required/Addressable,45 CFR 164.308
+SS-002,Physical Safeguards,Physical access and facility controls,Facility,Physical,Required/Addressable,45 CFR 164.310
+SS-003,Technical Safeguards,Technology-based access and security controls,Technology,Technical,Required/Addressable,45 CFR 164.312
+SS-004,Organizational Requirements,Covered entity organization and management,Organizational,Administrative,Required,45 CFR 164.504
+SS-005,Workforce Security,Personnel security policies,Organizational,Administrative,Required,45 CFR 164.308(a)(3)
+SS-006,Information Access Management,Limiting access based on role,Organizational,Administrative,Required,45 CFR 164.308(a)(4)
+SS-007,Encryption Standards,Encryption for data at rest and in transit,Technology,Technical,Addressable,45 CFR 164.312(a)(2)(ii)
+SS-008,Audit and Accountability,Recording and monitoring of system activity,Technology,Technical,Required,45 CFR 164.312(b)

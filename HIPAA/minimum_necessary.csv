@@ -1,0 +1,7 @@
+principle_id,name,description,principle,exceptions,cfr_citation,applies_to
+MN-001,Access Limitation,Limit access to minimum necessary information,Only necessary PHI for function,Emergency treatment,45 CFR 164.514(d)(2),Workforce Access
+MN-002,Disclosure Limitation,Limit disclosures to minimum necessary information,Only necessary PHI for stated purpose,Law enforcement orders,45 CFR 164.514(d)(3),Disclosures
+MN-003,Request Limitation,Limit requests to minimum necessary information,Only necessary PHI in requests,Established protocols,45 CFR 164.514(d)(4),Requests from Others
+MN-004,Medical Record Limitation,Cannot request entire medical record,Limit to specific information,Medical record specifically justified,45 CFR 164.514(d)(5),Record Requests
+MN-005,Routine Disclosure Protocol,Implement protocols for routine disclosures,Limit to standard set,None,45 CFR 164.514(d)(3)(i),Routine Disclosures
+MN-006,Individual Request Review,Review non-routine disclosure requests,Evaluate each request individually,Approved protocols,45 CFR 164.514(d)(3)(ii),Non-routine Requests

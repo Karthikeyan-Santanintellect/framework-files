@@ -1,0 +1,6 @@
+node_id,name,description,deidentification_method,identifiers_removed_count,hipaa_protected,cfr_citation
+DHI-001,Statistical De-identification,Using statistical methods to remove identifiers,Statistical Analysis,All,False,45 CFR 164.514(b)(1)
+DHI-002,Safe Harbor De-identification,Removing specified identifiers from data,Direct Removal,18,False,45 CFR 164.514(b)(2)
+DHI-003,Aggregate Data,Summary data without individual identifiers,Aggregation,All,False,45 CFR 164.514(a)
+DHI-004,Coded Data,Using code instead of identifiers,Code Replacement,All,False,45 CFR 164.514(c)
+DHI-005,Generalized Data,Generalizing specific information,Generalization,Partial,False,45 CFR 164.514(b)

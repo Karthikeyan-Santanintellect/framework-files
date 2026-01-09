@@ -1,0 +1,9 @@
+disclosure_id,name,use_disclosure_type,authorization_status,permitted_use,cfr_citation,conditions
+UD-001,Treatment Use,Use for Healthcare,Permitted,Provide patient care,45 CFR 164.502(a)(1),Direct patient care
+UD-002,Payment Use,Use for Healthcare,Permitted,Process healthcare payments,45 CFR 164.502(a)(1),Payment purposes only
+UD-003,Healthcare Operations,Use for Healthcare,Permitted,Conduct business operations,45 CFR 164.502(a)(1),Operations only
+UD-004,Authorized Disclosure,Disclosure,Permitted,Specific authorization,45 CFR 164.508,Written authorization required
+UD-005,Public Health Disclosure,Disclosure,Permitted,Public health purposes,45 CFR 164.512(b),Legal authority required
+UD-006,Law Enforcement Disclosure,Disclosure,Permitted,Law enforcement purposes,45 CFR 164.512(f),Court order or subpoena
+UD-007,Research Disclosure,Disclosure,Permitted,Medical research,45 CFR 164.512(i),IRB approval required
+UD-008,Marketing Disclosure,Disclosure,Requires Authorization,Marketing purposes,45 CFR 164.514(e),Written authorization required

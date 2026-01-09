@@ -1,0 +1,5 @@
+node_id,name,description,protection_level,authorization_required,exceptions,cfr_citation
+PTN-001,Psychotherapy Notes Definition,Separate documentation of mental health treatment,Highest,Yes,Emergency treatment,45 CFR 164.508(b)(2)
+PTN-002,Access Restrictions,Cannot access notes without authorization,Highest,Yes,Serious threat exception,45 CFR 164.524(a)(2)
+PTN-003,Sale Restriction,Cannot sell psychotherapy notes,Highest,Yes,Public health authority,45 CFR 164.508(a)(4)
+PTN-004,Research Exceptions,Research access with specific approval,Highest,Yes,IRB approval,45 CFR 164.512(i)

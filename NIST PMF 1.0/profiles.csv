@@ -1,0 +1,3 @@
+id,name,type,description
+PROF_CUR,Current Profile,State,Indicates privacy outcomes that an organization is currently achieving.
+PROF_TAR,Target Profile,State,Indicates the outcomes needed to achieve desired privacy risk management goals.

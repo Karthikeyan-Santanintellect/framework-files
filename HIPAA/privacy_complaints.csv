@@ -1,0 +1,8 @@
+complaint_id,complaint_type,description,filing_process,investigation_required,cfr_citation
+PC-001,Privacy Violation Complaint,Alleged violation of privacy rules,Written to OCR,Yes,45 CFR 160.306
+PC-002,Access Denial Complaint,Denied access to own PHI,Written to covered entity or OCR,Yes,45 CFR 160.306
+PC-003,Amendment Denial Complaint,Denied amendment request,Written to covered entity or OCR,Yes,45 CFR 160.306
+PC-004,Accounting Denial Complaint,Denied accounting request,Written to covered entity or OCR,Yes,45 CFR 160.306
+PC-005,Use Restriction Complaint,Violated agreed-upon restrictions,Written to covered entity,Yes,45 CFR 164.522(i)
+PC-006,Breach Notification Complaint,Failure to notify of breach,Written to OCR,Yes,45 CFR 164.400
+PC-007,Communication Complaint,Failed to provide confidential communication,Written to covered entity,Yes,45 CFR 164.522

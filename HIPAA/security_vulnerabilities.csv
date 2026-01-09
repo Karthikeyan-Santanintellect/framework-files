@@ -1,0 +1,9 @@
+vulnerability_id,name,description,vulnerability_type,severity,cfr_citation
+SV-001,Unpatched Systems,Systems without security patches,Software Vulnerability,High,45 CFR 164.308(a)(1)
+SV-002,Weak Encryption,Outdated encryption algorithms,Cryptographic Weakness,High,45 CFR 164.312(a)(2)(ii)
+SV-003,Default Credentials,Systems using default passwords,Authentication Weakness,Critical,45 CFR 164.312(a)(2)(i)
+SV-004,SQL Injection,SQL injection vulnerabilities,Code Injection,High,45 CFR 164.312(a)(2)(i)
+SV-005,Cross-Site Scripting,XSS vulnerabilities in web apps,Code Injection,Medium,45 CFR 164.312(a)(2)(i)
+SV-006,Insecure Dependencies,Vulnerable third-party libraries,Dependency Vulnerability,Medium,45 CFR 164.308(a)(1)
+SV-007,Missing Controls,Security controls not implemented,Control Gap,Medium-High,45 CFR 164.308(a)
+SV-008,Misconfiguration,Security misconfiguration,Configuration Error,Medium,45 CFR 164.308(a)(1)

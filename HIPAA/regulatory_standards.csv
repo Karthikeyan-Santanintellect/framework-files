@@ -1,0 +1,7 @@
+standard_id,title,description,standard_type,applicability_scope,cfr_citation,mandatory_status,parent_rule
+RS-PR-001,Privacy Rule Standards,Standards for protecting health information privacy,Privacy,All Covered Entities,45 CFR 164.500-164.534,Mandatory,HIPAA Privacy Rule
+RS-SR-001,Security Rule Standards,Technical and administrative safeguard standards,Security,All Covered Entities,45 CFR 164.308-164.316,Mandatory,HIPAA Security Rule
+RS-BN-001,Breach Notification Standards,Standards for notifying individuals of breaches,Breach Notification,All Covered Entities,45 CFR 164.400-164.414,Mandatory,HIPAA Breach Notification
+RS-AS-001,Administrative Simplification Standards,Standards for electronic transactions,Administrative,All Covered Entities,45 CFR 160.101-162.1000,Mandatory,HIPAA Admin Simplification
+RS-BA-001,Business Associate Standards,Standards for business associate compliance,Compliance,Business Associates,45 CFR 164.502-504,Mandatory,HIPAA Privacy Rule
+RS-ENC-001,Encryption Standards,Standards for data encryption requirements,Technical,Electronic PHI,45 CFR 164.312(a)(2)(ii),Required Addressable,HIPAA Security Rule

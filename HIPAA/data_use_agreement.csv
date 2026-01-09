@@ -1,0 +1,4 @@
+agreement_id,name,description,required_provisions,prohibitions,cfr_citation
+DUA-001,Research Data Use Agreement,Agreement for sharing limited data sets,Permitted uses + safeguards + restrictions,Reuse or re-disclosure,45 CFR 164.514(e)(4)
+DUA-002,Business Associate Data Use Agreement,Agreement with data recipients,Permitted uses + Subcontractor terms,Unauthorized use,45 CFR 164.504(e)
+DUA-003,Public Health Data Use Agreement,Agreement for public health sharing,Permitted uses + Confidentiality,Unauthorized disclosure,45 CFR 164.512(b)

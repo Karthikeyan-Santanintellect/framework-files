@@ -1,0 +1,6 @@
+assessment_id,name,description,frequency,methodology,cfr_citation,required
+RA-001,Annual Risk Assessment,Annual security risk assessment,Annually,NIST/comprehensive,45 CFR 164.308(a)(1)(ii)(A),True
+RA-002,Incident Risk Assessment,Risk assessment following incident,Post-incident,Breach risk assessment,45 CFR 164.404(b),True
+RA-003,Threat Assessment,Assessment of potential threats,As needed,Threat modeling,45 CFR 164.308(a)(1),True
+RA-004,Vulnerability Assessment,Assessment of system vulnerabilities,Quarterly,Scanning/penetration testing,45 CFR 164.308(a)(1),True
+RA-005,Change Risk Assessment,Risk assessment for system changes,Before change,Change management review,45 CFR 164.308(a)(1),True

@@ -1,0 +1,9 @@
+location_id,name,location_type,description,security_requirements,cfr_citation
+PHI-LOC-001,Electronic Health Record System,Server/Database,Primary electronic storage system,Encryption + Access Controls,45 CFR 164.312
+PHI-LOC-002,Patient Files Storage Room,Physical Location,Locked file cabinet or room,Physical access controls,45 CFR 164.310(b)(1)
+PHI-LOC-003,Email Server,Server/Network,Electronic mail system for communications,Encryption + Access Controls,45 CFR 164.312(a)(2)(iii)
+PHI-LOC-004,Backup Storage,Physical/Server,Secondary backup storage location,Encryption + Offsite storage,45 CFR 164.308(a)(7)
+PHI-LOC-005,Archive System,Server/Database,Long-term archival storage system,Encryption + Audit logging,45 CFR 164.308(a)(7)
+PHI-LOC-006,Mobile Device,Portable Media,Laptops and smartphones,Encryption + Remote wipe,45 CFR 164.312(a)(2)(i)
+PHI-LOC-007,Cloud Storage,Server/Network,Cloud-based storage service,Encryption + Access Controls,45 CFR 164.312
+PHI-LOC-008,Fax Machine,Equipment,Physical facsimile transmission device,Secure location + Access log,45 CFR 164.310(b)

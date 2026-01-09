@@ -98,6 +98,8 @@ ON CREATE SET
     s.type = row.subcategory_type;
 """
 
+
+
 # Relationships
 framework_standard_functions_rel = """
 MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PMF_1.0'})

@@ -1,0 +1,8 @@
+request_id,request_type,description,response_timeline,fees_allowed,cfr_citation
+PR-001,Access Request,Request for access to own PHI,30-60 days,Reasonable copying fees,45 CFR 164.524
+PR-002,Amendment Request,Request to amend PHI,30-60 days,No fees,45 CFR 164.526
+PR-003,Accounting Request,Request for accounting of disclosures,30-60 days,First free/1 per year,45 CFR 164.528
+PR-004,Communication Request,Request for confidential communications,30-60 days,No fees,45 CFR 164.522
+PR-005,Restriction Request,Request to restrict use/disclosure,Accept/deny required,No fees,45 CFR 164.522(a)
+PR-006,Breach Notification Request,Request for notification of breach,Without unreasonable delay,No fees,45 CFR 164.400
+PR-007,Complaint Filing,Request to file privacy complaint,Anytime,No fees,45 CFR 160.306

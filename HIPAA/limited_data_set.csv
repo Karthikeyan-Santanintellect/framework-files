@@ -1,0 +1,4 @@
+node_id,name,description,permitted_uses,excluded_identifiers,requires_data_use_agreement,cfr_citation
+LDS-001,Limited Data Set Definition,PHI with limited identifiers remaining,Research/Public Health,16 Direct Identifiers,True,45 CFR 164.514(e)
+LDS-002,Permitted Uses for LDS,Specific uses of limited data sets,Research and Health Care Operations,All Direct Identifiers,True,45 CFR 164.514(e)(3)
+LDS-003,LDS Recipients,Organizations receiving limited data sets,Research and Operations,All Direct Identifiers,True,45 CFR 164.514(e)

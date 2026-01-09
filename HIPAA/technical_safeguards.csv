@@ -1,0 +1,9 @@
+safeguard_id,name,description,safeguard_type,implementation_specifications,cfr_citation,required_addressable
+TS-001,Access Control,Limit access through technology,Required,User IDs + Emergency access,45 CFR 164.312(a),Required
+TS-002,Unique User Identification,Unique user identifiers,Required,System assignment,45 CFR 164.312(a)(2)(i),Required
+TS-003,Emergency Access Procedures,Procedures for emergency access,Required,Emergency procedures,45 CFR 164.312(a)(2)(i),Required
+TS-004,Encryption and Decryption,Encryption for data security,Addressable,Encryption methods,45 CFR 164.312(a)(2)(ii),Addressable
+TS-005,Audit Controls,Recording system access,Required,Audit logging,45 CFR 164.312(b),Required
+TS-006,Integrity Controls,Verify data accuracy,Required,Data integrity verification,45 CFR 164.312(c),Required
+TS-007,Transmission Security,Secure data transmission,Required,Encryption + protocols,45 CFR 164.312(e),Required
+TS-008,Transmission Protocols,Encryption for transmission,Addressable,TLS/VPN,45 CFR 164.312(e)(2)(ii),Addressable

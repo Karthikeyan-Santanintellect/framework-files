@@ -1,0 +1,9 @@
+measure_id,name,description,control_type,technology_used,cfr_citation
+SM-001,Multi-Factor Authentication,Multiple authentication factors required,Preventive,MFA tools,45 CFR 164.312(a)(2)(i)
+SM-002,Role-Based Access Control,Access based on job role,Preventive,RBAC systems,45 CFR 164.308(a)(4)
+SM-003,Data Encryption,Encryption at rest and in transit,Preventive,Encryption algorithms,45 CFR 164.312(a)(2)(ii)
+SM-004,Audit Logging,Recording system activity,Detective,Log management tools,45 CFR 164.312(b)
+SM-005,Firewall Protection,Network perimeter security,Preventive,Firewalls,45 CFR 164.312(a)(1)
+SM-006,Antivirus Software,Malware protection,Preventive,Antivirus tools,45 CFR 164.308(a)(5)
+SM-007,Intrusion Detection,Network intrusion detection,Detective,IDS systems,45 CFR 164.308(a)(1)(ii)(A)
+SM-008,Data Backup,Regular backup procedures,Corrective,Backup systems,45 CFR 164.308(a)(7)(ii)(A)

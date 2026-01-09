@@ -1,0 +1,6 @@
+authorization_id,name,description,remuneration_disclosure_required,exceptions,cfr_citation
+MA-001,General Marketing Authorization,Authorization for marketing communications,If remuneration involved,Direct communication exempt,45 CFR 164.514(e)(2)
+MA-002,Face-to-Face Marketing,Marketing in direct patient encounter,Not required,No authorization needed,45 CFR 164.514(e)(2)(i)(A)
+MA-003,Nominal Value Marketing,Marketing of nominal value items,Not required,No authorization needed,45 CFR 164.514(e)(2)(i)(B)
+MA-004,Healthcare Services Marketing,Marketing of covered entity services,If remuneration involved,No authorization needed,45 CFR 164.514(e)(2)(i)(C)
+MA-005,Pharmacy Marketing,Marketing for pharmacy services,Always disclose,Requires authorization,45 CFR 164.508(b)(3)

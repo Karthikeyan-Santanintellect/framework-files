@@ -1,0 +1,9 @@
+incident_id,incident_type,description,severity,response_required,cfr_citation
+SI-001,Unauthorized Access,Unauthorized access to PHI,High,Investigation required,45 CFR 164.308(a)(6)
+SI-002,Malware Infection,System infected with malware,High,Immediate remediation,45 CFR 164.308(a)(5)
+SI-003,Data Theft,PHI data stolen or lost,Critical,Breach notification,45 CFR 164.404
+SI-004,System Outage,System unavailability,Medium,Service restoration,45 CFR 164.308(a)(7)
+SI-005,Configuration Error,Security misconfiguration,Medium,Correction required,45 CFR 164.308(a)(1)
+SI-006,Weak Password,Weak credential use detected,Low,Password reset,45 CFR 164.312(a)(2)(i)
+SI-007,Suspicious Activity,Suspicious network activity,Medium,Investigation required,45 CFR 164.312(b)
+SI-008,Encryption Failure,Encryption mechanism failure,High,Investigation required,45 CFR 164.312(a)(2)(ii)

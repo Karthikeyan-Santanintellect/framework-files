@@ -1,0 +1,13 @@
+id,role_name,type,description
+ACT_INT_01,Senior Executive,Internal,Responsible for mission priorities risk tolerance and budget.
+ACT_INT_02,Business/Process Manager,Internal,Responsible for Profile development and Tier selection.
+ACT_INT_03,Implementation/Operations Personnel,Internal,Responsible for implementing Profiles and monitoring progress.
+ACT_EXT_01,Individual,External,Single person or group experiencing direct impact from data processing.
+ACT_ECO_01,Manufacturer,Ecosystem,Entity producing hardware or products.
+ACT_ECO_02,Supplier or Service Provider,Ecosystem,Entity providing services or components.
+ACT_ECO_03,Business Associates or Partners,Ecosystem,Associates with whom the organization shares data or risks.
+ACT_ECO_04,Public/Government Services,Ecosystem,Public sector entities providing services.
+ACT_ECO_05,Civil Society,Ecosystem,Advocacy groups representing public interests.
+ACT_ECO_06,Research/Education,Ecosystem,Academic or research institutions.
+ACT_ECO_07,Developer,Ecosystem,Entity designing applications or software.
+ACT_ECO_08,Commercial Product/Services,Ecosystem,Entities providing retail products to consumers.

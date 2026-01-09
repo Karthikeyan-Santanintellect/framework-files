@@ -1,0 +1,9 @@
+node_id,name,description,storage_format,transmission_method,encryption_required,sensitivity_level,cfr_citation
+EPHI-001,Patient Medical Records,Electronic health records stored in systems,Digital Text/Binary,Database/Network,True,High,45 CFR 164.312(a)(2)(ii)
+EPHI-002,Billing Information,Healthcare billing and insurance claims,Digital Text/CSV,Email/SFTP,True,High,45 CFR 164.312(a)(2)(ii)
+EPHI-003,Lab Results,Laboratory test results and reports,Digital Text/PDF,Secure Portal/Email,True,High,45 CFR 164.312(a)(2)(ii)
+EPHI-004,Prescription Data,Electronic prescriptions and medication records,Digital Text/XML,Secure Network,True,High,45 CFR 164.312(a)(2)(ii)
+EPHI-005,Imaging Data,Medical imaging files,Binary/DICOM,Secure Network,True,Critical,45 CFR 164.312(a)(2)(ii)
+EPHI-006,Appointment Records,Scheduling and appointment information,Digital Text/Database,Database/Network,True,Medium,45 CFR 164.312(a)(2)(ii)
+EPHI-007,Communication Logs,Patient communications and correspondence,Digital Text/Email,Email/Archive,True,Medium,45 CFR 164.312(a)(2)(ii)
+EPHI-008,Insurance Claims,Insurance authorization and claim information,Digital Text/EDI,EDI/Secure Network,True,High,45 CFR 164.312(a)(2)(ii)

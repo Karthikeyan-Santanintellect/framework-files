@@ -1,0 +1,8 @@
+notice_id,name,description,required_content,distribution_method,cfr_citation
+PN-001,Privacy Notice,Notice of Privacy Practices,Uses/Disclosures + Rights,Posted + Delivered,45 CFR 164.520
+PN-002,Minimum Necessary Notice,Notice of minimum necessary policies,Minimum necessary implementation,Internal publication,45 CFR 164.514(d)
+PN-003,Authorization Notice,Notice about authorizations,Authorization requirements,As requested,45 CFR 164.508
+PN-004,Breach Notification Notice,Notice of breach,Nature of breach + mitigation steps,Email/Mail,45 CFR 164.404
+PN-005,Restriction Notice,Notice about use restrictions,Agreed restrictions,Patient notification,45 CFR 164.522
+PN-006,Amendment Notice,Notice of amendment,Changes to records,Patient notification,45 CFR 164.526
+PN-007,Accounting Notice,Notice of accounting,Disclosures made,Patient request response,45 CFR 164.528

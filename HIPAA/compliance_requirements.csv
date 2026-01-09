@@ -1,0 +1,9 @@
+requirement_id,description,obligation_type,applicable_entities,enforcement_basis,cfr_citation,standard_id,mandatory
+CR-001,Document privacy policies and procedures,Administrative,Covered Entities,Office of Civil Rights,45 CFR 164.530,RS-PR-001,True
+CR-002,Implement access controls,Technical,Covered Entities,Office of Civil Rights,45 CFR 164.312(a),RS-SR-001,True
+CR-003,Conduct security risk assessments,Administrative,Covered Entities,Office of Civil Rights,45 CFR 164.308(a)(1),RS-SR-001,True
+CR-004,Notify individuals of privacy practices,Administrative,Covered Entities,Office of Civil Rights,45 CFR 164.520,RS-PR-001,True
+CR-005,Execute Business Associate Agreements,Contractual,Covered Entities,Office of Civil Rights,45 CFR 164.504,RS-BA-001,True
+CR-006,Implement audit logging and accountability,Technical,Covered Entities,Office of Civil Rights,45 CFR 164.312(b),RS-SR-001,True
+CR-007,Establish breach notification procedures,Administrative,Covered Entities,Office of Civil Rights,45 CFR 164.400,RS-BN-001,True
+CR-008,Implement minimum necessary access,Administrative,Covered Entities,Office of Civil Rights,45 CFR 164.514(d),RS-PR-001,True

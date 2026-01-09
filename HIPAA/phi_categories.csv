@@ -1,0 +1,9 @@
+category_id,name,description,examples,sensitivity_level,cfr_citation
+PHI-CAT-001,Personal Identifiers,Names and direct identifiers,Patient name,High,45 CFR 164.514(b)(2)(i)(A-B)
+PHI-CAT-002,Contact Information,Phone numbers and addresses,Home phone number,High,45 CFR 164.514(b)(2)(i)(C-E)
+PHI-CAT-003,Dates and Ages,Birth dates and age information,Date of birth,High,45 CFR 164.514(b)(2)(i)(C)
+PHI-CAT-004,Medical Identifiers,MRN and health plan numbers,Medical record number,High,45 CFR 164.514(b)(2)(i)(G-I)
+PHI-CAT-005,Financial Information,Account numbers and insurance details,Insurance account number,High,45 CFR 164.514(b)(2)(i)(J)
+PHI-CAT-006,Biometric Information,Fingerprints and voice prints,Fingerprint records,Critical,45 CFR 164.514(b)(2)(i)(O)
+PHI-CAT-007,Photographs,Face photos and images,Patient photograph,High,45 CFR 164.514(b)(2)(i)(P)
+PHI-CAT-008,Clinical Information,Diagnosis and treatment details,Diagnosis codes,Medium,45 CFR 164.512

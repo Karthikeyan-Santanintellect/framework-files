@@ -1,0 +1,9 @@
+use_id,name,description,use_type,authorization_required,permitted_without_authorization,cfr_citation
+DU-001,Treatment,Using PHI for patient treatment,Clinical,False,True,45 CFR 164.502(a)(1)(i)
+DU-002,Payment,Using PHI for payment processing,Administrative,False,True,45 CFR 164.502(a)(1)(ii)
+DU-003,Healthcare Operations,Using PHI for operations,Administrative,False,True,45 CFR 164.502(a)(1)(iii)
+DU-004,Research,Using PHI for medical research,Research,True,False,45 CFR 164.508
+DU-005,Public Health Activities,Using PHI for public health,Public Health,False,True,45 CFR 164.512(b)
+DU-006,Law Enforcement,Using PHI for law enforcement,Legal,False,True,45 CFR 164.512(f)
+DU-007,Judicial Proceedings,Using PHI for court proceedings,Legal,False,True,45 CFR 164.512(e)
+DU-008,Emergency Circumstances,Using PHI in emergencies,Clinical,False,True,45 CFR 164.512(j)

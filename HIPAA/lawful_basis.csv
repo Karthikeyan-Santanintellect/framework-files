@@ -1,0 +1,8 @@
+basis_id,name,basis_type,description,legal_authority,cfr_citation
+LB-001,Treatment Necessity,Clinical,PHI use necessary for treatment,Clinical Judgment,45 CFR 164.502(a)(1)(i)
+LB-002,Payment Processing,Administrative,PHI use for payment,Business Operations,45 CFR 164.502(a)(1)(ii)
+LB-003,Healthcare Operations,Administrative,PHI use for operations,Regulatory Requirement,45 CFR 164.502(a)(1)(iii)
+LB-004,Legal Authorization,Legal,Disclosure required by law,Statute/Court Order,45 CFR 164.512
+LB-005,Public Interest,Public Health,PHI disclosure for public health,Public Health Authority,45 CFR 164.512(b)
+LB-006,Individual Authorization,Consent,PHI use with patient authorization,Patient Consent,45 CFR 164.508
+LB-007,Emergency Treatment,Clinical,Use in medical emergency,Urgent Medical Need,45 CFR 164.512(j)

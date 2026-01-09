@@ -1,0 +1,9 @@
+form_id,name,format,description,examples,cfr_citation
+PHI-FRM-001,Electronic Medical Records,Digital Database,Structured health information in EHR systems,HL7 FHIR JSON,45 CFR 164.312
+PHI-FRM-002,Paper Records,Physical Documents,Paper-based health information,Medical charts,45 CFR 164.310(b)
+PHI-FRM-003,Emails,Text Message,Electronic communications containing PHI,Sent via secure email,45 CFR 164.312(a)(2)(iii)
+PHI-FRM-004,Audio/Video,Multimedia,Audio and video recordings with patient information,Telemedicine recordings,45 CFR 164.312
+PHI-FRM-005,Faxes,Document Image,Transmitted health information via fax,Fax transmissions,45 CFR 164.312(a)(2)(iii)
+PHI-FRM-006,SMS Messages,Text Message,Short message service containing PHI,Text appointment reminders,45 CFR 164.312(a)(2)(i)
+PHI-FRM-007,Scanned Documents,Image File,Digitized paper documents,Scanned medical records,45 CFR 164.312
+PHI-FRM-008,Portable Media,Binary File,Information on USB drives or external storage,Portable device storage,45 CFR 164.310(d)(1)

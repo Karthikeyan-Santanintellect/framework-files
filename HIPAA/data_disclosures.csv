@@ -1,0 +1,9 @@
+disclosure_id,name,description,disclosure_type,recipient_type,authorization_required,cfr_citation
+DD-001,Patient Access,Patient's own health information,Access Request,Patient,False,45 CFR 164.524
+DD-002,Treatment Provider Sharing,Sharing with other providers,Operational Disclosure,Healthcare Provider,False,45 CFR 164.502
+DD-003,Insurance Company Disclosure,Sharing with health insurer,Payment,Health Plan,False,45 CFR 164.502
+DD-004,Research Disclosure,Sharing for research purposes,Research,Research Organization,True,45 CFR 164.508
+DD-005,Law Enforcement Disclosure,Sharing with law enforcement,Legal,Law Enforcement,False,45 CFR 164.512(f)
+DD-006,Family Member Disclosure,Sharing with family members,Personal,Family Member,True,45 CFR 164.510(b)
+DD-007,Marketing Disclosure,Sharing for marketing purposes,Marketing,Business Partner,True,45 CFR 164.514(e)
+DD-008,Business Associate Disclosure,Sharing with business associates,Operational,Business Associate,True,45 CFR 164.504

@@ -1,0 +1,9 @@
+safeguard_id,name,description,safeguard_type,implementation_specifications,cfr_citation,required_addressable
+PS-001,Facility Access Controls,Control physical access to facilities,Required,Access control + Access cards,45 CFR 164.310(a),Required
+PS-002,Facility Security Plan,Plans for facility security,Required,Security plans,45 CFR 164.310(a)(1),Addressable
+PS-003,Access Control and Validation,Control facility access points,Required,Visitor logs + identification,45 CFR 164.310(a)(2),Addressable
+PS-004,Surveillance and Monitoring,Monitor facilities for intrusion,Addressable,Surveillance systems,45 CFR 164.310(a)(2)(iii),Addressable
+PS-005,Workstation Use,Controls on workstation use,Required,Workstation usage policies,45 CFR 164.310(b),Required
+PS-006,Workstation Security,Physical security of workstations,Required,Screen placement + access controls,45 CFR 164.310(c),Required
+PS-007,Device and Media Controls,Control hardware use and disposition,Required,Inventory + Disposal,45 CFR 164.310(d),Required
+PS-008,Device Security,Physical security of devices,Addressable,Device tracking,45 CFR 164.310(d)(2)(ii),Addressable

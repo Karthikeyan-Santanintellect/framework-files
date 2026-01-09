@@ -1,0 +1,9 @@
+spec_id,title,description,requirement_type,addressable,standard_id,cfr_citation,implementation_guidance
+IS-001,Workforce Authorization,Identification and authorization of workforce members,Required,False,RS-AS-001,45 CFR 164.308(a)(3),Define roles and access levels
+IS-002,Access Management,Implement user access controls and authentication,Required,True,RS-SR-001,45 CFR 164.312(a)(2),Use unique user identifiers and emergency procedures
+IS-003,Encryption and Decryption,Encrypt data at rest and in transit,Required,True,RS-SR-001,45 CFR 164.312(a)(2)(ii),Use encryption standards and key management
+IS-004,Audit Controls,Implement systems to record and examine ePHI access,Required,True,RS-SR-001,45 CFR 164.312(b),Enable audit logging on systems
+IS-005,Integrity Verification,Verify ePHI integrity and origins,Required,True,RS-SR-001,45 CFR 164.312(c),Use digital signatures and checksums
+IS-006,Workforce Security,Manage workforce access to ePHI,Required,False,RS-SR-001,45 CFR 164.308(a)(3),Implement role-based access control
+IS-007,Facility Access,Control physical access to facilities,Required,True,RS-SR-001,45 CFR 164.310(a),Use badges and visitor logs
+IS-008,Contingency Planning,Establish disaster recovery and emergency procedures,Required,False,RS-SR-001,45 CFR 164.308(a)(7),Test contingency plans annually

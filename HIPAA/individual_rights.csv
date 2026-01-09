@@ -1,0 +1,9 @@
+right_id,name,description,right_type,cfr_citation,timeline_for_response,fees_allowed
+IR-001,Right to Access,Patient right to access own health information,Access,45 CFR 164.524,30-60 days,Reasonable fees
+IR-002,Right to Amend,Patient right to amend health information,Amendment,45 CFR 164.526,30-60 days,No fees
+IR-003,Right to Accounting of Disclosures,Patient right to know who accessed PHI,Accounting,45 CFR 164.528,30-60 days,First request free
+IR-004,Right to Confidential Communication,Patient right to request confidential methods,Communication,45 CFR 164.522,No deadline,No fees
+IR-005,Right to Restrict Use/Disclosure,Patient right to restrict PHI use,Restriction,45 CFR 164.522(a),30-60 days,No fees
+IR-006,Right to Receive Notice,Patient right to receive privacy notice,Notice,45 CFR 164.520,Initial and annual,No fees
+IR-007,Right to Breach Notification,Patient right to be notified of breaches,Notification,45 CFR 164.404,60 days,No fees
+IR-008,Right to Complaint,Patient right to file privacy complaints,Complaint,45 CFR 160.306,Anytime,No fees
