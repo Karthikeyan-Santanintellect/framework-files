@@ -1,0 +1,13 @@
+relationship_id,standard_id,safeguard_id,description,created_date
+REL-SS-TS-001,SS-001,TECH-001,Security Management Process requires technical safeguards,2026-01-09
+REL-SS-TS-002,SS-002,TECH-002,Access Control requires technical safeguards,2026-01-09
+REL-SS-TS-003,SS-003,TECH-003,Unique User Identification requires technical safeguards,2026-01-09
+REL-SS-TS-004,SS-004,TECH-004,Emergency Access Procedures requires technical safeguards,2026-01-09
+REL-SS-TS-005,SS-005,TECH-005,Encryption and Decryption requires technical safeguards,2026-01-09
+REL-SS-TS-006,SS-006,TECH-006,Audit Controls requires technical safeguards,2026-01-09
+REL-SS-TS-007,SS-007,TECH-007,Integrity Controls requires technical safeguards,2026-01-09
+REL-SS-TS-008,SS-008,TECH-008,Cryptographic Mechanisms requires technical safeguards,2026-01-09
+REL-SS-TS-009,SS-009,TECH-009,Authentication requires technical safeguards,2026-01-09
+REL-SS-TS-010,SS-010,TECH-010,Transmission Security requires technical safeguards,2026-01-09
+REL-SS-TS-011,SS-011,TECH-011,Automatic Logoff requires technical safeguards,2026-01-09
+REL-SS-TS-012,SS-012,TECH-012,Access Management System requires technical safeguards,2026-01-09

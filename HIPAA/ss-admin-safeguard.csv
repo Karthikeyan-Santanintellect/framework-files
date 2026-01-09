@@ -1,0 +1,13 @@
+relationship_id,standard_id,safeguard_id,description,created_date
+REL-SS-AS-001,SS-001,ADMIN-001,Security Management Process requires administrative safeguards,2026-01-09
+REL-SS-AS-002,SS-002,ADMIN-002,Assigned Security Responsibility requires administrative safeguards,2026-01-09
+REL-SS-AS-003,SS-003,ADMIN-003,Workforce Security requires administrative safeguards,2026-01-09
+REL-SS-AS-004,SS-004,ADMIN-004,Information Access Management requires administrative safeguards,2026-01-09
+REL-SS-AS-005,SS-005,ADMIN-005,Security Awareness and Training requires administrative safeguards,2026-01-09
+REL-SS-AS-006,SS-006,ADMIN-006,Security Incident Procedures requires administrative safeguards,2026-01-09
+REL-SS-AS-007,SS-007,ADMIN-007,Contingency Planning requires administrative safeguards,2026-01-09
+REL-SS-AS-008,SS-008,ADMIN-008,Business Associate Agreements requires administrative safeguards,2026-01-09
+REL-SS-AS-009,SS-009,ADMIN-009,Evaluation requires administrative safeguards,2026-01-09
+REL-SS-AS-010,SS-010,ADMIN-010,Sanction Policy requires administrative safeguards,2026-01-09
+REL-SS-AS-011,SS-011,ADMIN-011,Access Control and Management requires administrative safeguards,2026-01-09
+REL-SS-AS-012,SS-012,ADMIN-012,Policies and Procedures Documentation requires administrative safeguards,2026-01-09

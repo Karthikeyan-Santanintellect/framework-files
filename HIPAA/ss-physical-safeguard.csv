@@ -1,0 +1,13 @@
+relationship_id,standard_id,safeguard_id,description,created_date
+REL-SS-PS-001,SS-001,PHYS-001,Security Management Process requires physical safeguards,2026-01-09
+REL-SS-PS-002,SS-002,PHYS-002,Facility Access Controls requires physical safeguards,2026-01-09
+REL-SS-PS-003,SS-003,PHYS-003,Workstation Use Restrictions requires physical safeguards,2026-01-09
+REL-SS-PS-004,SS-004,PHYS-004,Workstation Physical Security requires physical safeguards,2026-01-09
+REL-SS-PS-005,SS-005,PHYS-005,Device and Media Controls requires physical safeguards,2026-01-09
+REL-SS-PS-006,SS-006,PHYS-006,Disposal of PHI Devices requires physical safeguards,2026-01-09
+REL-SS-PS-007,SS-007,PHYS-007,Media Reuse Procedures requires physical safeguards,2026-01-09
+REL-SS-PS-008,SS-008,PHYS-008,Inventory Management Procedures requires physical safeguards,2026-01-09
+REL-SS-PS-009,SS-009,PHYS-009,Environmental Controls for Facilities requires physical safeguards,2026-01-09
+REL-SS-PS-010,SS-010,PHYS-010,Physical Security Perimeter requires physical safeguards,2026-01-09
+REL-SS-PS-011,SS-011,PHYS-011,Visitor Access Controls requires physical safeguards,2026-01-09
+REL-SS-PS-012,SS-012,PHYS-012,Facility Surveillance Systems requires physical safeguards,2026-01-09
