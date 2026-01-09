@@ -1,0 +1,53 @@
+relationship_id,category_id,element_id,description,created_date
+REL-PC-SDE-001,CAT-DEM,ELEM-001,Full Name as sensitive data element,2026-01-09
+REL-PC-SDE-002,CAT-DEM,ELEM-002,Date of Birth as sensitive data element,2026-01-09
+REL-PC-SDE-003,CAT-DEM,ELEM-003,Address as sensitive data element,2026-01-09
+REL-PC-SDE-004,CAT-DEM,ELEM-004,Phone Number as sensitive data element,2026-01-09
+REL-PC-SDE-005,CAT-DEM,ELEM-005,Email Address as sensitive data element,2026-01-09
+REL-PC-SDE-006,CAT-ID,ELEM-006,Social Security Number (SSN) as sensitive data element,2026-01-09
+REL-PC-SDE-007,CAT-ID,ELEM-007,Medical Record Number (MRN) as sensitive data element,2026-01-09
+REL-PC-SDE-008,CAT-ID,ELEM-008,Patient Account Number as sensitive data element,2026-01-09
+REL-PC-SDE-009,CAT-ID,ELEM-009,Health Plan Beneficiary Number as sensitive data element,2026-01-09
+REL-PC-SDE-010,CAT-ID,ELEM-010,Device Identifiers and Serial Numbers as sensitive data element,2026-01-09
+REL-PC-SDE-011,CAT-ID,ELEM-011,Biometric Identifiers (fingerprints face voice) as sensitive data element,2026-01-09
+REL-PC-SDE-012,CAT-ID,ELEM-012,Photographic Images as sensitive data element,2026-01-09
+REL-PC-SDE-013,CAT-FIN,ELEM-013,Credit Card Number as sensitive data element,2026-01-09
+REL-PC-SDE-014,CAT-FIN,ELEM-014,Bank Account Number as sensitive data element,2026-01-09
+REL-PC-SDE-015,CAT-FIN,ELEM-015,Payment History as sensitive data element,2026-01-09
+REL-PC-SDE-016,CAT-FIN,ELEM-016,Billing Records as sensitive data element,2026-01-09
+REL-PC-SDE-017,CAT-MED,ELEM-017,Diagnosis Codes (ICD-10) as sensitive data element,2026-01-09
+REL-PC-SDE-018,CAT-MED,ELEM-018,Procedure Codes (CPT) as sensitive data element,2026-01-09
+REL-PC-SDE-019,CAT-MED,ELEM-019,Medical History as sensitive data element,2026-01-09
+REL-PC-SDE-020,CAT-MED,ELEM-020,Physician Notes as sensitive data element,2026-01-09
+REL-PC-SDE-021,CAT-MED,ELEM-021,Allergies as sensitive data element,2026-01-09
+REL-PC-SDE-022,CAT-MED,ELEM-022,Immunization Records as sensitive data element,2026-01-09
+REL-PC-SDE-023,CAT-LAB,ELEM-023,Lab Test Results as sensitive data element,2026-01-09
+REL-PC-SDE-024,CAT-LAB,ELEM-024,Blood Test Results as sensitive data element,2026-01-09
+REL-PC-SDE-025,CAT-LAB,ELEM-025,Pathology Reports as sensitive data element,2026-01-09
+REL-PC-SDE-026,CAT-IMG,ELEM-026,X-ray Images as sensitive data element,2026-01-09
+REL-PC-SDE-027,CAT-IMG,ELEM-027,MRI Scans as sensitive data element,2026-01-09
+REL-PC-SDE-028,CAT-IMG,ELEM-028,CT Scans as sensitive data element,2026-01-09
+REL-PC-SDE-029,CAT-IMG,ELEM-029,Ultrasound Images as sensitive data element,2026-01-09
+REL-PC-SDE-030,CAT-RX,ELEM-030,Prescription Medications as sensitive data element,2026-01-09
+REL-PC-SDE-031,CAT-RX,ELEM-031,Dosage Information as sensitive data element,2026-01-09
+REL-PC-SDE-032,CAT-RX,ELEM-032,Pharmacy Records as sensitive data element,2026-01-09
+REL-PC-SDE-033,CAT-RX,ELEM-033,Controlled Substance Records as sensitive data element,2026-01-09
+REL-PC-SDE-034,CAT-INS,ELEM-034,Insurance Provider Name as sensitive data element,2026-01-09
+REL-PC-SDE-035,CAT-INS,ELEM-035,Policy Number as sensitive data element,2026-01-09
+REL-PC-SDE-036,CAT-INS,ELEM-036,Group Number as sensitive data element,2026-01-09
+REL-PC-SDE-037,CAT-INS,ELEM-037,Coverage Details as sensitive data element,2026-01-09
+REL-PC-SDE-038,CAT-INS,ELEM-038,Claims Information as sensitive data element,2026-01-09
+REL-PC-SDE-039,CAT-TREAT,ELEM-039,Treatment Plans as sensitive data element,2026-01-09
+REL-PC-SDE-040,CAT-TREAT,ELEM-040,Surgical Procedures as sensitive data element,2026-01-09
+REL-PC-SDE-041,CAT-TREAT,ELEM-041,Therapy Records as sensitive data element,2026-01-09
+REL-PC-SDE-042,CAT-TREAT,ELEM-042,Rehabilitation Records as sensitive data element,2026-01-09
+REL-PC-SDE-043,CAT-GEN,ELEM-043,Genetic Test Results as sensitive data element,2026-01-09
+REL-PC-SDE-044,CAT-GEN,ELEM-044,DNA Sequencing Data as sensitive data element,2026-01-09
+REL-PC-SDE-045,CAT-GEN,ELEM-045,Family Health History as sensitive data element,2026-01-09
+REL-PC-SDE-046,CAT-MH,ELEM-046,Psychiatric Evaluations as sensitive data element,2026-01-09
+REL-PC-SDE-047,CAT-MH,ELEM-047,Psychotherapy Notes as sensitive data element,2026-01-09
+REL-PC-SDE-048,CAT-MH,ELEM-048,Mental Health Diagnoses as sensitive data element,2026-01-09
+REL-PC-SDE-049,CAT-MH,ELEM-049,Substance Abuse Treatment Records as sensitive data element,2026-01-09
+REL-PC-SDE-050,CAT-COMM,ELEM-050,Patient Portal Messages as sensitive data element,2026-01-09
+REL-PC-SDE-051,CAT-COMM,ELEM-051,Appointment Scheduling Information as sensitive data element,2026-01-09
+REL-PC-SDE-052,CAT-COMM,ELEM-052,Provider-to-Provider Communications as sensitive data element,2026-01-09

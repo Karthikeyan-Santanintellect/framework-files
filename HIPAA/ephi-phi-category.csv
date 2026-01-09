@@ -1,0 +1,13 @@
+relationship_id,ephi_id,category_id,description,created_date
+REL-EPHI-PC-001,EPHI-001,CAT-DEM,Electronic PHI classified under Demographic Information,2026-01-09
+REL-EPHI-PC-002,EPHI-002,CAT-FIN,Electronic PHI classified under Financial Information,2026-01-09
+REL-EPHI-PC-003,EPHI-003,CAT-MED,Electronic PHI classified under Medical Records,2026-01-09
+REL-EPHI-PC-004,EPHI-004,CAT-IMG,Electronic PHI classified under Imaging and Diagnostic Data,2026-01-09
+REL-EPHI-PC-005,EPHI-005,CAT-LAB,Electronic PHI classified under Laboratory Results,2026-01-09
+REL-EPHI-PC-006,EPHI-006,CAT-RX,Electronic PHI classified under Prescription Information,2026-01-09
+REL-EPHI-PC-007,EPHI-007,CAT-INS,Electronic PHI classified under Insurance Information,2026-01-09
+REL-EPHI-PC-008,EPHI-008,CAT-TREAT,Electronic PHI classified under Treatment Information,2026-01-09
+REL-EPHI-PC-009,EPHI-009,CAT-GEN,Electronic PHI classified under Genetic Information,2026-01-09
+REL-EPHI-PC-010,EPHI-010,CAT-MH,Electronic PHI classified under Mental Health Records,2026-01-09
+REL-EPHI-PC-011,EPHI-011,CAT-ID,Electronic PHI classified under Patient Identifiers,2026-01-09
+REL-EPHI-PC-012,EPHI-012,CAT-COMM,Electronic PHI classified under Communication Records,2026-01-09

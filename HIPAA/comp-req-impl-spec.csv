@@ -1,0 +1,36 @@
+relationship_id,requirement_id,spec_id,description,created_date
+REL-CR-IS-001,REQ-001,SPEC-001,Risk Analysis implementation specification (Required),2026-01-09
+REL-CR-IS-002,REQ-002,SPEC-002,Risk Management implementation specification (Required),2026-01-09
+REL-CR-IS-003,REQ-003,SPEC-003,Sanction Policy implementation specification (Required),2026-01-09
+REL-CR-IS-004,REQ-004,SPEC-004,Information System Activity Review implementation specification (Required),2026-01-09
+REL-CR-IS-005,REQ-006,SPEC-005,Authorization and/or Supervision implementation specification (Addressable),2026-01-09
+REL-CR-IS-006,REQ-007,SPEC-006,Workforce Clearance Procedure implementation specification (Addressable),2026-01-09
+REL-CR-IS-007,REQ-008,SPEC-007,Termination Procedures implementation specification (Addressable),2026-01-09
+REL-CR-IS-008,REQ-009,SPEC-008,Isolating Health Care Clearinghouse Function implementation specification (Required),2026-01-09
+REL-CR-IS-009,REQ-010,SPEC-009,Access Authorization implementation specification (Addressable),2026-01-09
+REL-CR-IS-010,REQ-011,SPEC-010,Access Establishment and Modification implementation specification (Addressable),2026-01-09
+REL-CR-IS-011,REQ-012,SPEC-011,Security Reminders implementation specification (Addressable),2026-01-09
+REL-CR-IS-012,REQ-013,SPEC-012,Protection from Malicious Software implementation specification (Addressable),2026-01-09
+REL-CR-IS-013,REQ-014,SPEC-013,Log-in Monitoring implementation specification (Addressable),2026-01-09
+REL-CR-IS-014,REQ-015,SPEC-014,Password Management implementation specification (Addressable),2026-01-09
+REL-CR-IS-015,REQ-016,SPEC-015,Response and Reporting implementation specification (Required),2026-01-09
+REL-CR-IS-016,REQ-017,SPEC-016,Data Backup Plan implementation specification (Required),2026-01-09
+REL-CR-IS-017,REQ-018,SPEC-017,Disaster Recovery Plan implementation specification (Required),2026-01-09
+REL-CR-IS-018,REQ-019,SPEC-018,Emergency Mode Operation Plan implementation specification (Required),2026-01-09
+REL-CR-IS-019,REQ-020,SPEC-019,Testing and Revision Procedure implementation specification (Addressable),2026-01-09
+REL-CR-IS-020,REQ-021,SPEC-020,Applications and Data Criticality Analysis implementation specification (Addressable),2026-01-09
+REL-CR-IS-021,REQ-024,SPEC-021,Contingency Operations implementation specification (Addressable),2026-01-09
+REL-CR-IS-022,REQ-025,SPEC-022,Facility Security Plan implementation specification (Addressable),2026-01-09
+REL-CR-IS-023,REQ-026,SPEC-023,Access Control and Validation Procedures implementation specification (Addressable),2026-01-09
+REL-CR-IS-024,REQ-027,SPEC-024,Maintenance Records implementation specification (Addressable),2026-01-09
+REL-CR-IS-025,REQ-030,SPEC-025,Disposal implementation specification (Required),2026-01-09
+REL-CR-IS-026,REQ-031,SPEC-026,Media Re-use implementation specification (Required),2026-01-09
+REL-CR-IS-027,REQ-032,SPEC-027,Accountability implementation specification (Addressable),2026-01-09
+REL-CR-IS-028,REQ-033,SPEC-028,Data Backup and Storage implementation specification (Addressable),2026-01-09
+REL-CR-IS-029,REQ-034,SPEC-029,Unique User Identification implementation specification (Required),2026-01-09
+REL-CR-IS-030,REQ-035,SPEC-030,Emergency Access Procedure implementation specification (Required),2026-01-09
+REL-CR-IS-031,REQ-036,SPEC-031,Automatic Logoff implementation specification (Addressable),2026-01-09
+REL-CR-IS-032,REQ-037,SPEC-032,Encryption and Decryption implementation specification (Addressable),2026-01-09
+REL-CR-IS-033,REQ-039,SPEC-033,Mechanism to Authenticate ePHI implementation specification (Addressable),2026-01-09
+REL-CR-IS-034,REQ-041,SPEC-034,Integrity Controls implementation specification (Addressable),2026-01-09
+REL-CR-IS-035,REQ-042,SPEC-035,Encryption implementation specification (Addressable),2026-01-09

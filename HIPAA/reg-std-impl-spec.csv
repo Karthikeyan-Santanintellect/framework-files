@@ -1,0 +1,36 @@
+relationship_id,standard_id,spec_id,description,created_date
+REL-RS-IS-001,RS-ADM-001,SPEC-001,Risk Analysis directly under Security Management Process,2026-01-09
+REL-RS-IS-002,RS-ADM-001,SPEC-002,Risk Management directly under Security Management Process,2026-01-09
+REL-RS-IS-003,RS-ADM-001,SPEC-003,Sanction Policy directly under Security Management Process,2026-01-09
+REL-RS-IS-004,RS-ADM-001,SPEC-004,Information System Activity Review directly under Security Management Process,2026-01-09
+REL-RS-IS-005,RS-ADM-003,SPEC-005,Authorization and/or Supervision directly under Workforce Security,2026-01-09
+REL-RS-IS-006,RS-ADM-003,SPEC-006,Workforce Clearance Procedure directly under Workforce Security,2026-01-09
+REL-RS-IS-007,RS-ADM-003,SPEC-007,Termination Procedures directly under Workforce Security,2026-01-09
+REL-RS-IS-008,RS-ADM-004,SPEC-008,Isolating Health Care Clearinghouse Function directly under Information Access Management,2026-01-09
+REL-RS-IS-009,RS-ADM-004,SPEC-009,Access Authorization directly under Information Access Management,2026-01-09
+REL-RS-IS-010,RS-ADM-004,SPEC-010,Access Establishment and Modification directly under Information Access Management,2026-01-09
+REL-RS-IS-011,RS-ADM-005,SPEC-011,Security Reminders directly under Security Awareness and Training,2026-01-09
+REL-RS-IS-012,RS-ADM-005,SPEC-012,Protection from Malicious Software directly under Security Awareness and Training,2026-01-09
+REL-RS-IS-013,RS-ADM-005,SPEC-013,Log-in Monitoring directly under Security Awareness and Training,2026-01-09
+REL-RS-IS-014,RS-ADM-005,SPEC-014,Password Management directly under Security Awareness and Training,2026-01-09
+REL-RS-IS-015,RS-ADM-006,SPEC-015,Response and Reporting directly under Security Incident Procedures,2026-01-09
+REL-RS-IS-016,RS-ADM-007,SPEC-016,Data Backup Plan directly under Contingency Plan,2026-01-09
+REL-RS-IS-017,RS-ADM-007,SPEC-017,Disaster Recovery Plan directly under Contingency Plan,2026-01-09
+REL-RS-IS-018,RS-ADM-007,SPEC-018,Emergency Mode Operation Plan directly under Contingency Plan,2026-01-09
+REL-RS-IS-019,RS-ADM-007,SPEC-019,Testing and Revision Procedure directly under Contingency Plan,2026-01-09
+REL-RS-IS-020,RS-ADM-007,SPEC-020,Applications and Data Criticality Analysis directly under Contingency Plan,2026-01-09
+REL-RS-IS-021,RS-PHY-001,SPEC-021,Contingency Operations directly under Facility Access Controls,2026-01-09
+REL-RS-IS-022,RS-PHY-001,SPEC-022,Facility Security Plan directly under Facility Access Controls,2026-01-09
+REL-RS-IS-023,RS-PHY-001,SPEC-023,Access Control and Validation Procedures directly under Facility Access Controls,2026-01-09
+REL-RS-IS-024,RS-PHY-001,SPEC-024,Maintenance Records directly under Facility Access Controls,2026-01-09
+REL-RS-IS-025,RS-PHY-004,SPEC-025,Disposal directly under Device and Media Controls,2026-01-09
+REL-RS-IS-026,RS-PHY-004,SPEC-026,Media Re-use directly under Device and Media Controls,2026-01-09
+REL-RS-IS-027,RS-PHY-004,SPEC-027,Accountability directly under Device and Media Controls,2026-01-09
+REL-RS-IS-028,RS-PHY-004,SPEC-028,Data Backup and Storage directly under Device and Media Controls,2026-01-09
+REL-RS-IS-029,RS-TEC-001,SPEC-029,Unique User Identification directly under Access Control,2026-01-09
+REL-RS-IS-030,RS-TEC-001,SPEC-030,Emergency Access Procedure directly under Access Control,2026-01-09
+REL-RS-IS-031,RS-TEC-001,SPEC-031,Automatic Logoff directly under Access Control,2026-01-09
+REL-RS-IS-032,RS-TEC-001,SPEC-032,Encryption and Decryption directly under Access Control,2026-01-09
+REL-RS-IS-033,RS-TEC-003,SPEC-033,Mechanism to Authenticate ePHI directly under Integrity,2026-01-09
+REL-RS-IS-034,RS-TEC-005,SPEC-034,Integrity Controls directly under Transmission Security,2026-01-09
+REL-RS-IS-035,RS-TEC-005,SPEC-035,Encryption directly under Transmission Security,2026-01-09

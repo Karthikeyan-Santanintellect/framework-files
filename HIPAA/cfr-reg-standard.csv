@@ -1,0 +1,19 @@
+relationship_id,cfr_section_id,standard_id,description,created_date
+REL-CFR-RS-001,CFR-164-308,RS-ADM-001,Security Management Process standard,2026-01-09
+REL-CFR-RS-002,CFR-164-308,RS-ADM-002,Assigned Security Responsibility standard,2026-01-09
+REL-CFR-RS-003,CFR-164-308,RS-ADM-003,Workforce Security standard,2026-01-09
+REL-CFR-RS-004,CFR-164-308,RS-ADM-004,Information Access Management standard,2026-01-09
+REL-CFR-RS-005,CFR-164-308,RS-ADM-005,Security Awareness and Training standard,2026-01-09
+REL-CFR-RS-006,CFR-164-308,RS-ADM-006,Security Incident Procedures standard,2026-01-09
+REL-CFR-RS-007,CFR-164-308,RS-ADM-007,Contingency Plan standard,2026-01-09
+REL-CFR-RS-008,CFR-164-308,RS-ADM-008,Evaluation standard,2026-01-09
+REL-CFR-RS-009,CFR-164-308,RS-ADM-009,Business Associate Contracts standard,2026-01-09
+REL-CFR-RS-010,CFR-164-310,RS-PHY-001,Facility Access Controls standard,2026-01-09
+REL-CFR-RS-011,CFR-164-310,RS-PHY-002,Workstation Use standard,2026-01-09
+REL-CFR-RS-012,CFR-164-310,RS-PHY-003,Workstation Security standard,2026-01-09
+REL-CFR-RS-013,CFR-164-310,RS-PHY-004,Device and Media Controls standard,2026-01-09
+REL-CFR-RS-014,CFR-164-312,RS-TEC-001,Access Control standard,2026-01-09
+REL-CFR-RS-015,CFR-164-312,RS-TEC-002,Audit Controls standard,2026-01-09
+REL-CFR-RS-016,CFR-164-312,RS-TEC-003,Integrity standard,2026-01-09
+REL-CFR-RS-017,CFR-164-312,RS-TEC-004,Person or Entity Authentication standard,2026-01-09
+REL-CFR-RS-018,CFR-164-312,RS-TEC-005,Transmission Security standard,2026-01-09

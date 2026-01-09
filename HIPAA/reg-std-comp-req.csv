@@ -1,0 +1,43 @@
+relationship_id,standard_id,requirement_id,description,created_date
+REL-RS-CR-001,RS-ADM-001,REQ-001,Risk Analysis requirement for Security Management Process,2026-01-09
+REL-RS-CR-002,RS-ADM-001,REQ-002,Risk Management requirement for Security Management Process,2026-01-09
+REL-RS-CR-003,RS-ADM-001,REQ-003,Sanction Policy requirement for Security Management Process,2026-01-09
+REL-RS-CR-004,RS-ADM-001,REQ-004,Information System Activity Review requirement,2026-01-09
+REL-RS-CR-005,RS-ADM-002,REQ-005,Security Official Assignment requirement,2026-01-09
+REL-RS-CR-006,RS-ADM-003,REQ-006,Authorization and Supervision requirement,2026-01-09
+REL-RS-CR-007,RS-ADM-003,REQ-007,Workforce Clearance Procedure requirement,2026-01-09
+REL-RS-CR-008,RS-ADM-003,REQ-008,Termination Procedures requirement,2026-01-09
+REL-RS-CR-009,RS-ADM-004,REQ-009,Isolating Health Care Clearinghouse Functions requirement,2026-01-09
+REL-RS-CR-010,RS-ADM-004,REQ-010,Access Authorization requirement,2026-01-09
+REL-RS-CR-011,RS-ADM-004,REQ-011,Access Establishment and Modification requirement,2026-01-09
+REL-RS-CR-012,RS-ADM-005,REQ-012,Security Reminders requirement,2026-01-09
+REL-RS-CR-013,RS-ADM-005,REQ-013,Protection from Malicious Software requirement,2026-01-09
+REL-RS-CR-014,RS-ADM-005,REQ-014,Log-in Monitoring requirement,2026-01-09
+REL-RS-CR-015,RS-ADM-005,REQ-015,Password Management requirement,2026-01-09
+REL-RS-CR-016,RS-ADM-006,REQ-016,Response and Reporting requirement for security incidents,2026-01-09
+REL-RS-CR-017,RS-ADM-007,REQ-017,Data Backup Plan requirement,2026-01-09
+REL-RS-CR-018,RS-ADM-007,REQ-018,Disaster Recovery Plan requirement,2026-01-09
+REL-RS-CR-019,RS-ADM-007,REQ-019,Emergency Mode Operation Plan requirement,2026-01-09
+REL-RS-CR-020,RS-ADM-007,REQ-020,Testing and Revision Procedures requirement,2026-01-09
+REL-RS-CR-021,RS-ADM-007,REQ-021,Applications and Data Criticality Analysis requirement,2026-01-09
+REL-RS-CR-022,RS-ADM-008,REQ-022,Periodic Security Evaluation requirement,2026-01-09
+REL-RS-CR-023,RS-ADM-009,REQ-023,Written Contract or Other Arrangement requirement,2026-01-09
+REL-RS-CR-024,RS-PHY-001,REQ-024,Contingency Operations requirement for facility access,2026-01-09
+REL-RS-CR-025,RS-PHY-001,REQ-025,Facility Security Plan requirement,2026-01-09
+REL-RS-CR-026,RS-PHY-001,REQ-026,Access Control and Validation Procedures requirement,2026-01-09
+REL-RS-CR-027,RS-PHY-001,REQ-027,Maintenance Records requirement,2026-01-09
+REL-RS-CR-028,RS-PHY-002,REQ-028,Workstation Use Policies requirement,2026-01-09
+REL-RS-CR-029,RS-PHY-003,REQ-029,Workstation Physical Safeguards requirement,2026-01-09
+REL-RS-CR-030,RS-PHY-004,REQ-030,Disposal requirement for devices and media,2026-01-09
+REL-RS-CR-031,RS-PHY-004,REQ-031,Media Re-use requirement,2026-01-09
+REL-RS-CR-032,RS-PHY-004,REQ-032,Accountability requirement for hardware and media,2026-01-09
+REL-RS-CR-033,RS-PHY-004,REQ-033,Data Backup and Storage requirement,2026-01-09
+REL-RS-CR-034,RS-TEC-001,REQ-034,Unique User Identification requirement,2026-01-09
+REL-RS-CR-035,RS-TEC-001,REQ-035,Emergency Access Procedure requirement,2026-01-09
+REL-RS-CR-036,RS-TEC-001,REQ-036,Automatic Logoff requirement,2026-01-09
+REL-RS-CR-037,RS-TEC-001,REQ-037,Encryption and Decryption requirement,2026-01-09
+REL-RS-CR-038,RS-TEC-002,REQ-038,Audit Control Mechanisms requirement,2026-01-09
+REL-RS-CR-039,RS-TEC-003,REQ-039,Mechanism to Authenticate ePHI requirement,2026-01-09
+REL-RS-CR-040,RS-TEC-004,REQ-040,Authentication Procedures requirement,2026-01-09
+REL-RS-CR-041,RS-TEC-005,REQ-041,Integrity Controls for transmission,2026-01-09
+REL-RS-CR-042,RS-TEC-005,REQ-042,Encryption for transmission,2026-01-09
