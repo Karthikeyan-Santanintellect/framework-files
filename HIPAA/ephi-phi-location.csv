@@ -1,0 +1,13 @@
+relationship_id,ephi_id,location_id,description,created_date
+REL-EPHI-PL-001,EPHI-001,LOC-001,Electronic PHI stored in primary clinical data repository,2026-01-09
+REL-EPHI-PL-002,EPHI-002,LOC-002,Electronic PHI stored in pharmacy management system,2026-01-09
+REL-EPHI-PL-003,EPHI-003,LOC-003,Electronic PHI stored in laboratory information system,2026-01-09
+REL-EPHI-PL-004,EPHI-004,LOC-004,Electronic PHI stored in radiology and imaging system,2026-01-09
+REL-EPHI-PL-005,EPHI-005,LOC-005,Electronic PHI stored in billing and claims system,2026-01-09
+REL-EPHI-PL-006,EPHI-006,LOC-006,Electronic PHI stored in patient registration and demographic system,2026-01-09
+REL-EPHI-PL-007,EPHI-007,LOC-007,Electronic PHI in transit via network transmission,2026-01-09
+REL-EPHI-PL-008,EPHI-008,LOC-008,Electronic PHI stored in backup and recovery systems,2026-01-09
+REL-EPHI-PL-009,EPHI-009,LOC-009,Electronic PHI stored in archive and long-term retention system,2026-01-09
+REL-EPHI-PL-010,EPHI-010,LOC-010,Electronic PHI stored in cloud storage system,2026-01-09
+REL-EPHI-PL-011,EPHI-011,LOC-011,Electronic PHI in portable and mobile devices,2026-01-09
+REL-EPHI-PL-012,EPHI-012,LOC-012,Electronic PHI stored in third-party business associate systems,2026-01-09

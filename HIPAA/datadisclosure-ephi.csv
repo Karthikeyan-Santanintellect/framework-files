@@ -1,0 +1,13 @@
+relationship_id,disclosure_id,ephi_id,description,created_date
+REL-DD-EPHI-001,DISC-001,EPHI-001,Disclosure of electronic medical records to patient upon request,2026-01-09
+REL-DD-EPHI-002,DISC-002,EPHI-002,Disclosure of electronic PHI to other healthcare providers for treatment,2026-01-09
+REL-DD-EPHI-003,DISC-003,EPHI-003,Disclosure of electronic PHI to health plan for payment purposes,2026-01-09
+REL-DD-EPHI-004,DISC-004,EPHI-004,Disclosure of electronic PHI to employer for healthcare operations,2026-01-09
+REL-DD-EPHI-005,DISC-005,EPHI-005,Disclosure of de-identified electronic PHI for research purposes,2026-01-09
+REL-DD-EPHI-006,DISC-006,EPHI-006,Disclosure of electronic PHI to public health authority for disease reporting,2026-01-09
+REL-DD-EPHI-007,DISC-007,EPHI-007,Disclosure of electronic PHI to law enforcement with proper authorization,2026-01-09
+REL-DD-EPHI-008,DISC-008,EPHI-008,Disclosure of electronic PHI in response to subpoena or court order,2026-01-09
+REL-DD-EPHI-009,DISC-009,EPHI-009,Disclosure of electronic PHI to family members in emergency situations,2026-01-09
+REL-DD-EPHI-010,DISC-010,EPHI-010,Disclosure of electronic PHI to business associates for contracted services,2026-01-09
+REL-DD-EPHI-011,DISC-011,EPHI-011,Disclosure of electronic PHI for marketing purposes with authorization,2026-01-09
+REL-DD-EPHI-012,DISC-012,EPHI-012,Disclosure of electronic PHI for funeral arrangements and bereavement,2026-01-09

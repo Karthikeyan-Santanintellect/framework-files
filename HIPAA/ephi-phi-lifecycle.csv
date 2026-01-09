@@ -1,0 +1,13 @@
+relationship_id,ephi_id,lifecycle_id,description,created_date
+REL-EPHI-PLC-001,EPHI-001,PLC-001,Electronic PHI creation in clinical encounter and documentation,2026-01-09
+REL-EPHI-PLC-002,EPHI-002,PLC-002,Electronic PHI receipt from external sources,2026-01-09
+REL-EPHI-PLC-003,EPHI-003,PLC-003,Electronic PHI storage and retention in system repositories,2026-01-09
+REL-EPHI-PLC-004,EPHI-004,PLC-004,Electronic PHI access and use for treatment purposes,2026-01-09
+REL-EPHI-PLC-005,EPHI-005,PLC-005,Electronic PHI modification and amendment by authorized users,2026-01-09
+REL-EPHI-PLC-006,EPHI-006,PLC-006,Electronic PHI disclosure to authorized recipients,2026-01-09
+REL-EPHI-PLC-007,EPHI-007,PLC-007,Electronic PHI transmission in secure and encrypted format,2026-01-09
+REL-EPHI-PLC-008,EPHI-008,PLC-008,Electronic PHI backup and disaster recovery operations,2026-01-09
+REL-EPHI-PLC-009,EPHI-009,PLC-009,Electronic PHI archival and long-term preservation,2026-01-09
+REL-EPHI-PLC-010,EPHI-010,PLC-010,Electronic PHI audit logging and activity tracking,2026-01-09
+REL-EPHI-PLC-011,EPHI-011,PLC-011,Electronic PHI de-identification and anonymization,2026-01-09
+REL-EPHI-PLC-012,EPHI-012,PLC-012,Electronic PHI secure destruction and disposal,2026-01-09

@@ -1,0 +1,13 @@
+relationship_id,dhi_id,ephi_id,deidentification_method,created_date
+REL-DHI-EPHI-001,DHI-001,EPHI-001,Removal of 18 HIPAA identifiers from clinical data,2026-01-09
+REL-DHI-EPHI-002,DHI-002,EPHI-002,Generalization of dates to year only for temporal data,2026-01-09
+REL-DHI-EPHI-003,DHI-003,EPHI-003,Aggregation of small cell sizes to prevent re-identification,2026-01-09
+REL-DHI-EPHI-004,DHI-004,EPHI-004,Suppression of rare values to protect individual identities,2026-01-09
+REL-DHI-EPHI-005,DHI-005,EPHI-005,Perturbation of numerical values for research use,2026-01-09
+REL-DHI-EPHI-006,DHI-006,EPHI-006,Expert determination of de-identification methods used,2026-01-09
+REL-DHI-EPHI-007,DHI-007,EPHI-007,Safe harbor method de-identification with residual risk,2026-01-09
+REL-DHI-EPHI-008,DHI-008,EPHI-008,Code assignment replacing direct identifiers with coded values,2026-01-09
+REL-DHI-EPHI-009,DHI-009,EPHI-009,Re-identification safeguards preventing recombination of data,2026-01-09
+REL-DHI-EPHI-010,DHI-010,EPHI-010,Statistical masking of sensitive research variables,2026-01-09
+REL-DHI-EPHI-011,DHI-011,EPHI-011,Encryption of identifiers with separate secure key storage,2026-01-09
+REL-DHI-EPHI-012,DHI-012,EPHI-012,Differential privacy methods for dataset protection,2026-01-09

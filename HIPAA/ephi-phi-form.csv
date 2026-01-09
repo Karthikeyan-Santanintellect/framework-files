@@ -1,0 +1,13 @@
+relationship_id,ephi_id,form_id,description,created_date
+REL-EPHI-PF-001,EPHI-001,FORM-001,Electronic medical records containing clinical documentation and patient health information,2026-01-09
+REL-EPHI-PF-002,EPHI-002,FORM-002,Electronic pharmacy records containing prescription and medication information,2026-01-09
+REL-EPHI-PF-003,EPHI-003,FORM-003,Electronic laboratory results containing test results and diagnostic data,2026-01-09
+REL-EPHI-PF-004,EPHI-004,FORM-004,Electronic imaging records containing X-ray MRI and ultrasound data,2026-01-09
+REL-EPHI-PF-005,EPHI-005,FORM-005,Electronic insurance claims containing billing and coverage information,2026-01-09
+REL-EPHI-PF-006,EPHI-006,FORM-006,Electronic patient demographics containing registration and identification information,2026-01-09
+REL-EPHI-PF-007,EPHI-007,FORM-007,Electronic mental health records containing psychiatric and behavioral health information,2026-01-09
+REL-EPHI-PF-008,EPHI-008,FORM-008,Electronic vital signs and monitoring data containing patient monitoring information,2026-01-09
+REL-EPHI-PF-009,EPHI-009,FORM-009,Electronic surgical records containing operative reports and anesthesia records,2026-01-09
+REL-EPHI-PF-010,EPHI-010,FORM-010,Electronic allergy and adverse reaction records containing sensitivity information,2026-01-09
+REL-EPHI-PF-011,EPHI-011,FORM-011,Electronic immunization records containing vaccine and immunization history,2026-01-09
+REL-EPHI-PF-012,EPHI-012,FORM-012,Electronic treatment authorization forms containing approval and authorization data,2026-01-09

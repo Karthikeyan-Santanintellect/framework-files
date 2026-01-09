@@ -1,0 +1,13 @@
+relationship_id,principle_id,ephi_id,description,created_date
+REL-MN-EPHI-001,PRIN-001,EPHI-001,Minimum necessary principle applied to treatment record access,2026-01-09
+REL-MN-EPHI-002,PRIN-002,EPHI-002,Minimum necessary principle applied to payment processing data,2026-01-09
+REL-MN-EPHI-003,PRIN-003,EPHI-003,Minimum necessary principle applied to healthcare operations data,2026-01-09
+REL-MN-EPHI-004,PRIN-004,EPHI-004,Minimum necessary principle applied to research data requests,2026-01-09
+REL-MN-EPHI-005,PRIN-005,EPHI-005,Minimum necessary principle applied to de-identification processes,2026-01-09
+REL-MN-EPHI-006,PRIN-006,EPHI-006,Minimum necessary principle applied to disclosure determinations,2026-01-09
+REL-MN-EPHI-007,PRIN-007,EPHI-007,Minimum necessary principle applied to workforce access control,2026-01-09
+REL-MN-EPHI-008,PRIN-008,EPHI-008,Minimum necessary principle applied to business associate disclosures,2026-01-09
+REL-MN-EPHI-009,PRIN-009,EPHI-009,Minimum necessary principle applied to marketing communications,2026-01-09
+REL-MN-EPHI-010,PRIN-010,EPHI-010,Minimum necessary principle applied to public health reporting,2026-01-09
+REL-MN-EPHI-011,PRIN-011,EPHI-011,Minimum necessary principle applied to law enforcement disclosure,2026-01-09
+REL-MN-EPHI-012,PRIN-012,EPHI-012,Minimum necessary principle applied to judicial proceedings,2026-01-09

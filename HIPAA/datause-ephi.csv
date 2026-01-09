@@ -1,0 +1,13 @@
+relationship_id,use_id,ephi_id,description,created_date
+REL-DU-EPHI-001,USE-001,EPHI-001,Treatment use of electronic medical records for patient care delivery,2026-01-09
+REL-DU-EPHI-002,USE-002,EPHI-002,Payment use of electronic PHI for billing and insurance claims processing,2026-01-09
+REL-DU-EPHI-003,USE-003,EPHI-003,Healthcare operations use of electronic PHI for management and administration,2026-01-09
+REL-DU-EPHI-004,USE-004,EPHI-004,Quality improvement use of electronic PHI for outcome measurement and analysis,2026-01-09
+REL-DU-EPHI-005,USE-005,EPHI-005,Research use of de-identified electronic PHI for scientific study,2026-01-09
+REL-DU-EPHI-006,USE-006,EPHI-006,Public health use of electronic PHI for disease surveillance and reporting,2026-01-09
+REL-DU-EPHI-007,USE-007,EPHI-007,Law enforcement use of electronic PHI for criminal investigation (authorized),2026-01-09
+REL-DU-EPHI-008,USE-008,EPHI-008,Judicial use of electronic PHI for court proceedings and legal matters,2026-01-09
+REL-DU-EPHI-009,USE-009,EPHI-009,Military use of electronic PHI for armed forces medical support,2026-01-09
+REL-DU-EPHI-010,USE-010,EPHI-010,Marketing use of electronic PHI for patient communication and outreach,2026-01-09
+REL-DU-EPHI-011,USE-011,EPHI-011,Directory use of electronic PHI for hospital directory and patient location,2026-01-09
+REL-DU-EPHI-012,USE-012,EPHI-012,Disaster relief use of electronic PHI for emergency response coordination,2026-01-09
