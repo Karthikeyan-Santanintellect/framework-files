@@ -1,0 +1,13 @@
+relationship_id,right_id,standard_id,description,created_date
+REL-IR-RS-001,RIGHT-001,RS-PRIV-001,Right to access is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-002,RIGHT-002,RS-PRIV-002,Right to amendment is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-003,RIGHT-003,RS-PRIV-003,Right to accounting is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-004,RIGHT-004,RS-PRIV-004,Right to notice is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-005,RIGHT-005,RS-PRIV-005,Right to restrict use is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-006,RIGHT-006,RS-PRIV-006,Right to confidential communication is governed by standard,2026-01-09
+REL-IR-RS-007,RIGHT-007,RS-PRIV-007,Right to opt-out is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-008,RIGHT-008,RS-PRIV-008,Right to object is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-009,RIGHT-009,RS-PRIV-009,Right to portability is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-010,RIGHT-010,RS-PRIV-010,Right to erasure is governed by privacy regulatory standard,2026-01-09
+REL-IR-RS-011,RIGHT-011,RS-PRIV-011,Right to rectification is governed by privacy standard,2026-01-09
+REL-IR-RS-012,RIGHT-012,RS-PRIV-012,Right to file complaint is governed by privacy standard,2026-01-09

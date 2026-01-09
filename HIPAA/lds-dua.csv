@@ -1,0 +1,13 @@
+relationship_id,lds_id,agreement_id,description,created_date
+REL-LDS-DUA-001,LDS-001,DUA-001,Limited dataset for research requires data use agreement,2026-01-09
+REL-LDS-DUA-002,LDS-002,DUA-002,Limited dataset for public health requires data use agreement,2026-01-09
+REL-LDS-DUA-003,LDS-003,DUA-003,Limited dataset for quality improvement requires data use agreement,2026-01-09
+REL-LDS-DUA-004,LDS-004,DUA-004,Limited dataset for healthcare operations requires data use agreement,2026-01-09
+REL-LDS-DUA-005,LDS-005,DUA-005,Limited dataset for academic research requires data use agreement,2026-01-09
+REL-LDS-DUA-006,LDS-006,DUA-006,Limited dataset for epidemiological study requires data use agreement,2026-01-09
+REL-LDS-DUA-007,LDS-007,DUA-007,Limited dataset for clinical trial requires data use agreement,2026-01-09
+REL-LDS-DUA-008,LDS-008,DUA-008,Limited dataset for disease registry requires data use agreement,2026-01-09
+REL-LDS-DUA-009,LDS-009,DUA-009,Limited dataset for biomedical research requires data use agreement,2026-01-09
+REL-LDS-DUA-010,LDS-010,DUA-010,Limited dataset for outcomes research requires data use agreement,2026-01-09
+REL-LDS-DUA-011,LDS-011,DUA-011,Limited dataset for health services research requires data use agreement,2026-01-09
+REL-LDS-DUA-012,LDS-012,DUA-012,Limited dataset for comparative effectiveness research requires data use agreement,2026-01-09

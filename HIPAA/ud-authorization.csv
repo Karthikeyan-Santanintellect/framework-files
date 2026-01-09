@@ -1,0 +1,13 @@
+relationship_id,disclosure_id,authorization_id,description,created_date
+REL-UD-AUTH-001,DISC-001,AUTH-001,Use and disclosure for treatment requires patient authorization,2026-01-09
+REL-UD-AUTH-002,DISC-002,AUTH-002,Use and disclosure for payment requires patient authorization,2026-01-09
+REL-UD-AUTH-003,DISC-003,AUTH-003,Use and disclosure for healthcare operations requires written authorization,2026-01-09
+REL-UD-AUTH-004,DISC-004,AUTH-004,Use and disclosure for research requires specific authorization,2026-01-09
+REL-UD-AUTH-005,DISC-005,AUTH-005,Use and disclosure for marketing requires specific authorization,2026-01-09
+REL-UD-AUTH-006,DISC-006,AUTH-006,Use and disclosure for psychotherapy notes requires special authorization,2026-01-09
+REL-UD-AUTH-007,DISC-007,AUTH-007,Use and disclosure for substance abuse records requires special authorization,2026-01-09
+REL-UD-AUTH-008,DISC-008,AUTH-008,Use and disclosure for HIV information requires separate authorization,2026-01-09
+REL-UD-AUTH-009,DISC-009,AUTH-009,Use and disclosure for genetic information requires authorization,2026-01-09
+REL-UD-AUTH-010,DISC-010,AUTH-010,Use and disclosure to family requires authorization,2026-01-09
+REL-UD-AUTH-011,DISC-011,AUTH-011,Use and disclosure for third parties requires authorization,2026-01-09
+REL-UD-AUTH-012,DISC-012,AUTH-012,Use and disclosure for fundraising requires authorization,2026-01-09

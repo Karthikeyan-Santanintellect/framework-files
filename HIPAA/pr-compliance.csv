@@ -1,0 +1,13 @@
+relationship_id,request_id,requirement_id,description,created_date
+REL-PR-CR-001,REQ-001,REQ-ACC,Access request requires compliance with access requirements,2026-01-09
+REL-PR-CR-002,REQ-002,REQ-AMD,Amendment request requires compliance with amendment requirements,2026-01-09
+REL-PR-CR-003,REQ-003,REQ-ACC-DISC,Accounting request requires compliance with disclosure accounting,2026-01-09
+REL-PR-CR-004,REQ-004,REQ-REST,Restriction request requires compliance with restriction policy,2026-01-09
+REL-PR-CR-005,REQ-005,REQ-CONF,Confidential communication requires compliance with communication standards,2026-01-09
+REL-PR-CR-006,REQ-006,REQ-OPT,Marketing opt-out requires compliance with marketing restrictions,2026-01-09
+REL-PR-CR-007,REQ-007,REQ-BREACH,Breach notification requires compliance with notification rules,2026-01-09
+REL-PR-CR-008,REQ-008,REQ-CORRECT,Correction request requires compliance with correction procedures,2026-01-09
+REL-PR-CR-009,REQ-009,REQ-ELEC,Electronic copy request requires compliance with format standards,2026-01-09
+REL-PR-CR-010,REQ-010,REQ-TRANSFER,Transfer request requires compliance with portability requirements,2026-01-09
+REL-PR-CR-011,REQ-011,REQ-PIA,Privacy assessment requires compliance with assessment procedures,2026-01-09
+REL-PR-CR-012,REQ-012,REQ-INVEST,Complaint requires compliance with investigation procedures,2026-01-09

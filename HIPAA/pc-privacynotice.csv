@@ -1,0 +1,13 @@
+relationship_id,complaint_id,notice_id,description,created_date
+REL-PC-PN-001,COMP-001,NOTICE-001,Privacy complaint requires privacy notice review and response,2026-01-09
+REL-PC-PN-002,COMP-002,NOTICE-002,Access denial complaint requires privacy notice verification,2026-01-09
+REL-PC-PN-003,COMP-003,NOTICE-003,Unauthorized disclosure complaint requires notice investigation,2026-01-09
+REL-PC-PN-004,COMP-004,NOTICE-004,Amendment request complaint requires notice compliance review,2026-01-09
+REL-PC-PN-005,COMP-005,NOTICE-005,Breach notification complaint requires notice adequacy assessment,2026-01-09
+REL-PC-PN-006,COMP-006,NOTICE-006,Marketing complaint requires notice and opt-out review,2026-01-09
+REL-PC-PN-007,COMP-007,NOTICE-007,Accounting complaint requires disclosure accounting notice review,2026-01-09
+REL-PC-PN-008,COMP-008,NOTICE-008,Restriction complaint requires notice implementation check,2026-01-09
+REL-PC-PN-009,COMP-009,NOTICE-009,Communication complaint requires confidential communication notice,2026-01-09
+REL-PC-PN-010,COMP-010,NOTICE-010,Business associate complaint requires BA notice review,2026-01-09
+REL-PC-PN-011,COMP-011,NOTICE-011,Patient rights complaint requires rights notice verification,2026-01-09
+REL-PC-PN-012,COMP-012,NOTICE-012,Policy change complaint requires notice update assessment,2026-01-09

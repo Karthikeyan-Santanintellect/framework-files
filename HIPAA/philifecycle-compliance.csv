@@ -1,0 +1,13 @@
+relationship_id,lifecycle_id,requirement_id,description,created_date
+REL-PLC-CR-001,PLC-001,REQ-001,PHI creation requires documentation and access control compliance,2026-01-09
+REL-PLC-CR-002,PLC-002,REQ-002,PHI receipt requires verification and logging compliance,2026-01-09
+REL-PLC-CR-003,PLC-003,REQ-003,PHI storage requires encryption and backup compliance,2026-01-09
+REL-PLC-CR-004,PLC-004,REQ-004,PHI access requires authorization and audit logging compliance,2026-01-09
+REL-PLC-CR-005,PLC-005,REQ-005,PHI modification requires integrity controls and documentation compliance,2026-01-09
+REL-PLC-CR-006,PLC-006,REQ-006,PHI disclosure requires authorization and accounting compliance,2026-01-09
+REL-PLC-CR-007,PLC-007,REQ-007,PHI transmission requires encryption and secure channel compliance,2026-01-09
+REL-PLC-CR-008,PLC-008,REQ-008,PHI backup requires testing and recovery procedures compliance,2026-01-09
+REL-PLC-CR-009,PLC-009,REQ-009,PHI archival requires retention schedule and access controls compliance,2026-01-09
+REL-PLC-CR-010,PLC-010,REQ-010,PHI audit logging requires system monitoring and review compliance,2026-01-09
+REL-PLC-CR-011,PLC-011,REQ-011,PHI de-identification requires safe harbor or expert determination compliance,2026-01-09
+REL-PLC-CR-012,PLC-012,REQ-012,PHI destruction requires secure disposal and certification compliance,2026-01-09

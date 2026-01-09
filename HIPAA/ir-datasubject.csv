@@ -1,0 +1,13 @@
+relationship_id,right_id,subject_id,description,created_date
+REL-IR-DS-001,RIGHT-001,SUBJ-001,Right to access is exercised by data subject (patient),2026-01-09
+REL-IR-DS-002,RIGHT-002,SUBJ-002,Right to amendment is exercised by data subject (patient),2026-01-09
+REL-IR-DS-003,RIGHT-003,SUBJ-003,Right to accounting of disclosures is exercised by data subject,2026-01-09
+REL-IR-DS-004,RIGHT-004,SUBJ-004,Right to receive notice is exercised by data subject,2026-01-09
+REL-IR-DS-005,RIGHT-005,SUBJ-005,Right to restrict use and disclosure is exercised by data subject,2026-01-09
+REL-IR-DS-006,RIGHT-006,SUBJ-006,Right to confidential communication is exercised by data subject,2026-01-09
+REL-IR-DS-007,RIGHT-007,SUBJ-007,Right to opt-out of marketing is exercised by data subject,2026-01-09
+REL-IR-DS-008,RIGHT-008,SUBJ-008,Right to object to processing is exercised by data subject,2026-01-09
+REL-IR-DS-009,RIGHT-009,SUBJ-009,Right to portability is exercised by data subject,2026-01-09
+REL-IR-DS-010,RIGHT-010,SUBJ-010,Right to be forgotten is exercised by data subject,2026-01-09
+REL-IR-DS-011,RIGHT-011,SUBJ-011,Right to rectification is exercised by data subject,2026-01-09
+REL-IR-DS-012,RIGHT-012,SUBJ-012,Right to file complaint is exercised by data subject,2026-01-09

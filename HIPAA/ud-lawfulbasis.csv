@@ -1,0 +1,13 @@
+relationship_id,disclosure_id,basis_id,description,created_date
+REL-UD-LB-001,DISC-001,BASIS-001,Treatment use and disclosure requires lawful basis of medical necessity,2026-01-09
+REL-UD-LB-002,DISC-002,BASIS-002,Payment use and disclosure requires lawful basis of business necessity,2026-01-09
+REL-UD-LB-003,DISC-003,BASIS-003,Healthcare operations requires lawful basis of operational necessity,2026-01-09
+REL-UD-LB-004,DISC-004,BASIS-004,Research use requires lawful basis of IRB approval,2026-01-09
+REL-UD-LB-005,DISC-005,BASIS-005,Public health reporting requires lawful basis of legal requirement,2026-01-09
+REL-UD-LB-006,DISC-006,BASIS-006,Law enforcement requires lawful basis of legal process,2026-01-09
+REL-UD-LB-007,DISC-007,BASIS-007,Court order requires lawful basis of judicial mandate,2026-01-09
+REL-UD-LB-008,DISC-008,BASIS-008,Family notification requires lawful basis of emergency necessity,2026-01-09
+REL-UD-LB-009,DISC-009,BASIS-009,Abuse reporting requires lawful basis of legal obligation,2026-01-09
+REL-UD-LB-010,DISC-010,BASIS-010,Marketing requires lawful basis of opt-out consent,2026-01-09
+REL-UD-LB-011,DISC-011,BASIS-011,Fundraising requires lawful basis of patient authorization,2026-01-09
+REL-UD-LB-012,DISC-012,BASIS-012,Directory requires lawful basis of patient notification,2026-01-09

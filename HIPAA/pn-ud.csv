@@ -1,0 +1,13 @@
+relationship_id,notice_id,disclosure_id,description,created_date
+REL-PN-UD-001,NOTICE-001,DISC-001,Privacy notice discloses treatment use and sharing practices,2026-01-09
+REL-PN-UD-002,NOTICE-002,DISC-002,Privacy notice discloses payment use and sharing practices,2026-01-09
+REL-PN-UD-003,NOTICE-003,DISC-003,Privacy notice discloses healthcare operations use practices,2026-01-09
+REL-PN-UD-004,NOTICE-004,DISC-004,Privacy notice discloses research use and sharing practices,2026-01-09
+REL-PN-UD-005,NOTICE-005,DISC-005,Privacy notice discloses public health disclosure practices,2026-01-09
+REL-PN-UD-006,NOTICE-006,DISC-006,Privacy notice discloses law enforcement disclosure practices,2026-01-09
+REL-PN-UD-007,NOTICE-007,DISC-007,Privacy notice discloses marketing practices and opt-out,2026-01-09
+REL-PN-UD-008,NOTICE-008,DISC-008,Privacy notice discloses family notification practices,2026-01-09
+REL-PN-UD-009,NOTICE-009,DISC-009,Privacy notice discloses fundraising practices,2026-01-09
+REL-PN-UD-010,NOTICE-010,DISC-010,Privacy notice discloses directory practices,2026-01-09
+REL-PN-UD-011,NOTICE-011,DISC-011,Privacy notice discloses business associate sharing,2026-01-09
+REL-PN-UD-012,NOTICE-012,DISC-012,Privacy notice discloses federal agency disclosures,2026-01-09

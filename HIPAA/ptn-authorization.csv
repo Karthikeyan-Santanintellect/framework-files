@@ -1,0 +1,13 @@
+relationship_id,ptn_id,authorization_id,description,created_date
+REL-PTN-AUTH-001,PTN-001,AUTH-PSY-001,Psychotherapy notes access requires special authorization,2026-01-09
+REL-PTN-AUTH-002,PTN-002,AUTH-PSY-002,Psychotherapy notes disclosure requires explicit patient authorization,2026-01-09
+REL-PTN-AUTH-003,PTN-003,AUTH-PSY-003,Psychotherapy notes research use requires specific authorization,2026-01-09
+REL-PTN-AUTH-004,PTN-004,AUTH-PSY-004,Psychotherapy notes to third party requires written authorization,2026-01-09
+REL-PTN-AUTH-005,PTN-005,AUTH-PSY-005,Psychotherapy notes for insurance requires authorization,2026-01-09
+REL-PTN-AUTH-006,PTN-006,AUTH-PSY-006,Psychotherapy notes transfer requires express authorization,2026-01-09
+REL-PTN-AUTH-007,PTN-007,AUTH-PSY-007,Psychotherapy notes family sharing requires authorization,2026-01-09
+REL-PTN-AUTH-008,PTN-008,AUTH-PSY-008,Psychotherapy notes legal proceedings requires authorization,2026-01-09
+REL-PTN-AUTH-009,PTN-009,AUTH-PSY-009,Psychotherapy notes amendment requires authorization,2026-01-09
+REL-PTN-AUTH-010,PTN-010,AUTH-PSY-010,Psychotherapy notes destruction requires authorization,2026-01-09
+REL-PTN-AUTH-011,PTN-011,AUTH-PSY-011,Psychotherapy notes accounting requires authorization,2026-01-09
+REL-PTN-AUTH-012,PTN-012,AUTH-PSY-012,Psychotherapy notes restriction requires authorization,2026-01-09

@@ -1,0 +1,13 @@
+relationship_id,agreement_id,use_id,description,created_date
+REL-DUA-DU-001,DUA-001,USE-001,Data use agreement permits treatment use of limited dataset,2026-01-09
+REL-DUA-DU-002,DUA-002,USE-002,Data use agreement permits payment use of limited dataset,2026-01-09
+REL-DUA-DU-003,DUA-003,USE-003,Data use agreement permits healthcare operations use,2026-01-09
+REL-DUA-DU-004,DUA-004,USE-004,Data use agreement permits quality improvement use,2026-01-09
+REL-DUA-DU-005,DUA-005,USE-005,Data use agreement permits research use of limited dataset,2026-01-09
+REL-DUA-DU-006,DUA-006,USE-006,Data use agreement permits public health use,2026-01-09
+REL-DUA-DU-007,DUA-007,USE-007,Data use agreement permits law enforcement use,2026-01-09
+REL-DUA-DU-008,DUA-008,USE-008,Data use agreement permits judicial use,2026-01-09
+REL-DUA-DU-009,DUA-009,USE-009,Data use agreement permits medical necessity use,2026-01-09
+REL-DUA-DU-010,DUA-010,USE-010,Data use agreement permits marketing use,2026-01-09
+REL-DUA-DU-011,DUA-011,USE-011,Data use agreement permits directory use,2026-01-09
+REL-DUA-DU-012,DUA-012,USE-012,Data use agreement permits disaster relief use,2026-01-09

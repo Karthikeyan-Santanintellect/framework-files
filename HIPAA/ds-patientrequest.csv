@@ -1,0 +1,13 @@
+relationship_id,subject_id,request_id,description,created_date
+REL-DS-PR-001,SUBJ-001,REQ-001,Data subject submits request for access to medical records,2026-01-09
+REL-DS-PR-002,SUBJ-002,REQ-002,Data subject submits request for amendment of records,2026-01-09
+REL-DS-PR-003,SUBJ-003,REQ-003,Data subject submits request for accounting of disclosures,2026-01-09
+REL-DS-PR-004,SUBJ-004,REQ-004,Data subject submits request for restriction of use,2026-01-09
+REL-DS-PR-005,SUBJ-005,REQ-005,Data subject submits request for confidential communication,2026-01-09
+REL-DS-PR-006,SUBJ-006,REQ-006,Data subject submits request to opt-out of marketing,2026-01-09
+REL-DS-PR-007,SUBJ-007,REQ-007,Data subject submits request for breach notification,2026-01-09
+REL-DS-PR-008,SUBJ-008,REQ-008,Data subject submits request for correction of information,2026-01-09
+REL-DS-PR-009,SUBJ-009,REQ-009,Data subject submits request for electronic copy of records,2026-01-09
+REL-DS-PR-010,SUBJ-010,REQ-010,Data subject submits request to transfer records,2026-01-09
+REL-DS-PR-011,SUBJ-011,REQ-011,Data subject submits request for privacy impact assessment,2026-01-09
+REL-DS-PR-012,SUBJ-012,REQ-012,Data subject submits complaint about privacy violation,2026-01-09
