@@ -1,10 +1,6 @@
 
 
-#Industry standard and regulation
-from calendar import c
-from pydoc import cli
-
-
+#industry_standard_and_regulation
 industry_standard_and_regulation = """
 MERGE(i:IndustryStandardAndRegulation{industry_standard_regulation_id:'HIPAA 1996'})
 ON CREATE SET
@@ -157,7 +153,7 @@ ON CREATE SET
 """
 
 # 2.7 Load Data Uses
-data_users ="""
+data_uses ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (du:DataUse {use_id: row.use_id, industry_standard_regulation_id: 'HIPAA 1996'})
 ON CREATE SET
@@ -853,29 +849,30 @@ MERGE (i)-[:INDUSTRY_STANDARD_REGULATION_CONTAINS_STANDARDS]->(s);
 """
 
 
-# UPDATED: Scoped MATCH to framework_id for precision.
-hipaa_parent_child_rel = """
+
+
+hipaa_standard_subcategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.parent_id IS NOT NULL AND row.parent_id <> ''
-MATCH (child:Standard {standard_id: row.id, industry_standard_regulation_id: 'HIPAA 1996'})
-MATCH (parent:Standard {standard_id: row.parent_id, industry_standard_regulation_id: 'HIPAA 1996'})
-MERGE (parent)-[:HIPAA_PARENT_CHILD_]->(child);
+MATCH (cfr:CFRCitation {citation: row.cfr_citation, industry_standard_regulation_id: 'HIPAA 1996'})
+MATCH (CSF:NISTCSFSubcategory {subcategory_id: row.nist_subcategory_id, 
+       IS_frameworks_standard_id: 'NIST_CSF_2.0'})
+MERGE (cfr)-[rel:ALIGNS_WITH_NIST_CSF_SUBCATEGORY {relationship_id: row.relationship_id}]->(CSF)
+ON CREATE SET
+    rel.hipaa_title = row.hipaa_title,
+    rel.mapping_type = row.mapping_type,
+    rel.confidence = row.confidence,
+    rel.alignment_level = row.alignment_level,
+    rel.mapping_rationale = row.mapping_rationale,
+    rel.nist_function = row.nist_function,
+    rel.nist_category = row.nist_category,
+    rel.source_doc = row.source_doc,
+    rel.source_section = row.source_section,
+    rel.source_page = row.source_page,
+    rel.created_date = row.created_date,
+    rel.created_by = row.created_by;
 """
 
-hipaa_standard_mapping_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:Standard {industry_standard_regulation_id: 'HIPAA 1996', standard_id: row.source_standard_id})
-MATCH (m:Mapping {mapping_id: row.target_mapping_id})
-MERGE (s)-[:STANDARD_MAPS_TO_MAPPING {relationship_type: row.relationship_type, mapping_type: row.mapping_type, confidence: row.confidence}]->(m);
-"""
 
-mapping_subcategory_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (m:Mapping {mapping_id: row.source_mapping_id})
-MATCH (sc:Subcategory {id: row.target_subcategory_id, 
-       IS_framework_standard_id: 'NIST_CSF_2.0'})
-MERGE (m)-[:MAPPING_TARGETS_SUB_CATEGORY]->(sc);
-"""
 
 #IndustryStandardAndRegulation → CFRSection
 industry_standard_and_regulation_cfr_section = """
@@ -1093,7 +1090,7 @@ ON CREATE SET
     rel.created_date = row.created_date;
 """
 #PatientRequest → ComplianceRequirement
-use_and_disclosure_lawful_basis = """
+patient_requests_compliance_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pr:PatientRequest {request_id: row.request_id})
 MATCH (cr:ComplianceRequirement {requirement_id: row.requirement_id})
@@ -1609,211 +1606,211 @@ logger.info("Loading graph structure...")
 client.query(industry_standard_and_regulation)
 time.sleep(2)
 
-client.query(cfr_sections)
+client.query(cfr_sections.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cfr_sections.csv'))
 time.sleep(2)
 
-client.query(regulatory_standards)
+client.query(regulatory_standards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/regulatory_standards.csv"))
 time.sleep(2)
 
-client.query(Compliance_Requirements)
+client.query(Compliance_Requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/compliance_requirements.csv"))
 time.sleep(2)
 
-client.query(Implementation_Specifications)
+client.query(Implementation_Specifications.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/implementation_specs.csv"))
 time.sleep(2)
 
-client.query(Electronic_PHI)
+client.query(Electronic_PHI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/electronic_phi.csv"))
 time.sleep(2)
 
-client.query(PHI_Categories)
+client.query(PHI_Categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/phi_categories.csv"))
 time.sleep(2)
 
-client.query(PHI_Forms)
+client.query(PHI_Forms.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/phi_forms.csv"))
 time.sleep(2)
 
-client.query(PHI_Locations)
+client.query(PHI_Locations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/phi_locations.csv"))
 time.sleep(2)
 
-client.query(sensitive_data_elements)
+client.query(PHI_Lifecycle.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/phi_lifecycle.csv"))
 time.sleep(2)
 
-client.query(PHI_Lifecycle)
+client.query(sensitive_data_elements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sensitive_data_elements.csv"))
 time.sleep(2)
 
-client.query(data_users)
+client.query(data_uses.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/data_uses.csv"))
 time.sleep(2)
 
-client.query(data_disclosure)
+client.query(data_disclosure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/data_disclosures.csv"))
 time.sleep(2)
 
-client.query(minimum_necessary)
+client.query(minimum_necessary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/minimum_necessary.csv"))
 time.sleep(2)
 
-client.query(de_indentified_health_information)
+client.query(de_indentified_health_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/deidentified_health_info.csv"))
 time.sleep(2)
 
-client.query(limited_data_set)
+client.query(limited_data_set.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/limited_data_set.csv"))
 time.sleep(2)
 
-client.query(data_use_agreement)
+client.query(data_use_agreement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/data_use_agreement.csv"))
 time.sleep(2)
 
 
-client.query(individual_rights)
+client.query(individual_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/individual_rights.csv"))
 time.sleep(2)
 
-client.query(data_subjects)
+client.query(data_subjects.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/data_subjects.csv"))
 time.sleep(2)
 
-client.query(use_and_disclosure)
+client.query(use_and_disclosure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/use_and_disclosure.csv"))
 time.sleep(2)
 
-client.query(authorizations)
+client.query(authorizations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/authorizations.csv"))
 time.sleep(2)
 
-client.query(lawful_basis)
+client.query(lawful_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/lawful_basis.csv"))
 time.sleep(2)
 
-client.query(patient_requests)
+client.query(patient_requests.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/patient_requests.csv"))
 time.sleep(2)
 
-client.query(privacy_complaints)
+client.query(privacy_complaints.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/privacy_complaints.csv"))
 time.sleep(2)
 
-client.query(privacy_notices)
+client.query(privacy_notices.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/privacy_notices.csv"))
 time.sleep(2)
 
-client.query(psychotherapy_notes)
+client.query(psychotherapy_notes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/psychotherapy_notes.csv"))
 time.sleep(2)
 
-client.query(marketing_authorization)
+client.query(marketing_authorization.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/marketing_authorizations.csv"))
 time.sleep(2)
 
-client.query(security_standards)
+client.query(security_standards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/security_standards.csv"))
 time.sleep(2)
 
-client.query(administrative_safeguards)
+client.query(administrative_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/administrative_safeguards.csv"))
 time.sleep(2)
 
-client.query(physical_safeguards)
+client.query(physical_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/physical_safeguards.csv"))
 time.sleep(2)
 
-client.query(technical_safeguards)
+client.query(technical_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/technical_safeguards.csv"))
 time.sleep(2)
 
-client.query(security_measures)
+client.query(security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/security_measures.csv"))
 time.sleep(2)
 
-client.query(risk_assessments)
+client.query(risk_assessments.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/risk_assessment.csv"))
 time.sleep(2)
 
-client.query(security_incidents)
+client.query(security_incidents.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/security_incidents.csv"))
 time.sleep(2)
 
-client.query(Incident_Response)
+client.query(Incident_Response.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/incident_response.csv"))
 time.sleep(2)
 
-client.query(security_vulnerabilities)
+client.query(security_vulnerabilities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/security_vulnerabilities.csv"))
 time.sleep(2)
 
-client.query(security_risks)
+
+client.query(security_risks.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/security-risks.csv"))
 time.sleep(2)
 
-client.query(contingency_planning)
+client.query(contingency_planning.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/contingency-planning.csv"))
 time.sleep(2)
 
-client.query(workforce_security)
+client.query(workforce_security.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/workforce-security.csv"))
 time.sleep(2)
 
-client.query(security_breach)
+
+client.query(security_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/security-breach.csv"))
 time.sleep(2)
 
-client.query(breach_risk_assessment)
+client.query(breach_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-risk-assess.csv"))
 time.sleep(2)
+
 
-client.query(breach_notification_process)
+client.query(breach_notification_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-notif-process.csv"))
 time.sleep(2)
 
-client.query(affected_individuals)
+client.query(affected_individuals.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/affected-individuals.csv"))
 time.sleep(2)
 
-client.query(notification_receipients)
+client.query(notification_receipients.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/notif-recipients.csv"))
 time.sleep(2)
 
-client.query(notfication_content)
+client.query(notfication_content.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/notif-content.csv"))
 time.sleep(2)
 
-client.query(breach_timeline)
+client.query(breach_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-timeline.csv"))
 time.sleep(2)
 
-client.query(mitigation_services)
+client.query(mitigation_services.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/mitigation-services.csv"))
 time.sleep(2)
 
-client.query(media_notifications)
+client.query(media_notifications.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/media-notifications.csv"))
 time.sleep(2)
 
-client.query(Covered_Entities)
+client.query(Covered_Entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/covered-entities.csv"))
 time.sleep(2)
 
-client.query(business_associates)
+client.query(business_associates.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/business-associates.csv"))
 time.sleep(2)
 
-client.query(Subcontractors)
+client.query(Subcontractors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/subcontractors.csv"))
 time.sleep(2)
 
-client.query(Business_Associate_Agreements)
+client.query(Business_Associate_Agreements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/business-associates.csv"))
 time.sleep(2)
 
-client.query(Hybrid_Entities)
+client.query(Hybrid_Entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hybrid-entities.csv"))
 time.sleep(2)
 
-client.query(OHCA)
+client.query(OHCA.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ohca.csv"))
 time.sleep(2)
 
-client.query(Healthcare_Providers)
+client.query(Healthcare_Providers.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/healthcare-providers.csv"))
 time.sleep(2)
 
-client.query(Health_Plans)
+client.query(Health_Plans.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/health-plans.csv"))
 time.sleep(2)
 
-client.query(Workforce_Members)
+client.query(Workforce_Members.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/workforce-members.csv"))
 time.sleep(2)
 
-client.query(Compliance_Programs)
+client.query(Compliance_Programs.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/compliance-programs.csv"))
 time.sleep(2)
 
-client.query(Compliance_Audits)
+client.query(Compliance_Audits.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/compliance-audits.csv"))
 time.sleep(2)
 
-client.query(Compliance_Violations)
+client.query(Compliance_Violations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/compliance-violations.csv"))
 time.sleep(2)
 
-client.query(Violation_Severities)
+client.query(Violation_Severities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/violation-severities.csv"))
 time.sleep(2)
 
-client.query(OCR_Investigations)
+client.query(OCR_Investigations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ocr-investigations.csv"))
 time.sleep(2)
 
-client.query(Enforcement_Actions)
+client.query(Enforcement_Actions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/enforcement-actions.csv"))
 time.sleep(2)
 
-client.query(Civil_Penalties)
+client.query(Civil_Penalties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/civil-penalties.csv"))
 time.sleep(2)
 
-client.query(Criminal_Penalties)
+client.query(Criminal_Penalties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/criminal-penalties.csv"))
 time.sleep(2)
 
-client.query(Corrective_Action_Plans)
+client.query(Corrective_Action_Plans.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/corrective-action-plans.csv"))
 time.sleep(2)
 
-client.query(Regulators)
+client.query(Regulators.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/regulators.csv"))
 time.sleep(2)
 
 #Relationships
 
 client.query(industry_standard_and_regulations_hipaa_standards_rel)
-time.sleep(2)
-
-client.query(hipaa_parent_child_rel)
 time.sleep(2)
 
 client.query(hipaa_standard_mapping_rel)
@@ -1822,53 +1819,195 @@ time.sleep(2)
 client.query(mapping_subcategory_rel)
 time.sleep(2)
 
-client.query(industry_standard_and_regulation_cfr_section)
+client.query(industry_standard_and_regulation_cfr_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/isr-cfr-section.csv"))
 time.sleep(2)
 
 
-client.query(cfr_section_regulatory_standard)
+client.query(cfr_section_regulatory_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cfr-reg-standard.csv"))
 time.sleep(2)
 
-client.query(regulatory_standard_compliance_requirement)
+client.query(regulatory_standard_compliance_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/reg-std-comp-req.csv"))
 time.sleep(2)
 
-client.query(compliance_requirement_implementation_specification)
+client.query(compliance_requirement_implementation_specification.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/comp-req-impl-spec.csv"))
 time.sleep(2)
 
-client.query(regulatory_standard_implementation_spec)
+client.query(regulatory_standard_implementation_spec.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/reg-std-impl-spec.csv"))
 time.sleep(2)
 
-client.query(electronic_phi_phi_category)
+client.query(electronic_phi_phi_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ephi-phi-category.csv"))
 time.sleep(2)
 
-client.query(PHI_Categories_Sensitive_Data_Elements)
+client.query(PHI_Categories_Sensitive_Data_Elements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/phi-cat-sens-elem.csv"))
 time.sleep(2)
 
-client.query(electronic_phi_phi_form)
+client.query(electronic_phi_phi_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ephi-phi-form.csv"))
 time.sleep(2)
 
-client.query(electronic_phi_phi_location)
+client.query(electronic_phi_phi_location.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ephi-phi-location.csv"))
 time.sleep(2)
 
-client.query(electronic_phi_phi_lifecycle)
+client.query(electronic_phi_phi_lifecycle.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ephi-phi-lifecycle.csv"))
 time.sleep(2)
 
-client.query(data_use_electronic_phi)
+client.query(data_use_electronic_phi.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/datause-ephi.csv"))
 time.sleep(2)
 
-client.query(data_disclosure_electronic_phi)
+client.query(data_disclosure_electronic_phi.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/datadisclosure-ephi.csv"))
 time.sleep(2)
 
-client.query(minimum_necessary_electronic_phi)
+client.query(minimum_necessary_electronic_phi.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/minnecessary-ephi.csv"))
 time.sleep(2)
 
-client.query(deidentified_health_info_electronic_phi)
+client.query(deidentified_health_info_electronic_phi.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/deidentified-ephi.csv"))
 time.sleep(2)
 
-client.query(Limiteddataset_datauseagreement)
+client.query(Limiteddataset_datauseagreement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/lds-dua.csv"))
 time.sleep(2)
 
+client.query(phi_lifecycle_compliance_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/philifecycle-compliance.csv"))
+time.sleep(2)
 
+client.query(data_use_agreement_data_use.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/dua-datause.csv"))
+time.sleep(2)
+
+client.query(individual_right_data_subject.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ir-regstd.csv"))
+time.sleep(2)
+
+client.query(use_and_disclosure_authorization.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ud-authorization.csv"))
+time.sleep(2)
+
+client.query(use_and_disclosure_lawful_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ud-lawfulbasis.csv"))
+time.sleep(2)
+
+client.query(data_subject_patient_request.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ds-patientrequest.csv"))
+time.sleep(2)
+
+client.query(patient_requests_compliance_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/pr-compliance.csv"))
+time.sleep(2)
+
+client.query(privacy_complaint_privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/pc-privacynotice.csv"))
+time.sleep(2)
+
+client.query(privacy_notice_use_and_disclosure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/pn-ud.csv"))
+time.sleep(2)
+
+client.query(individual_right_regulatory_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ir-regstd.csv"))
+time.sleep(2)
+
+client.query(security_standard_administrative_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ss-admin-safeguard.csv"))
+time.sleep(2)
+
+client.query(security_standard_physical_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ss-physical-safeguard.csv"))
+time.sleep(2)
+
+client.query(security_standard_technical_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ss-technical-safeguard.csv"))
+time.sleep(2)
+
+client.query(administrative_safeguards_security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/admin-safeguard-secmeasure.csv"))
+time.sleep(2)
+
+client.query(physical_safeguards_security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/phys-safeguard-secmeasure.csv"))
+time.sleep(2)
+
+client.query(technical_safeguards_security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/tech-safeguard-secmeasure.csv"))
+time.sleep(2)
+
+client.query(risk_assessment_security_vulnerability.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ra-secvuln.csv"))
+time.sleep(2)
+
+client.query(security_vulnerability_security_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sv-securityrisk.csv"))
+time.sleep(2)
+
+client.query(security_risk_security_measure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sr-secmeasure.csv"))
+time.sleep(2)
+
+client.query(security_incident_incident_response.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/si-incidentresponse.csv"))
+time.sleep(2)
+
+client.query(Contingency_Planning_Security_Measure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cp-secmeasure.csv"))
+time.sleep(2)
+
+client.query(workforce_security_compliance_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ws-compliance.csv"))
+time.sleep(2)
+
+client.query(security_breach_breach_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-breachrisk.csv"))
+time.sleep(2)
+
+client.query(security_breach_breach_notification_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-media-notif.csv"))
+time.sleep(2)
+
+client.query(breach_notification_process_affected_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/bnp-affected.csv"))
+time.sleep(2)
+
+client.query(breach_notification_process_notification_recipient.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/bnp-recipients.csv"))
+time.sleep(2)
+
+client.query(notification_recipient_notification_content.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/nr-notifcontent.csv"))
+time.sleep(2)
+
+client.query(security_breach_breach_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-timeline.csv"))
+time.sleep(2)
+
+client.query(security_breach_mitigation_services.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-mitigation.csv"))
+time.sleep(2)
+
+client.query(security_breach_media_notification.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-media-notif.csv"))
+time.sleep(2)
+
+client.query(breach_notification_process_breach_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-notif-process.csv"))
+time.sleep(2)
+
+client.query(covered_entity_hybrid_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-hybrid.csv"))
+time.sleep(2)
+
+client.query(covered_entity_ohca.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-ohca.csv"))
+time.sleep(2)
+
+client.query(covered_entity_healthcare_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-provider.csv"))
+time.sleep(2)
+
+client.query(covered_entity_health_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-healthplan.csv"))
+time.sleep(2)
+
+client.query(covered_entity_workforce_member.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-workforce.csv"))
+time.sleep(2)
+
+client.query(covered_entity_compliance_program.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-compliance.csv"))
+time.sleep(2)
+
+client.query(compliance_program_compliance_audit.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cp-audit.csv"))
+time.sleep(2)
+
+client.query(compliance_audit_compliance_violation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ca-violation.csv"))
+time.sleep(2)
+
+client.query(compliance_violation_violation_severity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cv-severity.csv"))
+time.sleep(2)
+
+client.query(compliance_violation_ocr_investigation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cv-investigation.csv"))
+time.sleep(2)
+
+client.query(ocr_investigation_enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/oi-enforcement.csv"))
+time.sleep(2)
+
+client.query(enforcement_action_civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ea-civil-penalty.csv"))
+time.sleep(2)
+
+client.query(enforcement_action_criminal_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ea-criminal-penalty.csv"))
+time.sleep(2)
+
+client.query(enforcement_action_corrective_action_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ea-corrective-action.csv"))
+time.sleep(2)
+
+client.query(regulator_enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/regulator-enforcement.csv"))
+time.sleep(2)
+
+client.query(violation_severity_civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/vs-civil-penalty.csv"))
+time.sleep(2)
+
+client.query(compliance_violation_regulatory_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cv-regulatory-std.csv"))
+time.sleep(2)
 
 
 
