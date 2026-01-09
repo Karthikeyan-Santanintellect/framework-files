@@ -1,0 +1,16 @@
+risk_id,name,description,risk_level,mitigation_required,cfr_citation
+SR-001,Unauthorized Access,Unauthorized access to Protected Health Information (PHI) due to weak authentication mechanisms,High,Yes,45 CFR 164.312(a)(2)(i)
+SR-002,Data Breach,Accidental or intentional disclosure of PHI to unauthorized individuals,Critical,Yes,45 CFR 164.400
+SR-003,Inadequate Encryption,Transmission of PHI without encryption or security protocols,High,Yes,45 CFR 164.312(a)(2)(iv)
+SR-004,Insufficient Access Controls,Lack of role-based access control (RBAC) and user authentication,High,Yes,45 CFR 164.308(a)(4)(i)
+SR-005,Password Weakness,Use of weak passwords or lack of password management policies,Medium,Yes,45 CFR 164.308(a)(5)(ii)(i)
+SR-006,Unencrypted Device Storage,PHI stored on unencrypted mobile devices or removable media,High,Yes,45 CFR 164.312(a)(2)(i)
+SR-007,Lack of Audit Controls,Insufficient audit logging and monitoring of PHI access,Medium,Yes,45 CFR 164.312(b)
+SR-008,Insecure Data Disposal,Improper destruction or disposal of PHI in physical or electronic form,Medium,Yes,45 CFR 164.308(a)(3)(ii)
+SR-009,Unsecured Communication,Unencrypted email or messaging systems transmitting PHI,High,Yes,45 CFR 164.312(a)(2)(iii)
+SR-010,Missing Business Associate Agreement,Third-party vendors without proper HIPAA Business Associate Agreements,High,Yes,45 CFR 164.308(b)(1)
+SR-011,Inadequate Staff Training,Lack of HIPAA compliance training for workforce members,Medium,Yes,45 CFR 164.308(a)(5)
+SR-012,Unpatched Systems,Systems running outdated or unpatched software with known vulnerabilities,High,Yes,45 CFR 164.308(a)(5)(ii)(ii)
+SR-013,Absence of Contingency Plans,No disaster recovery or business continuity plans,Medium,Yes,45 CFR 164.308(a)(7)
+SR-014,Inadequate Physical Security,Unsecured server rooms or network closets with PHI storage,Medium,Yes,45 CFR 164.310(a)(2)
+SR-015,Malware and Ransomware,Systems vulnerable to malware, ransomware, and virus attacks,Critical,Yes,45 CFR 164.308(a)(5)(ii)
