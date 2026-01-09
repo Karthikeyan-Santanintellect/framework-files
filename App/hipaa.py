@@ -2,7 +2,7 @@
 
 #industry_standard_and_regulation
 industry_standard_and_regulation = """
-MERGE(i:IndustryStandardAndRegulation{industry_standard_regulation_id:'HIPAA 1996'})
+MERGE (i:IndustryStandardAndRegulation{industry_standard_regulation_id:'HIPAA 1996'})
 ON CREATE SET
     i.name='HIPAA',
     i.description='The Health Insurance Portability and Accountability Act (HIPAA) is a US regulation that sets standards for protecting sensitive patient health information.',
@@ -760,7 +760,7 @@ ON CREATE SET
 
 #7.4 Load Violation Severities
 Violation_Severities ="""
-LOAD CSV WITH HEADERS FROM '$file_path_' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (vs:ViolationSeverity {severity_id: row.severity_id, industry_standard_regulation_id: 'HIPAA 1996'})
 ON CREATE SET
     vs.severity_level = row.severity_level,
@@ -793,7 +793,7 @@ ON CREATE SET
 
 #7.7 Load Civil Penalties
 Civil_Penalties ="""
-LOAD CSV WITH HEADERS FROM '$file_path_cpen' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cpen:CivilPenalty {penalty_id: row.penalty_id, industry_standard_regulation_id: 'HIPAA 1996'})
 ON CREATE SET
     cpen.penalty_tier = row.penalty_tier,
@@ -844,14 +844,11 @@ ON CREATE SET
 #Relationships
 industry_standard_and_regulations_hipaa_standards_rel = """
 MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA 1996'})
-MATCH (s:Standard {industry_standard_regulation_id: 'HIPAA 1996'})
-MERGE (i)-[:INDUSTRY_STANDARD_REGULATION_CONTAINS_STANDARDS]->(s);
+MATCH (rs:RegulatoryStandard {industry_standard_regulation_id: 'HIPAA 1996'})
+MERGE (i)-[:INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD]->(rs);
 """
 
-
-
-
-hipaa_standard_subcategory = """
+hipaa_CSF_subcategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (cfr:CFRCitation {citation: row.cfr_citation, industry_standard_regulation_id: 'HIPAA 1996'})
 MATCH (CSF:NISTCSFSubcategory {subcategory_id: row.nist_subcategory_id, 
@@ -1813,10 +1810,7 @@ time.sleep(2)
 client.query(industry_standard_and_regulations_hipaa_standards_rel)
 time.sleep(2)
 
-client.query(hipaa_standard_mapping_rel)
-time.sleep(2)
-
-client.query(mapping_subcategory_rel)
+client.query(hipaa_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hipaa_nist_csf_full_mapping.csv"))
 time.sleep(2)
 
 client.query(industry_standard_and_regulation_cfr_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/isr-cfr-section.csv"))
