@@ -1,0 +1,11 @@
+relationship_id,action_id,penalty_id,description,created_date
+REL-EA-CRPEN-001,EA-001,CRP-001,Enforcement action imposes criminal penalty for knowing obtaining,2026-01-10
+REL-EA-CRPEN-002,EA-002,CRP-002,Enforcement action imposes criminal penalty for knowing disclosing,2026-01-10
+REL-EA-CRPEN-003,EA-003,CRP-003,Enforcement action imposes criminal penalty for obtaining and disclosing,2026-01-10
+REL-EA-CRPEN-004,EA-004,CRP-004,Enforcement action imposes criminal penalty for unauthorized access,2026-01-10
+REL-EA-CRPEN-005,EA-005,CRP-005,Enforcement action imposes aggravated misuse first offense penalty,2026-01-10
+REL-EA-CRPEN-006,EA-006,CRP-006,Enforcement action imposes aggravated misuse repeat offense penalty,2026-01-10
+REL-EA-CRPEN-007,EA-007,CRP-007,Enforcement action imposes corporate criminal liability penalty,2026-01-10
+REL-EA-CRPEN-008,EA-008,CRP-008,Enforcement action imposes conspiracy to commit offense penalty,2026-01-10
+REL-EA-CRPEN-009,EA-009,CRP-009,Enforcement action imposes computer fraud enhancement penalty,2026-01-10
+REL-EA-CRPEN-010,EA-010,CRP-010,Enforcement action imposes identity theft enhancement penalty,2026-01-10

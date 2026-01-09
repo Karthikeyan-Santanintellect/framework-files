@@ -1,0 +1,13 @@
+relationship_id,associate_id,agreement_id,description,created_date
+REL-BA-BAA-001,BA-001,BAA-001,Medical coding company bound by permitted uses agreement,2026-01-10
+REL-BA-BAA-002,BA-002,BAA-002,IT service provider bound by safeguards requirement agreement,2026-01-10
+REL-BA-BAA-003,BA-003,BAA-003,Billing firm bound by breach notification obligation agreement,2026-01-10
+REL-BA-BAA-004,BA-004,BAA-004,Legal counsel bound by subcontractor requirements agreement,2026-01-10
+REL-BA-BAA-005,BA-005,BAA-005,Accounting services bound by access and amendment agreement,2026-01-10
+REL-BA-BAA-006,BA-006,BAA-006,Patient scheduling bound by accounting of disclosures agreement,2026-01-10
+REL-BA-BAA-007,BA-007,BAA-007,Cloud storage provider bound by data return agreement,2026-01-10
+REL-BA-BAA-008,BA-008,BAA-008,Medical transcription bound by audit and inspection agreement,2026-01-10
+REL-BA-BAA-009,BA-009,BAA-009,Email communication provider bound by termination provisions agreement,2026-01-10
+REL-BA-BAA-010,BA-010,BAA-010,Background check vendor bound by whistleblower provisions agreement,2026-01-10
+REL-BA-BAA-011,BA-001,BAA-002,Medical coding company bound by comprehensive safeguards,2026-01-10
+REL-BA-BAA-012,BA-002,BAA-003,IT service provider bound by breach reporting requirements,2026-01-10

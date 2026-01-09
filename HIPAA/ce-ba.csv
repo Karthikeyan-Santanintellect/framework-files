@@ -1,0 +1,13 @@
+relationship_id,entity_id,associate_id,description,created_date
+REL-CE-BA-001,CE-001,BA-001,Hospital has medical coding company business associate,2026-01-10
+REL-CE-BA-002,CE-002,BA-002,Physician practice has IT service provider business associate,2026-01-10
+REL-CE-BA-003,CE-003,BA-003,Dental practice has billing and collections business associate,2026-01-10
+REL-CE-BA-004,CE-004,BA-004,Health insurance has legal counsel business associate,2026-01-10
+REL-CE-BA-005,CE-005,BA-005,HMO has accounting services business associate,2026-01-10
+REL-CE-BA-006,CE-006,BA-006,Medical billing has patient scheduling business associate,2026-01-10
+REL-CE-BA-007,CE-007,BA-007,Claims processor has cloud storage provider business associate,2026-01-10
+REL-CE-BA-008,CE-008,BA-008,Nursing home has medical transcription business associate,2026-01-10
+REL-CE-BA-009,CE-009,BA-009,Home health has email communication business associate,2026-01-10
+REL-CE-BA-010,CE-010,BA-010,Pharmacy benefit manager has background check business associate,2026-01-10
+REL-CE-BA-011,CE-001,BA-002,Hospital has IT service provider business associate,2026-01-10
+REL-CE-BA-012,CE-002,BA-003,Physician practice has billing services business associate,2026-01-10

@@ -1,0 +1,11 @@
+relationship_id,violation_id,severity_id,description,created_date
+REL-CV-VS-001,CV-001,VS-001,Unauthorized access violation classified as minimal violation,2026-01-10
+REL-CV-VS-002,CV-002,VS-005,Data breach violation classified as critical violation,2026-01-10
+REL-CV-VS-003,CV-003,VS-004,Inadequate safeguards violation classified as high violation,2026-01-10
+REL-CV-VS-004,CV-004,VS-005,Failure to report breach violation classified as critical,2026-01-10
+REL-CV-VS-005,CV-005,VS-004,Missing business associate agreement classified as high,2026-01-10
+REL-CV-VS-006,CV-006,VS-003,Insufficient training violation classified as medium,2026-01-10
+REL-CV-VS-007,CV-007,VS-004,Inadequate access controls violation classified as high,2026-01-10
+REL-CV-VS-008,CV-008,VS-003,Documentation violation classified as medium violation,2026-01-10
+REL-CV-VS-009,CV-009,VS-004,Improper disposal violation classified as high violation,2026-01-10
+REL-CV-VS-010,CV-010,VS-002,Security awareness violation classified as low violation,2026-01-10

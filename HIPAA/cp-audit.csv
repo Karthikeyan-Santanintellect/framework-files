@@ -1,0 +1,11 @@
+relationship_id,program_id,audit_id,description,created_date
+REL-CP-CA-001,CP-001,CA-001,Compliance program includes internal audit,2026-01-10
+REL-CP-CA-002,CP-002,CA-002,Compliance program includes targeted audit,2026-01-10
+REL-CP-CA-003,CP-003,CA-003,Compliance program includes breach audit,2026-01-10
+REL-CP-CA-004,CP-004,CA-004,Compliance program includes business associate audit,2026-01-10
+REL-CP-CA-005,CP-005,CA-005,Compliance program includes access control audit,2026-01-10
+REL-CP-CA-006,CP-006,CA-006,Compliance program includes encryption audit,2026-01-10
+REL-CP-CA-007,CP-007,CA-007,Compliance program includes workforce training audit,2026-01-10
+REL-CP-CA-008,CP-008,CA-008,Compliance program includes physical security audit,2026-01-10
+REL-CP-CA-009,CP-009,CA-009,Compliance program includes documentation audit,2026-01-10
+REL-CP-CA-010,CP-010,CA-010,Compliance program includes third-party audit,2026-01-10

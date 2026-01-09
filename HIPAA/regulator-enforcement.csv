@@ -1,0 +1,11 @@
+relationship_id,regulator_id,action_id,description,created_date
+REL-REG-EA-001,REG-001,EA-001,OCR takes civil penalty enforcement action,2026-01-10
+REL-REG-EA-002,REG-002,EA-002,CMS takes corrective action plan mandate,2026-01-10
+REL-REG-EA-003,REG-003,EA-003,DOJ takes criminal enforcement action,2026-01-10
+REL-REG-EA-004,REG-004,EA-004,State attorney general takes enforcement action,2026-01-10
+REL-REG-EA-005,REG-005,EA-005,FTC takes enforcement action on non-HIPAA entities,2026-01-10
+REL-REG-EA-006,REG-006,EA-006,State health department takes enforcement action,2026-01-10
+REL-REG-EA-007,REG-007,EA-007,State insurance commissioner takes enforcement action,2026-01-10
+REL-REG-EA-008,REG-008,EA-008,OIG takes enforcement action and exclusion,2026-01-10
+REL-REG-EA-009,REG-009,EA-009,SAMHSA takes Part 2 enforcement action,2026-01-10
+REL-REG-EA-010,REG-010,EA-010,State data protection authority takes enforcement action,2026-01-10

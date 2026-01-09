@@ -1,0 +1,11 @@
+relationship_id,audit_id,violation_id,description,created_date
+REL-CA-CV-001,CA-001,CV-001,Compliance audit identifies unauthorized access violation,2026-01-10
+REL-CA-CV-002,CA-002,CV-002,Compliance audit identifies data breach violation,2026-01-10
+REL-CA-CV-003,CA-003,CV-003,Compliance audit identifies inadequate safeguards violation,2026-01-10
+REL-CA-CV-004,CA-004,CV-004,Compliance audit identifies failure to report breach violation,2026-01-10
+REL-CA-CV-005,CA-005,CV-005,Compliance audit identifies missing business associate agreement,2026-01-10
+REL-CA-CV-006,CA-006,CV-006,Compliance audit identifies insufficient training violation,2026-01-10
+REL-CA-CV-007,CA-007,CV-007,Compliance audit identifies inadequate access controls violation,2026-01-10
+REL-CA-CV-008,CA-008,CV-008,Compliance audit identifies failure to maintain documentation,2026-01-10
+REL-CA-CV-009,CA-009,CV-009,Compliance audit identifies improper disposal violation,2026-01-10
+REL-CA-CV-010,CA-010,CV-010,Compliance audit identifies lack of security awareness violation,2026-01-10

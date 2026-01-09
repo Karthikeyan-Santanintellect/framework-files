@@ -1,0 +1,13 @@
+relationship_id,security_id,requirement_id,description,created_date
+REL-WS-CR-001,WS-001,REQ-WS-001,Authorization and Supervision requires workforce access compliance,2026-01-09
+REL-WS-CR-002,WS-002,REQ-WS-002,Workforce Clearance requires background verification compliance,2026-01-09
+REL-WS-CR-003,WS-003,REQ-WS-003,Termination Procedures requires access revocation compliance,2026-01-09
+REL-WS-CR-004,WS-004,REQ-WS-004,Workforce Security Policy requires documentation compliance,2026-01-09
+REL-WS-CR-005,WS-005,REQ-WS-005,Unique User Identification requires user tracking compliance,2026-01-09
+REL-WS-CR-006,WS-006,REQ-WS-006,User Authentication requires credential verification compliance,2026-01-09
+REL-WS-CR-007,WS-007,REQ-WS-007,Access Control Standards requires authorization compliance,2026-01-09
+REL-WS-CR-008,WS-008,REQ-WS-008,Emergency Access requires override procedure compliance,2026-01-09
+REL-WS-CR-009,WS-009,REQ-WS-009,Automatic Logoff requires session management compliance,2026-01-09
+REL-WS-CR-010,WS-010,REQ-WS-010,Encryption and Decryption requires data protection compliance,2026-01-09
+REL-WS-CR-011,WS-011,REQ-WS-011,Training Program requires competency compliance,2026-01-09
+REL-WS-CR-012,WS-012,REQ-WS-012,Security Awareness requires knowledge compliance,2026-01-09

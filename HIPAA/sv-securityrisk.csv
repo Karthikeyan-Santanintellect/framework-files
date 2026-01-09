@@ -1,0 +1,13 @@
+relationship_id,vulnerability_id,risk_id,description,created_date
+REL-SV-SR-001,VULN-001,RISK-001,Unencrypted data storage vulnerability identifies data breach security risk,2026-01-09
+REL-SV-SR-002,VULN-002,RISK-002,Weak authentication vulnerability identifies unauthorized access security risk,2026-01-09
+REL-SV-SR-003,VULN-003,RISK-003,Inadequate access controls vulnerability identifies privilege escalation security risk,2026-01-09
+REL-SV-SR-004,VULN-004,RISK-004,Unpatched systems vulnerability identifies exploitation security risk,2026-01-09
+REL-SV-SR-005,VULN-005,RISK-005,Inadequate physical security vulnerability identifies facility breach security risk,2026-01-09
+REL-SV-SR-006,VULN-006,RISK-006,Insufficient training vulnerability identifies human error security risk,2026-01-09
+REL-SV-SR-007,VULN-007,RISK-007,Missing incident procedures vulnerability identifies uncontrolled incident security risk,2026-01-09
+REL-SV-SR-008,VULN-008,RISK-008,Inadequate backup vulnerability identifies data loss security risk,2026-01-09
+REL-SV-SR-009,VULN-009,RISK-009,Unencrypted transmission vulnerability identifies interception security risk,2026-01-09
+REL-SV-SR-010,VULN-010,RISK-010,Missing audit logging vulnerability identifies undetected breach security risk,2026-01-09
+REL-SV-SR-011,VULN-011,RISK-011,Inadequate change management vulnerability identifies misconfiguration security risk,2026-01-09
+REL-SV-SR-012,VULN-012,RISK-012,Malware protection gaps vulnerability identifies infection security risk,2026-01-09

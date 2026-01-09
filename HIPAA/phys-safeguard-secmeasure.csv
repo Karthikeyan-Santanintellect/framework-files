@@ -1,0 +1,13 @@
+relationship_id,safeguard_id,measure_id,description,created_date
+REL-PS-SM-001,PHYS-001,SM-013,Facility Access Controls implemented via badge systems,2026-01-09
+REL-PS-SM-002,PHYS-002,SM-014,Workstation Use Restrictions implemented via usage policies,2026-01-09
+REL-PS-SM-003,PHYS-003,SM-015,Workstation Physical Security implemented via locked enclosures,2026-01-09
+REL-PS-SM-004,PHYS-004,SM-016,Device and Media Controls implemented via inventory procedures,2026-01-09
+REL-PS-SM-005,PHYS-005,SM-017,Disposal of PHI Devices implemented via secure destruction,2026-01-09
+REL-PS-SM-006,PHYS-006,SM-018,Media Reuse Procedures implemented via cleansing protocols,2026-01-09
+REL-PS-SM-007,PHYS-007,SM-019,Inventory Management implemented via tracking systems,2026-01-09
+REL-PS-SM-008,PHYS-008,SM-020,Environmental Controls implemented via HVAC systems,2026-01-09
+REL-PS-SM-009,PHYS-009,SM-021,Physical Security Perimeter implemented via fencing or walls,2026-01-09
+REL-PS-SM-010,PHYS-010,SM-022,Visitor Access Controls implemented via visitor logs,2026-01-09
+REL-PS-SM-011,PHYS-011,SM-023,Facility Surveillance implemented via CCTV systems,2026-01-09
+REL-PS-SM-012,PHYS-012,SM-024,Data Center Security implemented via locked server rooms,2026-01-09

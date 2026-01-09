@@ -1,0 +1,13 @@
+relationship_id,breach_id,notification_id,description,created_date
+REL-SB-MN-001,SB-007,MN-001,SQL injection breach affects 500+ residents requires media notification,2026-01-10
+REL-SB-MN-002,SB-010,MN-002,Cloud misconfiguration breach affects 500+ requires prominent media outlets,2026-01-10
+REL-SB-MN-003,SB-004,MN-003,Ransomware breach affects 10000+ requires national wire services notification,2026-01-10
+REL-SB-MN-004,SB-014,MN-004,Backup tapes breach affects 1000-10000 requires regional media notification,2026-01-10
+REL-SB-MN-005,SB-002,MN-005,Lost device breach affects 500-1000 requires local media notification,2026-01-10
+REL-SB-MN-006,SB-012,MN-006,Third-party breach statewide impact requires state news notification,2026-01-10
+REL-SB-MN-007,SB-020,MN-007,Account takeover breach requires website posting notification,2026-01-10
+REL-SB-MN-008,SB-017,MN-008,Malware breach multi-state requires national media notification,2026-01-10
+REL-SB-MN-009,SB-003,MN-009,Phishing breach requires healthcare industry outlets notification,2026-01-10
+REL-SB-MN-010,SB-007,MN-010,SQL injection breach media notification concurrent with individual,2026-01-10
+REL-SB-MN-011,SB-010,MN-001,Cloud misconfiguration requires immediate prominent media notification,2026-01-10
+REL-SB-MN-012,SB-014,MN-002,Backup tapes breach requires comprehensive media coverage,2026-01-10

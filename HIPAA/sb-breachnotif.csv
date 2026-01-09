@@ -1,0 +1,13 @@
+relationship_id,breach_id,process_id,description,created_date
+REL-SB-BNP-001,SB-001,BNP-001,Unauthorized access breach triggers discovery and assessment notification process,2026-01-10
+REL-SB-BNP-002,SB-002,BNP-002,Lost device breach triggers breach notification process,2026-01-10
+REL-SB-BNP-003,SB-003,BNP-003,Phishing attack breach triggers risk assessment notification process,2026-01-10
+REL-SB-BNP-004,SB-004,BNP-004,Ransomware infection breach triggers notification process,2026-01-10
+REL-SB-BNP-005,SB-005,BNP-005,Email transmission breach triggers notification planning process,2026-01-10
+REL-SB-BNP-006,SB-006,BNP-006,Data disposal breach triggers individual notification process,2026-01-10
+REL-SB-BNP-007,SB-007,BNP-007,SQL injection breach triggers media notification process,2026-01-10
+REL-SB-BNP-008,SB-008,BNP-008,Misdirected fax breach triggers documentation process,2026-01-10
+REL-SB-BNP-009,SB-009,BNP-001,Insider threat breach triggers complete notification process,2026-01-10
+REL-SB-BNP-010,SB-010,BNP-002,Cloud misconfiguration breach triggers HHS notification process,2026-01-10
+REL-SB-BNP-011,SB-011,BNP-003,Unattended workstation breach triggers assessment process,2026-01-10
+REL-SB-BNP-012,SB-012,BNP-004,Third-party breach triggers investigation and notification,2026-01-10

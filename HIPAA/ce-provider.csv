@@ -1,0 +1,11 @@
+relationship_id,entity_id,provider_id,description,created_date
+REL-CE-HP-001,CE-001,HP-001,Hospital employs physician healthcare providers,2026-01-10
+REL-CE-HP-002,CE-002,HP-002,Physician practice employs dentist healthcare providers,2026-01-10
+REL-CE-HP-003,CE-003,HP-003,Dental practice employs optometrist healthcare providers,2026-01-10
+REL-CE-HP-004,CE-004,HP-004,Health insurance networks podiatrist healthcare providers,2026-01-10
+REL-CE-HP-005,CE-005,HP-005,HMO employs nurse practitioner healthcare providers,2026-01-10
+REL-CE-HP-006,CE-006,HP-006,Medical billing services physician assistant providers,2026-01-10
+REL-CE-HP-007,CE-007,HP-007,Claims processor works with chiropractor providers,2026-01-10
+REL-CE-HP-008,CE-008,HP-008,Nursing home employs psychiatrist healthcare providers,2026-01-10
+REL-CE-HP-009,CE-009,HP-009,Home health employs physical therapist providers,2026-01-10
+REL-CE-HP-010,CE-010,HP-010,Pharmacy benefit manager networks home health providers,2026-01-10

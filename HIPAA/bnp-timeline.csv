@@ -1,0 +1,13 @@
+relationship_id,process_id,timeline_id,description,created_date
+REL-BNP-BT-001,BNP-001,BT-001,Discovery and assessment process follows 60-day notification timeline,2026-01-10
+REL-BNP-BT-002,BNP-002,BT-002,Breach risk assessment process completes within 24 hours of discovery,2026-01-10
+REL-BNP-BT-003,BNP-003,BT-003,Notification planning process completes within 48 hours of discovery,2026-01-10
+REL-BNP-BT-004,BNP-004,BT-004,Individual notification process completes without unreasonable delay,2026-01-10
+REL-BNP-BT-005,BNP-005,BT-005,Media notification process concurrent with individual notification,2026-01-10
+REL-BNP-BT-006,BNP-006,BT-006,Secretary notification process within 60 days of discovery,2026-01-10
+REL-BNP-BT-007,BNP-007,BT-007,Breach log maintenance process immediately after notification,2026-01-10
+REL-BNP-BT-008,BNP-008,BT-008,Documentation and reporting process within 90 days of discovery,2026-01-10
+REL-BNP-BT-009,BNP-009,BT-009,Mitigation services coordination process within 30 days of notification,2026-01-10
+REL-BNP-BT-010,BNP-010,BT-010,Post-breach follow-up process ongoing for 12-24 months,2026-01-10
+REL-BNP-BT-011,BNP-001,BT-001,Discovery to notification timeline tracked and documented,2026-01-10
+REL-BNP-BT-012,BNP-002,BT-002,Risk assessment timeline compliance verified and certified,2026-01-10

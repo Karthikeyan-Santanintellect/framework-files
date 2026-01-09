@@ -1,0 +1,13 @@
+relationship_id,safeguard_id,measure_id,description,created_date
+REL-AS-SM-001,ADMIN-001,SM-001,Security Management Process implemented via documented risk assessment,2026-01-09
+REL-AS-SM-002,ADMIN-002,SM-002,Assigned Security Responsibility implemented via written designation,2026-01-09
+REL-AS-SM-003,ADMIN-003,SM-003,Workforce Security implemented via authorization and supervision procedures,2026-01-09
+REL-AS-SM-004,ADMIN-004,SM-004,Information Access Management implemented via access control policies,2026-01-09
+REL-AS-SM-005,ADMIN-005,SM-005,Security Awareness Training implemented via training program,2026-01-09
+REL-AS-SM-006,ADMIN-006,SM-006,Security Incident Procedures implemented via response protocols,2026-01-09
+REL-AS-SM-007,ADMIN-007,SM-007,Contingency Planning implemented via backup and recovery procedures,2026-01-09
+REL-AS-SM-008,ADMIN-008,SM-008,Business Associate Agreements implemented via written contracts,2026-01-09
+REL-AS-SM-009,ADMIN-009,SM-009,Evaluation implemented via periodic compliance audits,2026-01-09
+REL-AS-SM-010,ADMIN-010,SM-010,Sanction Policy implemented via enforcement procedures,2026-01-09
+REL-AS-SM-011,ADMIN-011,SM-011,Access Control Management implemented via access request procedures,2026-01-09
+REL-AS-SM-012,ADMIN-012,SM-012,Policies and Procedures implemented via documentation system,2026-01-09

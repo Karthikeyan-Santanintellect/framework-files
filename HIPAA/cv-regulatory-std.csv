@@ -1,0 +1,11 @@
+relationship_id,violation_id,standard_id,description,created_date
+REL-CV-RS-001,CV-001,RS-001,Unauthorized access violation violates access control standard,2026-01-10
+REL-CV-RS-002,CV-002,RS-002,Data breach violation violates safeguards standard,2026-01-10
+REL-CV-RS-003,CV-003,RS-003,Inadequate safeguards violates security standard,2026-01-10
+REL-CV-RS-004,CV-004,RS-004,Failure to report violates breach notification standard,2026-01-10
+REL-CV-RS-005,CV-005,RS-005,Missing agreement violates business associate standard,2026-01-10
+REL-CV-RS-006,CV-006,RS-006,Insufficient training violates workforce training standard,2026-01-10
+REL-CV-RS-007,CV-007,RS-007,Inadequate access controls violates privacy standard,2026-01-10
+REL-CV-RS-008,CV-008,RS-008,Documentation failure violates administrative standard,2026-01-10
+REL-CV-RS-009,CV-009,RS-009,Improper disposal violates physical safeguards standard,2026-01-10
+REL-CV-RS-010,CV-010,RS-010,Security awareness gap violates technical safeguards standard,2026-01-10

@@ -1,0 +1,13 @@
+relationship_id,risk_id,measure_id,description,created_date
+REL-SR-SM-001,RISK-001,SM-001,Data breach risk requires encryption security measure,2026-01-09
+REL-SR-SM-002,RISK-002,SM-002,Unauthorized access risk requires multi-factor authentication measure,2026-01-09
+REL-SR-SM-003,RISK-003,SM-003,Privilege escalation risk requires role-based access control measure,2026-01-09
+REL-SR-SM-004,RISK-004,SM-004,Exploitation risk requires patch management security measure,2026-01-09
+REL-SR-SM-005,RISK-005,SM-005,Facility breach risk requires physical security measures,2026-01-09
+REL-SR-SM-006,RISK-006,SM-006,Human error risk requires staff training security measure,2026-01-09
+REL-SR-SM-007,RISK-007,SM-007,Uncontrolled incident risk requires incident response procedures,2026-01-09
+REL-SR-SM-008,RISK-008,SM-008,Data loss risk requires backup and recovery measure,2026-01-09
+REL-SR-SM-009,RISK-009,SM-009,Interception risk requires transmission encryption measure,2026-01-09
+REL-SR-SM-010,RISK-010,SM-010,Undetected breach risk requires audit logging measure,2026-01-09
+REL-SR-SM-011,RISK-011,SM-011,Misconfiguration risk requires change management measure,2026-01-09
+REL-SR-SM-012,RISK-012,SM-012,Malware infection risk requires malware protection measure,2026-01-09

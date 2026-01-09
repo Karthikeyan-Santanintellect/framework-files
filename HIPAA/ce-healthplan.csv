@@ -1,0 +1,11 @@
+relationship_id,entity_id,plan_id,description,created_date
+REL-CE-HP-001,CE-001,HP-001,Hospital offers commercial health insurance plan,2026-01-10
+REL-CE-HP-002,CE-002,HP-002,Physician practice participates in HMO health plan,2026-01-10
+REL-CE-HP-003,CE-003,HP-003,Dental practice offers PPO health plan,2026-01-10
+REL-CE-HP-004,CE-004,HP-004,Health insurance company offers POS health plan,2026-01-10
+REL-CE-HP-005,CE-005,HP-005,HMO participates in FEHBP federal employees plan,2026-01-10
+REL-CE-HP-006,CE-006,HP-006,Medical billing services Medicare Advantage plan,2026-01-10
+REL-CE-HP-007,CE-007,HP-007,Claims processor handles Medigap insurance plans,2026-01-10
+REL-CE-HP-008,CE-008,HP-008,Nursing home participates in Medicaid health plan,2026-01-10
+REL-CE-HP-009,CE-009,HP-009,Home health services workers compensation insurance,2026-01-10
+REL-CE-HP-010,CE-010,HP-010,Pharmacy benefit manager manages self-funded health plan,2026-01-10

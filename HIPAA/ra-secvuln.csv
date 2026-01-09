@@ -1,0 +1,13 @@
+relationship_id,assessment_id,vulnerability_id,description,created_date
+REL-RA-SV-001,RA-001,VULN-001,Risk assessment identifies unencrypted data storage vulnerability,2026-01-09
+REL-RA-SV-002,RA-002,VULN-002,Risk assessment identifies weak authentication mechanisms vulnerability,2026-01-09
+REL-RA-SV-003,RA-003,VULN-003,Risk assessment identifies inadequate access controls vulnerability,2026-01-09
+REL-RA-SV-004,RA-004,VULN-004,Risk assessment identifies unpatched systems vulnerability,2026-01-09
+REL-RA-SV-005,RA-005,VULN-005,Risk assessment identifies inadequate physical security vulnerability,2026-01-09
+REL-RA-SV-006,RA-006,VULN-006,Risk assessment identifies insufficient workforce training vulnerability,2026-01-09
+REL-RA-SV-007,RA-007,VULN-007,Risk assessment identifies lack of incident response procedures vulnerability,2026-01-09
+REL-RA-SV-008,RA-008,VULN-008,Risk assessment identifies inadequate backup procedures vulnerability,2026-01-09
+REL-RA-SV-009,RA-009,VULN-009,Risk assessment identifies unencrypted data transmission vulnerability,2026-01-09
+REL-RA-SV-010,RA-010,VULN-010,Risk assessment identifies missing audit logging vulnerability,2026-01-09
+REL-RA-SV-011,RA-011,VULN-011,Risk assessment identifies inadequate change management vulnerability,2026-01-09
+REL-RA-SV-012,RA-012,VULN-012,Risk assessment identifies malware protection gaps vulnerability,2026-01-09

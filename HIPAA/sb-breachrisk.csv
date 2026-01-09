@@ -1,0 +1,13 @@
+relationship_id,breach_id,assessment_id,description,created_date
+REL-SB-BRA-001,SB-001,BRA-001,Unauthorized access breach identifies low probability of compromise risk,2026-01-10
+REL-SB-BRA-002,SB-002,BRA-002,Lost device breach identifies significant risk of compromise,2026-01-10
+REL-SB-BRA-003,SB-003,BRA-003,Phishing attack breach identifies significant risk assessment,2026-01-10
+REL-SB-BRA-004,SB-004,BRA-004,Ransomware infection breach identifies significant risk of compromise,2026-01-10
+REL-SB-BRA-005,SB-005,BRA-005,Email transmission breach identifies low probability risk,2026-01-10
+REL-SB-BRA-006,SB-006,BRA-006,Data disposal breach identifies significant risk assessment,2026-01-10
+REL-SB-BRA-007,SB-007,BRA-007,SQL injection breach identifies critical risk of compromise,2026-01-10
+REL-SB-BRA-008,SB-008,BRA-008,Misdirected fax breach identifies low probability risk,2026-01-10
+REL-SB-BRA-009,SB-009,BRA-009,Insider threat breach identifies assumed significant risk,2026-01-10
+REL-SB-BRA-010,SB-010,BRA-010,Cloud misconfiguration breach identifies critical risk,2026-01-10
+REL-SB-BRA-011,SB-011,BRA-001,Unattended workstation breach identifies low probability risk,2026-01-10
+REL-SB-BRA-012,SB-012,BRA-002,Third-party breach identifies significant risk assessment,2026-01-10

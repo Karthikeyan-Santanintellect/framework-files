@@ -1,0 +1,13 @@
+relationship_id,breach_id,service_id,description,created_date
+REL-SB-MS-001,SB-001,MS-001,Unauthorized access breach requires 12-month credit monitoring,2026-01-10
+REL-SB-MS-002,SB-002,MS-002,Lost device breach requires 24-month credit monitoring plus,2026-01-10
+REL-SB-MS-003,SB-003,MS-003,Phishing attack breach requires identity theft prevention services,2026-01-10
+REL-SB-MS-004,SB-004,MS-004,Ransomware infection breach requires credit freeze services,2026-01-10
+REL-SB-MS-005,SB-005,MS-005,Email transmission breach requires fraud alert services,2026-01-10
+REL-SB-MS-006,SB-006,MS-006,Data disposal breach requires legal services for victims,2026-01-10
+REL-SB-MS-007,SB-007,MS-007,SQL injection breach requires annual credit report review,2026-01-10
+REL-SB-MS-008,SB-008,MS-008,Misdirected fax breach requires minimal mitigation services,2026-01-10
+REL-SB-MS-009,SB-009,MS-009,Insider threat breach requires document restoration assistance,2026-01-10
+REL-SB-MS-010,SB-010,MS-010,Cloud misconfiguration breach requires comprehensive mitigation,2026-01-10
+REL-SB-MS-011,SB-011,MS-001,Unattended workstation requires credit monitoring services,2026-01-10
+REL-SB-MS-012,SB-012,MS-003,Third-party breach requires identity theft prevention services,2026-01-10

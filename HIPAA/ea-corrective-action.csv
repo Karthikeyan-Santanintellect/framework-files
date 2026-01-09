@@ -1,0 +1,11 @@
+relationship_id,action_id,plan_id,description,created_date
+REL-EA-CAP-001,EA-001,CAP-001,Enforcement action requires security risk assessment remediation plan,2026-01-10
+REL-EA-CAP-002,EA-002,CAP-002,Enforcement action requires access control implementation plan,2026-01-10
+REL-EA-CAP-003,EA-003,CAP-003,Enforcement action requires encryption deployment plan,2026-01-10
+REL-EA-CAP-004,EA-004,CAP-004,Enforcement action requires workforce training program plan,2026-01-10
+REL-EA-CAP-005,EA-005,CAP-005,Enforcement action requires breach response procedures plan,2026-01-10
+REL-EA-CAP-006,EA-006,CAP-006,Enforcement action requires business associate management plan,2026-01-10
+REL-EA-CAP-007,EA-007,CAP-007,Enforcement action requires physical security enhancement plan,2026-01-10
+REL-EA-CAP-008,EA-008,CAP-008,Enforcement action requires audit and accountability system plan,2026-01-10
+REL-EA-CAP-009,EA-009,CAP-009,Enforcement action requires sanction policy development plan,2026-01-10
+REL-EA-CAP-010,EA-010,CAP-010,Enforcement action requires documentation and policies plan,2026-01-10

@@ -1,0 +1,11 @@
+relationship_id,entity_id,description,created_date
+REL-ISR-CE-001,CE-001,HIPAA 1996 regulates hospital covered entities,2026-01-10
+REL-ISR-CE-002,CE-002,HIPAA 1996 regulates physician practice covered entities,2026-01-10
+REL-ISR-CE-003,CE-003,HIPAA 1996 regulates dental practice covered entities,2026-01-10
+REL-ISR-CE-004,CE-004,HIPAA 1996 regulates health insurance company covered entities,2026-01-10
+REL-ISR-CE-005,CE-005,HIPAA 1996 regulates HMO health plan covered entities,2026-01-10
+REL-ISR-CE-006,CE-006,HIPAA 1996 regulates medical billing clearinghouse covered entities,2026-01-10
+REL-ISR-CE-007,CE-007,HIPAA 1996 regulates claims processor clearinghouse covered entities,2026-01-10
+REL-ISR-CE-008,CE-008,HIPAA 1996 regulates nursing home covered entities,2026-01-10
+REL-ISR-CE-009,CE-009,HIPAA 1996 regulates home health agency covered entities,2026-01-10
+REL-ISR-CE-010,CE-010,HIPAA 1996 regulates pharmacy benefit manager covered entities,2026-01-10

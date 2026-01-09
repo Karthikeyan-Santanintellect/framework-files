@@ -1,0 +1,11 @@
+relationship_id,entity_id,program_id,description,created_date
+REL-CE-CP-001,CE-001,CP-001,Hospital implements compliance committee program,2026-01-10
+REL-CE-CP-002,CE-002,CP-002,Physician practice implements privacy and security policy program,2026-01-10
+REL-CE-CP-003,CE-003,CP-003,Dental practice implements risk assessment program,2026-01-10
+REL-CE-CP-004,CE-004,CP-004,Health insurance implements workforce training program,2026-01-10
+REL-CE-CP-005,CE-005,CP-005,HMO implements privacy officer oversight program,2026-01-10
+REL-CE-CP-006,CE-006,CP-006,Medical billing implements security officer oversight program,2026-01-10
+REL-CE-CP-007,CE-007,CP-007,Claims processor implements business associate management program,2026-01-10
+REL-CE-CP-008,CE-008,CP-008,Nursing home implements incident response program,2026-01-10
+REL-CE-CP-009,CE-009,CP-009,Home health implements documentation and policies program,2026-01-10
+REL-CE-CP-010,CE-010,CP-010,Pharmacy benefit manager implements corrective action program,2026-01-10

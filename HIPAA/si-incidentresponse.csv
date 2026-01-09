@@ -1,0 +1,13 @@
+relationship_id,incident_id,response_id,description,created_date
+REL-SI-IR-001,INC-001,RESP-001,Data breach incident triggers incident response activation,2026-01-09
+REL-SI-IR-002,INC-002,RESP-002,Unauthorized access incident triggers containment response,2026-01-09
+REL-SI-IR-003,INC-003,RESP-003,Malware infection incident triggers threat analysis response,2026-01-09
+REL-SI-IR-004,INC-004,RESP-004,Ransomware attack incident triggers recovery procedures,2026-01-09
+REL-SI-IR-005,INC-005,RESP-005,Phishing email incident triggers investigation response,2026-01-09
+REL-SI-IR-006,INC-006,RESP-006,Lost device incident triggers mitigation response,2026-01-09
+REL-SI-IR-007,INC-007,RESP-007,Insider threat incident triggers forensic analysis,2026-01-09
+REL-SI-IR-008,INC-008,RESP-008,System compromise incident triggers isolation procedures,2026-01-09
+REL-SI-IR-009,INC-009,RESP-009,Network breach incident triggers threat hunting response,2026-01-09
+REL-SI-IR-010,INC-010,RESP-010,Data exfiltration incident triggers notification procedures,2026-01-09
+REL-SI-IR-011,INC-011,RESP-011,Configuration change incident triggers rollback procedures,2026-01-09
+REL-SI-IR-012,INC-012,RESP-012,Access control bypass incident triggers access review response,2026-01-09

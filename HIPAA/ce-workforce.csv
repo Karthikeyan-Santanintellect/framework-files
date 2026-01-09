@@ -1,0 +1,11 @@
+relationship_id,entity_id,member_id,description,created_date
+REL-CE-WM-001,CE-001,WM-001,Hospital employs physician workforce members,2026-01-10
+REL-CE-WM-002,CE-002,WM-002,Physician practice employs nurse workforce members,2026-01-10
+REL-CE-WM-003,CE-003,WM-003,Dental practice employs administrative staff workforce,2026-01-10
+REL-CE-WM-004,CE-004,WM-004,Health insurance employs IT personnel workforce,2026-01-10
+REL-CE-WM-005,CE-005,WM-005,HMO employs billing staff workforce members,2026-01-10
+REL-CE-WM-006,CE-006,WM-006,Medical billing employs medical records staff,2026-01-10
+REL-CE-WM-007,CE-007,WM-007,Claims processor employs security officer workforce,2026-01-10
+REL-CE-WM-008,CE-008,WM-008,Nursing home employs contractors and vendors,2026-01-10
+REL-CE-WM-009,CE-009,WM-009,Home health employs students and trainees,2026-01-10
+REL-CE-WM-010,CE-010,WM-010,Pharmacy benefit manager employs part-time staff,2026-01-10

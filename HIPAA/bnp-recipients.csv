@@ -1,0 +1,13 @@
+relationship_id,process_id,recipient_id,description,created_date
+REL-BNP-NR-001,BNP-001,NR-001,Notification process requires notification to affected individual,2026-01-10
+REL-BNP-NR-002,BNP-002,NR-002,Notification process requires notification to HHS Secretary,2026-01-10
+REL-BNP-NR-003,BNP-003,NR-003,Notification process requires media outlet notification,2026-01-10
+REL-BNP-NR-004,BNP-004,NR-004,Notification process requires law enforcement notification,2026-01-10
+REL-BNP-NR-005,BNP-005,NR-005,Notification process requires business associate notification,2026-01-10
+REL-BNP-NR-006,BNP-006,NR-006,Notification process requires workforce member notification,2026-01-10
+REL-BNP-NR-007,BNP-007,NR-007,Notification process requires state attorney general notification,2026-01-10
+REL-BNP-NR-008,BNP-008,NR-008,Notification process requires health plan notification,2026-01-10
+REL-BNP-NR-009,BNP-001,NR-009,Notification process requires board and leadership notification,2026-01-10
+REL-BNP-NR-010,BNP-002,NR-010,Notification process requires insurance provider notification,2026-01-10
+REL-BNP-NR-011,BNP-003,NR-001,Notification process documents recipient confirmation,2026-01-10
+REL-BNP-NR-012,BNP-004,NR-002,Notification process tracks all notification recipients,2026-01-10

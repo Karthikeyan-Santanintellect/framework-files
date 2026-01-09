@@ -1,0 +1,13 @@
+relationship_id,associate_id,subcontractor_id,description,created_date
+REL-BA-SC-001,BA-001,SC-001,Medical coding company uses IT infrastructure subcontractor,2026-01-10
+REL-BA-SC-002,BA-002,SC-002,IT service provider uses network security subcontractor,2026-01-10
+REL-BA-SC-003,BA-003,SC-003,Billing firm uses data center operations subcontractor,2026-01-10
+REL-BA-SC-004,BA-004,SC-004,Legal counsel uses backup and recovery subcontractor,2026-01-10
+REL-BA-SC-005,BA-005,SC-005,Accounting services uses personnel staffing subcontractor,2026-01-10
+REL-BA-SC-006,BA-006,SC-006,Patient scheduling uses document shredding subcontractor,2026-01-10
+REL-BA-SC-007,BA-007,SC-007,Cloud storage provider uses courier and mail subcontractor,2026-01-10
+REL-BA-SC-008,BA-008,SC-008,Medical transcription uses scanning and digitization subcontractor,2026-01-10
+REL-BA-SC-009,BA-009,SC-009,Email communication uses testing and validation subcontractor,2026-01-10
+REL-BA-SC-010,BA-010,SC-010,Background check vendor uses archive and retention subcontractor,2026-01-10
+REL-BA-SC-011,BA-001,SC-002,Medical coding company uses network security subcontractor,2026-01-10
+REL-BA-SC-012,BA-002,SC-003,IT service provider uses data center subcontractor,2026-01-10

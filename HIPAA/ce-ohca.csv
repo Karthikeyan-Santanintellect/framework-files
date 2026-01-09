@@ -1,0 +1,11 @@
+relationship_id,entity_id,ohca_id,description,created_date
+REL-CE-OHCA-001,CE-001,OHCA-001,Hospital participates in Integrated Delivery System OHCA,2026-01-10
+REL-CE-OHCA-002,CE-002,OHCA-002,Physician practice participates in Healthcare Coalition,2026-01-10
+REL-CE-OHCA-003,CE-003,OHCA-003,Dental practice participates in Clinically Integrated Network,2026-01-10
+REL-CE-OHCA-004,CE-004,OHCA-004,Health insurance participates in Health Information Exchange,2026-01-10
+REL-CE-OHCA-005,CE-005,OHCA-005,HMO participates in Accountable Care Organization,2026-01-10
+REL-CE-OHCA-006,CE-006,OHCA-006,Medical billing participates in Managed Care Network,2026-01-10
+REL-CE-OHCA-007,CE-007,OHCA-007,Claims processor participates in Patient-Centered Medical Home,2026-01-10
+REL-CE-OHCA-008,CE-008,OHCA-008,Nursing home participates in Specialty Care Network,2026-01-10
+REL-CE-OHCA-009,CE-009,OHCA-009,Home health participates in Mental Health Network,2026-01-10
+REL-CE-OHCA-010,CE-010,OHCA-010,Pharmacy benefit manager participates in Community Health Consortium,2026-01-10

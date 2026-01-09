@@ -1,0 +1,13 @@
+relationship_id,safeguard_id,measure_id,description,created_date
+REL-TS-SM-001,TECH-001,SM-025,Access Control implemented via unique user identifiers,2026-01-09
+REL-TS-SM-002,TECH-002,SM-026,User Identification implemented via login credentials,2026-01-09
+REL-TS-SM-003,TECH-003,SM-027,Emergency Access Procedures implemented via system override procedures,2026-01-09
+REL-TS-SM-004,TECH-004,SM-028,Encryption and Decryption implemented via cryptographic algorithms,2026-01-09
+REL-TS-SM-005,TECH-005,SM-029,Audit Controls implemented via logging systems,2026-01-09
+REL-TS-SM-006,TECH-006,SM-030,Integrity Controls implemented via checksums and hashing,2026-01-09
+REL-TS-SM-007,TECH-007,SM-031,Cryptographic Key Management implemented via key storage systems,2026-01-09
+REL-TS-SM-008,TECH-008,SM-032,Authentication implemented via multi-factor authentication,2026-01-09
+REL-TS-SM-009,TECH-009,SM-033,Transmission Security implemented via encrypted channels,2026-01-09
+REL-TS-SM-010,TECH-010,SM-034,Automatic Logoff implemented via timeout mechanisms,2026-01-09
+REL-TS-SM-011,TECH-011,SM-035,Access Management System implemented via role-based access,2026-01-09
+REL-TS-SM-012,TECH-012,SM-036,Network Security implemented via firewalls and IDS,2026-01-09

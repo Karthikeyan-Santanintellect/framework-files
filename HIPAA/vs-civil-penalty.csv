@@ -1,0 +1,11 @@
+relationship_id,severity_id,penalty_id,description,created_date
+REL-VS-CP-001,VS-001,CP-001,Minimal violation severity determines tier 1 penalty range,2026-01-10
+REL-VS-CP-002,VS-002,CP-002,Low violation severity determines tier 2 penalty range,2026-01-10
+REL-VS-CP-003,VS-003,CP-003,Medium violation severity determines tier 3 penalty range,2026-01-10
+REL-VS-CP-004,VS-004,CP-004,High violation severity determines tier 4 penalty range,2026-01-10
+REL-VS-CP-005,VS-005,CP-005,Critical violation severity applies aggravating multipliers,2026-01-10
+REL-VS-CP-006,VS-001,CP-006,Minimal severity allows mitigation factor application,2026-01-10
+REL-VS-CP-007,VS-005,CP-007,Critical severity prevents mitigation factor discounts,2026-01-10
+REL-VS-CP-008,VS-004,CP-008,High severity triggers special category penalties,2026-01-10
+REL-VS-CP-009,VS-003,CP-009,Medium severity applies standard calculation method,2026-01-10
+REL-VS-CP-010,VS-005,CP-010,Critical severity applies maximum aggregate penalty cap,2026-01-10

@@ -1,0 +1,13 @@
+relationship_id,breach_id,timeline_id,description,created_date
+REL-SB-BT-001,SB-001,BT-001,Unauthorized access breach discovery June 15 2025 notification August 14,2026-01-10
+REL-SB-BT-002,SB-002,BT-002,Lost device breach discovery July 1 2025 notification August 30,2026-01-10
+REL-SB-BT-003,SB-003,BT-003,Phishing attack breach discovery September 10 notification November 9,2026-01-10
+REL-SB-BT-004,SB-004,BT-004,Ransomware infection breach discovery October 5 notification December 4,2026-01-10
+REL-SB-BT-005,SB-005,BT-005,Email transmission breach discovery November 12 notification January 11,2026-01-10
+REL-SB-BT-006,SB-006,BT-006,Data disposal breach discovery December 1 notification December 20,2026-01-10
+REL-SB-BT-007,SB-007,BT-007,SQL injection breach discovery January 5 2026 notification March 6,2026-01-10
+REL-SB-BT-008,SB-008,BT-008,Media notification concurrent with individual notification,2026-01-10
+REL-SB-BT-009,SB-009,BT-009,HHS notification same timeline as individual notification,2026-01-10
+REL-SB-BT-010,SB-010,BT-010,Cloud misconfiguration breach ongoing notification through October,2026-01-10
+REL-SB-BT-011,SB-011,BT-001,Unattended workstation breach minimal individuals affected,2026-01-10
+REL-SB-BT-012,SB-012,BT-002,Third-party breach affects covered entity notification timeline,2026-01-10

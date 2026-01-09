@@ -1,0 +1,13 @@
+relationship_id,recipient_id,content_id,description,created_date
+REL-NR-NC-001,NR-001,NC-001,Individual notification includes breach date and discovery information,2026-01-10
+REL-NR-NC-002,NR-002,NC-002,HHS notification includes protective steps for individuals,2026-01-10
+REL-NR-NC-003,NR-003,NC-003,Media notification includes credit monitoring service information,2026-01-10
+REL-NR-NC-004,NR-004,NC-004,Law enforcement notification includes entity response actions,2026-01-10
+REL-NR-NC-005,NR-005,NC-005,Business associate notification includes entity contact information,2026-01-10
+REL-NR-NC-006,NR-006,NC-006,Workforce notification includes HIPAA rights information,2026-01-10
+REL-NR-NC-007,NR-007,NC-007,State AG notification includes hotline information,2026-01-10
+REL-NR-NC-008,NR-008,NC-008,Health plan notification includes breach description details,2026-01-10
+REL-NR-NC-009,NR-009,NC-009,Board notification includes incident summary information,2026-01-10
+REL-NR-NC-010,NR-010,NC-010,Insurance notification includes loss information,2026-01-10
+REL-NR-NC-011,NR-001,NC-001,Individual notification confirmed includes all required elements,2026-01-10
+REL-NR-NC-012,NR-002,NC-002,Secretary notification verified includes proper format,2026-01-10

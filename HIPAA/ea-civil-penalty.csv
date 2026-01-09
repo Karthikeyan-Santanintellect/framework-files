@@ -1,0 +1,11 @@
+relationship_id,action_id,penalty_id,description,created_date
+REL-EA-CP-001,EA-001,CP-001,Enforcement action imposes tier 1 minimal violation penalty,2026-01-10
+REL-EA-CP-002,EA-002,CP-002,Enforcement action imposes tier 2 low violation penalty,2026-01-10
+REL-EA-CP-003,EA-003,CP-003,Enforcement action imposes tier 3 moderate violation penalty,2026-01-10
+REL-EA-CP-004,EA-004,CP-004,Enforcement action imposes tier 4 high violation penalty,2026-01-10
+REL-EA-CP-005,EA-005,CP-005,Enforcement action imposes multiple violation penalties,2026-01-10
+REL-EA-CP-006,EA-006,CP-006,Enforcement action imposes pattern or practice multiplier,2026-01-10
+REL-EA-CP-007,EA-007,CP-007,Enforcement action imposes aggravated violation penalty,2026-01-10
+REL-EA-CP-008,EA-008,CP-008,Enforcement action applies mitigating factors reduction,2026-01-10
+REL-EA-CP-009,EA-009,CP-009,Enforcement action applies aggravating factors increase,2026-01-10
+REL-EA-CP-010,EA-010,CP-010,Enforcement action applies annual aggregate cap,2026-01-10

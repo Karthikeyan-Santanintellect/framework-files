@@ -1,0 +1,11 @@
+relationship_id,investigation_id,action_id,description,created_date
+REL-OI-EA-001,OI-001,EA-001,Complaint investigation results in civil penalty enforcement action,2026-01-10
+REL-OI-EA-002,OI-002,EA-002,Breach investigation results in corrective action plan mandate,2026-01-10
+REL-OI-EA-003,OI-003,EA-003,Compliance review results in business associate termination order,2026-01-10
+REL-OI-EA-004,OI-004,EA-004,Business associate investigation results in security remediation order,2026-01-10
+REL-OI-EA-005,OI-005,EA-005,Willful violation investigation results in monitoring requirement,2026-01-10
+REL-OI-EA-006,OI-006,EA-006,Pattern investigation results in training mandate,2026-01-10
+REL-OI-EA-007,OI-007,EA-007,Post-settlement monitoring results in public notification,2026-01-10
+REL-OI-EA-008,OI-008,EA-008,Coordinated investigation results in federal fund denial,2026-01-10
+REL-OI-EA-009,OI-009,EA-009,Urgent investigation results in criminal referral,2026-01-10
+REL-OI-EA-010,OI-010,EA-010,Criminal investigation results in injunctive relief,2026-01-10

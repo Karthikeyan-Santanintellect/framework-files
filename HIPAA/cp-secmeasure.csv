@@ -1,0 +1,13 @@
+relationship_id,plan_id,measure_id,description,created_date
+REL-CP-SM-001,CP-001,SM-037,Data Backup Plan involves regular backup execution measure,2026-01-09
+REL-CP-SM-002,CP-002,SM-038,Disaster Recovery Plan involves failover systems measure,2026-01-09
+REL-CP-SM-003,CP-003,SM-039,Emergency Mode Operation involves manual procedures measure,2026-01-09
+REL-CP-SM-004,CP-004,SM-040,Testing and Revision involves backup restoration testing,2026-01-09
+REL-CP-SM-005,CP-005,SM-041,Data Criticality Analysis involves system prioritization measure,2026-01-09
+REL-CP-SM-006,CP-006,SM-042,System Redundancy involves hot standby systems measure,2026-01-09
+REL-CP-SM-007,CP-007,SM-043,Off-site Storage involves geographic distribution measure,2026-01-09
+REL-CP-SM-008,CP-008,SM-044,Communication Plan involves notification systems measure,2026-01-09
+REL-CP-SM-009,CP-009,SM-045,Business Associate Coordination involves contractual arrangements,2026-01-09
+REL-CP-SM-010,CP-010,SM-046,Recovery Prioritization involves resource allocation measure,2026-01-09
+REL-CP-SM-011,CP-011,SM-047,Documentation involves policy manuals and procedures,2026-01-09
+REL-CP-SM-012,CP-012,SM-048,Training Program involves workforce preparation measure,2026-01-09

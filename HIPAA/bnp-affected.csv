@@ -1,0 +1,13 @@
+relationship_id,process_id,individual_id,description,created_date
+REL-BNP-AI-001,BNP-001,AI-001,Notification process requires affected individual notification via mail,2026-01-10
+REL-BNP-AI-002,BNP-002,AI-002,Notification process requires affected individual email notification,2026-01-10
+REL-BNP-AI-003,BNP-003,AI-003,Notification process requires affected individual phone notification,2026-01-10
+REL-BNP-AI-004,BNP-004,AI-004,Notification process requires affected individual hand delivery,2026-01-10
+REL-BNP-AI-005,BNP-005,AI-005,Notification process requires substitute notice for affected individuals,2026-01-10
+REL-BNP-AI-006,BNP-006,AI-006,Notification process requires conditional notification of affected individuals,2026-01-10
+REL-BNP-AI-007,BNP-007,AI-007,Notification process handles no notification required scenario,2026-01-10
+REL-BNP-AI-008,BNP-008,AI-008,Notification process requires multiple contact methods for individuals,2026-01-10
+REL-BNP-AI-009,BNP-001,AI-009,Notification process includes protective steps for individuals,2026-01-10
+REL-BNP-AI-010,BNP-002,AI-010,Notification process includes contact information for individuals,2026-01-10
+REL-BNP-AI-011,BNP-003,AI-001,Notification process notifies individuals of mitigating services,2026-01-10
+REL-BNP-AI-012,BNP-004,AI-002,Notification process documents individual acknowledgment,2026-01-10

@@ -1,0 +1,11 @@
+relationship_id,violation_id,investigation_id,description,created_date
+REL-CV-OI-001,CV-001,OI-001,Unauthorized access violation triggers OCR complaint investigation,2026-01-10
+REL-CV-OI-002,CV-002,OI-002,Data breach violation triggers OCR breach investigation,2026-01-10
+REL-CV-OI-003,CV-003,OI-003,Inadequate safeguards triggers compliance review investigation,2026-01-10
+REL-CV-OI-004,CV-004,OI-004,Failure to report breach triggers business associate investigation,2026-01-10
+REL-CV-OI-005,CV-005,OI-005,Business associate agreement violation triggers willful violation investigation,2026-01-10
+REL-CV-OI-006,CV-006,OI-006,Training violation triggers pattern or practice investigation,2026-01-10
+REL-CV-OI-007,CV-007,OI-007,Access control violation triggers post-settlement monitoring,2026-01-10
+REL-CV-OI-008,CV-008,OI-008,Documentation violation triggers coordinated investigation,2026-01-10
+REL-CV-OI-009,CV-009,OI-009,Disposal violation triggers urgent investigation,2026-01-10
+REL-CV-OI-010,CV-010,OI-010,Security awareness violation triggers criminal investigation,2026-01-10

@@ -1,0 +1,11 @@
+relationship_id,entity_id,hybrid_entity_id,description,created_date
+REL-CE-HE-001,CE-001,HE-001,Hospital has university medical system hybrid entity structure,2026-01-10
+REL-CE-HE-002,CE-002,HE-002,Physician practice part of large integrated health system hybrid,2026-01-10
+REL-CE-HE-003,CE-003,HE-003,Dental practice part of provider-sponsored insurer hybrid,2026-01-10
+REL-CE-HE-004,CE-004,HE-004,Health insurance part of pharmaceutical company hybrid,2026-01-10
+REL-CE-HE-005,CE-005,HE-005,HMO part of hospital with non-healthcare subsidiary,2026-01-10
+REL-CE-HE-006,CE-006,HE-006,Medical billing part of dental network with lab services,2026-01-10
+REL-CE-HE-007,CE-007,HE-007,Claims processor part of research institute with hospital,2026-01-10
+REL-CE-HE-008,CE-008,HE-008,Nursing home part of pharmacy chain with clinics,2026-01-10
+REL-CE-HE-009,CE-009,HE-009,Home health part of employer with onsite clinic,2026-01-10
+REL-CE-HE-010,CE-010,HE-010,Pharmacy benefit manager part of mental health center hybrid,2026-01-10
