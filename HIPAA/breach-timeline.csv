@@ -1,0 +1,11 @@
+timeline_id,notification_deadline,discovery_date,notification_date,cfr_citation
+BT-001,60 calendar days from discovery,2025-06-15,2025-08-14,45 CFR 164.404(b)
+BT-002,60 calendar days from discovery,2025-07-01,2025-08-30,45 CFR 164.404(b)
+BT-003,60 calendar days from discovery,2025-09-10,2025-11-09,45 CFR 164.404(b)
+BT-004,60 calendar days from discovery,2025-10-05,2025-12-04,45 CFR 164.404(b)
+BT-005,60 calendar days from discovery,2025-11-12,2026-01-11,45 CFR 164.404(b)
+BT-006,Without unreasonable delay - no more than 60 days,2025-12-01,2025-12-20,45 CFR 164.404(b)
+BT-007,60 calendar days from discovery,2026-01-05,2026-03-06,45 CFR 164.404(b)
+BT-008,Media notification concurrent with individual notification,2026-01-15,2026-03-16,45 CFR 164.404(b)
+BT-009,HHS notification same timeline as individual notification,2026-02-01,2026-04-02,45 CFR 164.404(b)
+BT-010,Ongoing breach - notification for new individuals within 60 days of discovery,2025-08-01,Ongoing through 2025-10-01,45 CFR 164.404(b)

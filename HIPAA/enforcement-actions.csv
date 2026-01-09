@@ -1,0 +1,11 @@
+action_id,action_type,description,authority,cfr_citation
+EA-001,Civil Penalty,Monetary penalty assessed for HIPAA violation,"HHS Office for Civil Rights (OCR), assessed per violation",45 CFR 160.400-414
+EA-002,Corrective Action Plan Mandate,Requirement to develop and implement corrective actions to remedy violations,OCR through settlement agreement or order,45 CFR 160.400
+EA-003,Business Associate Termination Order,Requirement to terminate non-compliant business associate or sub-contractor,OCR recommendation or enforcement order,45 CFR 164.504(e)
+EA-004,Security Remediation Order,Mandate to implement specific security measures or systems,OCR through settlement or administrative order,45 CFR 164.308-312
+EA-005,Monitoring and Auditing Requirement,Mandate to conduct internal audits or submit to third-party audits for compliance verification,OCR through settlement agreement,45 CFR 164.308(a)(8)
+EA-006,Training Mandated,Required HIPAA training for workforce or specific personnel to remediate violations,OCR through corrective action orders,45 CFR 164.308(a)(5)
+EA-007,Public Notification,Entity required to notify public of HIPAA violation and enforcement action,OCR enforcement decision,45 CFR 160.300
+EA-008,Denial or Revocation of Federal Funds,Revocation of Medicare Medicaid or other federal healthcare funding,OCR with CMS coordination,42 USC 1320a-7
+EA-009,Criminal Referral,Referral to Department of Justice for criminal investigation and prosecution,OCR to DOJ,42 USC 1320d-6
+EA-010,Injunctive Relief,Court order requiring specific actions or prohibiting specific conduct,OCR and DOJ through federal court,42 USC 1320d-5

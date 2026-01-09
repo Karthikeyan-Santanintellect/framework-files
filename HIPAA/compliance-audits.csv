@@ -1,0 +1,11 @@
+audit_id,audit_type,description,frequency,scope,cfr_citation
+CA-001,Internal Audit,Covered entity's self-assessment of HIPAA compliance status,"Annual or biennial","All areas of HIPAA compliance including Privacy Security and Breach Notification",45 CFR 164.308(a)(8)
+CA-002,Targeted Audit,Focused examination of specific areas of concern or risk,"As needed based on risk assessment","Specific systems, processes, or workforce areas identified as high-risk",45 CFR 164.308(a)(1)
+CA-003,Breach Audit,Investigation and review following security incident or suspected breach,"Immediately upon discovery","All aspects of breach incident including scope cause impact and response",45 CFR 164.400(b)
+CA-004,Business Associate Audit,Assessment of business associate compliance with HIPAA and Business Associate Agreement,"At least annually","All business associates and their use and disclosure of PHI",45 CFR 164.504(e)(1)(vi)
+CA-005,Access Control Audit,Review of user access to systems and PHI,"At least annually or semi-annually","Access lists permissions authentication logs activity monitoring",45 CFR 164.308(a)(4)(ii)
+CA-006,Encryption Audit,Verification of encryption implementation and key management,"At least annually","Encryption standards, key storage, access controls, cryptographic measures",45 CFR 164.312(a)(2)(iv)
+CA-007,Workforce Training Audit,Assessment of workforce training program effectiveness and compliance,"Annually","Training curriculum, attendance records, competency assessment, refresher timing",45 CFR 164.308(a)(5)
+CA-008,Physical Security Audit,Examination of physical safeguards protecting systems and facilities,"At least annually","Facility access, surveillance, workstation security, media storage",45 CFR 164.310(a)(b)
+CA-009,Documentation Audit,Review of HIPAA required documentation completeness and accuracy,"Annually","Policies procedures, risk assessments, training records, incident logs",45 CFR 164.316(a)(b)
+CA-010,Third-Party Audit,Independent external assessment of HIPAA compliance,"Annually or as requested by regulators","Comprehensive review of all compliance domains by external auditor",45 CFR 164.308(a)(8)

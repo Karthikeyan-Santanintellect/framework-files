@@ -1,0 +1,11 @@
+content_id,required_elements,description,cfr_citation
+NC-001,"Date of breach, date of discovery, description of breach, types of PHI involved","Notification must describe what happened when it was discovered and what information was involved",45 CFR 164.404(b)
+NC-002,"Steps individuals should take to protect themselves, recommended protective measures","Notification should inform individuals about recommended steps to mitigate potential harm",45 CFR 164.404(b)
+NC-003,"Credit monitoring and identity theft prevention services offered, whether offered at no cost, duration of services","Notification must describe any offered mitigation measures and credit monitoring services",45 CFR 164.404(b)
+NC-004,"What covered entity is doing to investigate, mitigate harm, prevent future breaches","Notification should describe entity's response and steps being taken",45 CFR 164.404(b)
+NC-005,"Contact information for covered entity, phone number, email address, website","Notification must provide entity contact information for questions and requests for more information",45 CFR 164.404(b)
+NC-006,"Information about HIPAA rights, how to file complaint with OCR, contact information for OCR","Notification should include information about privacy rights and complaint procedures",45 CFR 164.404(b)
+NC-007,"Toll-free hotline number, website for more information, mailing address for questions","Notification should include multiple contact methods for individual inquiries",45 CFR 164.404(b)
+NC-008,"Description of individuals' rights under HIPAA, how to exercise right to access, amend or receive accounting","Notification should educate individuals about their HIPAA privacy rights",45 CFR 164.404(b)
+NC-009,"Information about credit freeze and fraud alert options available to individuals","Notification should advise individuals of available protective measures",45 CFR 164.404(b)
+NC-010,"Date of notification letter, certification of compliance with all notification requirements","Notification should include administrative details confirming regulatory compliance",45 CFR 164.404(b)

@@ -1,0 +1,11 @@
+penalty_id,offense_type,fine_amount,imprisonment_duration,description,cfr_citation
+CRP-001,Knowingly Obtaining PHI,"$250,000 to $250,000 (per count)","10 years maximum","Intentionally obtaining PHI without authorization for commercial advantage personal gain or malicious harm",42 USC 1320d-6(a)(1)
+CRP-002,Knowingly Disclosing PHI,"$250,000 to $250,000 (per count)","10 years maximum","Intentionally disclosing PHI without authorization for commercial advantage personal gain or malicious harm",42 USC 1320d-6(a)(2)
+CRP-003,Knowingly Obtaining and Disclosing,"$250,000 to $250,000 (per count)","10 years maximum","Intentionally obtaining and disclosing the same PHI without authorization",42 USC 1320d-6(a)(3)
+CRP-004,Unauthorized Access with Intent,"$100,000 to $250,000 (per count)","5 years maximum","Intentionally accessing or attempting to access healthcare information systems knowing you lack authorization",42 USC 1320d-6(b)
+CRP-005,Aggravated Misuse - First Offense,"$250,000 to $500,000 per incident","Up to 15 years","Knowing misuse of PHI causing identifiable harm or risk to health safety or well-being of any individual",42 USC 1320d-6(a)(4)
+CRP-006,Aggravated Misuse - Repeat Offense,"$500,000 to $1,000,000+ per incident","Up to 20 years or life in aggravated cases","Second or subsequent conviction for willfully obtaining or disclosing PHI with intent to harm",42 USC 1320d-6(a)(4)
+CRP-007,Corporate Criminal Liability,"Variable up to $10,000,000+","N/A - entity penalty","Entity criminal liability for employee actions obtaining or disclosing PHI for corporate benefit",42 USC 1320d-6
+CRP-008,Conspiracy to Commit Offense,"$250,000 to $500,000","Up to 10 years","Two or more persons agreeing to knowingly obtain or disclose PHI without authorization",18 USC 371
+CRP-009,Computer Fraud Enhancement,"$250,000 to $500,000+ (stacked penalty)","Additional 10 years on top of base sentence","If offense involves exceeding unauthorized access on computer or network",18 USC 1030
+CRP-010,Identity Theft Enhancement,"$250,000 to $500,000+ (stacked)","Additional 15 years","If misuse of PHI results in identity theft or financial fraud to individuals",18 USC 1028

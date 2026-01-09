@@ -1,0 +1,11 @@
+investigation_id,description,investigation_process,authority,cfr_citation
+OI-001,OCR Complaint Investigation,"Complaint received, preliminary review, entity notification, information gathering, investigation, determination",HHS Office for Civil Rights (OCR),45 CFR 160.300-308
+OI-002,Breach Investigation,"Breach report received, scope determination, entity interview, documentation request, findings determination",OCR with law enforcement coordination as needed,45 CFR 164.404
+OI-003,Compliance Review Investigation,"Proactive compliance review, entity examination, system access review, interviews, findings report",OCR conducted on-site or desk review,45 CFR 160.300
+OI-004,Business Associate Investigation,"Investigation triggered by BA complaints, access to PHI, subcontractor oversight issues",OCR with potential covered entity involvement,45 CFR 164.504(e)
+OI-005,Willful Violation Investigation,"Investigation of intentional knowing or reckless HIPAA violations, enhanced scrutiny, potential criminal referral",OCR with DOJ coordination for criminal violations,45 CFR 160.400
+OI-006,Pattern or Practice Investigation,"Multi-year investigation into systematic HIPAA violations, multiple incidents or entities, comprehensive review",OCR and potentially state attorneys general,45 CFR 160.300
+OI-007,Post-Settlement Monitoring,"Follow-up investigation to verify entity compliance with settlement agreement and corrective actions",OCR for 1-3 year period post-settlement,45 CFR 160.300
+OI-008,Coordinated Investigation,"Investigation conducted jointly with state attorney general or other government agencies",OCR with state and federal coordination,45 CFR 160.300
+OI-009,Urgent Investigation,"Expedited investigation of serious breaches or ongoing violations, faster timeline and intensive review",OCR with priority status,45 CFR 164.404
+OI-010,Criminal Investigation,"Referral to Department of Justice for investigation of criminal HIPAA violations including fraud and willful injury",DOJ with OCR support,42 USC 1320d-6

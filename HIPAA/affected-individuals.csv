@@ -1,0 +1,11 @@
+individual_id,notification_required,notification_method,notification_content,cfr_citation
+AI-001,Yes,Written notice (first class mail),Breach description PHI affected date of breach discovery date notification method and steps individual should take,45 CFR 164.404(b)
+AI-002,Yes,Email notification,Breach description PHI affected date of breach discovery date notification method and contact information,45 CFR 164.404(b)
+AI-003,Yes,Telephone notification,Verbal notification of breach PHI affected date of discovery and direction to call for written information,45 CFR 164.404(b)
+AI-004,Yes,Hand delivery,In-person delivery of breach notification letter with opportunity for questions,45 CFR 164.404(b)
+AI-005,Yes,Substitute notice,Publication in prominent media or posting on website if correct address not available after reasonable efforts,45 CFR 164.404(b)
+AI-006,Conditional,Written notice,Notification if assessment determines significant risk of compromise exists,45 CFR 164.404(b)
+AI-007,No,None required,No notification required if assessment determines low probability of compromise,45 CFR 164.404(b)
+AI-008,Yes,Multiple methods,Primary method selected based on contact information available with backup methods if primary contact fails,45 CFR 164.404(b)
+AI-009,Yes,Written notice,Notification includes recommended protective steps credit monitoring information and information about HIPAA rights,45 CFR 164.404(b)
+AI-010,Yes,Written notice,Contact information for entity and OCR included for questions or to report concerns about breach response,45 CFR 164.404(b)

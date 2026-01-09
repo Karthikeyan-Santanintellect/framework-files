@@ -1,0 +1,11 @@
+plan_id,plan_type,name,description,covered_status,cfr_citation
+HP-001,Health Insurance,Commercial Health Insurance,Employer-sponsored or individual health insurance offering medical coverage,Covered entity if health plan under HIPAA definition,45 CFR 160.103
+HP-002,Health Maintenance Organization (HMO),HMO Health Plan,Prepaid healthcare plan with network of providers and managed care requirements,Covered entity,45 CFR 160.103
+HP-003,Preferred Provider Organization (PPO),PPO Health Plan,Health insurance plan with in-network and out-of-network provider options,Covered entity if offers health insurance,45 CFR 160.103
+HP-004,Point of Service Plan (POS),POS Health Plan,Hybrid plan combining HMO and PPO features with primary care coordination,Covered entity,45 CFR 160.103
+HP-005,Federal Employees Health Benefit Program,FEHBP,Health insurance program for federal government employees and retirees,Covered entity (federal entity covered by HIPAA),45 CFR 160.103
+HP-006,Medicare Advantage Plan,MA Plan,CMS health plan offering Medicare benefits through private insurers,Covered entity,45 CFR 160.103
+HP-007,Medicare Supplement Insurance,Medigap Insurance,Supplemental insurance covering costs not covered by Medicare,May be covered depending on health plan characteristics,45 CFR 160.103
+HP-008,Medicaid Program,Medicaid Health Plan,State and federally funded health insurance for low-income individuals,Covered entity as health plan,45 CFR 160.103
+HP-009,Workers Compensation Insurance,Workers Comp Plan,Insurance covering work-related injuries and occupational illnesses,May be covered if meets health plan definition,45 CFR 160.103
+HP-010,Self-Funded Health Plan,Self-Insured Employee Plan,Employer-funded health plan administered by third party,Covered entity if self-funded employer health plan,45 CFR 160.103

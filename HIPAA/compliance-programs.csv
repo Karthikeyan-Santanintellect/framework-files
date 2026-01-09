@@ -1,0 +1,11 @@
+program_id,name,description,components,monitoring_frequency,cfr_citation
+CP-001,Compliance Committee,Governance structure overseeing HIPAA compliance and risk management,"Committee members, charter, meeting schedule, authority, decision documentation",Quarterly,45 CFR 160.308
+CP-002,Privacy and Security Policy Framework,Comprehensive policies and procedures governing all aspects of HIPAA compliance,"Policy documentation, role definitions, approval process, distribution, annual review",Annually,45 CFR 164.316(a)
+CP-003,Risk Assessment and Management,Systematic process to identify assess and mitigate HIPAA risks,"Risk register, vulnerability assessment, threat analysis, mitigation plans, residual risk",Annually,45 CFR 164.308(a)(1)
+CP-004,Workforce Training and Education,Program ensuring all workforce members understand HIPAA requirements,"Training curriculum, role-specific modules, initial training, annual refresher, documentation",Annually,45 CFR 164.308(a)(5)
+CP-005,Privacy Officer Oversight,Designated individual responsible for compliance program implementation,"Privacy officer authority, responsibilities, resources, reporting structure",Ongoing,45 CFR 164.308(a)(2)
+CP-006,Security Officer Oversight,Designated individual responsible for security safeguards and incident response,"Security officer authority, responsibilities, incident response authority",Ongoing,45 CFR 164.308(a)(2)
+CP-007,Business Associate Management,Program to ensure business associates comply with HIPAA requirements,"Business associate agreements, audits, oversight, breach response procedures",Annually,45 CFR 164.504(e)
+CP-008,Incident Response and Reporting,Procedures for responding to security incidents and breaches,"Incident reporting procedures, investigation steps, mitigation actions, HHS notification",As incidents occur,45 CFR 164.400-404
+CP-009,Documentation and Record-Keeping,Processes to maintain required HIPAA compliance records and documentation,"Document retention schedules, access controls, storage, destruction procedures",Continuously,45 CFR 164.316(b)
+CP-010,Corrective Action Plan,Formal process to address compliance deficiencies and violations,"Deficiency identification, root cause analysis, corrective action design, monitoring",As needed,45 CFR 160.308

@@ -1,0 +1,11 @@
+service_id,service_type,description,duration,cost_bearer,cfr_citation
+MS-001,Credit Monitoring,12 months of credit monitoring and credit report review service,12 months,Covered entity,45 CFR 164.404(b)
+MS-002,Credit Monitoring Plus,24 months of comprehensive credit monitoring and fraud detection,24 months,Covered entity,45 CFR 164.404(b)
+MS-003,Identity Theft Prevention,Identity theft prevention tools and services including credit and identity monitoring,12-24 months,Covered entity,45 CFR 164.404(b)
+MS-004,Credit Freeze Services,Credit freeze setup with all major credit bureaus (Equifax Experian TransUnion),Permanent,Covered entity,45 CFR 164.404(b)
+MS-005,Fraud Alert Services,Fraud alert placement with major credit bureaus renewable annually,12 months renewable,Covered entity,45 CFR 164.404(b)
+MS-006,Legal Services,Legal consultation for identity theft or credit issues resulting from breach,As needed up to 12 months,Covered entity,45 CFR 164.404(b)
+MS-007,Credit Report Review,Annual credit report review and analysis to identify fraud or unauthorized accounts,Annual for 2-3 years,Covered entity,45 CFR 164.404(b)
+MS-008,Hotline Support,24/7 hotline for breach victims to report fraud or obtain mitigation information,Ongoing post-breach,Covered entity,45 CFR 164.404(b)
+MS-009,Document Restoration Assistance,Assistance restoring documents and establishing identity if stolen,6-12 months,Covered entity,45 CFR 164.404(b)
+MS-010,Notification Costs,Cost of notifying affected individuals and credit bureaus,One-time,Covered entity,45 CFR 164.404(b)

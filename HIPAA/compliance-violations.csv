@@ -1,0 +1,16 @@
+violation_id,violation_type,description,severity,rule_violated,cfr_citation
+CV-001,Unauthorized Access,Workforce member accessing PHI without authorization or business need,High,Minimum Necessary Standard and Access Control,45 CFR 164.312(a)(2)
+CV-002,Data Breach,Unencrypted PHI lost stolen or disclosed to unauthorized persons,Critical,Encryption and Security Safeguards,45 CFR 164.312(a)(2)(i)
+CV-003,Inadequate Safeguards,Failure to implement reasonable administrative technical or physical safeguards,High,Security Safeguards Standards,45 CFR 164.308-312
+CV-004,Failure to Report Breach,Covered entity fails to notify affected individuals media or HHS of breach,Critical,Breach Notification Rule,45 CFR 164.400-404
+CV-005,Missing Business Associate Agreement,Covered entity failed to establish business associate agreement with contractor,High,Business Associate Agreements,45 CFR 164.504(e)
+CV-006,Insufficient Training,Workforce not trained on HIPAA requirements and security procedures,Medium,Workforce Training,45 CFR 164.308(a)(5)
+CV-007,Inadequate Access Controls,Systems lack user identification authentication or access restrictions,High,Access Control Standards,45 CFR 164.312(a)(2)(i)
+CV-008,Failure to Maintain Documentation,Required HIPAA policies procedures and records not properly documented,Medium,Documentation Requirements,45 CFR 164.316(a)(b)
+CV-009,Improper Disposal,PHI destroyed or disposed of without secure methods,High,Device and Media Controls,45 CFR 164.310(d)
+CV-010,Lack of Security Awareness,Workforce unaware of security policies or risks to PHI,Low,Security Awareness,45 CFR 164.308(a)(5)(ii)
+CV-011,Failure to Conduct Risk Assessment,Covered entity failed to conduct required security risk assessment,High,Risk Assessment,45 CFR 164.308(a)(1)
+CV-012,Inadequate Incident Response,Security incident discovered but not properly investigated or reported,High,Breach Risk Assessment,45 CFR 164.404(b)
+CV-013,Improper Use Disclosure,PHI used or disclosed beyond authorized purpose,Medium,Uses and Disclosures,45 CFR 164.501-508
+CV-014,Failed Encryption,Systems storing or transmitting PHI lack encryption or weak encryption,High,Encryption Standards,45 CFR 164.312(a)(2)(iv)
+CV-015,Inadequate Sanctions,Violation of HIPAA policies by workforce not resulting in sanctions or corrective action,Medium,Sanction Policy,45 CFR 164.308(a)(1)(ii)(C)

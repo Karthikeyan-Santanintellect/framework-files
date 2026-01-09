@@ -1,0 +1,11 @@
+process_id,name,description,timeline,notification_recipients,cfr_citation
+BNP-001,Discovery and Assessment,Identify and analyze the incident to determine if a breach has occurred and assess the scope of affected PHI,Immediately upon discovery,Internal incident response team,45 CFR 164.404(a)
+BNP-002,Breach Risk Assessment,Conduct formal risk assessment to determine if notification is required based on probability of compromise,Within 24 hours of discovery,Compliance officer and privacy officer,45 CFR 164.404(b)
+BNP-003,Notification Planning,Prepare breach notification plan including contact list and communication strategy,Within 48 hours of discovery,Affected individuals identified in scope,45 CFR 164.404(a)
+BNP-004,Individual Notification,Notify affected individuals of breach without unreasonable delay,Without unreasonable delay but no more than 60 calendar days,Each affected individual,45 CFR 164.404(b)
+BNP-005,Media Notification,Notify prominent media outlets if breach affects more than 500 residents in a single jurisdiction,Simultaneously with individual notification or without unreasonable delay,Media outlets in affected jurisdictions,45 CFR 164.404(b)
+BNP-006,Secretary Notification,Notify Secretary of HHS of breach affecting more than 500 individuals or any breach within 60 days,Without unreasonable delay but no more than 60 calendar days,HHS Office for Civil Rights,45 CFR 164.404(b)
+BNP-007,Breach Log Maintenance,Document all breaches in breach log including discovery date notification date and individuals notified,Immediately after notification complete,Internal compliance records,45 CFR 164.404(f)
+BNP-008,Documentation and Reporting,Prepare comprehensive breach report documenting all aspects of incident and response,Within 90 days of discovery,OCR and internal stakeholders,45 CFR 164.400
+BNP-009,Mitigation Services Coordination,Arrange and provide mitigation services to affected individuals,Within 30 days of notification,Affected individuals,45 CFR 164.404(b)
+BNP-010,Post-Breach Follow-up,Monitor for further security issues and implement corrective actions,Ongoing for 12-24 months,Affected individuals and regulators,45 CFR 164.404

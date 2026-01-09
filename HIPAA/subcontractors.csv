@@ -1,0 +1,11 @@
+subcontractor_id,name,description,service_type,obligations,cfr_citation
+SC-001,IT Infrastructure Subcontractor,Fourth-party IT services supporting business associate infrastructure,Technical,"Implement same safeguards as business associate, maintain data security, report breaches",45 CFR 164.504(e)(1)(ii)
+SC-002,Network Security Vendor,Cybersecurity services for business associates handling PHI,Technical,"Provide threat detection, maintain firewalls, implement intrusion prevention, report incidents",45 CFR 164.504(e)(1)(ii)(A)
+SC-003,Data Center Operations,Facility services for data center hosting PHI systems,Technical,"Maintain physical security, environmental controls, redundancy, disaster recovery",45 CFR 164.310(b)
+SC-004,Backup and Recovery Service,Disaster recovery and business continuity services for PHI systems,Technical,"Maintain secure backups, test recovery procedures, encrypt backup media, secure storage",45 CFR 164.308(a)(7)(ii)
+SC-005,Personnel Staffing Agency,Temporary workforce providing support to covered entities or business associates,Administrative,"Background check workers, train on HIPAA, maintain confidentiality agreements",45 CFR 164.308(a)(3)
+SC-006,Document Shredding Service,Secure destruction of physical records containing PHI,Administrative,"Properly destroy documents, provide certificates of destruction, maintain audit trail",45 CFR 164.308(a)(3)(ii)
+SC-007,Courier or Mail Service,Delivery of documents containing PHI between entities,Administrative,"Maintain chain of custody, secure transport, track deliveries, protect from loss/theft",45 CFR 164.312
+SC-008,Scanning and Digitization Service,Converting physical medical records to electronic format,Technical,"Maintain data integrity during conversion, implement secure transmission, verify accuracy",45 CFR 164.312(c)
+SC-009,Testing and Validation Consultant,Third-party security testing and vulnerability assessment services,Technical,"Conduct authorized testing, report findings, maintain confidentiality of vulnerabilities",45 CFR 164.308(a)(1)
+SC-010,Archive and Retention Service,Long-term storage of historical PHI and medical records,Administrative,"Maintain data integrity over time, implement access controls, secure facilities",45 CFR 164.308(a)(3)

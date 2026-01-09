@@ -1,0 +1,11 @@
+penalty_id,penalty_tier,penalty_range,annual_maximum,description,cfr_citation
+CP-001,Tier 1 - Minimal Violation,"$100 to $50,000 per violation","$1,000,000 per calendar year","Unknowing violation - Covered entity did not know about violation and exercised reasonable diligence",45 CFR 160.410(b)(1)
+CP-002,Tier 2 - Low Violation,"$1,000 to $50,000 per violation","$1,000,000 per calendar year","Violation due to reasonable cause not due to willful neglect - Entity had legitimate business reason",45 CFR 160.410(b)(2)
+CP-003,Tier 3 - Moderate Violation,"$10,000 to $100,000 per violation","$1,000,000 per calendar year","Violation due to willful neglect but cured within 30 day notice period - Entity remedies violation",45 CFR 160.410(b)(3)
+CP-004,Tier 4 - High Violation,"$50,000 to $1,500,000 per violation","$1,500,000 per calendar year","Violation due to willful neglect not cured within 30 days - Entity failed to remediate",45 CFR 160.410(b)(4)
+CP-005,Multiple Violation Penalties,"Calculated per individual affected","Multiplied across affected population","Penalties increased based on number of individuals affected by violation",45 CFR 160.410
+CP-006,Pattern or Practice Multiplier,"Base penalty x 2-5x factor","Up to $1,500,000+ annually","Multiplier applied for pattern or practice of violations demonstrating systematic non-compliance",45 CFR 160.410
+CP-007,Aggravated Violation,"$100,001 to $1,500,000+ per incident","$1,500,000+ per calendar year","Serious violations including knowing misuse of PHI, unauthorized disclosure, or criminal intent",45 CFR 160.410
+CP-008,Mitigating Factors,"Reduced from base tier","Variable reduction","Penalties reduced based on cooperation, corrective actions, first violation, cooperation with OCR",45 CFR 160.410(c)
+CP-009,Aggravating Factors,"Increased from base tier","Up to maximum category","Penalties increased for prior violations, failure to cooperate, intentional conduct, impact magnitude",45 CFR 160.410(d)
+CP-010,Annual Aggregate Cap,"Sum of all violations in calendar year","$1,000,000 to $1,500,000","Total civil penalties for all violations assessed in single calendar year subject to annual maximum",45 CFR 160.410(e)

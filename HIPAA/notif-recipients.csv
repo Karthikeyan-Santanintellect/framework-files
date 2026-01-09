@@ -1,0 +1,11 @@
+recipient_id,recipient_type,notification_method,timeline,cfr_citation
+NR-001,Affected Individual,Written mail or email,Without unreasonable delay but no more than 60 calendar days from discovery,45 CFR 164.404(b)
+NR-002,Secretary of HHS,Electronic submission to OCR,Without unreasonable delay but no more than 60 calendar days,45 CFR 164.404(b)
+NR-003,Media Outlets,Press release or direct contact,Simultaneously with individual notification if 500+ affected,45 CFR 164.404(b)
+NR-004,Law Enforcement,Direct contact or written notice,As directed by law enforcement or without unreasonable delay,45 CFR 164.404(b)
+NR-005,Business Associates,Direct notice or email,Without unreasonable delay after determination of breach,45 CFR 164.504(e)
+NR-006,Workforce Members,Email notice and training materials,Without unreasonable delay,45 CFR 164.308(a)(5)
+NR-007,Regulators (State Attorneys General),Electronic submission,Same timeline as HHS notification if breach affects state residents,45 CFR 164.404(b)
+NR-008,Health Plans,Electronic submission and written notice,Without unreasonable delay but no more than 60 calendar days,45 CFR 164.404(b)
+NR-009,Covered Entity Board/Leadership,Internal briefing,Immediately upon discovery,45 CFR 164.404(a)
+NR-010,Insurance Providers,Direct notice and documentation,As required by insurance policy and breach agreement,45 CFR 164.404

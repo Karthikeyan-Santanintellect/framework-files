@@ -1,0 +1,11 @@
+provider_id,provider_type,name,description,covered_if,cfr_citation
+HP-001,Physician,Individual Physician or Medical Doctor,Provider offering diagnosis and treatment of medical conditions,"Transmits health information in electronic form in connection with a healthcare transaction",45 CFR 160.103
+HP-002,Dentist,Dental Care Provider,Provider offering preventive and restorative dental services,"Maintains and transmits health information (dental records) in electronic form",45 CFR 160.103
+HP-003,Optometrist,Vision Care Provider,Provider offering eye exams and vision correction services,"Transmits records electronically or bills electronically for covered services",45 CFR 160.103
+HP-004,Podiatrist,Foot Care Specialist,Provider offering treatment of foot and ankle conditions,"Maintains patient medical records and transmits electronically",45 CFR 160.103
+HP-005,Nurse Practitioner,Advanced Practice Nurse,Provider offering primary care and specialty nursing services,"Holds provider credentials and transmits health information electronically",45 CFR 160.103
+HP-006,Physician Assistant,Physician Assistant,Healthcare provider working under physician supervision,"Practices under a physician's oversight and transmits health information",45 CFR 160.103
+HP-007,Chiropractor,Chiropractic Care Provider,Provider offering spinal manipulation and alignment services,"May be covered if transmits health information electronically or bills for healthcare",45 CFR 160.103
+HP-008,Mental Health Provider,Psychiatrist or Psychologist,Provider offering mental health and psychiatric services,"Maintains patient mental health records and may transmit electronically",45 CFR 160.103
+HP-009,Physical Therapist,Physical Medicine Provider,Provider offering rehabilitation and physical therapy services,"Maintains therapy records and transmits for healthcare transactions",45 CFR 160.103
+HP-010,Home Health Provider,Home-Based Care Provider,Organization providing healthcare services in patient residences,"Transmits health information electronically in healthcare transactions",45 CFR 160.103

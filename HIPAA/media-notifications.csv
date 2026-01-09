@@ -1,0 +1,11 @@
+notification_id,threshold,media_types,content_requirements,cfr_citation
+MN-001,500 or more residents in single jurisdiction,Print newspapers online news outlets local television,Breach description PHI involved protective steps offered, entity contact information OCR contact information,45 CFR 164.404(b)
+MN-002,Prominent media outlets,Radio broadcast news websites social media,Same content as print notification with audio/visual format options,45 CFR 164.404(b)
+MN-003,Large scale breach 10000+ individuals affected,All media types plus national wire services,Detailed breach description geographic scope number affected mitigation services entity response,45 CFR 164.404(b)
+MN-004,Regional breach 1000-10000 individuals,Regional news outlets regional social media,Regional impact statement number of residents affected protective measures,45 CFR 164.404(b)
+MN-005,Local breach 500-1000 individuals,Local newspapers radio local television,Local jurisdiction notice community impact statement,45 CFR 164.404(b)
+MN-006,State-wide impact,State news wires major state newspapers television networks,Statewide impact statement protective measures OCR notification,45 CFR 164.404(b)
+MN-007,Alternative publication method,Website posting press release distribution service,Full notification content posted online for at least 90 days,45 CFR 164.404(b)
+MN-008,Multi-state breach,National media outlets national wire services,Breach description multi-state scope combined individual count,45 CFR 164.404(b)
+MN-009,Healthcare industry specific outlets,Healthcare trade publications medical society communications,Industry-specific breach details lessons learned recommendations,45 CFR 164.404(b)
+MN-010,Timing of media notification,All applicable media outlets,Notification concurrent with or shortly after individual notification,45 CFR 164.404(b)

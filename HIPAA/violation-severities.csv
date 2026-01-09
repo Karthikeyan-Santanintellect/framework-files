@@ -1,0 +1,11 @@
+severity_id,severity_level,description,penalty_range,cfr_citation
+VS-001,Minimal Violation,Technical or administrative violation with minimal impact on PHI or compliance,"$100-$1,000 per violation",45 CFR 160.410
+VS-002,Low Violation,Violation not directly resulting in unauthorized PHI access or disclosure,"$1,001-$10,000 per violation",45 CFR 160.410
+VS-003,Medium Violation,Violation creating risk of unauthorized access disclosure or misuse of PHI,"$10,001-$50,000 per violation",45 CFR 160.410
+VS-004,High Violation,Violation involving unauthorized access disclosure or use of PHI or failure to notify,"$50,001-$100,000 per violation",45 CFR 160.410
+VS-005,Critical Violation,"Willful violation involving unauthorized PHI access disclosure or sale of PHI, or failure to remedy after notice","$100,001 and above per violation",45 CFR 160.410
+VS-006,Reckless Violation,Reckless disregard for HIPAA requirements resulting in significant risk to PHI,"$50,001-$100,000 per violation",45 CFR 160.410
+VS-007,Willful Neglect,Willful neglect of HIPAA requirements that is not cured within specified timeframe,"$100,001-$1,500,000 plus penalties",45 CFR 160.410
+VS-008,Pattern or Practice Violation,Pattern or practice of violation demonstrating systematic non-compliance,"Escalated civil penalties and potential criminal penalties",45 CFR 160.410
+VS-009,Multiple Violation Category,"Violation affecting multiple individuals or multiple breach types","Penalties calculated per violation multiplied by number of affected individuals",45 CFR 160.410
+VS-010,Annual Aggregate Violation,Total penalties assessed for all violations identified within calendar year,"$1,000-$1,500,000 or more annual maximum depending on violation category",45 CFR 160.410

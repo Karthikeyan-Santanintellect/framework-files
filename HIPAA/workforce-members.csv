@@ -1,0 +1,11 @@
+member_id,member_type,description,obligations,training_required,cfr_citation
+WM-001,Physician,Licensed medical doctor or healthcare provider treating patients,Protect PHI, follow security policies, report breaches immediately,Annual HIPAA security training,45 CFR 164.308(a)(5)
+WM-002,Nurse,Licensed nurse providing patient care and treatment,Maintain confidentiality, follow access protocols, use minimum necessary PHI,Annual clinical and security training,45 CFR 164.308(a)(5)
+WM-003,Administrative Staff,Clerical and administrative support staff handling patient information,Protect paper records, secure desk areas, follow filing procedures,Annual HIPAA privacy and security training,45 CFR 164.308(a)(5)
+WM-004,IT Personnel,Information technology professionals maintaining systems and networks,Implement security measures, monitor access, respond to incidents,Annual technical security training,45 CFR 164.308(a)(5)
+WM-005,Billing Staff,Personnel processing insurance claims and patient billing,"Keep billing information confidential, use only for billing purpose, protect financial PHI",Annual billing compliance and privacy training,45 CFR 164.308(a)(5)
+WM-006,Medical Records Staff,Employees managing medical records and health information,"Control access to records, maintain records integrity, ensure confidentiality",Annual records management and HIPAA training,45 CFR 164.308(a)(5)
+WM-007,Security Officer,Individual responsible for security and privacy compliance,"Monitor compliance, investigate incidents, implement corrective actions, maintain documentation",Initial and annual security training,45 CFR 164.308(a)(1)
+WM-008,Contractors and Vendors,Third-party individuals providing services on-site,"Follow covered entity policies, maintain confidentiality, report breaches",Initial HIPAA orientation and annual refresher,45 CFR 164.308(a)(3)
+WM-009,Students and Trainees,Educational and training participants observing or assisting in healthcare,"Maintain confidentiality, follow access restrictions, understand HIPAA regulations",Initial training before PHI access,45 CFR 164.308(a)(5)
+WM-010,Part-Time and Temporary Staff,Non-permanent employees and temporary workers,"Follow all security policies, maintain access logs, report unusual activities",Initial and annual HIPAA training,45 CFR 164.308(a)(5)
