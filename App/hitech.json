@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4013",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
       "mainLabel": "IndustryStandardAndRegulation",
       "labels": [
         "IndustryStandardAndRegulation"
@@ -13,785 +13,1723 @@
       "enactment_date": "2009-02-17"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4015",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
       "mainLabel": "Title",
       "labels": [
         "Title"
       ],
-      "title_id": "Title II",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS Office for Civil Rights (OCR)",
+      "parent_framework": "HITECH Act Root",
+      "name": "Privacy and Security Provisions (Enforcement)",
+      "title_id": "HITECH_SUBTITLE_D",
+      "description": "Enforcement mechanisms tiered civil monetary penalties enhanced OCR authority business associate direct liability breach notification requirements and safe harbor provisions.",
+      "short_name": "Subtitle D",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4035",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
       "mainLabel": "IncentiveProgram",
       "labels": [
         "IncentiveProgram"
       ],
+      "program_category": "Program Evolution & Enhancement",
+      "documentation_requirements": "Ongoing",
+      "timeline_start": "2018-01-01",
+      "participation_requirements": "Maintain certified EHR; Demonstrate health information exchange; API availability and documented access; Information blocking prevention; Patient access to full EHR records; Data export in standard formats; Third-party app integration; Participation in state HIE initiatives; Privacy and security compliance; Annual performance attestation",
+      "audit_procedures": "CMS annual performance validation; Health information exchange testing; API security testing; Information blocking investigation; Patient access audit; Care coordination verification; Secure messaging audit; Vendor compliance review; Competitive analysis; User experience assessment; Outcome measurement",
+      "program_id": "PROMOTING-INTEROP",
+      "program_name": "Promoting Interoperability Program",
+      "description": "Evolved from Meaningful Use Stage 3 (2018 onwards); part of Merit-based Incentive Payment System (MIPS) under Medicare Access and CHIP Reauthorization Act (MACRA); focuses on health information exchange; information blocking prevention; API availability; patient access; third-party developer engagement; and nationwide interoperability; measures refined annually to address emerging interoperability challenges and opportunities; emphasis on patient autonomy and data access rights",
+      "payer": "Medicare/Medicaid",
+      "success_metrics": "Continuous monitoring systems; Regular API testing; Information blocking complaint tracking; Patient access measurement; Care coordination effectiveness assessment; Secure messaging audit; Vendor performance monitoring; Peer comparison analysis; Patient satisfaction surveys; Clinical outcome measurement; Cost-benefit analysis",
+      "compliance_monitoring": "Annual promoting interoperability performance report; Health information exchange volume and quality; Patient portal engagement; API usage metrics; Information blocking complaint history; Patient access request fulfillment; Care coordination statistics; Secure messaging volume; Remote patient monitoring adoption; Interoperability test results",
+      "administrator": "Centers for Medicare & Medicaid Services (CMS)",
+      "meaningful_use_requirement": "Yes - Focus on health information exchange; Patient engagement; API availability; Information blocking prevention; Measures include: Care coordination exchange volume; Patient portal engagement; Completeness and timeliness of data available for exchange; API availability; Information blocking complaint history; Patient access request fulfillment; Documentation of HIE; Telehealth readiness; Remote patient monitoring; Secure messaging",
+      "payment_phases": "Phase 4 (2018+): Program renamed and refocused; Information blocking as primary emphasis; API availability and documented access; Patient access rights enforcement; Third-party developer engagement; Network effects and data liquidity",
+      "functional_requirements": "API for patient data access (FHIR-compliant); Patient portal with download capability; Standard-based data exchange; Health Information Exchange network integration; Care coordination tools; Secure messaging platform; Electronic referral management; Patient authorization controls; Third-party application integration; Remote patient monitoring tools; Clinical decision support; Interoperability testing capability",
+      "phase_3_timeline": "Ongoing",
+      "related_programs": "000+ per violation; Exclusion from MIPS bonus payment; Negative payment adjustment (penalty); Investigation by HHS OCR; OIG audit; Potential exclusion from federal health programs; Reputational damage; Loss of patient trust; Competitive disadvantage; Possible state AG action",
+      "incentive_amount": "Incentive bonuses declining annually; Shift to payment adjustment/penalty model; Medicare: Performance categories determine payment (0.5% to +2% adjustment); Medicaid: State-determined incentives declining; Alternative payment model participation encouraged; Penalty threshold: Those not meeting minimum performance receive negative adjustment",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170 Subpart B (EHR Certification); 21st Century Cures Act (Section 4001 - Information Blocking); 42 CFR 414.1315 (Promoting Interoperability); Centers for Medicare & Medicaid Services (CMS) Promoting Interoperability Annual Rules; Executive Order on Interoperability (2021)",
+      "clinical_objectives": "Measure 1: Health information exchange performance; Measure 2: Patient engagement through secure messaging; Measure 3: Patient access to data (portal downloads; API usage); Measure 4: API availability and security; Measure 5: Information blocking prevention; Measure 6: Care coordination and referral management; Measure 7: Transitions of care documentation; Measure 8: Interoperability and standards compliance; Hospital-specific: Sepsis and mortality outcomes; Surgical site infection rates; Pneumonia measures; Patient safety indicators",
+      "phase_1_timeline": "2018-01-01",
+      "priority_level": "2021 onwards - 21st Century Cures Act emphasis; Executive Order on Interoperability; Enhanced API availability requirements; Patient Access API rule expansion; Developer-friendly approach; Information blocking strict enforcement; 2024+ - Continued focus on API availability; SMART on FHIR standard; Health Data Sharing and Protection rule; Transitioning to EHR Export rule for data portability",
+      "certified_ehr_requirement": "Requires ONC-certified EHR with 2015 edition certification or newer; Must include API for patient access; Information blocking prevention mechanisms; Health information exchange capabilities; Patient engagement tools; Remote monitoring capabilities; Secure communication tools",
+      "administrative_objectives": "Interoperability governance; Health IT staff competency; Regular training and updates; API management and monitoring; Information blocking policy development; Data governance and stewardship; Privacy and security controls; Compliance monitoring; Audit and log reviews; Incident response procedures; Vendor management; Business associate agreements; Regular risk assessments; Board-level reporting",
+      "reporting_requirements": "Promoting Interoperability performance attestation; Health information exchange metrics; API documentation; Information blocking prevention evidence; Patient access statistics; Secure messaging logs; Care coordination records; Third-party app integration records; Vendor contracts with interoperability terms; Staff training documentation; Privacy and security incident reports; Risk assessments",
+      "interoperability_objectives": "Active participation in state HIE; API documentation and open access; FHIR compliance; Standard data format support; Patient-directed data sharing; Health information exchange volume; Secure data transmission; Third-party ecosystem development; Automated care coordination; Real-time information sharing; Public health data exchange capability; Standards conformance (HL7 v2; FHIR; CDA)",
+      "title_reference": "Title II",
+      "program_type": "Quality Reporting Program",
+      "timeline_end": "2023-12-31",
+      "failure_consequences": "Interoperability maturity; API adoption rate; Patient portal engagement; Third-party app ecosystem development; Information blocking complaint rate (low); Care coordination effectiveness; Clinical outcome improvements; Cost reductions; Patient satisfaction; Nationwide data liquidity",
+      "phase_2_timeline": "Ongoing",
+      "payment_structure": "Annual performance-based adjustments; Bonus payments declining; Penalty applied for non-performance; Alignment with MIPS framework; Quality payment structure; Sliding scale based on performance tier",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "status": "Merit-based Incentive Payment System (MIPS); Alternative Payment Models (APMs); State Health Information Exchanges; Qualified Health Information Networks (QHINs); Health Data Sharing and Protection Rule; EHR Export and Access Rule; FDA Digital Health Software Precertification Program; Office of the National Coordinator (ONC) Standards and Certification Program",
+      "eligible_entities": "All eligible Medicare and Medicaid providers; Hospitals; Critical access hospitals; Eligible clinicians; Group practices; Healthcare systems; Telemedicine providers; Behavioral health providers; Long-term care facilities; Federal Qualified Health Centers (FQHCs); Rural health clinics; Federally-insured health plans; Healthcare IT vendors (indirect reporting)",
+      "program_evolution": "Information blocking violation: Civil penalties up to $100"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Patient API architecture and specifications; FHIR standards compliance documentation; Authentication and security procedures; Patient portal integration design; Staff training curriculum; API availability publicity plan; Third-party integration guidelines; Performance and security monitoring; Error handling procedures",
+      "audit_procedures": "Targeted audits of API implementation; API functionality and performance testing; FHIR standards compliance verification; Security and authentication testing; Patient access and data accuracy verification; Third-party integration review; Performance monitoring; User experience assessment",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of patients with access to their electronic health information through API or secure download; API transaction logs; Patient portal activity logs; Third-party application access logs; Data download records",
+      "criterion_name": "Patient Access API",
+      "description": "Provide patient access to electronic health information through secure API (Application Programming Interface); patients must be able to download; transmit; or access their complete EHR data; includes problem list; medication list; allergy list; vital signs; lab results; imaging results; clinical notes; patients must be able to use third-party applications to access and manage their health data; must comply with FHIR or other open standards; supports patient autonomy and data portability; enables patient-directed care; supports population health research",
+      "success_metrics": "API adoption rate; Patient access percentage; API utilization frequency; Third-party integration uptake; Patient satisfaction; Data security incidents (should be minimal); System reliability; User engagement; Patient empowerment indicators",
+      "optional_requirement": "No - required for Stage 3+",
+      "administrative_objective": "Implement patient API functionality; Configure secure authentication; Train staff on API processes; Publicize API availability to patients; Monitor API utilization; Address API issues/errors; Ensure compliance with data security standards",
+      "applicable_entities": "All Medicare providers participating in Meaningful Use; Hospitals; Healthcare systems; Group practices; Eligible Professionals; Telemedicine providers; Specialty practices",
+      "clinical_objective": "Empower patients with access to their health data; Enable patient participation in care; Support chronic disease self-management; Facilitate patient-provider communication; Enable patient-directed research participation; Reduce health disparities through data access; Support health literacy",
+      "threshold_percentage": ">=80% of patients offered API access (Stage 3); >=90% (Promoting Interoperability)",
+      "regulatory_basis": "HITECH Section 3002; 45 CFR 170.302-304; CMS Meaningful Use Stage 3 Final Rule; 21st Century Cures Act Section 4001 (Information Blocking); 42 CFR 414.1315 (Promoting Interoperability);ONC Patient Access API Rule",
+      "compliance_verification": "CMS/State audit of API functionality; Verification of API availability and performance; FHIR compliance testing; Security and authentication testing; Patient access verification; Third-party integration review; Patient satisfaction assessment; Data protection verification",
+      "implementation_timeline": "2015 Q1-Q2 for API development and testing; 2015 Q3-Q4 for stage 3 implementation; Ongoing access provision and support",
+      "priority_level": "Promoting Interoperability API measures; 21st Century Cures Act Patient Access Rule; State API requirements; Federal NHIN connectivity",
+      "reporting_requirements": "Quarterly API availability and performance metrics; Monthly patient API utilization rates; Number of patients accessing via API; Third-party applications used; Data download frequency; API error rates; User satisfaction surveys; Staff competency assessments",
+      "interoperability_objective": "FHIR-compliant API; Secure authentication (OAuth 2.0 or equivalent); Encryption for data in transit; Patient authorization controls; Downloadable data format (PDF/CSV/XML); Third-party app integration; Documentation of API availability; Real-time API access; Performance monitoring",
+      "stage": "Stage 3",
+      "core_requirement": "Yes - Core measure for Stage 3",
+      "failure_consequences": "Non-compliance: Loss of Stage 3 incentive payment; Information blocking violation with up to $100",
+      "criterion_category": "Interoperability & Data Exchange",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "000+ penalties; Exclusion from advanced payment models; Competitive disadvantage; Negative payment adjustment; Loss of quality recognition; Audit findings; Loss of meaningful use certification; Potential OHI OCR investigation",
+      "criterion_id": "MU3-API-PATIENT-ACCESS",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Patient API module; FHIR server; Authentication system (OAuth 2.0); Secure transmission protocol (HTTPS/TLS); Patient portal interface; Data export/download tools; Third-party integration capability; Usage analytics; Security monitoring; Audit logging",
+      "status": "Critical",
+      "data_elements_involved": "All EHR data accessible via API: problem list; medication list; allergy list; vital signs; lab results; imaging results; clinical notes; procedures; immunizations; patient contact information; insurance information; Any modifications to API scope; Timestamp; Patient consent status; API access logs"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "HIE network participation agreement; EHR-HIE connectivity specifications; Staff training curriculum; Data governance policies; Security and privacy procedures; Standards compliance documentation; Quality assurance procedures; Performance monitoring setup",
+      "audit_procedures": "Targeted audits of HIE implementation; Random exchange audits for quality and completeness; Data standards compliance testing; Provider directory accuracy verification; Security and privacy compliance review; Staff competency assessment; Comparative analysis with peer HIE providers",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of office visits where clinical summary for patient was exchanged with other providers; HIE transaction logs; Clinical summary transmission records; Provider acknowledgment documentation; Exchange volume metrics",
+      "criterion_name": "Health Information Exchange",
+      "description": "Participate in state-mandated or national health information exchange (HIE) networks; exchange clinical summary records with other providers; achieve measurable increases in HIE volume and quality; clinical summaries must include problem list; medication list; allergy list; vital signs; lab results; diagnostic findings; must be exchanged in standards-compliant format; supports care coordination across providers; enables continuity of care; improves quality and efficiency",
+      "success_metrics": "HIE participation rate; Clinical summary exchange volume; Exchange quality percentage; Data completeness; Provider participation; Patient consent rates; Care coordination improvements; Quality outcomes; Cost reduction indicators",
+      "optional_requirement": "No - required for Stage 3+",
+      "administrative_objective": "Participate in state HIE network selection; Establish HIE partnerships; Configure EHR for HIE connectivity; Train staff on HIE processes; Monitor exchange volume and quality; Establish data governance for shared information; Implement security and privacy controls",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Healthcare systems; Group practices; Eligible Professionals; Telemedicine providers; Specialists coordinating care",
+      "clinical_objective": "Enable seamless care coordination; Improve care quality through information sharing; Reduce duplicate testing; Facilitate specialist consultation; Support care transitions; Improve patient outcomes; Enable population health insights; Reduce healthcare costs through efficiency",
+      "threshold_percentage": ">=50% of office visits with clinical summary exchange (Stage 3); Increasing trend in HIE volume and quality",
+      "regulatory_basis": "HITECH Section 3002; 45 CFR 170.302-304; CMS Meaningful Use Stage 3 Final Rule; 42 CFR 412.24 (Hospital Quality Reporting); NHIN standards; State HIE guidelines",
+      "compliance_verification": "CMS/State audit of HIE participation; Verification of exchange percentages and volume; Review of clinical summary quality; Data standards compliance verification; Patient chart audits (100+ exchanges); HIE network testing; Security and privacy compliance; Patient consent review",
+      "implementation_timeline": "2015 Q1-Q2 for HIE network selection and setup; 2015 Q3-Q4 for stage 3 implementation; Ongoing exchange participation",
+      "priority_level": "Critical",
+      "reporting_requirements": "Quarterly HIE exchange volume and percentage; Monthly clinical summary transmissions; Exchange quality metrics; Provider directory accuracy; Patient consent rates; Data completeness verification; System uptime and performance; Staff competency assessments",
+      "interoperability_objective": "Certified HIE network participation; Standards-compliant data exchange (FHIR/HL7 v2/CDA); Secure transmission (encryption); Clinical summary with required elements; Provider directory integration; Query and retrieve capability; Patient consent management; Real-time or near real-time exchange",
+      "stage": "Stage 3",
+      "core_requirement": "Yes - Core measure for Stage 3",
+      "failure_consequences": "Non-compliance: Loss of Stage 3 incentive payment; Exclusion from advanced payment models; Competitive disadvantage; Negative payment adjustment; Loss of quality recognition; Reduced ability to coordinate care; Audit findings; Loss of meaningful use certification",
+      "criterion_category": "Interoperability & Data Exchange",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "Promoting Interoperability HIE measures; State HIE participation; Federal NHIN connectivity; Care coordination quality measures",
+      "criterion_id": "MU3-HIE-EXCHANGE",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "HIE connectivity module; FHIR/HL7 interface; Secure transmission protocol; Clinical summary template; Provider directory integration; Query/retrieve tools; Patient consent management; Data validation; Audit logging; Performance monitoring",
+      "status": "Active",
+      "data_elements_involved": "Clinical summary content (problems; medications; allergies; vitals; labs; imaging); Patient demographics; Provider identification; Timestamp; Exchange method; Recipient provider; Patient consent status; Data completeness; Quality indicators"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Medication reconciliation workflow documentation; Care transition procedures; Staff training curriculum and records; Pharmacy partnership agreements; EHR functionality specifications; Discrepancy resolution procedures; Quality assurance processes; Documentation templates",
+      "audit_procedures": "Targeted audits of care transitions; Random chart audits focused on medication reconciliation; Reconciliation quality and completeness testing; Pharmacy data cross-verification; Staff workflow observation; Discrepancy resolution documentation review",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of office visits or care transitions during reporting period where medication reconciliation was documented; Reconciliation documentation logs; EHR audit trails; Medication list comparison records; Discrepancy resolution documentation",
+      "criterion_name": "Medication Reconciliation",
+      "description": "Implement medication reconciliation process at each care transition (admission; discharge; transfer between care settings); medication list must be compared to current medications; discrepancies must be identified and resolved; reconciliation must include active medication list verification; allergy/interaction cross-checking; documentation of any changes made; supports medication safety across care continuum; prevents adverse events at transitions of care",
+      "success_metrics": "Medication reconciliation completion rate; Discrepancy identification effectiveness; Resolution accuracy; Care transition quality; Patient safety outcomes; Re-hospitalization reduction; Staff competency; Care coordination improvements",
+      "optional_requirement": "No - required in Stage 2+",
+      "administrative_objective": "Implement medication reconciliation workflow; Establish procedures at admission/discharge/transfer points; Train clinical staff on reconciliation process; Document discrepancy resolution; Implement EHR functionality for side-by-side comparison; Monitor compliance; Verify accuracy of reconciliation",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Healthcare systems; Specialty practices; Ambulatory surgical centers; Group practices with transfer agreements",
+      "clinical_objective": "Identify medication discrepancies at care transitions; Prevent medication errors during transitions; Improve medication safety; Resolve therapy conflicts; Enable seamless care coordination; Improve patient outcomes; Support quality improvement; Reduce re-hospitalizations",
+      "threshold_percentage": ">=50% of office visits/transitions with medication reconciliation (Stage 2); >=90% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Stage 2 Final Rule; Joint Commission National Patient Safety Goals; Care Transition Standards",
+      "compliance_verification": "CMS/State audit of reconciliation documentation; Verification of care transition percentages; Review of reconciliation quality and completeness; Patient chart audits (100+ transitions); Pharmacy system cross-checks; Staff competency verification; Discrepancy resolution follow-up",
+      "implementation_timeline": "2013 Q1-Q2 for reconciliation workflow design; 2013 Q3-Q4 for stage 2 implementation; At each transition point",
+      "priority_level": "Critical",
+      "reporting_requirements": "Quarterly medication reconciliation completion percentage; Monthly volume of reconciliations performed; Discrepancy identification rate; Resolution effectiveness; Staff competency assessments; Care transition quality metrics",
+      "interoperability_objective": "Structured reconciliation process; Patient-provided medication list acceptance; Pharmacy cross-check capability; Previous medication list comparison; Current medication verification; Discrepancy identification and resolution; Documentation of changes; Alert for clinically significant discrepancies",
+      "stage": "Stage 2",
+      "core_requirement": "Yes - Core measure for Stage 2",
+      "failure_consequences": "Non-compliance: Loss of Stage 2 incentive payment; Increased medication error risk at care transitions; Patient safety concerns; Audit findings; Negative payment adjustment; Loss of meaningful use certification; Potential adverse events and liability",
+      "criterion_category": "Clinical Functionality",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU3-Medication Reconciliation; Promoting Interoperability medication reconciliation; Hospital Quality Reporting safe transitions measures",
+      "criterion_id": "MU2-MEDICATION-RECONCILIATION",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Medication reconciliation module; Medication list comparison tools; Patient medication list input field; Pharmacy integration for drug verification; Discrepancy identification algorithm; Alert system; Documentation module; Audit trails; Interoperability interface",
+      "status": "Active",
+      "data_elements_involved": "Previous medication list; Current medication list (patient); Clinician-verified medication list; Medications added; Medications discontinued; Medications changed; Discrepancy description; Reason for discrepancy; Resolution action taken; Reconciliation timestamp; Reconciling clinician"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Expanded CPOE implementation plan; Decision support rule specifications; Staff training curriculum; Lab/Imaging/Procedure system interfaces; CDS alert thresholds; Justification documentation procedures; Data quality standards; Feedback mechanisms",
+      "audit_procedures": "Targeted audits of expanded CPOE implementation; Random order audits across all types; CDS alert testing and effectiveness; System integration functionality testing; Staff workflow observation; Override justification review; Error analysis; Comparative effectiveness with peer systems",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of all orders (medication + lab + imaging + procedure + referral) entered through CPOE; Order entry logs; System audit trails; Decision support logs; Clinical justification documentation",
+      "criterion_name": "Advanced CPOE Implementation",
+      "description": "Expand CPOE implementation beyond medications to include all orders: lab orders; diagnostic imaging orders; procedure orders; referral orders; all orders must include clinical justification; orders must be reviewed with clinical decision support before execution; advanced decision support must provide alerts for patient-specific contraindications; must show efficacy in reducing order errors and improving care quality",
+      "success_metrics": "Expanded CPOE adoption rate; All order type utilization percentage; CDS alert response rate; Order error reduction; Clinical decision quality improvements; Care coordination effectiveness; Patient safety outcomes; System reliability",
+      "optional_requirement": "No - continuation and expansion of Stage 1",
+      "administrative_objective": "Expand CPOE governance to include all order types; Implement advanced decision support rules; Train clinical staff on expanded CPOE; Monitor utilization across all order categories; Establish feedback mechanisms; Continuously refine decision support",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Healthcare systems; Group practices with lab and imaging capabilities; Ambulatory surgery centers",
+      "clinical_objective": "Reduce clinical errors across all order types; Improve clinical decision-making through advanced CDS; Support complex care coordination; Enable real-time verification of order appropriateness; Improve patient safety across all care domains",
+      "threshold_percentage": ">=60% of all orders (Stage 2); >=80% (Stage 3); Expansion beyond Stage 1 medication orders",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Stage 2 Final Rule; Hospital Quality Reporting systems; Clinical decision support standards",
+      "compliance_verification": "CMS/State audit of expanded CPOE capabilities; Verification of order percentages across all types; CDS rule effectiveness testing; Decision support alert review; Patient chart audits (100+ orders); System interface testing; Staff competency verification; Order error analysis",
+      "implementation_timeline": "2013 Q1-Q2 for CPOE expansion planning; 2013 Q3-Q4 for advanced CDS implementation; Staged rollout of order types",
+      "priority_level": "Critical",
+      "reporting_requirements": "Quarterly expanded CPOE utilization percentages; Monthly volume of orders by type; CDS alert frequency and response rates; Order error reduction tracking; Staff competency assessments; System downtime tracking; Override frequency and justification review",
+      "interoperability_objective": "Expanded order types (all clinical orders); Advanced clinical decision support rules; Patient-specific CDS alerts; Evidence-based order criteria; Real-time contraindication checking; Clinical justification fields; Multi-stage review process; Integration with ancillary systems",
+      "stage": "Stage 2",
+      "core_requirement": "Yes - Core measure for Stage 2",
+      "failure_consequences": "Non-compliance: Loss of Stage 2 incentive payment; Competitive disadvantage vs Stage 2 compliant providers; Negative payment adjustment; Audit findings; Loss of meaningful use certification; Reputational impact; Patient safety concerns",
+      "criterion_category": "Clinical Functionality",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU3-Advanced CPOE; Promoting Interoperability CPOE measures; Hospital Quality Reporting ordering measures; PQRS quality measures",
+      "criterion_id": "MU2-CPOE-ADVANCED",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Expanded CPOE module; Lab order interface; Imaging order interface; Procedure order interface; Referral order interface; Advanced CDS rule engine; Decision support alert system; Justification documentation module; Multi-level approval workflow; Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Order type; Order description; Clinical indication; Patient demographics; Relevant test/procedure/referral details; Clinical decision support recommendation; Clinician response to CDS; Override justification (if applicable); Timestamp; Approving clinician"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Allergy list workflow documentation; Staff training curriculum and records; Allergy database integration; NKDA documentation procedure; Medication-allergy interaction procedure; Alert configuration; Data quality standards; Accuracy verification methodology",
+      "audit_procedures": "Targeted audits of allergy list documentation; Random chart audits with allergy focus; Data accuracy and completeness testing; NKDA documentation verification; Staff competency assessment; Medication-allergy interaction alert testing; Alert response documentation review",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of office visits during reporting period where active allergy list was reviewed and updated divided by total office visits; Allergy list documentation logs; EHR audit trails; NKDA documentation; Allergy severity tracking",
+      "criterion_name": "Maintain Active Allergy List",
+      "description": "Maintain an active allergy list for all patients; allergy list must include allergy substance; reaction; severity; onset date; documented status; must be reviewed and updated at each visit; includes medication allergies; food allergies; environmental allergies; contact allergies; no known allergies (NKDA) must be explicitly documented; critical for patient safety; prevents adverse reactions; supports medication safety; enables emergency care coordination",
+      "success_metrics": "Allergy list documentation rate; List completeness percentage; NKDA documentation rate; Medication-allergy interaction alert effectiveness; Staff competency; Patient safety outcomes; Adverse reaction prevention; Emergency care readiness",
+      "optional_requirement": "No - required in all stages",
+      "administrative_objective": "Implement allergy list workflow in EHR; Train clinical staff on allergy assessment; Establish review and update procedures at each visit; Implement NKDA documentation; Verify allergy information accuracy; Monitor list completeness; Set up allergy alerts for medications",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Eligible Professionals; Group practices; Healthcare systems; Clinics; Emergency departments; Specialty practices",
+      "clinical_objective": "Prevent adverse allergy reactions; Enable medication safety (reduce allergy-related medication errors); Support emergency care by providing allergy information; Facilitate specialist consultation with allergy awareness; Improve care coordination; Enable population-level allergy data analysis; Support quality improvement initiatives",
+      "threshold_percentage": ">=80% of office visits with active allergy list review and update (Stage 1); >=90% (Stage 2); >=100% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Definition Rule; Patient Safety and Quality Standards; Medication Safety Best Practices",
+      "compliance_verification": "CMS/State audit of allergy list documentation; Verification of visit percentages; Review of list completeness and accuracy; NKDA documentation verification; Patient chart audits (100+ visits); Medication-allergy interaction testing; Alert system functionality review",
+      "implementation_timeline": "2011 Q1-Q2 for allergy list workflow design; 2011 Q3-Q4 for stage 1 documentation; Ongoing updates at each visit",
+      "priority_level": "Critical",
+      "reporting_requirements": "Quarterly allergy list completeness percentage; Monthly documentation frequency; NKDA documentation rate; Medication-allergy interaction alerts (count/effectiveness); Staff competency assessments; Data accuracy verification; Alert response effectiveness",
+      "interoperability_objective": "Structured allergy list with substance name; Reaction type; Severity level (mild/moderate/severe); Onset date; Status (active/resolved/historical); NKDA explicitly documented when applicable; Cross-check with medications at order entry; Alert generation for allergy-medication interactions; Regular updates at each visit",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure",
+      "failure_consequences": "Non-compliance: Loss of incentive payment; Increased risk of adverse allergy reactions; Patient safety concerns; Potential anaphylaxis risk with medications; Audit findings; Negative payment adjustment; Loss of meaningful use certification; Potential patient harm and liability",
+      "criterion_category": "Clinical Data Capture",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU2-Allergy List; MU3-Allergy List; Hospital Quality Reporting patient safety measures; Promoting Interoperability patient safety measures; Joint Commission patient safety standards",
+      "criterion_id": "MU1-ALLERGY-LIST",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Allergy list module; Allergy database with reaction information; Severity classification system; NKDA documentation field; Medication-allergy interaction checker; Alert system for contraindicated medications; Historical allergy tracking; Cross-reference with pharmacy data; Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Allergy substance name; Reaction type (rash/anaphylaxis/etc); Severity (mild/moderate/severe); Onset date; Current status; Documentation date; Clinician name; NKDA indicator if applicable; Related medications to avoid"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Medication list workflow documentation; Staff training curriculum and records; Medication database integration; OTC medication process documentation; Medication reconciliation procedures; Allergy cross-check procedures; Data quality standards; Accuracy verification methodology",
+      "audit_procedures": "Targeted audits of medication list completeness; Random chart audits with medication focus; Data accuracy and completeness testing; OTC medication inclusion verification; Staff competency assessment; Medication reconciliation process review; Allergy/interaction alert testing",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of office visits during reporting period where active medication list was documented divided by total office visits; Medication list documentation logs; EHR audit trails; Medication list completeness checks; Update frequency tracking",
+      "criterion_name": "Maintain Active Medication List",
+      "description": "Maintain an active medication list for all patients; medication list must include medication name; dose; route; frequency; documented date; indication; allergy interactions; medication list must be updated at each visit; includes OTC medications when known; supports medication safety; prevents adverse drug interactions; enables pharmacist review; critical for patient safety and care coordination",
+      "success_metrics": "Medication list documentation rate; List completeness percentage; Medication accuracy; OTC medication inclusion; Allergy cross-check effectiveness; Medication reconciliation frequency; Staff competency; Patient safety outcomes; Medication error reduction",
+      "optional_requirement": "No - required in all stages",
+      "administrative_objective": "Implement medication list workflow in EHR; Train clinical staff on medication list maintenance; Establish update procedures at each visit; Implement OTC medication query process; Monitor list completeness; Verify accuracy of medication data; Implement reconciliation procedures",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Eligible Professionals; Group practices; Healthcare systems; Clinics; Pharmacies (collaborating entities)",
+      "clinical_objective": "Prevent medication errors; Enable detection of adverse drug interactions; Support medication safety; Facilitate care coordination; Enable pharmacist medication review; Improve patient compliance; Support chronic disease management; Enable emergency medication information access",
+      "threshold_percentage": ">=80% of office visits with active medication list documentation (Stage 1); >=90% (Stage 2); >=100% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Definition Rule; Patient Safety Standards; Medication Safety Best Practices",
+      "compliance_verification": "CMS/State audit of medication list documentation; Verification of visit percentages; Review of list completeness and accuracy; Patient chart audits (100+ visits); Medication reconciliation verification; OTC medication tracking; Allergy cross-check testing; Interaction detection effectiveness",
+      "implementation_timeline": "2011 Q1-Q2 for medication list workflow design; 2011 Q3-Q4 for stage 1 documentation; Ongoing updates at each visit",
+      "priority_level": "Critical",
+      "reporting_requirements": "Quarterly medication list completeness percentage; Monthly documentation frequency; OTC medication inclusion rate; Medication reconciliation frequency; Staff competency assessments; Data accuracy verification; Allergy/interaction detection effectiveness",
+      "interoperability_objective": "Structured medication list with all required elements; Update at each visit; OTC medication inclusion; Medication-allergy cross-checking; Interaction alerts; Patient-provided medication lists accepted; Third-party medication list integration; Medication reconciliation capability; Real-time updates",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure",
+      "failure_consequences": "Non-compliance: Loss of incentive payment; Increased medication error risk; Patient safety concerns; Audit findings; Negative payment adjustment; Loss of meaningful use certification; Potential patient harm from adverse interactions",
+      "criterion_category": "Clinical Data Capture",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU2-Medication List; MU3-Medication List; Hospital Quality Reporting patient safety measures; Promoting Interoperability medication measures",
+      "criterion_id": "MU1-MEDICATION-LIST",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Medication list module; Medication database with drug information; Interaction checking engine; Structured medication entry fields; Allergy cross-reference; OTC medication search; Medication reconciliation tools; Alert system; Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Medication name (generic/brand); Dose (amount and unit); Route (oral/IV/etc); Frequency (timing); Indication (reason for medication); Start date; Status (active/discontinued); Side effects/allergies; Prescriber information; Pharmacy name; Last update timestamp"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Smoking status workflow documentation; Staff training curriculum and records; Age verification procedure documentation; Structured data field specifications; Alert configuration; Smoking cessation counseling procedures; Data quality processes; Population health analytics setup",
+      "audit_procedures": "Targeted audits of low smoking status documentation; Random chart audits with smoking status focus; Data accuracy testing; Staff workflow observation; Patient age verification review; Smoking cessation counseling documentation review; Trend analysis of smoking prevalence",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of patients ages 13 and older with documented smoking status divided by total patients ages 13+ seen in reporting period; Smoking status documentation logs; EHR audit trails; Staff training records",
+      "criterion_name": "Smoking Status Recording",
+      "description": "Record smoking status for all patients ages 13 and older at each office visit; smoking status must be documented in structured EHR data field; categories include: current smoker; former smoker; never smoker; unknown status; supports identification of smokers for intervention; critical for preventive health; enables population health analyses; supports chronic disease management in smokers; facilitates smoking cessation counseling",
+      "success_metrics": "Smoking status documentation rate; Current smoker identification rate; Smoking cessation counseling effectiveness; Population smoking prevalence tracking; Staff competency; Data accuracy; Preventive health improvements",
+      "optional_requirement": "No - required in all stages",
+      "administrative_objective": "Implement smoking status workflow in EHR; Train clinical staff on smoking status assessment; Create structured data entry fields; Establish patient age verification (13+); Monitor compliance rates; Implement data quality checks",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Eligible Professionals; Group practices; Healthcare systems; Clinics; Pediatric practices (if serving patients 13+)",
+      "clinical_objective": "Identify smokers for intervention and counseling; Support smoking cessation programs; Improve chronic disease management; Reduce smoking-related complications; Enable population health monitoring of smoking prevalence; Support preventive health initiatives",
+      "threshold_percentage": ">=80% of patients 13+ with smoking status documented (Stage 1); >=90% (Stage 2); >=100% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Definition Rule; Healthy People 2020 smoking cessation objectives; USPSTF smoking cessation recommendations",
+      "compliance_verification": "CMS/State audit of smoking status documentation; Verification of patient percentages; Review of documentation quality; Patient chart audits (100+ charts); Staff competency verification; Smoking cessation counseling tracking; Alert system testing",
+      "implementation_timeline": "2011 Q1-Q2 for EHR workflow setup; 2011 Q3-Q4 for stage 1 implementation; Ongoing monitoring",
+      "priority_level": "High",
+      "reporting_requirements": "Quarterly smoking status documentation percentage; Monthly smoking prevalence statistics; Smoking cessation counseling rates; Staff competency assessments; Data accuracy verification; Alert effectiveness tracking",
+      "interoperability_objective": "Structured smoking status data; Age-appropriate screening; Alert generation for smokers; Documentation of smoking cessation counseling offered; Linkage to smoking cessation resources; Population health analytics capability; Real-time reporting",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure",
+      "failure_consequences": "Non-compliance: Loss of incentive payment; Missed opportunity for smoking cessation intervention; Audit findings; Negative payment adjustment; Loss of meaningful use certification; Risk of quality score reduction; Public health impact",
+      "criterion_category": "Clinical Data Capture",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU2-Smoking Status; MU3-Smoking Status; Hospital Quality Reporting preventive measures; Promoting Interoperability preventive health measures; PQRS preventive care measures",
+      "criterion_id": "MU1-SMOKING-STATUS",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Smoking status documentation module; Age verification algorithm; Structured dropdown/checkbox for smoking status categories; Alert system for smokers; Counseling documentation module; Smoking cessation resource links; Trending and analytics tools; Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Smoking status category (current/former/never/unknown); Date status recorded; Age of patient (to verify 13+); Clinician name; Timestamp; Smoking cessation counseling offered (Y/N); Counseling method; Cessation resources provided"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Vital signs EHR workflow documentation; Staff training curriculum and records; Structured data entry field specifications; Point-of-care device integration guidelines; BMI calculation algorithm; Alert threshold configuration; Data quality procedures; Compliance monitoring methodology",
+      "audit_procedures": "Targeted audits of providers with low vital signs documentation; Random chart audits with vital signs focus; Data accuracy and completeness testing; Point-of-care device functionality review; Staff workflow observation; Alert system effectiveness assessment; Trending functionality verification",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of office visits with documented vital signs and BMI divided by total office visits; Vital signs documentation logs; BMI calculation verification; EHR audit trails showing vital signs entry; Staff training documentation",
+      "criterion_name": "Vital Signs and BMI Recording",
+      "description": "Record vital signs (blood pressure; heart rate; respiratory rate; temperature; oxygen saturation) and body mass index (BMI) for at least one office visit; vital signs and BMI must be documented in structured data fields; includes automated calculation of BMI from height and weight; vital signs must include date and time of measurement; supports identification of abnormal values; enables trending over time; critical for patient safety and chronic disease management",
+      "success_metrics": "Vital signs documentation rate; BMI documentation rate; Data accuracy percentage; Abnormal alert response rate; Clinical action taken on abnormal values; Staff competency; Patient safety outcomes; Chronic disease control improvements",
+      "optional_requirement": "No - required in all stages",
+      "administrative_objective": "Implement vital signs workflow in EHR; Train clinical staff on vital signs measurement and documentation; Establish structured data entry fields; Implement automated BMI calculation; Monitor compliance rates; Verify data accuracy; Implement quality checks",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Eligible Professionals; Group practices; Healthcare systems; Clinics; Ambulatory surgery centers",
+      "clinical_objective": "Identify abnormal vital signs promptly; Support chronic disease monitoring; Enable early detection of health issues; Improve patient safety; Support clinical decision-making; Enable population health monitoring",
+      "threshold_percentage": ">=80% of office visits with vital signs documented (Stage 1); >=90% (Stage 2); >=100% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Definition Rule; Clinical quality standards for vital signs documentation",
+      "compliance_verification": "CMS/State audit of vital signs documentation; Verification of office visit percentages; Review of vital signs completeness and accuracy; Patient chart audits (100+ visits); Point-of-care device testing; Staff competency verification; Alert system testing; BMI calculation accuracy testing",
+      "implementation_timeline": "2011 Q1-Q2 for EHR workflow design; 2011 Q3-Q4 for stage 1 documentation; Continuous monitoring",
+      "priority_level": "High",
+      "reporting_requirements": "Quarterly vital signs documentation percentage; Monthly volume of visits with vital signs recorded; BMI documentation rate; Abnormal alert effectiveness; Staff competency assessments; Data accuracy verification; Trending functionality utilization",
+      "interoperability_objective": "Structured vital signs data; Automated BMI calculation; Alert generation for abnormal values; Trending functionality; Point-of-care vital signs device integration; Mobile vital signs entry; Real-time alerts to clinicians",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure",
+      "failure_consequences": "Non-compliance: Loss of incentive payment; Potential patient safety impact from missed abnormal values; Audit findings; Negative payment adjustment; Loss of meaningful use certification; Risk of quality score reduction; Patient safety liability",
+      "criterion_category": "Clinical Data Capture",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU2-Vitals; MU3-Vitals; Hospital Quality Reporting vital signs measures; Promoting Interoperability vital signs measures; PQRS quality measures",
+      "criterion_id": "MU1-VITALS-RECORDING",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Vital signs documentation module; Point-of-care device interfaces; Automated BMI calculator; Alert system for abnormal ranges; Trending and graphing tools; Mobile/tablet vital signs entry; Data validation rules; Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Systolic blood pressure; Diastolic blood pressure; Heart rate (beats per minute); Respiratory rate (breaths per minute); Body temperature (Celsius/Fahrenheit); Oxygen saturation percentage; Height (inches/cm); Weight (pounds/kg); BMI (calculated); Measurement timestamp; Clinician name"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "Lab integration plan and timelines; Laboratory partnership agreements; EHR configuration specifications; Staff training documentation; HL7/FHIR interface specifications; Lab data quality procedures; Data validation scripts; Error handling documentation",
+      "audit_procedures": "Targeted audits of lab integration effectiveness; Random chart audits with lab result focus; Lab connectivity and data quality testing; Staff workflow observation; Data validation sample testing; Comparative analysis of lab data quality across labs; Exception handling review",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of patients with lab results incorporated into EHR divided by total unique patients seen in reporting period; Lab result receipt logs; EHR documentation showing lab result viewing; Electronic result transmission records; Data integrity verification",
+      "criterion_name": "Lab Result Integration",
+      "description": "Receive and incorporate lab results into EHR; lab results must be viewable in structured format; must include test name; test result; reference range; unit of measure; date result received; ordering provider information; includes capability to view lab data over time; supports clinical decision-making; facilitates identification of abnormal results",
+      "success_metrics": "Lab result incorporation rate; Lab data accuracy; Lab viewing utilization rate; Clinical decision-making frequency based on lab data; Duplicate test reduction; Efficiency in diagnosis; Patient outcome improvements; Data quality scores",
+      "optional_requirement": "No - required in all stages",
+      "administrative_objective": "Establish laboratory partnerships; Configure EHR to receive lab results; Implement staff training on lab data interpretation; Maintain system documentation; Track lab result incorporation rates; Verify lab data quality; Implement data validation procedures",
+      "applicable_entities": "Hospitals; Critical Access Hospitals; Eligible Professionals; Healthcare systems; Group practices; Laboratories (as data sources); EHR vendors",
+      "clinical_objective": "Enable clinical decision-making based on lab data; Facilitate disease monitoring; Improve clinical outcomes; Support diagnosis and treatment decisions; Reduce duplicate testing; Enable comparative analysis of results over time",
+      "threshold_percentage": ">=40% of unique patients with lab results (Stage 1); >=50% (Stage 2); >=80% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; CMS Meaningful Use Definition Rule; Laboratory Standards of Care (CLIA regulations); Continuity of Care Document (CCD) Standards",
+      "compliance_verification": "CMS/State audit of lab result capability; Verification of patient percentages with lab data; Lab connectivity testing; Review of lab data quality; Staff interviews on lab data utilization; Patient chart audits (100+ charts); Historical trend verification; Data validation testing",
+      "implementation_timeline": "2011 Q1-Q2 for lab connectivity planning; 2011 Q3-Q4 for stage 1 lab integration; Ongoing lab partnership expansion",
+      "priority_level": "High",
+      "reporting_requirements": "Quarterly lab result receipt percentage; Monthly volume of incorporated lab results; Data accuracy and completeness metrics; Lab result viewing frequency; User adoption statistics; Exception handling effectiveness",
+      "interoperability_objective": "Structured lab data exchange; Standardized lab terminology (LOINC codes); Lab result format standards; Real-time or near-real-time transmission; Exception handling for abnormal results; Audit trails for lab data access",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure",
+      "failure_consequences": "Non-compliance: Loss of incentive payment; Negative payment adjustment; Lab partnership impact on patient care; Audit findings; Potential state health department investigation; Loss of meaningful use certification; Risk of lab compliance issues",
+      "criterion_category": "Clinical Data Management",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU2-Lab Integration; MU3-Lab Integration; Hospital Quality Reporting lab measures; Promoting Interoperability lab data measures",
+      "criterion_id": "MU1-LAB-INTEGRATION",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "Lab result receiving module; HL7 v2/FHIR interface for lab data; Lab result viewing and graphing tools; Abnormal result flags; Historical trending functionality; Data validation algorithms; Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Test name (LOINC code); Test result value; Reference range; Unit of measure; Date result received; Lab name and ID; Ordering provider; Patient demographics; Specimen information; Timestamp"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "E-prescribing system configuration; Pharmacy partnership agreements; Staff training materials and records; Prescription transmission test results; Workflow documentation; Controlled substance procedure documentation; Compliance tracking methodology",
+      "audit_procedures": "Targeted audits of high e-prescribing providers; Random chart audits (100+ prescriptions); Pharmacy transmission testing; Workflow observation; Staff competency verification; Non-e-prescribable medication tracking; Controlled substance compliance verification",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of prescriptions issued electronically divided by total prescriptions issued; Prescription transmission logs; Pharmacy delivery confirmation; E-prescription platform documentation; Controlled substance prescription handling",
+      "criterion_name": "Electronic Prescribing",
+      "description": "Issue at least one electronic prescription (e-prescription) for eligible medications; prescriptions transmitted electronically to pharmacy; includes capability to check for drug interactions; supports medication adherence through electronic transmission; reduces prescription errors and illegible prescriptions; enables pharmacy verification; part of meaningful use safety objectives",
+      "success_metrics": "E-prescription adoption rate; Prescription transmission volume; Prescription error reduction; Patient medication adherence improvement; Pharmacy transmission success rate; Controlled substance compliance; Staff competency; Insurance verification success",
+      "optional_requirement": "No - part of core requirements",
+      "administrative_objective": "Establish e-prescribing workflow; Implement staff training on e-prescribing; Maintain system configuration; Monitor compliance rates; Document controlled substance procedures; Handle non-e-prescribable medications (controlled substances initially excluded)",
+      "applicable_entities": "Eligible Professionals (EPs); Dentists; Optometrists; Pediatricians; Family medicine practitioners; Internists; Group practices; Healthcare systems; Pharmacies (recipients)",
+      "clinical_objective": "Reduce prescription errors; Improve patient medication safety; Ensure legible prescriptions; Support medication adherence; Enable real-time pharmacy communication; Reduce prescription fraud",
+      "threshold_percentage": ">=40% of prescriptions (Stage 1); >=50% (Stage 2); >=60% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; Electronic Prescriptions for Controlled Substances (EPCS) Rule; CMS Meaningful Use Definition Rule; DEA regulation 21 CFR 1300-1312",
+      "compliance_verification": "CMS/State audit of e-prescribing capability; Verification of prescription percentages; Pharmacy connectivity testing; Workflow process review; Staff interviews; Patient chart audits (sample of prescriptions); Controlled substance documentation review; Error analysis",
+      "implementation_timeline": "2011 Q1-Q2 for e-prescribing platform selection; 2011 Q3-Q4 for stage 1 implementation; 2012+ for controlled substance e-prescribing",
+      "priority_level": "Critical",
+      "reporting_requirements": "Monthly e-prescription submission percentage; Pharmacy transmission success rate; Non-e-prescribable medication tracking; Staff competency assessments; Patient feedback on e-prescriptions; Prescription error rate tracking; Insurance verification success rate",
+      "interoperability_objective": "Standardized prescription format; Pharmacy integration; Controlled substance e-prescription capability; Prescription transmission verification; Pharmacy acknowledgment; Real-time insurance verification; Drug formulary checking",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure for EPs and dentists",
+      "failure_consequences": "Non-compliance: Loss of incentive eligibility; Negative payment adjustment; Audit findings; Potential state health department investigation; Loss of meaningful use certification; Risk of DEA enforcement (if controlled substances mishandled)",
+      "criterion_category": "Clinical Functionality",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU1-Drug Interaction Checking; MU2-E-Prescribe; MU3-E-Prescribe; Hospital Quality Reporting (for facilities); Promoting Interoperability e-prescribing measures",
+      "criterion_id": "MU1-E-PRESCRIBE",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "E-prescribing module; Pharmacy connectivity; Prescription transmission system; Controlled substance management (if applicable); Pharmacy network integration; Digital signature capability (for controlled substances); Audit logging",
+      "status": "Active",
+      "data_elements_involved": "Medication name; Dose; Route; Frequency; Quantity; Refills; Patient demographics; Prescriber information; Pharmacy information; Drug allergy alerts; Insurance information; Timestamp; Authorization codes (for controlled substances)"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "mainLabel": "MeaningfulUseCriterion",
+      "labels": [
+        "MeaningfulUseCriterion"
+      ],
+      "documentation_requirements": "CPOE implementation plan; Workflow documentation; Staff training records (all clinical staff); System configuration specifications; Drug database update logs; Pharmacy connectivity test results; CPOE performance metrics; Error rate documentation; Clinical outcome data",
+      "audit_procedures": "Targeted audits for CPOE implementation; Random chart audits (50-100 charts); System functionality testing; Workflow observation; Staff competency verification; Comparative analysis with peer organizations; Drug interaction alert testing",
+      "program_id": "EHR-MEDICARE",
+      "program_name": "Medicare EHR Incentive Program",
+      "measurement_approach": "Percentage of medication orders entered through CPOE divided by total medication orders; Medication order submission logs; EHR system audit trails; Pharmacy connectivity verification; Drug interaction check documentation",
+      "criterion_name": "Computerized Provider Order Entry",
+      "description": "Implement and use computerized provider order entry (CPOE) for medication orders; CPOE must be integrated with EHR system; includes verification of all medication orders entered electronically; drug interaction checks performed at order entry; orders must be transmitted electronically to pharmacy; supports reduction in medication errors and adverse drug events; enables real-time clinical decision support",
+      "success_metrics": "CPOE adoption rate; Medication order volume via CPOE; Medication error reduction percentage; Adverse drug event reduction; Pharmacy transmission success rate; Staff competency scores; Patient safety improvements; Clinical decision support utilization",
+      "optional_requirement": "No - required in all stages",
+      "administrative_objective": "Establish CPOE governance; Implement staff training; Maintain system documentation; Monitor CPOE utilization; Track error reduction",
+      "applicable_entities": "Hospitals; Critical Access Hospitals (CAHs); Eligible Professionals (EPs); Group practices; Healthcare systems; Clinics",
+      "clinical_objective": "Reduce medication errors; Improve medication safety; Decrease adverse drug events; Enable clinical decision support at point of order",
+      "threshold_percentage": ">=60% of medication orders (Stage 1); >=70% (Stage 2); >=80% (Stage 3)",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170.302; 42 CFR 412.24 (Hospital Quality Reporting); CMS Meaningful Use Definition Rule",
+      "compliance_verification": "CMS/State audit of CPOE functionality; Verification of medication order percentages; Review of workflow processes; Pharmacy system connectivity testing; Clinical staff interviews; Patient chart audits (sample of medication orders); Medication error analysis",
+      "implementation_timeline": "2011 Q1-Q2 for initial deployment; 2011 Q3-Q4 for stage 1 compliance; Continuous optimization 2012",
+      "priority_level": "Critical",
+      "reporting_requirements": "Quarterly meaningful use reporting; Monthly CPOE utilization percentages; Medication error tracking; Drug interaction alert effectiveness; Pharmacy connectivity test results; Staff competency assessments",
+      "interoperability_objective": "Electronic transmission to pharmacies; Standardized medication order format; Interoperable drug databases; Lab result integration for medication safety",
+      "stage": "Stage 1",
+      "core_requirement": "Yes - Core measure for all providers",
+      "failure_consequences": "Non-compliance: Loss of incentive payment; Negative payment adjustment beginning 2015; Potential loss of recognition in quality programs; Audit findings; Possible state health department investigation; Loss of meaningful use attestation",
+      "criterion_category": "Clinical Functionality",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "related_measures": "MU1-Drug Interaction Checking; MU2-CPOE; MU3-CPOE; Promoting Interoperability CPOE measures; Hospital Quality Reporting System measures",
+      "criterion_id": "MU1-CPOE",
+      "criterion_type": "Core Measure",
+      "ehr_functionality_required": "CPOE module; Drug interaction checking engine; Pharmacy connectivity; Order management system; Clinical decision support integration; Audit logging; Role-based access control",
+      "status": "Active",
+      "data_elements_involved": "Medication names; Dose; Route; Frequency; Indication; Drug allergies; Existing medications; Drug-drug interactions; Lab values relevant to medication; Prescriber identification; Timestamp"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "mainLabel": "IncentiveProgram",
+      "labels": [
+        "IncentiveProgram"
+      ],
+      "program_category": "Meaningful Use Compliance",
+      "documentation_requirements": "2015-01-01",
+      "timeline_start": "000 per bed; Medicaid: Up to $25",
+      "participation_requirements": "Maintain Stage 2 compliance; Demonstrate Stage 3 measures; Advanced health information exchange; API availability and usage; Information blocking prevention; Patient engagement at scale; Care coordination across settings; Interoperability with outside providers",
+      "audit_procedures": "N/A",
+      "program_id": "MU-STAGE3",
+      "program_name": "Meaningful Use Stage 3",
+      "description": "Third stage of meaningful use program (2015 onwards) focusing on health information exchange; advanced interoperability; information blocking prevention; and patient engagement at scale; implemented as part of Medicare Access and CHIP Reauthorization Act (MACRA) framework; measures refined toward promoting interoperability objectives",
+      "payer": "Medicare/Medicaid",
+      "success_metrics": "Stage 3 meaningful use attestation; Interoperability and health information exchange documentation; API capability documentation; Patient access logs; Third-party app integration records; Care coordination metrics; Information blocking prevention evidence; Patient engagement statistics; Health information exchange test results; Privacy and security assessment reports; Vendor contracts and data sharing agreements",
+      "compliance_monitoring": "N/A",
+      "administrator": "Centers for Medicare & Medicaid Services (CMS)",
+      "meaningful_use_requirement": "Annual bonuses declining; Shift to payment adjustments and penalties; Merit-based payment incentives; Alternative payment model participation; Penalty phase begins for non-participants",
+      "payment_phases": "Measure 1: EHR usage for patient engagement; Measure 2: Patient access to electronic health information; Measure 3: Care coordination and information exchange; Measure 4: API availability and usage; Measure 5: Information blocking prevention; Measure 6: Health information exchange quality; Hospital-specific: Hospital readmission reduction; Hospital-acquired infection prevention; Patient safety measures; Healthcare quality outcomes",
+      "functional_requirements": "2017-12-31",
+      "phase_3_timeline": "Phase 3 (2015-2017+): Interoperability emphasis; Information blocking prevention; Patient engagement; Care coordination at scale; Post-incentive sustainability",
+      "related_programs": "Comprehensive interoperability testing; API functionality validation; Information blocking audit; Care coordination effectiveness measurement; Health information exchange volume analysis; Patient access success rate review; Patient portal usage analysis; Third-party integration review; Security and privacy compliance; Competitive analysis with nationwide providers",
+      "incentive_amount": "Medicare: Up to $44",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170 Subpart B; CMS Meaningful Use Stage 3 Final Rule; Medicare Access and CHIP Reauthorization Act (MACRA); 21st Century Cures Act (Section 4001 - Information Blocking); 42 CFR Parts 412; 414; 42 CFR Part 495",
+      "clinical_objectives": "Yes - Emphasis on health information exchange; Interoperability; Information blocking prevention; Patient access; Care coordination; Measures aligned with Promoting Interoperability objectives; Advanced clinical decision support; Complete ambulatory care documentation; Structured data exchange; API-enabled access; Patient access to full records; Third-party app integration",
+      "phase_1_timeline": "Strategic planning for interoperability; Chief Information Officer (CIO) involvement; Vendor management agreements; Data governance policies; Privacy and security enhancements; Incident response escalation; Advanced threat detection; Regular penetration testing; Board-level oversight; Risk management; Business continuity and disaster recovery; Transition planning for post-incentive era",
+      "priority_level": "Health information exchange volume; API adoption rate; Patient portal engagement; Third-party app integration; Care coordination effectiveness; Patient satisfaction; Interoperability test success; Readmission reduction; Clinical outcome improvements; Information blocking complaint rate",
+      "certified_ehr_requirement": "2015-01-01",
+      "administrative_objectives": "ONC-certified EHR 2014/2015 edition with API capabilities; Interoperability certification; Information blocking prevention measures",
+      "reporting_requirements": "2017-12-31",
+      "interoperability_objectives": "API for patient access; Patient portal with download capability; Third-party app integration; Health information exchange through FHIR (Fast Healthcare Interoperability Resources); Care coordination messaging; Specialist coordination; Secure patient-provider communication; Electronic referral tracking; Patient authorization management",
+      "title_reference": "Title II",
+      "program_type": "Compliance Framework",
+      "timeline_end": "000 per provider; Declining incentives; Focus shifts to penalty avoidance after 2016",
+      "failure_consequences": "Stage 3 meaningful use attestation; Promoting Interoperability measures; Health information exchange statistics; API usage metrics; Patient portal engagement; Third-party app usage; Care coordination volume; Information blocking complaint history; Patient access request fulfillment; Interoperability test results",
+      "phase_2_timeline": "Nationwide health information exchange; APIs available and documented; Patient portal with FHIR compliance; Third-party integration capability; Structured data exchange; Care coordination across multiple settings; Integration with state health information organizations; Public health data exchange; Bi-directional exchange of clinical data; Support for patient-directed information sharing",
+      "payment_structure": "000 per eligible professional (declining); Hospitals: $2",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "status": "Non-compliance: Negative payment adjustments (1-3%); Exclusion from penalty exemption; Potential exclusion from alternative payment models; Competitive disadvantage in value-based arrangements; Loss of quality recognition; Reputational damage; Risk of audit for information blocking; Potential state health department action; Loss of health information exchange participation",
+      "eligible_entities": "All EHR-enabled Medicare and Medicaid providers; Hospitals; Critical access hospitals; Eligible professionals; Group practices; Healthcare systems; Providers reporting through Quality Payment Programs (QPPs)",
+      "program_evolution": "CMS validation of Stage 3 claims; Health information exchange testing; API functionality testing; Information blocking prevention verification; Patient access testing; System interoperability certification; Chart audits (with focus on care coordination); Comparative analysis with peer providers; Patient satisfaction assessment; Vendor compliance review"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "mainLabel": "IncentiveProgram",
+      "labels": [
+        "IncentiveProgram"
+      ],
+      "program_category": "Meaningful Use Compliance",
+      "documentation_requirements": "2013-01-01",
+      "timeline_start": "000 per bed; Medicaid: Up to $25",
+      "participation_requirements": "Continue Stage 1 compliance; Demonstrate Stage 2 measures; Enhanced health information exchange; Advanced clinical decision support; Patient engagement escalation; Care coordination expansion; Specialist coordination; Medication reconciliation across providers",
+      "audit_procedures": "N/A",
+      "program_id": "MU-STAGE2",
+      "program_name": "Meaningful Use Stage 2",
+      "description": "Second stage of meaningful use program (2013-2014) expanding clinical functions; intensifying health information exchange; implementing advanced care coordination; and enhancing patient engagement; providers must meet 17 core measures and 6 optional measures with increased reporting thresholds",
+      "payer": "Medicare/Medicaid",
+      "success_metrics": "Stage 2 meaningful use attestation; Advanced measure data (17 core measures); CPOE order samples; Medication reconciliation documentation; Care coordination records; Health information exchange logs; Specialist coordination documentation; Patient summary samples; Transitions of care records; Staff training documentation; Security incident reports",
+      "compliance_monitoring": "N/A",
+      "administrator": "Centers for Medicare & Medicaid Services (CMS)",
+      "meaningful_use_requirement": "Annual bonuses based on Stage 2 achievement; Higher thresholds required; Payments may decline if stage 2 thresholds not met",
+      "payment_phases": "Measure 1: % of CPOE orders vs total orders; Measure 2: % of eligible patients with clinical decision support; Measure 3: % of unique patients with medication reconciliation; Measure 4: % of transitions of care with summary sent; Measure 5: % of patients with EHR data available for exchange; Measure 6: % of relevant specialists receiving care summaries; Hospital-specific: 30-day readmission rates; Hospital mortality index; Safety outcomes; Patient safety measures",
+      "functional_requirements": "2014-12-31",
+      "phase_3_timeline": "Phase 2 (2013-2014): Advanced clinical features; Health information exchange; Care coordination; Patient engagement escalation",
+      "related_programs": "Comprehensive system reviews; Workflow observation; Health information exchange testing; CPOE validation; Medication reconciliation process review; Care coordination effectiveness assessment; Data accuracy validation; Patient safety incident analysis; Staff competency verification",
+      "incentive_amount": "Medicare: Up to $44",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170 Subpart B; CMS Meaningful Use Stage 2 Final Rule; 42 CFR Parts 412; 414; 42 CFR Part 495; Certification Commission for Health Information Technology (CCHIT) Standards",
+      "clinical_objectives": "Yes - Must meet 17 core objectives and 3 of 6 optional objectives; Core objectives include: All Stage 1 requirements PLUS: Advanced clinical decision support; Care coordination systems; Medication reconciliation; Computerized provider order entry (CPOE); Lab integration with alerts; Clinical notes in EHR; Drug formulary checking; Patient summary records; Transitions of care summaries; Patient consent capabilities; Transitions of care documentation; Electronic transmission of test results; Summary care records for patient portal",
+      "phase_1_timeline": "Advanced governance and oversight; EHR steering committee; Clinical leadership involvement; IT infrastructure planning; Staff competency assessment; Escalated training requirements; Incident response procedures; Contingency planning; Disaster recovery testing; Regular security audits; Business continuity planning",
+      "priority_level": "Adoption rate of Stage 2; Advanced functionality utilization; Health information exchange volume; Care coordination effectiveness; Readmission rate reduction; Patient safety improvements; Medication error reduction; Specialist coordination rates; Patient portal engagement increase",
+      "certified_ehr_requirement": "2013-01-01",
+      "administrative_objectives": "Upgraded ONC-certified EHR for 2013/2014 edition with enhanced interoperability",
+      "reporting_requirements": "2014-12-31",
+      "interoperability_objectives": "Advanced CPOE; Clinical decision support; Lab result management; Medication reconciliation; Care summary records; Transitions of care documentation; Referral management; Specialist coordination; Patient engagement tools; Health information exchange capabilities; Secure messaging; Electronic test ordering",
+      "title_reference": "Title II",
+      "program_type": "Compliance Framework",
+      "timeline_end": "000 per provider (varies)",
+      "failure_consequences": "Stage 2 meaningful use attestation to CMS; Advanced clinical measures; Health information exchange metrics; Care coordination statistics; Patient portal engagement; Specialist consultation rates; Medication error reduction; 30-day readmission data; Safety outcome reporting",
+      "phase_2_timeline": "Advanced health information exchange; Structured data exchange; Provider-to-provider secure messaging; Patient summaries available for download; Lab result standardization; Referral coordination; Transitions of care documentation standardization; Specialist availability for consultation; Care coordination across settings",
+      "payment_structure": "000 per eligible professional; Hospitals: $2",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "status": "Non-progression to Stage 2: Loss of incentive payments; Competitive disadvantage vs Stage 2 providers; Negative payment adjustments; Potential loss of clinical affiliations; Reduced quality recognition; Audit findings; Mandatory corrective action plans",
+      "eligible_entities": "Eligible Medicare and Medicaid providers continuing from Stage 1; New providers starting 2013; Hospitals; Critical access hospitals; Eligible professionals; Group practices; Healthcare systems",
+      "program_evolution": "CMS validation of Stage 2 claims; Verification of advanced measures; System capability testing; Health information exchange testing; Care coordination verification; Chart audits (100+ records); Patient safety review; Specialist availability verification"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "mainLabel": "IncentiveProgram",
+      "labels": [
+        "IncentiveProgram"
+      ],
+      "program_category": "Meaningful Use Compliance",
+      "documentation_requirements": "2011-01-01",
+      "timeline_start": "000 per bed; Medicaid: Up to $25",
+      "participation_requirements": "Adopt certified EHR; Document core measures; Report quality data; Implement electronic prescribing; Patient portal launch; Care coordination capabilities; Privacy and security controls; Meaningful use attestation submission",
+      "audit_procedures": "N/A",
+      "program_id": "MU-STAGE1",
+      "program_name": "Meaningful Use Stage 1",
+      "description": "First stage of meaningful use program (2011-2012) establishing foundational EHR adoption and basic clinical use; focuses on capturing and sharing health data; implementing electronic prescribing; engaging patients; and improving care coordination; providers must meet 15 core measures and 10 optional measures",
+      "payer": "Medicare/Medicaid",
+      "success_metrics": "Stage 1 meaningful use attestation forms; Quality measure data (15 core measures); Clinical documentation samples; System capability documentation; Pharmacy connectivity proof; Patient portal activity logs; Staff training records; Privacy and security policies",
+      "compliance_monitoring": "N/A",
+      "administrator": "Centers for Medicare & Medicaid Services (CMS)",
+      "meaningful_use_requirement": "Annual bonuses; Fixed amount based on achievement of meaningful use; Payment distributed in year following achievement",
+      "payment_phases": "Measure 1: % of EHR-enabled medication orders; Measure 2: % of patients with electronically recorded vital signs; Measure 3: % of patients with electronically recorded smoking status; Measure 4: % of EHR-enabled discharge summaries sent electronically; Measure 5: % of patients with patient portal access; Hospital-specific measures: Mortality rates; Readmission rates; Hospital-acquired infection rates",
+      "functional_requirements": "2012-12-31",
+      "phase_3_timeline": "Phase 1 (2011-2012): Foundational EHR use; Data capture and documentation; Electronic prescribing; Patient engagement launch",
+      "related_programs": "Targeted audits of early adopters; Random sampling of 10-20% of providers; Technical systems review; Workflow observation; Measure data accuracy validation; Patient satisfaction surveys; Compliance with EHR certification requirements",
+      "incentive_amount": "Medicare: Up to $44",
+      "regulatory_basis": "HITECH Section 3001; 45 CFR 170 Subpart B (EHR Certification); CMS Meaningful Use Stage 1 Final Rule; 42 CFR Parts 412; 414 (Medicare); 42 CFR Part 495 (Medicaid)",
+      "clinical_objectives": "Yes - Must meet 15 core objectives and 5 of 10 optional objectives; Core objectives include: EHR system selection; Patient records electronically; Prescriptions electronically; Drug interaction checking; Lab integration; Lists (problems; allergies; medications); Clinical decision support; Vital signs and BMI recording; Smoking status; Clinical quality measures; Patient portal; Secure messaging; Transitions of care",
+      "phase_1_timeline": "Data management processes; Discretionary use documentation; Clinical staff training; Standard security practices; Consent management; Access control logs; System backup and recovery; Incident reporting; Organizational policies; Management reporting structures",
+      "priority_level": "EHR adoption rate; Physician participation rate; Clinical measure improvement; Patient portal enrollment; Percentage of electronic prescriptions; Lab result integration success; Drug interaction checks; Patient engagement scores; Care coordination effectiveness",
+      "certified_ehr_requirement": "2011-01-01",
+      "administrative_objectives": "Requires ONC-certified EHR for 2011/2012 edition",
+      "reporting_requirements": "2012-12-31",
+      "interoperability_objectives": "Core measures: EHR functions; Electronic prescribing; Drug interaction checking; Lab result access; Clinical decision support; Patient portal; Secure messaging; Care coordination; Vital signs; BMI recording; Smoking status documentation",
+      "title_reference": "Title II",
+      "program_type": "Compliance Framework",
+      "timeline_end": "000 per provider (varies by state)",
+      "failure_consequences": "Submission of Stage 1 meaningful use attestation to CMS; Clinical quality measure reporting; System performance data; Patient engagement metrics; Care coordination statistics",
+      "phase_2_timeline": "Basic data exchange; Electronic connectivity within organization; Lab result integration; Prescription transmission to pharmacies; Patient access to records; Referral documentation; Care coordination notifications",
+      "payment_structure": "000 per eligible professional; Hospitals: $2",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "status": "Non-adoption: Loss of incentive eligibility; Negative payment adjustments starting 2015; Competitive disadvantage; Exclusion from advanced payment models; Audit penalties if incentives misused; Loss of CMS recognition program status; Potential state health department investigation",
+      "eligible_entities": "Eligible Medicare and Medicaid providers; Hospitals; Critical access hospitals; Eligible professionals; Group practices; Healthcare systems",
+      "program_evolution": "CMS validation of Stage 1 claims; Verification of clinical measure achievements; System capability verification through testing; Chart audits (sample of 50-100 records); Patient portal functionality testing; Pharmacy connectivity validation"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "mainLabel": "IncentiveProgram",
+      "labels": [
+        "IncentiveProgram"
+      ],
+      "program_category": "EHR Adoption & Incentives",
+      "documentation_requirements": "2011-01-01",
+      "timeline_start": "000 per Medicaid provider; Maximum aggregate: Up to $63",
+      "participation_requirements": "Adopt ONC-certified EHR technology; Demonstrate meaningful use of EHR; Serve Medicaid patient population (minimum 30%); Meet state-specific EHR requirements; Participate in state HIT testing and evaluation; Submit meaningful use documentation to state; Comply with state-specific security and privacy requirements",
+      "audit_procedures": "2016-12-31",
       "program_id": "EHR-MEDICAID",
-      "name": "Medicaid EHR Incentive Program",
-      "title_id": "Title II",
-      "description": "Incentive payments for Medicaid providers using EHRs",
+      "program_name": "Medicaid EHR Incentive Program",
+      "description": "State-administered incentive payment program providing federal matching payments to eligible Medicaid providers who adopt and meaningfully use certified electronic health record technology; funded through federal matching grants; varies by state implementation",
+      "payer": "Medicaid",
+      "success_metrics": "State attestation forms; Meaningful use documentation; Clinical quality data; Patient population statistics; Proof of ONC certification; Privacy and security assessment results; State compliance documentation; Provider training records; System capability demonstration; Interoperability test results",
+      "compliance_monitoring": "2015-01-01",
+      "administrator": "Centers for Medicare & Medicaid Services (CMS) in coordination with State Medicaid Agencies",
+      "meaningful_use_requirement": "Annual bonuses distributed by state; Federal match rate: 90-100% for program administration; Variable by provider type and state; Declining bonuses over 6-year implementation period; Incentives reduced for non-meaningful users",
+      "payment_phases": "Document clinical assessments and medication lists; Implement pediatric or specialty-specific quality measures; Provider-patient communication capability; Care coordination with other providers; Patient engagement features; Use EHR to improve continuity of care; Medication reconciliation at transitions",
+      "functional_requirements": "2016-12-31",
+      "phase_3_timeline": "Stage 1 (2011-2012): Adoption and meaningful use initiation; Stage 2 (2013-2014): Enhanced clinical functions and data sharing; Stage 3 (2015-2016): Advanced interoperability and care coordination; State-specific timeline adjustments",
+      "related_programs": "Risk-based auditing approach; Random sampling (10-25% annually); Complaint-driven investigations; Comparative analysis with peer providers; Technical security assessments; Workflow and process reviews; Beneficiary satisfaction surveys; Medical record review samples",
+      "incentive_amount": "Initial incentive: $15",
+      "regulatory_basis": "HITECH Section 4101; HITECH Section 4201; 42 CFR Part 495 (Medicaid EHR Incentives); State Plan Amendments (SPAs); Centers for Medicare & Medicaid Services (CMS) guidance on state implementation",
+      "clinical_objectives": "Yes - meaningful use stages determined by state; May differ slightly from Medicare stages",
+      "phase_1_timeline": "Training and competency of EHR staff; Maintain system uptime and availability; Privacy and security controls; Regular staff education; Compliance with state-specific requirements; Documentation of EHR governance; System maintenance and updates; Backup procedures",
+      "priority_level": "Provider EHR adoption rate; Medicaid patient coverage percentage; Meaningful use achievement rates; Quality measure improvement; Patient engagement metrics; Care coordination effectiveness; Reduced emergency department utilization; Improved medication adherence; State HIT testing results; Interoperability score",
+      "certified_ehr_requirement": "2011-01-01",
+      "administrative_objectives": "Yes - ONC-certified EHR required; May have state-specific customizations",
+      "reporting_requirements": "2013-01-01",
+      "interoperability_objectives": "Patient medical records management; Prescriptions capability; Drug interaction checking; Laboratory result access and integration; Secure messaging and communication; Access controls and audit logs; Data encryption; State-mandated interoperability requirements; Pediatric growth charts (for pediatricians); Dental charting (for dentists); Behavioral health assessments (for mental health providers); Substance abuse treatment documentation",
+      "title_reference": "Title II",
+      "program_type": "Provider Incentive Program",
+      "timeline_end": "750 per provider over 5 years; State-specific variations; Higher incentives for primary care providers; Incentives decline annually",
+      "failure_consequences": "Annual meaningful use reporting to state; Quarterly financial reports; Compliance with state-specific metrics; Patient outcome data; Care coordination metrics; HIT testing results; Incident reports; Interoperability status reports",
+      "phase_2_timeline": "Participation in state health information exchange; State-mandated reporting requirements; Coordination with other Medicaid providers; Data sharing agreements; Support for care transitions; Participation in state pilot programs; API availability; Public health reporting",
+      "payment_structure": "000-$25",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "payer": "Medicaid"
+      "status": "Non-compliance: Loss of incentive payments; Reduced Medicaid reimbursement; Exclusion from future state programs; Audit findings and corrective action requirements; Potential state health department investigation; Loss of state certification; Reputational impact; Possible Medicare payment scrutiny; Requirement to return incentive payments if misuse discovered",
+      "eligible_entities": "Medicaid providers; Primary care physicians; Pediatricians; Dentists; Federally qualified health centers (FQHCs); Rural health centers; Hospitals accepting Medicaid patients; Nurse practitioners; Physician assistants; Behavioral health providers; Substance abuse treatment centers; Mental health providers; Indian tribes and tribal organizations",
+      "program_evolution": "Annual state audits of participating providers; Validation of meaningful use claims; Verification of ONC certification; Beneficiary complaint investigation; Financial audit of incentive payments; System capability verification; Privacy and security compliance; Periodic on-site inspections"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4037",
-      "mainLabel": "MeaningfulUseCriterion",
-      "labels": [
-        "MeaningfulUseCriterion"
-      ],
-      "stage": "Stage 1",
-      "program_id": "EHR-MEDICARE",
-      "description": "E-prescribing for eligible professionals",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "criterion_id": "MU1-EPRESCRIBE"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4036",
-      "mainLabel": "MeaningfulUseCriterion",
-      "labels": [
-        "MeaningfulUseCriterion"
-      ],
-      "stage": "Stage 1",
-      "program_id": "EHR-MEDICARE",
-      "description": "Use computerized provider order entry for medication orders",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "criterion_id": "MU1-CPOE"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4034",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
       "mainLabel": "IncentiveProgram",
       "labels": [
         "IncentiveProgram"
       ],
+      "program_category": "EHR Adoption & Incentives",
+      "documentation_requirements": "Stage 1 (2011-2012): Basic EHR capabilities; Stage 2 (2013-2014): Advanced clinical features; Stage 3 (2015-2016): Interoperability and information exchange; Stage 4 (2017+): Continuous improvement",
+      "timeline_start": "500 per provider; Maximum aggregate payment varies by provider type and years of participation; Hospital bonuses: $2",
+      "participation_requirements": "Adopt certified EHR technology; Demonstrate meaningful use of EHR; Meet EHR certification standards from Office of the National Coordinator (ONC); Establish EHR governance structure; Implement data security and privacy safeguards; Participate in Medicare quality reporting programs; Meet clinical quality measures",
+      "audit_procedures": "2015-01-01",
       "program_id": "EHR-MEDICARE",
-      "name": "Medicare EHR Incentive Program",
-      "title_id": "Title II",
-      "description": "Incentive payments for meaningful use of certified EHR technology",
+      "program_name": "Medicare EHR Incentive Program",
+      "description": "Federal incentive payment program providing financial rewards to eligible healthcare providers who adopt and meaningfully use certified electronic health record (EHR) technology to improve quality; safety; and efficiency of healthcare delivery; reduce health disparities; engage patients in their care; and improve care coordination.",
+      "payer": "Medicare",
+      "success_metrics": "2017-01-01",
+      "compliance_monitoring": "2013-01-01",
+      "administrator": "Centers for Medicare & Medicaid Services (CMS)",
+      "meaningful_use_requirement": "000 per physician (2011); Declining percentages in subsequent years",
+      "payment_phases": "Patient medical records management; Electronic prescribing; Drug interaction checking; Lab result viewing and integration; Secure electronic messaging; Audit logs and access controls; Data encryption; Interoperability and health information exchange capabilities; Clinical decision support; Computerized provider order entry (CPOE)",
+      "functional_requirements": "2011-01-01",
+      "phase_3_timeline": "Bidirectional exchange of health data; Interoperability with other EHR systems; Standards-based health information exchange; Secure transmission of health records; Public health reporting capability; Syndication of clinical data; Support for transitions of care; Coordination of care across providers",
+      "related_programs": "Annual CMS audits of 10-25% of providers; Validation of meaningful use claims; Verification of EHR certification; Clinical measure accuracy verification; Privacy and security compliance assessment; Physical security inspection; Access control testing",
+      "incentive_amount": "Initial incentive: $2",
+      "regulatory_basis": "HITECH Section 4101; HITECH Section 4201; 42 CFR Part 412 (Hospital Payments); 42 CFR Part 414 (Physician Payments); Medicare Payment Advisory Commission (MedPAC) guidelines",
+      "clinical_objectives": "2016-12-31",
+      "phase_1_timeline": "Use of CPOE for medication orders; Electronic transmission of pharmacist recommendations; Maintenance of medication allergy lists; Recording vital signs and BMI; Recording smoking status; Implement one clinical quality measure set; Patient portal access; Patient engagement tools; Document and communicate with patients electronically",
+      "priority_level": "Targeted audits based on risk assessment; Random audit sampling; Complaint-driven investigations; Benchmark comparisons with peer organizations; Data anomaly detection; Workflow observation; Staff interviews; Patient chart audits (100 random charts)",
+      "certified_ehr_requirement": "Annual bonus payments; Fixed amount by provider type; Declining payments over 5-year implementation period; Bonuses reduced 25% each year after peak payment; Penalties begin 2015 for non-participants",
+      "administrative_objectives": "Yes - all four meaningful use stages required",
+      "reporting_requirements": "2011-01-01",
+      "interoperability_objectives": "Yes - ONC-certified EHR technology required; Updated certification standards each year",
+      "title_reference": "Title II",
+      "program_type": "Provider Incentive Program",
+      "timeline_end": "000 per hospital bed (up to $2 million); Physician incentives: $44",
+      "failure_consequences": "Medicare claim forms showing incentive payment eligibility; EHR attestation forms; Meaningful use compliance documentation; Clinical quality measure data; System uptime logs; Security risk assessments; Privacy impact assessments; Staff training records; Backup and disaster recovery test results",
+      "phase_2_timeline": "Maintain EHR system uptime (95%+); Accurate patient identification; Complete and legible records; Timely documentation; Training of clinical staff; Privacy and security monitoring; Regular system backup and disaster recovery; Cybersecurity incident response plan",
+      "payment_structure": "000-$4",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "payer": "Medicare"
+      "status": "Adoption rate of certified EHR; Meaningful use achievement rate; Quality measure improvement; Patient satisfaction scores; Reduced medical errors; Decreased hospital readmissions; Improved medication adherence; Increased patient portal adoption; Health information exchange volume; Interoperability test success",
+      "eligible_entities": "Hospitals; Critical access hospitals (CAHs); Medicare-eligible physicians; Specialists; Psychiatrists; Federally qualified health centers (FQHCs); Rural health centers; Dialysis facilities; Rehabilitation providers",
+      "program_evolution": "Annual meaningful use reporting to CMS; Submission of clinical quality measures; EHR system audit logs; Privacy and security incident reports; Interoperability test results; Patient engagement metrics; Care coordination documentation"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4014",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "mainLabel": "Subtitle",
+      "labels": [
+        "Subtitle"
+      ],
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS Office for Civil Rights (OCR)",
+      "parent_framework": "HITECH Act Title I",
+      "name": "Privacy and Security Provisions (Enforcement)",
+      "title_id": "HITECH_TITLE_1",
+      "description": "Enforcement mechanisms tiered civil monetary penalties enhanced OCR authority business associate direct liability breach notification requirements and safe harbor provisions.",
+      "short_name": "Subtitle D",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "HITECH_SUBTITLE_D",
+      "key_concepts": "Tiered penalty framework (4 tiers); Enhanced OCR enforcement authority; Business associate direct liability; Breach notification requirements; Safe Harbor Amendment (2021) provisions; Criminal liability",
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "mainLabel": "Subtitle",
+      "labels": [
+        "Subtitle"
+      ],
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS and CMS",
+      "parent_framework": "HITECH Act Title I",
+      "name": "Grants and Loans Funding",
+      "title_id": "HITECH_TITLE_1",
+      "description": "Financial resources for EHR adoption workforce training funding and health IT infrastructure support to promote electronic health record adoption.",
+      "short_name": "Subtitle C",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "HITECH_SUBTITLE_C",
+      "key_concepts": "EHR adoption grants and loans; Workforce training funding; Health IT infrastructure support; Financial incentives for technology; Provider support programs",
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "mainLabel": "Subtitle",
+      "labels": [
+        "Subtitle"
+      ],
+      "jurisdiction": "United States (Federal)",
+      "authority": "Office of the National Coordinator (ONC)",
+      "parent_framework": "HITECH Act Title I",
+      "name": "Testing of Health Information Technology",
+      "title_id": "HITECH_TITLE_1",
+      "description": "EHR certification standards testing procedures for certified systems and ONC authority to certify electronic health record technology.",
+      "short_name": "Subtitle B",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "HITECH_SUBTITLE_B",
+      "key_concepts": "EHR certification standards; Testing procedures; ONC certification authority; Certified EHR technology requirements; Functional requirements",
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "mainLabel": "Subtitle",
+      "labels": [
+        "Subtitle"
+      ],
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS Office for Civil Rights (OCR)",
+      "parent_framework": "HITECH Act Title I",
+      "name": "Improved Privacy and Security Provisions",
+      "title_id": "HITECH_TITLE_1",
+      "description": "Enhanced HIPAA privacy and security protections extended business associate liability tiered penalties breach notification requirements and expanded enforcement authority.",
+      "short_name": "Subtitle A",
+      "industry_standard_regulation_id": "HITECH_ACT_2009",
+      "subtitle_id": "HITECH_SUBTITLE_A",
+      "key_concepts": "Extended business associate compliance; Direct liability for violations; Enhanced privacy protections; Security Rule enhancements; Breach notification rights",
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
       "mainLabel": "Title",
       "labels": [
         "Title"
       ],
-      "title_id": "Title I",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4017",
-      "mainLabel": "Subtitle",
-      "labels": [
-        "Subtitle"
-      ],
-      "title_id": "Title I",
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS and CMS",
+      "parent_framework": "HITECH Act Root",
+      "name": "Grants and Loans Funding",
+      "title_id": "HITECH_SUBTITLE_C",
+      "description": "Financial resources for EHR adoption workforce training funding and health IT infrastructure support to promote electronic health record adoption.",
+      "short_name": "Subtitle C",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "subtitle_id": "Subtitle D"
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4019",
-      "mainLabel": "Section",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "mainLabel": "Title",
       "labels": [
-        "Section"
+        "Title"
       ],
-      "section_id": "13402",
-      "full_citation": "42 U.S.C. \u00a717932",
-      "heading": "Breach Notification",
-      "topic": "Breach Notification",
-      "text": "Notification in the case of breach of unsecured protected health information",
+      "jurisdiction": "United States (Federal)",
+      "authority": "Office of the National Coordinator (ONC)",
+      "parent_framework": "HITECH Act Root",
+      "name": "Testing of Health Information Technology",
+      "title_id": "HITECH_SUBTITLE_B",
+      "description": "EHR certification standards testing procedures for certified systems and ONC authority to certify electronic health record technology.",
+      "short_name": "Subtitle B",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "subtitle_id": "Subtitle D"
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "mainLabel": "Requirement",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "mainLabel": "Title",
       "labels": [
-        "Requirement"
+        "Title"
       ],
-      "section_id": "13402",
-      "text": "Business associates must notify covered entities following a breach of unsecured ePHI.",
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS Office for Civil Rights (OCR)",
+      "parent_framework": "HITECH Act Root",
+      "name": "Improved Privacy and Security Provisions",
+      "title_id": "HITECH_SUBTITLE_A",
+      "description": "Enhanced HIPAA privacy and security protections extended business associate liability tiered penalties breach notification requirements and expanded enforcement authority.",
+      "short_name": "Subtitle A",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Reporting",
-      "priority": "High",
-      "requirement_id": "HITECH-13402-R2",
-      "status": "Active"
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4024",
-      "mainLabel": "Role",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "mainLabel": "Title",
       "labels": [
-        "Role"
+        "Title"
       ],
-      "role_id": "BUSINESS_ASSOCIATE",
-      "name": "Business Associate",
-      "description": "Performs functions or activities on behalf of a covered entity involving ePHI",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4038",
-      "mainLabel": "ImplementationSpec",
-      "labels": [
-        "ImplementationSpec"
-      ],
-      "owner": "Compliance",
-      "impl_id": "IMPL-BREACH-NOTIF-1",
-      "name": "Breach Notification Workflow",
-      "description": "Detailed workflow for detection, risk assessment, and notification of breaches",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4044",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-NOTIF-WF",
-      "name": "Notification Workflow Control",
-      "description": "Control to ensure execution of breach notification workflow",
+      "jurisdiction": "United States (Federal)",
+      "authority": "Centers for Medicare & Medicaid Services (CMS)",
+      "parent_framework": "HITECH Act",
+      "name": "Medicare and Medicaid HIT",
+      "title_id": "HITECH_TITLE_2",
+      "description": "Medicare and Medicaid incentives for meaningful use of certified EHR technology and EHR adoption for eligible healthcare providers.",
+      "short_name": "Title II",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "category": "Incident Response"
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4047",
-      "mainLabel": "System",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "mainLabel": "Title",
       "labels": [
-        "System"
+        "Title"
       ],
-      "owner": "Compliance",
-      "system_id": "SYSTEM-NOTIF",
-      "name": "Notification Platform",
+      "jurisdiction": "United States (Federal)",
+      "authority": "HHS Office for Civil Rights (OCR)",
+      "parent_framework": "HITECH Act",
+      "name": "Improved Health Information Technology",
+      "title_id": "HITECH_TITLE_1",
+      "description": "Subtitles covering enhanced privacy and security provisions testing of health information technology grants and loans funding and enforcement mechanisms.",
+      "short_name": "Title I",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Cloud Service"
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4042",
-      "mainLabel": "Control",
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "mainLabel": "Title",
       "labels": [
-        "Control"
+        "Title"
       ],
-      "control_id": "CTRL-LOGGING",
-      "name": "Audit Logging",
-      "description": "Controls for logging access to ePHI",
+      "jurisdiction": "United States (Federal)",
+      "authority": "U.S. Department of Health and Human Services (HHS)",
+      "parent_framework": "HIPAA (Health Insurance Portability and Accountability Act)",
+      "name": "Health Information Technology for Economic and Clinical Health Act",
+      "title_id": "HITECH_TITLE_ROOT",
+      "description": "Federal law strengthening HIPAA enforcement expanding breach notification requirements extending compliance to business associates and providing incentives for EHR adoption.",
+      "short_name": "HITECH Act",
       "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "category": "Audit Logging"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4045",
-      "mainLabel": "System",
-      "labels": [
-        "System"
-      ],
-      "owner": "IT",
-      "system_id": "SYSTEM-EHR1",
-      "name": "Primary EHR System",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "EHR"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4032",
-      "mainLabel": "EnforcementAction",
-      "labels": [
-        "EnforcementAction"
-      ],
-      "authority": "HHS OCR",
-      "description": "Civil monetary penalties for violations of HITECH and HIPAA",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Civil Penalty",
-      "enforcement_id": "EA-CIVIL-HHS"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4048",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-BREACH-MGMT",
-      "name": "Breach Management",
-      "description": "End-to-end process for breach detection, assessment, and notification",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4040",
-      "mainLabel": "Policy",
-      "labels": [
-        "Policy"
-      ],
-      "owner": "Compliance",
-      "policy_id": "POL-BREACH-NOTIF",
-      "name": "Breach Notification Policy",
-      "description": "Defines responsibilities and timelines for breach notification",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4030",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "name": "Breach of Unsecured ePHI",
-      "description": "Acquisition, access, use, or disclosure of unsecured ePHI in a manner not permitted",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "event_type_id": "BREACH"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4029",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-A-NOTIFICATION_PROC",
-      "name": "Breach Notification Procedures",
-      "description": "Documented procedures for breach investigation and notification",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Administrative"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4026",
-      "mainLabel": "DataCategory",
-      "labels": [
-        "DataCategory"
-      ],
-      "data_id": "EPHI",
-      "name": "Electronic Protected Health Information",
-      "description": "Individually identifiable health information in electronic form",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "section_id": "13402",
-      "text": "Covered entities must notify affected individuals following a breach of unsecured ePHI.",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Reporting",
-      "priority": "High",
-      "requirement_id": "HITECH-13402-R1",
-      "status": "Active"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4050",
-      "mainLabel": "ExternalFrameworkRequirement",
-      "labels": [
-        "ExternalFrameworkRequirement"
-      ],
-      "framework": "HIPAA Security Rule",
-      "text": "Administrative safeguards including security management process",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "requirement_id": "HIPAA-SEC-164-308"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4023",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "role_id": "COVERED_ENTITY",
-      "name": "Covered Entity",
-      "description": "Health plans, health care clearinghouses, and certain health care providers",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4033",
-      "mainLabel": "EnforcementAction",
-      "labels": [
-        "EnforcementAction"
-      ],
-      "authority": "State AG",
-      "description": "State Attorney General civil actions for violations",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Civil Penalty",
-      "enforcement_id": "EA-AG-STATE"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4028",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-T-ENCRYPTION",
-      "name": "Encryption of ePHI",
-      "description": "Use of encryption technologies to protect ePHI at rest and in transit",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4018",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "section_id": "13400",
-      "full_citation": "42 U.S.C. \u00a717930",
-      "heading": "Definitions",
-      "topic": "Definitions",
-      "text": "Definitions related to HITECH privacy provisions",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "subtitle_id": "Subtitle D"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "section_id": "13400",
-      "text": "Organizations must use statutory definitions of breach and unsecured ePHI for compliance purposes.",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Administrative",
-      "priority": "Medium",
-      "requirement_id": "HITECH-13400-R1",
-      "status": "Active"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4051",
-      "mainLabel": "ExternalFrameworkRequirement",
-      "labels": [
-        "ExternalFrameworkRequirement"
-      ],
-      "framework": "NIST SP 800-53",
-      "text": "Audit events definition and logging",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "requirement_id": "NIST-800-53-AU-2"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4039",
-      "mainLabel": "ImplementationSpec",
-      "labels": [
-        "ImplementationSpec"
-      ],
-      "owner": "IT Security",
-      "impl_id": "IMPL-ENCRYPTION-1",
-      "name": "Database Encryption",
-      "description": "Implementation spec for enabling encryption on EHR database",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4043",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-ENCRYPTION",
-      "name": "Encryption Control",
-      "description": "Controls for encryption of ePHI at rest and in transit",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "category": "Access Control"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4046",
-      "mainLabel": "System",
-      "labels": [
-        "System"
-      ],
-      "owner": "IT",
-      "system_id": "SYSTEM-DB1",
-      "name": "EHR Database Cluster",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "type": "Database"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4049",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-PATIENT-CARE",
-      "name": "Patient Care Delivery",
-      "description": "Clinical care delivery using EHR",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4041",
-      "mainLabel": "Policy",
-      "labels": [
-        "Policy"
-      ],
-      "owner": "IT Security",
-      "policy_id": "POL-ACCESS-CONTROL",
-      "name": "Access Control Policy",
-      "description": "Defines access control rules for ePHI systems",
-      "industry_standard_regulation_id": "HITECH_ACT_2009"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:4016",
-      "mainLabel": "Subtitle",
-      "labels": [
-        "Subtitle"
-      ],
-      "title_id": "Title I",
-      "industry_standard_regulation_id": "HITECH_ACT_2009",
-      "subtitle_id": "Subtitle A"
+      "enactment_date": "2009-02-17",
+      "status": "Active and regularly enforced"
     }
   ],
   "rels": [
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4013",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155389908211208109",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4015",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166648907279631817",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
       "type": "REGULATION_CONTAINS_TITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4015",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327485871",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4035",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224336",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
       "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4035",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839113667",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4037",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1175668201162278508",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
       "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4035",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025428419",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4036",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1173416401348593260",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
       "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4015",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513800623",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4034",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171164601534908012",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1168912801721222764",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166661001907537516",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164409202093852268",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162157402280167020",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159905602466481772",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157653802652796524",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839111276",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025426028",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539088",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
       "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4034",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839113666",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4037",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1175668201162278507",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
       "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4034",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025428418",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4036",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1173416401348593259",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
       "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4013",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153138108397522861",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4014",
-      "type": "REGULATION_CONTAINS_TITLES"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171164601534908011",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4014",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722835886",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4017",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1168912801721222763",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166661001907537515",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164409202093852267",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162157402280167019",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159905602466481771",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157653802652796523",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839111275",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025426027",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853840",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1175668201162278506",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1173416401348593258",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171164601534908010",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1168912801721222762",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166661001907537514",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164409202093852266",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162157402280167018",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159905602466481770",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157653802652796522",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839111274",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025426026",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168592",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1175668201162278505",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1173416401348593257",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171164601534908009",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1168912801721222761",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166661001907537513",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164409202093852265",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162157402280167017",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159905602466481769",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157653802652796521",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839111273",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025426025",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483344",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1175668201162278504",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1173416401348593256",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171164601534908008",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1168912801721222760",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166661001907537512",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164409202093852264",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162157402280167016",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159905602466481768",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157653802652796520",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839111272",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025426024",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798096",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1175668201162278503",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1655",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1173416401348593255",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1654",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1171164601534908007",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1653",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1168912801721222759",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1652",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1166661001907537511",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1651",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164409202093852263",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1650",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162157402280167015",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1649",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159905602466481767",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1648",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157653802652796519",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1647",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155402002839111271",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1646",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153150203025426023",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1645",
+      "type": "INCENTIVE_PROGRAM_USES_MEANINGFUL_USE_CRITERION"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203856",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
       "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4017",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155392107234463665",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4019",
-      "type": "SUBTITLE_CONTAINS_SECTIONS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518608",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4019",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155410798932135859",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "type": "SECTION_HAS_REQUIREMENTS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833360",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153160098630078389",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4024",
-      "type": "REQUIREMENT_ASSIGNED_TO_ROLE"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1488",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148112",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920013923919859654",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4038",
-      "type": "REQUIREMENT_HAS_IMPLEMENTATION_SPEC"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164397107465946569",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "type": "REGULATION_CONTAINS_TITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4038",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153155700583567302",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4044",
-      "type": "IMPLEMENTATION_SPEC_INCLUDES_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224335",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4044",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490545100",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4047",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539087",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4038",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155407500397252550",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4042",
-      "type": "IMPLEMENTATION_SPEC_INCLUDES_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853839",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4042",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490545098",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4045",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168591",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920011724896604096",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4032",
-      "type": "REQUIREMENT_SUBJECT_TO_ENFORCEMENT_ACTION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483343",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920007326850093008",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4048",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798095",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4048",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153157899606822864",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4047",
-      "type": "PROCESS_INVOLVES_SYSTEM"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203855",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978917301",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4044",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518607",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153144705467289525",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4040",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833359",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4040",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153156800095195080",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4044",
-      "type": "POLICY_ENFORCES_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1487",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148111",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4040",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155408599908880328",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4042",
-      "type": "POLICY_ENFORCES_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162145307652261321",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "type": "REGULATION_CONTAINS_TITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153143605955661749",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4030",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224334",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153142506444033973",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4029",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539086",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4021",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153141406932406197",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4026",
-      "type": "REQUIREMENT_INCLUDES_DATA_CATEGORY"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853838",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4019",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153158999118450611",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "type": "SECTION_HAS_REQUIREMENTS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168590",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917768721175941074",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4050",
-      "type": "REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT",
-      "strength": "STRONG",
-      "source": "Compliance Team",
-      "justification": "Breach notification aligns with HIPAA security incident handling"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483342",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153160098630078388",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4023",
-      "type": "REQUIREMENT_ASSIGNED_TO_ROLE"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798094",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917762124106174406",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4038",
-      "type": "REQUIREMENT_HAS_IMPLEMENTATION_SPEC"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203854",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917759925082918849",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4033",
-      "type": "REQUIREMENT_SUBJECT_TO_ENFORCEMENT_ACTION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518606",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917759925082918848",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4032",
-      "type": "REQUIREMENT_SUBJECT_TO_ENFORCEMENT_ACTION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833358",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917758825571291077",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4037",
-      "type": "REQUIREMENT_DRIVES_MEANINGFUL_USE_CRITERION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1486",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148110",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917758825571291076",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4036",
-      "type": "REQUIREMENT_DRIVES_MEANINGFUL_USE_CRITERION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159893507838576073",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "type": "REGULATION_CONTAINS_TITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917755527036407760",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4048",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224333",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978917300",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4044",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539085",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155397604792602548",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4042",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853837",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153144705467289524",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4040",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168589",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153143605955661748",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4030",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483341",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153142506444033972",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4029",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798093",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155394306257719220",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4028",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203853",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4020",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153141406932406196",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4026",
-      "type": "REQUIREMENT_INCLUDES_DATA_CATEGORY"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518605",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4019",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155405301373996979",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4033",
-      "type": "SECTION_SUBJECT_TO_ENFORCEMENT_ACTION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833357",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4019",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153153501560311731",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4032",
-      "type": "SECTION_SUBJECT_TO_ENFORCEMENT_ACTION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1485",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148109",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4017",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153140307420778417",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4018",
-      "type": "SUBTITLE_CONTAINS_SECTIONS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157641708024890825",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "type": "REGULATION_CONTAINS_TITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4018",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153158999118450610",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "type": "SECTION_HAS_REQUIREMENTS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224332",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917768721175941075",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4051",
-      "type": "REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT",
-      "strength": "MODERATE",
-      "source": "Compliance Team",
-      "justification": "Requirement overlaps with NIST audit logging expectations"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539084",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153160098630078390",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4023",
-      "type": "REQUIREMENT_ASSIGNED_TO_ROLE"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853836",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153154601071939510",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4039",
-      "type": "REQUIREMENT_HAS_IMPLEMENTATION_SPEC"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168588",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4039",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153155700583567303",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4043",
-      "type": "IMPLEMENTATION_SPEC_INCLUDES_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483340",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4043",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490545099",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4046",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798092",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920010625384976324",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4036",
-      "type": "REQUIREMENT_DRIVES_MEANINGFUL_USE_CRITERION"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203852",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153148004002172854",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4049",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518604",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4049",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153157899606822865",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4045",
-      "type": "PROCESS_INVOLVES_SYSTEM"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833356",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153145804978917302",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4043",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1484",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148108",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "type": "TITLE_CONTAINS_SUBTITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153144705467289526",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4041",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155389908211205577",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "type": "REGULATION_CONTAINS_TITLES"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4041",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153156800095195081",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4043",
-      "type": "POLICY_ENFORCES_CONTROL"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224331",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4022",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153141406932406198",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4026",
-      "type": "REQUIREMENT_INCLUDES_DATA_CATEGORY"
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539083",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:4014",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909150638",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:4016",
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853835",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168587",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483339",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798091",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203851",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518603",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833355",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1483",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148107",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1481",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153138108397520329",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "type": "REGULATION_CONTAINS_TITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164408102582224330",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1644",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162156302768539082",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1643",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159904502954853834",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1642",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157652703141168586",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1641",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155400903327483338",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1640",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153149103513798090",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1639",
+      "type": "TITLE_ESTABLISHED_INCENTIVE_PROGRAM"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1159894607350203850",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1492",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157642807536518602",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1491",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155391007722833354",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1490",
+      "type": "TITLE_CONTAINS_SUBTITLES"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:1482",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153139207909148106",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:1489",
       "type": "TITLE_CONTAINS_SUBTITLES"
     }
   ]

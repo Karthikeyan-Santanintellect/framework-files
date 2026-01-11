@@ -340,39 +340,39 @@ ON CREATE SET
 #policy
 policy = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Policy {policy_id: row.policy_id,industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (pol:Policy {policy_id: row.policy_id,industry_standard_regulation_id: "HITECH_ACT_2009"})
 ON CREATE SET
-  p.policy_category = row.policy_category,
-  p.policy_name = row.policy_name,
-  p.policy_type = row.policy_type,
-  p.policy_owner = row.policy_owner,
-  p.regulatory_basis = row.regulatory_basis,
-  p.description = row.description,
-  p.scope = row.scope,
-  p.applicability = row.applicability,
-  p.key_objectives = row.key_objectives,
-  p.policy_framework = row.policy_framework,
-  p.core_requirements = row.core_requirements,
-  p.enforcement_mechanisms = row.enforcement_mechanisms,
-  p.compliance_procedures = row.compliance_procedures,
-  p.documentation_requirements = row.documentation_requirements,
-  p.training_requirements = row.training_requirements,
-  p.review_frequency = row.review_frequency,
-  p.approval_authority = row.approval_authority,
-  p.effective_date = row.effective_date,
-  p.last_updated = row.last_updated,
-  p.version_number = row.version_number,
-  p.related_regulations = row.related_regulations,
-  p.related_procedures = row.related_procedures,
-  p.related_standards = row.related_standards,
-  p.implementation_status = row.implementation_status,
-  p.oversight_body = row.oversight_body,
-  p.penalties_for_non_compliance = row.penalties_for_non_compliance,
-  p.exceptions_or_waivers = row.exceptions_or_waivers,
-  p.revision_history = row.revision_history,
-  p.related_policies = row.related_policies,
-  p.priority_level = row.priority_level,
-  p.status = row.status;
+  pol.policy_category = row.policy_category,
+  pol.policy_name = row.policy_name,
+  pol.policy_type = row.policy_type,
+  pol.policy_owner = row.policy_owner,
+  pol.regulatory_basis = row.regulatory_basis,
+  pol.description = row.description,
+  pol.scope = row.scope,
+  pol.applicability = row.applicability,
+  pol.key_objectives = row.key_objectives,
+  pol.policy_framework = row.policy_framework,
+  pol.core_requirements = row.core_requirements,
+  pol.enforcement_mechanisms = row.enforcement_mechanisms,
+  pol.compliance_procedures = row.compliance_procedures,
+  pol.documentation_requirements = row.documentation_requirements,
+  pol.training_requirements = row.training_requirements,
+  pol.review_frequency = row.review_frequency,
+  pol.approval_authority = row.approval_authority,
+  pol.effective_date = row.effective_date,
+  pol.last_updated = row.last_updated,
+  pol.version_number = row.version_number,
+  pol.related_regulations = row.related_regulations,
+  pol.related_procedures = row.related_procedures,
+  pol.related_standards = row.related_standards,
+  pol.implementation_status = row.implementation_status,
+  pol.oversight_body = row.oversight_body,
+  pol.penalties_for_non_compliance = row.penalties_for_non_compliance,
+  pol.exceptions_or_waivers = row.exceptions_or_waivers,
+  pol.revision_history = row.revision_history,
+  pol.related_policies = row.related_policies,
+  pol.priority_level = row.priority_level,
+  pol.status = row.status;
 """
 #control
 control = """
@@ -437,32 +437,32 @@ ON CREATE SET
 #process
 process = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Process {process_id: row.process_id,industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (po:Process {process_id: row.process_id,industry_standard_regulation_id: "HITECH_ACT_2009"})
 ON CREATE SET
-  p.process_name = row.process_name,
-  p.process_category = row.process_category,
-  p.process_type = row.process_type,
-  p.owner_role = row.owner_role,
-  p.supporting_owner = row.supporting_owner,
-  p.description = row.description,
-  p.business_objective = row.business_objective,
-  p.scope = row.scope,
-  p.key_activities = row.key_activities,
-  p.related_policies = row.related_policies,
-  p.related_controls = row.related_controls,
-  p.related_systems = row.related_systems,
-  p.related_data_categories = row.related_data_categories,
-  p.required_roles = row.required_roles,
-  p.training_requirements = row.training_requirements,
-  p.compliance_basis = row.compliance_basis,
-  p.risk_mitigation = row.risk_mitigation,
-  p.metrics_tracked = row.metrics_tracked,
-  p.incident_history = row.incident_history,
-  p.automation_status = row.automation_status,
-  p.frequency_type = row.frequency_type,
-  p.sla_hours = row.sla_hours,
-  p.documentation_level = row.documentation_level,
-  p.status = row.status;
+  po.process_name = row.process_name,
+  po.process_category = row.process_category,
+  po.process_type = row.process_type,
+  po.owner_role = row.owner_role,
+  po.supporting_owner = row.supporting_owner,
+  po.description = row.description,
+  po.business_objective = row.business_objective,
+  po.scope = row.scope,
+  po.key_activities = row.key_activities,
+  po.related_policies = row.related_policies,
+  po.related_controls = row.related_controls,
+  po.related_systems = row.related_systems,
+  po.related_data_categories = row.related_data_categories,
+  po.required_roles = row.required_roles,
+  po.training_requirements = row.training_requirements,
+  po.compliance_basis = row.compliance_basis,
+  po.risk_mitigation = row.risk_mitigation,
+  po.metrics_tracked = row.metrics_tracked,
+  po.incident_history = row.incident_history,
+  po.automation_status = row.automation_status,
+  po.frequency_type = row.frequency_type,
+  po.sla_hours = row.sla_hours,
+  po.documentation_level = row.documentation_level,
+  po.status = row.status;
 """
 #external_framework_requirement
 external_framework_requirement = """
@@ -555,8 +555,8 @@ MERGE (rq)-[:REQUIREMENT_TRIGGERS_EVENT_TYPE]->(et);
 #requirement_policy_rel
 requirement_policy_rel = """
 MATCH (rq:Requirement {industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (po:Policy {industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (rq)-[:REQUIREMENT_SUPPORTED_BY_POLICY]->(po);
+MATCH (pol:Policy {industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (rq)-[:REQUIREMENT_SUPPORTED_BY_POLICY]->(pol);
 """
 #requirement_control_rel
 requirement_control_rel = """
@@ -620,20 +620,20 @@ MERGE (i)-[:IMPLEMENTATION_SPEC_INCLUDES_CONTROL]->(c);
 """
 #policy_control_rel
 policy_control_rel = """
-MATCH (po:Policy {industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (pol:Policy {industry_standard_regulation_id: "HITECH_ACT_2009"})
 MATCH (c:Control {industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (po)-[:POLICY_ENFORCES_CONTROL]->(c);
+MERGE (pol)-[:POLICY_ENFORCES_CONTROL]->(c);
 """
 #process_system_rel
 process_system_rel = """
-MATCH (p:Process {industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (po:Process {industry_standard_regulation_id: "HITECH_ACT_2009"})
 MATCH (sy:System {industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (p)-[:PROCESS_INVOLVES_SYSTEM]->(sy);
+MERGE (po)-[:PROCESS_INVOLVES_SYSTEM]->(sy);
 """
 #requirement_external_framework_requirements_rel
 requirement_external_framework_requirements_rel = """
 MATCH (rq:Requirement {industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (efr:ExternalFrameworkRequirement {framework_requirement_id: "FRAMEWORK-HIPAA-PRIVACY"})
+MATCH (efr:ExternalFrameworkRequirement {framework_requirement_id: "FRAMEWORK-HIPAA-PRIVACY",industry_standard_regulation_id: "HITECH_ACT_2009"})
 MERGE (rq)-[:REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT]->(efr);
 """
 
@@ -660,16 +660,16 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles.csv'))
+client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles_Modified.csv'))
 time.sleep(2)
 
-client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles.csv'))
+client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles_Modified.csv'))
 time.sleep(2)
 
-client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections.csv'))
+client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections_Modified.csv'))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements.csv'))
+client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements_Modified.csv'))
 time.sleep(2)
 
 client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
@@ -684,99 +684,104 @@ time.sleep(2)
 client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
 time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions.csv'))
+client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions_Final.csv'))
 time.sleep(2)
 
-client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms.csv'))
+client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms_Final.csv'))
 time.sleep(2)
 
-client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria.csv'))
+client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria_Final.csv'))
 time.sleep(2)
 
-client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs.csv'))
+client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs_Final.csv'))
 time.sleep(2)
 
-client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies.csv'))
+client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies_Final.csv'))
 time.sleep(2)
 
-client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls.csv'))
+client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls_Final.csv'))
 time.sleep(2)
 
-client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems.csv'))
+client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems_Final.csv'))
 time.sleep(2)
 
 
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Processes.csv'))
+client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Processes_Final.csv'))
 time.sleep(2)
 
-client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements.csv'))  
+client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  
 
-client.query(regulation_title_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Regulation_Titles.csv'))
+client.query(regulation_title_rel)
 time.sleep(2)
 
-client.query(title_subtitle_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_Subtitles.csv'))
+client.query(title_subtitle_rel)
 time.sleep(2)
 
-client.query(subtitle_section_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitle_Sections.csv'))
+client.query(subtitle_section_rel)
 time.sleep(2)   
 
-client.query(section_requirement_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Section_Requirements.csv'))
+client.query(section_requirement_rel)
 time.sleep(2)
 
-client.query(requirement_role_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Roles.csv'))
+client.query(requirement_role_rel)
 time.sleep(2)
 
-client.query(requirement_data_category_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Data.csv'))
+client.query(requirement_data_category_rel)
 time.sleep(2)   
 
-client.query(requirement_safeguard_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Safeguards.csv'))
+client.query(requirement_safeguard_rel)
 time.sleep(2)   
 
-client.query(requirement_event_type_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Events.csv'))    
+client.query(requirement_event_type_rel)    
 time.sleep(2)   
 
-client.query(requirement_policy_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Policies.csv'))    
+client.query(requirement_policy_rel)    
 time.sleep(2)
 
-client.query(requirement_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Controls.csv'))
+client.query(requirement_control_rel)
 time.sleep(2)   
 
-client.query(control_system_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Control_Systems.csv'))
+client.query(control_system_rel)
 time.sleep(2)
 
-client.query(requirement_process_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Processes.csv'))
+client.query(requirement_process_rel)
 time.sleep(2)
 
-client.query(title_incentive_program_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Title_IncentivePrograms.csv'))
+client.query(title_incentive_program_rel)
 time.sleep(2)
 
-client.query(incentive_program_meaningful_use_criterion_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentiveProgram_MeaningfulUseCriteria.csv'))
+client.query(incentive_program_meaningful_use_criterion_rel)
 time.sleep(2)
 
-client.query(requirement_meaningful_use_criterion_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_MeaningfulUseCriteria.csv'))
+client.query(requirement_meaningful_use_criterion_rel)
 time.sleep(2)
 
-client.query(requirement_enforcement_action_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Enforcement.csv'))
+client.query(requirement_enforcement_action_rel)
 time.sleep(2)
 
-client.query(section_enforcement_action_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Section_Enforcement.csv'))
+
+client.query(section_enforcement_action_rel)
 time.sleep(2)
 
-client.query(requirements_implementation_spec_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_ImplementationSpecs.csv'))
+
+client.query(requirements_implementation_spec_rel)
 time.sleep(2)
 
-client.query(implementation_spec_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpec_Controls.csv'))
+
+client.query(implementation_spec_control_rel)
 time.sleep(2)
 
-client.query(policy_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policy_Controls.csv'))
+
+client.query(policy_control_rel)
 time.sleep(2)
 
-client.query(process_system_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Process_Systems.csv'))
+
+client.query(process_system_rel)
 time.sleep(2)
 
-client.query(requirement_external_framework_requirements_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirement_Mapping.csv'))
-time.sleep(2)   
- 
+
+client.query(requirement_external_framework_requirements_rel)
+time.sleep(2)
 
 
 
