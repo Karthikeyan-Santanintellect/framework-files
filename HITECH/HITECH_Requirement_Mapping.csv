@@ -1,3 +1,0 @@
-source_requirement_id,target_requirement_id,strength,justification,source
-HITECH-13402-R1,HIPAA-SEC-164-308,STRONG,Breach notification aligns with HIPAA security incident handling,Compliance Team
-HITECH-13400-R1,NIST-800-53-AU-2,MODERATE,Requirement overlaps with NIST audit logging expectations,Compliance Team

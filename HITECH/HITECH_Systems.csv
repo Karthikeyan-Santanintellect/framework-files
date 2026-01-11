@@ -1,4 +1,0 @@
-system_id,name,type,owner
-SYSTEM-EHR1,Primary EHR System,EHR,IT
-SYSTEM-DB1,EHR Database Cluster,Database,IT
-SYSTEM-NOTIF,Notification Platform,Cloud Service,Compliance

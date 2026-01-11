@@ -15,7 +15,7 @@ ON CREATE SET
 
 # SUBGRAPH 1: LEGAL STRUCTURE & FRAMEWORK (4 NODES)
 # 1.1 Load CFR Sections
-cfr_sections ="""
+cfr_sections = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cfr:CFRSection {cfr_section_id: row.cfr_section_id, industry_standard_regulation_id: 'HIPAA 1996'})
 ON CREATE SET
@@ -30,7 +30,7 @@ ON CREATE SET
 """
 
 # 1.2 Load Regulatory Standards
-regulatory_standards ="""
+regulatory_standards = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (rs:RegulatoryStandard {standard_id: row.standard_id, industry_standard_regulation_id: 'HIPAA 1996'})
 ON CREATE SET
@@ -44,7 +44,7 @@ ON CREATE SET
 """
 
 # 1.3 Load Compliance Requirements
-Compliance_Requirements ="""
+Compliance_Requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cr:ComplianceRequirement {requirement_id: row.requirement_id, industry_standard_regulation_id: 'HIPAA 1996'})
 ON CREATE SET
@@ -1384,7 +1384,7 @@ covered_entity_business_associate_agreement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.entity_id})
 MATCH (baa:BusinessAssociateAgreement {agreement_id: row.agreement_id})
-MERGE (ce)-[rel:COVERED_ENTITY_HAS_BUSINESS_ASSOCIATE_AGREEMENT_WITH_BUSINESS_ASSOCIATE_AGREEMENT{relationship_id: row.relationship_id}]->(baa)
+MERGE (ce)-[rel:COVERED_ENTITY_HAS_BUSINESS_ASSOCIATE_AGREEMENT{relationship_id: row.relationship_id}]->(baa)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1394,7 +1394,7 @@ business_associate_business_associate_agreement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ba:BusinessAssociate {associate_id: row.associate_id})
 MATCH (baa:BusinessAssociateAgreement {agreement_id: row.agreement_id})
-MERGE (ba)-[rel:BUSINESS_ASSOCIATE_HAS_BUSINESS_ASSOCIATE_AGREEMENT_WITH_BUSINESS_AGREEMENT {relationship_id: row.relationship_id}]->(baa)
+MERGE (ba)-[rel:BUSINESS_ASSOCIATE_HAS_BUSINESS_ASSOCIATE_AGREEMENT {relationship_id: row.relationship_id}]->(baa)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1435,7 +1435,7 @@ covered_entity_healthcare_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.entity_id})
 MATCH (hp:HealthcareProvider {provider_id: row.provider_id})
-MERGE (ce)-[rel:COVERED_ENTITY_HAS_HEALTHCARE_PROVIDER_WITH_HEALTHCARE {relationship_id: row.relationship_id}]->(hp)
+MERGE (ce)-[rel:COVERED_ENTITY_HAS_HEALTHCARE_PROVIDER {relationship_id: row.relationship_id}]->(hp)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1445,7 +1445,7 @@ covered_entity_health_plan = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.entity_id})
 MATCH (hpl:HealthPlan {plan_id: row.plan_id})
-MERGE (ce)-[rel:COVERED_ENTITY_HAS_HEALTH_PLAN_WITH_HEALTH {relationship_id: row.relationship_id}]->(hpl)
+MERGE (ce)-[rel:COVERED_ENTITY_HAS_HEALTH_PLAN {relationship_id: row.relationship_id}]->(hpl)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1455,7 +1455,7 @@ covered_entity_workforce_member = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.entity_id})
 MATCH (wm:WorkforceMember {member_id: row.member_id})
-MERGE (ce)-[rel:COVERED_ENTITY_HAS_WORKFORCE_MEMBER_WITH_WORKFORCE_MEMBER {relationship_id: row.relationship_id}]->(wm)
+MERGE (ce)-[rel:COVERED_ENTITY_HAS_WORKFORCE_MEMBER {relationship_id: row.relationship_id}]->(wm)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1465,7 +1465,7 @@ covered_entity_compliance_program = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.entity_id})
 MATCH (comp:ComplianceProgram {program_id: row.program_id})
-MERGE (ce)-[rel:COVERED_ENTITY_HAS_COMPLIANCE_PROGRAM_WITH_COMPLIANCE_ {relationship_id: row.relationship_id}]->(comp)
+MERGE (ce)-[rel:COVERED_ENTITY_HAS_COMPLIANCE_PROGRAM {relationship_id: row.relationship_id}]->(comp)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1475,7 +1475,7 @@ compliance_program_compliance_audit = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (comp:ComplianceProgram {program_id: row.program_id})
 MATCH (ca:ComplianceAudit {audit_id: row.audit_id})
-MERGE (comp)-[rel:COMPLIANCE_PROGRAM_HAS_COMPLIANCE_AUDIT_WITH_COMPLIAN {relationship_id: row.relationship_id}]->(ca)
+MERGE (comp)-[rel:COMPLIANCE_PROGRAM_HAS_COMPLIANCE_AUDIT {relationship_id: row.relationship_id}]->(ca)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1485,7 +1485,7 @@ compliance_audit_compliance_violation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ca:ComplianceAudit {audit_id: row.audit_id})
 MATCH (cv:ComplianceViolation {violation_id: row.violation_id})
-MERGE (ca)-[rel:COMPLIANCE_AUDIT_HAS_COMPLIANCE_VIOLATION_WITH_VIOLATION {relationship_id: row.relationship_id}]->(cv)
+MERGE (ca)-[rel:COMPLIANCE_AUDIT_HAS_COMPLIANCE_VIOLATION {relationship_id: row.relationship_id}]->(cv)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1495,7 +1495,7 @@ compliance_violation_violation_severity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (cv:ComplianceViolation {violation_id: row.violation_id})
 MATCH (vs:ViolationSeverity {severity_id: row.severity_id})
-MERGE (cv)-[rel:COMPLIANCE_VIOLATION_HAS_VIOLATION_SEVERITY_WITH_SEVERITY {relationship_id: row.relationship_id}]->(vs)
+MERGE (cv)-[rel:COMPLIANCE_VIOLATION_HAS_VIOLATION_SEVERITY {relationship_id: row.relationship_id}]->(vs)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1505,7 +1505,7 @@ compliance_violation_ocr_investigation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (cv:ComplianceViolation {violation_id: row.violation_id})
 MATCH (oi:OCRInvestigation {investigation_id: row.investigation_id})
-MERGE (cv)-[rel:COMPLIANCE_VIOLATION_HAS_OCR_INVESTIGATION_WITH_INVESTIGANTION {relationship_id: row.relationship_id}]->(oi)
+MERGE (cv)-[rel:COMPLIANCE_VIOLATION_HAS_OCR_INVESTIGATION {relationship_id: row.relationship_id}]->(oi)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1515,7 +1515,7 @@ ocr_investigation_enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (oi:OCRInvestigation {investigation_id: row.investigation_id})
 MATCH (ea:EnforcementAction {action_id: row.action_id})
-MERGE (oi)-[rel:OCR_INVESTIGATION_HAS_ENFORCEMENT_ACTION_WITH_ACTION {relationship_id: row.relationship_id}]->(ea)
+MERGE (oi)-[rel:OCR_INVESTIGATION_HAS_ENFORCEMENT_ACTION {relationship_id: row.relationship_id}]->(ea)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1525,7 +1525,7 @@ enforcement_action_civil_penalty = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {action_id: row.action_id})
 MATCH (cpen:CivilPenalty {penalty_id: row.penalty_id})
-MERGE (ea)-[rel:ENFORCEMENT_ACTION_HAS_CIVIL_PENALTY_WITH_PENALTY {relationship_id: row.relationship_id}]->(cpen)
+MERGE (ea)-[rel:ENFORCEMENT_ACTION_HAS_CIVIL_PENALTY {relationship_id: row.relationship_id}]->(cpen)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1535,7 +1535,7 @@ enforcement_action_criminal_penalty = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {action_id: row.action_id})
 MATCH (crpen:CriminalPenalty {penalty_id: row.penalty_id})
-MERGE (ea)-[rel:ENFORCEMENT_ACTION_HAS_CRIMINAL_PENALTY_WITH_PENALTY {relationship_id: row.relationship_id}]->(crpen)
+MERGE (ea)-[rel:ENFORCEMENT_ACTION_HAS_CRIMINAL_PENALTY {relationship_id: row.relationship_id}]->(crpen)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1545,7 +1545,7 @@ enforcement_action_corrective_action_plan = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ea:EnforcementAction {action_id: row.action_id})
 MATCH (capl:CorrectiveActionPlan {plan_id: row.plan_id})
-MERGE (ea)-[rel:ENFORCEMENT_ACTION_HAS_CORRECTIVE_ACTION_PLAN_WITH_PLAN {relationship_id: row.relationship_id}]->(capl)
+MERGE (ea)-[rel:ENFORCEMENT_ACTION_HAS_CORRECTIVE_ACTION_PLAN {relationship_id: row.relationship_id}]->(capl)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1555,7 +1555,7 @@ regulator_enforcement_action = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:Regulator {regulator_id: row.regulator_id})
 MATCH (ea:EnforcementAction {action_id: row.action_id})
-MERGE (reg)-[rel:REGULATOR_HAS_ENFORCEMENT_ACTION_WITH_ACTION {relationship_id: row.relationship_id}]->(ea)
+MERGE (reg)-[rel:REGULATOR_HAS_ENFORCEMENT_ACTION {relationship_id: row.relationship_id}]->(ea)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1565,7 +1565,7 @@ violation_severity_civil_penalty = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (vs:ViolationSeverity {severity_id: row.severity_id})
 MATCH (cpen:CivilPenalty {penalty_id: row.penalty_id})
-MERGE (vs)-[rel:DETERMINES {relationship_id: row.relationship_id}]->(cpen)
+MERGE (vs)-[rel:VIOLATION_SEVERITY_HAS_CIVIL_PENALTY {relationship_id: row.relationship_id}]->(cpen)
 ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
@@ -1757,7 +1757,7 @@ time.sleep(2)
 client.query(Subcontractors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/subcontractors.csv"))
 time.sleep(2)
 
-client.query(Business_Associate_Agreements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/business-associates.csv"))
+client.query(Business_Associate_Agreements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/BusinessAssociateAgreement.csv"))
 time.sleep(2)
 
 client.query(Hybrid_Entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/hybrid-entities.csv"))

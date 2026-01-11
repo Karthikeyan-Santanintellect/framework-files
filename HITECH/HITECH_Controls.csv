@@ -1,4 +1,0 @@
-control_id,name,description,category
-CTRL-LOGGING,Audit Logging,Controls for logging access to ePHI,Audit Logging
-CTRL-ENCRYPTION,Encryption Control,Controls for encryption of ePHI at rest and in transit,Access Control
-CTRL-NOTIF-WF,Notification Workflow Control,Control to ensure execution of breach notification workflow,Incident Response

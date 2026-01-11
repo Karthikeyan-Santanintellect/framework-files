@@ -1,4 +1,153 @@
 {
-  "nodes": [],
-  "rels": []
+  "nodes": [
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "mainLabel": "IndustryStandardAndRegulation",
+      "labels": [
+        "IndustryStandardAndRegulation"
+      ],
+      "name": "HIPAA",
+      "description": "The Health Insurance Portability and Accountability Act (HIPAA) is a US regulation that sets standards for protecting sensitive patient health information.",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "type": "Regulation",
+      "abbreviation": "Health Insurance Portability and Accountability Act",
+      "version": "1996",
+      "published_date": "1996-08-21",
+      "url": "https://www.hhs.gov/hipaa/index.html"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:590",
+      "mainLabel": "RegulatoryStandard",
+      "labels": [
+        "RegulatoryStandard"
+      ],
+      "standard_id": "RS-ENC-001",
+      "mandatory_status": "Required Addressable",
+      "applicability_scope": "Electronic PHI",
+      "parent_rule": "HIPAA Security Rule",
+      "standard_type": "Technical",
+      "description": "Standards for data encryption requirements",
+      "cfr_citation": "45 CFR 164.312(a)(2)(ii)",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "title": "Encryption Standards"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:589",
+      "mainLabel": "RegulatoryStandard",
+      "labels": [
+        "RegulatoryStandard"
+      ],
+      "standard_id": "RS-BA-001",
+      "mandatory_status": "Mandatory",
+      "applicability_scope": "Business Associates",
+      "parent_rule": "HIPAA Privacy Rule",
+      "standard_type": "Compliance",
+      "description": "Standards for business associate compliance",
+      "cfr_citation": "45 CFR 164.502-504",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "title": "Business Associate Standards"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:588",
+      "mainLabel": "RegulatoryStandard",
+      "labels": [
+        "RegulatoryStandard"
+      ],
+      "standard_id": "RS-AS-001",
+      "mandatory_status": "Mandatory",
+      "applicability_scope": "All Covered Entities",
+      "parent_rule": "HIPAA Admin Simplification",
+      "standard_type": "Administrative",
+      "description": "Standards for electronic transactions",
+      "cfr_citation": "45 CFR 160.101-162.1000",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "title": "Administrative Simplification Standards"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:587",
+      "mainLabel": "RegulatoryStandard",
+      "labels": [
+        "RegulatoryStandard"
+      ],
+      "standard_id": "RS-BN-001",
+      "mandatory_status": "Mandatory",
+      "applicability_scope": "All Covered Entities",
+      "parent_rule": "HIPAA Breach Notification",
+      "standard_type": "Breach Notification",
+      "description": "Standards for notifying individuals of breaches",
+      "cfr_citation": "45 CFR 164.400-164.414",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "title": "Breach Notification Standards"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:586",
+      "mainLabel": "RegulatoryStandard",
+      "labels": [
+        "RegulatoryStandard"
+      ],
+      "standard_id": "RS-SR-001",
+      "mandatory_status": "Mandatory",
+      "applicability_scope": "All Covered Entities",
+      "parent_rule": "HIPAA Security Rule",
+      "standard_type": "Security",
+      "description": "Technical and administrative safeguard standards",
+      "cfr_citation": "45 CFR 164.308-164.316",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "title": "Security Rule Standards"
+    },
+    {
+      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:585",
+      "mainLabel": "RegulatoryStandard",
+      "labels": [
+        "RegulatoryStandard"
+      ],
+      "standard_id": "RS-PR-001",
+      "mandatory_status": "Mandatory",
+      "applicability_scope": "All Covered Entities",
+      "parent_rule": "HIPAA Privacy Rule",
+      "standard_type": "Privacy",
+      "description": "Standards for protecting health information privacy",
+      "cfr_citation": "45 CFR 164.500-164.534",
+      "industry_standard_regulation_id": "HIPAA 1996",
+      "title": "Privacy Rule Standards"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1164753349233345088",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:590",
+      "type": "INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162501549419659840",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:589",
+      "type": "INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160249749605974592",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:588",
+      "type": "INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157997949792289344",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:587",
+      "type": "INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155746149978604096",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:586",
+      "type": "INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD"
+    },
+    {
+      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:576",
+      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153494350164918848",
+      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:585",
+      "type": "INDUSTRY_STANDARD_REGULATION_CONTAINS_REGULATORY_STANDARD"
+    }
+  ]
 }

@@ -1,3 +1,0 @@
-source_control_id,target_control_id,strength,justification,source
-CTRL-LOGGING,NIST-AU-2,STRONG,Logging control aligns with NIST AU-2 audit logging,Compliance Team
-CTRL-ENCRYPTION,NIST-SC-13,STRONG,Encryption control aligns with NIST SC-13 cryptographic protections,Compliance Team

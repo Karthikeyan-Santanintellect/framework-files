@@ -23,8 +23,8 @@ ON CREATE SET
   org.last_audit_date         = date(row.last_audit_date),
   org.next_audit_due          = date(row.next_audit_due),
   org.bes_asset_count  = row.bes_asset_count,
- org.ciso_name  = row.ciso_name,
- org.ciso_contact_email  = row.ciso_contact_email;
+  org.ciso_name  = row.ciso_name,
+  org.ciso_contact_email  = row.ciso_contact_email;
 """
 #BESCyberSystem Node
 BESCyberSystem ="""
