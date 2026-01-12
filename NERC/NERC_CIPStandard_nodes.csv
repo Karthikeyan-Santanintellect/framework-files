@@ -1,7 +1,0 @@
-standard_id,version,title,release_date,effective_date,control_areas,requirements_count,audit_frequency_months,penalty_range
-CIP-002,5.1a,Cyber Security Planning,2013-01-15,2015-07-01,Risk Assessment; Asset Identification,8,24,$25K-$100K
-CIP-003,5.1a,Cyber Security Information Protection,2013-02-20,2015-07-01,Document Protection; Information Protection,6,24,$25K-$100K
-CIP-004,5.1a,Cyber Security Personnel and Training,2013-03-10,2015-07-01,Personnel Screening; Training; Access Rights,5,24,$25K-$100K
-CIP-005,5.1a,Cyber Security Systems Security Management,2013-04-15,2015-07-01,Security Management; Configuration Management,7,24,$25K-$100K
-CIP-006,5.1a,Cyber Security Physical Security,2013-05-01,2015-07-01,Physical Security; Access Control,4,24,$25K-$100K
-CIP-007,5.1a,Cyber Security Systems Security Management,2013-06-15,2015-07-01,System Hardening; Malware Prevention; Patch Management,9,24,$25K-$100K

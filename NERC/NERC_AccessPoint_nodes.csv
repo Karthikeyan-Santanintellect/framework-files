@@ -1,7 +1,0 @@
-access_point_id,point_name,access_type,protected_system_id,access_control_method,authentication_required,approval_process,monitoring_active
-AP-001,SCADA Console Access,Internal,SYS-001,MFA + Smart Card,True,Manager Approval,True
-AP-002,Remote EMS Access,Remote,SYS-002,VPN + MFA,True,Director Approval,True
-AP-003,Field Device Communication,Field,SYS-003,Radio Frequency + Key,True,Field Supervisor,True
-AP-004,System Administration Gateway,Internal,SYS-001,MFA + Biometric,True,CTO Approval,True
-AP-005,Vendor Remote Support,Remote,SYS-004,VPN + Token,True,CISO Approval,True
-AP-006,Network Management Interface,Internal,SYS-005,Network ACL + MFA,True,Network Admin,True

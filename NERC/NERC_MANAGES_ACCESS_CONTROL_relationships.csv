@@ -1,6 +1,0 @@
-source_organization_id,relationship_type,target_access_point_id,control_start_date,access_control_type,unauthorized_access_incidents
-ORG-001,MANAGES_ACCESS_CONTROL,AP-001,2015-01-15,MFA,0
-ORG-002,MANAGES_ACCESS_CONTROL,AP-002,2014-06-20,VPN,1
-ORG-003,MANAGES_ACCESS_CONTROL,AP-003,2016-03-10,RF Secure,0
-ORG-004,MANAGES_ACCESS_CONTROL,AP-004,2015-11-05,Biometric,0
-ORG-005,MANAGES_ACCESS_CONTROL,AP-005,2017-01-30,Token,2

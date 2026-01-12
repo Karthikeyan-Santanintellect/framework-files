@@ -1,5 +1,0 @@
-response_plan_id,plan_name,incident_category,response_team_size,response_time_minutes,last_drill_date,nerc_notification_required
-IRP-001,Major Cyber Attack Response,Cyber Attack,25,15,2024-09-15,True
-IRP-002,Ransomware Incident Response,Malware,18,20,2024-08-20,True
-IRP-003,Data Breach Response,Data Breach,12,30,2024-07-10,True
-IRP-004,Critical System Failure Response,System Failure,20,10,2024-09-01,True

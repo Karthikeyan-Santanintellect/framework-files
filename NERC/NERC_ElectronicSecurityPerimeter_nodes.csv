@@ -1,6 +1,0 @@
-perimeter_id,name,perimeter_type,access_point_count,monitored_systems_count,logging_enabled,intrusion_detection_active,air_gapped
-ESP-001,Grid Control Network,Network-Based,12,45,True,True,False
-ESP-002,EMS Internal Zone,Network-Based,8,68,True,True,False
-ESP-003,Relay Protection Ring,Network-Based,6,32,True,True,True
-ESP-004,PMU Collection Network,Network-Based,15,112,True,True,False
-ESP-005,Admin Access DMZ,Physical,4,28,True,False,False

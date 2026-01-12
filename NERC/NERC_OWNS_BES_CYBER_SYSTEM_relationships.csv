@@ -1,7 +1,0 @@
-source_organization_id,relationship_type,target_system_id,ownership_start_date,operational_responsibility,maintenance_responsibility,security_responsibility
-ORG-001,OWNS_BES_CYBER_SYSTEM,SYS-001,2015-01-15,True,True,True
-ORG-002,OWNS_BES_CYBER_SYSTEM,SYS-002,2014-06-20,True,True,True
-ORG-003,OWNS_BES_CYBER_SYSTEM,SYS-003,2016-03-10,True,True,True
-ORG-004,OWNS_BES_CYBER_SYSTEM,SYS-004,2015-11-05,True,False,True
-ORG-005,OWNS_BES_CYBER_SYSTEM,SYS-005,2017-01-30,True,True,True
-ORG-001,OWNS_BES_CYBER_SYSTEM,SYS-006,2015-02-01,True,True,True

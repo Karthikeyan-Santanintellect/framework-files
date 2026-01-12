@@ -706,7 +706,7 @@ client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santan
 time.sleep(2)
 
 
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Processes_Final.csv'))
+client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH-Processes-COMPLETE.csv'))
 time.sleep(2)
 
 client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  

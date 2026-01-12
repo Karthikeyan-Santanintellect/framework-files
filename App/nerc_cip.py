@@ -10,222 +10,475 @@ ON CREATE SET
   r.status = "Active",
   r.description = "A set of mandatory cybersecurity standards enforced by the North American Electric Reliability Corporation (NERC) to secure the Bulk Electric System (BES). It requires entities to identify critical assets and apply controls for electronic and physical security, personnel training, incident response, and recovery to ensure the reliability of the North American power grid.";
 """
-#Organization Node
+#standard Node
+standard ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (std:Standard {industry_standard_regulation_id: 'NERC_CIP', standard_id: row.standard_id})
+ON CREATE SET
+  std.number                          = row.standard_number,
+  std.name                            = row.standard_name,
+  std.version                         = row.version_current,
+  std.effective_date                  = row.effective_date,
+  std.ferc_order                      = row.ferc_order,
+  std.purpose                         = row.standard_purpose,
+  std.applicability_scope             = row.applicability_scope,
+  std.key_compliance_domains          = row.key_compliance_domains,
+  std.development_year                = row.development_year,
+  std.last_updated                    = row.last_updated,
+  std.violation_severity_levels       = row.violation_severity_levels,
+  std.critical_requirements_count     = row.critical_requirements_count;
+"""
+#Requirement Node
+requirement ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (req:Requirement {industry_standard_regulation_id: 'NERC_CIP', requirement_id: row.requirement_id})
+ON CREATE SET
+  req.requirement_number              = row.requirement_number,
+  req.standard_id                     = row.standard_id,
+  req.title                           = row.requirement_title,
+  req.description                     = row.requirement_description,
+  req.violation_severity_level        = row.violation_severity_level,
+  req.applicability_statement         = row.applicability_statement,
+  req.compliance_measure              = row.compliance_measure,
+  req.evidence_type                   = row.evidence_type; 
+"""
+
+#requirement_part
+requirement_part ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rp:RequirementPart {industry_standard_regulation_id: 'NERC_CIP', requirement_part_id: row.requirement_part_id})
+ON CREATE SET
+  rp.requirement_id                   = row.requirement_id,
+  rp.part_number                      = row.part_number,
+  rp.description                      = row.description,
+  rp.applicability                    = row.applicability,
+  rp.evidence                         = row.evidence;
+"""
+#Domain
+domain ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dom:Domain {industry_standard_regulation_id: 'NERC_CIP', domain_id: row.domain_id})
+ON CREATE SET
+  dom.name                            = row.domain_name,
+  dom.category                        = row.domain_category,
+  dom.description                     = row.description,
+  dom.cip_standards_covered           = row.cip_standards_covered,
+  dom.key_controls                    = row.key_controls,
+  dom.applicable_entities             = row.applicable_entities,
+  dom.risk_focus                      = row.risk_focus;
+"""
+#organization
 organization ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.organization_id})
+MERGE (org:Organization {industry_standard_regulation_id: 'NERC_CIP', organization_id: row.responsible_entity_id})
 ON CREATE SET
-  org.name                    = row.name,
-  org.type                    = row.entity_type,
-  org.region                 = row.nerc_region,
-  org.registration_date       = date(row.registration_date),
-  org.compliance_status       = row.compliance_status,
-  org.last_audit_date         = date(row.last_audit_date),
-  org.next_audit_due          = date(row.next_audit_due),
-  org.bes_asset_count  = row.bes_asset_count,
-  org.ciso_name  = row.ciso_name,
-  org.ciso_contact_email  = row.ciso_contact_email;
+  org.name                            = row.entity_name,
+  org.type                            = row.entity_type,
+  org.abbreviation                    = row.entity_abbreviation,
+  org.region                          = row.nerc_region,
+  org.registration_status             = row.registered_status,
+  org.registration_date               = row.registration_date,
+  org.compliance_status               = row.compliance_history,
+  org.last_audit_date                 = row.last_audit_date,
+  org.annual_revenue_usd              = row.annual_revenue_usd,
+  org.employee_count                  = row.employee_count,
+  org.high_impact_bcs_count           = row.high_impact_bcs_count,
+  org.medium_impact_bcs_count         = row.medium_impact_bcs_count,
+  org.low_impact_bcs_count            = row.low_impact_bcs_count,
+  org.total_bcs_count                 = row.total_bcs_count,
+  org.cip_program_maturity            = row.cip_program_maturity,
+  org.audit_result                    = row.audit_result,
+  org.compliance_officer_designated   = row.compliance_officer_designated,
+  org.security_officer_designated     = row.security_officer_designated;
 """
-#BESCyberSystem Node
-BESCyberSystem ="""
+#BES Cyber System
+bes_cyber_system ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.system_id})
+MERGE (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', bcs_id: row.bcs_id})
 ON CREATE SET
-    bs.name = row.system_name,
-    bs.type = row.system_type,
-    bs.impact_level = row.impact_level,
-    bs.critical_function = row.critical_function,
-    bs.location = row.location,
-    bs.connected_assets_count = row.connected_assets_count,
-    bs.operates_in_esop = row.operates_in_esop,
-    bs.backup_recovery_capability = row.backup_recovery_capability,
-    bs.mean_time_to_recovery = row.mean_time_to_recovery;
+  bcs.name                            = row.bcs_name,
+  bcs.type                            = row.bcs_type,
+  bcs.impact_rating                   = row.impact_rating,
+  bcs.facility_id                     = row.facility_id,
+  bcs.facility_name                   = row.facility_name,
+  bcs.facility_type                   = row.facility_type,
+  bcs.responsible_entity_id           = row.responsible_entity,
+  bcs.classification_basis            = row.classification_basis,
+  bcs.associated_functions            = row.associated_functions,
+  bcs.cyber_assets_count              = row.cyber_assets_count,
+  bcs.esp_id                          = row.esp_id,
+  bcs.cip_applicability               = row.cip_applicability;
 """
-#CIPStandard
-CIPStandard ="""
+#Bes_Cyber_asset
+bes_cyber_asset ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP 5', standard_id: row.standard_id})
+MERGE (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP', bca_id: row.bca_id})
 ON CREATE SET
-    cs.version = row.version,
-    cs.name = row.title,
-    cs.release_date = date(row.release_date),
-    cs.effective_date = date(row.effective_date),
-    cs.control_areas = row.control_areas;
+  bca.name                            = row.bca_name,
+  bca.asset_type                      = row.asset_type,
+  bca.asset_category                  = row.asset_category,
+  bca.manufacturer                    = row.manufacturer,
+  bca.model                           = row.model,
+  bca.bcs_id                          = row.bcs_id,
+  bca.impact_rating                   = row.impact_rating,
+  bca.function                        = row.function,
+  bca.operating_system                = row.operating_system,
+  bca.network_accessible              = row.network_accessible,
+  bca.routable_protocol               = row.routable_protocol,
+  bca.ports_services                  = row.ports_services,
+  bca.authentication_method           = row.authentication_method,
+  bca.location                        = row.location,
+  bca.firmware_version                = row.firmware_version,
+  bca.patch_level                     = row.patch_level;
 """
-#ElectronicSecurityPerimeter
-ElectronicSecurityPerimeter ="""
+#ESP
+esp="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP 5', perimeter_id: row.perimeter_id})
+MERGE (esp:ElectronicSecurityPerimeter {
+  industry_standard_regulation_id: 'NERC_CIP',
+  esp_id: row.esp_id
+})
 ON CREATE SET
-    es.name = row.name,
-    es.type = row.perimeter_type,
-    es.access_point_count = row.access_point_count,
-    es.monitored_systems_count = row.monitored_systems_count,
-    es.logging_enabled = row.logging_enabled,
-    es.intrusion_detection_active = row.intrusion_detection_active,
-    es.air_gapped = row.air_gapped;
+  esp.name                 = row.esp_name,
+  esp.type                 = row.esp_type,
+  esp.facility_id          = row.facility_id,
+  esp.facility_type        = row.facility_type,
+  esp.impact_level         = row.impact_level,
+  esp.description          = row.description,
+  esp.perimeter_type       = row.perimeter_type,
+  esp.boundary_definition  = row.boundary_definition,
+  esp.protected_assets     = row.protected_assets,
+  esp.access_control_type  = row.access_control_type,
+  esp.monitoring_type      = row.monitoring_type;
 """
-#Asset
-Asset ="""
+#psp
+psp ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Asset {industry_standard_regulation_id: 'NERC_CIP 5', asset_id: row.asset_id})
+MERGE (psp:PhysicalSecurityPerimeter {
+  industry_standard_regulation_id: 'NERC_CIP',
+  psp_id: row.psp_id
+})
 ON CREATE SET
-    a.name = row.asset_name,
-    a.type = row.asset_type,
-    a.location = row.location,
-    a.criticality_level = row.criticality_level,
-    a.operational_status = row.operational_status,
-    a.last_maintenance_date = date(row.last_maintenance_date),
-    a.backup_asset_id = row.backup_asset_id;
+  psp.name                 = row.psp_name,
+  psp.type                 = row.psp_type,
+  psp.facility_id          = row.facility_id,
+  psp.facility_type        = row.facility_type,
+  psp.impact_level         = row.impact_level,
+  psp.description          = row.description,
+  psp.perimeter_type       = row.perimeter_type,
+  psp.boundary_definition  = row.boundary_definition,
+  psp.protected_assets     = row.protected_assets,
+  psp.access_control_type  = row.access_control_type,
+  psp.surveillance_type    = row.surveillance_type,
+  psp.cip_014_critical     = row.cip_014_critical;
 """
-#CyberThreat
-CyberThreat ="""
+#Role (Internal Roles)
+roles ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ct:CyberThreat {industry_standard_regulation_id: 'NERC_CIP 5', threat_id: row.threat_id})
+MERGE (role:Role {
+  industry_standard_regulation_id: 'NERC_CIP',
+  role_id: row.internal_role_id
+})
 ON CREATE SET
-    ct.name = row.threat_name,
-    ct.category = row.threat_category,
-    ct.severity_level = row.severity_level,
-    ct.count = row.affected_systems_count,
-    ct.description = row.threat_description,
-    ct.attack_vector = row.attack_vector,
-    ct.remediation_status = row.remediation_status;
+  role.name                = row.role_name,
+  role.category            = row.role_category,
+  role.organization_level  = row.organization_level,
+  role.responsible_for     = row.responsible_for,
+  role.required_training   = row.required_training,
+  role.required_clearance  = row.required_clearance,
+  role.access_level        = row.access_level,
+  role.accountability      = row.accountability,
+  role.cip_requirement     = row.cip_requirement,
+  role.titles      = row.example_titles;
 """
-#AccessPoint
-AccessPoint ="""
+
+#Artifact
+artifact ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP 5', access_point_id: row.access_point_id})
+MERGE (art:Artifact {
+  industry_standard_regulation_id: 'NERC_CIP',
+  artifact_id: row.artifact_id
+})
 ON CREATE SET
-    ap.name = row.point_name,
-    ap.type = row.access_type,
-    ap.protected_system_id = row.protected_system_id,
-    ap.access_control_method = row.access_control_method,
-    ap.authentication_required = row.authentication_required,
-    ap.approval_process = row.approval_process,
-    ap.monitoring_active = row.monitoring_active;
+  art.name                  = row.artifact_name,
+  art.type                  = row.artifact_type,
+  art.category              = row.artifact_category,
+  art.evidence_category     = row.evidence_category,
+  art.related_standard      = row.related_standard,
+  art.related_requirement   = row.related_requirement,
+  art.description           = row.description,
+  art.retention_period      = row.retention_period,
+  art.storage_location      = row.storage_location,
+  art.access_control        = row.access_control,
+  art.confidentiality_level = row.confidentiality_level,
+  art.cip_evidence_level    = row.cip_evidence_level,
+  art.responsible_party     = row.responsible_party,
+  art.update_frequency      = row.update_frequency,
+  art.bcsi_content          = row.bcsi_content;
+  """
+#regulator
+regulator ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (reg:Regulator {
+  industry_standard_regulation_id: 'NERC_CIP',
+  regulator_id: row.regulator_id
+})
+ON CREATE SET
+  reg.name                 = row.regulator_name,
+  reg.type                 = row.regulator_type,
+  reg.jurisdiction         = row.jurisdiction,
+  reg.enforcement_authority= row.enforcement_authority,
+  reg.primary_function     = row.primary_function,
+  reg.regulated_entities   = row.regulated_entities,
+  reg.compliance_oversight = row.compliance_oversight,
+  reg.audit_authority      = row.audit_authority,
+  reg.penalty_authority    = row.penalty_authority,
+  reg.coordination_role    = row.coordination_role,
+  reg.contact_method       = row.contact_method;
 """
-#CriticalFacility
-CriticalFacility ="""
+
+#vendor
+vendor ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cf:CriticalFacility {industry_standard_regulation_id: 'NERC_CIP 5', facility_id: row.facility_id})
+MERGE (vnd:Vendor {
+  industry_standard_regulation_id: 'NERC_CIP',
+  vendor_id: row.vendor_id
+})
 ON CREATE SET
-    cf.name = row.facility_name,
-    cf.type = row.facility_type,
-    cf.location = row.location,
-    cf.rating = row.criticality_rating,
-    cf.backup_facility_id = row.backup_facility_id,
-    cf.level = row.physical_security_level,
-    cf.cctv_monitoring_active = row.cctv_monitoring_active;
+  vnd.name                        = row.vendor_name,
+  vnd.type                        = row.vendor_type,
+  vnd.category                    = row.vendor_category,
+  vnd.products_services           = row.products_services,
+  vnd.served_industries           = row.served_industries,
+  vnd.company_size                = row.company_size,
+  vnd.headquarters_location       = row.headquarters_location,
+  vnd.annual_revenue_range        = row.annual_revenue_range,
+  vnd.cybersecurity_certifications= row.cybersecurity_certifications,
+  vnd.cip_experience              = row.cip_experience,
+  vnd.vendor_assessment_required  = row.vendor_assessment_required,
+  vnd.notable_clients             = row.notable_clients,
+  vnd.market_position             = row.market_position,
+  vnd.supply_chain_risk           = row.supply_chain_risk;
 """
-#IncidentResponse
-IncidentResponse ="""
+#ExternalNetwork
+external_network ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ir:IncidentResponse {industry_standard_regulation_id: 'NERC_CIP 5', incident_id: row.response_plan_id})
+MERGE (net:ExternalNetwork {
+  industry_standard_regulation_id: 'NERC_CIP',
+  network_id: row.external_network_id
+})
 ON CREATE SET
-    ir.name = row.plan_name,
-    ir.category = row.incident_category,
-    ir.size = row.response_team_size,
-    ir.time_minutes = row.response_time_minutes,
-    ir.last_drill_date = date(row.last_drill_date),
-    ir.nerc_notification_required = row.nerc_notification_required;
+  net.name                       = row.network_name,
+  net.type                       = row.network_type,
+  net.category                   = row.network_category,
+  net.owner_operator            = row.owner_operator,
+  net.trust_level               = row.trust_level,
+  net.connectivity_type         = row.connectivity_type,
+  net.security_boundary         = row.security_boundary,
+  net.typical_protocols         = row.typical_protocols,
+  net.access_control_requirements = row.access_control_requirements,
+  net.monitoring_requirements   = row.monitoring_requirements,
+  net.data_classification       = row.data_classification,
+  net.encryption_required       = row.encryption_required,
+  net.risk_profile              = row.risk_profile;
 """
-#VulnerabilityManagement
-VulnerabilityManagement ="""
+#ThreatIntelligence
+threat_intelligence ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP 5', vulnerability_id: row.vuln_mgmt_id})
+MERGE (ti:ThreatIntelligence {
+  industry_standard_regulation_id: 'NERC_CIP',
+  threat_id: row.threat_intel_id
+})
 ON CREATE SET
-    vm.name = row.program_name,
-    vm.responsible_team = row.responsible_team,
-    vm.scan_frequency = row.scan_frequency,
-    vm.open_vulnerabilities_critical = row.open_vulnerabilities_critical,
-    vm.patch_management_process = row.patch_management_process;
+  ti.name                 = row.source_name,
+  ti.source_type          = row.source_type,
+  ti.organization         = row.organization,
+  ti.coverage_area        = row.coverage_area,
+  ti.information_type     = row.information_type,
+  ti.distribution_model   = row.distribution_model,
+  ti.access_requirements  = row.access_requirements,
+  ti.update_frequency     = row.update_frequency,
+  ti.reliability_rating   = row.reliability_rating,
+  ti.timeliness           = row.timeliness,
+  ti.focus_sectors        = row.focus_sectors,
+  ti.threat_categories    = row.threat_categories,
+  ti.cost_model           = row.cost_model,
+  ti.cip_relevance        = row.cip_relevance;
+"""
+
+#LawEnforcement
+law_enforcement ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (le:LawEnforcement {
+  industry_standard_regulation_id: 'NERC_CIP',
+  agency_id: row.law_enforcement_id
+})
+ON CREATE SET
+  le.name                  = row.agency_name,
+  le.type                  = row.agency_type,
+  le.jurisdiction          = row.jurisdiction,
+  le.primary_mission       = row.primary_mission,
+  le.cip_coordination_role = row.cip_coordination_role,
+  le.contact_method        = row.contact_method,
+  le.response_capability   = row.response_capability,
+  le.specialized_units     = row.specialized_units,
+  le.authority_level       = row.authority_level,
+  le.partnership_programs  = row.partnership_programs,
+  le.response_time         = row.response_time;
 """
 #Relationships
-#regulation -> organization
+#IndustryStandardAndRegulation → Standard
+regulation_standard_rel = """
+MATCH (isr:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (isr)-[:INDUSTRY_STANDARD_AND_REGULATION_HAS_STANDARD {relationship_type: 'Framework_Standard'}]->(std);
+"""
+#IndustryStandardAndRegulation → Organization
 regulation_organization_rel = """
-MATCH (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP 5"})
-MATCH (o:Organization {industry_standard_regulation_id: 'NERC_CIP 5'})
-MERGE (r)-[:REGULATION_GOVERNS_ORGANIZATION]->(o);
+MATCH (isr:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (isr)-[:INDUSTRY_STANDARD_AND_REGULATION_APPLIES_TO_ORGANIZATION {relationship_type: 'Framework_Entity'}]->(org);
+"""
+#standard-> requirement
+standard_requirement = """
+MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP', standard_id: std.standard_id})
+MERGE (std)-[:STANDARD_CONTAINS_REQUIREMENT {relationship_type: 'Standard_Requirement'}]->(req);
+"""
+#requirement -> requirement part
+requirement_requirement_part = """
+MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (rp:RequirementPart {industry_standard_regulation_id: 'NERC_CIP', requirement_id: req.requirement_id})
+MERGE (req)-[:REQUIREMENT_HAS_PART {relationship_type: 'Requirement_Part'}]->(rp);
+"""
+#standard -> domain
+standard_domain = """
+MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (dom:Domain {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE dom.cip_standards_covered CONTAINS std.number
+MERGE (std)-[:STANDARD_ADDRESSES_DOMAIN {relationship_type: 'Standard_Domain'}]->(dom);
+"""
+#Doamin -> requirement
+domain_requirement = """
+MATCH (dom:Domain {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE dom.cip_standards_covered CONTAINS req.standard_id
+MERGE (dom)-[:DOMAIN_IMPLEMENTS_REQUIREMENT {relationship_type: 'Domain_Requirement'}]->(req);
 """
 
 # ORGANIZATION_OWNS_BES_CYBER_SYSTEM
 organization_bes_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.target_system_id})
-MERGE (org)-[r:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: row.relationship_type}]->(bs)
-ON CREATE SET
-    r.ownership_start_date = date(row.ownership_start_date),
-    r.operational_responsibility = row.operational_responsibility,
-    r.maintenance_responsibility = row.maintenance_responsibility,
-    r.security_responsibility = row.security_responsibility;
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', responsible_entity_id: org.organization_id})
+MERGE (org)-[:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: 'Entity_BCS'}]->(bcs);
 """
 
-# ORGANIZATION_IMPLEMENTS_CIP_STANDARD
-implements_cip_standard_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
-MATCH (cs:CIPStandard {industry_standard_regulation_id: 'NERC_CIP 5', standard_id: row.target_standard_id})
-MERGE (org)-[r:ORGANIZATION_IMPLEMENTS_CIP_STANDARD {relationship_type: row.relationship_type}]->(cs)
-ON CREATE SET
-    r.implementation_date = date(row.implementation_date),
-    r.compliance_level = row.compliance_level,
-    r.compliance_percentage = row.compliance_percentage;
+# Organization → BESCyberSystem
+organization_bcs_rel = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', responsible_entity_id: org.organization_id})
+MERGE (org)-[:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: 'Entity_BCS_Operation'}]->(bcs);
 """
 
-# DEFINES_SECURITY_PERIMETER 
-defines_security_perimeter_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.source_system_id})
-MATCH (es:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP 5', perimeter_id: row.target_perimeter_id})
-MERGE (bs)-[r:BES_CYBER_SYSTEM_DEFINES_SECURITY_PERIMETER {relationship_type: row.relationship_type}]->(es)
-ON CREATE SET
-    r.definition_date = date(row.definition_date),
-    r.documentation_reference = row.documentation_reference,
-    r.reviewed_date = date(row.reviewed_date);
+# BESCyberSystem → BESCyberAsset
+bes_cyber_asset_rel = """
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP', bcs_id: bcs.bcs_id})
+MERGE (bcs)-[:BES_CYBER_SYSTEM_CONTAINS_BES_CYBER_ASSET {relationship_type: 'BCS_Asset'}]->(bca);
 """
 
-# PROTECTS_CRITICAL_ASSET 
-protects_critical_asset_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP 5', system_id: row.source_system_id})
-MATCH (a:Asset {industry_standard_regulation_id: 'NERC_CIP 5', asset_id: row.target_asset_id})
-MERGE (bs)-[r:BES_CYBER_SYSTEM_PROTECTS_CRITICAL_ASSET {relationship_type: row.relationship_type}]->(a)
-ON CREATE SET
-    r.protection_start_date = date(row.protection_start_date),
-    r.protection_level = row.protection_level,
-    r.effectiveness_rating = row.effectiveness_rating;
+# BESCyberSystem → ElectronicSecurityPerimeter
+bes_cyber_system_esp_rel = """
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (esp:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', esp_id: bcs.esp_id})
+MERGE (bcs)-[:BES_PROTECTED_BY_ELECTRONIC_SECURITY_PERIMETER {protection_type: 'Electronic', basis: 'CIP-005'}]->(esp);
 """
 
-# MANAGES_ACCESS_CONTROL
-manages_access_control_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
-MATCH (ap:AccessPoint {industry_standard_regulation_id: 'NERC_CIP 5', access_point_id: row.target_access_point_id})
-MERGE (org)-[r:ORGANIZATION_MANAGES_ACCESS_CONTROL {relationship_type: row.relationship_type}]->(ap)
-ON CREATE SET
-    r.access_control_start_date = date(row.access_control_start_date),
-    r.access_control_type = row.access_control_type,
-    r.unauthorized_access_incidents = row.unauthorized_access_incidents;
+# BESCyberSystem → PhysicalSecurityPerimeter
+bes_cyber_system_psp_rel = """
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (psp:PhysicalSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', facility_id: bcs.facility_id})
+MERGE (bcs)-[:BES_PROTECTED_BY_PHYSICAL_SECURITY_PERIMETER {protection_type: 'Physical', basis: 'CIP-006'}]->(psp);
 """
-
-
-
-
-
-# MANAGES_VULNERABILITY
+#BESCyberAsset → Vendor
 manages_vulnerability_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP 5', organization_id: row.source_organization_id})
-MATCH (vm:VulnerabilityManagement {industry_standard_regulation_id: 'NERC_CIP 5', vulnerability_id: row.target_vuln_mgmt_id})
-MERGE (org)-[r:ORGANIZATION_MANAGES_VULNERABILITY {relationship_type: row.relationship_type}]->(vm)
-ON CREATE SET
-    r.program_start_date = date(row.program_start_date),
-    r.scanning_frequency = row.scanning_frequency,
-    r.remediation_sla = row.remediation_sla,
-    r.critical_unpatched_count = row.critical_unpatched_count;
+MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (vnd:Vendor {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE bca.manufacturer = vnd.name
+MERGE (bca)-[:BES_ASSET_MANUFACTURED_BY_VENDOR {relationship_type: 'Asset_Vendor'}]->(vnd);
 """
-
+#Organization → Vendor
+organization_vendor_rel = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (vnd:Vendor {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_ENGAGES_VENDOR {relationship_type: 'Supply_Chain', basis: 'CIP-013'}]->(vnd);
+"""
+#Organization → Role
+organization_role_rel = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (role:Role {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_EMPLOYS_ROLE {relationship_type: 'Personnel', basis: 'CIP-004'}]->(role);
+"""
+#Organization → Artifact
+organization_artifact_rel = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (art:Artifact {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_MAINTAINS_ARTIFACT {relationship_type: 'Evidence_Management', basis: 'CIP-011'}]->(art);
+"""
+#Artifact → Standard
+artifact_standard = """
+MATCH (art:Artifact {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP', standard_id: art.related_standard})
+MERGE (art)-[:ARTIFACT_EVIDENCES_STANDARD {relationship_type: 'Evidence_Standard'}]->(std);
+"""
+#Artifact → Requirement
+artifact_requirement = """
+MATCH (art:Artifact {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP', requirement_id: art.related_requirement})
+MERGE (art)-[:ARTIFACT_EVIDENCES_REQUIREMENT {relationship_type: 'Evidence_Requirement'}]->(req);
+"""
+#Organization → Regulator
+organization_regulator = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (reg:Regulator {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_REGULATED_BY_REGULATOR {relationship_type: 'Oversight', enforcement: 'CMEP'}]->(reg);
+"""
+#Regulator → Standard
+regulator_standard = """
+MATCH (reg:Regulator {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:REGULATOR_REGULATES_STANDARD {relationship_type: 'Regulatory_Enforcement'}]->(std);
+"""
+#BESCyberSystem → ExternalNetwork
+bes_cyber_system_external_network = """
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (net:ExternalNetwork {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (bcs)-[:BES_PROTECTED_BY_NETWORK {relationship_type: 'Network_Connection', basis: 'CIP-005'}]->(net);
+"""
+#Organization → ExternalNetwork
+organization_external_network ="""
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (net:ExternalNetwork {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_USES_NETWORK {relationship_type: 'Network_Usage', basis: 'CIP-012'}]->(net);
+"""
+#Organization → ThreatIntelligence
+organization_threat_intelligence = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_MONITORS_THREAT_INTELLIGENCE {relationship_type: 'Threat_Monitoring', basis: 'CIP-015'}]->(ti);
+"""
+#BESCyberAsset → ThreatIntelligence
+bes_cyber_asset_threat_intelligence = """
+MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (bca)-[:BES_ASSET_THREAT_INTELLIGENCE {relationship_type: 'Asset_Monitoring', basis: 'CIP-015'}]->(ti);
+"""
+#Organization → LawEnforcement
+organization_law_enforcement = """
+MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (le:LawEnforcement {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_COORDINATES_LAW_ENFORCEMENT {relationship_type: 'Incident_Coordination', basis: 'CIP-008'}]->(le);
+"""
 
 import os
 import time
