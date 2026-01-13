@@ -1,18 +1,17 @@
-# Create PCIDSS Standard Node
-from sys import intern
+# Create PCIDSS Standard Nodes
 
 
 industry_standard_regulation = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  s.name =  row.name,
-  s.version = row.version,
-  s.publication_date = date(row.publication_date),
-  s.retirement_date = date(row.retirement_date),
-  s.effective_date = date(row.effective_date),
-  s.mandatory_date_future = date(row.mandatory_date_future),
-  s.type = row.revision_type;
+  i.name = 'Payment Card Industry Data Security Standard',
+  i.version = '4.0.1',
+  i.publication_date = '2024-03-31',
+  i.retirement_date = '2027-03-31',
+  i.effective_date = '2024-03-31',
+  i.type = 'Major Revision',
+  i.status = 'Active';
+   i.description = 'The Payment Card Industry Data Security Standard (PCI DSS) v4.0.1 is a comprehensive global security standard developed by the PCI Security Standards Council to protect cardholder data and reduce payment fraud.';
 """
 #Standard Nodes
 standard = """
@@ -81,36 +80,36 @@ ON CREATE SET
 # Cardholder Data Nodes 
 card_holder_data ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (d:CardholderData {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cd:CardholderData {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  d.name = row.node_name,
-  d.data_element = row.data_element,
-  d.category = row.pci_official_category,
-  d.definition = row.definition,
-  d.official_pci_description = row.official_pci_description,
-  d.storage_allowed = row.storage_allowed,
-  d.encryption_required = row.encryption_required,
-  d.masking_requirement = row.masking_requirement,
-  d.deletion_requirement = row.deletion_requirement,
-  d.official_regulation_reference = row.official_regulation_reference,
-  d.criticality = row.criticality;
+  cd.name = row.node_name,
+  cd.data_element = row.data_element,
+  cd.category = row.pci_official_category,
+  cd.definition = row.definition,
+  cd.official_pci_description = row.official_pci_description,
+  cd.storage_allowed = row.storage_allowed,
+  cd.encryption_required = row.encryption_required,
+  cd.masking_requirement = row.masking_requirement,
+  cd.deletion_requirement = row.deletion_requirement,
+  cd.official_regulation_reference = row.official_regulation_reference,
+  cd.criticality = row.criticality;
 """
 # CDE Environment Nodes 
 cde_environment ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:CDEComponent {cde_component_id: row.cde_component_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cde:CDEComponent {cde_component_id: row.cde_component_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  c.type = row.component_type,
-  c.description = row.official_description,
-  c.in_scope_for_pci = row.in_scope_for_pci,
-  c.protection_requirements = row.protection_requirements,
-  c.connectivity_to_cde = row.connectivity_to_cde,
-  c.monitoring_requirements = row.monitoring_requirements,
-  c.vulnerability_scanning = row.vulnerability_scanning,
-  c.network_segmentation = row.network_segmentation,
-  c.encryption_required = row.encryption_required,
-  c.physical_access_control = row.physical_access_control,
-  c.systems = row.examples_of_systems;
+  cde.type = row.component_type,
+  cde.description = row.official_description,
+  cde.in_scope_for_pci = row.in_scope_for_pci,
+  cde.protection_requirements = row.protection_requirements,
+  cde.connectivity_to_cde = row.connectivity_to_cde,
+  cde.monitoring_requirements = row.monitoring_requirements,
+  cde.vulnerability_scanning = row.vulnerability_scanning,
+  cde.network_segmentation = row.network_segmentation,
+  cde.encryption_required = row.encryption_required,
+  cde.physical_access_control = row.physical_access_control,
+  cde.systems = row.examples_of_systems;
 """
 # Security Control Nodes 
 security_control = """
@@ -133,18 +132,18 @@ ON CREATE SET
 # System Component Nodes
 system_component ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sc:SystemComponent {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sysc:SystemComponent {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  sc.name = row.node_name,
-  sc.type = row.component_type,
-  sc.definition = row.definition,
-  sc.in_scope_for_pci = row.in_scope_for_pci,
-  sc.security_requirements = row.security_requirements,
-  sc.monitoring_requirements = row.monitoring_requirements,
-  sc.examples = row.examples,
-  sc.update_frequency = row.update_frequency,
-  sc.pci_requirement_mapping = row.pci_requirement_mapping,
-  sc.criticality = row.criticality;
+  sysc.name = row.node_name,
+  sysc.type = row.component_type,
+  sysc.definition = row.definition,
+  sysc.in_scope_for_pci = row.in_scope_for_pci,
+  sysc.security_requirements = row.security_requirements,
+  sysc.monitoring_requirements = row.monitoring_requirements,
+  sysc.examples = row.examples,
+  sysc.update_frequency = row.update_frequency,
+  sysc.pci_requirement_mapping = row.pci_requirement_mapping,
+  sysc.criticality = row.criticality;
 """
 # Internal Role Nodes 
 internal_role = """
@@ -312,7 +311,7 @@ ON CREATE SET
 #Threat Intelligence Nodes
 threat_intelligence ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ti:ThreatIntelligence {node_id: row.node_id})
+MERGE (ti:ThreatIntelligence {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
   ti.type = row.organization_type,
   ti.role_in_ecosystem = row.role_in_ecosystem,
@@ -334,31 +333,69 @@ ON CREATE SET
   ti.integration_capabilities = row.integration_capabilities,
   ti.key_use_cases = row.key_use_cases;
 """
-#REGULATORY AND LAW ENFORCEMENT NODES
-regulatory_and_law_enforcement ="""
+#Regulatory body
+regulatory_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (rle:RegulatoryLawEnforcement {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (rb:RegulatoryBody {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  rle.type = row.organization_type,
-  rle.role_in_ecosystem = row.role_in_ecosystem,
-  rle.definition = row.official_definition,
-  rle.primary_responsibilities = row.primary_responsibilities,
-  rle.enforcement_authority = row.enforcement_authority,
-  rle.jurisdiction = row.jurisdiction,
-  rle.investigation_capabilities = row.investigation_capabilities,
-  rle.notification_requirements = row.notification_requirements,
-  rle.cooperation_requirements = row.cooperation_requirements,
-  rle.data_requests = row.data_requests,
-  rle.prosecution_authority = row.prosecution_authority,
-  rle.international_coordination = row.international_coordination,
-  rle.incident_response_role = row.incident_response_role,
-  rle.victim_support = row.victim_support,
-  rle.public_reporting = row.public_reporting,
-  rle.contact_information = row.contact_information,
-  rle.response_time = row.response_time,
-  rle.key_statutes = row.key_statutes,
-  rle.evidence_requirements = row.evidence_requirements;
+  rb.type = row.organization_type,
+  rb.role_in_ecosystem = row.role_in_ecosystem,
+  rb.official_definition = row.official_definition,
+  rb.primary_responsibilities = row.primary_responsibilities,
+  rb.secondary_responsibilities = row.secondary_responsibilities,
+  rb.enforcement_authority = row.enforcement_authority,
+  rb.jurisdiction = row.jurisdiction,
+  rb.regulatory_mandate = row.regulatory_mandate,
+  rb.standards_developed = row.standards_developed,
+  rb.compliance_monitoring = row.compliance_monitoring,
+  rb.penalty_authority = row.penalty_authority,
+  rb.investigation_authority = row.investigation_authority,
+  rb.reporting_requirements = row.reporting_requirements,
+  rb.coordination_mechanisms = row.coordination_mechanisms,
+  rb.member_organizations = row.member_organizations,
+  rb.assessment_programs = row.assessment_programs,
+  rb.certification_programs = row.certification_programs,
+  rb.guidance_publications = row.guidance_publications,
+  rb.incident_notification = row.incident_notification,
+  rb.international_reach = row.international_reach,
+  rb.funding_model = row.funding_model,
+  rb.governance_structure = row.governance_structure,
+  rb.public_reporting = row.public_reporting,
+  rb.contact_information = row.contact_information,
+  rb.key_selection_criteria = row.key_selection_criteria;
 """
+# Law enforcement Nodes
+law_enforcement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (le:LawEnforcementAgency {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  le.type = row.organization_type,
+  le.role_in_ecosystem = row.role_in_ecosystem,
+  le.official_definition = row.official_definition,
+  le.primary_responsibilities = row.primary_responsibilities,
+  le.secondary_responsibilities = row.secondary_responsibilities,
+  le.enforcement_authority = row.enforcement_authority,
+  le.jurisdiction = row.jurisdiction,
+  le.investigation_capabilities = row.investigation_capabilities,
+  le.notification_requirements = row.notification_requirements,
+  le.cooperation_requirements = row.cooperation_requirements,
+  le.data_requests = row.data_requests,
+  le.prosecution_authority = row.prosecution_authority,
+  le.international_coordination = row.international_coordination,
+  le.incident_response_role = row.incident_response_role,
+  le.victim_support = row.victim_support,
+  le.public_reporting = row.public_reporting,
+  le.contact_information = row.contact_information,
+  le.response_time = row.response_time,
+  le.key_statutes = row.key_statutes,
+  le.evidence_requirements = row.evidence_requirements,
+  le.cyber_forensics_capability = row.cyber_forensics_capability,
+  le.threat_intelligence_sharing = row.threat_intelligence_sharing,
+  le.cross_border_authority = row.cross_border_authority,
+  le.liaison_relationships = row.liaison_relationships,
+  le.training_resources = row.training_resources,
+  le.key_selection_criteria = row.key_selection_criteria;
+  """
 
 #Third-Party Assessor nodes
 third_party_assessor ="""
@@ -394,95 +431,345 @@ ON CREATE SET
 
 
 
-
-
-
-
-
-# 1. PUBLISHES (Organization -> Standard) 
-pcidss_publishes ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (o:Organization {name: row.source_name, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (s:IndustryStandardAndRegulation {name: row.target_name, version: row.target_version})
-MERGE (o)-[:ORGANIZATION_PUBLISHES_STANDARD]->(s);
+#  INDUSTRY REGULATION  TO STANDRAD
+industry_standard_regulation_standard = """
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (s)-[rel:INDUSTRY_REGULATION_HAS_STANDARD]->(i);
 """
-# 2. HAS_GROUP (Standard -> RequirementGroup) 
-pcidss_has_group ="""
+# STANDARD TO STRATEGIC OBJECTIVES
+standard_strategic_objective="""
+MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (so:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (s)-[rel:STANDARD_HAS_STRATEGIC_OBJECTIVE]->(so);
+"""
+# STRATEGIC OBJECTIVE TO REQUIREMENTS
+strategic_objective_requirement ="""
+MATCH (so:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE r.pci_requirement_reference CONTAINS so.number
+MERGE (so)-[rel:STRATEGIC_OBJECTIVE_CONTAINS_REQUIREMENT]->(r);
+"""
+# REQUIREMENT TO STANDARD 
+requirement_standard="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:IndustryStandardAndRegulation {version: row.source_standard_version})
-MATCH (rg:RequirementGroup {group_id: row.target_group_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (s)-[:INDUSTRY_STANDARD_REGULATION_HAS_REQUIREMENT_GROUP]->(rg);
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0)
+MERGE (r)-[:REQUIREMENT_HAS_STANDARD]->(s);
+"""
+#REQUIREMENT TO STRATEGIC OBJECTIVE
+requirement_strategic_objective = """
+ATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (so:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE so.pci_requirements_mapped CONTAINS r.number
+MERGE (r)-[rel:REQUIREMENT_SUPPORTS_OBJECTIVE]->(so);
+"""
+# REQUIREMENTS REQUIRE SECURITY CONTROLS 
+requirement_security_control ="""
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sc.pci_requirement_mapping CONTAINS r.number
+MERGE (r)-[rel:REQUIREMENT_REQUIRES_CONTROL]->(sc);
+"""
+# SECURITY CONTROLS PROTECT DATA
+securtiy_control_data_protection =  """
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sc.category IN ['Data Protection', 'Encryption', 'Access Control']
+   OR sc.name CONTAINS 'Encryption'
+   OR sc.name CONTAINS 'Tokenization'
+   OR sc.name CONTAINS 'Masking'
+MERGE (sc)-[rel:PROTECTS]->(cd);
+"""
+# SECURITY CONTROLS SECURE COMPONENTS
+security_control_components = """
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sysc:SystemComponent {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sc.category IN ['Technical', 'Network', 'Physical']
+   OR sysc.pci_requirement_mapping CONTAINS sc.pci_requirement_mapping
+MERGE (sc)-[rel:SECURES]->(sysc);
+"""
+# CARDHOLDER DATA STORED IN SYSTEMS
+card_holder_data_systems ="""
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sysc:SystemComponent {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sysc.in_scope_for_pci = 'TRUE'
+MERGE (cd)-[rel:STORED_IN]->(sysc);
+"""
+# CARDHOLDER DATA ENCRYPTED WITH KEYS
+card_holder_data_encryption ="""
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE cd.encryption_required = 'Yes'
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sc.name CONTAINS 'Encryption Key' OR sc.name CONTAINS 'Key Management'
+MERGE (cd)-[rel:ENCRYPTED_WITH]->(sc);
+"""
+# CARDHOLDER DATA TRANSMITTED VIA CHANNELS
+card_holder_data_channels ="""
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cde:CDEComponent {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE cde.type IN ['Payment Gateway', 'API Endpoint', 'Web Application']
+MERGE (cd)-[rel:CARD_HOLDER_DATA_TRANSMITTED_CDE_COMPONENT]->(cde);
+"""
+# 13. CARDHOLDER DATA PROTECTED BY ENCRYPTION
+card_holder_data_protection ="""
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cd)-[rel:CARD_HOLDER_DATA_PROTECTED_BY_SECURITY_CONTROL]->(sc);
+"""
+#  CDE contains system components
+cde_system_components ="""
+MATCH (cde:CDEComponent{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sysc:SystemComponent{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sysc.in_scope_for_pci = 'TRUE'
+MERGE (cde)-[rel:CDE_CONTAINS_SYSTEM_COMPONENT]->(sysc);
+"""
+# System component has configuration
+system_component_configuration ="""
+MATCH (sysc:SystemComponent{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sysc)-[rel:SYSTEM_COMPONENT_HAS_SECURITY_CONTROL]->(sc);
+"""
+# Internal_control to SecurityControl
+internal_control_security_control ="""
+MATCH (ir:InternalRole{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ir)-[rel:INTERNAL_ROLE_REQUIRES_SECURITY_CONTROL]->(sc);
 """
 
-# 3. HAS_REQUIREMENT (RequirementGroup -> Requirement) 
-pcidss_has_requirement ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (rg:RequirementGroup {group_id: row.source_group_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (r:Requirement {req_id: toInteger(row.target_req_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (rg)-[:REQUIREMENT_GROUP_HAS_REQUIREMENT]->(r);
+# Internal_control to card_holder
+internal_control_card_holder ="""
+MATCH (ir:InternalRole{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cd:CardholderData{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE ir.data_access_level IN ['Full', 'Limited', 'Read-Only']
+MERGE (ir)-[rel:INTERNAL_ROLE_ACQUIRES_CARD_HOLDER]->(cd);
 """
-# 4. HAS_SUB_REQUIREMENT (Requirement -> SubRequirement) 
-pcidss_has_sub_requirement = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement {req_id: toInteger(row.source_req_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (sr:SubRequirement {req_id: row.target_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (r)-[:REQUIREMENT_HAS_SUB_REQUIREMENT]->(sr);
+# Internal_control to requirement
+internal_control_requirement ="""
+MATCH (ir:InternalRole{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ir)-[rel:INTERNAL_ROLE_REQUIRES_REQUIREMENT]->(r);
 """
-# 5. HAS_DEFINED_APPROACH (SubRequirement -> DefinedApproach) 
-pcidss_has_defined_approach = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {req_id: row.source_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (da:DefinedApproach {req_id: row.target_defined_approach_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sr)-[:SUB_REQUIREMENT_HAS_DEFINED_APPROACH]->(da);
+# Internal_control to Artifact
+internal_control_artifact = """
+MATCH (ir:InternalRole{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (a:Artifact{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE a.artifact_type IN ['Log', 'Audit Trail']
+MERGE (ir)-[rel:INTERNAL_ROLE_LOGGED_IN_ARTIFACT]->(a);
 """
-
-# 6. HAS_TEST (DefinedApproach -> TestingProcedure) 
-pcidss_has_test ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (da:DefinedApproach {req_id: row.source_defined_approach_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (tp:TestingProcedure {test_id: row.target_test_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (da)-[:DEFINED_APPROACH_TESTS_TESTING_PROCEDURE]->(tp);
+# CDE to Requirement
+CDE_requirement ="""
+MATCH (cde:CDEComponent{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cde)-[rel:CDE_REQUIRES_REQUIREMENT]->(r);
 """
-
-# 7. HAS_CUSTOMIZED_OBJECTIVE (SubRequirement -> CustomizedApproachObjective) 
-pcidss_has_customized_objective ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {req_id: row.source_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sr)-[:SUB_REQUIREMENT_HAS_CUSTOMIZED_OBJECTIVE]->(cao);
-"""
-# 8. HAS_GUIDANCE (SubRequirement -> Guidance) 
-pcidss_has_guidance = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {req_id: row.source_subreq_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (g:Guidance {guidance_id: row.target_guidance_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sr)-[:SUB_REQUIREMENT_HAS_GUIDANCE]->(g);
+# securitycontrol to artifact
+security_control_artifact = """
+MATCH (sc:SecurityControl{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sc.node_name CONTAINS 'Badge' OR sc.node_name CONTAINS 'Physical Access'
+MATCH (a:Artifact{industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE a.artifact_type = 'Log'
+MERGE (sc)-[rel:SECURITY_CONTROL_LOGGED_IN_ARTIFACTS]->(a);
 """
 
-# 9. REQUIRES_TRA (CustomizedApproachObjective -> TargetedRiskAnalysis) 
-pcidss_requires_tra = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (cao:CustomizedApproachObjective {req_id: row.source_customized_objective_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (tra:TargetedRiskAnalysis {tra_id: row.target_tra_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (cao)-[:REQUIRES_TARGETED_RISK_ANALYSIS]->(tra);
+# INTERNAL ROLE ASSIGNED TO ENTITY
+internal_role_entity ="""
+MATCH (ir:InternalRole {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ir)-[rel:INTERNAL_ROLE_WORKS_FOR_ENTITY]->(e);
+"""
+# SERVICE PROVIDER ACCESSES CARDHOLDER DATA
+service_provider_card_holder ="""
+MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sp)-[rel:SERVICE_PROVIDER_ACCESSES_CARD_HOLDER]->(cd);
+"""
+#SERVICE PROVIDER MUST IMPLEMENT CONTROLS
+service_provider_controls ="""
+MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sp)-[rel:SERVICE_PROVIDER_MUST_IMPLEMENT_SECURITY_CONTROL]->(sc);
+"""
+# SERVICE PROVIDER SUBJECT TO REQUIREMENTS
+service_provider_requirements ="""
+MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sp)-[rel:SERVICE_PROVIDER_SUBJECT_TO_REQUIREMENT]->(r);
+"""
+#SERVICE PROVIDER CERTIFIED BY NETWORK
+service_provider_network ="""
+MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (pb:PaymentBrand {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sp)-[rel:SERVICE_PROVIDER_CERTIFIED_BY_PAYMENT_BRAND]->(pb);
+"""
+#ACQUIRING BANK REGULATES SERVICE PROVIDER
+service_provider_regulatory ="""
+MATCH (ab:AcquiringBank {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ab)-[rel:ACQUIRING_BANK_REGULATES_SERVICE_PROVIDER]->(sp);
+"""
+#PAYMENT BRAND ENFORCES REQUIREMENT
+service_provider_requirement ="""
+MATCH (pb:PaymentBrand {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (pb)-[rel:PAYMENT_BRAND_ENFORCES_REQUIREMENT]->(r);
+"""
+#ACQUIRING BANK ENFORCES MERCHANT COMPLIANCE
+acquiring_bank_compliance ="""
+MATCH (ab:AcquiringBank {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE e.type = 'Merchant'
+MERGE (ab)-[rel:ACQUIRING_BANK_ENFORCES_COMPLIANCE]->(e);
+"""
+#ACQUIRING BANK OPERATES ON NETWORK
+acquiring_bank_payment_bank ="""
+MATCH (ab:AcquiringBank {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (pb:PaymentBrand {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE ab.relationship_to_card_networks CONTAINS pb.name
+MERGE (ab)-[rel:ACQUIRING_BANK_OPERATES_ON_NETWORK]->(pb);
+"""
+#QSA CONDUCTS ASSESSMENT
+qsa_conducts_assessment ="""
+MATCH (qsa:QualifiedSecurityAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (qsa)-[rel:QSA_CONDUCTS_ASSESSMENT]->(e);
+"""
+#ASV PERFORMS VULNERABILITY SCAN
+asv_vulnerability_scan ="""
+MATCH (asv:ApprovedScanningVendor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (asv)-[rel:ASV_PERFORMS_VULNERABILITY_SCAN]->(e);
+"""
+# QSA ASSESSES REQUIREMENT
+qsa_assesses_requirement ="""
+MATCH (qsa:QualifiedSecurityAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (qsa)-[rel:ASSESSES_REQUIREMENT]->(r);
+"""
+#ASV VALIDATES CONTROL
+asv_vulnerability_scan ="""
+MATCH (asv:ApprovedScanningVendor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (asv)-[rel:ASV_VALIDATES_CONTROL]->(sc);
+"""
+#artifact to requirement
+artifact_requirement ="""
+MATCH (a:Artifact {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (a)-[rel:ARTIFACT_REQUIRES_REQUIREMENT]->(r);
+"""
+# QSA to artifact
+qsa_artifact ="""
+MATCH (qsa:QualifiedSecurityAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (a:Artifact {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (qsa)-[rel:QSA_CONDUCTS_ASSESSMENT]->(a);
+"""
+# ASV to artifact
+asv_artifact ="""
+MATCH (asv:ApprovedScanningVendor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (a:Artifact {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (asv)-[rel:ASV_VALIDATES_CONTROL]->(a);
+"""
+# ARTIFACT MAINTAINED BY ROLE
+artifact_role ="""
+MATCH (a:Artifact {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (ir:InternalRole {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE a.owner CONTAINS ir.title
+   OR ir.title CONTAINS 'Compliance'
+   OR ir.title CONTAINS 'Security'
+MERGE (a)-[rel:ARTIFACT_MAINTAINED_BY_INTERNAL_ROLE]->(ir);
+"""
+# REGULATORY BODY DEVELOPS STANDARD
+regulatory_body_standard ="""
+MATCH (rb:RegulatoryBody {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE rb.type CONTAINS 'PCI Security Standards Council'
+MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (rb)-[rel:REGULATORY_BODY_DEVELOPS_STANDARD]->(s);
 """
 
-# 10. VALIDATES (TargetedRiskAnalysis -> CustomizedControl) 
-pcidss_validates ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (tra:TargetedRiskAnalysis {tra_id: row.source_tra_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (cc:CustomizedControl {control_id: row.target_control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (tra)-[:VALIDATES_CUSTOMIZED_CONTROL]->(cc);
+# REGULATORY BODY QUALIFIES QSA
+regulatory_body_qsa = """
+MATCH (rb:RegulatoryBody {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE rb.type CONTAINS 'PCI Security Standards Council'
+MATCH (qsa:QualifiedSecurityAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (rb)-[rel:REGULATORY_BODY_QUALIFIES_SECURITY_ASSESSOR]->(qsa);
+"""
+#  REGULATORY BODY APPROVES ASV
+regulatory_body_asv ="""
+MATCH (rb:RegulatoryBody {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE rb.type CONTAINS 'PCI Security Standards Council'
+MATCH (asv:ApprovedScanningVendor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (rb)-[rel:REGULATORY_BODY_APPROVES_SCANNING_VENDOR]->(asv);
+"""
+# REGULATORY BODY ENFORCES RESPONSIBLE_ENTITY
+regulatory_body_responsible_entity ="""
+MATCH (rb:RegulatoryBody {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE rb.type CONTAINS 'Payment Card Networks'
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (rb)-[rel:REGULATORY_BODY_ENFORCES_ENTITY]->(e);
+"""
+#LAW ENFORCEMENT INVESTIGATES BREACH
+law_enforcement_investigates_breach ="""
+MATCH (le:LawEnforcementAgency {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (le)-[rel:LAW_ENFORCEMENT_INVESTIGATES_ENTITY]->(e);
+"""
+# ENTITY REPORTS BREACH TO LAW ENFORCEMENT
+law_enforcement_reports_breach ="""
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (le:LawEnforcementAgency {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (e)-[rel:RESPONSIBLE_ENTITY_REPORTS_BREACH]->(le);
+"""
+#  THREAT INTELLIGENCE INFORMS CONTROLS
+threat_intelligence_controls ="""
+MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ti)-[rel:THREAT_INTELLIGENCE_FORMS_CONTROL]->(sc);
+"""
+# THREAT INTELLIGENCE SUPPORTS STANDARD
+threat_intelligence_standard ="""
+MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ti)-[rel:THREAT_INTELLIGENCE_SUPPORTS_STANDARD]->(s);
+"""
+# ENTITY SUBSCRIBES TO THREAT INTELLIGENCE
+responsible_entity_threat_intelligence ="""
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (e)-[rel:RESPONSIBLE_ENTITY_SUBSCRIBES_TO_THREAT_INTELLIGENCE]->(ti);
 """
 
-# 11. ADDRESSES (CustomizedControl -> CustomizedApproachObjective) 
-pcidss_addresses ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (cc:CustomizedControl {control_id: row.source_control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (cao:CustomizedApproachObjective {req_id: row.target_customized_objective_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (cc)-[:ADDRESSES_CUSTOMIZED_APPROACH_OBJECTIVE]->(cao);
+#THIRD-PARTY ASSESSOR VALIDATES STANDARD
+third_party_assessor_standard ="""
+MATCH (tpa:ThirdPartyAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (tpa)-[rel:ENTITY_VALIDATES_STANDARD]->(s);
 """
-
+#THIRD-PARTY ASSESSOR ASSESSES CONTROL
+third_party_assessor_control ="""
+MATCH (tpa:ThirdPartyAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (tpa)-[rel:ENTITY_ASSESSES_CONTROL]->(sc);
+"""
+# ENTITY ENGAGES THIRD-PARTY ASSESSOR
+responsible_entity_third_party_assessor ="""
+MATCH (e:ResponsibleEntity {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (tpa:ThirdPartyAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (e)-[rel:ENTITY_ENGAGES_ASSESSOR]->(tpa);
+"""
+# THIRD-PARTY ASSESSOR GENERATES ARTIFACT
+third_party_assessor_artifact = """
+MATCH (tpa:ThirdPartyAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (a:Artifact {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE a.type IN ['Report', 'Certification', 'Assessment']
+MERGE (tpa)-[rel:THIRD_PARTY_ASSESSOR_GENERATES_ARTIFACT]->(a);
+"""
+# THIRD-PARTY ASSESSOR VALIDATES REQUIREMENT
+third_party_assessor_requirement = """
+MATCH (tpa:ThirdPartyAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (tpa)-[rel:THIRDPARTY_ASSESSOR_VALIDATES_REQUIREMENT]->(r);
+"""
 
 import os
 import time
@@ -502,72 +789,227 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(industry_standard_regulation.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_standard.csv"))
+client.query(industry_standard_regulation)
 time.sleep(2)
 
-client.query(organization.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_organization.csv"))
+client.query(standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/standard.csv"))
 time.sleep(2)
 
-client.query(requirement_group.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_requirement_group.csv"))
+client.query(strategic_objective.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Strategic-Objective-Nodes.csv"))
+time.sleep(2)
+
+client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/requirement.csv"))
+time.sleep(2)
+
+client.query(responsible_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Responsible_entity.csv"))
+time.sleep(2)
+
+client.query(card_holder_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Card_holder_data.csv"))
+time.sleep(2)
+
+client.query(cde_environment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/CDE_environment.csv"))
+time.sleep(2)
+
+client.query(security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Security_controls.csv"))
+time.sleep(2)
+
+client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/CDE_environment.csv"))
+time.sleep(2)
+
+client.query(internal_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Internal_nodes.csv"))
+time.sleep(2)
+
+client.query(artifact.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Artifact.csv"))
+time.sleep(2)
+
+client.query(payment_brand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Artifact.csv"))
+time.sleep(2)
+
+client.query(acquiring_bank.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Acquiring_bank.csv"))
+time.sleep(2)
+
+client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Service_provider.csv"))
+time.sleep(2)
+
+client.query(approved_scanning_vendor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/ASV.csv"))
+time.sleep(2)
+
+client.query(qualified_security_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/QSA.csv"))
+time.sleep(2)
+
+client.query(threat_intelligence.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/QSA.csv"))
+time.sleep(2)
+
+client.query(law_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/law_enforcement_agencies.csv"))
+time.sleep(2)
+
+client.query(regulatory_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/regulatory_bodies.csv"))
+time.sleep(2)
+
+client.query(third_party_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Third_party_asseror.csv"))
+time.sleep(2)
+
+#Relationships
+client.query(industry_standard_regulation_standard)
+time.sleep(2)
+
+client.query(standard_strategic_objective)
+time.sleep(2)
+
+client.query(strategic_objective_requirement)
+time.sleep(2)
+
+client.query(requirement_standard)
+time.sleep(2)
+
+client.query(requirement_strategic_objective)
+time.sleep(2)
+
+client.query(requirement_security_control)
+time.sleep(2)
+
+client.query(securtiy_control_data_protection)
+time.sleep(2)
+
+client.query(security_control_components)
+time.sleep(2)
+
+client.query(card_holder_data_systems)
+time.sleep(2)
+
+client.query(card_holder_data_encryption)
+time.sleep(2)
+
+client.query(card_holder_data_channels)
+time.sleep(2)
+
+client.query(card_holder_data_protection)
+time.sleep(2)
+
+client.query(cde_system_components)
+time.sleep(2)
+
+client.query(system_component_configuration)
+time.sleep(2)
+
+client.query(internal_control_security_control)
+time.sleep(2)
+
+client.query(internal_control_card_holder)
+time.sleep(2)
+
+client.query(internal_control_requirement)
+time.sleep(2)
+
+client.query(internal_control_artifact)
+time.sleep(2)
+
+client.query(CDE_requirement)
+time.sleep(2)
+
+client.query(security_control_artifact)
+time.sleep(2)
+
+client.query(internal_role_entity)
+time.sleep(2)
+
+client.query(service_provider_card_holder)
+time.sleep(2)
+
+client.query(service_provider_controls)
+time.sleep(2)
+
+client.query(service_provider_requirements)
+time.sleep(2)
+
+client.query(service_provider_network)
+time.sleep(2)
+
+client.query(service_provider_regulatory)
+time.sleep(2)
+
+client.query(service_provider_requirement)
+time.sleep(2)
+
+client.query(acquiring_bank_compliance)
+time.sleep(2)
+
+client.query(acquiring_bank_payment_bank)
+time.sleep(2)
+
+client.query(qsa_conducts_assessment)
+time.sleep(2)
+
+client.query(asv_vulnerability_scan)
+time.sleep(2)
+
+client.query(qsa_assesses_requirement)
+time.sleep(2)
+
+client.query(asv_vulnerability_scan)
+time.sleep(2)
+
+client.query(artifact_requirement)
+time.sleep(2)
+
+client.query(qsa_artifact)
+time.sleep(2)
+
+client.query(asv_artifact)
+time.sleep(2)
+
+client.query(artifact_role)
+time.sleep(2)
+
+client.query(regulatory_body_standard)
+time.sleep(2)
+
+client.query(regulatory_body_qsa)
+time.sleep(2)
+
+client.query(regulatory_body_asv)
+time.sleep(2)
+
+client.query(regulatory_body_responsible_entity)
+time.sleep(2)
+
+client.query(law_enforcement_investigates_breach)
+time.sleep(2)
+
+client.query(law_enforcement_reports_breach)
+time.sleep(2)
+
+client.query(threat_intelligence_controls)
+time.sleep(2)
+
+client.query(threat_intelligence_standard)
+time.sleep(2)
+
+client.query(responsible_entity_threat_intelligence)
+time.sleep(2)
+
+client.query(third_party_assessor_standard)
+time.sleep(2)
+
+client.query(third_party_assessor_control)
+time.sleep(2)
+
+client.query(responsible_entity_third_party_assessor)
+time.sleep(2)
+
+client.query(third_party_assessor_artifact)
+time.sleep(2)
+
+client.query(third_party_assessor_requirement)
 time.sleep(2)
 
 
-client.query(requirement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_requirement.csv"))
-time.sleep(2)
 
-client.query(sub_requirement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_subrequirement.csv"))
-time.sleep(2)
 
-client.query(defined_approach.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_defined_approach.csv"))
-time.sleep(2)
 
-client.query(testing_procedure.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_testing_procedure.csv"))
-time.sleep(2)
 
-client.query(customized_approach_objective.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_customized_approach_objective.csv"))
-time.sleep(2)
 
-client.query(target_risk_analysis.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_targeted_risk_analysis.csv"))
-time.sleep(2)
 
-client.query(customized_control.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_customized_control.csv"))
-time.sleep(2)
-
-client.query(guidance.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/nodes_guidance.csv"))
-time.sleep(2)
-
-client.query(pcidss_publishes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_publishes.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_group.replace('$file_path',   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_group.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_requirement.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_requirement.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_sub_requirement.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_sub_requirement.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_defined_approach.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_defined_approach.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_test.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_test.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_customized_objective.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_customized_objective.csv"))
-time.sleep(2)
-
-client.query(pcidss_has_guidance.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_has_guidance.csv"))
-time.sleep(2)
-
-client.query(pcidss_requires_tra.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_requires_tra.csv"))
-time.sleep(2)
-
-client.query(pcidss_validates.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_validates.csv"))
-time.sleep(2)
-
-client.query(pcidss_addresses.replace('$file_path',  "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/relationships_addresses.csv"))
-time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")
