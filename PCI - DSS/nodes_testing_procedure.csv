@@ -1,9 +1,0 @@
-name,test_id,related_defined_approach
-Examine documentation to verify roles and responsibilities are documented,1.2.1.a,1.2.1
-Interview personnel to verify roles are assigned and understood,1.2.1.b,1.2.1
-Examine user account lists to verify each user has a unique ID,8.1.1.a,8.1.1
-Observe authentication mechanisms to verify unique ID requirements,8.1.1.b,8.1.1
-Examine MFA configurations and test MFA functionality,8.3.1.a,8.3.1
-Review data retention policies and examine stored data,3.2.1.a,3.2.1
-Examine vulnerability management processes documentation,6.1.1.a,6.1.1
-Interview personnel to verify vulnerability processes are followed,6.1.1.b,6.1.1

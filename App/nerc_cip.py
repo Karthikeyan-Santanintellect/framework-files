@@ -1,32 +1,36 @@
 #Industry_standard_regulation
 industry_standard_regulation ="""
-MERGE (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP 5"})
+MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: "NERC_CIP"})
 ON CREATE SET
-  r.name = "NERC Critical Infrastructure Protection",
-  r.version = "NERC CIP Version 5 / V6+",
-  r.enactment_date = date("2008-01-17"),
-  r.effective_date = date("2016-07-01"),
-  r.jurisdiction = "North America (Bulk Electric System)",
-  r.status = "Active",
-  r.description = "A set of mandatory cybersecurity standards enforced by the North American Electric Reliability Corporation (NERC) to secure the Bulk Electric System (BES). It requires entities to identify critical assets and apply controls for electronic and physical security, personnel training, incident response, and recovery to ensure the reliability of the North American power grid.";
+  i.name = "NERC Critical Infrastructure Protection",
+  i.version = "NERC CIP Version 5 / V6+",
+  i.enactment_date = date("2008-01-17"),
+  i.effective_date = date("2016-07-01"),
+  i.jurisdiction = "North America (Bulk Electric System)",
+  i.status = "Active",
+  i.description = "A set of mandatory cybersecurity standards enforced by the North American Electric Reliability Corporation (NERC) to secure the Bulk Electric System (BES). It requires entities to identify critical assets and apply controls for electronic and physical security, personnel training, incident response, and recovery to ensure the reliability of the North American power grid.";
 """
 #standard Node
 standard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (std:Standard {industry_standard_regulation_id: 'NERC_CIP', standard_id: row.standard_id})
+MERGE (std:Standard {industry_standard_regulation_id: 'NERC_CIP', standard_id: row.node_id})
 ON CREATE SET
   std.number                          = row.standard_number,
   std.name                            = row.standard_name,
-  std.version                         = row.version_current,
-  std.effective_date                  = row.effective_date,
+  std.version_current                 = row.version_current,
+  std.version_proposed                = row.version_proposed,
+  std.effective_date_current          = row.effective_date_current,
+  std.effective_date_proposed         = row.effective_date_proposed,
   std.ferc_order                      = row.ferc_order,
-  std.purpose                         = row.standard_purpose,
-  std.applicability_scope             = row.applicability_scope,
-  std.key_compliance_domains          = row.key_compliance_domains,
-  std.development_year                = row.development_year,
-  std.last_updated                    = row.last_updated,
-  std.violation_severity_levels       = row.violation_severity_levels,
-  std.critical_requirements_count     = row.critical_requirements_count;
+  std.purpose                         = row.purpose,
+  std.scope                           = row.scope,
+  std.applicability                   = row.applicability,
+  std.status                          = row.status,
+  std.nerc_project                    = row.nerc_project,
+  std.requirement_count               = row.requirement_count,
+  std.sub_requirement_count           = row.sub_requirement_count,
+  std.vrf_levels                      = row.vrf_levels,
+  std.total_measures                  = row.total_measures;
 """
 #Requirement Node
 requirement ="""
@@ -175,21 +179,21 @@ ON CREATE SET
 #Role (Internal Roles)
 roles ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (role:Role {
+MERGE (ro:Role {
   industry_standard_regulation_id: 'NERC_CIP',
   role_id: row.internal_role_id
 })
 ON CREATE SET
-  role.name                = row.role_name,
-  role.category            = row.role_category,
-  role.organization_level  = row.organization_level,
-  role.responsible_for     = row.responsible_for,
-  role.required_training   = row.required_training,
-  role.required_clearance  = row.required_clearance,
-  role.access_level        = row.access_level,
-  role.accountability      = row.accountability,
-  role.cip_requirement     = row.cip_requirement,
-  role.titles      = row.example_titles;
+  ro.name                = row.role_name,
+  ro.category            = row.role_category,
+  ro.organization_level  = row.organization_level,
+  ro.responsible_for     = row.responsible_for,
+  ro.required_training   = row.required_training,
+  ro.required_clearance  = row.required_clearance,
+  ro.access_level        = row.access_level,
+  ro.accountability      = row.accountability,
+  ro.cip_requirement     = row.cip_requirement,
+  ro.titles      = row.example_titles;
 """
 
 #Artifact
@@ -328,37 +332,39 @@ ON CREATE SET
 """
 #Relationships
 #IndustryStandardAndRegulation → Standard
+# Framework relationships
 regulation_standard_rel = """
-MATCH (isr:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
-MERGE (isr)-[:INDUSTRY_STANDARD_AND_REGULATION_HAS_STANDARD {relationship_type: 'Framework_Standard'}]->(std);
+MERGE (i)-[:INDUSTRY_STANDARD_AND_REGULATION_HAS_STANDARD {relationship_type: 'Framework_Standard'}]->(std);
 """
-#IndustryStandardAndRegulation → Organization
+
 regulation_organization_rel = """
-MATCH (isr:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
-MERGE (isr)-[:INDUSTRY_STANDARD_AND_REGULATION_APPLIES_TO_ORGANIZATION {relationship_type: 'Framework_Entity'}]->(org);
+MERGE (i)-[:INDUSTRY_STANDARD_AND_REGULATION_APPLIES_TO_ORGANIZATION {relationship_type: 'Framework_Entity'}]->(org);
 """
-#standard-> requirement
+
+# Standards hierarchy
 standard_requirement = """
 MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP', standard_id: std.standard_id})
 MERGE (std)-[:STANDARD_CONTAINS_REQUIREMENT {relationship_type: 'Standard_Requirement'}]->(req);
 """
-#requirement -> requirement part
+
 requirement_requirement_part = """
 MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (rp:RequirementPart {industry_standard_regulation_id: 'NERC_CIP', requirement_id: req.requirement_id})
 MERGE (req)-[:REQUIREMENT_HAS_PART {relationship_type: 'Requirement_Part'}]->(rp);
 """
-#standard -> domain
+
 standard_domain = """
 MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (dom:Domain {industry_standard_regulation_id: 'NERC_CIP'})
 WHERE dom.cip_standards_covered CONTAINS std.number
 MERGE (std)-[:STANDARD_ADDRESSES_DOMAIN {relationship_type: 'Standard_Domain'}]->(dom);
 """
-#Doamin -> requirement
+
 domain_requirement = """
 MATCH (dom:Domain {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP'})
@@ -366,114 +372,117 @@ WHERE dom.cip_standards_covered CONTAINS req.standard_id
 MERGE (dom)-[:DOMAIN_IMPLEMENTS_REQUIREMENT {relationship_type: 'Domain_Requirement'}]->(req);
 """
 
-# ORGANIZATION_OWNS_BES_CYBER_SYSTEM
-organization_bes_rel = """
+# Organization & BES Systems
+organization_owns_bcs_rel = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
-MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', responsible_entity_id: org.organization_id})
-MERGE (org)-[:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: 'Entity_BCS'}]->(bcs);
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: 'Entity_BCS_Ownership'}]->(bcs);  
 """
 
-# Organization → BESCyberSystem
 organization_bcs_rel = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
-MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP', responsible_entity_id: org.organization_id})
-MERGE (org)-[:ORGANIZATION_OWNS_BES_CYBER_SYSTEM {relationship_type: 'Entity_BCS_Operation'}]->(bcs);
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_OPERATES_BES_CYBER_SYSTEM {relationship_type: 'Entity_BCS_Operation'}]->(bcs); 
 """
 
-# BESCyberSystem → BESCyberAsset
 bes_cyber_asset_rel = """
 MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP', bcs_id: bcs.bcs_id})
 MERGE (bcs)-[:BES_CYBER_SYSTEM_CONTAINS_BES_CYBER_ASSET {relationship_type: 'BCS_Asset'}]->(bca);
 """
 
-# BESCyberSystem → ElectronicSecurityPerimeter
+# Security Perimeters
 bes_cyber_system_esp_rel = """
 MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
-MATCH (esp:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', esp_id: bcs.esp_id})
+MATCH (esp:ElectronicSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (bcs)-[:BES_PROTECTED_BY_ELECTRONIC_SECURITY_PERIMETER {protection_type: 'Electronic', basis: 'CIP-005'}]->(esp);
 """
 
-# BESCyberSystem → PhysicalSecurityPerimeter
 bes_cyber_system_psp_rel = """
 MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (psp:PhysicalSecurityPerimeter {industry_standard_regulation_id: 'NERC_CIP', facility_id: bcs.facility_id})
 MERGE (bcs)-[:BES_PROTECTED_BY_PHYSICAL_SECURITY_PERIMETER {protection_type: 'Physical', basis: 'CIP-006'}]->(psp);
 """
-#BESCyberAsset → Vendor
-manages_vulnerability_rel = """
+
+# Supply Chain
+bes_asset_vendor_rel = """
 MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (vnd:Vendor {industry_standard_regulation_id: 'NERC_CIP'})
 WHERE bca.manufacturer = vnd.name
 MERGE (bca)-[:BES_ASSET_MANUFACTURED_BY_VENDOR {relationship_type: 'Asset_Vendor'}]->(vnd);
 """
-#Organization → Vendor
+
 organization_vendor_rel = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (vnd:Vendor {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_ENGAGES_VENDOR {relationship_type: 'Supply_Chain', basis: 'CIP-013'}]->(vnd);
 """
-#Organization → Role
+
+# Personnel & Evidence
 organization_role_rel = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
-MATCH (role:Role {industry_standard_regulation_id: 'NERC_CIP'})
-MERGE (org)-[:ORGANIZATION_EMPLOYS_ROLE {relationship_type: 'Personnel', basis: 'CIP-004'}]->(role);
+MATCH (ro:Role {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (org)-[:ORGANIZATION_EMPLOYS_ROLE {relationship_type: 'Personnel', basis: 'CIP-004'}]->(ro);
 """
-#Organization → Artifact
+
 organization_artifact_rel = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (art:Artifact {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_MAINTAINS_ARTIFACT {relationship_type: 'Evidence_Management', basis: 'CIP-011'}]->(art);
 """
-#Artifact → Standard
+
 artifact_standard = """
 MATCH (art:Artifact {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP', standard_id: art.related_standard})
 MERGE (art)-[:ARTIFACT_EVIDENCES_STANDARD {relationship_type: 'Evidence_Standard'}]->(std);
 """
-#Artifact → Requirement
+
 artifact_requirement = """
 MATCH (art:Artifact {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (req:Requirement {industry_standard_regulation_id: 'NERC_CIP', requirement_id: art.related_requirement})
 MERGE (art)-[:ARTIFACT_EVIDENCES_REQUIREMENT {relationship_type: 'Evidence_Requirement'}]->(req);
 """
-#Organization → Regulator
+
+# Regulatory
 organization_regulator = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (reg:Regulator {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_REGULATED_BY_REGULATOR {relationship_type: 'Oversight', enforcement: 'CMEP'}]->(reg);
 """
-#Regulator → Standard
+
 regulator_standard = """
 MATCH (reg:Regulator {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (std:Standard {industry_standard_regulation_id: 'NERC_CIP'})
-MERGE (reg)-[:REGULATOR_REGULATES_STANDARD {relationship_type: 'Regulatory_Enforcement'}]->(std);
+MERGE (reg)-[:REGULATOR_ENFORCES_STANDARD {relationship_type: 'Regulatory_Enforcement'}]->(std);
 """
-#BESCyberSystem → ExternalNetwork
+
+# Networks
 bes_cyber_system_external_network = """
 MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (net:ExternalNetwork {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (bcs)-[:BES_PROTECTED_BY_NETWORK {relationship_type: 'Network_Connection', basis: 'CIP-005'}]->(net);
 """
-#Organization → ExternalNetwork
-organization_external_network ="""
+
+organization_external_network = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (net:ExternalNetwork {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_USES_NETWORK {relationship_type: 'Network_Usage', basis: 'CIP-012'}]->(net);
 """
-#Organization → ThreatIntelligence
+
+# Threat Intelligence
 organization_threat_intelligence = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_MONITORS_THREAT_INTELLIGENCE {relationship_type: 'Threat_Monitoring', basis: 'CIP-015'}]->(ti);
 """
-#BESCyberAsset → ThreatIntelligence
+
 bes_cyber_asset_threat_intelligence = """
 MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (ti:ThreatIntelligence {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (bca)-[:BES_ASSET_THREAT_INTELLIGENCE {relationship_type: 'Asset_Monitoring', basis: 'CIP-015'}]->(ti);
 """
-#Organization → LawEnforcement
+
+# Incident Response
 organization_law_enforcement = """
 MATCH (org:Organization {industry_standard_regulation_id: 'NERC_CIP'})
 MATCH (le:LawEnforcement {industry_standard_regulation_id: 'NERC_CIP'})
@@ -481,6 +490,7 @@ MERGE (org)-[:ORGANIZATION_COORDINATES_LAW_ENFORCEMENT {relationship_type: 'Inci
 """
 
 import os
+import re
 import time
 import logging
 import json
@@ -503,59 +513,127 @@ logger.info("Loading graph structure...")
 client.query(industry_standard_regulation)
 time.sleep(2)
 
-client.query(organization.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_Organization_nodes.csv'))
+client.query(standard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Standard.csv'))
 time.sleep(2)
 
-client.query(BESCyberSystem.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_BESCyberSystem_nodes.csv'))
+client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Requirement.csv'))
 time.sleep(2)
 
-client.query(CIPStandard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_CIPStandard_nodes.csv'))
+client.query(requirement_part.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_RequirementPart.csv'))
 time.sleep(2)
 
-client.query(ElectronicSecurityPerimeter.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_ElectronicSecurityPerimeter_nodes.csv'))
+client.query(domain.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Domain.csv'))
 time.sleep(2)
 
-client.query(Asset.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_Asset_nodes.csv'))
+client.query(organization.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Organization.csv'))
 time.sleep(2)
 
-client.query(CyberThreat.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_CyberThreat_nodes.csv'))
+client.query(bes_cyber_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_BESCyberSystem.csv'))
 time.sleep(2)
 
-client.query(AccessPoint.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_AccessPoint_nodes.csv'))
+client.query(bes_cyber_asset.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_BESCyberAsset.csv'))
 time.sleep(2)
 
-client.query(CriticalFacility.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_CriticalFacility_nodes.csv'))
+client.query(esp.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_ESP.csv'))
 time.sleep(2)
 
-client.query(IncidentResponse.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_IncidentResponse_nodes.csv'))
+client.query(psp.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_PSP.csv'))
 time.sleep(2)
 
-client.query(VulnerabilityManagement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_VulnerabilityManagement_nodes.csv'))
+client.query(roles.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Role.csv'))
+time.sleep(2)
+
+client.query(artifact.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Artifact.csv'))
+time.sleep(2)
+
+client.query(regulator.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Regulator.csv'))
+time.sleep(2)
+
+client.query(vendor.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_Vendor.csv'))
+time.sleep(2)
+
+client.query(external_network.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_ExternalNetwork.csv'))
+time.sleep(2)
+
+client.query(threat_intelligence.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_ThreatIntelligence.csv'))
+time.sleep(2)
+
+client.query(law_enforcement.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_LawEnforcement.csv'))
 time.sleep(2)
 
 #Relationships
+client.query(regulation_standard_rel)
+time.sleep(2)
+
 client.query(regulation_organization_rel)
 time.sleep(2)
 
-client.query(organization_bes_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_OWNS_BES_CYBER_SYSTEM_relationships.csv'))
+client.query(standard_requirement)
 time.sleep(2)
 
-client.query(implements_cip_standard_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_IMPLEMENTS_CIP_STANDARD_relationships.csv'))
-time.sleep(2) 
-
-client.query(defines_security_perimeter_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_DEFINES_SECURITY_PERIMETER_relationships.csv'))
+client.query(requirement_requirement_part)
 time.sleep(2)
 
-client.query(protects_critical_asset_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_PROTECTS_CRITICAL_ASSET_relationships.csv'))
+client.query(standard_domain)
 time.sleep(2)
 
-client.query(manages_access_control_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_MANAGES_ACCESS_CONTROL_relationships.csv'))
-time.sleep(2)   
-
-
-client.query(manages_vulnerability_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC_MANAGES_VULNERABILITY_relationships.csv'))
+client.query(domain_requirement)
 time.sleep(2)
 
+
+client.query(organization_owns_bcs_rel)
+time.sleep(2)
+
+client.query(organization_bcs_rel)
+time.sleep(2)
+
+client.query(bes_cyber_asset_rel)
+time.sleep(2)
+
+client.query(bes_cyber_system_esp_rel)
+time.sleep(2)
+
+client.query(bes_cyber_system_psp_rel)
+time.sleep(2)
+
+client.query(organization_vendor_rel)
+time.sleep(2)
+
+client.query(bes_asset_vendor_rel)
+time.sleep(2)
+
+client.query(organization_role_rel)
+time.sleep(2)
+
+client.query(organization_artifact_rel)
+time.sleep(2)
+
+client.query(artifact_standard)
+time.sleep(2)
+
+client.query(artifact_requirement)
+time.sleep(2)
+
+client.query(organization_regulator)
+time.sleep(2)
+
+client.query(regulator_standard)
+time.sleep(2)
+
+client.query(bes_cyber_system_external_network)
+time.sleep(2)
+
+client.query(organization_external_network)
+time.sleep(2)
+
+client.query(organization_threat_intelligence)
+time.sleep(2)
+
+client.query(bes_cyber_asset_threat_intelligence)
+time.sleep(2)
+
+client.query(organization_law_enforcement)
+time.sleep(2)
  
 logger.info("Graph structure loaded successfully.")
 

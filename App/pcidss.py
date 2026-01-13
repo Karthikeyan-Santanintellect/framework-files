@@ -1,4 +1,7 @@
 # Create PCIDSS Standard Node
+from sys import intern
+
+
 industry_standard_regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
@@ -11,94 +14,390 @@ ON CREATE SET
   s.mandatory_date_future = date(row.mandatory_date_future),
   s.type = row.revision_type;
 """
-#Organization Nodes
-organization = """
+#Standard Nodes
+standard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (o:Organization {name: row.name, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (s:Standard {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  o.type = row.type,
-  o.date = date(row.founded),
-  o.headquarters = row.headquarters,
-  o.website =  row.website,
-  o.purpose =  row.purpose;
+  s.name = row.node_name,
+  s.type = row.node_type,
+  s.definition = row.definition,
+  s.description = row.official_description,
+  s.applicable_to = row.applicable_to,
+  s.owner = row.organization_owner,
+  s.version = row.version,
+  s.status = row.status,
+  s.key_features = row.key_features;
 """
-#RequirementGroup Nodes
-requirement_group = """
+#Requirement Nodes
+requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (rg:RequirementGroup {group_id:row.group_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (r:Requirement {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  rg.name = row.name;
+  r.name = row.node_name,
+  r.number = row.requirement_number,
+  r.standard_id = row.standard_id,
+  r.title = row.official_title,
+  r.description = row.official_description,
+  r.purpose_and_intent = row.purpose_and_intent,
+  r.key_implementation_requirements = row.key_implementation_requirements,
+  r.sub_requirements = row.sub_requirements,
+  r.testing_guidance = row.testing_guidance,
+  r.applies_to_entity_type = row.applies_to_entity_type,
+  r.criticality = row.criticality,
+  r.pci_requirement_reference = row.pci_requirement_reference;
 """
-# Requirement Nodes
-requirement ="""
+#  Strategic Objective Nodes
+strategic_objective ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement {req_id: toInteger(row.req_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (o:StrategicObjective {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  r.name = row.name,
-  r.group = row.requirement_group;
+  o.number = row.objective_number,
+  o.name = row.node_name,
+  o.definition = row.definition,
+  o.official_pci_description = row.official_pci_description,
+  o.pci_requirements_mapped = row.pci_requirements_mapped,
+  o.implementation_focus = row.implementation_focus,
+  o.business_value = row.business_value,
+  o.criticality = row.criticality,
+  o.iso_27001_alignment = row.iso_27001_alignment;
 """
-# SubRequirement Nodes 
-sub_requirement = """
+# Responsible Entity Nodes 
+responsible_entity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sr:SubRequirement {req_id: row.req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (e:ResponsibleEntity {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  sr.name = row.name,
-  sr.milestone = toInteger(row.milestone),
-  sr.becomes_mandatory_on = date(row.becomes_mandatory_on);
+  e.name = row.node_name,
+  e.type = row.entity_type,
+  e.definition = row.definition,
+  e.pci_dss_definition = row.pci_dss_definition,
+  e.compliance_level = row.compliance_level,
+  e.transaction_threshold = row.transaction_threshold,
+  e.assessment_type = row.assessment_type,
+  e.compliance_requirements = row.compliance_requirements,
+  e.applicable_standards = row.applicable_standards,
+  e.criticality = row.criticality;
 """
-# DefinedApproach Nodes 
-defined_approach ="""
+# Cardholder Data Nodes 
+card_holder_data ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (da:DefinedApproach {req_id: row.req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (d:CardholderData {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  da.name = row.name;
+  d.name = row.node_name,
+  d.data_element = row.data_element,
+  d.category = row.pci_official_category,
+  d.definition = row.definition,
+  d.official_pci_description = row.official_pci_description,
+  d.storage_allowed = row.storage_allowed,
+  d.encryption_required = row.encryption_required,
+  d.masking_requirement = row.masking_requirement,
+  d.deletion_requirement = row.deletion_requirement,
+  d.official_regulation_reference = row.official_regulation_reference,
+  d.criticality = row.criticality;
 """
-# TestingProcedure Nodes 
-testing_procedure ="""
+# CDE Environment Nodes 
+cde_environment ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (tp:TestingProcedure {test_id: row.test_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (c:CDEComponent {cde_component_id: row.cde_component_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  tp.name = row.name,
-  tp.approach = row.related_defined_approach;
+  c.type = row.component_type,
+  c.description = row.official_description,
+  c.in_scope_for_pci = row.in_scope_for_pci,
+  c.protection_requirements = row.protection_requirements,
+  c.connectivity_to_cde = row.connectivity_to_cde,
+  c.monitoring_requirements = row.monitoring_requirements,
+  c.vulnerability_scanning = row.vulnerability_scanning,
+  c.network_segmentation = row.network_segmentation,
+  c.encryption_required = row.encryption_required,
+  c.physical_access_control = row.physical_access_control,
+  c.systems = row.examples_of_systems;
 """
-# CustomizedApproachObjective Nodes 
-customized_approach_objective = """
+# Security Control Nodes 
+security_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cao:CustomizedApproachObjective {req_id: row.req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sc:SecurityControl {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  cao.name = row.name;
+  sc.name = row.node_name,
+  sc.control_id = row.control_id,
+  sc.standard_id = row.standard_id,
+  sc.category = row.control_category,
+  sc.definition = row.definition,
+  sc.official_description = row.official_description,
+  sc.implementation_guidance = row.implementation_guidance,
+  sc.verification_method = row.verification_method,
+  sc.applies_to = row.applies_to,
+  sc.criticality = row.criticality,
+  sc.pci_requirement_mapping = row.pci_requirement_mapping,
+  sc.iso_27001_mapping = row.iso_27001_mapping;
 """
-# TargetedRiskAnalysis Nodes
-target_risk_analysis ="""
+# System Component Nodes
+system_component ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (tra:TargetedRiskAnalysis {tra_id: row.tra_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sc:SystemComponent {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  tra.name = row.name,
-  tra.type = row.type,
-  tra.status = row.status,
-  tra.owner = row.owner,
-  tra.date = date(row.date_completed),
-  tra.req_id = row.related_req_id;
+  sc.name = row.node_name,
+  sc.type = row.component_type,
+  sc.definition = row.definition,
+  sc.in_scope_for_pci = row.in_scope_for_pci,
+  sc.security_requirements = row.security_requirements,
+  sc.monitoring_requirements = row.monitoring_requirements,
+  sc.examples = row.examples,
+  sc.update_frequency = row.update_frequency,
+  sc.pci_requirement_mapping = row.pci_requirement_mapping,
+  sc.criticality = row.criticality;
 """
-#  CustomizedControl Nodes 
-customized_control = """
+# Internal Role Nodes 
+internal_role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cc:CustomizedControl {control_id: row.control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ir:InternalRole {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  cc.name = row.name,
-  cc.description = row.description,
-  cc.owner = row.owner,
-  cc.date = date(row.implementation_date),
-  cc.req_id = row.related_objective_req_id;
+  ir.name = row.node_name,
+  ir.title = row.role_title,
+  ir.department = row.department,
+  ir.responsibility_summary = row.responsibility_summary,
+  ir.pci_dss_responsibilities = row.pci_dss_responsibilities,
+  ir.required_qualifications = row.required_qualifications,
+  ir.training_requirements = row.training_requirements,
+  ir.key_functions = row.key_functions,
+  ir.pci_requirement_mapping = row.pci_requirement_mapping,
+  ir.criticality = row.criticality;
 """
-#  Guidance Nodes
-guidance ="""
+# Artifact Nodes
+artifact ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (g:Guidance {guidance_id: row.guidance_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (a:Artifact {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  g.name = row.name,
-  g.related_subrequirement = row.related_subrequirement;
+  a.name           = row.node_name,
+  a.type       = row.artifact_type,
+  a.definition          = row.definition,
+  a.pci_dss_requirement = row.pci_dss_requirement,
+  a.purpose_and_use     = row.purpose_and_use,
+  a.retention_period    = row.retention_period,
+  a.owner               = row.owner,
+  a.verification_method = row.verification_method,
+  a.criticality         = row.criticality,
+  a.document_frequency  = row.document_frequency,
+  a.digital_or_physical = row.digital_or_physical;
 """
+#Payment Brand Nodes
+payment_brand ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pb:PaymentBrand {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  pb.name = row.payment_brand_name,
+  pb.official_full_name = row.official_full_name,
+  pb.headquarters_location = row.headquarters_location,
+  pb.founded_year = row.founded_year,
+  pb.market_coverage = row.market_coverage,
+  pb.accepted_merchants_worldwide = row.accepted_merchants_worldwide,
+  pb.transaction_volume_annual = row.transaction_volume_annual,
+  pb.network_type = row.network_type,
+  pb.card_types_supported = row.card_types_supported,
+  pb.geographic_focus = row.geographic_focus,
+  pb.regional_dominance = row.regional_dominance,
+  pb.pci_dss_compliance = row.pci_dss_compliance,
+  pb.security_standards = row.security_standards,
+  pb.data_protection_requirements = row.data_protection_requirements,
+  pb.fraud_prevention = row.fraud_prevention;
+  """
+
+# Acquiring Bank Nodes
+acquiring_bank ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ab:AcquiringBank {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  ab.type = row.organization_type,
+  ab.role_in_ecosystem = row.role_in_ecosystem,
+  ab.definition = row.official_definition,
+  ab.primary_responsibilities = row.primary_responsibilities,
+  ab.secondary_responsibilities = row.secondary_responsibilities,
+  ab.pci_dss_requirements = row.pci_dss_requirements,
+  ab.relationship_to_merchants = row.relationship_to_merchants,
+  ab.relationship_to_service_providers = row.relationship_to_service_providers,
+  ab.relationship_to_card_networks = row.relationship_to_card_networks,
+  ab.typical_transaction_volume = row.typical_transaction_volume,
+  ab.geographic_scope = row.geographic_scope,
+  ab.regulatory_authority = row.regulatory_authority,
+  ab.compliance_enforcement = row.compliance_enforcement,
+  ab.data_requirements = row.data_requirements,
+  ab.communication_protocols = row.communication_protocols,
+  ab.incident_response_role = row.incident_response_role,
+  ab.annual_assessment_requirements = row.annual_assessment_requirements,
+  ab.certification_requirements = row.certification_requirements,
+  ab.professional_standards = row.professional_standards,
+  ab.liability_coverage = row.liability_coverage,
+  ab.examples_global = row.examples_global,
+  ab.key_selection_criteria = row.key_selection_criteria;
+  """
+
+#Service Provider Nodes
+service_provider ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sp:ServiceProvider {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  sp.type = row.organization_type,
+  sp.role_in_ecosystem = row.role_in_ecosystem,
+  sp.official_definition = row.official_definition,
+  sp.primary_responsibilities = row.primary_responsibilities,
+  sp.secondary_responsibilities = row.secondary_responsibilities,
+  sp.pci_dss_requirements = row.pci_dss_requirements,
+  sp.relationship_to_merchants = row.relationship_to_merchants,
+  sp.relationship_to_processors = row.relationship_to_processors,
+  sp.relationship_to_acquirers = row.relationship_to_acquirers,
+  sp.typical_service_scope = row.typical_service_scope,
+  sp.geographic_scope = row.geographic_scope,
+  sp.regulatory_authority = row.regulatory_authority,
+  sp.compliance_enforcement = row.compliance_enforcement,
+  sp.data_requirements = row.data_requirements,
+  sp.communication_protocols = row.communication_protocols,
+  sp.incident_response_role = row.incident_response_role,
+  sp.annual_assessment_requirements = row.annual_assessment_requirements,
+  sp.certification_requirements = row.certification_requirements,
+  sp.professional_standards = row.professional_standards,
+  sp.liability_coverage = row.liability_coverage,
+  sp.examples_global = row.examples_global,
+  sp.key_selection_criteria = row.key_selection_criteria;
+"""
+# Approved Scanning Vendor (ASV) Nodes
+approved_scanning_vendor ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (asv:ApprovedScanningVendor {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  asv.type = row.organization_type,
+  asv.role_in_ecosystem = row.role_in_ecosystem,
+  asv.official_definition = row.official_definition,
+  asv.primary_responsibilities = row.primary_responsibilities,
+  asv.secondary_responsibilities = row.secondary_responsibilities,
+  asv.pci_dss_requirements = row.pci_dss_requirements,
+  asv.relationship_to_entities = row.relationship_to_entities,
+  asv.service_scope = row.service_scope,
+  asv.geographic_scope = row.geographic_scope,
+  asv.regulatory_authority = row.regulatory_authority,
+  asv.compliance_enforcement = row.compliance_enforcement,
+  asv.deliverables = row.deliverables,
+  asv.communication_protocols = row.communication_protocols,
+  asv.scan_frequency = row.scan_frequency,
+  asv.support = row.remediation_support,
+  asv.certification_requirements = row.certification_requirements,
+  asv.professional_standards = row.professional_standards,
+  asv.liability_coverage = row.liability_coverage,
+  asv.approved_vendor_list = row.approved_vendor_list,
+  asv.key_selection_criteria = row.key_selection_criteria;
+"""
+# Qualified Security Assessor (QSA) Nodes
+qualified_security_assessor ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (qsa:QualifiedSecurityAssessor {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  qsa.type = row.organization_type,
+  qsa.role_in_ecosystem = row.role_in_ecosystem,
+  qsa.official_definition = row.official_definition,
+  qsa.primary_responsibilities = row.primary_responsibilities,
+  qsa.secondary_responsibilities = row.secondary_responsibilities,
+  qsa.pci_dss_requirements = row.pci_dss_requirements,
+  qsa.relationship_to_entities = row.relationship_to_entities,
+  qsa.service_scope = row.service_scope,
+  qsa.geographic_scope = row.geographic_scope,
+  qsa.regulatory_authority = row.regulatory_authority,
+  qsa.compliance_enforcement = row.compliance_enforcement,
+  qsa.deliverables = row.deliverables,
+  qsa.communication_protocols = row.communication_protocols,
+  qsa.assessment_frequency = row.assessment_frequency,
+  qsa.certification_requirements = row.certification_requirements,
+  qsa.professional_standards = row.professional_standards,
+  qsa.liability_coverage = row.liability_coverage,
+  qsa.approved_assessor_list = row.approved_assessor_list,
+  qsa.key_selection_criteria = row.key_selection_criteria;
+"""
+#Threat Intelligence Nodes
+threat_intelligence ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ti:ThreatIntelligence {node_id: row.node_id})
+ON CREATE SET
+  ti.type = row.organization_type,
+  ti.role_in_ecosystem = row.role_in_ecosystem,
+  ti.definition = row.official_definition,
+  ti.primary_responsibilities = row.primary_responsibilities,
+  ti.secondary_responsibilities = row.secondary_responsibilities,
+  ti.information_shared = row.information_shared,
+  ti.participation_model = row.participation_model,
+  ti.geographic_scope = row.geographic_scope,
+  ti.member_benefits = row.member_benefits,
+  ti.communication_channels = row.communication_channels,
+  ti.real_time_alerting = row.real_time_alerting,
+  ti.incident_coordination = row.incident_coordination,
+  ti.threat_analysis_capabilities = row.threat_analysis_capabilities,
+  ti.reporting_frequency = row.reporting_frequency,
+  ti.membership_requirements = row.membership_requirements,
+  ti.confidentiality_protocols = row.confidentiality_protocols,
+  ti.cost_structure = row.cost_structure,
+  ti.integration_capabilities = row.integration_capabilities,
+  ti.key_use_cases = row.key_use_cases;
+"""
+#REGULATORY AND LAW ENFORCEMENT NODES
+regulatory_and_law_enforcement ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rle:RegulatoryLawEnforcement {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  rle.type = row.organization_type,
+  rle.role_in_ecosystem = row.role_in_ecosystem,
+  rle.definition = row.official_definition,
+  rle.primary_responsibilities = row.primary_responsibilities,
+  rle.enforcement_authority = row.enforcement_authority,
+  rle.jurisdiction = row.jurisdiction,
+  rle.investigation_capabilities = row.investigation_capabilities,
+  rle.notification_requirements = row.notification_requirements,
+  rle.cooperation_requirements = row.cooperation_requirements,
+  rle.data_requests = row.data_requests,
+  rle.prosecution_authority = row.prosecution_authority,
+  rle.international_coordination = row.international_coordination,
+  rle.incident_response_role = row.incident_response_role,
+  rle.victim_support = row.victim_support,
+  rle.public_reporting = row.public_reporting,
+  rle.contact_information = row.contact_information,
+  rle.response_time = row.response_time,
+  rle.key_statutes = row.key_statutes,
+  rle.evidence_requirements = row.evidence_requirements;
+"""
+
+#Third-Party Assessor nodes
+third_party_assessor ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tpa:ThirdPartyAssessor {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  tpa.type = row.organization_type,
+  tpa.role_in_ecosystem = row.role_in_ecosystem,
+  tpa.definition = row.official_definition,
+  tpa.primary_responsibilities = row.primary_responsibilities,
+  tpa.secondary_responsibilities = row.secondary_responsibilities,
+  tpa.assessment_frameworks = row.assessment_frameworks,
+  tpa.relationship_to_entities = row.relationship_to_entities,
+  tpa.service_scope = row.service_scope,
+  tpa.geographic_scope = row.geographic_scope,
+  tpa.regulatory_authority = row.regulatory_authority,
+  tpa.compliance_enforcement = row.compliance_enforcement,
+  tpa.deliverables = row.deliverables,
+  tpa.communication_protocols = row.communication_protocols,
+  tpa.assessment_frequency = row.assessment_frequency,
+  tpa.certification_requirements = row.certification_requirements,
+  tpa.professional_standards = row.professional_standards,
+  tpa.liability_coverage = row.liability_coverage,
+  tpa.independence_requirements = row.independence_requirements,
+  tpa.accreditation_bodies = row.accreditation_bodies,
+  tpa.quality_assurance = row.quality_assurance,
+  tpa.continuing_education = row.continuing_education,
+  tpa.typical_engagement_duration = row.typical_engagement_duration,
+  tpa.cost_structure = row.cost_structure,
+  tpa.examples_global = row.examples_global,
+  tpa.key_selection_criteria = row.key_selection_criteria;
+"""
+
+
+
+
+
+
+
 
 # 1. PUBLISHES (Organization -> Standard) 
 pcidss_publishes ="""

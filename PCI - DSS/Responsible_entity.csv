@@ -1,0 +1,12 @@
+node_type,field_name,field_description,data_type,mandatory,length_limit,valid_values,validation_rules,example_value,purpose
+Responsible-Entity,node_id,Unique identifier for entity,string,YES,20,"entity_001-entity_999","Format: entity_XXX; Unique; No duplicates","entity_001","Primary key"
+Responsible-Entity,node_name,Entity type name,string,YES,100,"Merchant Level 1-4, Service Provider, Acquirer, Issuer","Non-empty; Max 100 chars; Match official PCI classification","Merchant Level 1","Display name"
+Responsible-Entity,entity_type,Entity classification,string,YES,50,"Merchant, Service Provider, Acquirer, Issuer, Processor","Valid PCI entity type; Match official classification","Merchant","Entity categorization"
+Responsible-Entity,definition,Entity definition,string,YES,500,"What entity does and characteristics","Non-empty; Max 500 chars; Plain text; Include scope","Largest merchants by transaction volume processing cards","Quick reference"
+Responsible-Entity,pci_dss_definition,Official PCI definition,string,YES,500,"From PCI DSS standard","From official source; Max 500 chars; Technical language OK","Per PCI DSS: Merchants processing >6M Visa transactions/year","Official reference"
+Responsible-Entity,compliance_level,Compliance level,string,YES,20,"Level 1, Level 2, Level 3, Level 4, Not Applicable","Valid level; Must correspond to entity type","Level 1","Compliance tier"
+Responsible-Entity,transaction_threshold,Transaction volume threshold,string,YES,50,"Numeric + unit (transactions/year or /month)","Numeric value; Include time unit; Plain text format","Greater than 6 million transactions/year (Visa)","Level determination"
+Responsible-Entity,assessment_type,Required assessment type,string,YES,100,"Onsite, SAQ, Limited Onsite, Attestation","Valid assessment type; Match PCI requirements","Annual Onsite Assessment by QSA","Compliance verification"
+Responsible-Entity,compliance_requirements,Compliance requirements,string,YES,500,"Semicolon-separated requirements","Semicolon-separated; Specific and measurable; Plain text","12 requirements; Annual RoC; Quarterly scans; Annual penetration testing","Compliance obligations"
+Responsible-Entity,applicable_standards,Applicable standards,string,YES,200,"Semicolon-separated standard names","Semicolon-separated; Valid standard names","PCI DSS v4.0.1; ISO 27001; GDPR (if in EU)","Applicable frameworks"
+Responsible-Entity,criticality,Importance rating,string,YES,20,"CRITICAL, HIGH, MEDIUM, LOW","One of 4 values; Case-sensitive; All caps","CRITICAL","Risk prioritization"

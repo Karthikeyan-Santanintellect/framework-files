@@ -1,0 +1,13 @@
+node_type,field_name,field_description,data_type,mandatory,length_limit,valid_values,validation_rules,example_value,purpose
+Artifact,node_id,Unique identifier for artifact,string,YES,20,"art_001-art_999","Format: art_XXX; Unique; No duplicates","art_001","Primary key"
+Artifact,node_name,Artifact name,string,YES,100,"Security Policy, Scan Report, Incident Log, etc.","Non-empty; Max 100 chars; Plain text; Descriptive","Security Policy Document","Display name"
+Artifact,artifact_type,Artifact classification,string,YES,50,"Policy, Assessment, Log, Procedure, Report, Plan, Document","Valid type; Plain text; One of standard types","Policy Documentation","Artifact type"
+Artifact,definition,Artifact definition,string,YES,300,"What the artifact is and purpose","Non-empty; Max 300 chars; Plain text; Business-focused","Comprehensive written security policy addressing all 12 requirements","Quick reference"
+Artifact,pci_dss_requirement,Related PCI requirement,string,YES,50,"PCI DSS Requirement X; Applicable to Requirement X, Y, Z","Format: 'PCI DSS Requirement X'; One or multiple; Valid requirements","Requirement 12.1","PCI mapping"
+Artifact,purpose_and_use,Purpose of the artifact,string,YES,300,"Why this artifact exists and how used","Non-empty; Max 300 chars; Plain text; Business value","Documents organization's security approach; Communicates to personnel","Purpose statement"
+Artifact,retention_period,How long to keep artifact,string,YES,100,"Specific period (e.g., 12 months, 3 years) or lifecycle","Non-empty; Specific timeframe; Plain text","Maintained; Updated at least annually","Record retention"
+Artifact,owner,Person/role responsible for artifact,string,YES,100,"Job title or department responsible","Non-empty; Max 100 chars; Plain text; Valid role","Chief Security Officer / Compliance Manager","Accountability"
+Artifact,verification_method,How artifact is verified,string,YES,300,"Semicolon-separated verification methods","Semicolon-separated; Specific audit steps; Plain text; Measurable","Annual management review; Distribution verification; Update tracking","Audit procedures"
+Artifact,criticality,Importance rating,string,YES,20,"CRITICAL, HIGH, MEDIUM, LOW","One of 4 values; Case-sensitive; All caps","CRITICAL","Risk prioritization"
+Artifact,document_frequency,Update frequency,string,YES,50,"Annual, Quarterly, Monthly, Real-time, Per Event","Valid frequency; Plain text; Include trigger if event-based","Annual or when requirements change","Update schedule"
+Artifact,digital_or_physical,Storage format,string,YES,50,"Digital, Physical, Both","Valid storage type; Plain text; Specify if mixed","Digital","Storage requirement"
