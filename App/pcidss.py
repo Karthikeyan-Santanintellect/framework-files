@@ -1,6 +1,4 @@
 # Create PCIDSS Standard Nodes
-
-
 industry_standard_regulation = """
 MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
@@ -10,8 +8,8 @@ ON CREATE SET
   i.retirement_date = '2027-03-31',
   i.effective_date = '2024-03-31',
   i.type = 'Major Revision',
-  i.status = 'Active';
-   i.description = 'The Payment Card Industry Data Security Standard (PCI DSS) v4.0.1 is a comprehensive global security standard developed by the PCI Security Standards Council to protect cardholder data and reduce payment fraud.';
+  i.status = 'Active',
+  i.description = 'The Payment Card Industry Data Security Standard (PCI DSS) v4.0.1 is a comprehensive global security standard developed by the PCI Security Standards Council to protect cardholder data and reduce payment fraud.';
 """
 #Standard Nodes
 standard = """
@@ -75,7 +73,11 @@ ON CREATE SET
   e.assessment_type = row.assessment_type,
   e.compliance_requirements = row.compliance_requirements,
   e.applicable_standards = row.applicable_standards,
-  e.criticality = row.criticality;
+  e.criticality = row.criticality,
+  e.created_at = timestamp()
+ON MATCH SET
+  e.updated_at = timestamp()
+RETURN COUNT(e) AS responsible_entities_loaded
 """
 # Cardholder Data Nodes 
 card_holder_data ="""
@@ -143,7 +145,11 @@ ON CREATE SET
   sysc.examples = row.examples,
   sysc.update_frequency = row.update_frequency,
   sysc.pci_requirement_mapping = row.pci_requirement_mapping,
-  sysc.criticality = row.criticality;
+  sysc.criticality = row.criticality,
+  sysc.created_at = timestamp()
+ON MATCH SET
+  sysc.updated_at = timestamp()
+RETURN COUNT(sysc) AS system_components_loaded
 """
 # Internal Role Nodes 
 internal_role = """
@@ -159,24 +165,32 @@ ON CREATE SET
   ir.training_requirements = row.training_requirements,
   ir.key_functions = row.key_functions,
   ir.pci_requirement_mapping = row.pci_requirement_mapping,
-  ir.criticality = row.criticality;
+  ir.criticality = row.criticality,
+  ir.created_at = timestamp()
+ON MATCH SET
+  ir.updated_at = timestamp()
+RETURN COUNT(ir) AS internal_roles_loaded
 """
 # Artifact Nodes
 artifact ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (a:Artifact {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 ON CREATE SET
-  a.name           = row.node_name,
-  a.type       = row.artifact_type,
-  a.definition          = row.definition,
+  a.name = row.node_name,
+  a.type = row.artifact_type,
+  a.definition = row.definition,
   a.pci_dss_requirement = row.pci_dss_requirement,
-  a.purpose_and_use     = row.purpose_and_use,
-  a.retention_period    = row.retention_period,
-  a.owner               = row.owner,
+  a.purpose_and_use = row.purpose_and_use,
+  a.retention_period = row.retention_period,
+  a.owner = row.owner,
   a.verification_method = row.verification_method,
-  a.criticality         = row.criticality,
-  a.document_frequency  = row.document_frequency,
-  a.digital_or_physical = row.digital_or_physical;
+  a.criticality = row.criticality,
+  a.document_frequency = row.document_frequency,
+  a.digital_or_physical = row.digital_or_physical,
+  a.created_at = timestamp()
+ON MATCH SET
+  a.updated_at = timestamp()
+RETURN COUNT(a) AS artifacts_loaded
 """
 #Payment Brand Nodes
 payment_brand ="""
@@ -197,8 +211,12 @@ ON CREATE SET
   pb.pci_dss_compliance = row.pci_dss_compliance,
   pb.security_standards = row.security_standards,
   pb.data_protection_requirements = row.data_protection_requirements,
-  pb.fraud_prevention = row.fraud_prevention;
-  """
+  pb.fraud_prevention = row.fraud_prevention,
+  pb.created_at = timestamp()
+ON MATCH SET
+  pb.updated_at = timestamp()
+RETURN COUNT(pb) AS payment_brands_loaded
+"""
 
 # Acquiring Bank Nodes
 acquiring_bank ="""
@@ -269,7 +287,7 @@ ON CREATE SET
   asv.secondary_responsibilities = row.secondary_responsibilities,
   asv.pci_dss_requirements = row.pci_dss_requirements,
   asv.relationship_to_entities = row.relationship_to_entities,
-  asv.service_scope = row.service_scope,
+  asv.service_scope = row.service_scope,                              
   asv.geographic_scope = row.geographic_scope,
   asv.regulatory_authority = row.regulatory_authority,
   asv.compliance_enforcement = row.compliance_enforcement,
@@ -440,15 +458,15 @@ MERGE (s)-[rel:INDUSTRY_REGULATION_HAS_STANDARD]->(i);
 # STANDARD TO STRATEGIC OBJECTIVES
 standard_strategic_objective="""
 MATCH (s:Standard {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (so:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (s)-[rel:STANDARD_HAS_STRATEGIC_OBJECTIVE]->(so);
+MATCH (o:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (s)-[rel:STANDARD_HAS_STRATEGIC_OBJECTIVE]->(o);
 """
 # STRATEGIC OBJECTIVE TO REQUIREMENTS
 strategic_objective_requirement ="""
-MATCH (so:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (o:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 WHERE r.pci_requirement_reference CONTAINS so.number
-MERGE (so)-[rel:STRATEGIC_OBJECTIVE_CONTAINS_REQUIREMENT]->(r);
+MERGE (o)-[rel:STRATEGIC_OBJECTIVE_CONTAINS_REQUIREMENT]->(r);
 """
 # REQUIREMENT TO STANDARD 
 requirement_standard="""
@@ -460,9 +478,9 @@ MERGE (r)-[:REQUIREMENT_HAS_STANDARD]->(s);
 #REQUIREMENT TO STRATEGIC OBJECTIVE
 requirement_strategic_objective = """
 ATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (so:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (o:StrategicObjective {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 WHERE so.pci_requirements_mapped CONTAINS r.number
-MERGE (r)-[rel:REQUIREMENT_SUPPORTS_OBJECTIVE]->(so);
+MERGE (r)-[rel:REQUIREMENT_SUPPORTS_OBJECTIVE]->(o);
 """
 # REQUIREMENTS REQUIRE SECURITY CONTROLS 
 requirement_security_control ="""
@@ -813,7 +831,7 @@ time.sleep(2)
 client.query(security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Security_controls.csv"))
 time.sleep(2)
 
-client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/CDE_environment.csv"))
+client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/System_components.csv"))
 time.sleep(2)
 
 client.query(internal_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Internal_nodes.csv"))
@@ -822,7 +840,7 @@ time.sleep(2)
 client.query(artifact.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Artifact.csv"))
 time.sleep(2)
 
-client.query(payment_brand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Artifact.csv"))
+client.query(payment_brand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Payment_brand.csv"))
 time.sleep(2)
 
 client.query(acquiring_bank.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Acquiring_bank.csv"))
@@ -837,7 +855,7 @@ time.sleep(2)
 client.query(qualified_security_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/QSA.csv"))
 time.sleep(2)
 
-client.query(threat_intelligence.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/QSA.csv"))
+client.query(threat_intelligence.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Threat_intelligence.csv"))
 time.sleep(2)
 
 client.query(law_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/law_enforcement_agencies.csv"))
