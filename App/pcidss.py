@@ -831,7 +831,7 @@ time.sleep(2)
 client.query(security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Security_controls.csv"))
 time.sleep(2)
 
-client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/System_components.csv"))
+client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/System-Components-Data.csv"))
 time.sleep(2)
 
 client.query(internal_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Internal_nodes.csv"))
