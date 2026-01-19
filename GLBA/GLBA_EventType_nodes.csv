@@ -1,6 +1,0 @@
-eventtypeid,name,deadline
-ESTABLISH_RELATIONSHIP,Establish Customer Relationship,Not later than when relationship is established
-SHARE_NPI_THIRD_PARTY,Share NPI with Third Party,"Before disclosure, with opt-out opportunity"
-OPT_OUT_REQUEST,Opt-Out Request,Process within reasonable time after request
-SECURITY_INCIDENT,Security Incident,Notify qualifying customers without unreasonable delay
-ANNUAL_NOTICE_DUE,Annual Notice Due,At least once in any period of 12 consecutive months

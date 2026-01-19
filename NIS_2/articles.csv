@@ -1,0 +1,23 @@
+article_id,article_number,subject,chapter,page_reference,mandatory,applicable_to_essential,applicable_to_important,key_content_summary
+Article_1,1,Subject matter,CHAPTER_I,p. 29,TRUE,TRUE,TRUE,Establishes measures for high common level of cybersecurity lays down obligations for Member States and entities
+Article_2,2,Scope,CHAPTER_I,p. 29-31,TRUE,TRUE,TRUE,Applies to medium-sized+ entities in Annexes I/II excludes national security/defence entities applies to critical entities under CER Directive
+Article_3,3,Definitions,CHAPTER_I,p. 31-33,TRUE,TRUE,TRUE,Defines 52 terms including network/information system incident cybersecurity essential/important entity
+Article_6,6,Essential and important entities,CHAPTER_I,p. 34-35,TRUE,TRUE,TRUE,Classifies entities: Annex I=Essential (high criticality) Annex II=Important (other critical sectors)
+Article_7,7,National cybersecurity strategy,CHAPTER_II,p. 36-38,TRUE,FALSE,FALSE,Member States must adopt strategy with objectives governance risk assessment preparedness measures public awareness
+Article_8,8,Competent authorities and single points of contact,CHAPTER_II,p. 37,TRUE,FALSE,FALSE,Member States designate competent authorities for supervision single point of contact for cross-border cooperation
+Article_9,9,National cyber crisis management frameworks,CHAPTER_II,p. 38-39,TRUE,FALSE,FALSE,Member States designate cyber crisis management authorities adopt large-scale incident/crisis response plan
+Article_10,10,Computer security incident response teams (CSIRTs),CHAPTER_II,p. 39-41,TRUE,FALSE,FALSE,Member States establish/designate CSIRTs with incident handling vulnerability coordination situational awareness tasks
+Article_12,12,Coordinated vulnerability disclosure,CHAPTER_II,p. 43-44,TRUE,TRUE,TRUE,Member States designate CSIRT as coordinator for vulnerability disclosure ENISA establishes European vulnerability database
+Article_14,14,Cooperation Group,CHAPTER_III,p. 45-47,TRUE,FALSE,FALSE,Establishes Cooperation Group (Member State representatives) for strategic cooperation information exchange policy guidelines
+Article_15,15,CSIRTs network,CHAPTER_III,p. 48-49,TRUE,FALSE,FALSE,Establishes CSIRTs network for operational cooperation incident response information sharing at Union level
+Article_16,16,European Cyber Crisis Liaison Organisation Network (EU-CyCLONe),CHAPTER_III,p. 50,TRUE,FALSE,FALSE,Creates EU-CyCLONe for large-scale cybersecurity incident/crisis coordination links technical and political levels
+Article_20,20,Corporate responsibility,CHAPTER_V,p. 55,TRUE,TRUE,TRUE,Management body approves cybersecurity risk-management measures oversees implementation participates in training
+Article_21,21,Cybersecurity risk-management measures,CHAPTER_V,p. 55-57,TRUE,TRUE,TRUE,Entities must implement 10 mandatory measures: risk analysis incident handling business continuity supply chain security etc.
+Article_23,23,Reporting obligations,CHAPTER_V,p. 58-61,TRUE,TRUE,TRUE,Entities report significant incidents in 3 stages: early warning (≤24h) notification (≤72h) final report (≤1 month)
+Article_27,27,Identification and information to be submitted by entities,CHAPTER_VI,p. 65-66,TRUE,TRUE,TRUE,Entities submit name address contact details (email IP ranges telephone) sector/subsector Member States where services provided
+Article_29,29,Information to be submitted by Member States,CHAPTER_VI,p. 67,TRUE,FALSE,FALSE,Member States submit to Commission: number of essential/important entities per sector/subsector by 17 April 2025
+Article_31,31,General aspects concerning supervision and enforcement,CHAPTER_VII,p. 70,TRUE,FALSE,FALSE,Competent authorities supervise compliance may prioritize based on risk coordinate with CER Directive authorities
+Article_32,32,Supervisory and enforcement measures for essential entities,CHAPTER_VII,p. 71-73,TRUE,TRUE,FALSE,Ex-ante+ex-post regime: on-site inspections security audits binding instructions warnings fines
+Article_33,33,Supervisory and enforcement measures for important entities,CHAPTER_VII,p. 73-74,TRUE,FALSE,TRUE,Ex-post only regime: triggered by evidence of non-compliance targeted audits binding instructions fines
+Article_34,34,Administrative fines,CHAPTER_VII,p. 74-75,TRUE,TRUE,TRUE,Essential: max €10M or 2% global turnover Important: max €7M or 1.4% global turnover for non-compliance with Article 21/23
+Article_41,41,Transposition,CHAPTER_IX,p. 85,TRUE,FALSE,FALSE,Member States adopt measures by 17 October 2024 apply from 18 October 2024

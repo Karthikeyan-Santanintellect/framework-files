@@ -1,8 +1,0 @@
-safeguardid,type,name,description
-SG-RISK_ASSESSMENT,Administrative,Written Risk Assessment,Periodic written risk assessment identifying internal and external risks to NPI
-SG-ENCRYPTION,Technical,Encryption of NPI at Rest and Transit,Encryption of customer information held or transmitted by the institution
-SG-MFA,Technical,Multi-Factor Authentication,Multi-factor authentication for access to systems containing NPI
-SG-INCIDENT_RESPONSE,Administrative,Incident Response Plan,Written incident response plan to respond to security events
-SG-VENDOR_DUE_DILIGENCE,Organizational,Service Provider Assessment,Due diligence and oversight of service providers handling NPI
-SG-ACCESS_CONTROLS,Technical,Access Controls,Role-based access controls limiting access to NPI
-SG-MONITORING,Technical,Continuous Monitoring,Continuous monitoring and testing of security controls

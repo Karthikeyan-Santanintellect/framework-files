@@ -1,0 +1,9 @@
+vulnerability_id,cve_id,disclosure_date,severity_cvss,affected_product_service,vendor,vulnerability_type,exploitation_status,mitigation_available,euvd_entry,nis2_sector_impact
+EUVD-2025-001,CVE-2025-XXXXX,2026-01-10,9.8 CRITICAL,Enterprise VPN Solution,Multiple vendors,Authentication Bypass,ACTIVELY_EXPLOITED,Patch available,TRUE,Digital Infrastructure
+CVE-2024-001,CVE-2024-001,2024-03-15,8.1 HIGH,Cloud Management Platform,Major cloud provider,Remote Code Execution,PROOF_OF_CONCEPT,Patch available,FALSE,Digital Infrastructure
+CVE-2024-LOG4J2,CVE-2021-44228,2021-12-10,10.0 CRITICAL,Apache Log4j 2,Apache Software Foundation,Remote Code Execution,ACTIVELY_EXPLOITED,Patch available,FALSE,Multiple Sectors
+CVE-2024-002,CVE-2024-002,2024-06-20,7.5 HIGH,Industrial Control System,ICS Vendor,Denial of Service,NOT_KNOWN_EXPLOITED,Workaround available,FALSE,Energy
+CVE-2024-003,CVE-2024-003,2024-08-12,9.1 CRITICAL,Medical Device Firmware,Medical Device Manufacturer,Buffer Overflow,NOT_KNOWN_EXPLOITED,Patch in development,FALSE,Health
+CVE-2024-004,CVE-2024-004,2024-09-05,6.5 MEDIUM,Railway Signaling System,Transport Technology Provider,Information Disclosure,NOT_KNOWN_EXPLOITED,Patch available,FALSE,Transport
+CVE-2024-005,CVE-2024-005,2024-11-18,8.8 HIGH,Banking Transaction Platform,Financial Software Vendor,SQL Injection,PROOF_OF_CONCEPT,Patch available,FALSE,Banking
+CVE-2025-001,CVE-2025-001,2025-02-14,9.0 CRITICAL,Water Treatment SCADA System,SCADA Vendor,Authentication Bypass,ACTIVELY_EXPLOITED,Emergency patch released,TRUE,Water

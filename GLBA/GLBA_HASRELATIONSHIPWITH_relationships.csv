@@ -1,5 +1,0 @@
-source_role_id,relationship_type,target_role_id,relationship_description
-CUSTOMER,HASRELATIONSHIPWITH,FINANCIAL_INSTITUTION,Customer has continuing relationship with institution
-CONSUMER,HASRELATIONSHIPWITH,FINANCIAL_INSTITUTION,Consumer obtains financial products/services
-FINANCIAL_INSTITUTION,HASRELATIONSHIPWITH,SERVICE_PROVIDER,Institution contracts with service providers
-FINANCIAL_INSTITUTION,HASRELATIONSHIPWITH,NONAFFILIATED_THIRD_PARTY,Institution shares data with third parties

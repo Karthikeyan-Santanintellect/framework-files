@@ -1,0 +1,19 @@
+sector_id,sector_name,annex,criticality,page_reference,subsectors,example_entity_types
+SECT_01_ENERGY,Energy,ANNEX_I,HIGH,p. 144,Electricity District heating and cooling Oil Gas Hydrogen,Electricity undertakings distribution system operators transmission system operators electricity market operators oil transmission pipelines oil production/refining gas operators hydrogen production
+SECT_02_TRANSPORT,Transport,ANNEX_I,HIGH,p. 144,Air Rail Water Road,Air carriers airport managing bodies air traffic control infrastructure managers railway undertakings passenger/freight water transport managing bodies of ports vessel traffic services road authorities intelligent transport systems operators
+SECT_03_BANKING,Banking,ANNEX_I,HIGH,p. 144,N/A,Credit institutions as defined in Regulation (EU) No 575/2013
+SECT_04_FINANCIAL_INFRA,Financial Market Infrastructures,ANNEX_I,HIGH,p. 144,N/A,Trading venues operators Central counterparties (CCPs)
+SECT_05_HEALTH,Health,ANNEX_I,HIGH,p. 145,N/A,Healthcare providers EU reference laboratories entities conducting R&D of medicinal products manufacturers of basic pharmaceutical products/preparations manufacturers of public health emergency critical devices
+SECT_06_WATER,Drinking Water,ANNEX_I,HIGH,p. 145,N/A,Suppliers and distributors of water intended for human consumption per Directive (EU) 2020/2184
+SECT_07_WASTEWATER,Waste Water,ANNEX_I,HIGH,p. 145,N/A,Undertakings collecting/disposing/treating urban/domestic/industrial waste water per Directive 91/271/EEC
+SECT_08_DIGITAL_INFRA,Digital Infrastructure,ANNEX_I,HIGH,p. 145,N/A,Internet Exchange Point providers DNS service providers (excluding root name servers) TLD name registries Cloud computing service providers Data centre service providers Content delivery network providers Trust service providers Providers of public electronic communications networks Providers of publicly available electronic communications services
+SECT_09_ICT_MGMT,ICT Service Management (B2B),ANNEX_I,HIGH,p. 145,N/A,Managed service providers Managed security service providers
+SECT_10_PUBLIC_ADMIN,Public Administration,ANNEX_I,HIGH,p. 146,N/A,Central government public administration entities Regional level public administration entities (following risk-based assessment)
+SECT_11_SPACE,Space,ANNEX_I,HIGH,p. 146,N/A,Operators of ground-based infrastructure owned/managed/operated by Member States or private parties supporting space services
+SECT_12_POSTAL,Postal and Courier Services,ANNEX_II,MEDIUM,p. 148,N/A,Postal service providers including courier services (clearance sorting transport distribution of postal items)
+SECT_13_WASTE_MGMT,Waste Management,ANNEX_II,MEDIUM,p. 148,N/A,Undertakings carrying out waste management per Directive 2008/98/EC where waste management is principal economic activity
+SECT_14_CHEMICALS,Manufacture/Production/Distribution of Chemicals,ANNEX_II,MEDIUM,p. 148,N/A,Undertakings manufacturing substances distributing substances/mixtures producing articles from substances/mixtures per Regulation (EC) No 1907/2006
+SECT_15_FOOD,Production/Processing/Distribution of Food,ANNEX_II,MEDIUM,p. 148,N/A,Food businesses engaged in wholesale distribution and industrial production/processing per Regulation (EC) No 178/2002
+SECT_16_MANUFACTURING,Manufacturing,ANNEX_II,MEDIUM,p. 148,Medical devices and in vitro diagnostic devices Computer/electronic/optical products Electrical equipment Machinery and equipment n.e.c. Motor vehicles/trailers/semi-trailers Other transport equipment,Manufacturers of medical devices (except public health emergency critical devices) NACE Rev. 2 divisions 26-30
+SECT_17_DIGITAL_PROVIDERS,Digital Providers,ANNEX_II,MEDIUM,p. 149,N/A,Providers of online marketplaces Providers of online search engines Providers of social networking services platforms
+SECT_18_RESEARCH,Research,ANNEX_II,MEDIUM,p. 149,N/A,Research organisations conducting applied research/experimental development for commercial exploitation

@@ -1,7 +1,0 @@
-roleid,name,description
-FINANCIAL_INSTITUTION,Financial Institution,"Institution significantly engaged in financial activities (banks, insurers, lenders)"
-CONSUMER,Consumer,Individual who obtains a financial product/service for personal/family use
-CUSTOMER,Customer,"Consumer who has a continuing relationship with the financial institution (e.g., loan, account)"
-AFFILIATE,Affiliate,"Entity that controls, is controlled by, or is under common control with the financial institution"
-NONAFFILIATED_THIRD_PARTY,Nonaffiliated Third Party,Any entity that is not an affiliate of the financial institution
-SERVICE_PROVIDER,Service Provider,Entity that maintains or processes customer information for the institution

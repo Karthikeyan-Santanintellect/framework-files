@@ -1,6 +1,0 @@
-requirementid,type,text,priority,frequency
-GLBA-313.4-R1,Privacy Notice,Provide clear and conspicuous notice to customers that accurately reflects privacy policies and practices.,High,Initial
-GLBA-313.10-R1,Opt-Out,Provide reasonable opportunity and means for consumers to opt out of NPI sharing with nonaffiliated third parties.,High,On Change
-GLBA-314.4-R1,Risk Assessment,Conduct a written risk assessment identifying internal and external risks to NPI.,High,Annual
-GLBA-314.4-R2,Security Controls,"Implement safeguards to control risks identified in assessment (encryption, MFA, etc.).",High,Ongoing
-GLBA-314.4-R3,Vendor Oversight,Oversee service providers to ensure they maintain appropriate safeguards.,Medium,Ongoing
