@@ -1,10 +1,4 @@
 # Regulation
-from enum import member
-import re
-
-from App import sec
-
-
 regional_regulation = """
 MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
 ON CREATE SET
@@ -42,7 +36,7 @@ ON CREATE SET
 #certification_bodies 
 certification_bodies = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cb:CertificationBody {id: row.certification_body_id, regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
+MERGE (cab:CertificationBody {id: row.cab_id, regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
 ON CREATE SET
     cab.name = row.certification_body_name,
     cab.country = row.country,
@@ -67,13 +61,13 @@ ON CREATE SET ag.name = row.type_name,
 #Concepts
 concepts = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (co:Concept {id: row.concept_id, regional_standard_id : 'NIS2-EU-2022-2555'})
+MERGE (co:Concept {id: row.concept_id, regional_standard_regulation_id : 'NIS2-EU-2022-2555'})
 ON CREATE SET
     co.name = row.name,
     co.article = row.sub_article,
     co.reference = row.page_reference,
     co.category = row.category,
-    co.mandatory = mandatory,
+    co.mandatory = row.mandatory,
     co.description = row.description,
     co.standards = row.related_standards;
 """
@@ -112,10 +106,10 @@ ON CREATE SET
     cf.standardReference = row.standard_reference,
     cf.organization = row.issuing_organization,
     cf.date = row.publication_date,
-    cf.article21 = row.maps_to_article_21
-    cf.rvailability = row.public_availability,
+    cf.article21 = row.maps_to_article_21,
+    cf.availability = row.public_availability,
     cf.frameworkType = row.framework_type,
-    cf.certificationAvailable =row.certification_available
+    cf.certificationAvailable =row.certification_available,
     cf.recognized = row.belgium_nis2_recognized,
     cf.description = row.description;
 """
@@ -126,7 +120,7 @@ MERGE (ob:Obligation {id: row.obligation_id, regional_standard_regulation_id: 'N
 ON CREATE SET
     ob.name = row.obligation_name,
     ob.reference = row.page_reference,
-    ob.mandatory = CASE WHEN row.mandatory = 'TRUE' THEN true ELSE false END,
+    ob.mandatory = row.mandatory,
     ob.description = row.description,
     ob.method = row.verification_method,
     ob.compliance = row.penalty_for_non_compliance;
@@ -322,7 +316,7 @@ MERGE (p)-[:PENALTY_ENFORCES_ARTICLE]->(a);
 penalties_concepts = """
 MATCH (p:Penalty {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
 MATCH (co:Concept {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
-MERGE (p)-[:PENALTY_APPLIES_TO_ENTITY]->(co);
+MERGE (p)-[:PENALTY_APPLIES_TO_CONCEPT_ENTITY]->(co);
 """
 
 # 12. MemberState -> Incident
@@ -359,3 +353,181 @@ MATCH (ms:MemberState {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
 MERGE (ms)-[:MEMBER_STATE_TRANSPOSES_REGULATION]->(reg);
 """
+
+# 17. MemberState -> OrganizationalData
+member_state_organizational_data = """
+MATCH (ms:MemberState {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
+MATCH (od:OrganizationalData {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
+WHERE toLower(ms.name) = toLower(od.country)
+MERGE (ms)-[:MEMBER_STATE_HAS_ORGANIZATIONAL_DATA]->(od);
+"""
+
+# 18. Concept -> Article
+concept_article = """
+MATCH (co:Concept {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
+MATCH (a:Article {regional_standard_regulation_id: 'NIS2-EU-2022-2555'})
+WHERE co.article CONTAINS a.number 
+MERGE (co)-[:CONCEPT_DEFINED_IN_ARTICLE]->(a);
+"""
+
+
+import os
+import time
+import logging
+import json
+import sys
+from app import Neo4jConnect
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+client = Neo4jConnect()
+
+health = client.check_health()
+if health is not True:
+    print("Neo4j connection error:", health)
+    os._exit(1)
+
+logger.info("Loading graph structure...")
+
+client.query(regional_regulation)
+time.sleep(2)
+
+client.query(chapters.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/chapters.csv"))
+time.sleep(2)
+
+client.query(articles.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/articles.csv"))
+time.sleep(2)
+
+client.query(certification_bodies.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/certification_body.csv"))
+time.sleep(2)
+
+client.query(agent_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/agent-types.csv"))
+time.sleep(2)
+
+client.query(concepts.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/concepts.csv"))
+time.sleep(2)
+
+client.query(incidents.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/incidents.csv"))
+time.sleep(2)
+
+client.query(deadlines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/deadlines.csv"))
+time.sleep(2)
+
+client.query(control_frameworks.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/control-frameworks.csv"))
+time.sleep(2)
+
+client.query(obligations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/obligations.csv"))
+time.sleep(2)
+
+client.query(member_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/member_state.csv"))
+time.sleep(2)
+
+client.query(organizational_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/organizational_data.csv"))
+time.sleep(2)
+
+client.query(sector.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/sectors.csv"))
+time.sleep(2)
+
+client.query(penalties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/penalties.csv"))
+time.sleep(2)
+
+client.query(recitals.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/recitals.csv"))
+time.sleep(2)
+
+client.query(vulnerability.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/vulnerabilities.csv"))
+time.sleep(2)
+
+client.query(service_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/service-types.csv"))
+time.sleep(2)
+
+#Relationships
+client.query(regulation_chapters)
+time.sleep(2)
+
+client.query(chapter_articles)
+time.sleep(2)
+
+client.query(regulation_recitals)
+time.sleep(2)
+
+client.query(recitals_articles)
+time.sleep(2)
+
+client.query(article_obligations)
+time.sleep(2)
+
+client.query(obligations_deadlines)
+time.sleep(2)
+
+client.query(obligations_sectors)
+time.sleep(2)
+
+client.query(sector_service_types)
+time.sleep(2)
+
+client.query(vulnerability_sectors)
+time.sleep(2)
+
+client.query(penalties_articles)
+time.sleep(2)
+
+client.query(penalties_concepts)
+time.sleep(2)
+
+client.query(member_state_incidents)
+time.sleep(2)
+
+client.query(member_state_agents)
+time.sleep(2)
+
+client.query(control_framework_articles)
+time.sleep(2)
+
+client.query(certification_bodies_control_frameworks)
+time.sleep(2)
+
+client.query(member_state_regulation)
+time.sleep(2)
+
+client.query(member_state_organizational_data)
+time.sleep(2)
+
+client.query(concept_article)
+time.sleep(2)
+
+
+
+ 
+logger.info("Graph structure loaded successfully.")
+
+res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
+WITH path
+UNWIND nodes(path) AS n
+UNWIND relationships(path) AS r
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data""")
+
+res = res[-1]['graph_data']
+
+import json
+with open('nis_2.json', 'w', encoding='utf-8') as f:
+    f.write(json.dumps(res, default=str, indent=2))
+logger.info("✓ Exported graph data to nis_2.json")
+
+client.close()
