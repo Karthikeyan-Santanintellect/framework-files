@@ -1,0 +1,22 @@
+cab_id,country,certification_body_name,accreditation,services_offered,nis2_approved,iso27001_certified,website
+CAB_001,Belgium,SGS Belgium NV,BELAC,ISO/IEC 27001:2022 certification for NIS2,TRUE,TRUE,https://www.sgs.com/en-be
+CAB_002,Belgium,Amtivo Ireland,CCB Authorization,ISO/IEC 27001:2022 certification for NIS2,TRUE,TRUE,https://amtivo.com
+CAB_003,Belgium,Bureau Veritas Belgium,BELAC,ISO/IEC 27001 certification,TRUE,TRUE,https://www.bureauveritas.be
+CAB_004,Belgium,Lloyd's Register EMEA,Multiple accreditations,ISO/IEC 27001 certification,TRUE,TRUE,https://www.lr.org
+CAB_005,Belgium,TÜV Rheinland,DAkkS / BELAC,ISO/IEC 27001 certification,TRUE,TRUE,https://www.tuv.com
+CAB_006,Belgium,BSI Group Belgium,UKAS / BELAC,ISO/IEC 27001:2022 certification,TRUE,TRUE,https://www.bsigroup.com
+CAB_007,Belgium,Vinçotte (Kiwa Belgium),BELAC,ISO/IEC 27001 certification,TRUE,TRUE,https://www.vincotte.be
+CAB_008,Germany,TÜV SÜD,DAkkS,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.tuvsud.com
+CAB_009,Germany,DQS GmbH,DAkkS,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.dqs.de
+CAB_010,Germany,TÜV Rheinland,DAkkS,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.tuv.com
+CAB_011,Germany,DEKRA Certification GmbH,DAkkS,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.dekra.com
+CAB_012,Netherlands,DNV Business Assurance,RvA,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.dnv.com
+CAB_013,Netherlands,Lloyd's Register Nederland,RvA,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.lr.org
+CAB_014,Ireland,NSAI,INAB,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.nsai.ie
+CAB_015,Ireland,BSI Group Ireland,UKAS,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.bsigroup.com
+CAB_016,France,AFNOR Certification,COFRAC,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://certification.afnor.org
+CAB_017,France,Bureau Veritas Certification France,COFRAC,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.bureauveritas.fr
+CAB_018,Italy,ICMQ S.p.A.,ACCREDIA,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.icmq.it
+CAB_019,Italy,RINA Services S.p.A.,ACCREDIA,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.rina.org
+CAB_020,Spain,AENOR,ENAC,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.aenor.com
+CAB_021,Spain,Bureau Veritas Spain,ENAC,ISO/IEC 27001 certification,Data not disclosed,TRUE,https://www.bureauveritas.es
