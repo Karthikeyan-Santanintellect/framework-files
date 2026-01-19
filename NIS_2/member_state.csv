@@ -1,0 +1,28 @@
+member_state_id,member_state,competent_authority_name,authority_type,website,csirt_name,csirt_website,single_point_of_contact,transposition_status,law_name,entry_into_force_date,estimated_entities,registration_deadline,registration_portal
+MS_BE,Belgium,Centre for Cybersecurity Belgium (CCB),National Cybersecurity Authority,https://ccb.belgium.be,CERT.be,https://cert.be,CCB,TRANSPOSED,NIS2 Law (Loi NIS2 / NIS2-wet),2024-10-18,Undisclosed,2025-03-18 (general) / 2024-12-18 (digital),https://atwork.safeonweb.be
+MS_DE,Germany,Federal Office for Information Security (BSI),Federal Cybersecurity Authority,https://www.bsi.bund.de,BSI CERT-Bund,https://www.bsi.bund.de/DE/Themen/CERT-Bund/cert-bund_node.html,BSI,TRANSPOSED,NIS2 Implementation Law (NIS2UmsuCG),2025-12-06,29500,2026-03-06,https://www.bsi.bund.de
+MS_FR,France,Agence nationale de la sécurité des systèmes d'information (ANSSI),National Cybersecurity Agency,https://www.ssi.gouv.fr,CERT-FR,https://www.cert.ssi.gouv.fr,ANSSI,DRAFT,Draft Resilience Act,Expected 2026,Undisclosed,TBD,TBD
+MS_IT,Italy,Agenzia per la Cybersicurezza Nazionale (ACN),National Cybersecurity Agency,https://www.acn.gov.it,CSIRT Italia,https://csirt.gov.it,ACN,TRANSPOSED,Legislative Decree implementing NIS2,2024-10-18,50000,2025-01-18,https://www.acn.gov.it
+MS_NL,Netherlands,Dutch National Cyber Security Centre,National CSIRT,https://www.ncsc.nl,NCSC-NL,https://www.ncsc.nl,NCSC-NL,DRAFT,Cybersecurity Act,Expected Q2 2026,Undisclosed,TBD,TBD
+MS_ES,Spain,National Cybersecurity Institute (INCIBE),National Cybersecurity Institute,https://www.incibe.es,INCIBE-CERT,https://www.incibe-cert.es,INCIBE,DRAFT,Draft NIS2 transposition law,Expected end 2025,Undisclosed,TBD,TBD
+MS_FI,Finland,Finnish Transport and Communications Agency (Traficom),Regulatory Authority,https://www.traficom.fi,NCSC-FI,https://www.kyberturvallisuuskeskus.fi,Traficom,TRANSPOSED,NIS2 Act (NISLO),2025-07-01,Undisclosed,2025-09-30,TBD
+MS_SE,Sweden,Swedish Civil Contingencies Agency (MSB),Civil Contingencies Agency,https://www.msb.se,CERT-SE,https://www.cert.se,MSB,DRAFT,Draft NIS2 law,Expected 2026,Undisclosed,TBD,TBD
+MS_AT,Austria,Austrian Computer Emergency Response Team,National CERT,https://www.cert.at,CERT.at,https://www.cert.at,CERT.at,DRAFT,Draft law,Expected 2025,Undisclosed,TBD,TBD
+MS_DK,Denmark,Danish Centre for Cyber Security,National Cybersecurity Centre,https://www.cfcs.dk,CFCS,https://www.cfcs.dk,CFCS,TRANSPOSED,NIS2 Implementation law,2025-07-01,Undisclosed,TBD,TBD
+MS_IE,Ireland,National Cyber Security Centre Ireland,National CSIRT,https://www.ncsc.gov.ie,CSIRT-IE,https://www.ncsc.gov.ie,NCSC Ireland,DRAFT,General scheme published,Expected end 2025,Undisclosed,TBD,TBD
+MS_HR,Croatia,National CSIRT Croatia,National CSIRT,https://www.cert.hr,CERT.hr,https://www.cert.hr,National CSIRT,TRANSPOSED,Published in Official Journal,2024-02-01,Undisclosed,2024-01-01,TBD
+MS_GR,Greece,National Cybersecurity Authority,National Authority,https://www.ncsa.gr,GR-CSIRT,https://csirt.gr,NCSA,TRANSPOSED,NIS2 Implementation law,2024-11-01,Undisclosed,TBD,TBD
+MS_HU,Hungary,National Cyber Security Centre Hungary,National CSIRT,https://nki.gov.hu,HU-CERT,https://cert.hu,NKI,TRANSPOSED,Multiple government decrees,2024-10-01,Undisclosed,From 2024-06-01,TBD
+MS_LT,Lithuania,National Cyber Security Centre,National CSIRT,https://www.nksc.lt,CERT-LT,https://www.cert.lt,NKSC,TRANSPOSED,Law on Cyber Security,2024-10-18,Undisclosed,TBD,TBD
+MS_LV,Latvia,Information Technology Security Incident Response Institution,National CSIRT,https://www.cert.lv,CERT.LV,https://www.cert.lv,CERT.LV,TRANSPOSED,NIS2 transposition law,2024-09-01,Undisclosed,TBD,TBD
+MS_RO,Romania,Romanian National Cyber Security Directorate,National Cybersecurity Directorate,https://www.dnsc.ro,CERT-RO,https://www.cert.ro,DNSC,TRANSPOSED,Emergency ordinance,2025-07-01,12000,TBD,TBD
+MS_SK,Slovakia,National Security Authority,National Authority,https://www.nbu.gov.sk,SK-CERT,https://www.sk-cert.sk,NBU,TRANSPOSED,NIS2 transposition law,2025-01-01,Undisclosed,TBD,TBD
+MS_SI,Slovenia,SI-CERT,National CSIRT,https://www.cert.si,SI-CERT,https://www.cert.si,SI-CERT,TRANSPOSED,Published in Official Journal,2025-06-01,Undisclosed,TBD,TBD
+MS_EE,Estonia,Information System Authority,National Authority,https://www.ria.ee,CERT-EE,https://www.ria.ee,RIA,DRAFT,Planned,Expected 2025-07-01,Undisclosed,TBD,TBD
+MS_CY,Cyprus,Commissioner for Electronic Communications,Regulatory Authority,https://www.ocecpr.org.cy,CY-CSIRT,https://csirt.cy,OCECPR,TRANSPOSED,Implementation law,2025-04-01,Undisclosed,TBD,TBD
+MS_MT,Malta,Malta Digital Innovation Authority,Digital Innovation Authority,https://mdia.gov.mt,MT-CSIRT,https://cybersecurity.mt,MDIA,TRANSPOSED,Published in Official Journal,TBD,Undisclosed,TBD,TBD
+MS_LU,Luxembourg,Luxembourg House of Cybersecurity,Cybersecurity Hub,https://lhc.lu,CIRCL,https://www.circl.lu,CIRCL,DRAFT,Draft law,Under development,Undisclosed,TBD,TBD
+MS_PT,Portugal,National Cybersecurity Centre,National CSIRT,https://www.cncs.gov.pt,CERT.PT,https://www.cert.pt,CNCS,DRAFT,Draft approved,Disrupted,Undisclosed,TBD,TBD
+MS_CZ,Czech Republic,National Cyber and Information Security Agency,National Agency,https://www.nukib.cz,CSIRT.CZ,https://csirt.cz,NUKIB,DRAFT,Signed by president,Pending,Undisclosed,TBD,TBD
+MS_BG,Bulgaria,State Agency for National Security,State Security Agency,https://www.sans.government.bg,CERT Bulgaria,https://govcert.bg,SANS,DRAFT,Draft law,First reading Feb 2025,Undisclosed,TBD,TBD
+MS_PL,Poland,Ministry of Digital Affairs,National Authority,https://www.gov.pl/web/cyfryzacja,CERT.PL,https://www.cert.pl,Ministry of Digital Affairs,DRAFT,Draft law,Expected 2025,Undisclosed,TBD,TBD
