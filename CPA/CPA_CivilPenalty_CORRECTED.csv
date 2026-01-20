@@ -1,0 +1,2 @@
+node_id,penalty_name,max_amount_per_violation,currency,legal_citation,penalty_framework,seekable_by,discretionary_cure_period,mandatory_cure_period_ended,regional_standard_regulation_id
+PENALTY-001,CPA Civil Penalty,20000,USD,§ 6-1-1311 (enforced via C.R.S. § 6-1-112 Colorado Consumer Protection Act),Colorado Consumer Protection Act penalty structure,Attorney General; District Attorney,True,2025-01-01,CPA 1.0

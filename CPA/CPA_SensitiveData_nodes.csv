@@ -1,6 +1,0 @@
-sensitive_data_id,sensitive_type,definition,regulation_reference,consent_required,parental_consent_required,specific_consent_needed,retention_limits,security_requirements,audit_requirements,reporting_requirement,annual_review_required
-SD-001,HealthData,"Medical information including diagnoses, treatment records, prescriptions",§ 6-1-1301,True,False,True,Per healthcare law,Encryption; Access controls; Audit logs,True,True,True
-SD-002,SocialSecurityNumber,Social Security Number or equivalent tax identification,§ 6-1-1301,True,False,True,5 years from last use,Encryption; MFA; Segmentation,True,True,True
-SD-003,FinancialAccountNumbers,"Bank account numbers, credit card numbers, payment card details",§ 6-1-1301,True,False,True,3 years from close,Encryption; Tokenization; Compliance,True,True,True
-SD-004,BiometricIdentifiers,"Fingerprints, facial recognition, iris scans, voice patterns",§ 6-1-1301,True,False,True,3 years,Encryption; Secure storage; MFA,True,True,True
-SD-005,ChildrenData,Data of individuals under 18 years of age,§ 6-1-1301,True,True,True,18 years or parent request,Enhanced protection; Parental oversight,True,True,True
