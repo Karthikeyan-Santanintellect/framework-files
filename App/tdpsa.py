@@ -1023,7 +1023,7 @@ client.query(pseudonymous_data_legal_section.replace('$file_path',"https://githu
 time.sleep(2)
 
 
-client.query(process_consumer_rel.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships.csv'))
+client.query(process_consumer_rel.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_CONSUMER_DATA_relationships_updated.csv'))
 time.sleep(2)
 
 client.query(collects_personal_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_COLLECTS_PERSONAL_DATA.csv'))
