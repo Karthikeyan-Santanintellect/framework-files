@@ -1,0 +1,4 @@
+disclosure_id,required_text,trigger_condition,format_requirement,location_requirement,source_section
+MD-001,"NOTICE: WE MAY SELL YOUR SENSITIVE PERSONAL DATA",Sale of Sensitive Data,Capitalized,Privacy Notice,541.102(b)
+MD-002,"NOTICE: WE MAY SELL YOUR BIOMETRIC PERSONAL DATA",Sale of Biometric Data,Capitalized,Privacy Notice,541.102(c)
+MD-003,"Clear and conspicuous disclosure of sale or targeted advertising",Sale of Personal Data OR Targeted Advertising,Clear and Conspicuous,Privacy Notice,541.103(b)

@@ -1,0 +1,6 @@
+action_id,issue_date,violation_description,cure_deadline,status,cure_evidence_submitted,cure_accepted,penalty_assessed
+ENF-TX-001,2024-08-15,"Failure to include the capitalized disclosure 'NOTICE: WE MAY SELL YOUR SENSITIVE PERSONAL DATA' in the privacy policy.",2024-09-14,Cured,true,true,0
+ENF-TX-002,2024-09-01,"Processing biometric data (facial recognition) without obtaining strict Opt-In Consent from consumers.",2024-10-01,Penalty Assessed,false,false,7500
+ENF-TX-003,2024-11-10,"Website lacks a clear and conspicuous link to opt-out of targeted advertising.",2024-12-10,Open,true,false,0
+ENF-TX-004,2025-01-05,"Failure to recognize a valid Universal Opt-Out Mechanism (UOOM) signal sent via Global Privacy Control.",2025-02-04,Curing,true,null,0
+ENF-TX-005,2025-02-20,"Selling personal data of a known child (age 12) without parental consent.",2025-03-22,Open,false,null,0

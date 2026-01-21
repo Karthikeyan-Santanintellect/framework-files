@@ -38,7 +38,7 @@ ON CREATE SET
 # Part
 part ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Part {part_id: row.part_id, regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (p:Part {node_id: row.part_id, regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET   
     p.number = row.part_number,
     p.name = row.part_name,
@@ -85,23 +85,23 @@ ON CREATE SET
 #Consumer Rights
 consumer_rights ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cr:ConsumerRight {
+MERGE (ct:ConsumerRight {
   node_id: row.node_id,
   regional_standard_regulation_id: row.regional_standard_regulation_id
 })
 ON CREATE SET
-  cr.name = row.right_name,
-  cr.type = row.right_type,
-  cr.legal_citation = row.legal_citation,
-  cr.right_description = row.right_description,
-  cr.response_deadline_days = row.response_deadline_days,
-  cr.extension_allowed_days = row.extension_allowed_days,
-  cr.no_account_required = row.no_account_required,
-  cr.no_cost_to_consumer = row.no_cost_to_consumer,
-  cr.max_free_requests_per_year = row.max_free_requests_per_year,
-  cr.appeal_process_required = row.appeal_process_required,
-  cr.ag_notification_required_if_denied = row.ag_notification_required_if_denied,
-  cr.established_by_section_id = row.established_by_section_id;
+  ct.name = row.right_name,
+  ct.type = row.right_type,
+  ct.legal_citation = row.legal_citation,
+  ct.right_description = row.right_description,
+  ct.response_deadline_days = row.response_deadline_days,
+  ct.extension_allowed_days = row.extension_allowed_days,
+  ct.no_account_required = row.no_account_required,
+  ct.no_cost_to_consumer = row.no_cost_to_consumer,
+  ct.max_free_requests_per_year = row.max_free_requests_per_year,
+  ct.appeal_process_required = row.appeal_process_required,
+  ct.ag_notification_required_if_denied = row.ag_notification_required_if_denied,
+  ct.established_by_section_id = row.established_by_section_id;
 """
 #Opt-Out Rights
 opt_out_rights ="""
@@ -120,6 +120,7 @@ ON CREATE SET
   """
 #Controller Duties
 controller_duties = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cld:ControllerDuty {node_id: row.node_id, regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET
   cld.name = row.duty_name,
@@ -179,6 +180,7 @@ ON CREATE SET
 """
 #Data Processing Agreement Template
 data_processing_agreement_template ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (dpt:DataProcessingAgreementTemplate {dpa_template_id: row.dpa_template_id, regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET 
     dpt.name = row.dpa_name,
@@ -327,29 +329,6 @@ ON CREATE SET
   db.lessons_learned = row.lessons_learned,
   db.discovery_to_notification_days = row.discovery_to_notification_days,
   db.severity_score = row.severity_score;
-"""
-#data controller node
-data_controller ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (dc:DataController {
-  node_id: row.node_id,
-  regional_standard_regulation_id: row.regional_standard_regulation_id
-})
-ON CREATE SET
-  dc.organization_name = row.organization_name,
-  dc.controller_type = row.controller_type,
-  dc.location = row.location,
-  dc.industry_sector = row.industry_sector,
-  dc.registration_date = row.registration_date,
-  dc.compliance_status = row.compliance_status,
-  dc.annual_consumers = row.annual_consumers,
-  dc.derives_revenue_from_sale = row.derives_revenue_from_sale,
-  dc.privacy_officer_assigned = row.privacy_officer_assigned,
-  dc.privacy_officer_contact = row.privacy_officer_contact,
-  dc.privacy_policy_published_date = row.privacy_policy_published_date,
-  dc.dpa_count = row.dpa_count,
-  dc.subject_to_biometric_rules = row.subject_to_biometric_rules,
-  dc.last_audit_date = row.last_audit_date;
 """
 #data processor node
 data_processor ="""
@@ -519,8 +498,8 @@ MERGE (sd:SensitiveData {
   regional_standard_regulation_id: row.regional_standard_regulation_id
 })
 ON CREATE SET
-  sd.category_name = row.category_name,
-  sd.category_description = row.category_description,
+  sd.name = row.category_name,
+  sd.description = row.category_description,
   sd.legal_citation = row.legal_citation,
   sd.consent_required = row.consent_required,
   sd.parental_consent_age_threshold = row.parental_consent_age_threshold,
@@ -547,12 +526,12 @@ MERGE (t)-[:TITLE_CONTAINS_ARTICLE]->(a);
 #Article → Part
 article_part = """
 MATCH (a:Article {article_id: 'ARTICLE-1', regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (p:Part {part_id: 'PART-13', regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (p:Part {node_id: 'PART-13', regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (a)-[:ARTICLE_CONTAINS_PART]->(p);
 """
 #Part → Sections
 part_section ="""
-MATCH (p:Part {part_id: 'PART-13', regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (p:Part {node_id: 'PART-13', regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (s:Section {regional_standard_regulation_id: 'CPA 1.0'})
 WHERE s.section_id IN ['SECTION-6-1-1301', 'SECTION-6-1-1302', 'SECTION-6-1-1303', 
                           'SECTION-6-1-1304', 'SECTION-6-1-1305', 'SECTION-6-1-1306',
@@ -611,7 +590,7 @@ UNWIND [
   'RIGHT-OPT-OUT'
 ] AS right_id
 MATCH (s:Section {section_id: 'SECTION-6-1-1306', regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (ct:ConsumerRight {right_id: right_id, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (ct:ConsumerRight {node_id: right_id, regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (s)-[:SECTION_GRANTS_RIGHT]->(ct);
 """
 # Consumer Right -> Opt Out Right 
@@ -627,47 +606,57 @@ MERGE (cr)-[:CONSUMER_RIGHT_INCLUDES_OPT_OUT_RIGHT]->(oor);
 """
 # Consumer Request -> Consumer Right
 consumer_request_consumer_right ="""
-MATCH (cr:ConsumerRequest {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (ct:ConsumerRight {regional_standard_regulation_id: 'CPA 1.0'})
-WHERE 
-  (cr.request_type = 'AccessRequest' AND ct.node_id = 'RIGHT-ACCESS') OR
-  (cr.request_type = 'CorrectionRequest' AND ct.node_id = 'RIGHT-CORRECT') OR
-  (cr.request_type = 'DeletionRequest' AND ct.node_id = 'RIGHT-DELETE') OR
-  (cr.request_type = 'PortabilityRequest' AND ct.node_id = 'RIGHT-PORTABILITY') OR
-  (cr.request_type = 'OptOutRequest' AND ct.node_id = 'RIGHT-OPT-OUT')
+WITH [
+  {request_id: 'REQ-001', node_id: 'RIGHT-ACCESS'},
+  {request_id: 'REQ-003', node_id: 'RIGHT-CORRECT'},
+  {request_id: 'REQ-002', node_id: 'RIGHT-DELETE'},
+  {request_id: 'REQ-004', node_id: 'RIGHT-PORTABILITY'},
+  {request_id: 'REQ-005', node_id: 'RIGHT-OPT-OUT'},
+  {request_id: 'REQ-006', node_id: 'RIGHT-ACCESS'}
+] AS mappings
+
+UNWIND mappings AS mapping
+
+MATCH (cr:ConsumerRequest {request_id: mapping.request_id, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (ct:ConsumerRight {node_id: mapping.node_id, regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (cr)-[:CONSUMER_REQUEST_EXERCISES_RIGHT]->(ct);
 """
 
 #OptOutMechanism → OptOutRight
 opt_out_mechanism_opt_out_right ="""
-MATCH (oom:OptOutMechanism {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (oor:OptOutRight {regional_standard_regulation_id: 'CPA 1.0'})
-WHERE 
-  (oom.opt_out_type = 'TargetedAdvertising' AND oor.node_id = 'OPT-OUT-TARGETED-ADS') OR
-  (oom.opt_out_type = 'SaleOfData' AND oor.node_id = 'OPT-OUT-SALE') OR
-  (oom.opt_out_type = 'Profiling' AND oor.node_id = 'OPT-OUT-PROFILING')
-MERGE (oom)-[:ENABLES_OPT_OUT_RIGHT]->(oor);
+WITH [
+  {mechanism_id: 'OPTOUT-001', right_node_id: 'OPT-OUT-SALE'},
+  {mechanism_id: 'OPTOUT-002', right_node_id: 'OPT-OUT-TARGETED-ADS'},
+  {mechanism_id: 'OPTOUT-003', right_node_id: 'OPT-OUT-PROFILING'}
+] AS mappings
+
+UNWIND mappings AS mapping
+
+MATCH (oom:OptOutMechanism {
+  mechanism_id: mapping.mechanism_id, 
+  regional_standard_regulation_id: 'CPA 1.0'
+})
+MATCH (oor:OptOutRight {
+  node_id: mapping.right_node_id,
+  regional_standard_regulation_id: 'CPA 1.0'
+})
+MERGE (oom)-[:OPT_OUT_MECHANISM_ENABLES_OPT_OUT_RIGHT]->(oor);
 """
 # Section → ControllerDuty
 section_controller_duty ="""
 UNWIND [
+  {s:'SECTION-6-1-1305', cld:'DUTY-PROVIDE-NOTICE'},
+  {s:'SECTION-6-1-1306', cld:'DUTY-HONOR-OPT-OUT'},
+  {s:'SECTION-6-1-1306', cld:'DUTY-RESPOND-RIGHTS-REQUESTS'},
   {s:'SECTION-6-1-1308', cld:'DUTY-MINIMIZATION'},
   {s:'SECTION-6-1-1308', cld:'DUTY-AVOID-SECONDARY-USE'},
-  {s:'SECTION-6-1-1307', cld:'DUTY-RESPOND-RIGHTS-REQUESTS'},
-  {s:'SECTION-6-1-1306', cld:'DUTY-HONOR-OPT-OUT'},
-  {s:'SECTION-6-1-1308', cld:'DUTY-PROVIDE-NOTICE'},
-  {s:'SECTION-6-1-1304', cld:'DUTY-OBTAIN-CONSENT'}
+  {s:'SECTION-6-1-1308', cld:'DUTY-OBTAIN-CONSENT'}
 ] AS pair
-MATCH (s:Section {node_id: pair.s, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (s:Section {section_id: pair.s, regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (cld:ControllerDuty {node_id: pair.cld, regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (s)-[:SECTION_IMPOSES_DUTY]->(cld);
 """
-# DataController → ControllerDuty
-data_controller_controller_duty ="""
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (cld:ControllerDuty {regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (dc)-[:DATA_CONTROLLER_MUST_COMPLY_WITH_DUTY]->(cld);
-"""
+
 #  Regulation → EnforcementAuthority
 regulation_enforcement_authority ="""
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPA 1.0'})
@@ -685,7 +674,7 @@ MERGE (ea)-[:ENFORCEMENT_AUTHORITY_CAN_IMPOSE_PENALTY]->(cp);
 section_enforcement_authority ="""
 MATCH (s:Section {section_id: 'SECTION-6-1-1311', regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (ea:EnforcementAuthority {regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (s)-[:SECTION_GRANTS_AUTHORITY_TO]->(ea);
+MERGE (s)-[:SECTION_GRANTS_AUTHORITY]->(ea);
 """
 #Section  → CivilPenalty
 section_civil_penalty = """
@@ -693,15 +682,7 @@ MATCH (s:Section {section_id: 'SECTION-6-1-1311', regional_standard_regulation_i
 MATCH (cp:CivilPenalty {node_id: 'PENALTY-001', regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (s)-[:SECTION_ESTABLISHES_PENALTY]->(cp);
 """
-#ApplicabilityThreshold → DataController
-applicability_threshold_data_controller ="""
-MATCH (at:ApplicabilityThreshold {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-WHERE 
-  (at.node_id = 'THRESHOLD-100K' AND dc.annual_consumers >= 100000) OR
-  (at.node_id = 'THRESHOLD-25K-REVENUE' AND dc.annual_consumers >= 25000 AND dc.derives_revenue_from_sale = true)
-MERGE (at)-[:THRESHOLD_APPLIES_TO_CONTROLLER]->(dc);
-"""
+
 # Section  → ApplicabilityThreshold
 section_applicability_threshold ="""
 MATCH (s:Section {section_id: 'SECTION-6-1-1302', regional_standard_regulation_id: 'CPA 1.0'})
@@ -713,12 +694,6 @@ section_dpa_template ="""
 MATCH (s:Section {section_id: 'SECTION-6-1-1302', regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (dpt:DataProcessingAgreementTemplate {regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (s)-[:SECTION_REQUIRES_DPA_TEMPLATE]->(dpt);
-"""
-# DataController → DPA Template
-data_controller_dpa_template ="""
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (dpt:DataProcessingAgreementTemplate {dpa_template_id: 'DPA-TEMPLATE-001', regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (dc)-[:DATA_CONTROLLER_USES_DPA_TEMPLATE]->(dpt);
 """
 # DataProcessor → DPA Template
 data_processor_dpa_template ="""
@@ -739,16 +714,16 @@ MATCH (ct:ConsumerRight {node_id: 'RIGHT-OPT-OUT', regional_standard_regulation_
 MERGE (uoom)-[:UNIVERSAL_OPT_OUT_MECHANISM_ENABLES_RIGHT]->(ct);
 """
 
-#DataController → UOOM
-data_controller_universal_opt_out_mechanism ="""
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (uoom:UniversalOptOutMechanism {uoom_id: 'UOOM-001', regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (dc)-[:DATA_CONTROLLER_MUST_HAVE_UNIVERSAL_OPT_OUT_MECHANISM]->(uoom);
-"""
 #DeidentifiedData → Definition
 deidentified_definition ="""
-MATCH (dd:DeidentifiedData {node_id:'DEIDENT-001', regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (d:Definition {definition_id:'DEF-DEIDENTIFIED', regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (dd:DeidentifiedData {
+  deidentified_data_id: 'DEIDENT-001',   
+  regional_standard_regulation_id: 'CPA 1.0'
+})
+MATCH (d:Definition {
+  definition_id: 'DEF-DEIDENTIFIED',
+  regional_standard_regulation_id: 'CPA 1.0'
+})
 MERGE (dd)-[:DATA_DEFINED_BY_DEFINITION]->(d);
 """
 #ThirdParty → Definition
@@ -757,21 +732,6 @@ MATCH (tp:ThirdParty {third_party_id:'THIRD-PARTY-001', regional_standard_regula
 MATCH (d:Definition {definition_id:'DEF-THIRD-PARTY', regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (tp)-[:THIRD_PARTY_DEFINES_DEFINITION]->(d);
 """
-#DataController → ThirdParty
-data_controller_third_party ="""
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (tp:ThirdParty {third_party_id:'THIRD-PARTY-001', regional_standard_regulation_id: 'CPA 1.0'})
-WHERE dc.shares_with_third_parties = true 
-MERGE (dc)-[:DATA_CONTROLLER_SHARES_WITH_THIRD_PARTY]->(tp);
-"""
-#ProcessingActivity → DeidentifiedData
-data_controller_deidentified_data ="""
-MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (dd:DeidentifiedData {node_id: 'DEIDENT-001', regional_standard_regulation_id: 'CPA 1.0'})
-WHERE pa.produces_deidentified_data = true 
-MERGE (pa)-[:PROCESSING_ACTIVITY_PRODUCES_DEIDENTIFIED_DATA]->(dd);
-"""
-
 #Section  → SensitiveData 
 section_sensitive_data ="""
 MATCH (s:Section {section_id: 'SECTION-6-1-1304', regional_standard_regulation_id: 'CPA 1.0'})
@@ -783,31 +743,72 @@ MERGE (s)-[:SECTION_REQUIRES_CONSENT_FOR_SENSITIVE_DATA]->(sd);
 processing_activity_sensitive_data ="""
 MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (sd:SensitiveData {regional_standard_regulation_id: 'CPA 1.0'})
-WHERE pa.processes_sensitive_data = true 
-MERGE (pa)-[:PROCESSING_ACTIVITY_PROCESSES_SENSITIVE_DATA]->(sd);
+MERGE (pa)-[:PROCESSING_ACTIVITY_PROCESSES_SENSITIVE_DATA]->(sd); 
 """
 #ConsentRecord → SensitiveData
 consent_record_sensitive_data ="""
 MATCH (cd:ConsentRecord {regional_standard_regulation_id: 'CPA 1.0'})
 MATCH (sd:SensitiveData {regional_standard_regulation_id: 'CPA 1.0'})
-WHERE cd.data_categories CONTAINS sd.category_name
-MERGE (cd)-[:CONSENT_RECORD_GRANTS_CONSENT_FOR_SENSITIVE_DATA]->(sd);
+MERGE (cd)-[:CONSENT_RECORD_GRANTS_CONSENT_FOR_SENSITIVE_DATA]->(sd);  
 """
 
-
-# regulation_data_controller 
-regulation_data_controller ="""
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (reg)-[:REGULATION_HAS_DATA_CONTROLLER]->(dc);
+#consumer -> consumer Right
+consumer_right ="""
+MATCH (c:Consumer {regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (cr:ConsumerRight {regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (c)-[:CONSUMER_HAS_RIGHT]->(cr);
 """
-#DataController → ConsumerRequest
-data_controller_consumer_request ="""
-MATCH (dc:DataController {regional_standard_regulation_id: 'CPA 1.0'})
-MATCH (cr:ConsumerRequest {regional_standard_regulation_id: 'CPA 1.0'})
-MERGE (dc)-[:CONTROLLER_RESPONDS_TO_REQUEST]->(cr);
+#ProcessingActivity → DPA (REQUIRES_DPA)
+processing_activity_dpa ="""
+WITH [
+  {activity_id: 'ACT-002', dpa_id: 'DPA-001'},
+  {activity_id: 'ACT-003', dpa_id: 'DPA-002'},
+  {activity_id: 'ACT-004', dpa_id: 'DPA-003'},
+  {activity_id: 'ACT-006', dpa_id: 'DPA-004'},
+  {activity_id: 'ACT-002', dpa_id: 'DPA-005'}
+] AS mappings
+UNWIND mappings AS mapping
+MATCH (pa:ProcessingActivity {activity_id: mapping.activity_id, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (dpa:DataProtectionAssessment {dpa_id: mapping.dpa_id, regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (pa)-[:PROCESSING_ACTIVITY_REQUIRES_DPA]->(dpa);
 """
-
+#DataBreach → Section
+data_breach_section ="""
+MATCH (db:DataBreachIncident {regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (s:Section {section_id: 'SECTION-6-1-1308', regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (db)-[:DATA_BREACH_OCCURRED_IN_SECTION]->(s);
+"""
+##Consumer → PersonalData
+consumer_personal_data ="""
+WITH [
+  {data_id: 'PD-001', consumer_id: 'CON-001'},
+  {data_id: 'PD-002', consumer_id: 'CON-001'},
+  {data_id: 'PD-003', consumer_id: 'CON-001'},
+  {data_id: 'PD-004', consumer_id: 'CON-001'},
+  {data_id: 'PD-005', consumer_id: 'CON-001'},
+  {data_id: 'PD-006', consumer_id: 'CON-001'},
+  {data_id: 'PD-007', consumer_id: 'CON-002'},
+  {data_id: 'PD-008', consumer_id: 'CON-001'}
+] AS mappings
+UNWIND mappings AS mapping
+MATCH (cons:Consumer {consumer_id: mapping.consumer_id, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (pd:PersonalDataRecord {data_id: mapping.data_id, regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (cons)-[:CONSUMER_OWNS_PERSONAL_DATA]->(pd);
+"""
+#PrivacyNotice → ConsumerRight
+privacy_notice_consumer_right ="""
+WITH [
+  {notice_id: 'NOTICE-001', node_ids: ['RIGHT-ACCESS', 'RIGHT-DELETE', 'RIGHT-CORRECT', 'RIGHT-PORTABILITY', 'RIGHT-OPT-OUT']},
+  {notice_id: 'NOTICE-002', node_ids: ['RIGHT-OPT-OUT']},
+  {notice_id: 'NOTICE-003', node_ids: ['RIGHT-OPT-OUT']},
+  {notice_id: 'NOTICE-004', node_ids: ['RIGHT-DELETE']}
+] AS mappings
+UNWIND mappings AS mapping
+UNWIND mapping.node_ids AS node_id
+MATCH (pn:PrivacyNotice {notice_id: mapping.notice_id, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (cr:ConsumerRight {node_id: node_id, regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (pn)-[:PRIVACY_NOTICE_DISCLOSES_RIGHT]->(cr);
+"""
 
 
 import sys
@@ -833,52 +834,52 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_and_regulation)
 time.sleep(2)
 
-client.query(title.replace('$file_path',""))
+client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Title_nodes.csv"))
 time.sleep(2)
 
-client.query(article.replace('$file_path',""))
+client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Article_nodes.csv"))
 time.sleep(2)
 
-client.query(part.replace('$file_path',""))
+client.query(part.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Part_nodes.csv"))
 time.sleep(2)
 
-client.query(section.replace('$file_path',""))
+client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Section_nodes.csv"))
 time.sleep(2)
 
-client.query(rule.replace('$file_path',""))
+client.query(rule.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Rule_nodes.csv"))
 time.sleep(2)
 
-client.query(definition.replace('$file_path',""))
+client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Definition_nodes.csv"))
 time.sleep(2)
 
-client.query(consumer_rights.replace('$file_path',""))
+client.query(consumer_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ConsumerRight_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(opt_out_rights.replace('$file_path',""))
+client.query(opt_out_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_OptOutRight_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(controller_duties.replace('$file_path',""))
+client.query(controller_duties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ControllerDuty_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(enforcement_authority.replace('$file_path',""))
+client.query(enforcement_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_EnforcementAuthority_nodes.csv"))
 time.sleep(2)
 
-client.query(civil_penalty.replace('$file_path',""))
+client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_CivilPenalty_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(applicability_threshold.replace('$file_path',""))
+client.query(applicability_threshold.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ApplicabilityThreshold_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(data_processing_agreement_template.replace('$file_path',""))
+client.query(data_processing_agreement_template.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProcessingAgreementTemplate_nodes.csv"))
 time.sleep(2)
 
-client.query(universal_opt_out_mechanism.replace('$file_path',""))
+client.query(universal_opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_UniversalOptOutMechanism_nodes.csv"))
 time.sleep(2)
 
-client.query(de_identified_data.replace('$file_path',""))
+client.query(de_identified_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DeidentifiedData_nodes.csv"))
 time.sleep(2)
 
-client.query(third_party.replace('$file_path',""))
+client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ThirdParty_nodes.csv"))
 time.sleep(2)
 
 
@@ -895,8 +896,6 @@ time.sleep(2)
 client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataBreach_nodes.csv"))
 time.sleep(2)
 
-client.query(data_controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataController_nodes.csv"))
-time.sleep(2)
 
 client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProcessor_nodes.csv"))
 time.sleep(2)
@@ -916,7 +915,7 @@ time.sleep(2)
 client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ProcessingActivity_nodes.csv"))
 time.sleep(2)
 
-client.query(sensitive_data.replace('$file_path',""))
+client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_SensitiveData_Complete.csv"))
 time.sleep(2)
 
 
@@ -957,8 +956,6 @@ time.sleep(2)
 client.query(section_controller_duty)
 time.sleep(2)
 
-client.query(data_controller_controller_duty)
-time.sleep(2)
 
 client.query(regulation_enforcement_authority)
 time.sleep(2)
@@ -972,8 +969,6 @@ time.sleep(2)
 client.query(section_civil_penalty)
 time.sleep(2)
 
-client.query(applicability_threshold_data_controller)
-time.sleep(2)
 
 client.query(section_applicability_threshold)
 time.sleep(2)
@@ -981,8 +976,6 @@ time.sleep(2)
 client.query(section_dpa_template)
 time.sleep(2)
 
-client.query(data_controller_dpa_template)
-time.sleep(2)
 
 client.query(data_processor_dpa_template)
 time.sleep(2)
@@ -993,20 +986,12 @@ time.sleep(2)
 client.query(universal_opt_out_mechanism_right_to_opt_out)
 time.sleep(2)
 
-client.query(data_controller_universal_opt_out_mechanism)
-time.sleep(2)
-
 client.query(deidentified_definition)
 time.sleep(2)
 
 client.query(third_party_definition)
 time.sleep(2)
 
-client.query(data_controller_third_party)
-time.sleep(2)
-
-client.query(data_controller_deidentified_data)
-time.sleep(2)
 
 client.query(section_sensitive_data)
 time.sleep(2)
@@ -1017,11 +1002,23 @@ time.sleep(2)
 client.query(consent_record_sensitive_data)
 time.sleep(2)
 
-client.query(regulation_data_controller)
+client.query(consumer_right)
 time.sleep(2)
 
-client.query(data_controller_consumer_request)
+client.query(processing_activity_dpa)
 time.sleep(2)
+
+
+
+client.query(data_breach_section)
+time.sleep(2)
+
+client.query(consumer_personal_data)
+time.sleep(2)
+
+client.query(privacy_notice_consumer_right)
+time.sleep(2)
+
 
 logger.info("Graph structure loaded successfully.")
 

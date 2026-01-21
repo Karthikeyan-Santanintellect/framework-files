@@ -1,0 +1,6 @@
+action_id,violated_section_number,reason
+ENF-TX-001,541.102,Missing Capitalized Disclosure
+ENF-TX-002,541.101,Processing Biometric Data without Consent
+ENF-TX-003,541.103,Lack of Clear Opt-Out Link
+ENF-TX-004,541.055,Failure to Honor UOOM/GPC Signal
+ENF-TX-005,541.107,Small Business Selling Child Data

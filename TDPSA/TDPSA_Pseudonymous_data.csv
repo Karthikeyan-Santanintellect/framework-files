@@ -1,0 +1,6 @@
+data_id,description,data_type_example,controls_present,kept_separate,is_exempt_from_rights,re_identification_risk
+PSD-001,"Hashed identifiers used for analytics where the salt/key is stored in a separate vault.","SHA-256 Hashed Email",true,true,true,Low
+PSD-002,"Temporary session tokens used for cart management, not directly linked to a user profile until login.","Session Cookie ID",true,true,true,Medium
+PSD-003,"Mobile advertising identifiers (IDFA/GAID) where the link to PII is strictly access-controlled.","Device Advertising ID",true,true,true,High
+PSD-004,"Internal customer reference numbers used in data warehouses without direct PII columns.","Internal User UUID",true,true,true,Low
+PSD-005,"Telemetry data from IoT devices containing serial numbers but no owner info.","Device Serial Number",true,true,true,Low

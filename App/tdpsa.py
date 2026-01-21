@@ -11,6 +11,98 @@ ON CREATE SET
     reg.description = "Comprehensive state consumer data privacy law that regulates the collection, use, processing, and sale of personal data of Texas residents. Grants consumers rights to access, correct, delete, and port their personal data, and to opt-out of targeted advertising, data sales, and profiling. Requires businesses to obtain consent for processing sensitive data and conduct data protection assessments for high-risk processing activities.";
 """
 
+#Chapter
+chapter = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ch:Chapter {regional_standard_regulation_id: 'TDPSA 2023', chapter_number: row.chapter_number})
+ON CREATE SET 
+    ch.name = row.chapter_name,
+    ch.citation = row.statutory_citation,
+    ch.effective_date = row.effective_date;
+"""
+# sub chapter
+sub_chapter = """
+LOAD CSV WITH HEADERS FROM '$file
+MERGE (sc:Subchapter {regional_standard_regulation_id: 'TDPSA 2023', subchapter_id: row.subchapter_id})
+ON CREATE SET 
+    sc.name = row.subchapter_name,
+    sc.description = row.description;
+"""
+
+# Legal Sections
+legal_section = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (s:LegalSection {regional_standard_regulation_id: 'TDPSA 2023', section_number: row.section_number})
+ON CREATE SET 
+    s.title = row.section_title,
+    s.summary = row.statutory_text_summary,
+    s.type = row.section_type;
+"""
+# Definitions
+definition = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (def:Definition {regional_standard_regulation_id: 'TDPSA 2023', definition_id: row.definition_id})
+ON CREATE SET
+    def.term = row.defined_term,
+    def.text = row.definition_text,
+    def.source_section = row.source_section,
+    def.scope_note = row.scope_note,
+    def.legal_citation = row.statutory_citation,
+    def.last_verified_date = row.last_verified_date;
+"""
+# Mandatory_disclosures 
+mandatory_disclosure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (md:MandatoryDisclosure {regional_standard_regulation_id: 'TDPSA 2023', disclosure_id: row.disclosure_id})
+ON CREATE SET
+    md.required_text = row.required_text,
+    md.condition = row.trigger_condition,
+    md.format = row.format_requirement,
+    md.location = row.location_requirement,
+    md.source_section = row.source_section,
+    md.active = row.active;
+"""
+# Enforcement_authority
+enforcement_authority = """
+MERGE (ea:EnforcementAuthority {regional_standard_regulation_id: 'TDPSA 2023', authority_id: row.authority_id})
+ON CREATE SET
+    ea.name = row.authority_name,
+    ea.role = row.role,
+    ea.jurisdiction = row.jurisdiction,
+    ea.website = row.website,
+    ea.max_civil_penalty = row.civil_penalty_cap,
+    ea.penalty_unit = row.penalty_unit,
+    ea.powers = row.powers,
+    ea.cure_period_policy = row.cure_period_policy;
+"""
+# Enforcement Action
+enforcement_action = """
+MERGE (eac:EnforcementAction {regional_standard_regulation_id: 'TDPSA 2023', action_id: row.action_id})
+ON CREATE SET
+    eac.date_issued = row.issue_date,
+    eac.violation_description = row.violation_description,
+    eac.cure_deadline = row.cure_deadline,
+    eac.status = row.status,
+    eac.evidence_submitted = row.cure_evidence_submitted,
+    eac.cure_accepted = row.cure_accepted,
+    eac.penalty_amount = row.penalty_assessed,
+    eac.type = row.type;
+"""
+# Pseudonymous Data
+pseudonymous_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pd:PseudonymousData {regional_standard_regulation_id: 'TDPSA 2023', data_id: row.data_id})
+ON CREATE SET
+    pd.description = row.description,
+    pd.type = row.data_type_example,
+    pd.technical_controls_present = row.controls_present,
+    pd.kept_separate = row.kept_separate,                 
+    pd.is_exempt_from_rights = row.is_exempt_from_rights,
+    pd.re_identification_risk = row.re_identification_risk,
+    pd.legal_basis = row.legal_basis;
+"""
+
+
 #Business_entity
 business_entity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -431,6 +523,86 @@ ON CREATE SET
     ca.continuous_monitoring_implemented = toBoolean(row.continuous_monitoring_implemented),
     ca.next_audit_date = date(row.next_audit_date);
 """
+# Relationships
+
+#regulation->chapter 
+regulation_chapter = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA 2023'})
+MATCH (ch:Chapter {chapter_number: row.chapter_number})
+MERGE (reg)-[:REGULATIONCONTAINS_CHAPTER]->(ch);
+"""
+
+#Chapter -> subchapter
+chapter_subchapter = """
+LOAD CSV WITH HEADERS FROM '$file_path_subchapters' AS row
+MATCH (ch:Chapter {chapter_number: row.parent_chapter})
+MATCH (sc:Subchapter {subchapter_id: row.subchapter_id})
+MERGE (ch)-[:CHAPTER_CONTAINS_SUBCHAPTER]->(sc);
+"""
+# subchapter -> legal_sections
+subchapter_legal_section = """
+LOAD CSV WITH HEADERS FROM '$file_path_sections' AS row
+MATCH (sc:Subchapter {subchapter_id: row.parent_subchapter})
+MATCH (s:LegalSection {section_number: row.section_number})
+MERGE (sc)-[:SUBCHAPTER_CONTAINS_SECTION]->(s);
+"""
+
+# Enforecement_authority -> Regulation
+enforcement_authority_regulation = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ea:EnforcementAuthority {authority_id: 'TX-AG'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'TDPSA 2023'})
+MERGE (ea)-[:ENFORCEMENT_AUTHORITY_ENFORCES_REGULATION]->(reg);
+"""
+# EnforcementAuthority -> EnforcementAction
+enforcement_authority_enforcement_action = """
+LOAD CSV WITH HEADERS FROM '$file_path_actions' AS row
+MATCH (ea:EnforcementAuthority {authority_id: 'TX-AG'})
+MATCH (eac:EnforcementAction {action_id: row.action_id})
+MERGE (ea)-[:AUTHORITY_ISSUES_ENFORCEMENT_ACTION]->(eac);
+"""
+# EnforcementAction -> BusinessEntity
+enforcement_action_business_entity = """
+LOAD CSV WITH HEADERS FROM '$file_path_entities' AS row
+MATCH (eac:EnforcementAction {action_id: row.action_id})
+MATCH (be:BusinessEntity {entity_id: row.target_entity_id})
+MERGE (eac)-[r:ENFORCEMENT_ACTION_TARGETS_BUSINESS]->(be)
+ON CREATE SET
+    r.target_date = row.issue_date,
+    r.violation_status = row.status;
+"""
+# EnforcementAction -> section
+enforcement_action_section = """
+LOAD CSV WITH HEADERS FROM '$file_path_sections' AS row
+MATCH (ea:EnforcementAction {action_id: row.action_id})
+MATCH (ls:LegalSection {regional_standard_regulation_id: 'TDPSA 2023', section_number: row.violated_section_number})
+MERGE (ea)-[r:CITES_VIOLATION_OF]->(ls)
+ON CREATE SET
+    r.reason = row.reason;
+"""
+# Section -> definition
+section_definition = """
+LOAD CSV WITH HEADERS FROM '$file_path_definitions' AS row
+MATCH (s:LegalSection {section_number: row.source_section})
+MATCH (def:Definition {definition_id: row.definition_id})
+MERGE (s)-[:SECTION_DEFINES_TERM]->(def);
+"""
+# Section -> Disclosure
+section_disclosure = """
+LOAD CSV WITH HEADERS FROM '$file_path_disclosures' AS row
+MATCH (s:LegalSection {section_number: row.source_section})
+MATCH (md:MandatoryDisclosure {disclosure_id: row.disclosure_id})
+MERGE (s)-[:SECTION_MANDATES_DISCLOSURE]->(md);
+"""
+# PseudonymousData -> LegalSection
+pseudonymous_data_legal_section = """
+LOAD CSV WITH HEADERS FROM '$file_path_disclosures' AS row
+MATCH (pd:PseudonymousData {data_id: row.data_id})
+MATCH (s:LegalSection {section_number: '541.106'})
+MERGE (pd)-[:PSEUDONYM_DATA_CLAIMS_EXEMPTION_UNDER_SECTION]->(s);
+"""
+
 
 #Process_consumer_rel
 process_consumer_rel = """
