@@ -2,4 +2,5 @@ source_activity_id,relationship_type,target_dpa_id,assessment_requirement_date,a
 ACT-002,REQUIRES_DATA_PROTECTION_ASSESSMENT,DPA-001,2018-01-10,TargetedAdvertising,Targeted advertising requires DPA,True,2024-01-20,True,High
 ACT-003,REQUIRES_DATA_PROTECTION_ASSESSMENT,DPA-002,2021-06-20,DataSale,Data sale requires DPA,True,2024-02-25,True,Critical
 ACT-004,REQUIRES_DATA_PROTECTION_ASSESSMENT,DPA-003,2019-08-05,Profiling,Profiling requires DPA,False,2024-03-15,True,High
+ACT-005,REQUIRES_DATA_PROTECTION_ASSESSMENT,DPA-004,2023-11-15,SensitiveDataProcessing,Processing of sensitive personal data,True,2024-04-10,True,High
 ACT-006,REQUIRES_DATA_PROTECTION_ASSESSMENT,DPA-005,2022-02-01,HighRiskProcessing,High-risk processing,True,2024-05-01,True,High

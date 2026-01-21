@@ -5,3 +5,4 @@ CONS-003,REQ-003,exercises_consumer_right,01-03-2024,correction,TRUE,FALSE,,FALS
 CONS-004,REQ-004,exercises_consumer_right,20-03-2024,portability,TRUE,TRUE,28-04-2024,TRUE,FALSE,FALSE
 CONS-005,REQ-005,exercises_consumer_right,05-04-2024,opt_out,TRUE,TRUE,15-05-2024,FALSE,FALSE,FALSE
 CONS-006,REQ-006,exercises_consumer_right,10-05-2024,appeal,TRUE,FALSE,,TRUE,FALSE,FALSE
+CONS-007,REQ-007,exercises_consumer_right,15-06-2024,access,TRUE,TRUE,25-06-2024,TRUE,FALSE,FALSE
