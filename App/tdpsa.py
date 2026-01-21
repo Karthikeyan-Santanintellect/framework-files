@@ -692,11 +692,11 @@ MERGE (source)-[r:PROCESS_ACTIVITY_REQUIRES_DATA_PROTECTION_ASSESSMENT {
 }]->(target)
 ON CREATE SET
     r.relationship_type = row.relationship_type,
-    r.assessment_requirement_date = date(row.assessment_requirement_date),
+    r.assessment_requirement_date = row.assessment_requirement_date,
     r.assessment_type = row.assessment_type,
     r.assessment_required_reason = row.assessment_required_reason,
     r.assessment_completed = row.assessment_completed,
-    r.assessment_date = date(row.assessment_date),
+    r.assessment_date = row.assessment_date,
     r.risk_identified = row.risk_identified,
     r.risk_level = row.risk_level;
 """
@@ -1032,13 +1032,13 @@ time.sleep(2)
 client.query(process_sensitive_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_PROCESSES_SENSITIVE_DATA_relationships.csv'))
 time.sleep(2)
 
-client.query(obtains_consent_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OBTAINS_CONSENT_relationships.csv'))
+client.query(obtains_consent_data.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_OBTAINS_CONSENT.csv'))
 time.sleep(2)
 
 client.query(conducts_processing_activity.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_CONDUCTS_PROCESSING_ACTIVITY_relationships.csv'))
 time.sleep(2)
 
-client.query(requires_data_protection_assessment.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_REQUIRES_DATA_PROTECTION_ASSESSMENT_relationships.csv'))
+client.query(requires_data_protection_assessment.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_REQUIRES_DATA_PROTECTION_ASSESSMENT.csv'))
 time.sleep(2)
 
 client.query(respond_consumer_request.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TDPSA/TDPSA_RESPONDS_TO_CONSUMER_REQUEST_relationships.csv'))
