@@ -1,7 +1,7 @@
 source_entity_id,relationship_type,target_sensitive_id,processing_start_date,explicit_consent_obtained,consent_scope,protection_level_applied,encryption_enabled,access_restrictions,audit_frequency_months
+ENT-005,PROCESSES_SENSITIVE_DATA,SD-001,2023-07-10,2023-07-15,Racial or ethnic origin classification,Maximum,True,Restricted to compliance team,3
 ENT-002,PROCESSES_SENSITIVE_DATA,SD-002,2018-01-10,2018-01-15,Religious affiliation processing,Maximum,True,Restricted to 2 staff members,3
 ENT-003,PROCESSES_SENSITIVE_DATA,SD-003,2021-06-20,2021-06-25,Health data for treatment,Maximum,True,Healthcare team only,3
 ENT-004,PROCESSES_SENSITIVE_DATA,SD-004,2019-08-05,2019-08-10,Biometric authentication,Maximum,True,Security team only,3
 ENT-006,PROCESSES_SENSITIVE_DATA,SD-005,2020-09-15,2020-09-20,Location-based services,Enhanced,True,App use only,6
-ENT-005,PROCESSES_SENSITIVE_DATA,SD-001,2023-07-10,2023-07-15,Racial or ethnic origin classification,Maximum,True,Restricted to compliance team,3
-ENT-007,PROCESSES_SENSITIVE_DATA,SD-006,2023-08-20,2023-08-25,Data of children under 13 years old,Maximum,True,Parental consent verification required,3
+ENT-001,PROCESSES_SENSITIVE_DATA,SD-006,2023-08-20,2023-08-25,Data of children under 13 years old,Maximum,True,Parental consent verification required,3

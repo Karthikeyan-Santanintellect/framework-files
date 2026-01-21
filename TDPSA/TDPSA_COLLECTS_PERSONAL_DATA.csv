@@ -5,5 +5,5 @@ ENT-003,COLLECTS_PERSONAL_DATA,PD-003,2021-06-20,DirectCollection,Continuous,Sys
 ENT-004,COLLECTS_PERSONAL_DATA,PD-004,2019-08-05,DirectCollection,Continuous,Financial services,True,True
 ENT-005,COLLECTS_PERSONAL_DATA,PD-005,2022-02-01,Inference,Continuous,Personalization,False,False
 ENT-006,COLLECTS_PERSONAL_DATA,PD-006,2020-09-15,DirectCollection,AsNeeded,Healthcare delivery,True,True
-ENT-007,COLLECTS_PERSONAL_DATA,PD-007,2023-08-20,DirectCollection,Continuous,Authentication,True,True
-ENT-008,COLLECTS_PERSONAL_DATA,PD-008,2023-09-01,ThirdPartyCollection,Continuous,Healthcare delivery,True,True
+ENT-003,COLLECTS_PERSONAL_DATA,PD-007,2023-08-20,DirectCollection,Continuous,Authentication,True,True
+ENT-004,COLLECTS_PERSONAL_DATA,PD-008,2023-09-01,Inference,Continuous,Demographic analysis,True,True

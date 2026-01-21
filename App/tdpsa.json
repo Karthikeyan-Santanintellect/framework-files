@@ -4071,6 +4071,22 @@
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:507",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153222770792858107",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:517",
+      "type": "BUSINESS_ENTITY_PROCESSES_SENSITIVE_DATA",
+      "audit_frequency_months": 3,
+      "processing_start_date": "2023-07-10",
+      "relationship_type": "PROCESSES_SENSITIVE_DATA",
+      "access_restrictions": "Restricted to compliance team",
+      "consent_scope": "Racial or ethnic origin classification",
+      "encryption_enabled": "True",
+      "target_id": "SD-001",
+      "source_id": "ENT-005",
+      "protection_level_applied": "Maximum",
+      "explicit_consent_obtained": "2023-07-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:507",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917831393338720799",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:543",
       "type": "BUSINESS_ENTITY_OBTAINS_CONSENT",
@@ -4303,6 +4319,28 @@
       "primary_category": "TRUE",
       "target_id": "CAT-005",
       "source_id": "PD-006"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:515",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153284343444013571",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:532",
+      "type": "PERSONAL_DATA_BELONGS_TO_CATEGORY",
+      "relationship_type": "BELONGS_TO_CATEGORY",
+      "classification_date": "20-08-2024",
+      "primary_category": "TRUE",
+      "target_id": "CAT-010",
+      "source_id": "PD-007"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:516",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153284343444013572",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:532",
+      "type": "PERSONAL_DATA_BELONGS_TO_CATEGORY",
+      "relationship_type": "BELONGS_TO_CATEGORY",
+      "classification_date": "01-09-2024",
+      "primary_category": "TRUE",
+      "target_id": "CAT-010",
+      "source_id": "PD-008"
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:517",
