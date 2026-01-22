@@ -3717,6 +3717,83 @@
       "name": "Data Broker",
       "description": "Third party purchasing personal data from controllers for resale or enrichment.",
       "third_party_id": "TP-DATA-BROKER"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1750",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "ISO/IEC 27701",
+      "external_id": "ISO-27701-6.13.1",
+      "text": "Information security management"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1751",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "ISO/IEC 27701",
+      "external_id": "ISO-27701-6.10.2",
+      "text": "Privacy impact assessment"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1752",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "ISO/IEC 27701",
+      "external_id": "ISO-27701-6.9.4",
+      "text": "Information regarding PII processing"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1753",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "ISO/IEC 27701",
+      "external_id": "ISO-27701-6.11.2",
+      "text": "Contracts with PII processors"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1754",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "NIST Privacy Framework",
+      "external_id": "NIST-PR.PR-1",
+      "text": "Data protection policies (Security)"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1755",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "NIST Privacy Framework",
+      "external_id": "NIST-PR.GV-3",
+      "text": "Governance policies (Privacy Notice)"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1756",
+      "mainLabel": "ExternalFrameworkRequirement",
+      "labels": [
+        "ExternalFrameworkRequirement"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "source_framework": "NIST Privacy Framework",
+      "external_id": "NIST-PR.ID-3",
+      "text": "Inventory and Mapping (Contracts)"
     }
   ],
   "rels": [
@@ -6118,6 +6195,17 @@
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1478",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155441585257711046",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1618",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both require minimization and purpose policies",
+      "target_framework": "NIST Privacy Framework"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1478",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917797308478260819",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1619",
       "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
@@ -6218,6 +6306,28 @@
       "source_framework": "VCDPA",
       "justification": "Both require lawful and secure processing",
       "target_framework": "ISO/IEC 27701"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1479",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917797308478260950",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1750",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both mandate information security controls",
+      "target_framework": "ISO/IEC 27701"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1479",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917797308478260954",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1754",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both require security protection policies",
+      "target_framework": "NIST Privacy Framework"
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1480",
@@ -6331,11 +6441,55 @@
       "target_framework": "NIST Privacy Framework"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1480",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917797308478260821",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1621",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both require consent mechanisms",
+      "target_framework": "NIST Privacy Framework"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1481",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653331401",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1485",
       "type": "REQUIREMENT_APPLIES_TO_ROLE",
       "applicability": "mandatory"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1481",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153189785444025801",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1595",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both mandate specific contract terms for processors",
+      "target_framework": "GDPR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1481",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155441585257711049",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1753",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both require contracts including security provisions",
+      "target_framework": "ISO/IEC 27701"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1481",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157693385071396297",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1756",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "functional_equivalence",
+      "strength": "MODERATE",
+      "source_framework": "VCDPA",
+      "justification": "Inventory mapping supports contract compliance",
+      "target_framework": "NIST Privacy Framework"
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1482",
@@ -6374,6 +6528,28 @@
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1484",
       "type": "REQUIREMENT_APPLIES_TO_ROLE",
       "applicability": "mandatory"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1482",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920049108291946041",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1593",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both require impact assessments for high-risk processing",
+      "target_framework": "GDPR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1482",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917797308478260951",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1751",
+      "type": "REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK",
+      "mapping_type": "direct_equivalence",
+      "strength": "STRONG",
+      "source_framework": "VCDPA",
+      "justification": "Both require privacy impact assessments",
+      "target_framework": "ISO/IEC 27701"
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1482",

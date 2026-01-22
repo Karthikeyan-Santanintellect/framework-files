@@ -1186,6 +1186,20 @@ MATCH (pd:PersonalData {regional_standard_regulation_id: 'VCDPA 2023'})
 MATCH (pub:PubliclyAvailableInformation {regional_standard_regulation_id: 'VCDPA 2023'})
 MERGE (pd)-[:PERSONAL_DATA_EXCLUDES_PUBLIC_INFORMATION]->(pub);
 """
+# Requirement -> Implementation spec 
+implementation_spec_department = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
+MATCH (ispec:ImplementationSpec {regional_standard_regulation_id: 'VCDPA 2023', impl_id: row.impl_id})
+MERGE (req)-[:REQUIREMENT_HAS_IMPLEMENTATION_SPEC]->(ispec);
+"""
+# Implementation spec -> Department
+department_implementation_spec = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ispec:ImplementationSpec {regional_standard_regulation_id: 'VCDPA 2023', impl_id: row.impl_id})
+MERGE (dept:Department {regional_standard_regulation_id: 'VCDPA 2023', name: row.owner_department})
+MERGE (ispec)-[:IMPLEMENTATION_SPEC_OWNED_BY_DEPARTMENT]->(dept);
+"""
 
 
 
@@ -1261,7 +1275,7 @@ time.sleep(2)
 client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processes.csv'))
 time.sleep(2)
 
-client.query(External_Framework_Requirements.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_ExternalFrameworkRequirements.csv'))  
+client.query(External_Framework_Requirements.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20External%20Frameworks%20Requirement.csv'))  
 time.sleep(2)
 
 client.query(Threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Thresholds.csv'))
@@ -1464,8 +1478,10 @@ time.sleep(2)
 client.query(processor_subcontractor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Subcontractor.csv'))
 time.sleep(2)  
 
-client.query(requirement_external_frameworks.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_ExternalFramework_Mapping.csv'))
+client.query(requirement_external_frameworks.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20ExternalFramework%20Relationship.csv'))
 time.sleep(2)  
+
+
 
 client.query(regulation_title)
 time.sleep(2)
