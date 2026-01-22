@@ -1,0 +1,6 @@
+Node_ID,type,severity_level,notification_deadline,requires_authority_notification,requires_subject_notification,regulated_by_articles
+BREACH-001,Ransomware Attack,High,72 hours,true,true,33;34
+BREACH-002,Loss of Encrypted USB,Low,72 hours,false,false,33
+BREACH-003,Unintended Disclosure via Email CC,Medium,72 hours,true,false,33
+BREACH-004,SQL Injection Attack,High,72 hours,true,true,33;34
+BREACH-005,Physical Theft of Paper Records,Medium,72 hours,true,true,33;34

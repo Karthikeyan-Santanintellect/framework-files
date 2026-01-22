@@ -1,4 +1,4 @@
-# Create GDPR Regulation Node
+# regulation
 regional_standard_and_regulation = """
 MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'GDPR 2016/679'})
 ON CREATE SET
@@ -259,6 +259,92 @@ ON CREATE SET
   ea.regulated_by_articles = row.regulated_by_articles,
   ea.applies_to_jurisdictions = row.applies_to_jurisdictions;
   """
+
+# Technical & Organisational Measures
+technical_organisational_measures ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tom:TechnicalOrganisationalMeasure {tom_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  tom.name = row.name,
+  tom.category = row.category,
+  tom.description = row.description,
+  tom.supports_principle = row.supports_principle; 
+"""
+# Personal Data Breach
+personal_data_breach ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pdb:PersonalDataBreach {breach_type_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  pdb.type = row.type,
+  pdb.notification_deadline = row.notification_deadline,
+  pdb.requires_authority_notification = row.requires_authority_notification,
+  pdb.requires_subject_notification = row.requires_subject_notification;
+"""
+# Processor Contract
+processor_contract ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pc:ProcessorContract {contract_requirement_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  pc.clause_name = row.clause_name,
+  pc.mandatory_content = row.mandatory_content,
+  pc.obligates_actor = row.obligates_actor;
+"""
+# joint Controller Agreement
+joint_controller_agreement ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (jca:JointControllerAgreement {agreement_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  jca.name = row.name,
+  jca.essence_available_to_subject = toBoolean(row.essence_available_to_subject),
+  jca.allocates_responsibility = row.allocates_responsibility;
+"""
+#Record of Processing Activities
+record_of_processing_activities ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ropa:RecordOfProcessingActivities {ropa_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  ropa.content_elements = row.content_elements,
+  ropa.legal_basis = "Article 30",
+  ropa.last_updated = date(row.last_updated);
+"""
+# Risk Assessment Outcome
+risk_assessment_outcome ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rao:RiskAssessmentOutcome {outcome_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  rao.risk_level = row.risk_level,
+  rao.triggers_consultation = toBoolean(row.triggers_consultation);
+"""
+# Infringement (Violation Event)
+infringement_violation_event ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (inf:Infringement {infringement_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  inf.name = row.name,
+  inf.violates_article = row.violates_article,
+  inf.triggers_penalty = row.triggers_penalty;
+"""
+#Senior Management
+senior_management ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sm:SeniorManagement {management_role_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  sm.title = row.title,
+  sm.reports_received = row.reports_received;
+"""
+#Representative
+representative ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rep:Representative {rep_id: row.Node_ID, regional_standard_regulation_id: 'GDPR 2016/679'})
+ON CREATE SET
+  rep.name = row.name,
+  rep.jurisdiction = row.jurisdiction,
+  rep.mandated_by_controller = row.mandated_by_controller;
+"""
+
+
+
+
 
 # Regulation → Chapter Relationships 
 regional_standard_regulation_chapter ="""
@@ -544,6 +630,109 @@ MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (pl:Principle{regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (ar)-[:ACTOR_ROLE_MUST_COMPLY_WITH_PRINCIPLE]->(pl);
 """
+# Controller -> TOMs
+controller_tom ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Controller'})
+MATCH (tom:TechnicalOrganisationalMeasure {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:ACTOR_ROLE_IMPLEMENTS_MEASURE]->(tom);
+"""
+# TOMs -> Principle
+tom_principle ="""
+MATCH (tom:TechnicalOrganisationalMeasure {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (p:Principle {regional_standard_regulation_id: 'GDPR 2016/679'})
+WHERE tom.supports_principle CONTAINS p.name
+MERGE (tom)-[:TECHNICAL_ORGANISATIONAL_MEASURES_SUPPORTS_PRINCIPLE]->(p);
+"""
+# Breach -> Authority
+breach_authority ="""
+MATCH (pdb:PersonalDataBreach {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Protection Authority'})
+WHERE pdb.requires_authority_notification = true
+MERGE (pdb)-[:PERSONAL_DATA_BREACH_REQUIRES_AUTHORITY_NOTIFICATION]->(ar);
+"""
+# Breach -> Article
+breach_article = """
+MATCH (pdb:PersonalDataBreach {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+WHERE pdb.regulated_by_articles CONTAINS toString(a.number)
+MERGE (pdb)-[:DATA_BREACH_IS_SUBJECT_TO_ARTICLE]->(a);
+"""
+# Controller -> RoPA
+controller_ropa ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Controller'})
+MATCH (ropa:RecordOfProcessingActivities {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:CONTROLLER_MAINTAINS_RECORD]->(ropa);
+"""
+# RoPA -> Processing Activity
+ropa_processing_activity ="""
+MATCH (ropa:RecordOfProcessingActivities {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ropa)-[:RECORD_OF_PROCESSING_ACTIVITIES_CONTAINS_PROCESSING_ACTIVITY]->(pa);
+"""
+# DPIA -> Risk Outcome
+dpia_risk_outcome ="""
+MATCH (cm:ComplianceMechanism {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Protection Impact Assessment (DPIA)'})
+MATCH (rao:RiskAssessmentOutcome {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (cm)-[:COMPLIANCE_MECHANISM_IMPOSES_RISK_ASSESSMENT]->(rao);
+"""
+
+# Risk Outcome -> Authority
+rao_authority ="""
+MATCH (rao:RiskAssessmentOutcome {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Protection Authority'})
+WHERE rao.triggers_consultation = true
+MERGE (rao)-[:RISK_ASSESSMENT_OUTCOME_REQUIRES_AUTHORITY_NOTIFICATION]->(ar);
+"""
+# Controller -> Processor Contract
+controller_processor_contract ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Controller'})
+MATCH (pc:ProcessorContract {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:DATA_CONTROLLER_ENFORCES_CONTRACT]->(pc);
+"""
+# Processor Contract -> Processor
+processor_contract_processor ="""
+MATCH (pc:ProcessorContract {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Processor'})
+WHERE pc.obligates_actor = 'Processor' OR pc.obligates_actor = 'Data Processor'
+MERGE (pc)-[:PROCESSOR_CONTRACT_OBLIGATES_ACTOR]->(ar);
+"""
+
+# Joint Controller -> Agreement
+joint_controller_jca ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Joint Controller'})
+MATCH (jca:JointControllerAgreement {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:JOINT_CONTROLLER_HAS__AGREEMENT]->(jca);
+"""
+# Infringement -> Article
+infringement_article ="""
+MATCH (inf:Infringement {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
+WHERE inf.violates_article CONTAINS toString(a.number)
+MERGE (inf)-[:INFRINGEMENT_VIOLATES_ARTICLE]->(a);
+"""
+# Infringement -> Penalty
+infringement_penalty ="""
+MATCH (inf:Infringement {regional_standard_regulation_id: 'GDPR 2016/679'})
+MATCH (pen:Penalty {regional_standard_regulation_id: 'GDPR 2016/679'})
+WHERE inf.triggers_penalty = pen.penalty_id OR inf.tier_level = pen.violation_category
+MERGE (inf)-[:INFRINGEMENT_TRIGGERS_PENALTY]->(pen);
+"""
+# DPO -> Senior Management
+dpo_senior_management ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Protection Officer'})
+MATCH (sm:SeniorManagement {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:DATA_PROTECTION_OFFICER_REPORTS_DIRECTLY_TO_SENIOR_MANAGEMENT]->(sm);
+"""
+# Controller -> Representative
+controller_representative ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Controller'})
+MATCH (rep:Representative {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:CONTROLLER_HAS_REPRESENTATIVE]->(rep);
+"""
+
+
+
+
 
 
 
@@ -631,8 +820,37 @@ time.sleep(2)
 client.query(gdpr_enforcement_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_EnforcementAuthorities.csv"))
 time.sleep(2)
 
+client.query(technical_organisational_measures.replace('$file_path',""))
+time.sleep(2)
+
+client.query(personal_data_breach.replace('$file_path',""))
+time.sleep(2)
+
+client.query(processor_contract.replace('$file_path',""))
+time.sleep(2)
+
+client.query(joint_controller_agreement.replace('$file_path',""))
+time.sleep(2)
+
+client.query(record_of_processing_activities.replace('$file_path',""))
+time.sleep(2)
+
+client.query(risk_assessment_outcome.replace('$file_path',""))
+time.sleep(2)
+
+client.query(infringement_violation_event.replace('$file_path',""))
+time.sleep(2)
+
+client.query(senior_management.replace('$file_path',""))
+time.sleep(2)
+
+client.query(representative.replace('$file_path',""))
+time.sleep(2)
 
 
+
+
+# Relationships
 client.query(regional_standard_regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/6_relationships_regulation_to_chapter.csv"))
 time.sleep(2)
 
@@ -762,57 +980,88 @@ time.sleep(2)
 client.query(actor_role_principle)
 time.sleep(2)
 
+client.query(controller_tom)
+time.sleep(2)
+
+client.query(tom_principle)
+time.sleep(2)
+
+client.query(breach_authority)
+time.sleep(2)
+
+client.query(breach_article)
+time.sleep(2)
+
+client.query(controller_ropa)
+time.sleep(2)
+
+client.query(ropa_processing_activity)
+time.sleep(2)
+
+client.query(dpia_risk_outcome)
+time.sleep(2)
+
+client.query(rao_authority)
+time.sleep(2)
+
+client.query(controller_processor_contract)
+time.sleep(2)
+
+client.query(processor_contract_processor)
+time.sleep(2)
+
+client.query(joint_controller_jca)
+time.sleep(2)
+
+client.query(infringement_article)
+time.sleep(2)
+
+client.query(infringement_penalty)
+time.sleep(2)
+
+client.query(dpo_senior_management)
+time.sleep(2)
+
+client.query(controller_representative)
+time.sleep(2)
+
+
 logger.info("Graph structure loaded successfully.")
 
-output_filename = "gdpr.json"
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data
+"""
 
-res = client.query("""
-    MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-    WITH path
-    UNWIND nodes(path) AS n
-    UNWIND relationships(path) AS r
-    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-    RETURN {
-      nodes: [n IN uniqueNodes | n {
-        .*, 
-        id: elementId(n),     
-        labels: labels(n),      
-        mainLabel: head(labels(n)) 
-      }],
-      links: [r IN uniqueRels | r {
-        .*,
-        id: elementId(r),     
-        type: type(r),         
-        source: elementId(startNode(r)), 
-        target: elementId(endNode(r)) 
-      }]
-    } AS graph_data
-""")
+results = client.query(query)
 
-if isinstance(res, str):
-    logger.error(f"✗ Export query failed: {res}")
-    client.close()
-    sys.exit(1)
-
-if not res or len(res) == 0:
-    logger.warning(" No data returned from export query")
-    client.close()
-    sys.exit(1)
-
-graph_data = res[0].get('graph_data', res[0])
-
-with open(output_filename, 'w', encoding='utf-8') as f:
-    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
-
-node_count = len(graph_data.get('nodes', []))
-link_count = len(graph_data.get('links', []))
-
-logger.info(f" Exported {node_count} nodes and {link_count} relationships")
-logger.info(f" Graph data saved to: {output_filename}") 
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('gdpr.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to gdpr.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
-
-
 
 
 

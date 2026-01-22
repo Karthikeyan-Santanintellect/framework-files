@@ -3792,6 +3792,22 @@
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:505",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917828094803837536",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:608",
+      "type": "BUSINESS_ENTITY_PROCESSES_CONSUMER_DATA",
+      "consent_obtained": "True",
+      "relationship_status": "Active",
+      "relationship_type": "PROCESSES_CONSUMER_DATA",
+      "processing_established": "True",
+      "relationship_start_date": "2024-09-10",
+      "legal_basis": "Consent",
+      "target_id": "CONS-007",
+      "data_processing_scope": "Authentication; Security services",
+      "source_id": "ENT-003",
+      "consent_date": "2024-09-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:505",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153221671281230329",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:511",
       "type": "BUSINESS_ENTITY_COLLECTS_PERSONAL_DATA",

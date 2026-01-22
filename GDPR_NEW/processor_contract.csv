@@ -1,0 +1,6 @@
+Node_ID,clause_name,mandatory_content,obligates_actor,regulated_by_articles
+CON-REQ-001,Subject Matter and Duration,The contract must set out the subject matter and duration of the processing.,Processor,28
+CON-REQ-002,Documented Instructions,Processor processes data only on documented instructions from the controller.,Processor,28
+CON-REQ-003,Confidentiality,Persons authorised to process data have committed themselves to confidentiality.,Processor,28
+CON-REQ-004,Sub-processor Conditions,Processor shall not engage another processor without prior written authorisation.,Processor,28
+CON-REQ-005,Deletion or Return,Processor deletes or returns all personal data after the end of the provision of services.,Processor,28

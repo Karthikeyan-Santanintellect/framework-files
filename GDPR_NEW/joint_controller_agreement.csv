@@ -1,0 +1,4 @@
+Node_ID,name,essence_available_to_subject,allocates_responsibility,regulated_by_articles
+JCA-001,Marketing Consortium Agreement,true,Party A handles collection; Party B handles storage and security.,26
+JCA-002,Clinical Trial Data Sharing,true,Sponsor manages central DB; Hospital manages patient consent.,26
+JCA-003,Shared Employee Benefits Portal,true,HR Provider manages access; Employer manages data accuracy.,26

@@ -1,0 +1,6 @@
+Node_ID,name,category,description,supports_principle,regulated_by_articles
+TOM-001,Pseudonymisation,Data Masking,Processing personal data so it can no longer be attributed to a specific data subject without additional information.,Integrity and Confidentiality,32
+TOM-002,AES-256 Encryption,Encryption,Encryption of personal data at rest and in transit using strong cryptographic standards.,Integrity and Confidentiality,32
+TOM-003,Regular Vulnerability Scanning,Testing & Evaluation,Systematic review of security weaknesses in information systems.,Accountability,32
+TOM-004,Role-Based Access Control (RBAC),Access Control,Restricting system access to authorized users based on their role.,Data Minimisation,25;32
+TOM-005,Offsite Backups,Availability,Maintenance of data backups in a physically separate location to restore availability.,Availability,32
