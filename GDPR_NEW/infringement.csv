@@ -1,5 +1,0 @@
-Node_ID,name,violates_article,triggers_penalty,tier_level,description
-INF-001,Failure to Obtain Consent,6;7,PEN-002,Tier 2,Processing without valid lawful basis or valid consent.
-INF-002,Data Breach Notification Failure,33,PEN-001,Tier 1,Failure to notify supervisory authority within 72 hours.
-INF-003,Insufficient Security Measures,32,PEN-001,Tier 1,Failure to implement appropriate technical and organisational measures.
-INF-004,Violation of Data Subject Rights,12;15-22,PEN-002,Tier 2,Failure to respond to access or erasure requests.

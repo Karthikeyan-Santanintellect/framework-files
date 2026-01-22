@@ -1,0 +1,4 @@
+contract_id,name,effective_date,status,required_terms
+DPA_CON_001,Standard Processor Agreement,2023-01-01,Active,"Confidentiality; Deletion or Return of Data; Audit Rights; Subcontractor Flow-down"
+DPA_CON_002,Cloud Infrastructure Addendum,2023-06-15,Active,"Security Measures; Breach Notification; Cross-border Transfer Mechanisms"
+DPA_CON_003,Analytics Service Contract,2023-09-01,Active,"Purpose Limitation; Data Minimization; Confidentiality"

@@ -1,0 +1,5 @@
+risk_id,name,severity,description
+RISK_001,Discrimination,High,"Unfair or deceptive treatment; unlawful disparate impact on consumers"
+RISK_002,Financial Loss,High,"Unauthorized disclosure leading to financial fraud or identity theft"
+RISK_003,Reputational Injury,Medium,"Exposure of private affairs that would be offensive to a reasonable person"
+RISK_004,Physical Intrusion,High,"Physical or other intrusion upon solitude or seclusion"

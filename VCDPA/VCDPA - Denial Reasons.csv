@@ -1,0 +1,4 @@
+reason_id,description,legal_basis
+DR_001,"Controller could not authenticate consumer identity using commercially reasonable methods","§ 59.1-577(C)"
+DR_002,"Data processed is subject to HIPAA/GLBA exemption","§ 59.1-576"
+DR_003,"Request is manifestly unfounded, excessive, or repetitive","§ 59.1-577(B)(3)"

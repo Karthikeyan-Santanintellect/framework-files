@@ -1,0 +1,5 @@
+trigger_id,condition
+TRIG_001,Targeted Advertising
+TRIG_002,Sale of Personal Data
+TRIG_003,Profiling (High Risk)
+TRIG_004,Sensitive Data Processing

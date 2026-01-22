@@ -1,0 +1,4 @@
+auth_id,type
+AUTH_EMAIL,Email Verification Link
+AUTH_2FA,"Two-Factor Authentication (SMS/App)"
+AUTH_LOGIN,Existing Account Login

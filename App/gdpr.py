@@ -315,17 +315,6 @@ ON CREATE SET
   rao.risk_level = row.risk_level,
   rao.triggers_consultation = toBoolean(row.triggers_consultation);
 """
-# Infringement
-infringement = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (i:Infringement {infringement_id: row.Node_Id, regional_standard_regulation_id:'GDPR 2016/679'})
-ON CREATE SET
-  i.name = row.name,
-  i.violates_article = row.violates_article,
-  i.triggers_penalty = row.triggers_penalty,
-  i.level = row.tier_level,
-  i.description = row.description;
-  """
 
 
 #Senior Management
@@ -536,12 +525,6 @@ MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
 MATCH (tm:TransferMechanism{regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (a)-[:ARTICLE_REGULATES_TRANSFER]->(tm);
 """
-# Penalty → Article
-penalty_article ="""
-MATCH (pen:Penalty {regional_standard_regulation_id: 'GDPR 2016/679'})
-MATCH (a:Article{regional_standard_regulation_id: 'GDPR 2016/679'})
-MERGE (pen)-[:PENALTY_DEFINED_BY_ARTICLE]->(a);
-"""
 
 # DataSubjectRight → Article
 datasubject_right_article ="""
@@ -707,18 +690,6 @@ MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Jo
 MATCH (jca:JointControllerAgreement {regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (ar)-[:JOINT_CONTROLLER_HAS__AGREEMENT]->(jca);
 """
-# Infringement -> Article
-infringement_article = """
-MATCH (i:Infringement {regional_standard_regulation_id: 'GDPR 2016/679'})
-MATCH (a:Article {regional_standard_regulation_id: 'GDPR 2016/679'})
-MERGE (i)-[:INFRINGEMENT_VIOLATES_ARTICLE]->(a);
-"""
-# Infringement -> Penalty
-infringement_penalty = """
-MATCH (i:Infringement {regional_standard_regulation_id: 'GDPR 2016/679'})
-MATCH (pen:Penalty {regional_standard_regulation_id: 'GDPR 2016/679'})
-MERGE (i)-[:INFRINGEMENT_TRIGGERS_PENALTY]->(pen);
-"""
 # DPO -> Senior Management
 dpo_senior_management ="""
 MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Protection Officer'})
@@ -732,9 +703,12 @@ MATCH (rep:Representative {regional_standard_regulation_id: 'GDPR 2016/679'})
 MERGE (ar)-[:CONTROLLER_HAS_REPRESENTATIVE]->(rep);
 """
 
-
-
-
+# controller_breach
+controller_breach ="""
+MATCH (ar:ActorRole {regional_standard_regulation_id: 'GDPR 2016/679', name: 'Data Controller'})
+MATCH (pdb:PersonalDataBreach {regional_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (ar)-[:CONTROLLER_HAS_PERSONAL_DATA_BREACH]->(pdb);
+"""
 
 
 
@@ -840,8 +814,6 @@ time.sleep(2)
 client.query(risk_assessment_outcome.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/risk_assessment_outcome.csv"))
 time.sleep(2)
 
-client.query(infringement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/infringement.csv"))
-time.sleep(2)
 
 client.query(senior_management.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/senior_management.csv"))
 time.sleep(2)
@@ -952,8 +924,6 @@ time.sleep(2)
 client.query(penalty_compliance_mechanism)
 time.sleep(2)
 
-client.query(penalty_article)
-time.sleep(2)
 
 client.query(article_processing_context)
 time.sleep(2)
@@ -1015,11 +985,6 @@ time.sleep(2)
 client.query(joint_controller_jca)
 time.sleep(2)
 
-client.query(infringement_article)
-time.sleep(2)
-
-client.query(infringement_penalty)
-time.sleep(2)
 
 client.query(dpo_senior_management)
 time.sleep(2)
@@ -1027,6 +992,8 @@ time.sleep(2)
 client.query(controller_representative)
 time.sleep(2)
 
+client.query(controller_breach)
+time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 

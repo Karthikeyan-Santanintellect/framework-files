@@ -1,4 +1,5 @@
 #Regulation
+
 regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE(reg:RegionalStandardAndRegulation {regional_standard_regulation_id: "VCDPA 2023"})
@@ -422,7 +423,7 @@ MERGE (con:Consent {
     consent_id: row.consent_id
 })
 ON CREATE SET
-    con.type = row.type,         // e.g., 'OptIn'
+    con.type = row.type,        
     con.description = row.description;
 """
 #opt_in_consent
@@ -534,7 +535,162 @@ ON CREATE SET
     cpd.description = row.description;
 """
 
+#Data_processing_agreement
+data_processing_agreement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dpaa:DataProcessingAgreement {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    contract_id: row.contract_id
+})
+ON CREATE SET
+    dpaa.name = row.name,
+    dpaa.effective_date = row.effective_date,
+    dpaa.status = row.status,
+    dpaa.required_terms = row.required_terms; 
+"""
+#AppealMechanism
+appeal_mechanism = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (am:AppealMechanism {
+    regional_standard_regulation_id: 'VCDPA 2023', 
+    appeal_id: row.appeal_id
+})
+ON CREATE SET 
+    am.process_name = row.process_name,
+    am.timeline = row.timeline, 
+    am.escalation_authority = row.escalation_authority;
+"""
+# DenialReason
+denial_reason = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dr:DenialReason {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    reason_id: row.reason_id
+})
+ON CREATE SET
+    dr.description = row.description, 
+    dr.legal_basis = row.legal_basis;
+"""
+# risk
+risk = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rk:Risk {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    risk_id: row.risk_id
+})
+ON CREATE SET
+    rk.name = row.name, 
+    rk.severity = row.severity,
+    rk.description = row.description;
+"""
 
+# Benefit
+benefit = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (b:Benefit {
+    regional_standard_regulation_id: 'VCDPA 2023',
+    benefit_id: row.benefit_id
+})
+ON CREATE SET
+    b.name = row.name,
+    b.recipient = row.recipient; 
+"""
+# DarkPattern
+dark_pattern = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dp:DarkPattern {
+    regional_standard_regulation_id: 'VCDPA 2023', 
+    pattern_id: row.pattern_id
+})
+ON CREATE SET 
+    dp.name = row.name, 
+    dp.description = row.description,
+    dp.effect = row.effect;
+"""
+# CureStatement
+cure_statement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cs:CureStatement {
+    regional_standard_regulation_id: 'VCDPA 2023', 
+    statement_id: row.statement_id
+})
+ON CREATE SET 
+    cs.required_content = row.required_content, 
+    cs.submission_target = row.submission_target;
+"""
+
+# Child (Subtype of Consumer)
+child = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (chl:Child {
+    regional_standard_regulation_id: 'VCDPA 2023', 
+    child_id: row.child_id
+})
+ON CREATE SET 
+    chl.age_threshold = row.age_threshold,
+    chl.coppa_trigger = CASE WHEN toLower(row.coppa_trigger) = 'true' THEN true ELSE false END,
+    chl.description = row.description;
+"""
+
+# Affilate
+affilate = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (aff:Affiliate {regional_standard_regulation_id: 'VCDPA 2023', affiliate_id: row.affiliate_id})
+ON CREATE SET 
+    aff.name = row.name, 
+    aff.relationship = row.relationship;
+"""
+# Department
+department = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dept:Department {regional_standard_regulation_id: 'VCDPA 2023', dept_id: row.dept_id})
+ON CREATE SET 
+    dept.name = row.name, 
+    dept.owner = row.owner; 
+"""
+# Sub_Processor
+sub_processor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (subp:Subprocessor {regional_standard_regulation_id: 'VCDPA 2023', sub_id: row.sub_id})
+ON CREATE SET 
+    subp.name = row.name, 
+    subp.service_type = row.service_type;
+"""
+
+# Exempted_purpose
+exempted_purpose = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ep:ExemptedPurpose {regional_standard_regulation_id: 'VCDPA 2023', purpose_id: row.purpose_id})
+ON CREATE SET 
+    ep.description = row.description;
+"""
+# Pseudonymous_data
+pseudonymous_data = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (psd:PseudonymousData {regional_standard_regulation_id: 'VCDPA 2023', pseudo_id: row.pseudo_id})
+ON CREATE SET 
+    psd.controls = row.controls;
+"""
+# Authentication_method
+authenication_method = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (auth:AuthenticationMethod {regional_standard_regulation_id: 'VCDPA 2023', auth_id: row.auth_id})
+ON CREATE SET 
+    auth.type = row.type;
+"""
+# DPA Trigger
+dpa_trigger = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (trig:DPATrigger {regional_standard_regulation_id: 'VCDPA 2023', trigger_id: row.trigger_id})
+ON CREATE SET 
+    trig.condition = row.condition; 
+"""
+
+
+
+
+
+# Relationships 
 #Regulation → Section
 regulation_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -915,6 +1071,122 @@ MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 202
 MERGE (ag)-[:ATTORNEY_GENERAL_REQUESTS_DPA_FROM_CONTROLLER]->(dpa);
 """
 
+# Controller -> Contract
+controller_contract = """
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dpaa:DataProcessingAgreement {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (ctrl)-[:CONTROLLER_ESTABLISHES_AGREEMENT]->(dpaa);
+"""
+# Processor -> Contract
+processor_contract = """
+MATCH (proc:Processor {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dpaa:DataProcessingAgreement {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (proc)-[:PROCESSOR_ESTABLISHES_AGREEMENT]->(dpaa);
+"""
+# Processor -> Subprocessor
+processor_subprocessor = """
+MATCH (proc:Processor {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (subp:Subprocessor {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (proc)-[:PROCESSOR_ENGAGES_SUBPROCESSOR {flow_down_obligations: true}]->(subp);
+"""
+# Affiliate -> Controller
+affiliate_controller = """
+MATCH (ctrl:Controller {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (aff:Affiliate {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (ctrl)-[:AFFILIATE_CONTROLS_CONTROLLER]->(aff);
+"""
+#RightsRequestProcess -> AppealMechanism
+rights_request_mechanism = """
+MATCH (rrp:RightsRequestProcess {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (am:AppealMechanism {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (rrp)-[:RIGHTS_REQUEST_INCLUDES_APPEAL_MECHANISM]->(am);
+"""
+#AppealMechanism -> DenialReason
+appeal_mechanism_denial_reason = """
+MATCH (am:AppealMechanism {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dr:DenialReason {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (am)-[:APPEAL_MECHANISM_REVIEWS_DENIAL_REASON]->(dr);
+"""
+# RightsRequestProcess -> AuthenticationMethod
+rights_request_authentication_method = """
+MATCH (rrp:RightsRequestProcess {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (auth:AuthenticationMethod {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (rrp)-[:RIGHTS_REQUEST_REQUIRES_AUTHENTICATION]->(auth);
+"""
+#DPA -> Risk
+dpa_risk = """
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (rk:Risk {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (dpa)-[:DATA_PROTECTION_ASSESSMENT_EVALUATES_RISK]->(rk);
+"""
+# DPA -> Benefit
+dpa_benefit = """
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (b:Benefit {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (dpa)-[:DATA_PROTECTION_ASSESSMENT_EVALUATES_BENEFIT]->(b);
+"""
+# DPATrigger -> DPA
+dpa_dpa_trigger = """
+MATCH (trig:DPATrigger {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dpa:DataProtectionAssessment {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (trig)-[:DPA_TRIGGERS]->(dpa);
+"""
+# DarkPattern -> Consent
+dark_pattern_consent = """
+MATCH (dp:DarkPattern {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (con:Consent {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (dp)-[:DARK_PATTERN_INVALIDATES_CONSENT]->(con);
+"""
+# child_implies_sensitive
+child_implies_sensitive = """
+MATCH (chl:Child {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (sd:SensitiveData {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (chl)-[:CHILD_IMPLIES_SENSITIVE_DATA]->(sd);
+"""
+# PseudonymousData -> ExemptedPurpose
+pseudonymous_exempted_purpose = """
+MATCH (psd:PseudonymousData {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (ep:ExemptedPurpose {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (psd)-[:PSEUDONYMOUS_DATA_EXEMPTED_FOR_PURPOSE]->(ep);
+"""
+# ViolationNotice -> CureStatement
+violation_notice_cure_statement = """
+MATCH (vn:ViolationNotice {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (cs:CureStatement {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (vn)-[:VIOLATION_NOTICE_RESOLVED_BY_CURE_STATEMENT]->(cs);
+"""
+#CureStatement -> AttorneyGeneral
+cure_statement_attorney_general = """
+MATCH (cs:CureStatement {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (ag:AttorneyGeneral {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (cs)-[:CURE_STATEMENT_SUBMITTED_TO_ATTORNEY_GENERAL]->(ag);
+"""
+
+# Department -> ProcessingActivity
+department_processing_activity = """
+MATCH (dept:Department {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (dept)-[:DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY]->(pa);
+"""
+# Department -> SecurityMeasures
+department_security_measures = """
+MATCH (dept:Department {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (sm:SecurityMeasures {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (dept)-[:DEPARTMENT_IMPLEMENTS_SAFEGUARDS]->(sm);
+"""
+# PersonalData -> DeidentifiedData
+personal_data_deidentified_data = """
+MATCH (pd:PersonalData {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (dd:DeidentifiedData {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (pd)-[:PERSONAL_DATA_DEIDENTIFIES_DATA]->(dd);
+"""
+# PersonalData -> PubliclyAvailableInformation
+personal_data_publicly_available_information = """
+MATCH (pd:PersonalData {regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (pub:PubliclyAvailableInformation {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (pd)-[:PERSONAL_DATA_EXCLUDES_PUBLIC_INFORMATION]->(pub);
+"""
+
 
 
 
@@ -1075,6 +1347,56 @@ time.sleep(2)
 
 client.query(consent.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consent.csv"))
 time.sleep(2)
+
+client.query(data_processing_agreement.replace('$file_path', ""))
+time.sleep(2)
+
+client.query(appeal_mechanism.replace('$file_path',""))
+time.sleep(2)
+
+client.query(denial_reason.replace('$file_path',""))
+time.sleep(2)
+
+client.query(risk.replace('$file_path',""))
+time.sleep(2)
+
+client.query(benefit.replace('$file_path',""))
+time.sleep(2)
+
+client.query(dark_pattern.replace('$file_path',""))
+time.sleep(2)
+
+client.query(cure_statement.replace('$file_path',""))
+time.sleep(2)
+
+client.query(child.replace('$file_path',""))
+time.sleep(2)
+
+client.query(affilate.replace('$file_path',""))
+time.sleep(2)
+
+client.query(department.replace('$file_path',""))
+time.sleep(2)
+
+client.query(sub_processor.replace('$file_path',""))
+time.sleep(2)
+
+client.query(exempted_purpose.replace('$file_path',""))
+time.sleep(2)
+
+client.query(pseudonymous_data.replace('$file_path',""))
+time.sleep(2)
+
+client.query(authenication_method.replace('$file_path',""))
+time.sleep(2)
+
+client.query(dpa_trigger.replace('$file_path',""))
+time.sleep(2)
+
+
+
+
+
 
 
 
@@ -1238,17 +1560,73 @@ time.sleep(2)
 client.query(violation_requests_dpa)
 time.sleep(2)
 
+client.query(controller_contract)
+time.sleep(2)
+
+client.query(processor_contract)
+time.sleep(2)
+
+client.query(processor_subprocessor)
+time.sleep(2)
+
+client.query(affiliate_controller)
+time.sleep(2)
+
+client.query(rights_request_mechanism)
+time.sleep(2)
+
+client.query(appeal_mechanism_denial_reason)
+time.sleep(2)
+
+client.query(rights_request_authentication_method)
+time.sleep(2)
+
+client.query(dpa_risk)
+time.sleep(2)
+
+client.query(dpa_benefit)
+time.sleep(2)
+
+client.query(dpa_dpa_trigger)
+time.sleep(2)
+
+client.query(dark_pattern_consent)
+time.sleep(2)
+
+client.query(child_implies_sensitive)
+time.sleep(2)
+
+client.query(pseudonymous_exempted_purpose)
+time.sleep(2)
+
+client.query(violation_notice_cure_statement)
+time.sleep(2)
+
+client.query(cure_statement_attorney_general)
+time.sleep(2)
+
+client.query(department_processing_activity)
+time.sleep(2)
+
+client.query(department_security_measures)
+time.sleep(2)
+
+client.query(personal_data_deidentified_data)
+time.sleep(2)
+
+client.query(personal_data_publicly_available_information)
+time.sleep(2)
+
+
 
 
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -1263,17 +1641,22 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('VCDPA.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to VCDPA.json")
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('vcdpa.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to vcdpa.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
-
 
 
 

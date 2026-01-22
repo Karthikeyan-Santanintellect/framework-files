@@ -1,0 +1,4 @@
+pattern_id,name,description,effect
+DP_001,False Hierarchy,"Visual interference prioritizing 'Accept' over 'Reject'","Invalidates Consent"
+DP_002,Nagging,"Repeated consent requests interrupting user flow","Invalidates Consent"
+DP_003,Trick Questions,"Confusing language making users unsure of their choice","Invalidates Consent"
