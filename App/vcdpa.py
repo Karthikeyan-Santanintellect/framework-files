@@ -444,7 +444,7 @@ MERGE (sm:SecurityMeasures {
     security_id: row.security_id
 })
 ON CREATE SET
-    sm.description = row.description,
+    sm.description = row.description, 
     sm.section_id = row.section_id;
 """
 #rights_request_process
@@ -477,7 +477,7 @@ MERGE (oom:OptOutMechanism {
     mechanism_id: row.mechanism_id
 })
 ON CREATE SET
-    oom.name = row.name,
+    oom.name = row.name,  
     oom.description = row.description;
 """
 #violation_notice
@@ -517,7 +517,7 @@ injunction = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (inj:Injunction {
     regional_standard_regulation_id: 'VCDPA 2023',
-    injunction_id: row.injunction_id
+    injunction_id: row.injunction_id   
 })
 ON CREATE SET
     inj.description = row.description;
@@ -1280,6 +1280,9 @@ client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santa
 time.sleep(2)
 
 client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Duty.csv"))
+time.sleep(2)
+
+client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20OptOut%20Mechanism.csv"))
 time.sleep(2)
 
 client.query(employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Employee.csv"))

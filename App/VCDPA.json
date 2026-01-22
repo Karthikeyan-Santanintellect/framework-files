@@ -3684,6 +3684,39 @@
       "regional_standard_regulation_id": "VCDPA 2023",
       "condition": "Sensitive Data Processing",
       "trigger_id": "TRIG_004"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1747",
+      "mainLabel": "OptOutMechanism",
+      "labels": [
+        "OptOutMechanism"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "mechanism_id": "OOM-OPTOUT-LINK",
+      "name": "Online Opt-Out Link",
+      "description": "Web or app interface allowing consumers to opt out of targeted advertising, the sale of personal data, or profiling that produces legal or similarly significant effects, as disclosed in the privacy notice."
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1748",
+      "mainLabel": "ThirdParty",
+      "labels": [
+        "ThirdParty"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "name": "Ad Network",
+      "description": "Third party receiving personal data for advertising and measurement purposes.",
+      "third_party_id": "TP-AD-NETWORK"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1749",
+      "mainLabel": "ThirdParty",
+      "labels": [
+        "ThirdParty"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "name": "Data Broker",
+      "description": "Third party purchasing personal data from controllers for resale or enrichment.",
+      "third_party_id": "TP-DATA-BROKER"
     }
   ],
   "rels": [
@@ -8057,6 +8090,12 @@
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153445971653297824",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1690",
       "type": "CONTROLLER_PUBLISHES_PRIVACY_NOTICE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1690",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153685665188152986",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1747",
+      "type": "PRIVACY_NOTICE_INCLUDES_OPTOUT_MECHANISM"
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1700",

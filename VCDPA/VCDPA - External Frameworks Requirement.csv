@@ -1,0 +1,25 @@
+external_id,source_framework,text
+GDPR-Article_15,GDPR,Right to access personal data
+GDPR-Article_16,GDPR,Right to rectification of inaccurate personal data
+GDPR-Article_17,GDPR,Right to erasure (right to be forgotten)
+GDPR-Article_20,GDPR,Right to data portability
+GDPR-Article_21,GDPR,Right to object to processing including profiling
+GDPR-Article_7,GDPR,Conditions for consent
+GDPR-Article_5,GDPR,Principles relating to processing (lawfulness fairness transparency)
+GDPR-Article_32,GDPR,Security of processing
+GDPR-Article_35,GDPR,Data protection impact assessment
+GDPR-Article_13,GDPR,Information to be provided where personal data collected from data subject
+GDPR-Article_28,GDPR,Processor obligations and contracts
+ISO-27701-5.7.3,ISO/IEC 27701,Data subject access
+ISO-27701-5.7.4,ISO/IEC 27701,Rectification and erasure
+ISO-27701-5.2.3,ISO/IEC 27701,Specific purpose and data minimization
+ISO-27701-6.13.1,ISO/IEC 27701,Information security management
+ISO-27701-6.10.2,ISO/IEC 27701,Privacy impact assessment
+ISO-27701-6.9.4,ISO/IEC 27701,Information regarding PII processing
+ISO-27701-6.11.2,ISO/IEC 27701,Contracts with PII processors
+NIST-PR.IP-4,NIST Privacy Framework,Data processing policies and procedures (Consent)
+NIST-PR.PO-3,NIST Privacy Framework,Data processing management (DPA)
+NIST-PR.IP-1,NIST Privacy Framework,Data processing policies and procedures (Minimization)
+NIST-PR.PR-1,NIST Privacy Framework,Data protection policies (Security)
+NIST-PR.GV-3,NIST Privacy Framework,Governance policies (Privacy Notice)
+NIST-PR.ID-3,NIST Privacy Framework,Inventory and Mapping (Contracts)

@@ -1,0 +1,26 @@
+source_requirement_id,target_requirement_id,source_framework,target_framework,strength,justification,mapping_type
+VCDPA-59.1-577-R1,GDPR-Article_15,VCDPA,GDPR,STRONG,Both grant right to access personal data,direct_equivalence
+VCDPA-59.1-577-R2,GDPR-Article_16,VCDPA,GDPR,STRONG,Both grant right to correct inaccurate data,direct_equivalence
+VCDPA-59.1-577-R3,GDPR-Article_17,VCDPA,GDPR,STRONG,Both grant right to erasure/deletion,direct_equivalence
+VCDPA-59.1-577-R4,GDPR-Article_20,VCDPA,GDPR,STRONG,Both grant data portability rights,direct_equivalence
+VCDPA-59.1-577-R5,GDPR-Article_21,VCDPA,GDPR,MODERATE,VCDPA opt-out similar to GDPR objection right,functional_equivalence
+VCDPA-59.1-578-R5,GDPR-Article_7,VCDPA,GDPR,STRONG,Both require affirmative consent for sensitive data,direct_equivalence
+VCDPA-59.1-578-R1,GDPR-Article_5,VCDPA,GDPR,STRONG,Both require data minimization and purpose limitation,direct_equivalence
+VCDPA-59.1-578-R3,GDPR-Article_32,VCDPA,GDPR,STRONG,Both mandate administrative technical and physical security,direct_equivalence
+VCDPA-59.1-580-R1,GDPR-Article_35,VCDPA,GDPR,STRONG,Both require impact assessments for high-risk processing,direct_equivalence
+VCDPA-59.1-578-R6,GDPR-Article_13,VCDPA,GDPR,STRONG,Both require transparent privacy notices,direct_equivalence
+VCDPA-59.1-579-R1,GDPR-Article_28,VCDPA,GDPR,STRONG,Both mandate specific contract terms for processors,direct_equivalence
+VCDPA-59.1-577-R1,ISO-27701-5.7.3,VCDPA,ISO/IEC 27701,STRONG,Both grant data subject access rights,direct_equivalence
+VCDPA-59.1-577-R2,ISO-27701-5.7.4,VCDPA,ISO/IEC 27701,STRONG,Both enable rectification of personal data,direct_equivalence
+VCDPA-59.1-577-R3,ISO-27701-5.7.4,VCDPA,ISO/IEC 27701,STRONG,Both enable erasure of personal data,direct_equivalence
+VCDPA-59.1-578-R1,ISO-27701-5.2.3,VCDPA,ISO/IEC 27701,STRONG,Both require data minimization and purpose limitation,direct_equivalence
+VCDPA-59.1-578-R3,ISO-27701-6.13.1,VCDPA,ISO/IEC 27701,STRONG,Both mandate information security controls,direct_equivalence
+VCDPA-59.1-580-R1,ISO-27701-6.10.2,VCDPA,ISO/IEC 27701,STRONG,Both require privacy impact assessments,direct_equivalence
+VCDPA-59.1-578-R6,ISO-27701-6.9.4,VCDPA,ISO/IEC 27701,STRONG,Both require information transparency to PII principals,direct_equivalence
+VCDPA-59.1-579-R1,ISO-27701-6.11.2,VCDPA,ISO/IEC 27701,STRONG,Both require contracts including security provisions,direct_equivalence
+VCDPA-59.1-578-R5,NIST-PR.IP-4,VCDPA,NIST Privacy Framework,STRONG,Both require consent mechanisms,direct_equivalence
+VCDPA-59.1-580-R2,NIST-PR.PO-3,VCDPA,NIST Privacy Framework,STRONG,Both require data protection assessments,direct_equivalence
+VCDPA-59.1-578-R1,NIST-PR.IP-1,VCDPA,NIST Privacy Framework,STRONG,Both require minimization and purpose policies,direct_equivalence
+VCDPA-59.1-578-R3,NIST-PR.PR-1,VCDPA,NIST Privacy Framework,STRONG,Both require security protection policies,direct_equivalence
+VCDPA-59.1-578-R6,NIST-PR.GV-3,VCDPA,NIST Privacy Framework,STRONG,Both require governance regarding transparency/notice,direct_equivalence
+VCDPA-59.1-579-R1,NIST-PR.ID-3,VCDPA,NIST Privacy Framework,MODERATE,Inventory mapping supports contract compliance,functional_equivalence
