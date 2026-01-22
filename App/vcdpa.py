@@ -1321,6 +1321,9 @@ time.sleep(2)
 client.query(processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Processor.csv"))
 time.sleep(2)
 
+client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ThirdParty.csv"))
+time.sleep(2)
+
 client.query(attorney_general.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/AttorneyGeneral.csv"))
 time.sleep(2)
 
@@ -1348,59 +1351,50 @@ time.sleep(2)
 client.query(consent.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consent.csv"))
 time.sleep(2)
 
-client.query(data_processing_agreement.replace('$file_path', ""))
+client.query(data_processing_agreement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Data%20Processing%20Agreement.csv"))
 time.sleep(2)
 
-client.query(appeal_mechanism.replace('$file_path',""))
+client.query(appeal_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Appeal%20Mechanisms.csv"))
 time.sleep(2)
 
-client.query(denial_reason.replace('$file_path',""))
+client.query(denial_reason.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Denial%20Reasons.csv"))
 time.sleep(2)
 
-client.query(risk.replace('$file_path',""))
+client.query(risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Risk.csv"))
 time.sleep(2)
 
-client.query(benefit.replace('$file_path',""))
+client.query(benefit.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Benefit.csv"))
 time.sleep(2)
 
-client.query(dark_pattern.replace('$file_path',""))
+client.query(dark_pattern.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Dark%20Pattern.csv"))
 time.sleep(2)
 
-client.query(cure_statement.replace('$file_path',""))
+client.query(cure_statement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Cure%20Statement.csv"))
 time.sleep(2)
 
-client.query(child.replace('$file_path',""))
+client.query(child.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Child.csv"))
 time.sleep(2)
 
-client.query(affilate.replace('$file_path',""))
+client.query(affilate.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Affilate.csv"))
 time.sleep(2)
 
-client.query(department.replace('$file_path',""))
+client.query(department.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Department.csv"))
 time.sleep(2)
 
-client.query(sub_processor.replace('$file_path',""))
+client.query(sub_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Subprocessor.csv"))
 time.sleep(2)
 
-client.query(exempted_purpose.replace('$file_path',""))
+client.query(exempted_purpose.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Exempted%20Purpose.csv"))
 time.sleep(2)
 
-client.query(pseudonymous_data.replace('$file_path',""))
+client.query(pseudonymous_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Pseudonoyms%20Data.csv"))
 time.sleep(2)
 
-client.query(authenication_method.replace('$file_path',""))
+client.query(authenication_method.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Authentication%20Method.csv"))
 time.sleep(2)
 
-client.query(dpa_trigger.replace('$file_path',""))
+client.query(dpa_trigger.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20DPA%20Trigger.csv"))
 time.sleep(2)
-
-
-
-
-
-
-
-
-
 
 
 #Relationships
