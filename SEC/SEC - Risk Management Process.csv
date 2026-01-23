@@ -1,0 +1,8 @@
+processId,processName,description
+PROC-RISK-IDENTIFICATION,Risk Identification,Process for discovering potential cybersecurity threats and vulnerabilities
+PROC-RISK-ASSESSMENT,Risk Assessment,Evaluating the likelihood and impact of identified cybersecurity risks
+PROC-RISK-MANAGEMENT,Risk Management,Activities to mitigate, accept, transfer, or avoid identified risks
+PROC-RISK-MONITORING,Risk Monitoring,Ongoing surveillance of the risk landscape and security posture
+PROC-VENDOR-DUE-DILIGENCE,Vendor Due Diligence,Assessing the cybersecurity posture of third-party service providers
+PROC-INCIDENT-RESPONSE,Incident Response,Procedures for detecting, containing, and recovering from cybersecurity incidents
+PROC-MATERIALITY-DETERMINATION,Materiality Determination,Process of assessing whether an incident has a material impact on the company
