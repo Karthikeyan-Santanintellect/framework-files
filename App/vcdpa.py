@@ -1187,20 +1187,49 @@ MATCH (pub:PubliclyAvailableInformation {regional_standard_regulation_id: 'VCDPA
 MERGE (pd)-[:PERSONAL_DATA_EXCLUDES_PUBLIC_INFORMATION]->(pub);
 """
 # Requirement -> Implementation spec 
-implementation_spec_department = """
+requirement_implementation_spec = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.requirement_id})
 MATCH (ispec:ImplementationSpec {regional_standard_regulation_id: 'VCDPA 2023', impl_id: row.impl_id})
 MERGE (req)-[:REQUIREMENT_HAS_IMPLEMENTATION_SPEC]->(ispec);
 """
 # Implementation spec -> Department
-department_implementation_spec = """
+implementation_spec_department = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ispec:ImplementationSpec {regional_standard_regulation_id: 'VCDPA 2023', impl_id: row.impl_id})
 MERGE (dept:Department {regional_standard_regulation_id: 'VCDPA 2023', name: row.owner_department})
 MERGE (ispec)-[:IMPLEMENTATION_SPEC_OWNED_BY_DEPARTMENT]->(dept);
 """
-
+# Controller -> Third Party 
+controller_third_party = """
+MATCH (ctrl:Controller{regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (tp:ThirdParty {regional_standard_regulation_id: 'VCDPA 2023'})
+MERGE (c)-[:CONTROLLER_SHARES_DATA_WITH_THIRD_PARTY]->(tp);
+"""
+# Duty -> Section
+duty_section = """
+MATCH (du:Duty {id: 'RespondToRightsRequest'})
+MATCH (sec:Section {sectionNumber: '59.1-577'}) 
+MERGE (du)-[:DUTY_DERIVED_FROM_SECTION]->(sec);
+"""
+# Psudonymous -> personal Data
+personal_data_pseudonymous_data = """
+MATCH (pd:PersonalData{personal_data_id: 'PD-GENERAL'})
+MATCH (psd:PseudonymousData {id: 'PSEU_KEY'})
+MERGE (pd)-[:PERSONAL_DATA_IS_SUBTYPE_OF_PERSONAL_DATA]->(psd);
+"""
+# Consent -> sensitive data
+sensitive_data_consent = """
+MATCH (sd:SensitiveData{sensitive_data_id: 'SD-GENERAL'})
+MATCH (con:Consent {consent_id: 'CONS-OPTIN-SENSITIVE'})
+MERGE (sd)-[:SENSITIVE_DATA_REQUIRED_BY_CONSENT]->(con);
+"""
+# Controller -> RightsRequestProcess
+controller_rights_request_process = """
+MATCH (c:Controller{regional_standard_regulation_id: 'VCDPA 2023'})
+MATCH (rrp:RightsRequestProcess {id: 'Consumer Rights Request Process'})
+MERGE (c)-[:CONTROLLER_HAS_RIGHTS_REQUEST_PROCESS]->(rrp);
+"""
 
 
 
@@ -1480,6 +1509,27 @@ time.sleep(2)
 
 client.query(requirement_external_frameworks.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20ExternalFramework%20Relationship.csv'))
 time.sleep(2)  
+
+client.query(requirement_implementation_spec.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Implementation%20Spec%20Relationship.csv"))
+time.sleep(2)
+
+client.query(implementation_spec_department.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Implementation%20Spec%20Department%20Relationship.csv"))
+time.sleep(2)
+
+client.query(controller_third_party)
+time.sleep(2)
+
+client.query(duty_section)
+time.sleep(2)
+
+client.query(personal_data_pseudonymous_data)
+time.sleep(2)
+
+client.query(sensitive_data_consent)
+time.sleep(2)
+
+client.query(controller_rights_request_process)
+time.sleep(2)
 
 
 
