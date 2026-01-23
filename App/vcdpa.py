@@ -1456,22 +1456,22 @@ time.sleep(2)
 client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Data.csv'))
 time.sleep(2)   
 
-client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Events.csv'))
+client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20EvenType%20Relationship.csv'))
 time.sleep(2)   
 
 client.query(role_threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Thresholds.csv'))    
 time.sleep(2)   
 
-client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Exemptions.csv'))    
+client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Role%20Exemption%20Relationship.csv'))    
 time.sleep(2)
 
-client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Safeguards.csv'))
+client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirements%20Safeguard%20Relationship.csv'))
 time.sleep(2)   
 
-client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Policies.csv'))
+client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Policy%20Relationship.csv'))
 time.sleep(2)
 
-client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Controls.csv'))
+client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Control%20Relationship.csv'))
 time.sleep(2)
 
 client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Control_Systems.csv'))
@@ -1492,10 +1492,10 @@ time.sleep(2)
 client.query(dpa_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Processes.csv'))
 time.sleep(2)
 
-client.query(requirement_enforcementaction.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Enforcement.csv'))
+client.query(requirement_enforcementaction.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Enforcement%20Relationship.csv'))
 time.sleep(2)
 
-client.query(enforcement_action_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EnforcementAction_Roles.csv'))
+client.query(enforcement_action_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Enforcement%20Actions%20Roles%20Relationship.csv'))
 time.sleep(2)
 
 client.query(section_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Enforcement.csv'))

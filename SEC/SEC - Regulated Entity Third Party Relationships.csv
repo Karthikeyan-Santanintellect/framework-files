@@ -1,0 +1,8 @@
+entityType,providerId,oversightLevel,auditRights
+PublicCompany,TSP-CLOUD-001,Critical,true
+PublicCompany,TSP-MSSP-001,High,true
+PublicCompany,TSP-IT-VENDOR-01,Low,false
+SmallerReportingCompany,TSP-SAAS-001,Medium,false
+SmallerReportingCompany,TSP-CLOUD-001,Critical,true
+ForeignPrivateIssuer,TSP-DATA-PROC-01,Critical,true
+ForeignPrivateIssuer,TSP-MSSP-001,High,true

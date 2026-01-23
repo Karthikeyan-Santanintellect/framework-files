@@ -1,0 +1,4 @@
+controlId,name,type,description
+CTRL-MFA,Multi-Factor Authentication,Preventive,Identity verification
+CTRL-EDR,Endpoint Detection Response,Detective,Endpoint monitoring
+CTRL-BCP,Business Continuity Plan,Corrective,Recovery procedures

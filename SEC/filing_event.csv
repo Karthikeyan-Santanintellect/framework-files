@@ -1,0 +1,3 @@
+eventId,type,description,trigger
+EVENT-INIT,Initial Filing,First report of incident,Materiality Determination
+EVENT-AMEND,Amendment,Update to previous filing,New Information

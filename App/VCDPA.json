@@ -3465,6 +3465,43 @@
       ],
       "regional_standard_regulation_id": "VCDPA 2023",
       "name": "Data Engineering"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "mainLabel": "Department",
+      "labels": [
+        "Department"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "name": "Privacy Engineering"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "mainLabel": "Department",
+      "labels": [
+        "Department"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "name": "Data Governance"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "mainLabel": "Department",
+      "labels": [
+        "Department"
+      ],
+      "regional_standard_regulation_id": "VCDPA 2023",
+      "name": "Security Operations"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1768",
+      "mainLabel": null,
+      "labels": []
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1769",
+      "mainLabel": null,
+      "labels": []
     }
   ],
   "rels": [
@@ -5794,6 +5831,20 @@
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1477",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917751128989894114",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1506",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE",
+      "trigger_condition": "on-request"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1477",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917751128989894115",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1507",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE",
+      "trigger_condition": "on-request"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1477",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926759427756262934",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1558",
       "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
@@ -6418,6 +6469,13 @@
       "exemption_type": "entity"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1484",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917773119222449783",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1655",
+      "type": "ROLE_QUALIFIES_FOR_EXEMPTION",
+      "exemption_type": "entity"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1485",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153171093746353613",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1484",
@@ -6473,6 +6531,13 @@
       "applicability": "subject"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1527",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153175491792864759",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1484",
+      "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1485",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153172193257981389",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1485",
@@ -6526,6 +6591,41 @@
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1485",
       "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
       "applicability": "subject"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1527",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155427291606550007",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1485",
+      "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
+      "applicability": "mandatory"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1526",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159930891233920502",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1486",
+      "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
+      "applicability": "complainant"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1524",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157679091420235252",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1487",
+      "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
+      "applicability": "protected_subject"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1523",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157679091420235251",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1488",
+      "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
+      "applicability": "request_initiator"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1525",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157679091420235253",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1489",
+      "type": "ENFORCEMENT_ACTION_APPLIES_TO_ROLE",
+      "applicability": "restricted_party"
     },
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1526",
@@ -7477,6 +7577,24 @@
       "type": "IMPLEMENTATION_SPEC_OWNED_BY_DEPARTMENT"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1544",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918294287734015717",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "type": "IMPLEMENTATION_SPEC_OWNED_BY_DEPARTMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1545",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918294287734015718",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "type": "IMPLEMENTATION_SPEC_OWNED_BY_DEPARTMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1546",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918294287734015719",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "type": "IMPLEMENTATION_SPEC_OWNED_BY_DEPARTMENT"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1547",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6936308686243497696",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1760",
@@ -7909,6 +8027,12 @@
       "type": "CHILD_IMPLIES_SENSITIVE_DATA"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1674",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153688963723036298",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1707",
+      "type": "SENSITIVE_DATA_REQUIRED_BY_CONSENT"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1675",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153683466164897419",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
@@ -7993,6 +8117,24 @@
       "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153681267141641957",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1685",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153681267141641958",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1685",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153681267141641959",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1685",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1695",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155694472932099743",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1686",
@@ -8049,6 +8191,24 @@
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1764",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155933066955327204",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1686",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155933066955327205",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1686",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155933066955327206",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1686",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155933066955327207",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1686",
       "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
     },
@@ -8113,6 +8273,24 @@
       "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158184866769012453",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158184866769012454",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158184866769012455",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1695",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160198072559470239",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
@@ -8173,6 +8351,24 @@
       "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160436666582697701",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160436666582697702",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160436666582697703",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1695",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162449872373155487",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
@@ -8229,6 +8425,24 @@
     {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1764",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162688466396382948",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162688466396382949",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162688466396382950",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162688466396382951",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
       "type": "DEPARTMENT_RESPONSIBLE_FOR_ACTIVITY"
     },
@@ -8533,6 +8747,24 @@
       "type": "DEPARTMENT_IMPLEMENTS_SAFEGUARDS"
     },
     {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1765",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153682366653269733",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "type": "DEPARTMENT_IMPLEMENTS_SAFEGUARDS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1766",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153682366653269734",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "type": "DEPARTMENT_IMPLEMENTS_SAFEGUARDS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1767",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153682366653269735",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "type": "DEPARTMENT_IMPLEMENTS_SAFEGUARDS"
+    },
+    {
       "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1723",
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153675769583503035",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1707",
@@ -8603,6 +8835,18 @@
       "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158181568234129099",
       "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1738",
       "type": "PSEUDONYMOUS_DATA_EXEMPTED_FOR_PURPOSE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1768",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153687864211408616",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1748",
+      "type": "CONTROLLER_SHARES_DATA_WITH_THIRD_PARTY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1769",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153687864211408617",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1749",
+      "type": "CONTROLLER_SHARES_DATA_WITH_THIRD_PARTY"
     }
   ]
 }

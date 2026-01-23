@@ -1,0 +1,4 @@
+entityType,description,complianceDate
+ENT-PUB,Domestic Public Company,Standard registrant,2023-12-18
+ENT-SRC,Smaller Reporting Company,Float less than $250M,2024-06-15
+ENT-FPI,Foreign Private Issuer,Non-US registrant,2023-12-18

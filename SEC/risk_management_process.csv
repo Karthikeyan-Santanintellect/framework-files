@@ -1,0 +1,5 @@
+processId,processName,description
+PROC-ID,Risk Identification,Identifying potential threats
+PROC-ASSESS,Risk Assessment,Evaluating likelihood and impact
+PROC-MIT,Risk Mitigation,Implementing controls
+PROC-MON,Risk Monitoring,Continuous surveillance
