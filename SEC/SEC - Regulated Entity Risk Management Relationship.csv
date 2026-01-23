@@ -1,0 +1,13 @@
+entityType,processId,description
+PublicCompany,PROC-RISK-ASSESSMENT,Process for identifying cybersecurity threats and vulnerabilities
+PublicCompany,PROC-RISK-IDENTIFICATION,Process for discovering potential cybersecurity risks
+PublicCompany,PROC-RISK-MANAGEMENT,Process to mitigate or manage identified risks
+PublicCompany,PROC-RISK-MONITORING,Ongoing surveillance of risk landscape
+PublicCompany,PROC-VENDOR-DUE-DILIGENCE,Evaluate security posture of third parties
+PublicCompany,PROC-INCIDENT-RESPONSE,Procedures for responding to cybersecurity incidents
+PublicCompany,PROC-MATERIALITY-DETERMINATION,Process of assessing whether incident is material
+SmallerReportingCompany,PROC-RISK-ASSESSMENT,Assessment required despite smaller size
+SmallerReportingCompany,PROC-INCIDENT-RESPONSE,Response required despite smaller size
+SmallerReportingCompany,PROC-MATERIALITY-DETERMINATION,Materiality assessment required for Form 8-K
+ForeignPrivateIssuer,PROC-RISK-ASSESSMENT,Annual assessment for Form 20-F
+ForeignPrivateIssuer,PROC-MATERIALITY-DETERMINATION,Materiality assessment for Form 6-K
