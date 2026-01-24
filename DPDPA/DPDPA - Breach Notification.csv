@@ -1,0 +1,5 @@
+notification_id,recipient_type,deadline
+BN-001,DataProtectionBoard,Immediate
+BN-002,DataPrincipal,Immediate
+BN-003,DataProtectionBoard,Within 6 hours
+BN-004,DataPrincipal,Within 24 hours

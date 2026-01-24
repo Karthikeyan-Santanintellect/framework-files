@@ -771,7 +771,7 @@ MERGE (ct)-[:CONTRACTOR_BOUND_BY_CLAUSE]->(cc);
 activity_third_party = """
 MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
 MATCH (tp:ThirdParty {regional_standard_regulation_id: 'CPRA 2.0'})
-MERGE (pa)-[:PROCESSING_ACTIVITY_TRANSFERS_TO]->(tp);
+MERGE (pa)-[:PROCESSING_ACTIVITY_TRANSFERS_TO_THIRD_PARTY]->(tp);
 """
 # Business to Data Breach
 business_breach = """
@@ -819,8 +819,26 @@ MATCH (th:Threshold {regional_standard_regulation_id: 'CPRA 2.0'})
 MERGE (reg)-[:REGULATION_DEFINES_THRESHOLD]->(th);
 """
 
+orphan_Datacategory = """
+MATCH (orphan:DataCategory) WHERE NOT EXISTS ((orphan)--())
+MATCH (root:PersonalInformation {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (orphan)-[:DATA_CATEGORY_IS_SUB_CATEGORY_OF_PERSONAL_INFORMATION]->(root);
+"""
+orphan_role = """
+MATCH (orphan:Role) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (reg)-[:REGULATION_DEFINES_ROLE]->(orphan);
+"""
+orphan_control = """
+MATCH (orphan:Control) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (reg)-[:REGULATION_DEFINES_CONTROL]->(orphan);
+"""
 
 
+
+
+from pydoc import cli
 import sys
 import os
 import time
@@ -945,28 +963,31 @@ time.sleep(2)
 client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/DataBreach.csv"))
 time.sleep(2)
 
-client.query(consumer_request.replace('$file_path',""))
+client.query(consumer_request.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Consumer%20Requests.csv"))
 time.sleep(2)
 
-client.query(verification_method.replace('$file_path',""))
+client.query(verification_method.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20verification_methods.csv"))
 time.sleep(2)
 
-client.query(denial_reason.replace('$file_path',""))
+client.query(denial_reason.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Denial%20Reasons.csv"))
 time.sleep(2)
 
-client.query(retention_schedule.replace('$file_path',""))
+client.query(retention_schedule.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Retention%20Schedules.csv"))
 time.sleep(2)
 
-client.query(exemption.replace('$file_path',""))
+client.query(exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Exemption.csv"))
 time.sleep(2)
 
-client.query(commercial_purpose.replace('$file_path',""))
+client.query(commercial_purpose.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Commericial%20Purpose.csv"))
 time.sleep(2)
 
-client.query(contract_clause.replace('$file_path',""))
+client.query(contract_clause.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Contract%20Clause.csv"))
 time.sleep(2)
 
-client.query(transparency_report.replace('$file_path',""))
+client.query(transparency_report.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Transparency%20Reports.csv"))
+time.sleep(2)
+
+client.query(admt.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/CPRA%20-%20Admt%20Systems.csv"))
 time.sleep(2)
 
 
@@ -1165,15 +1186,23 @@ time.sleep(2)
 client.query(regulation_threshold)
 time.sleep(2)
 
+client.query(orphan_Datacategory)
+time.sleep(2)
+
+client.query(orphan_role)
+time.sleep(2)
+
+client.query(orphan_control)
+time.sleep(2)
+
+
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -1188,15 +1217,20 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('cpra.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to cpra.json")
-
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('cpra.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to cpra.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
 
