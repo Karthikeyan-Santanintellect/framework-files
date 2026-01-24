@@ -841,7 +841,7 @@ time.sleep(2)
 client.query(regulation_assessment_standards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20AssessmentStandard.csv"))
 time.sleep(2)
 
-client.query(regulated_entity_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20-%20FilingEvent.csv"))
+client.query(regulated_entity_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20%20FilingEvent.csv"))
 time.sleep(2)
 
 client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20FilingEvent%20RegulatoryForm.csv"))
@@ -880,7 +880,7 @@ logger.info("Graph structure loaded successfully.")
 
 query = """
 MATCH (n)
-OPTIONAL MATCH (n)-[r]-()
+OPTIONAL MATCH (n)-[r]->()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 RETURN {
   nodes: [n IN uniqueNodes | n {

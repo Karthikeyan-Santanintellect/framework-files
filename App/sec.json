@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
       "mainLabel": "RegionalStandardAndRegulation",
       "labels": [
         "RegionalStandardAndRegulation"
@@ -16,7 +16,7 @@
       "version": "2023"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2470",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2536",
       "mainLabel": "Category",
       "labels": [
         "Category"
@@ -28,7 +28,7 @@
       "frequency": "Event-Driven"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2471",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2537",
       "mainLabel": "Category",
       "labels": [
         "Category"
@@ -40,7 +40,7 @@
       "frequency": "Annual"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2472",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2538",
       "mainLabel": "Category",
       "labels": [
         "Category"
@@ -52,7 +52,7 @@
       "frequency": "Annual"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2473",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2539",
       "mainLabel": "Category",
       "labels": [
         "Category"
@@ -64,7 +64,7 @@
       "frequency": "Annual"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2474",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2540",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -76,7 +76,7 @@
       "reqId": "REQ-INCIDENT"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2475",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2541",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -88,7 +88,7 @@
       "reqId": "REQ-RISK-MGMT"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2476",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2542",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -100,7 +100,7 @@
       "reqId": "REQ-BOARD"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2477",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2543",
       "mainLabel": "Requirement",
       "labels": [
         "Requirement"
@@ -112,7 +112,7 @@
       "reqId": "REQ-EXPERTISE"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2478",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2544",
       "mainLabel": "RegulatoryForm",
       "labels": [
         "RegulatoryForm"
@@ -124,7 +124,7 @@
       "description": "Current report for material events"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
       "mainLabel": "RegulatoryForm",
       "labels": [
         "RegulatoryForm"
@@ -136,7 +136,7 @@
       "description": "Annual report for public companies"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2480",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2546",
       "mainLabel": "RegulatoryForm",
       "labels": [
         "RegulatoryForm"
@@ -148,7 +148,7 @@
       "description": "Annual report for FPIs"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2481",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2547",
       "mainLabel": "FilingTimeline",
       "labels": [
         "FilingTimeline"
@@ -160,7 +160,7 @@
       "triggerEvent": "Materiality Determination"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2482",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2548",
       "mainLabel": "FilingTimeline",
       "labels": [
         "FilingTimeline"
@@ -172,7 +172,7 @@
       "triggerEvent": "Fiscal Year End"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2483",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2549",
       "mainLabel": "DelayProvision",
       "labels": [
         "DelayProvision"
@@ -184,7 +184,7 @@
       "maxDelayDays": "30"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2487",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2553",
       "mainLabel": "GovernanceBody",
       "labels": [
         "GovernanceBody"
@@ -196,7 +196,7 @@
       "governanceId": "GOV-BOARD"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2488",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2554",
       "mainLabel": "GovernanceBody",
       "labels": [
         "GovernanceBody"
@@ -208,7 +208,7 @@
       "governanceId": "GOV-AUDIT"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2489",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2555",
       "mainLabel": "GovernanceBody",
       "labels": [
         "GovernanceBody"
@@ -220,7 +220,7 @@
       "governanceId": "GOV-RISK"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2490",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2556",
       "mainLabel": "GovernanceBody",
       "labels": [
         "GovernanceBody"
@@ -232,7 +232,7 @@
       "governanceId": "GOV-TECH"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2491",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2557",
       "mainLabel": "BoardCommitteeType",
       "labels": [
         "BoardCommitteeType"
@@ -243,7 +243,7 @@
       "focusArea": "Financial Reporting"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2492",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2558",
       "mainLabel": "BoardCommitteeType",
       "labels": [
         "BoardCommitteeType"
@@ -254,7 +254,7 @@
       "focusArea": "Enterprise Risk"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2493",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2559",
       "mainLabel": "BoardCommitteeType",
       "labels": [
         "BoardCommitteeType"
@@ -265,7 +265,7 @@
       "focusArea": "Technology & Security"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2494",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2560",
       "mainLabel": "ManagementRole",
       "labels": [
         "ManagementRole"
@@ -277,7 +277,7 @@
       "title": "Chief Information Security Officer"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2495",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2561",
       "mainLabel": "ManagementRole",
       "labels": [
         "ManagementRole"
@@ -289,7 +289,7 @@
       "title": "Chief Information Officer"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2496",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2562",
       "mainLabel": "ManagementRole",
       "labels": [
         "ManagementRole"
@@ -301,7 +301,7 @@
       "title": "Chief Financial Officer"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2497",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2563",
       "mainLabel": "ManagementRole",
       "labels": [
         "ManagementRole"
@@ -313,7 +313,7 @@
       "title": "General Counsel"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2498",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2564",
       "mainLabel": "ExternalActor",
       "labels": [
         "ExternalActor"
@@ -324,7 +324,7 @@
       "category": "Government Official"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2499",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2565",
       "mainLabel": "ExternalActor",
       "labels": [
         "ExternalActor"
@@ -335,7 +335,7 @@
       "category": "Service Provider"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2500",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2566",
       "mainLabel": "ExternalActor",
       "labels": [
         "ExternalActor"
@@ -346,7 +346,7 @@
       "category": "Service Provider"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2501",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2567",
       "mainLabel": "CybersecurityIncident",
       "labels": [
         "CybersecurityIncident"
@@ -357,7 +357,7 @@
       "incidentId": "INC-2023-001"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2502",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2568",
       "mainLabel": "CybersecurityIncident",
       "labels": [
         "CybersecurityIncident"
@@ -368,7 +368,7 @@
       "incidentId": "INC-2023-002"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2503",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2569",
       "mainLabel": "MaterialCybersecurityIncident",
       "labels": [
         "MaterialCybersecurityIncident"
@@ -379,7 +379,7 @@
       "materialityDate": "2023-11-12"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2504",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2570",
       "mainLabel": "InformationSystem",
       "labels": [
         "InformationSystem"
@@ -391,7 +391,7 @@
       "description": "Financial Records"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2505",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2571",
       "mainLabel": "InformationSystem",
       "labels": [
         "InformationSystem"
@@ -403,7 +403,7 @@
       "description": "Customer Data"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2506",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2572",
       "mainLabel": "IncidentType",
       "labels": [
         "IncidentType"
@@ -414,7 +414,7 @@
       "typeId": "TYPE-RANSOMWARE"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2507",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2573",
       "mainLabel": "IncidentType",
       "labels": [
         "IncidentType"
@@ -425,7 +425,7 @@
       "typeId": "TYPE-BREACH"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2508",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2574",
       "mainLabel": "ImpactCategory",
       "labels": [
         "ImpactCategory"
@@ -436,7 +436,7 @@
       "categoryId": "IMP-FINANCIAL"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2509",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2575",
       "mainLabel": "ImpactCategory",
       "labels": [
         "ImpactCategory"
@@ -447,7 +447,7 @@
       "categoryId": "IMP-REPUTATION"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2510",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2576",
       "mainLabel": "RiskManagementProcess",
       "labels": [
         "RiskManagementProcess"
@@ -458,7 +458,7 @@
       "description": "Identifying and evaluating risks"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2511",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2577",
       "mainLabel": "RiskManagementProcess",
       "labels": [
         "RiskManagementProcess"
@@ -469,7 +469,7 @@
       "description": "Overseeing third parties"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2512",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2578",
       "mainLabel": "RiskManagementProcess",
       "labels": [
         "RiskManagementProcess"
@@ -480,7 +480,7 @@
       "description": "Responding to attacks"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2513",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2579",
       "mainLabel": "RiskManagementProcess",
       "labels": [
         "RiskManagementProcess"
@@ -491,7 +491,7 @@
       "description": "Assessing impact"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2514",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2580",
       "mainLabel": "CybersecurityFramework",
       "labels": [
         "CybersecurityFramework"
@@ -502,7 +502,7 @@
       "description": "NIST Cybersecurity Framework"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2515",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2581",
       "mainLabel": "CybersecurityFramework",
       "labels": [
         "CybersecurityFramework"
@@ -513,7 +513,7 @@
       "description": "ISO Information Security Standard"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2516",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2582",
       "mainLabel": "SecurityControl",
       "labels": [
         "SecurityControl"
@@ -525,7 +525,7 @@
       "type": "Preventative"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2517",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2583",
       "mainLabel": "SecurityControl",
       "labels": [
         "SecurityControl"
@@ -537,7 +537,7 @@
       "type": "Detective"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2518",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2584",
       "mainLabel": "Expertise",
       "labels": [
         "Expertise"
@@ -549,7 +549,7 @@
       "issuer": "ISC2"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2519",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2585",
       "mainLabel": "Expertise",
       "labels": [
         "Expertise"
@@ -561,7 +561,7 @@
       "issuer": "ISACA"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2520",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2586",
       "mainLabel": "BoardOversightProcess",
       "labels": [
         "BoardOversightProcess"
@@ -573,31 +573,43 @@
       "frequency": "Quarterly"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2521",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2587",
       "mainLabel": "FilingEvent",
       "labels": [
         "FilingEvent"
       ],
       "regional_standard_regulation_id": "SEC-2023",
-      "eventId": "EVENT-8K-001",
-      "description": "Ransomware Disclosure",
-      "trigger": "INC-2023-001",
-      "type": "8-K Filing"
+      "eventId": "EVENT-8K-001"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2522",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2588",
       "mainLabel": "FilingEvent",
       "labels": [
         "FilingEvent"
       ],
       "regional_standard_regulation_id": "SEC-2023",
-      "eventId": "EVENT-10K-2023",
-      "description": "Annual Disclosure",
-      "trigger": "Fiscal Year End",
-      "type": "10-K Filing"
+      "eventId": "EVENT-10K-2023"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2523",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2589",
+      "mainLabel": "FilingEvent",
+      "labels": [
+        "FilingEvent"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "eventId": "EVENT-20F-2023"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2590",
+      "mainLabel": "FilingEvent",
+      "labels": [
+        "FilingEvent"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "eventId": "EVENT-6K-001"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2591",
       "mainLabel": "XBRLTagging",
       "labels": [
         "XBRLTagging"
@@ -609,7 +621,7 @@
       "effectiveDate": "2024-12-15"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2524",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2592",
       "mainLabel": "ComplianceDeadline",
       "labels": [
         "ComplianceDeadline"
@@ -620,7 +632,7 @@
       "description": "Incident Reporting (Large)"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2525",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2593",
       "mainLabel": "ComplianceDeadline",
       "labels": [
         "ComplianceDeadline"
@@ -631,7 +643,7 @@
       "description": "Annual Reporting (Large)"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2526",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2594",
       "mainLabel": "Exemption",
       "labels": [
         "Exemption"
@@ -643,7 +655,7 @@
       "exemptionId": "EX-DELAY"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2527",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2595",
       "mainLabel": "MaterialityDetermination",
       "labels": [
         "MaterialityDetermination"
@@ -655,7 +667,7 @@
       "outcome": "Material"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2528",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2596",
       "mainLabel": "AssessmentStandard",
       "labels": [
         "AssessmentStandard"
@@ -667,7 +679,7 @@
       "definition": "Important to investor decision"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2529",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2597",
       "mainLabel": "QuantitativeFactor",
       "labels": [
         "QuantitativeFactor"
@@ -678,7 +690,7 @@
       "name": "Revenue Loss"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2530",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2598",
       "mainLabel": "QualitativeFactor",
       "labels": [
         "QualitativeFactor"
@@ -689,7 +701,7 @@
       "name": "Reputational Damage"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2531",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2599",
       "mainLabel": "AssessmentTeam",
       "labels": [
         "AssessmentTeam"
@@ -700,7 +712,7 @@
       "name": "Disclosure Committee"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2532",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2600",
       "mainLabel": "AssessmentTeam",
       "labels": [
         "AssessmentTeam"
@@ -711,7 +723,7 @@
       "name": "Incident Response Team"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2533",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2601",
       "mainLabel": "ThirdPartyServiceProvider",
       "labels": [
         "ThirdPartyServiceProvider"
@@ -723,7 +735,7 @@
       "name": "Cloud Provider Inc"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2534",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2602",
       "mainLabel": "ThirdPartyServiceProvider",
       "labels": [
         "ThirdPartyServiceProvider"
@@ -737,347 +749,347 @@
   ],
   "rels": [
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966410",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2506",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966476",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2572",
       "type": "REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966411",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2507",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966477",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2573",
       "type": "REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918327273082849760",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2528",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918327273082849828",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2596",
       "type": "REGULATION_ESTABLISHES_LEGAL_STANDARD"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153724148095125925",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2470",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153724148095125991",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2536",
       "type": "REGIONAL_REGULATION_HAS_CATEGORY",
       "order": "1"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155975947908811173",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2471",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155975947908811239",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2537",
       "type": "REGIONAL_REGULATION_HAS_CATEGORY",
       "order": "2"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158227747722496421",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2472",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158227747722496487",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2538",
       "type": "REGIONAL_REGULATION_HAS_CATEGORY",
       "order": "3"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160479547536181669",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2473",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160479547536181735",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2539",
       "type": "REGIONAL_REGULATION_HAS_CATEGORY",
       "order": "4"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153725247606753701",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2474",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153725247606753767",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2540",
       "type": "REGIONAL_REGULATION_HAS_REQUIREMENT",
       "order": "1"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155977047420438949",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2475",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155977047420439015",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2541",
       "type": "REGIONAL_REGULATION_HAS_REQUIREMENT",
       "order": "2"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158228847234124197",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2476",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158228847234124263",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2542",
       "type": "REGIONAL_REGULATION_HAS_REQUIREMENT",
       "order": "3"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2469",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160480647047809445",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2477",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2535",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160480647047809511",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2543",
       "type": "REGIONAL_REGULATION_HAS_REQUIREMENT",
       "order": "4"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2474",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664874",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2478",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2540",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664940",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2544",
       "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2475",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664875",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2541",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664941",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
       "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2475",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153732944188148139",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2510",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2541",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153732944188148205",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2576",
       "type": "REQUIREMENT_GOVERNS_RISK_PROCESS"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2475",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155984744001833387",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2511",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2541",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155984744001833453",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2577",
       "type": "REQUIREMENT_GOVERNS_RISK_PROCESS"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2476",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664876",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2542",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664942",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
       "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2477",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664877",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2543",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664943",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
       "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2478",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292654",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2481",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2544",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292720",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2547",
       "type": "FORM_FOLLOWS_TIMELINE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2478",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769548206",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2523",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2544",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769548272",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2591",
       "type": "FORM_REQUIRES_XBRL_TAGGING"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2478",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153720849560242606",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2483",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2544",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153720849560242672",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2549",
       "type": "FORM_MAY_BE_DELAYED_BY_PROVISION"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2521",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153736242723031513",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2478",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2587",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153736242723031579",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2544",
       "type": "REGULATORY_FILING_UTILIZES_FORM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292655",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2482",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292721",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2548",
       "type": "FORM_FOLLOWS_TIMELINE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769548207",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2523",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769548273",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2591",
       "type": "FORM_REQUIRES_XBRL_TAGGING"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2522",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153736242723031514",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2479",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2588",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153736242723031580",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2545",
       "type": "REGULATORY_FILING_UTILIZES_FORM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2480",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292656",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2482",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2546",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292722",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2548",
       "type": "FORM_FOLLOWS_TIMELINE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2496",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803776",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2488",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2562",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803842",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2554",
       "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2488",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870392",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2491",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2554",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870458",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2557",
       "type": "GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2494",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803774",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2489",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2560",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803840",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2555",
       "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2489",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870393",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2492",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2555",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870459",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2558",
       "type": "GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2495",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803775",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2490",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2561",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803841",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2556",
       "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2490",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870394",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2493",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2556",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870460",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2559",
       "type": "GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2494",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153696660304431550",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2518",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2560",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153696660304431616",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2584",
       "type": "MANAGEMENT_ROLE_POSSESSES_EXPERTISE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2532",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153697759816059364",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2494",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2600",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153697759816059432",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2560",
       "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2494",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153730745164892606",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2499",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2560",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153730745164892672",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2565",
       "type": "MANAGEMENT_INTERACTS_WITH_EXTERNAL_ACTOR",
       "context": "Audit",
       "frequency": "Annual"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2495",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153696660304431551",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2519",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2561",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153696660304431617",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2585",
       "type": "MANAGEMENT_ROLE_POSSESSES_EXPERTISE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2495",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153730745164892607",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2500",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2561",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153730745164892673",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2566",
       "type": "MANAGEMENT_INTERACTS_WITH_EXTERNAL_ACTOR",
       "context": "Oversight",
       "frequency": "Continuous"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2531",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153697759816059363",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2496",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2599",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153697759816059431",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2562",
       "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2531",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155949559629744611",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2497",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2599",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155949559629744679",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2563",
       "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2497",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153730745164892609",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2498",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2563",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153730745164892675",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2564",
       "type": "MANAGEMENT_INTERACTS_WITH_EXTERNAL_ACTOR",
       "context": "Delay Coordination",
       "frequency": "Ad-hoc"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2501",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570437",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2504",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2567",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570503",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2570",
       "type": "CYBERSECURITY_INCIDENT_AFFECTS_SYSTEM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2501",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153703257374198213",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2508",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2567",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153703257374198279",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2574",
       "type": "CYBERSECURITY_INCIDENT_CAUSES_IMPACT"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2527",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153704356885826015",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2501",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2595",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153704356885826083",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2567",
       "type": "MATERIALITY_DETERMINATION_EVALUATES_INCIDENT"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2501",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583498181",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2506",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2567",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583498247",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2572",
       "type": "CYBERSECURITY_INCIDENT_HAS_TYPE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2502",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570438",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2505",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2568",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570504",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2571",
       "type": "CYBERSECURITY_INCIDENT_AFFECTS_SYSTEM"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2502",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153703257374198214",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2509",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2568",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153703257374198280",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2575",
       "type": "CYBERSECURITY_INCIDENT_CAUSES_IMPACT"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2502",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583498182",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2507",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2568",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583498248",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2573",
       "type": "CYBERSECURITY_INCIDENT_HAS_TYPE"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2527",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153709854443964895",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2503",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2595",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153709854443964963",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2569",
       "type": "MATERIALITY_DETERMINATION_RESULTED_IN_MATERIAL_INCIDENT"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2510",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153698859327687118",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2516",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2576",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153698859327687184",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2582",
       "type": "RISK_PROCESS_IMPLEMENTS_CONTROL"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2510",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153731844676520398",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2514",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2576",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153731844676520464",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2580",
       "type": "RISK_PROCESS_ALIGNS_WITH_FRAMEWORK"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2510",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155983644490205646",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2515",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2576",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155983644490205712",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2581",
       "type": "RISK_PROCESS_ALIGNS_WITH_FRAMEWORK"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2512",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153698859327687120",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2517",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2578",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153698859327687186",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2583",
       "type": "RISK_PROCESS_IMPLEMENTS_CONTROL"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2527",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153705456397453791",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2528",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2595",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153705456397453859",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2596",
       "type": "MATERIALITY_DETERMINATION_APPLIES_STANDARD"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2531",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153708754932337123",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2527",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2599",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153708754932337191",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2595",
       "type": "ASSESSMENT_TEAM_CONDUCTS_DETERMINATION"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2528",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153706555909081568",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2529",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2596",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153706555909081636",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2597",
       "type": "ASSESSMENT_STANDARD_CONSIDERS_QUANTITATIVE_FACTOR"
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2528",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153707655420709344",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2530",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2596",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153707655420709412",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2598",
       "type": "ASSESSMENT_STANDARD_CONSIDERS_QUALITATIVE_FACTOR"
     }
   ]
