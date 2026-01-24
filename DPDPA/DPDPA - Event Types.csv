@@ -1,11 +1,10 @@
 event_type_id,name,description,deadline,extendable,extension_period,cost
 EVT-BREACH,Personal Data Breach,Unauthorized access or disclosure of personal data,3 days,Yes,30 days,0
-EVT-CONSENT,Consent Withdrawal,Data principal withdraws consent for processing,Immediate,No,N/A,0
+EVT-CONSENT,Consent Withdrawal,Data principal withdraws consent for processing,Immediate,No,,0
 EVT-GRIEV,Grievance Raised,Data principal raises grievance against fiduciary,30 days,No,45 days,0
 EVT-ACCESS,Data Access Request,Data principal requests access to personal data,30 days,No,45 days,0
 EVT-ERASE,Erasure Request,Data principal requests erasure of personal data,30 days,No,45 days,0
 EVT-CORRECT,Correction Request,Data principal requests correction of inaccurate data,30 days,No,45 days,0
 EVT-INQUIRY,Authority Inquiry,DPDPA Authority initiates investigation or inquiry,Varies,No,60 days,0
-EVT-TRANSFER,Data Transfer,Transfer of personal data to third party,Varies,No,N/A,0
+EVT-TRANSFER,Data Transfer,Transfer of personal data to third party,Varies,No,,0
 EVT-AUDIT,Compliance Audit,Audit of compliance with DPDPA obligations,Annual,No,90 days,0
-EVT-SANCTION,Sanction/Penalty,Authority issues penalty or sanction,Varies,No,30 days,Variable

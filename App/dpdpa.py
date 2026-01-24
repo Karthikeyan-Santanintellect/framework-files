@@ -743,12 +743,12 @@ MATCH (cm:Complaint {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
 MERGE (cm)-[:COMPLAINT_INITIALLY_LODGED_WITH_FIDUCIARY]->(df);
 """
-regulation_event_type = """
-MATCH (orphan:EventType) 
-WHERE NOT EXISTS ((orphan)--())
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0'})
-MERGE (reg)-[:REGULATION_DEFINES_EVENT_TYPE]->(orphan);
-"""
+# regulation_event_type = """
+# MATCH (orphan:EventType) 
+# WHERE NOT EXISTS ((orphan)--())
+# MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0'})
+# MERGE (reg)-[:REGULATION_DEFINES_EVENT_TYPE]->(orphan);
+# """
 
 import sys
 import os
@@ -884,7 +884,7 @@ time.sleep(2)
 client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Safeguards.csv"))
 time.sleep(2)
 
-client.query(requirement_event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Events.csv"))
+client.query(requirement_event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Requirements%20Event%20Type.csv"))
 time.sleep(2)
 
 client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Controls.csv"))
@@ -1053,8 +1053,8 @@ time.sleep(2)
 client.query(complaint_fiduciary)
 time.sleep(2)
 
-client.query(regulation_event_type)
-time.sleep(2)
+# client.query(regulation_event_type)
+# time.sleep(2)
 
 
 
