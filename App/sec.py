@@ -305,7 +305,7 @@ regulation_disclosure_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
 MATCH (cat:Category {categoryId: row.categoryId, regional_standard_regulation_id: 'SEC-2023'})
-MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_HAS_CATEGORY {order: row.order}]->(cat);
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_CATEGORY {order: row.order}]->(cat);
 """
 
 # Regulation → Disclosure Requirement
@@ -313,7 +313,7 @@ regulation_disclosure_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
 MATCH (req:Requirement {reqId: row.reqId, regional_standard_regulation_id: 'SEC-2023'})
-MERGE (reg)-[:REGIONAL_STANDARD_AND_REGULATION_HAS_REQUIREMENT {order: row.order}]->(req);
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_REQUIREMENT {order: row.order}]->(req);
 """
 
 # Requirement → Regulatory Form
@@ -413,7 +413,7 @@ MERGE (req)-[:REQUIREMENT_GOVERNS_RISK_PROCESS]->(rmp);
 """
 
 # Risk Management Process → Cybersecurity Framework
-risk_process_framework = """  ##
+risk_process_framework = """ 
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (rmp:RiskManagementProcess {processId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (cf:CybersecurityFramework {frameworkNodeId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
@@ -508,7 +508,7 @@ MATCH (mci:MaterialCybersecurityIncident {incidentId: row.targetId, regional_sta
 MERGE (md)-[:MATERIALITY_DETERMINATION_RESULTED_IN_MATERIAL_INCIDENT]->(mci);
 """
 # Regulated Entity to its Governance Body (Board)
-regulated_entity_exemption_board = """  ##
+regulated_entity_governace = """  
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (re:RegulatedEntity {entityType: row.entityType}) 
 MATCH (gb:GovernanceBody {governanceId: row.governanceId})
@@ -543,35 +543,39 @@ MATCH (cd:ComplianceDeadline {deadlineId: row.deadlineId})
 MERGE (re)-[:REGULATED_ENTITY_MUST_COMPLY_BY_DATE]->(cd);
 """
 # Anchor Incident Types to the Regulation
-regulation_anchor_incident_types = """
+regulation_incident_types = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
 MATCH (it:IncidentType {regional_standard_regulation_id: 'SEC-2023'})
 MERGE (reg)-[:REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE]->(it);
 """
 # Anchor Impact Categories to the Regulation
-regulation_anchor_impact_categories = """
+regulation_impact_categories = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
-MATCH (ic:ImpactCategory)
+MATCH (ic:ImpactCategory{targetId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
 MERGE (reg)-[:REGULATION_DEFINES_MATERIALITY_IMPACT_FACTOR]->(ic);
 """
 # Anchor Professional Expertise Requirements to the Regulation
-regulation_anchor_expertise_requirements = """
+regulation_expertise_requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
-MATCH (exp:Expertise)
+MATCH (exp:Expertise{targetId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
 MERGE (reg)-[:REGULATION_RECOGNIZES_PROFESSIONAL_CREDENTIAL]->(exp);
 """
 
 #Anchor Assessment Standards (Reasonable Investor) to the Regulation
-regulation_anchor_assessment_standards = """
+regulation_assessment_standards = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
-MATCH (std:AssessmentStandard{regional_standard_regulation_id: 'SEC-2023'})
+MATCH (std:AssessmentStandard{standardId: row.standardId, regional_standard_regulation_id: 'SEC-2023'})
 MERGE (reg)-[:REGULATION_ESTABLISHES_LEGAL_STANDARD]->(std);
 """
 # Regulated Entity -> Filing Event (Data Driven)
 regulated_entity_filing_event = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (re:RegulatedEntity {entityType: row.entityType})  
-MATCH (fe:FilingEvent {eventId: row.eventId})
+MATCH (re:RegulatedEntity {regional_standard_regulation_id: 'SEC-2023'})
+MATCH (fe:FilingEvent{targetId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
 MERGE (re)-[:REGULATED_ENTITY_SUBMITS_FILING]->(fe);
 """
  # Filing Event -> Regulatory Form (Data Driven)
@@ -588,7 +592,7 @@ MATCH (re:RegulatedEntity {entityType: row.entityType})
 MATCH (tpsp:ThirdPartyServiceProvider {providerId: row.providerId})
 MERGE (re)-[:REGULATED_ENTITY_ENGAGES_SERVICE_PROVIDER {
     oversight_level: row.oversightLevel,
-    contractual_audit_rights: toBoolean(row.auditRights)
+    contractual_audit_rights: row.auditRights
 }]->(tpsp);
 """
 # Management Role -> External Actor
@@ -627,90 +631,103 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_and_regulation)
 time.sleep(2)
 
-client.query(sec_disclosure_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/disclosure_category.csv"))
+client.query(sec_disclosure_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Disclosure%20Category.csv"))
 time.sleep(2)
 
-client.query(sec_disclosure_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/disclosure_requirement.csv"))
+
+client.query(sec_disclosure_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Disclosure%20Requirement.csv"))
 time.sleep(2)
 
-client.query(sec_regulatory_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulatory_form.csv"))
+
+client.query(sec_regulatory_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Form.csv"))
 time.sleep(2)
 
-client.query(sec_filing_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/filing_timeline.csv"))
+client.query(sec_filing_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Filing%20Timeline.csv"))
 time.sleep(2)
 
-client.query(sec_delay_provision.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/delay_provision.csv"))
+client.query(sec_delay_provision.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Delay%20Provision.csv"))
 time.sleep(2)
 
-client.query(sec_regulated_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity.csv"))
+client.query(sec_regulated_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity.csv"))
 time.sleep(2)
 
-client.query(sec_governance_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/governance_body.csv"))
+client.query(sec_governance_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Governance%20Body.csv"))
 time.sleep(2)
 
-client.query(sec_board_committee_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/board_committee_type.csv"))
+client.query(sec_board_committee_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Board%20Committee%20Type.csv"))
 time.sleep(2)
 
-client.query(sec_management_role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/management_role.csv"))
+client.query(sec_management_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Management%20Role.csv"))
 time.sleep(2)
 
-client.query(sec_external_actor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/external_actor.csv"))
+
+client.query(sec_external_actor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20External%20Actor.csv"))
 time.sleep(2)
 
-client.query(sec_cybersecurity_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/cybersecurity_incident.csv"))
+
+client.query(sec_cybersecurity_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Cybersecurity%20Incident.csv"))
 time.sleep(2)
 
-client.query(sec_material_cybersecurity_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/material_cybersecurity_incident.csv"))
+client.query(sec_material_cybersecurity_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Material%20Cybersecurity%20Incident.csv"))
 time.sleep(2)
 
-client.query(sec_information_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/information_system.csv"))
+
+client.query(sec_information_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Information%20System.csv"))
 time.sleep(2)
 
-client.query(sec_incident_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/incident_type.csv"))
+
+client.query(sec_incident_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Incident%20Type.csv"))
 time.sleep(2)
 
-client.query(sec_impact_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/impact_category.csv"))
+
+client.query(sec_impact_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Impact%20Category.csv"))
 time.sleep(2)
 
 client.query(sec_risk_management_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Risk%20Management%20Process.csv"))
 time.sleep(2)
 
-client.query(sec_cybersecurity_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/cybersecurity_framework.csv"))
+client.query(sec_cybersecurity_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Cybersecurity%20Framework.csv"))
 time.sleep(2)
 
-client.query(sec_security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/security_control.csv"))
+client.query(sec_security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Security%20Control.csv"))
 time.sleep(2)
 
-client.query(sec_expertise.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/expertise.csv"))
-time.sleep(2)
-
-client.query(sec_board_oversight_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/board_oversight_process.csv"))
-time.sleep(2)
-
-client.query(sec_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/filing_event.csv"))
-time.sleep(2)
-
-client.query(sec_xbrl_tagging.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/xbrl_tagging.csv"))
-time.sleep(2)
-
-client.query(sec_compliance_deadline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/compliance_deadline.csv"))
-time.sleep(2)
-
-client.query(sec_exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/exemption.csv"))
-time.sleep(2)
-
-client.query(sec_materiality_determination.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/materiality_determination.csv"))
+client.query(sec_expertise.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Expertise.csv"))
 time.sleep(2)
 
 
-client.query(sec_assessment_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/assessment_standard.csv"))
+client.query(sec_board_oversight_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Board%20Oversight%20Process.csv"))
+time.sleep(2)
+
+client.query(sec_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Filing%20Event.csv"))
 time.sleep(2)
 
 
-client.query(sec_quantitative_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/quantitative_factor.csv"))
+client.query(sec_xbrl_tagging.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20XBRL%20Tagging.csv"))
 time.sleep(2)
 
-client.query(sec_qualitative_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/qualitative_factor.csv"))
+
+client.query(sec_compliance_deadline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Compliance%20Deadline.csv"))
+time.sleep(2)
+
+
+client.query(sec_exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Exemption.csv"))
+time.sleep(2)
+
+
+client.query(sec_materiality_determination.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Materiality%20Determination.csv"))
+time.sleep(2)
+
+
+client.query(sec_assessment_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Assessment%20Standard.csv"))
+time.sleep(2)
+
+
+client.query(sec_quantitative_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Quantitative%20Factor.csv"))
+time.sleep(2)
+                                        
+
+client.query(sec_qualitative_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Qualitative%20Factor.csv"))
 time.sleep(2)
 
 
@@ -722,133 +739,140 @@ time.sleep(2)
 
 
 # Relationships
-client.query(regulation_disclosure_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulation_disclosure_category.csv"))
+client.query(regulation_disclosure_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20Disclosure%20Category%20Rel.csv"))
+time.sleep(2)
+
+client.query(regulation_disclosure_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20Requirements%20Rel.csv"))
+time.sleep(2)
+
+client.query(requirement_regulatory_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Requirement%20RegulatoryForm%20Relationship.csv"))
 time.sleep(2)
 
 
+client.query(regulatory_form_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Form%20Filling%20Relationship.csv"))
+time.sleep(2)
 
-client.query(regulation_disclosure_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulation_disclosure_requirement.csv"))
+client.query(regulatory_form_delay.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Form%20Delay%20Provison.csv"))
+time.sleep(2)
+
+client.query(regulatory_form_xbrl.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatoryForm%20XBRLTagging%20Relationship.csv"))
+time.sleep(2)
+
+client.query(regulated_entity_regulation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Entity%20Regulation.csv"))
+time.sleep(2)
+
+client.query(regulated_entity_exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Entity%20Exemption.csv"))
+time.sleep(2)
+
+client.query(governance_body_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-GovernanceBody_BoardOversightProcess%20Relationship.csv"))
 time.sleep(2)
 
 
-client.query(requirement_regulatory_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/requirement_regulatory_form.csv"))
+client.query(management_role_governance_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-ManagementRole%20GovernanceBody%20Relationship.csv"))
 time.sleep(2)
 
 
-client.query(regulatory_form_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulatory_form_timeline.csv"))
+client.query(management_role_expertise.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20ManagementRole%20Expertise.csv"))
 time.sleep(2)
 
 
-client.query(regulatory_form_delay.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulatory_form_delay.csv"))
-time.sleep(2)
-
-client.query(regulatory_form_xbrl.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulatory_form_xbrl.csv"))
+client.query(assessment_team_management_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20AssessmentTeam%20ManagementRole.csv"))
 time.sleep(2)
 
 
-client.query(regulated_entity_regulation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity_regulation.csv"))
+client.query(regulated_entity_information_system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20InformationSystem%20Relationship.csv"))
 time.sleep(2)
 
 
-client.query(regulated_entity_exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity_exemption.csv"))
-time.sleep(2)
-
-client.query(governance_body_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/governance_body_type.csv"))
+client.query(requirement_risk_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Requirement%20RiskManagementProcess%20Relationship.csv"))
 time.sleep(2)
 
 
-client.query(management_role_governance_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/management_role_governance_body.csv"))
+client.query(risk_process_framework.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RiskProcess%20CybersecurityFramework%20Relationship.csv"))
 time.sleep(2)
 
-client.query(management_role_expertise.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/management_role_expertise.csv"))
-time.sleep(2)
-
-
-client.query(assessment_team_management_role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/assessment_team_management_role.csv"))
+client.query(risk_process_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RiskProcess%20-%20SecurityControl%20Relatioship.csv"))
 time.sleep(2)
 
 
-client.query(regulated_entity_information_system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity_information_system.csv"))
+client.query(governance_body_oversight.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Governance%20Oversight.csv"))
 time.sleep(2)
 
-client.query(requirement_risk_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Requirement%20Risk%20Management%20Relationship.csv"))
+
+client.query(incident_incident_type.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20CybersecurityIncident_IncidentType%20Relationship.csv"))
 time.sleep(2)
 
-client.query(risk_process_framework.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Risk%20Management%20Process%20Framework%20Relationship.csv"))
+client.query(incident_information_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20CybersecurityIncident_InformationSystem%20Relationship.csv"))
 time.sleep(2)
 
-client.query(risk_process_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Risk%20Management%20Control%20Relationship.csv"))
+client.query(incident_impact_category.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20CybersecurityIncident_ImpactCategory%20Relationship.csv"))
 time.sleep(2)
 
-client.query(governance_body_oversight.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/governance_body_oversight.csv"))
+
+client.query(materiality_determination_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20MaterialityDetermination%20MaterialIncident.csv"))
 time.sleep(2)
 
-client.query(incident_incident_type.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/incident_incident_type.csv"))
-time.sleep(2)   
 
-client.query(incident_information_system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/incident_information_system.csv"))
+client.query(materiality_determination_standard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20MaterialityDetermination_AssessmentStandard%20Relationship.csv"))
 time.sleep(2)
 
-client.query(incident_impact_category.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/incident_impact_category_rel.csv"))
+client.query(assessment_standard_quantitative.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20AssessmentStandard_QuantitativeFactor%20Relationship.csv"))
 time.sleep(2)
 
-client.query(materiality_determination_incident.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/materiality_determination_incident.csv"))
+client.query(assessment_standard_qualitative.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20AssessmentStandard%20QualitativeFactor%20Relationship.csv"))
 time.sleep(2)
 
-client.query(materiality_determination_standard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/materiality_determination_standard.csv"))
+client.query(assessment_team_determination.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20AssessmentTeam%20MaterialityDetermination%20Rel.csv"))
 time.sleep(2)
 
-client.query(assessment_standard_quantitative.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/assessment_standard_quantitative.csv"))
+client.query(determination_material_incident.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20MaterialityDetermination%20MaterialIncident.csv"))
 time.sleep(2)
 
-client.query(assessment_standard_qualitative.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/assessment_standard_qualitative.csv"))
+
+client.query(regulation_incident_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20Incident%20Type.csv"))
 time.sleep(2)
 
-client.query(assessment_team_determination.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/assessment_team_determination.csv"))
+client.query(regulation_impact_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20ImpactCategory.csv"))
 time.sleep(2)
 
-client.query(determination_material_incident.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/determination_material_incident.csv"))
+client.query(regulation_expertise_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20Expertise.csv"))
 time.sleep(2)
 
-client.query(regulation_anchor_incident_types)
+client.query(regulation_assessment_standards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20AssessmentStandard.csv"))
 time.sleep(2)
 
-client.query(regulation_anchor_impact_categories)
+client.query(regulated_entity_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20-%20FilingEvent.csv"))
 time.sleep(2)
 
-client.query(regulation_anchor_expertise_requirements)
+client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20Incident%20Type.csv"))
 time.sleep(2)
 
-client.query(regulation_anchor_assessment_standards)
+
+client.query(regulated_entity_governace.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20GovernanceStructure.csv"))
 time.sleep(2)
 
-# client.query(regulated_entity_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Filling%20Relationship.csv"))
-# time.sleep(2)
-
-# client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Filling%20Relationship.csv"))
-# time.sleep(2)
+client.query(regulated_entity_management_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity_ManagementRole.csv"))
+time.sleep(2)
 
 
-# client.query(regulated_entity_exemption_board.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity_exemption.csv"))
-# time.sleep(2)
+client.query(regulated_entity_assessment_teams.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20AssessmentTeam.csv"))
+time.sleep(2)
 
-# client.query(regulated_entity_management_roles.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Management%20Role.csv"))
-# time.sleep(2)
+client.query(regulated_entity_risk_management_processes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20RiskProcess.csv"))
+time.sleep(2)
 
-# client.query(regulated_entity_assessment_teams.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Assesment%20Teams.csv"))
-# time.sleep(2)
+client.query(regulated_entity_compliance_deadlines.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20ComplianceDeadline.csv"))
+time.sleep(2)
 
-# client.query(regulated_entity_risk_management_processes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Risk%20Management%20Relationship.csv"))
-# time.sleep(2)
 
-# client.query(regulated_entity_compliance_deadlines.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Compliance%20Deadline.csv"))
-# time.sleep(2)
+client.query(regulated_entity_third_party_service_provider.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20ThirdPartyProvider.csv"))
+time.sleep(2)
 
-# client.query(regulated_entity_third_party_service_provider.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Third%20Party%20Relationships.csv"))
-# time.sleep(2)
 
-# client.query(management_role_external_actor.replace('$file_path', ""))
-# time.sleep(2)
+client.query(management_role_external_actor.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20ManagementRole%20ExternalActor.csv"))
+time.sleep(2)
+
+
 
 
 
