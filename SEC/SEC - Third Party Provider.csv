@@ -1,6 +1,0 @@
-providerId,name,serviceType,accessLevel
-TSP-CLOUD-001,Enterprise Cloud Infrastructure,Cloud Provider,Critical
-TSP-MSSP-001,Global Managed Security Services,MSSP,High
-TSP-SAAS-001,HR Data Management System,SaaS,Medium
-TSP-DATA-PROC-01,External Payment Processor,Data Processor,Critical
-TSP-IT-VENDOR-01,Legacy IT Support Services,IT Vendor,Low

@@ -1,0 +1,3 @@
+timelineId,name,duration,triggerEvent
+TIME-4-DAYS,Four Business Day Rule,P4D,Materiality Determination
+TIME-ANNUAL,Annual Filing Cycle,P1Y,Fiscal Year End

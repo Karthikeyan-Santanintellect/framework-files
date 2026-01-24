@@ -1,0 +1,3 @@
+controlId,name,type,description
+CTRL-MFA,Multi-Factor Authentication,Preventative,Auth requirement
+CTRL-EDR,Endpoint Detection,Detective,Monitoring
