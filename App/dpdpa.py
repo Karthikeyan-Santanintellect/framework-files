@@ -791,7 +791,7 @@ time.sleep(2)
 client.query(safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Safeguards.csv"))
 time.sleep(2)
 
-client.query(event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EventTypes.csv"))
+client.query(event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Event%20Types.csv"))
 time.sleep(2)
 
 client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Policies.csv"))
