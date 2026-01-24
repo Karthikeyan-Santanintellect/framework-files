@@ -1,0 +1,1546 @@
+{
+  "nodes": [
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "mainLabel": "RegionalStandardAndRegulation",
+      "labels": [
+        "RegionalStandardAndRegulation"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "jurisdiction": "United States",
+      "authority": "U.S. Securities and Exchange Commission",
+      "name": "SEC Cybersecurity Disclosure Rules",
+      "effective_date": "2023-09-05",
+      "description": "Rules requiring public companies to disclose material cybersecurity incidents and annual cybersecurity risk management, strategy, and governance.",
+      "type": "Federal Regulation",
+      "version": "2023"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2186",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Material Incident Disclosure",
+      "description": "Real-time reporting of material cybersecurity incidents",
+      "categoryId": "CAT-01",
+      "frequency": "Event-Driven"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2187",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Annual Risk Management",
+      "description": "Disclosure of risk management strategy and governance",
+      "categoryId": "CAT-02",
+      "frequency": "Annual"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2188",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Board Oversight",
+      "description": "Disclosure of board's role in cyber oversight",
+      "categoryId": "CAT-03",
+      "frequency": "Annual"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2189",
+      "mainLabel": "Category",
+      "labels": [
+        "Category"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Management Expertise",
+      "description": "Disclosure of management's cyber expertise",
+      "categoryId": "CAT-04",
+      "frequency": "Annual"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2190",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "description": "Must disclose material incidents within 4 business days",
+      "category": "Incident Reporting",
+      "title": "Item 1.05 Material Incident",
+      "reqId": "REQ-001"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2191",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "description": "Describe processes for assessing identifying and managing material risks",
+      "category": "Strategy",
+      "title": "Item 106(b) Risk Management",
+      "reqId": "REQ-002"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2192",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "description": "Describe board's oversight of cybersecurity risks",
+      "category": "Governance",
+      "title": "Item 106(c)(1) Board Oversight",
+      "reqId": "REQ-003"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2193",
+      "mainLabel": "Requirement",
+      "labels": [
+        "Requirement"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "description": "Describe management's role in assessing and managing material risks",
+      "category": "Governance",
+      "title": "Item 106(c)(2) Management Role",
+      "reqId": "REQ-004"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2194",
+      "mainLabel": "RegulatoryForm",
+      "labels": [
+        "RegulatoryForm"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "formId": "FORM-8K",
+      "filingDeadline": "4 business days after materiality determination",
+      "name": "Form 8-K Item 1.05",
+      "description": "Current report for material incidents"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2195",
+      "mainLabel": "RegulatoryForm",
+      "labels": [
+        "RegulatoryForm"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "formId": "FORM-10K",
+      "filingDeadline": "Annual filing deadline",
+      "name": "Form 10-K Item 106",
+      "description": "Annual report for risk and governance"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2196",
+      "mainLabel": "RegulatoryForm",
+      "labels": [
+        "RegulatoryForm"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "formId": "FORM-20F",
+      "filingDeadline": "Annual filing deadline",
+      "name": "Form 20-F Item 16K",
+      "description": "Annual report for foreign private issuers"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2197",
+      "mainLabel": "RegulatoryForm",
+      "labels": [
+        "RegulatoryForm"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "formId": "FORM-6K",
+      "filingDeadline": "Promptly after home country disclosure",
+      "name": "Form 6-K",
+      "description": "Foreign private issuer incident report"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2198",
+      "mainLabel": "FilingTimeline",
+      "labels": [
+        "FilingTimeline"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "duration": "4 Days",
+      "name": "Four Business Days",
+      "timelineId": "TIME-01",
+      "triggerEvent": "Materiality Determination"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2199",
+      "mainLabel": "FilingTimeline",
+      "labels": [
+        "FilingTimeline"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "duration": "1 Year",
+      "name": "Annual Filing",
+      "timelineId": "TIME-02",
+      "triggerEvent": "Fiscal Year End"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2200",
+      "mainLabel": "FilingTimeline",
+      "labels": [
+        "FilingTimeline"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "duration": "Immediate",
+      "name": "Prompt Filing",
+      "timelineId": "TIME-03",
+      "triggerEvent": "Home Country Disclosure"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2201",
+      "mainLabel": "DelayProvision",
+      "labels": [
+        "DelayProvision"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "provisionId": "DELAY-01",
+      "approver": "U.S. Attorney General",
+      "reason": "National Security Risk",
+      "maxDelayDays": "30"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2202",
+      "mainLabel": "DelayProvision",
+      "labels": [
+        "DelayProvision"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "provisionId": "DELAY-02",
+      "approver": "U.S. Attorney General",
+      "reason": "Public Safety Risk",
+      "maxDelayDays": "30"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2203",
+      "mainLabel": "RegulatedEntity",
+      "labels": [
+        "RegulatedEntity"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "entityType": "ENT-PUB",
+      "description": "Domestic Public Company",
+      "complianceDate": "Standard registrant"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2204",
+      "mainLabel": "RegulatedEntity",
+      "labels": [
+        "RegulatedEntity"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "entityType": "ENT-SRC",
+      "description": "Smaller Reporting Company",
+      "complianceDate": "Float less than $250M"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2205",
+      "mainLabel": "RegulatedEntity",
+      "labels": [
+        "RegulatedEntity"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "entityType": "ENT-FPI",
+      "description": "Foreign Private Issuer",
+      "complianceDate": "Non-US registrant"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2206",
+      "mainLabel": "GovernanceBody",
+      "labels": [
+        "GovernanceBody"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "primaryResponsibility": "Ultimate oversight of risk",
+      "name": "Board of Directors",
+      "type": "Board Committee",
+      "governanceId": "GOV-BOD"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2207",
+      "mainLabel": "GovernanceBody",
+      "labels": [
+        "GovernanceBody"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "primaryResponsibility": "Oversight of financial and cyber risk",
+      "name": "Audit Committee",
+      "type": "Board Committee",
+      "governanceId": "GOV-AUDIT"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2208",
+      "mainLabel": "GovernanceBody",
+      "labels": [
+        "GovernanceBody"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "primaryResponsibility": "Enterprise risk management oversight",
+      "name": "Risk Committee",
+      "type": "Board Committee",
+      "governanceId": "GOV-RISK"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2209",
+      "mainLabel": "GovernanceBody",
+      "labels": [
+        "GovernanceBody"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "primaryResponsibility": "Technology and cyber strategy oversight",
+      "name": "Technology Committee",
+      "type": "Board Committee",
+      "governanceId": "GOV-TECH"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2210",
+      "mainLabel": "BoardCommitteeType",
+      "labels": [
+        "BoardCommitteeType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Audit",
+      "typeId": "TYPE-AUDIT",
+      "focusArea": "Financial/Compliance"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2211",
+      "mainLabel": "BoardCommitteeType",
+      "labels": [
+        "BoardCommitteeType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Risk",
+      "typeId": "TYPE-RISK",
+      "focusArea": "Enterprise Risk"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2212",
+      "mainLabel": "BoardCommitteeType",
+      "labels": [
+        "BoardCommitteeType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Technology",
+      "typeId": "TYPE-TECH",
+      "focusArea": "IT/Cybersecurity"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "mainLabel": "ManagementRole",
+      "labels": [
+        "ManagementRole"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "roleId": "ROLE-CISO",
+      "function": "Security Strategy",
+      "reportingLine": "CIO or CEO",
+      "title": "Chief Information Security Officer"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2214",
+      "mainLabel": "ManagementRole",
+      "labels": [
+        "ManagementRole"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "roleId": "ROLE-CIO",
+      "function": "IT Operations",
+      "reportingLine": "CEO",
+      "title": "Chief Information Officer"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2215",
+      "mainLabel": "ManagementRole",
+      "labels": [
+        "ManagementRole"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "roleId": "ROLE-CRO",
+      "function": "Risk Management",
+      "reportingLine": "CEO or Board",
+      "title": "Chief Risk Officer"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2216",
+      "mainLabel": "ManagementRole",
+      "labels": [
+        "ManagementRole"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "roleId": "ROLE-GC",
+      "function": "Legal/Compliance",
+      "reportingLine": "CEO",
+      "title": "General Counsel"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2217",
+      "mainLabel": "ExternalActor",
+      "labels": [
+        "ExternalActor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "role": "Delay Approver",
+      "name": "US Attorney General",
+      "category": "Government Official"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2218",
+      "mainLabel": "ExternalActor",
+      "labels": [
+        "ExternalActor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "role": "Regulator",
+      "name": "SEC",
+      "category": "Government Agency"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2219",
+      "mainLabel": "ExternalActor",
+      "labels": [
+        "ExternalActor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "role": "Auditor",
+      "name": "Third-Party Assessor",
+      "category": "Service Provider"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2220",
+      "mainLabel": "ExternalActor",
+      "labels": [
+        "ExternalActor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "role": "Host",
+      "name": "Cloud Provider",
+      "category": "Service Provider"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2221",
+      "mainLabel": "CybersecurityIncident",
+      "labels": [
+        "CybersecurityIncident"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "detectionDate": "2023-10-01",
+      "description": "Ransomware attack on production DB",
+      "incidentId": "INC-001"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2222",
+      "mainLabel": "CybersecurityIncident",
+      "labels": [
+        "CybersecurityIncident"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "detectionDate": "2023-11-15",
+      "description": "Unauthorized access to customer data",
+      "incidentId": "INC-002"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2223",
+      "mainLabel": "CybersecurityIncident",
+      "labels": [
+        "CybersecurityIncident"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "detectionDate": "2024-01-20",
+      "description": "DDoS attack on public portal",
+      "incidentId": "INC-003"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2224",
+      "mainLabel": "MaterialCybersecurityIncident",
+      "labels": [
+        "MaterialCybersecurityIncident"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "disclosureStatus": "Disclosed",
+      "incidentId": "INC-001",
+      "materialityDate": "2023-10-03"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2225",
+      "mainLabel": "MaterialCybersecurityIncident",
+      "labels": [
+        "MaterialCybersecurityIncident"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "disclosureStatus": "Disclosed",
+      "incidentId": "INC-002",
+      "materialityDate": "2023-11-18"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2226",
+      "mainLabel": "InformationSystem",
+      "labels": [
+        "InformationSystem"
+      ],
+      "owner": "Registrant",
+      "regional_standard_regulation_id": "SEC-2023",
+      "systemId": "SYS-01",
+      "systemType": "Company-Owned",
+      "description": "On-premise data center"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2227",
+      "mainLabel": "InformationSystem",
+      "labels": [
+        "InformationSystem"
+      ],
+      "owner": "Third-Party",
+      "regional_standard_regulation_id": "SEC-2023",
+      "systemId": "SYS-02",
+      "systemType": "Cloud-Based",
+      "description": "SaaS CRM platform"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2228",
+      "mainLabel": "InformationSystem",
+      "labels": [
+        "InformationSystem"
+      ],
+      "owner": "Third-Party",
+      "regional_standard_regulation_id": "SEC-2023",
+      "systemId": "SYS-03",
+      "systemType": "Hosted",
+      "description": "Managed web hosting"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2229",
+      "mainLabel": "IncidentType",
+      "labels": [
+        "IncidentType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Ransomware",
+      "definition": "Malicious encryption for extortion",
+      "typeId": "TYPE-RANSOM"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2230",
+      "mainLabel": "IncidentType",
+      "labels": [
+        "IncidentType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Data Breach",
+      "definition": "Unauthorized data access",
+      "typeId": "TYPE-BREACH"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2231",
+      "mainLabel": "IncidentType",
+      "labels": [
+        "IncidentType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Denial of Service",
+      "definition": "Disruption of availability",
+      "typeId": "TYPE-DDOS"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2232",
+      "mainLabel": "IncidentType",
+      "labels": [
+        "IncidentType"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Supply Chain",
+      "definition": "Compromise via vendor",
+      "typeId": "TYPE-SUPPLY"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2233",
+      "mainLabel": "ImpactCategory",
+      "labels": [
+        "ImpactCategory"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Financial",
+      "description": "Loss of revenue or increased costs",
+      "categoryId": "IMP-FIN"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2234",
+      "mainLabel": "ImpactCategory",
+      "labels": [
+        "ImpactCategory"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Reputational",
+      "description": "Damage to brand trust",
+      "categoryId": "IMP-REP"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2235",
+      "mainLabel": "ImpactCategory",
+      "labels": [
+        "ImpactCategory"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Operational",
+      "description": "Disruption of business processes",
+      "categoryId": "IMP-OPS"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2236",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-RISK-IDENTIFICATION",
+      "name": "Risk Identification",
+      "description": "Process for discovering potential cybersecurity threats and vulnerabilities"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2237",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-RISK-ASSESSMENT",
+      "name": "Risk Assessment",
+      "description": "Evaluating the likelihood and impact of identified cybersecurity risks"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2238",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-RISK-MANAGEMENT",
+      "name": "Risk Management",
+      "description": "Activities to mitigate"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2239",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-RISK-MONITORING",
+      "name": "Risk Monitoring",
+      "description": "Ongoing surveillance of the risk landscape and security posture"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2240",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-VENDOR-DUE-DILIGENCE",
+      "name": "Vendor Due Diligence",
+      "description": "Assessing the cybersecurity posture of third-party service providers"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2241",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-INCIDENT-RESPONSE",
+      "name": "Incident Response",
+      "description": "Procedures for detecting"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2242",
+      "mainLabel": "RiskManagementProcess",
+      "labels": [
+        "RiskManagementProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "PROC-MATERIALITY-DETERMINATION",
+      "name": "Materiality Determination",
+      "description": "Process of assessing whether an incident has a material impact on the company"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2243",
+      "mainLabel": "CybersecurityFramework",
+      "labels": [
+        "CybersecurityFramework"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "frameworkNodeId": "FW-NIST",
+      "name": "NIST CSF",
+      "description": "National Institute of Standards and Technology Framework"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2244",
+      "mainLabel": "CybersecurityFramework",
+      "labels": [
+        "CybersecurityFramework"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "frameworkNodeId": "FW-ISO",
+      "name": "ISO 27001",
+      "description": "International standard for information security"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2245",
+      "mainLabel": "CybersecurityFramework",
+      "labels": [
+        "CybersecurityFramework"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "frameworkNodeId": "FW-CIS",
+      "name": "CIS Controls",
+      "description": "Critical Security Controls"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2246",
+      "mainLabel": "SecurityControl",
+      "labels": [
+        "SecurityControl"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Multi-Factor Authentication",
+      "description": "Identity verification",
+      "controlId": "CTRL-MFA",
+      "type": "Preventive"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2247",
+      "mainLabel": "SecurityControl",
+      "labels": [
+        "SecurityControl"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Endpoint Detection Response",
+      "description": "Endpoint monitoring",
+      "controlId": "CTRL-EDR",
+      "type": "Detective"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2248",
+      "mainLabel": "SecurityControl",
+      "labels": [
+        "SecurityControl"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "name": "Business Continuity Plan",
+      "description": "Recovery procedures",
+      "controlId": "CTRL-BCP",
+      "type": "Corrective"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2249",
+      "mainLabel": "Expertise",
+      "labels": [
+        "Expertise"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "domain": "Security Leadership",
+      "name": "CISSP",
+      "expertiseId": "EXP-CISSP",
+      "issuer": "(ISC)2"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2250",
+      "mainLabel": "Expertise",
+      "labels": [
+        "Expertise"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "domain": "Management",
+      "name": "CISM",
+      "expertiseId": "EXP-CISM",
+      "issuer": "ISACA"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2251",
+      "mainLabel": "Expertise",
+      "labels": [
+        "Expertise"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "domain": "Technical Foundation",
+      "name": "Computer Science Degree",
+      "expertiseId": "EXP-DEGREE",
+      "issuer": "University"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2252",
+      "mainLabel": "BoardOversightProcess",
+      "labels": [
+        "BoardOversightProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "BOP-REV",
+      "name": "Quarterly Risk Review",
+      "description": "Review of threat landscape",
+      "frequency": "Quarterly"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2253",
+      "mainLabel": "BoardOversightProcess",
+      "labels": [
+        "BoardOversightProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "BOP-BUD",
+      "name": "Budget Approval",
+      "description": "Approval of cyber budget",
+      "frequency": "Annual"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2254",
+      "mainLabel": "BoardOversightProcess",
+      "labels": [
+        "BoardOversightProcess"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "processId": "BOP-INC",
+      "name": "Incident Briefing",
+      "description": "Briefing on major incidents",
+      "frequency": "Event-Driven"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2255",
+      "mainLabel": "FilingEvent",
+      "labels": [
+        "FilingEvent"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "eventId": "EVENT-INIT",
+      "description": "First report of incident",
+      "trigger": "Materiality Determination",
+      "type": "Initial Filing"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2256",
+      "mainLabel": "FilingEvent",
+      "labels": [
+        "FilingEvent"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "eventId": "EVENT-AMEND",
+      "description": "Update to previous filing",
+      "trigger": "New Information",
+      "type": "Amendment"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2257",
+      "mainLabel": "XBRLTagging",
+      "labels": [
+        "XBRLTagging"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "xbrlId": "XBRL-CYD",
+      "format": "Inline XBRL",
+      "taxonomy": "Cybersecurity Disclosure",
+      "effectiveDate": "2024-12-15"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2258",
+      "mainLabel": "ComplianceDeadline",
+      "labels": [
+        "ComplianceDeadline"
+      ],
+      "date": "2023-12-18",
+      "regional_standard_regulation_id": "SEC-2023",
+      "deadlineId": "DEAD-LG",
+      "description": "Large Reporting Company Start"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2259",
+      "mainLabel": "ComplianceDeadline",
+      "labels": [
+        "ComplianceDeadline"
+      ],
+      "date": "2024-06-15",
+      "regional_standard_regulation_id": "SEC-2023",
+      "deadlineId": "DEAD-SRC",
+      "description": "SRC Reporting Start"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2260",
+      "mainLabel": "Exemption",
+      "labels": [
+        "Exemption"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "duration": "180 Days",
+      "name": "SRC Extension",
+      "description": "Additional 180 days for Item 1.05 compliance",
+      "exemptionId": "EX-SRC-DELAY"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2261",
+      "mainLabel": "MaterialityDetermination",
+      "labels": [
+        "MaterialityDetermination"
+      ],
+      "date": "2023-10-03",
+      "regional_standard_regulation_id": "SEC-2023",
+      "justification": "Significant operational disruption",
+      "determinationId": "DET-001",
+      "outcome": "Material"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2262",
+      "mainLabel": "MaterialityDetermination",
+      "labels": [
+        "MaterialityDetermination"
+      ],
+      "date": "2023-11-18",
+      "regional_standard_regulation_id": "SEC-2023",
+      "justification": "Sensitive customer data loss",
+      "determinationId": "DET-002",
+      "outcome": "Material"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "mainLabel": "AssessmentStandard",
+      "labels": [
+        "AssessmentStandard"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "legalSource": "TSC Industries v. Northway",
+      "name": "Reasonable Investor Test",
+      "standardId": "STD-INV",
+      "definition": "Likelihood a reasonable investor would consider the info important"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2264",
+      "mainLabel": "QuantitativeFactor",
+      "labels": [
+        "QuantitativeFactor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "factorId": "QUANT-REV",
+      "metricType": "Financial"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2265",
+      "mainLabel": "QuantitativeFactor",
+      "labels": [
+        "QuantitativeFactor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "factorId": "QUANT-COST",
+      "metricType": "Financial"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2266",
+      "mainLabel": "QualitativeFactor",
+      "labels": [
+        "QualitativeFactor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "factorId": "QUAL-REP",
+      "riskCategory": "Strategic"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2267",
+      "mainLabel": "QualitativeFactor",
+      "labels": [
+        "QualitativeFactor"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "factorId": "QUAL-CIV",
+      "riskCategory": "Social"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "mainLabel": "AssessmentTeam",
+      "labels": [
+        "AssessmentTeam"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "primaryRole": "Materiality Decision",
+      "teamId": "TEAM-DISC",
+      "name": "Disclosure Committee"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2269",
+      "mainLabel": "ThirdPartyServiceProvider",
+      "labels": [
+        "ThirdPartyServiceProvider"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "serviceType": "Cloud Provider",
+      "accessLevel": "Critical",
+      "providerId": "TSP-CLOUD-001",
+      "name": "Enterprise Cloud Infrastructure"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2270",
+      "mainLabel": "ThirdPartyServiceProvider",
+      "labels": [
+        "ThirdPartyServiceProvider"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "serviceType": "MSSP",
+      "accessLevel": "High",
+      "providerId": "TSP-MSSP-001",
+      "name": "Global Managed Security Services"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2271",
+      "mainLabel": "ThirdPartyServiceProvider",
+      "labels": [
+        "ThirdPartyServiceProvider"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "serviceType": "SaaS",
+      "accessLevel": "Medium",
+      "providerId": "TSP-SAAS-001",
+      "name": "HR Data Management System"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2272",
+      "mainLabel": "ThirdPartyServiceProvider",
+      "labels": [
+        "ThirdPartyServiceProvider"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "serviceType": "Data Processor",
+      "accessLevel": "Critical",
+      "providerId": "TSP-DATA-PROC-01",
+      "name": "External Payment Processor"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2273",
+      "mainLabel": "ThirdPartyServiceProvider",
+      "labels": [
+        "ThirdPartyServiceProvider"
+      ],
+      "regional_standard_regulation_id": "SEC-2023",
+      "serviceType": "IT Vendor",
+      "accessLevel": "Low",
+      "providerId": "TSP-IT-VENDOR-01",
+      "name": "Legacy IT Support Services"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153710953955592329",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2186",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_CATEGORY",
+      "order": "1"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155962753769277577",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2187",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_CATEGORY",
+      "order": "2"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158214553582962825",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2188",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_CATEGORY",
+      "order": "3"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160466353396648073",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2189",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_CATEGORY",
+      "order": "4"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153712053467220105",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2190",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_REQUIREMENT",
+      "order": "1"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155963853280905353",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2191",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_REQUIREMENT",
+      "order": "2"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158215653094590601",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2192",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_REQUIREMENT",
+      "order": "3"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160467452908275849",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2193",
+      "type": "REGIONAL_STANDARD_AND_REGULATION_HAS_REQUIREMENT",
+      "order": "4"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2203",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153713152978847899",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "type": "REGULATED_ENTITY_SUBJECT_TO_REGULATION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2204",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153713152978847900",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "type": "REGULATED_ENTITY_SUBJECT_TO_REGULATION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2205",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153713152978847901",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "type": "REGULATED_ENTITY_SUBJECT_TO_REGULATION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966133",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2229",
+      "type": "REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966134",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2230",
+      "type": "REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966135",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2231",
+      "type": "REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918323974547966136",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2232",
+      "type": "REGULATION_DEFINES_RECOGNIZED_INCIDENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918325074059593913",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2233",
+      "type": "REGULATION_DEFINES_MATERIALITY_IMPACT_FACTOR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918325074059593914",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2234",
+      "type": "REGULATION_DEFINES_MATERIALITY_IMPACT_FACTOR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918325074059593915",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2235",
+      "type": "REGULATION_DEFINES_MATERIALITY_IMPACT_FACTOR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918326173571221705",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2249",
+      "type": "REGULATION_RECOGNIZES_PROFESSIONAL_CREDENTIAL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918326173571221706",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2250",
+      "type": "REGULATION_RECOGNIZES_PROFESSIONAL_CREDENTIAL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918326173571221707",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2251",
+      "type": "REGULATION_RECOGNIZES_PROFESSIONAL_CREDENTIAL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2185",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918327273082849495",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "type": "REGULATION_ESTABLISHES_LEGAL_STANDARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2190",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664590",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2194",
+      "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2190",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155941863048349838",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2197",
+      "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2191",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664591",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2195",
+      "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2191",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155941863048349839",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2196",
+      "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2192",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664592",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2195",
+      "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2193",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153690063234664593",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2195",
+      "type": "REQUIREMENT_IMPLEMENTED_VIA_FORM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2194",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292370",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2198",
+      "type": "FORM_FOLLOWS_TIMELINE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2194",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769547922",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2257",
+      "type": "FORM_REQUIRES_XBRL_TAGGING"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2194",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153720849560242322",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2201",
+      "type": "FORM_MAY_BE_DELAYED_BY_PROVISION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2194",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155972649373927570",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2202",
+      "type": "FORM_MAY_BE_DELAYED_BY_PROVISION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2195",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292371",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2199",
+      "type": "FORM_FOLLOWS_TIMELINE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2195",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769547923",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2257",
+      "type": "FORM_REQUIRES_XBRL_TAGGING"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2196",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292372",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2199",
+      "type": "FORM_FOLLOWS_TIMELINE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2196",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769547924",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2257",
+      "type": "FORM_REQUIRES_XBRL_TAGGING"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2197",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153691162746292373",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2200",
+      "type": "FORM_FOLLOWS_TIMELINE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2197",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153693361769547925",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2257",
+      "type": "FORM_REQUIRES_XBRL_TAGGING"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2203",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153715352002103451",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2226",
+      "type": "REGULATED_ENTITY_OWNS_OR_USES_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2203",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155967151815788699",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2227",
+      "type": "REGULATED_ENTITY_OWNS_OR_USES_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2203",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158218951629473947",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2228",
+      "type": "REGULATED_ENTITY_OWNS_OR_USES_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2204",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153714252490475676",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2260",
+      "type": "REGULATED_ENTITY_QUALIFIES_FOR_EXEMPTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2216",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803496",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2206",
+      "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2206",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153699958839314590",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2253",
+      "type": "GOVERNANCE_BODY_EXECUTES_OVERSIGHT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803493",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2207",
+      "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2207",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153699958839314591",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2252",
+      "type": "GOVERNANCE_BODY_EXECUTES_OVERSIGHT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2207",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870111",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2210",
+      "type": "GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155947360606488741",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2208",
+      "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2215",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153695560792803495",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2208",
+      "type": "MANAGEMENT_ROLE_REPORTS_TO_GOVERNANCE_BODY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2208",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153699958839314592",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2254",
+      "type": "GOVERNANCE_BODY_EXECUTES_OVERSIGHT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2208",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870112",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2211",
+      "type": "GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2209",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153721949071870113",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2212",
+      "type": "GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153696660304431269",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2249",
+      "type": "MANAGEMENT_ROLE_POSSESSES_EXPERTISE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155948460118116517",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2250",
+      "type": "MANAGEMENT_ROLE_POSSESSES_EXPERTISE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158200259931801765",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2251",
+      "type": "MANAGEMENT_ROLE_POSSESSES_EXPERTISE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153697759816059100",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2213",
+      "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160453159257114844",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2214",
+      "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1158201359443429596",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2215",
+      "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155949559629744348",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2216",
+      "type": "ASSESSMENT_TEAM_INCLUDES_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2221",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570157",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2226",
+      "type": "CYBERSECURITY_INCIDENT_AFFECTS_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2221",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155955057187883181",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2233",
+      "type": "CYBERSECURITY_INCIDENT_CAUSES_IMPACT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2221",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153703257374197933",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2235",
+      "type": "CYBERSECURITY_INCIDENT_CAUSES_IMPACT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2261",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153704356885825749",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2221",
+      "type": "MATERIALITY_DETERMINATION_EVALUATES_INCIDENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2221",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583497901",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2229",
+      "type": "CYBERSECURITY_INCIDENT_HAS_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2222",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570158",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2227",
+      "type": "CYBERSECURITY_INCIDENT_AFFECTS_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2222",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155955057187883182",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2233",
+      "type": "CYBERSECURITY_INCIDENT_CAUSES_IMPACT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2222",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153703257374197934",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2234",
+      "type": "CYBERSECURITY_INCIDENT_CAUSES_IMPACT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2262",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153704356885825750",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2222",
+      "type": "MATERIALITY_DETERMINATION_EVALUATES_INCIDENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2222",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583497902",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2230",
+      "type": "CYBERSECURITY_INCIDENT_HAS_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2223",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153702157862570159",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2228",
+      "type": "CYBERSECURITY_INCIDENT_AFFECTS_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2223",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153723048583497903",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2231",
+      "type": "CYBERSECURITY_INCIDENT_HAS_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2261",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153709854443964629",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2224",
+      "type": "MATERIALITY_DETERMINATION_RESULTED_IN_MATERIAL_INCIDENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2262",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153709854443964630",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2225",
+      "type": "MATERIALITY_DETERMINATION_RESULTED_IN_MATERIAL_INCIDENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2238",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153698859327686846",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2246",
+      "type": "RISK_PROCESS_IMPLEMENTS_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2238",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155950659141372094",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2248",
+      "type": "RISK_PROCESS_IMPLEMENTS_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2239",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153698859327686847",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2247",
+      "type": "RISK_PROCESS_IMPLEMENTS_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2261",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153705456397453525",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "type": "MATERIALITY_DETERMINATION_APPLIES_STANDARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153708754932336860",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2261",
+      "type": "ASSESSMENT_TEAM_CONDUCTS_DETERMINATION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2262",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153705456397453526",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "type": "MATERIALITY_DETERMINATION_APPLIES_STANDARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2268",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155960554746022108",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2262",
+      "type": "ASSESSMENT_TEAM_CONDUCTS_DETERMINATION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153706555909081303",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2264",
+      "type": "ASSESSMENT_STANDARD_CONSIDERS_QUANTITATIVE_FACTOR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155958355722766551",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2265",
+      "type": "ASSESSMENT_STANDARD_CONSIDERS_QUANTITATIVE_FACTOR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153707655420709079",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2266",
+      "type": "ASSESSMENT_STANDARD_CONSIDERS_QUALITATIVE_FACTOR"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2263",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155959455234394327",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:2267",
+      "type": "ASSESSMENT_STANDARD_CONSIDERS_QUALITATIVE_FACTOR"
+    }
+  ]
+}

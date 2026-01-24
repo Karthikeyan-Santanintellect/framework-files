@@ -287,7 +287,7 @@ ON CREATE SET
     at.name = row.name,
     at.primaryRole = row.primaryRole;
 """
-# # Create Third-Party Service Provider Node
+ # Create Third-Party Service Provider Node
 sec_third_party_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (tpsp:ThirdPartyServiceProvider {providerId: row.providerId, regional_standard_regulation_id: 'SEC-2023'})
@@ -337,7 +337,7 @@ regulatory_form_delay = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (rf:RegulatoryForm {formId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (dp:DelayProvision {provisionId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
-MERGE (rf)-[:FORM_MAY_BE_DELAYED_BY]->(dp);
+MERGE (rf)-[:FORM_MAY_BE_DELAYED_BY_PROVISION]->(dp);
 """
 
 # Regulatory Form → XBRL Tagging
@@ -369,7 +369,7 @@ governance_body_type = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (gb:GovernanceBody {governanceId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (bct:BoardCommitteeType {typeId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
-MERGE (gb)-[:GOVERNANCE_BODY_IS_TYPE]->(bct);
+MERGE (gb)-[:GOVERNANCE_BODY_IS_TYPE_OF_BOARD_COMMITTEE]->(bct);
 """
 
 # Management Role → Governance Body (Reports To)
@@ -406,14 +406,14 @@ MERGE (re)-[:REGULATED_ENTITY_OWNS_OR_USES_SYSTEM]->(is);
 
 # Requirement → Risk Management Process
 requirement_risk_process = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row ##
 MATCH (req:Requirement {reqId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (rmp:RiskManagementProcess {processId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
-MERGE (req)-[:REQUIREMENT_GOVERNS_PROCESS]->(rmp);
+MERGE (req)-[:REQUIREMENT_GOVERNS_RISK_PROCESS]->(rmp);
 """
 
 # Risk Management Process → Cybersecurity Framework
-risk_process_framework = """
+risk_process_framework = """  ##
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (rmp:RiskManagementProcess {processId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (cf:CybersecurityFramework {frameworkNodeId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
@@ -441,7 +441,7 @@ incident_incident_type = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ci:CybersecurityIncident {incidentId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (it:IncidentType {typeId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
-MERGE (ci)-[:CYBERSECURITY_INCIDENT_CLASSIFIED_AS]->(it);
+MERGE (ci)-[:CYBERSECURITY_INCIDENT_HAS_TYPE]->(it);
 """
 
 # Cybersecurity Incident → Information System
@@ -508,7 +508,7 @@ MATCH (mci:MaterialCybersecurityIncident {incidentId: row.targetId, regional_sta
 MERGE (md)-[:MATERIALITY_DETERMINATION_RESULTED_IN_MATERIAL_INCIDENT]->(mci);
 """
 # Regulated Entity to its Governance Body (Board)
-regulated_entity_exemption_board = """
+regulated_entity_exemption_board = """  ##
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (re:RegulatedEntity {entityType: row.entityType}) 
 MATCH (gb:GovernanceBody {governanceId: row.governanceId})
@@ -518,26 +518,26 @@ MERGE (re)-[:REGULATED_ENTITY_ESTABLISHES_GOVERNANCE_STRUCTURE]->(gb);
 regulated_entity_management_roles = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (re:RegulatedEntity {entityType: row.entityType})
-MATCH (mgr:ManagementRole {roleId: row.roleId})
+MATCH (mgr:ManagementRole {roleId: row.roleId})   
 MERGE (re)-[:REGULATED_ENTITY_KEY_APPOINTS_MANAGEMENT_ROLE]->(mgr);
 """
 # Regulated Entity to Assessment Teams
 regulated_entity_assessment_teams = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (re:RegulatedEntity {entityType: row.entityType})
-MATCH (at:AssessmentTeam {teamId: row.teamId})
+MATCH (at:AssessmentTeam {teamId: row.teamId})   
 MERGE (re)-[:REGULATED_ENTITY_RESIGNATES_ASSESSMENT_TEAM]->(at);
 """
 # Regulated Entity to the Processes
 regulated_entity_risk_management_processes = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row   
 MATCH (re:RegulatedEntity {entityType: row.entityType})
 MATCH (rmp:RiskManagementProcess {processId: row.processId})
 MERGE (re)-[:REGULATED_ENTITY_IMPLEMENTS_RISK_PROCESS]->(rmp);
 """
 # Regulated Entity to its specific Compliance Deadlines
 regulated_entity_compliance_deadlines = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
+LOAD CSV WITH HEADERS FROM '$file_path' AS row  
 MATCH (re:RegulatedEntity {entityType: row.entityType})
 MATCH (cd:ComplianceDeadline {deadlineId: row.deadlineId})
 MERGE (re)-[:REGULATED_ENTITY_MUST_COMPLY_BY_DATE]->(cd);
@@ -567,25 +567,40 @@ MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-
 MATCH (std:AssessmentStandard{regional_standard_regulation_id: 'SEC-2023'})
 MERGE (reg)-[:REGULATION_ESTABLISHES_LEGAL_STANDARD]->(std);
 """
-# Regulated Entity to the Filing Event
+# Regulated Entity -> Filing Event (Data Driven)
 regulated_entity_filing_event = """
-MATCH (re:RegulatedEntity), (fe:FilingEvent)
-MERGE (re)-[:SUBMITS_REGULATORY_FILING]->(fe);
-MATCH (fe:FilingEvent), (rf:RegulatoryForm)
-WHERE fe.type CONTAINS rf.name 
-MERGE (fe)-[:REGULATORY_FILING_UTILIZES_FORM]->(rf);
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (re:RegulatedEntity {entityType: row.entityType})  
+MATCH (fe:FilingEvent {eventId: row.eventId})
+MERGE (re)-[:REGULATED_ENTITY_SUBMITS_FILING]->(fe);
+"""
+ # Filing Event -> Regulatory Form (Data Driven)
+filing_event_form = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (fe:FilingEvent {eventId: row.eventId})
+MATCH (rf:RegulatoryForm {formId: row.formId})
+MERGE (fe)-[:REGULATORY_FILING_UTILIZES_FORM]->(rf);  
 """
 # Third-Party Service Provider Relationships
 regulated_entity_third_party_service_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (re:RegulatedEntity {entityType: row.entityType})
+MATCH (re:RegulatedEntity {entityType: row.entityType})  
 MATCH (tpsp:ThirdPartyServiceProvider {providerId: row.providerId})
 MERGE (re)-[:REGULATED_ENTITY_ENGAGES_SERVICE_PROVIDER {
     oversight_level: row.oversightLevel,
     contractual_audit_rights: toBoolean(row.auditRights)
 }]->(tpsp);
 """
-
+# Management Role -> External Actor
+management_role_external_actor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (mgr:ManagementRole {roleId: row.roleId})
+MATCH (ea:ExternalActor {name: row.actorName})   
+MERGE (mgr)-[:MANAGEMENT_INTERACTS_WITH_EXTERNAL_ACTOR {
+    context: row.context,
+    frequency: row.frequency
+}]->(ea);
+"""
 
 
 import os
@@ -807,26 +822,35 @@ time.sleep(2)
 client.query(regulation_anchor_assessment_standards)
 time.sleep(2)
 
-client.close(regulated_entity_filing_event)
-time.sleep(2)
+# client.query(regulated_entity_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Filling%20Relationship.csv"))
+# time.sleep(2)
 
-client.query(regulated_entity_exemption_board.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity_exemption.csv"))
-time.sleep(2)
+# client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Filling%20Relationship.csv"))
+# time.sleep(2)
 
-client.query(regulated_entity_management_roles.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Management%20Role.csv"))
-time.sleep(2)
 
-client.query(regulated_entity_assessment_teams.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Assesment%20Teams.csv"))
-time.sleep(2)
+# client.query(regulated_entity_exemption_board.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/regulated_entity_exemption.csv"))
+# time.sleep(2)
 
-client.query(regulated_entity_risk_management_processes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Risk%20Management%20Relationship.csv"))
-time.sleep(2)
+# client.query(regulated_entity_management_roles.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Management%20Role.csv"))
+# time.sleep(2)
 
-client.query(regulated_entity_compliance_deadlines.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Compliance%20Deadline.csv"))
-time.sleep(2)
+# client.query(regulated_entity_assessment_teams.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Assesment%20Teams.csv"))
+# time.sleep(2)
 
-client.close(regulated_entity_third_party_service_provider.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Third%20Party%20Relationships.csv"))
-time.sleep(2)
+# client.query(regulated_entity_risk_management_processes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Risk%20Management%20Relationship.csv"))
+# time.sleep(2)
+
+# client.query(regulated_entity_compliance_deadlines.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Compliance%20Deadline.csv"))
+# time.sleep(2)
+
+# client.query(regulated_entity_third_party_service_provider.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulated%20Entity%20Third%20Party%20Relationships.csv"))
+# time.sleep(2)
+
+# client.query(management_role_external_actor.replace('$file_path', ""))
+# time.sleep(2)
+
+
 
 logger.info("Graph structure loaded successfully.")
 

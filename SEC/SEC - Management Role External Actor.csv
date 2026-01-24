@@ -1,0 +1,7 @@
+roleId,actorName,context,frequency
+ROLE-GENERAL-COUNSEL,US Attorney General,National Security Delay Coordination,Ad-hoc
+ROLE-GENERAL-COUNSEL,SEC,Regulatory Examination & Filing,Periodic
+ROLE-CFO,SEC,Financial Impact Disclosure Sign-off,Quarterly
+ROLE-CISO,Third-Party Assessor,Security Audit & Assessment,Annual
+ROLE-CISO,Cloud Provider,Security Control Oversight,Continuous
+ROLE-CIO,Cloud Provider,Infrastructure Management,Continuous
