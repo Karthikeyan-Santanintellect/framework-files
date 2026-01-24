@@ -258,8 +258,94 @@ ON CREATE SET
   cm.description = row.description;
 """
 
+# Significant Data Fiduciary (SDF)
+significant_data_fiduciary = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sdf:SignificantDataFiduciary {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  sdf_id: row.sdf_id
+})
+ON CREATE SET
+  sdf.name = row.name,
+  sdf.notification_criteria = row.criteria, 
+  sdf.notification_date = row.notification_date;
+"""
 
+# Consent Manager
+consent_manager = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cm:ConsentManager {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  consent_manager_id: row.consent_manager_id
+})
+ON CREATE SET
+  cm.name = row.name,
+  cm.registration_number = row.registration_number,
+  cm.technical_standard = row.technical_standard;
+"""
 
+# Nominee
+nominee = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (n:Nominee {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  nominee_id: row.nominee_id
+})
+ON CREATE SET
+  n.name = row.name,
+  n.relationship_type = row.relationship_type,
+  n.rights_scope = "Posthumous/Incapacity";
+"""
+
+# Independent Data Auditor
+independent_auditor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ida:IndependentDataAuditor {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  auditor_id: row.auditor_id
+})
+ON CREATE SET
+  ida.name = row.name,
+  ida.accreditation = row.accreditation;
+"""
+
+# Notice 
+notice = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (not:Notice {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  notice_id: row.notice_id
+})
+ON CREATE SET
+  not.content_summary = row.content,
+  not.languages_available = row.languages; 
+"""
+
+# Breach Notification
+breach_notification = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (bn:BreachNotification {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  notification_id: row.notification_id
+})
+ON CREATE SET
+  bn.trigger_event = "Personal Data Breach",
+  bn.recipient_type = row.recipient_type,
+  bn.deadline = "As prescribed";
+"""
+
+# Duty (of Data Principal)
+duty = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (d:Duty {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  duty_id: row.duty_id
+})
+ON CREATE SET
+  d.name = row.name,
+  d.description = row.description, // e.g., "Do not file frivolous grievance"
+  d.penalty_for_breach = "₹10,000";
+"""
 
 
 
@@ -377,21 +463,9 @@ MATCH (ro:Role {
     regional_standard_regulation_id: 'DPDPA 1.0', 
     role_id: row.role_id
 })
-MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_ROLES]->(ro);
+MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_ROLES]->(ro);
 """
 
-enforcement_action_section = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ea:EnforcementAction {
-    regional_standard_regulation_id: 'DPDPA 1.0', 
-    enforcement_action_id: row.enforcement_action_id
-})
-MATCH (sec:Section {
-    regional_standard_regulation_id: 'DPDPA 1.0', 
-    section_id: row.section_id
-})
-MERGE (ea)-[:ENFORCEMENTACTIONS_CARRIES_PENALTIES_SECTION]->(sec);
-"""
 
 requirement_right = """
 MATCH (req:Requirement {regional_standard_regulation_id: 'DPDPA 1.0'})
@@ -462,12 +536,12 @@ MERGE (pa)-[:ACTIVITY_EXECUTED_ON_SYSTEM]->(sys);
 data_principal_consent ="""
 MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (c:Consent {regional_standard_regulation_id: 'DPDPA 1.0'})
-MERGE (dp)-[:GIVES_CONSENT]->(c);
+MERGE (dp)-[:DATA_PRINCIPAL_GIVES_CONSENT]->(c);
 """
 consent_processing_activity ="""
 MATCH (c:Consent {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
-MERGE (c)-[:CONSENT_FOR_PROCESSING]->(pa);
+MERGE (c)-[:CONSENT_PROVIDES_PROCESSING]->(pa);
 """
 exemption_section ="""
 MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
@@ -477,7 +551,7 @@ MERGE (ex)-[:EXEMPTION_DEFINED_IN_SECTION]->(sec);
 processing_activity_exemption ="""
 MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (ex:Exemption {regional_standard_regulation_id: 'DPDPA 1.0'})
-MERGE (pa)-[:PROCESSING_EXEMPT_UNDER]->(ex);
+MERGE (pa)-[:PROCESSING_EXEMPT_UNDER_EXEMPTION]->(ex);
 """
 section_legal_basis ="""
 MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0'})
@@ -504,7 +578,7 @@ MERGE (df)-[:DATA_FIDUCIARY_CONDUCTS_PROCESSING]->(pa);
 data_processor_processing_activity ="""
 MATCH (dpr:DataProcessor {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
-MERGE (dpr)-[:PERFORMS_PROCESSING]->(pa);
+MERGE (dpr)-[:DATA_PROCESSOR_PERFORMS_PROCESSING]->(pa);
 """
 role_requirement ="""
 MATCH (ro:Role {regional_standard_regulation_id: 'DPDPA 1.0'})
@@ -566,6 +640,114 @@ processing_activity_right ="""
 MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
 MERGE (pa)-[:PROCESSING_SUBJECT_TO_RIGHT]->(r);
+"""
+#  Data Fiduciary to Significant Data Fiduciary (Designation)
+fiduciary_is_sdf = """
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (sdf:SignificantDataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_DESIGNATED_SIGNIFICANT]->(sdf);
+"""
+
+# SDF Appoints Independent Auditor
+sdf_appoints_auditor = """
+MATCH (sdf:SignificantDataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ida:IndependentDataAuditor {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sdf)-[:SIGNIFICANT_DATA_FIDUCIARY_APPOINTED_INDEPENDENT_AUDITOR]->(ida);
+"""
+
+# Independent Auditor Audits System
+auditor_audits_system = """
+MATCH (ida:IndependentDataAuditor {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (sys:System {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (ida)-[:INDEPENDENT_AUDITOR_CONDUCTS_SYSTEM_AUDITS]->(sys);
+"""
+# Fiduciary Issues Notice
+fiduciary_issues_notice = """
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (not:Notice {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_ISSUES_NOTICE]->(not);
+"""
+
+# Notice Precedes and Validates Consent
+notice_precedes_consent = """
+MATCH (not:Notice {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (c:Consent {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (not)-[:NOTICE_MUST_PRECEDE_AND_VALIDATE_CONSENT]->(c);
+"""
+
+# Data Principal Manages Consent through Manager
+principal_uses_manager = """
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (cm:ConsentManager {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dp)-[:DATA_PRINCIPAL_MANAGES_CONSENT_MANAGER]->(cm);
+"""
+
+# Consent Manager Facilitates Consent for Fiduciary
+manager_links_fiduciary = """
+MATCH (cm:ConsentManager {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (cm)-[:CONSENT_MANAGER_FACILITATES_CONSENT_FOR_FIDUCIARY]->(df);
+"""
+
+# Data Principal Nominates Successor
+principal_nominates = """
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (n:Nominee {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dp)-[:DATA_PRINCIPAL_NOMINATES_SUCCESSOR]->(n);
+"""
+
+# Nominee Exercises Right (on behalf of Principal)
+nominee_exercises_right = """
+MATCH (n:Nominee {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (n)-[:NOMINEE_EXERCISES_RIGHT]->(r);
+"""
+
+# Data Principal Must Adhere to Duty
+principal_owes_duty = """
+MATCH (dp:DataPrincipal {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (d:Duty {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (dp)-[:DATA_PRINCIPAL_MUST_ADHERE_TO_DUTY]->(d);
+"""
+
+# Fiduciary Triggers Breach Notification
+fiduciary_reports_breach = """
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (bn:BreachNotification {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_TRIGGERS_NOTIFICATION]->(bn);
+"""
+
+# Breach Notification Intimated to Board
+breach_sent_to_board = """
+MATCH (bn:BreachNotification {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (dpb:DataProtectionBoard {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (bn)-[:BREACH_NOTIFICATION_INTIMATED_TO_DATA_PROTECTION_BOARD]->(dpb);
+"""
+
+# Violation of Duty Triggers Enforcement Action
+duty_violation_penalty = """
+MATCH (d:Duty {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (d)-[:DUTY_VIOLATION_TRIGGERS_PENALTY]->(ea);
+"""
+# Fiduciary Engages Processor (Contractual)
+fiduciary_engages_processor = """
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (dpr:DataProcessor {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (df)-[:DATA_FIDUCIARY_ENGAGES_UNDER_DATA_PROCESSOR]->(dpr);
+"""
+
+# Complaint Initially Lodged with Fiduciary
+complaint_fiduciary = """
+MATCH (cm:Complaint {regional_standard_regulation_id: 'DPDPA 1.0'})
+MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (cm)-[:COMPLAINT_INITIALLY_LODGED_WITH_FIDUCIARY]->(df);
+"""
+regulation_event_type = """
+MATCH (orphan:EventType) 
+WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (reg)-[:REGULATION_DEFINES_EVENT_TYPE]->(orphan);
 """
 
 import sys
@@ -657,7 +839,26 @@ time.sleep(2)
 client.query(complaint.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Complaint.csv"))
 time.sleep(2)
 
+client.query(significant_data_fiduciary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Significant%20Data%20Fiduciary.csv"))
+time.sleep(2)
 
+client.query(consent_manager.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Consent%20Manager.csv"))
+time.sleep(2)
+
+client.query(nominee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Nominee.csv"))
+time.sleep(2)
+
+client.query(independent_auditor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Independent%20Auditor.csv"))
+time.sleep(2)
+
+client.query(notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Notice.csv"))
+time.sleep(2)
+
+client.query(breach_notification.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Breach%20Notification.csv"))
+time.sleep(2)
+
+client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Duty.csv"))
+time.sleep(2)
 
 
 #Relationship
@@ -706,9 +907,6 @@ client.query(enforcement_action_requirements.replace('$file_path',"https://githu
 time.sleep(2)
 
 client.query(enforcement_action_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Role_Relationship.csv"))
-time.sleep(2)
-
-client.query(enforcement_action_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Section_Relationship.csv"))
 time.sleep(2)
 
 client.query(requirement_right)
@@ -810,15 +1008,62 @@ time.sleep(2)
 client.query(processing_activity_right)
 time.sleep(2)
 
+client.query(fiduciary_is_sdf)
+time.sleep(2)
+
+client.query(sdf_appoints_auditor)
+time.sleep(2)
+
+client.query(auditor_audits_system)
+time.sleep(2)
+
+client.query(fiduciary_issues_notice)
+time.sleep(2)
+
+client.query(notice_precedes_consent)
+time.sleep(2)
+
+client.query(principal_uses_manager)
+time.sleep(2)
+
+client.query(manager_links_fiduciary)
+time.sleep(2)
+
+client.query(principal_nominates)
+time.sleep(2)
+
+client.query(nominee_exercises_right)
+time.sleep(2)
+
+client.query(principal_owes_duty)
+time.sleep(2)
+
+client.query(fiduciary_reports_breach)
+time.sleep(2)
+
+client.query(breach_sent_to_board)
+time.sleep(2)
+
+client.query(duty_violation_penalty)
+time.sleep(2)
+
+client.query(fiduciary_engages_processor)
+time.sleep(2)
+
+client.query(complaint_fiduciary)
+time.sleep(2)
+
+client.query(regulation_event_type)
+time.sleep(2)
 
 
 
 
 logger.info("Graph structure loaded successfully.")
 
-export_query = """
+query = """
 MATCH (n)
-OPTIONAL MATCH (n)-[r]->(m)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 RETURN {
   nodes: [n IN uniqueNodes | n {
@@ -827,7 +1072,7 @@ RETURN {
     labels: labels(n),
     mainLabel: head(labels(n))
   }],
-  rels: [r IN uniqueRels WHERE r IS NOT NULL | r {
+  rels: [r IN uniqueRels | r {
     .*,
     id: elementId(r),
     type: type(r),
@@ -837,33 +1082,16 @@ RETURN {
 } AS graph_data
 """
 
-try:
-    res = client.query(export_query)
+results = client.query(query)
 
-    if res and len(res) > 0:
-        graph_data = res[0]['graph_data']
-        
-        # Write to JSON
-        with open('dpdpa.json', 'w', encoding='utf-8') as f:
-            f.write(json.dumps(graph_data, default=str, indent=2))
-        
-        node_count = len(graph_data.get('nodes', []))
-        rel_count = len(graph_data.get('rels', []))
-        
-        logger.info(f"✓ Exported graph data to dpdpa.json")
-        logger.info(f"  └─ Nodes: {node_count}")
-        logger.info(f"  └─ Relationships: {rel_count}")
-    else:
-        logger.warning("Query returned no results")
-        # Try alternate query if primary fails
-        logger.info("Attempting alternate query...")
-        alt_query = "MATCH (n) RETURN count(n) as nodes; MATCH ()-[r]->() RETURN count(r) as rels"
-        res_alt = client.query(alt_query)
-        logger.info(f"Database stats: {res_alt}")
-
-except Exception as e:
-    logger.error(f"Failed to export graph: {str(e)}")
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('dpdpa.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to dpdpa.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
-logger.info("\n✓ Import complete!")
-
