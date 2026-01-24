@@ -1,3 +1,5 @@
-eventId,type,description,trigger
-EVENT-8K-001,8-K Filing,Ransomware Disclosure,INC-2023-001
-EVENT-10K-2023,10-K Filing,Annual Disclosure,Fiscal Year End
+eventId,formId
+EVENT-8K-001,FORM-8K
+EVENT-10K-2023,FORM-10K
+EVENT-20F-2023,FORM-20F
+EVENT-6K-001,FORM-6K
