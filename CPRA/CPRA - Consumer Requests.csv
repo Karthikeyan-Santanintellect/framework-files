@@ -1,0 +1,5 @@
+request_id,received_date,due_date,status,type,days_open
+REQ-1001,2025-01-10,2025-02-24,In Progress,Right to Delete,14
+REQ-1002,2025-01-12,2025-02-26,Denied,Right to Know,12
+REQ-1003,2025-01-15,2025-03-01,Completed,Right to Opt-Out,2
+REQ-1004,2025-01-20,2025-03-06,Verified,Right to Correct,4

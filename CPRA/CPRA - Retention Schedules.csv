@@ -1,0 +1,5 @@
+retention_id,period_days,trigger,justification
+RET-01,1095,Termination of Relationship,Statute of limitations for contract claims
+RET-02,30,Session End,Transient use for debugging only
+RET-03,2555,Tax Filing Year,IRS audit requirements (7 years)
+RET-04,365,Last Marketing Interaction,Marketing recency threshold

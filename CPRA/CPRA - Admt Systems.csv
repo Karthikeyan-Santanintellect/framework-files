@@ -1,0 +1,4 @@
+system_id,name,logic_summary,impact_description
+ADMT-01,CreditRiskAI,Logistic regression on financial history,Determines loan eligibility and interest rates
+ADMT-02,ResumeScreenBot,NLP keyword matching,Filters job applicants before human review
+ADMT-03,FraudDetectV2,Anomaly detection on IP/Behavior,Blocks transaction without human intervention

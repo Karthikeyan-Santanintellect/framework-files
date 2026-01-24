@@ -1,0 +1,5 @@
+exemption_id,name,scope,citation
+EX-01,GLBA Exemption,Data Level,Civ. Code § 1798.145(e)
+EX-02,HIPAA Exemption,Data Level,Civ. Code § 1798.145(c)(1)
+EX-03,Publicly Available,Data Level,Civ. Code § 1798.140(v)(2)
+EX-04,Employee Data (Partial),Context Level,Civ. Code § 1798.145(m)

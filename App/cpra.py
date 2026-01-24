@@ -295,11 +295,93 @@ ON CREATE SET
   db.damages_range = row.damages_range;
 """
 
+# Consumer Request (Transactional Ticket)
+consumer_request = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cr:ConsumerRequest {regional_standard_regulation_id: 'CPRA 2.0', request_id: row.request_id})
+ON CREATE SET 
+    cr.received_date = row.received_date,
+    cr.due_date = row.due_date,
+    cr.status = row.status,    
+    cr.type = row.type,         
+    cr.days_open = row.days_open;
+"""
+# Verification_method
+verification_method = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (vm:VerificationMethod {regional_standard_regulation_id: 'CPRA 2.0', method_id: row.method_id})
+ON CREATE SET 
+    vm.name = row.name,                 
+    vm.assurance_level = row.level;     
+"""
+# Denial Reason (For audit trails)
+denial_reason = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dr:DenialReason {regional_standard_regulation_id: 'CPRA 2.0', reason_id: row.reason_id})
+ON CREATE SET 
+    dr.code = row.code,                
+    dr.description = row.description;  
+"""
+# Exemption (Why a right was denied)
+exemption = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ex:Exemption {regional_standard_regulation_id: 'CPRA 2.0', exemption_id: row.exemption_id})
+ON CREATE SET 
+    ex.name = row.name,                 
+    ex.scope = row.scope,              
+    ex.legal_citation = row.citation;
+"""
 
+# Retention Schedule (Specific retention rules)
+retention_schedule = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rs:RetentionSchedule {regional_standard_regulation_id: 'CPRA 2.0', retention_id: row.retention_id})
+ON CREATE SET 
+    rs.period_days = row.period_days,
+    rs.trigger_event = row.trigger,     
+    rs.justification = row.justification;
+"""
+
+# Commercial Purpose (Triggers "Sale/Sharing")
+commercial_purpose = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cp:CommercialPurpose {regional_standard_regulation_id: 'CPRA 2.0', purpose_id: row.purpose_id})
+ON CREATE SET 
+    cp.name = row.name,                
+    cp.triggers_opt_out = true;
+"""
+
+# Contract Clause (Statutory requirements for Service Providers)
+contract_clause = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cc:ContractClause {regional_standard_regulation_id: 'CPRA 2.0', clause_id: row.clause_id})
+ON CREATE SET 
+    cc.name = row.name,                
+    cc.mandatory_text = row.text;
+"""
+
+# Automated Decision Making (ADMT)
+admt = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (admt:ADMT {regional_standard_regulation_id: 'CPRA 2.0', system_id: row.system_id})
+ON CREATE SET 
+    admt.name = row.name,
+    admt.logic = row.logic_summary,
+    admt.impact = row.impact_description;
+"""
+
+# Transparency Report (Annual Metrics)
+transparency_report = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tr:TransparencyReport {regional_standard_regulation_id: 'CPRA 2.0', report_year: row.year})
+ON CREATE SET 
+    tr.received_count = row.received,
+    tr.denied_count = row.denied,
+    tr.mean_response_time = row.response_time;
+"""
 
 
 # RELATIONSHIPS
-
 # Regulation to Section
 regulation_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -561,6 +643,183 @@ MATCH (c:Consumer{regional_standard_regulation_id: 'CPRA 2.0'})
 MATCH (db:DataBreach{regional_standard_regulation_id: 'CPRA 2.0'})
 MERGE (c)-[:CONSUMER_HAS_DATA_BREACH]->(db);
 """
+# Consumer -> Request
+consumer_initiates_request = """
+MATCH (c:Consumer {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (cr:ConsumerRequest {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (c)-[:CONSUMER_INITIATES_REQUEST]->(cr);
+"""
+
+# Request -> Right (What did they ask for?)
+request_invokes_right = """
+MATCH (cr:ConsumerRequest {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (r:Right {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (cr)-[:CONSUMER_REQUESTS_INVOKES_RIGHT]->(r);
+"""
+
+# Request -> Verification (How did we check?)
+request_verified_by = """
+MATCH (cr:ConsumerRequest {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (vm:VerificationMethod {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (cr)-[:CONSUMER_REQUESTS_VERIFIED_BY_VERIFICATION_METHOD]->(vm);
+"""
+
+# Request -> Denial Reason (Why did we say no?)
+request_denied_because = """
+MATCH (cr:ConsumerRequest {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (dr:DenialReason {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (cr)-[:CONSUMER_REQUESTS_DENIED_DUE_TO_DENIAL_REASON]->(dr);
+"""
+
+# Data Category -> Retention Schedule
+pi_category_retention = """
+MATCH (pc:PICategory {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (rs:RetentionSchedule {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pc)-[:PI_CATEGORY_HAS_RETENTION_SCHEDULE]->(rs);
+"""
+
+# Business -> Exemption (Entity Level)
+business_claims_exemption = """
+MATCH (b:Business {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (b)-[:BUSINESS_CLAIMS_ENTITY_EXEMPTION]->(ex);
+"""
+
+# Data Category -> Exemption (Data Level)
+data_falls_under_exemption = """
+MATCH (pc:PICategory {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (ex:Exemption {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pc)-[:PI_CATEGORY_FALLS_UNDER_EXEMPTION]->(ex);
+"""
+
+# Processing Activity -> Commercial Purpose (Sale/Share Trigger)
+activity_commercial_purpose = """
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (cp:CommercialPurpose {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pa)-[:PROCESSING_ACTIVITY_SERVES_COMMERCIAL_PURPOSE]->(cp);
+"""
+
+# Commercial Purpose -> Opt-Out Link
+commercial_purpose_link = """
+MATCH (cp:CommercialPurpose {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (ol:OptOutLink {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (cp)-[:COMMERCIAL_PURPOSE_REQUIRES_LINK]->(ol);
+"""
+
+# Service Provider -> Contract Clause
+sp_bound_by_clause = """
+MATCH (sp:ServiceProvider {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (cc:ContractClause {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (sp)-[:SERVICE_PROVIDER_BOUND_BY_CONTRACT_CLAUSE]->(cc);
+"""
+
+# Business -> Transparency Report
+business_transparency = """
+MATCH (b:Business {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (tr:TransparencyReport {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (b)-[:BUSINESS_PUBLISHES_METRICS]->(tr);
+"""
+# Title to Section 
+title_section = """
+MATCH (t:Title {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (s:Section {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (t)-[:TITLE_CONTAINS_SECTION]->(s);
+"""
+# Processing Activity to PI Category 
+processing_activity_pi = """
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (pc:PICategory {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pa)-[:PROCESSING_ACTIVITY_PROCESSES_DATA]->(pc);
+"""
+
+# Processing Activity to SPI Category 
+processing_activity_spi = """
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (sc:SPICategory {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pa)-[:PROCESSING_ACTIVITY_PROCESSES_SENSITIVE_DATA]->(sc);
+"""
+
+# Business to ADMT
+business_admt = """
+MATCH (b:Business {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (admt:ADMT {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (b)-[:BUSINESS_USES_ADMT]->(admt);
+"""
+
+# ADMT to Risk Assessment 
+admt_risk_assessment = """
+MATCH (admt:ADMT {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (ra:RiskAssessment {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (admt)-[:ADMT_REQUIRES_RISK_ASSESSMENT]->(ra);
+"""
+
+# ADMT to Processing Activity
+admt_processing = """
+MATCH (admt:ADMT {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (admt)-[:ADMT_AUTOMATES_ACTIVITY]->(pa);
+"""
+
+# Contractor to Contract Clause
+contractor_clause = """
+MATCH (ct:Contractor {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (cc:ContractClause {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (ct)-[:CONTRACTOR_BOUND_BY_CLAUSE]->(cc);
+"""
+
+# Processing Activity to Third Party 
+activity_third_party = """
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (tp:ThirdParty {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pa)-[:PROCESSING_ACTIVITY_TRANSFERS_TO]->(tp);
+"""
+# Business to Data Breach
+business_breach = """
+MATCH (b:Business {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (db:DataBreach {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (b)-[:BUSINESS_EXPERIENCED_BREACH]->(db);
+"""
+
+# Data Breach to PI Category (Impact Analysis)
+breach_pi = """
+MATCH (db:DataBreach {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (pc:PICategory {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (db)-[:DATA_BREACH_COMPROMISED_CATEGORY]->(pc);
+"""
+
+# Enforcement Authority to Breach (Notification)
+authority_breach = """
+MATCH (ea:EnforcementAuthority {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (db:DataBreach {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (ea)-[:AUTHORITY_NOTIFIED_OF_BREACH]->(db);
+"""
+
+# Consumer to Opt-Out Signal
+consumer_signal = """
+MATCH (c:Consumer {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (os:OptOutPreferenceSignal {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (c)-[:CONSUMER_USES_SIGNAL]->(os);
+"""
+# Processing Activity to Risk Assessment
+activity_risk = """
+MATCH (pa:ProcessingActivity {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (ra:RiskAssessment {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (pa)-[:HIGH_RISK_ACTIVITY_TRIGGERS_ASSESSMENT]->(ra);
+"""
+# Enforcement Action to Fine Value
+action_fine = """
+MATCH (ea:EnforcementAction {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (af:AdministrativeFine {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (ea)-[:ENFORCEMENT_ACTION_IMPOSES_FINE]->(af);
+"""
+# Regulation to Threshold
+regulation_threshold = """
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'CPRA 2.0'})
+MATCH (th:Threshold {regional_standard_regulation_id: 'CPRA 2.0'})
+MERGE (reg)-[:REGULATION_DEFINES_THRESHOLD]->(th);
+"""
+
+
 
 import sys
 import os
@@ -686,6 +945,29 @@ time.sleep(2)
 client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/DataBreach.csv"))
 time.sleep(2)
 
+client.query(consumer_request.replace('$file_path',""))
+time.sleep(2)
+
+client.query(verification_method.replace('$file_path',""))
+time.sleep(2)
+
+client.query(denial_reason.replace('$file_path',""))
+time.sleep(2)
+
+client.query(retention_schedule.replace('$file_path',""))
+time.sleep(2)
+
+client.query(exemption.replace('$file_path',""))
+time.sleep(2)
+
+client.query(commercial_purpose.replace('$file_path',""))
+time.sleep(2)
+
+client.query(contract_clause.replace('$file_path',""))
+time.sleep(2)
+
+client.query(transparency_report.replace('$file_path',""))
+time.sleep(2)
 
 
 
@@ -805,6 +1087,83 @@ time.sleep(2)
 client.query(consumer_data_breach)
 time.sleep(2)
 
+client.query(consumer_initiates_request)
+time.sleep(2)
+
+client.query(request_invokes_right)
+time.sleep(2)
+
+client.query(request_verified_by)
+time.sleep(2)
+
+client.query(request_denied_because)
+time.sleep(2)
+
+client.query(pi_category_retention)
+time.sleep(2)
+
+client.query(business_claims_exemption)
+time.sleep(2)
+
+client.query(data_falls_under_exemption)
+time.sleep(2)
+
+client.query(activity_commercial_purpose)
+time.sleep(2)
+
+client.query(commercial_purpose_link)
+time.sleep(2)
+
+client.query(sp_bound_by_clause)
+time.sleep(2)
+
+client.query(business_transparency)
+time.sleep(2)
+
+client.query(title_section)
+time.sleep(2)
+
+client.query(processing_activity_pi)
+time.sleep(2)
+
+client.query(processing_activity_spi)
+time.sleep(2)
+
+client.query(business_admt)
+time.sleep(2)
+
+client.query(admt_risk_assessment)
+time.sleep(2)
+
+client.query(admt_processing)
+time.sleep(2)
+
+client.query(contractor_clause)
+time.sleep(2)
+
+client.query(activity_third_party)
+time.sleep(2)
+
+client.query(business_breach)
+time.sleep(2)
+
+client.query(breach_pi)
+time.sleep(2)
+
+client.query(authority_breach)
+time.sleep(2)
+
+client.query(consumer_signal)
+time.sleep(2)
+
+client.query(activity_risk)
+time.sleep(2)
+
+client.query(action_fine)
+time.sleep(2)
+
+client.query(regulation_threshold)
+time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")

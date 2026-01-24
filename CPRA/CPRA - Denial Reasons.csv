@@ -1,0 +1,5 @@
+reason_id,code,description
+DR-01,ID_FAIL,Unable to verify identity to required standard
+DR-02,EXEMPT_DATA,Data is subject to FCRA/GLBA exemption
+DR-03,EXCESSIVE,Request is manifestly unfounded or excessive
+DR-04,NOT_RETAINED,Personal information not retained by business
