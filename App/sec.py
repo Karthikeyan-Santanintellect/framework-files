@@ -764,7 +764,7 @@ time.sleep(2)
 client.query(regulated_entity_exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Entity%20Exemption.csv"))
 time.sleep(2)
 
-client.query(governance_body_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-GovernanceBody_BoardOversightProcess%20Relationship.csv"))
+client.query(governance_body_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20GovernanceBody%20BoardOversightProcess%20Relationship.csv"))
 time.sleep(2)
 
 
@@ -791,7 +791,7 @@ time.sleep(2)
 client.query(risk_process_framework.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RiskProcess%20CybersecurityFramework%20Relationship.csv"))
 time.sleep(2)
 
-client.query(risk_process_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RiskProcess%20-%20SecurityControl%20Relatioship.csv"))
+client.query(risk_process_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RiskProcess%20SecurityControl%20Relatioship.csv"))
 time.sleep(2)
 
 
@@ -844,7 +844,7 @@ time.sleep(2)
 client.query(regulated_entity_filing_event.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20-%20FilingEvent.csv"))
 time.sleep(2)
 
-client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulation%20Incident%20Type.csv"))
+client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20FilingEvent%20RegulatoryForm.csv"))
 time.sleep(2)
 
 
