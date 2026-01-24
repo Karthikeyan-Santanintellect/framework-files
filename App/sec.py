@@ -406,7 +406,7 @@ MERGE (re)-[:REGULATED_ENTITY_OWNS_OR_USES_SYSTEM]->(is);
 
 # Requirement → Risk Management Process
 requirement_risk_process = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row ##
+LOAD CSV WITH HEADERS FROM '$file_path' AS row 
 MATCH (req:Requirement {reqId: row.sourceId, regional_standard_regulation_id: 'SEC-2023'})
 MATCH (rmp:RiskManagementProcess {processId: row.targetId, regional_standard_regulation_id: 'SEC-2023'})
 MERGE (req)-[:REQUIREMENT_GOVERNS_RISK_PROCESS]->(rmp);
@@ -731,10 +731,10 @@ client.query(sec_qualitative_factor.replace('$file_path',"https://github.com/Kar
 time.sleep(2)
 
 
-client.query(sec_assessment_team.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/assessment_team.csv"))
+client.query(sec_assessment_team.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Assessment%20Team.csv"))
 time.sleep(2)
 
-client.query(sec_third_party_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Third%20Party%20Provider.csv"))
+client.query(sec_third_party_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Third%20Party%20Service%20Provider.csv"))
 time.sleep(2)
 
 
