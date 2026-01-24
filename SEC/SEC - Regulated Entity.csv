@@ -1,4 +1,11 @@
 entityType,description,complianceDate
+<<<<<<< HEAD
 PublicCompany,Large accelerated and accelerated filers,2023-12-18
 SmallerReportingCompany,Smaller reporting companies (SRCs),2024-06-15
 ForeignPrivateIssuer,Non-US companies trading on US exchanges,2023-12-18
+=======
+PublicCompany,Large accelerated and accelerated filers,18-12-2023
+SmallerReportingCompany,Smaller reporting companies (SRCs),15-06-2024
+ForeignPrivateIssuer,Non-US companies trading on US exchanges,2023-12-18
+,,
+>>>>>>> 67d83070030b5356dd81721ef23e72f97ca97cc3
