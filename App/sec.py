@@ -764,7 +764,7 @@ time.sleep(2)
 client.query(regulated_entity_exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Regulatory%20Entity%20Exemption.csv"))
 time.sleep(2)
 
-client.query(governance_body_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20GovernanceBody%20BoardOversightProcess%20Relationship.csv"))
+client.query(governance_body_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Governance%20Body%20Board%20Commitee%20.csv"))
 time.sleep(2)
 
 
