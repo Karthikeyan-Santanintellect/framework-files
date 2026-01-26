@@ -1,0 +1,4 @@
+source_object_id,target_category_id,relationship_type,classification_date,volume_estimate
+PO-001,DAT-01,CLASSIFIED_AS,2024-01-01,High
+PO-002,DAT-03,CLASSIFIED_AS,2024-01-01,Medium
+PO-003,DAT-02,CLASSIFIED_AS,2024-01-01,Very High

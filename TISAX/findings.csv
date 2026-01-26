@@ -1,0 +1,4 @@
+finding_id,finding_type,description,severity_level,date_identified,auditor_comment,status,remediation_deadline,root_cause_analysis,evidence_reference
+FND-001,Major Deviation,Prototype room unlocked,Critical,2024-03-15,Access control failure,Open,2024-04-15,Broken lock mechanism,IMG-SEC-05
+FND-002,Secondary Deviation,Policy outdated,Minor,2024-03-16,Review date missed,Closed,2024-06-15,Process oversight,DOC-POL-02
+FND-003,Observation,Backup frequency optimal,Info,2024-03-17,Best practice seen,Closed,,N/A,LOG-BKP-09

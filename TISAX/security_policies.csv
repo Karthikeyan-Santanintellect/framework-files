@@ -1,0 +1,6 @@
+policy_id,title,policy_type,description,version,last_review_date,next_review_date,approval_status,enforcement_level,iso_27001_reference,document_url
+POL-01,Information Security Policy,Strategic,Top-level governance and objectives,2.0,2025-01-10,2026-01-10,Approved,Mandatory,5.2,http://internal/pol01
+POL-02,Access Control Policy,Technical,User access and authentication rules,1.5,2025-02-01,2026-02-01,Approved,Strict,9.1,http://internal/pol02
+POL-03,Supplier Security Policy,Third-Party,Vendor assessment and management,1.0,2025-03-15,2026-03-15,Draft,Mandatory,15.1,http://internal/pol03
+POL-04,Incident Management Procedure,Operational,Steps for breach response,3.0,2025-01-20,2026-01-20,Approved,Mandatory,16.1,http://internal/pol04
+POL-05,Data Classification Standard,Data,Labeling Public/Internal/Confidential,1.2,2024-11-30,2025-11-30,Approved,Mandatory,8.2,http://internal/pol05

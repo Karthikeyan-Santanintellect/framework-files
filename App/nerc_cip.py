@@ -526,7 +526,6 @@ ON CREATE SET
   chg.risk_level    = row.risk_level;
 """
 
-
 #Relationships
 #IndustryStandardAndRegulation → Standard
 # Framework relationships
@@ -686,28 +685,34 @@ MATCH (le:LawEnforcement {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_COORDINATES_LAW_ENFORCEMENT {relationship_type: 'Incident_Coordination', basis: 'CIP-008'}]->(le);
 """
 
-#Rel: RiskAssessment to BESCyberSystem
+#Rel: RiskAssessment to BESCyberSystem 
 rel_risk_bcs = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ra:RiskAssessment {assessment_id: row.assessment_id})
-MATCH (bcs:BESCyberSystem {bcs_id: row.bcs_id})
-MERGE (ra)-[:EVALUATES {relationship_type: 'Risk_Evaluation', basis: 'CIP-002'}]->(bcs);
+MATCH (ra:RiskAssessment {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE 
+  (ra.assessment_id = 'RA-2024-001' AND bcs.bcs_id IN ['BCS-001', 'BCS-002']) OR
+  (ra.assessment_id = 'RA-2024-003' AND bcs.bcs_id = 'BCS-001')
+MERGE (ra)-[:RISK_ASSESSMENT_EVALUATES_SYSTEM {relationship_type: 'Risk_Evaluation', basis: 'CIP-002'}]->(bcs);
 """
-
-#Rel: BESCyberSystem to Facility
+#Rel: BESCyberSystem to Facility 
 rel_bcs_facility = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bcs:BESCyberSystem {bcs_id: row.bcs_id})
-MATCH (fac:Facility {facility_id: row.facility_id})
-MERGE (bcs)-[:LOCATED_AT {relationship_type: 'Physical_Location', basis: 'CIP-006'}]->(fac);
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (fac:Facility {industry_standard_regulation_id: 'NERC_CIP', facility_id: bcs.facility_id})
+ON CREATE SET
+  fac.name = bcs.facility_name,
+  fac.type = bcs.facility_type,
+  fac.source = 'Auto-created from BES System'
+MERGE (bcs)-[:BES_CYBER_SYSTEM_LOCATED_AT_FACILITY {relationship_type: 'Physical_Location', basis: 'CIP-006'}]->(fac);
 """
-
-#Rel: Person to Role
+#Rel: Person to Role 
 rel_person_role = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (p:Person {person_id: row.person_id})
-MATCH (r:Role {role_id: row.role_id})
-MERGE (p)-[:HOLDS_ROLE {relationship_type: 'Personnel_Authorization', basis: 'CIP-004'}]->(r);
+MATCH (p:Person {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (r:Role {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE 
+  (p.person_id = 'EMP-001' AND r.role_id = 'ROLE-004') OR  
+  (p.person_id = 'EMP-002' AND r.role_id = 'ROLE-005') OR  
+  (p.person_id = 'EMP-003' AND r.role_id = 'ROLE-002')    
+MERGE (p)-[:PERSON_HOLDS_ROLE {relationship_type: 'Personnel_Authorization', basis: 'CIP-004'}]->(r);
 """
 
 #Rel: Person to TrainingModule
@@ -715,23 +720,52 @@ rel_person_training = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (p:Person {person_id: row.person_id})
 MATCH (tm:TrainingModule {module_id: row.module_id})
-MERGE (p)-[:COMPLETED_TRAINING {relationship_type: 'Training_Record', completion_date: date(row.completion_date), score: toInteger(row.score), basis: 'CIP-004'}]->(tm);
+MERGE (p)-[:PERSON_COMPLETED_TRAINING {relationship_type: 'Training_Record', completion_date: date(row.completion_date), score: toInteger(row.score), basis: 'CIP-004'}]->(tm);
 """
 
-#Rel: Incident to BESCyberSystem
+#Rel: Incident to BESCyberSystem 
 rel_incident_bcs = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (inc:Incident {incident_id: row.incident_id})
-MATCH (bcs:BESCyberSystem {bcs_id: row.bcs_id})
-MERGE (inc)-[:AFFECTED_SYSTEM {relationship_type: 'Incident_Impact', basis: 'CIP-008'}]->(bcs);
+MATCH (inc:Incident {industry_standard_regulation_id: 'NERC_CIP'})
+MATCH (bcs:BESCyberSystem {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE 
+  (inc.incident_id = 'INC-2024-001' AND bcs.bcs_id = 'BCS-001') OR
+  (inc.incident_id = 'INC-2024-002' AND bcs.bcs_id = 'BCS-002')
+MERGE (inc)-[:INCIDENT_IMPACTS_BES_SYSTEM {relationship_type: 'Incident_Impact', basis: 'CIP-008'}]->(bcs);
 """
 
-#Rel: BESCyberAsset to Vulnerability
+#Rel: BESCyberAsset to Vulnerability 
 rel_asset_vuln = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bca:BESCyberAsset {bca_id: row.bca_id})
-MATCH (vuln:Vulnerability {cve_id: row.cve_id})
-MERGE (bca)-[:HAS_VULNERABILITY {relationship_type: 'Vulnerability_Finding', detection_date: date(row.detection_date), status: row.status, basis: 'CIP-010'}]->(vuln);
+UNWIND [
+    {bca_id: 'BCA-001', cve_id: 'CVE-2024-5678', d_date: '2024-02-01', status: 'Open'},
+    {bca_id: 'BCA-003', cve_id: 'CVE-2023-1234', d_date: '2023-12-05', status: 'Remediated'}
+] AS row
+
+MATCH (bca:BESCyberAsset) WHERE bca.bca_id = row.bca_id
+MATCH (vuln:Vulnerability) WHERE vuln.cve_id = row.cve_id
+
+MERGE (bca)-[:BES_ASSET_HAS_VULNERABILITY {
+    relationship_type: 'Vulnerability_Finding', 
+    basis: 'CIP-010', 
+    detection_date: date(row.d_date), 
+    status: row.status
+}]->(vuln);
+"""
+#Rel: BESCyberAsset to PortService #
+rel_asset_port = """
+UNWIND [
+    {bca_id: 'BCA-001', port_id: 'PRT-443'},
+    {bca_id: 'BCA-001', port_id: 'PRT-80'},
+    {bca_id: 'BCA-002', port_id: 'PRT-443'},
+    {bca_id: 'BCA-003', port_id: 'PRT-20000'}
+] AS row
+
+MATCH (bca:BESCyberAsset {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE bca.bca_id = row.bca_id
+
+MATCH (ps:PortService {industry_standard_regulation_id: 'NERC_CIP'})
+WHERE ps.port_id = row.port_id
+
+MERGE (bca)-[:ASSET_EXPOSES_PORT {relationship_type: 'Port_Configuration', basis: 'CIP-007'}]->(ps);
 """
 
 #Rel: TestOrDrill to RecoveryPlan
@@ -739,23 +773,14 @@ rel_drill_plan = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (td:TestOrDrill {test_id: row.test_id})
 MATCH (rp:RecoveryPlan {plan_id: row.plan_id})
-MERGE (td)-[:TESTS_PLAN {relationship_type: 'Plan_Verification', basis: 'CIP-009'}]->(rp);
+MERGE (td)-[:TEST_OR_DRILL_TESTS_PLAN {relationship_type: 'Plan_Verification', basis: 'CIP-009'}]->(rp);
 """
-
-#Rel: BESCyberAsset to PortService
-rel_asset_port = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bca:BESCyberAsset {bca_id: row.bca_id})
-MATCH (ps:PortService {port_id: row.port_id})
-MERGE (bca)-[:EXPOSES_PORT {relationship_type: 'Port_Configuration', basis: 'CIP-007'}]->(ps);
-"""
-
 #Rel: Visitor to Facility
 rel_visitor_facility = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (vis:Visitor {visitor_id: row.visitor_id})
 MATCH (fac:Facility {facility_id: row.facility_id})
-MERGE (vis)-[:VISITED_FACILITY {relationship_type: 'Physical_Access_Log', basis: 'CIP-006'}]->(fac);
+MERGE (vis)-[:VISITOR_VISITED_FACILITY {relationship_type: 'Physical_Access_Log', basis: 'CIP-006'}]->(fac);
 """
 
 #Rel: Procedure to Standard
@@ -763,7 +788,52 @@ rel_proc_std = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (proc:Procedure {procedure_id: row.procedure_id})
 MATCH (std:Standard {standard_id: row.standard_id})
-MERGE (proc)-[:IMPLEMENTS_STANDARD {relationship_type: 'Compliance_Procedure'}]->(std);
+MERGE (proc)-[:PROCEDURE_IMPLEMENTS_STANDARD {relationship_type: 'Compliance_Procedure'}]->(std);
+"""
+orphan_audit = """
+MATCH (orphan:Audit) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_GOVERNS_AUDIT]->(orphan);
+"""
+orphan_change_authorization = """
+MATCH (orphan:ChangeAuthorization) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_GOVERNS_CHANGE_AUTHORIZATION]->(orphan);
+"""
+orphan_configuration_baseline = """
+MATCH (orphan:ConfigurationBaseline) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_APPLIES_TO_CONFIGURATION_BASELINE]->(orphan);
+"""
+orphan_domain = """
+MATCH (orphan:Domain) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_GOVERNS_DOMAIN]->(orphan);
+"""
+orphan_psp = """
+MATCH (orphan:PhysicalSecurityPerimeter) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_TRACKS_INCIDENT]->(orphan);
+"""
+orphan_port_service = """
+MATCH (orphan:PortService) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_SERVES_PORT]->(orphan);
+"""
+orphan_remediation_plan = """
+MATCH (orphan:RemediationPlan) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_GOVERNS_REMEDIATION_PLAN]->(orphan);
+"""
+orphan_requirement_part = """
+MATCH (orphan:RequirementPart) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_GOVERNS_REQUIREMENT_PART]->(orphan);
+"""
+orphan_violation = """
+MATCH (orphan:Violation) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'NERC_CIP'})
+MERGE (reg)-[:NERC_CIP_GOVERNS_VIOLATION]->(orphan);
 """
 
 
@@ -839,52 +909,52 @@ time.sleep(2)
 client.query(law_enforcement.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_LawEnforcement.csv'))
 time.sleep(2)
 
-client.query(risk_assessment.replace('$file_path',""))
+client.query(risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/risk_assessment.csv"))
 time.sleep(2)
 
-client.query(configuration_baseline.replace('$file_path',""))
+client.query(configuration_baseline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/configuration_baseline.csv"))
 time.sleep(2)
 
-client.query(procedure.replace('$file_path',""))
+client.query(procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/procedure.csv"))
 time.sleep(2)
 
-client.query(incident.replace('$file_path',""))
+client.query(incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/incident.csv"))
 time.sleep(2)
 
-client.query(recovery_plan.replace('$file_path',""))
+client.query(recovery_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/recovery_plan.csv"))
 time.sleep(2)
 
-client.query(test_or_drill.replace('$file_path',""))
+client.query(test_or_drill.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/test_drill.csv"))
 time.sleep(2)
 
-client.query(person.replace('$file_path',""))
+client.query(person.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/person.csv"))
 time.sleep(2)
 
-client.query(training_module.replace('$file_path',""))
+client.query(training_module.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/training_module.csv"))
 time.sleep(2)
 
-client.query(facility.replace('$file_path',""))
+client.query(facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/facility.csv"))
 time.sleep(2)
 
-client.query(visitor.replace('$file_path',""))
+client.query(visitor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/visitor.csv"))
 time.sleep(2)
 
-client.query(port_service.replace('$file_path',""))
+client.query(port_service.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/port_service.csv"))
 time.sleep(2)
 
-client.query(vulnerability.replace('$file_path',""))
+client.query(vulnerability.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/vulnerability.csv"))
 time.sleep(2)
 
-client.query(audit.replace('$file_path',""))
+client.query(audit.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC%20CIP%20-%20Audit.csv"))
 time.sleep(2)
 
-client.query(violation.replace('$file_path',""))
+client.query(violation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC%20CIP%20-%20Violation.csv"))
 time.sleep(2)
 
-client.query(remediation_plan.replace('$file_path',""))
+client.query(remediation_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC%20CIP%20-%20Remediation%20Plan.csv"))
 time.sleep(2)
 
-client.query(change_authorization.replace('$file_path',""))
+client.query(change_authorization.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/NERC%20CIP%20-%20Change%20Authorization.csv"))
 time.sleep(2)
 
 
@@ -962,46 +1032,72 @@ time.sleep(2)
 client.query(organization_law_enforcement)
 time.sleep(2)
 
-client.query(rel_risk_bcs.replace('$file_path',""))
+client.query(rel_risk_bcs)
 time.sleep(2)
 
-client.query(rel_bcs_facility.replace('$file_path',""))
+client.query(rel_bcs_facility)
 time.sleep(2)
 
-client.query(rel_person_role.replace('$file_path',""))
+client.query(rel_person_role)
 time.sleep(2)
 
-client.query(rel_person_training.replace('$file_path',""))
+client.query(rel_person_training.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/rel_person_training.csv"))
 time.sleep(2)
 
-client.query(rel_incident_bcs.replace('$file_path',""))
+client.query(rel_incident_bcs)
 time.sleep(2)
 
-client.query(rel_asset_vuln.replace('$file_path',""))
+client.query(rel_asset_vuln)
 time.sleep(2)
 
-client.query(rel_drill_plan.replace('$file_path',""))
+client.query(rel_drill_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/rel_drill_plan.csv"))
 time.sleep(2)
 
-client.query(rel_asset_port.replace('$file_path',""))
+client.query(rel_asset_port)
 time.sleep(2)
 
-client.query(rel_visitor_facility.replace('$file_path',""))
+client.query(rel_visitor_facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/rel_visitor_facility.csv"))
 time.sleep(2)
 
-client.query(rel_proc_std.replace('$file_path',""))
+client.query(rel_proc_std.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/rel_proc_std.csv"))
 time.sleep(2)
+
+client.query(orphan_audit)
+time.sleep(2)
+
+client.query(orphan_change_authorization)
+time.sleep(2)
+
+client.query(orphan_configuration_baseline)
+time.sleep(2)
+
+client.query(orphan_domain)
+time.sleep(2)
+
+client.query(orphan_psp)
+time.sleep(2)
+
+client.query(orphan_port_service)
+time.sleep(2)
+
+client.query(orphan_remediation_plan)
+time.sleep(2)
+
+client.query(orphan_requirement_part)
+time.sleep(2)
+
+client.query(orphan_violation)
+time.sleep(2)
+
 
  
 logger.info("Graph structure loaded successfully.")
 
 
-res = client.query("""MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -1016,14 +1112,20 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('nerc_cip.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to nerc_cip.json")
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('nerc_cip.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to nerc_cip.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
 

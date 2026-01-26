@@ -1,0 +1,8 @@
+category_id,name,description,code,display_order,focus_area,is_new_in_v6,total_controls_count
+CAT-01,Information Security Policies and Organization,Governance and strategy,1,1,Governance,false,5
+CAT-02,Human Resources and Awareness,Personnel security and training,2,2,People,false,7
+CAT-03,Physical and Environmental Security,Facility access and continuity,3,3,Physical,false,12
+CAT-04,Identity and Access Management,User identification and authorization,4,4,Access,false,15
+CAT-05,Incident Management and Compliance,Detection and legal compliance,5,5,Response,false,10
+CAT-06,Technical Security Measures,Network and system hardening,6,6,Technical,false,20
+CAT-07,Data Protection,GDPR and personal data handling,7,7,Privacy,true,10

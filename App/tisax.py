@@ -206,6 +206,98 @@ ON CREATE SET
   ex.operator    = row.operator,
   ex.status      = row.status;
 """
+
+#Control_category
+control_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cc:ControlCategory {industry_standard_regulation_id: 'TISAX 6.0', category_id: row.category_id})
+ON CREATE SET
+  cc.name = row.name,
+  cc.description = row.description,
+  cc.code = row.code,
+  cc.display_order = toInteger(row.display_order),
+  cc.focus_area = row.focus_area,
+  cc.is_new_in_v6 = toBoolean(row.is_new_in_v6),
+  cc.total_controls = toInteger(row.total_controls_count);
+"""
+
+#Role
+role = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rl:Role {industry_standard_regulation_id: 'TISAX 6.0', role_id: row.role_id})
+ON CREATE SET
+  rl.title               = row.role_title,
+  rl.description         = row.description,
+  rl.responsibilities    = row.key_responsibilities,
+  rl.qualification_reqs  = row.qualification_requirements,
+  rl.is_mandatory        = toBoolean(row.is_mandatory),
+  rl.reporting_line      = row.reporting_line,
+  rl.typical_department  = row.typical_department;
+"""
+
+#Security_policy
+security_policy = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sp:SecurityPolicy {industry_standard_regulation_id: 'TISAX 6.0', policy_id: row.policy_id})
+ON CREATE SET
+  sp.title               = row.title,
+  sp.type                = row.policy_type,
+  sp.description         = row.description,
+  sp.version             = row.version,
+  sp.last_review_date    = date(row.last_review_date),
+  sp.next_review_date    = date(row.next_review_date),
+  sp.approval_status     = row.approval_status,
+  sp.enforcement_level   = row.enforcement_level,
+  sp.iso_reference       = row.iso_27001_reference,
+  sp.document_url        = row.document_url;
+"""
+
+#Data_category
+data_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (dc:DataCategory {industry_standard_regulation_id: 'TISAX 6.0', data_category_id: row.data_category_id})
+ON CREATE SET
+  dc.name                = row.name,
+  dc.description     = row.description,
+  dc.classification      = row.default_classification,
+  dc.is_personal_data    = toBoolean(row.is_personal_data),
+  dc.is_prototype_data   = toBoolean(row.is_prototype_data),
+  dc.retention_period    = row.typical_retention_period,
+  dc.handling_reqs       = row.handling_requirements,
+  dc.encryption_req      = toBoolean(row.encryption_required);
+"""
+
+#Assessment_phase
+assessment_phase = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (aph:AssessmentPhase {industry_standard_regulation_id: 'TISAX 6.0', phase_id: row.phase_id})
+ON CREATE SET
+  aph.name               = row.name,
+  aph.description        = row.description,
+  aph.sequence_order     = toInteger(row.sequence_order),
+  aph.typical_duration   = row.typical_duration_weeks,
+  aph.required_inputs    = row.required_inputs,
+  aph.deliverables       = row.expected_deliverables,
+  aph.is_mandatory       = toBoolean(row.is_mandatory),
+  aph.owner              = row.process_owner;
+"""
+
+#Finding
+finding = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (fd:Finding {industry_standard_regulation_id: 'TISAX 6.0', finding_id: row.finding_id})
+ON CREATE SET
+  fd.type                = row.finding_type,
+  fd.description         = row.description,
+  fd.severity            = row.severity_level,
+  fd.date_identified     = date(row.date_identified),
+  fd.auditor_comment     = row.auditor_comment,
+  fd.status              = row.status,
+  fd.remediation_deadline = date(row.remediation_deadline),
+  fd.root_cause          = row.root_cause_analysis,
+  fd.evidence_ref        = row.evidence_reference;
+"""
+
 #Relationships
 #REGISTERS_IN_TISAX
 registers_in_tisax = """
@@ -395,14 +487,72 @@ ON CREATE SET
   r.response_required = row.response_required;
 """
 
+#Isa_catalogue_has_category
+isa_catalogue_has_category = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ic:ISACatalogue {isa_catalogue_id: row.source_catalogue_id})
+MATCH (cc:ControlCategory {category_id: row.target_category_id})
+MERGE (ic)-[r:ISA_CATALOGUE_HAS_CATEGORY {type: row.relationship_type}]->(cc)
+ON CREATE SET
+  r.inclusion_date = date(row.inclusion_date),
+  r.is_mandatory   = toBoolean(row.is_mandatory);
+"""
 
+#Organization_assigns_role
+organization_assigns_role = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {organization_id: row.source_organization_id})
+MATCH (rl:Role {role_id: row.target_role_id})
+MERGE (org)-[r:ORGANISATION_ASSIGNS_ROLE {type: row.relationship_type}]->(rl)
+ON CREATE SET
+  r.assignee_name   = row.assignee_name,
+  r.assignment_date = date(row.assignment_date);
+"""
 
+#Organization_establishes_policy
+organization_establishes_policy = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:Organization {organization_id: row.source_organization_id})
+MATCH (sp:SecurityPolicy {policy_id: row.target_policy_id})
+MERGE (org)-[r:ORGANISATION_ESTABLISHES_POLICY {type: row.relationship_type}]->(sp)
+ON CREATE SET
+  r.establishment_date = date(row.establishment_date),
+  r.owner_role_id      = row.owner_role_id;
+"""
 
- 
- 
+#Protection_object_classified_as
+protection_object_classified_as = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (po:ProtectionObject {protection_object_id: row.source_object_id})
+MATCH (dc:DataCategory {data_category_id: row.target_category_id})
+MERGE (po)-[r:PROTECTION_OBJECT_CLASSIFIED_AS {type: row.relationship_type}]->(dc)
+ON CREATE SET
+  r.classification_date = date(row.classification_date),
+  r.volume_estimate     = row.volume_estimate;
+"""
 
+#Assessment_includes_phase
+assessment_includes_phase = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ass:Assessment {assessment_id: row.source_assessment_id})
+MATCH (aph:AssessmentPhase {phase_id: row.target_phase_id})
+MERGE (ass)-[r:ASSESSMENT_INCLUDES_PHASE {type: row.relationship_type}]->(aph)
+ON CREATE SET
+  r.start_date = date(row.start_date),
+  r.end_date   = date(row.end_date),
+  r.status = row.status;
+"""
 
-
+#Assessment_result_contains_finding
+assessment_result_contains_finding = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ar:AssessmentResult {assessment_result_id: row.source_result_id})
+MATCH (fd:Finding {finding_id: row.target_finding_id})
+MERGE (ar)-[r:ASSESSMENT_RESULT_CONTAINS_FINDING {type: row.relationship_type}]->(fd)
+ON CREATE SET
+  r.impact_on_label     = row.impact_on_label,
+  r.verification_method = row.verification_method;
+"""
 
 import os
 import time
@@ -459,6 +609,23 @@ time.sleep(2)
 
 client.query(exchange_node.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_Exchange_nodes.csv'))
 time.sleep(2)
+client.query(control_category.replace('$file_path',""))
+time.sleep(2)
+
+client.query(role.replace('$file_path',""))
+time.sleep(2)
+
+client.query(security_policy.replace('$file_path',""))
+time.sleep(2)
+
+client.query(data_category.replace('$file_path',""))
+time.sleep(2)
+
+client.query(assessment_phase.replace('$file_path',""))
+time.sleep(2)
+
+client.query(finding.replace('$file_path',""))
+time.sleep(2)
 
 #Relationships
 client.query(registers_in_tisax.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_REGISTERS_IN_TISAX_relationships.csv'))
@@ -502,6 +669,24 @@ time.sleep(2)
 client.query(ISA_control.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CONTAINS_QUESTIONS.csv'))
 time.sleep(2)
 
+client.query(isa_catalogue_has_category.replace('$file_path',""))
+time.sleep(2)
+
+client.query(organization_assigns_role.replace('$file_path',""))
+time.sleep(2)
+
+client.query(organization_establishes_policy.replace('$file_path',""))
+time.sleep(2)
+
+client.query(protection_object_classified_as.replace('$file_path',""))
+time.sleep(2)
+
+client.query(assessment_includes_phase.replace('$file_path',""))
+time.sleep(2)
+
+client.query(assessment_result_contains_finding.replace('$file_path',""))
+time.sleep(2)
+ 
  
 logger.info("Graph structure loaded successfully.")
 

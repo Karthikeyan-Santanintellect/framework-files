@@ -1,0 +1,6 @@
+role_id,role_title,description,key_responsibilities,qualification_requirements,is_mandatory,reporting_line,typical_department
+ROLE-01,Information Security Officer,Leads the ISMS program,Oversight; Policy; Risk Assessment,CISO/CISM Certification,true,CEO/CIO,IT/Security
+ROLE-02,Privacy Officer,Manages GDPR compliance,Data Protection; Subject Rights,DPO Certification/Legal,true,Legal/Compliance,Legal
+ROLE-03,Qualified Individual,Operational security lead,Program implementation; Monitoring,Technical Security Background,true,ISO,IT/Security
+ROLE-04,Compliance Officer,Ensures regulatory alignment,Audit coordination; Legal checks,Legal/Compliance Background,false,General Counsel,Legal
+ROLE-05,Information Security Steering Committee,Governance body,Resource allocation; Strategic oversight,Executive Management,true,Board,Management

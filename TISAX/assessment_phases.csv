@@ -1,0 +1,7 @@
+phase_id,name,description,sequence_order,typical_duration_weeks,required_inputs,expected_deliverables,is_mandatory,process_owner
+PH-01,Registration,Register on ENX portal; Scope definition,1,1,Company Details,Participant ID,true,ENX Association
+PH-02,Preparation,Self-assessment; Gap analysis,2,8,ISA Questionnaire,Completed Self-Assessment,true,Organization
+PH-03,Audit,External verification (Remote or On-Site),3,4,Evidence; Documentation,Audit Report,true,Audit Provider
+PH-04,Remediation,Fixing deviations (if any),4,12,Corrective Action Plan,Closed Deviations,false,Organization
+PH-05,Label Issuance,Formal recognition of compliance,5,1,Final Report,TISAX Label,true,ENX Association
+PH-06,Maintenance,Ongoing validity period,6,156,ISMS Operations,Continuous Compliance,true,Organization

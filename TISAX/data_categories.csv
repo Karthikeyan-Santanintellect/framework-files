@@ -1,0 +1,6 @@
+data_category_id,name,description,default_classification,is_personal_data,is_prototype_data,typical_retention_period,handling_requirements,encryption_required
+DAT-01,Prototype Information,Vehicle designs/physical prototypes,Strictly Confidential,false,true,10 Years,Physical isolation; Biometrics,true
+DAT-02,Product Development Data,CAD files/specs/BOMs,Confidential,false,false,15 Years,Access control; Logging,true
+DAT-03,Personal Information,Customer/Employee PII,Confidential,true,false,Per GDPR,Data Minimization; Erasure,true
+DAT-04,Operational Information,Production/Logistics data,High Availability,false,false,5 Years,Backup; Redundancy,false
+DAT-05,Partner Information,Third-party IP/Contracts,Confidential,false,false,Contract Term,NDA; Segregation,true
