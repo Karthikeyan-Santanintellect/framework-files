@@ -1,8 +1,8 @@
 {
   "nodes": [
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:730",
       "mainLabel": "IndustryStandardAndRegulation",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
       "labels": [
         "IndustryStandardAndRegulation"
       ],
@@ -16,8 +16,88 @@
       "status": "Active"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:735",
       "mainLabel": "Organization",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "labels": [
+        "Organization"
+      ],
+      "contact_phone": "+49-123-4567",
+      "industry_sector": "Automotive",
+      "certification_validity_end": "2027-08-15",
+      "assessment_status": "Assessed",
+      "highest_al_current": 2,
+      "type": "Supplier",
+      "last_assessment_date": "2024-08-15",
+      "contact_email": "info@autosupply.de",
+      "registration_date": "2022-01-15",
+      "organization_id": "ORG-001",
+      "name": "AutoSupply Corp",
+      "location": "Germany",
+      "industry_standard_regulation_id": "TISAX 6.0"
+    },
+    {
+      "mainLabel": "Organization",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1665",
+      "labels": [
+        "Organization"
+      ],
+      "contact_phone": "+49-456-7890",
+      "industry_sector": "Automotive",
+      "certification_validity_end": "2027-06-20",
+      "assessment_status": "Assessed",
+      "highest_al_current": 3,
+      "type": "Supplier",
+      "last_assessment_date": "2024-06-20",
+      "contact_email": "contact@premium-auto.de",
+      "registration_date": "2021-06-20",
+      "organization_id": "ORG-002",
+      "name": "Premium Automotive",
+      "location": "Germany",
+      "industry_standard_regulation_id": "TISAX 6.0"
+    },
+    {
+      "mainLabel": "Organization",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1666",
+      "labels": [
+        "Organization"
+      ],
+      "contact_phone": "+41-79-1234567",
+      "industry_sector": "IT Services",
+      "certification_validity_end": "2027-11-10",
+      "assessment_status": "AssessmentInProgress",
+      "highest_al_current": 2,
+      "type": "ServiceProvider",
+      "last_assessment_date": "2024-11-10",
+      "contact_email": "compliance@techsolutions.ch",
+      "registration_date": "2023-03-10",
+      "organization_id": "ORG-003",
+      "name": "Tech Solutions GmbH",
+      "location": "Switzerland",
+      "industry_standard_regulation_id": "TISAX 6.0"
+    },
+    {
+      "mainLabel": "Organization",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1667",
+      "labels": [
+        "Organization"
+      ],
+      "contact_phone": "+49-789-0123",
+      "industry_sector": "Automotive",
+      "certification_validity_end": "2027-07-05",
+      "assessment_status": "ResultsExchanged",
+      "highest_al_current": 3,
+      "type": "OEM",
+      "last_assessment_date": "2024-07-05",
+      "contact_email": "admin@manufacturing.de",
+      "registration_date": "2020-11-05",
+      "organization_id": "ORG-004",
+      "name": "Manufacturing LLC",
+      "location": "Germany",
+      "industry_standard_regulation_id": "TISAX 6.0"
+    },
+    {
+      "mainLabel": "Organization",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1668",
       "labels": [
         "Organization"
       ],
@@ -34,30 +114,285 @@
       "contact_email": "tisax@electrosys.at"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:761",
-      "mainLabel": "ControlQuestion",
+      "mainLabel": "Assessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
       "labels": [
-        "ControlQuestion"
+        "Assessment"
       ],
-      "types": "Plan document; Incident logs; Test results",
-      "last_revision_date": "2024-02-01",
-      "criticality": "Critical",
-      "guidance_url": "https://portal.enx.com/qa-005",
-      "number": "5",
-      "applies_to_al1": "False",
-      "control_question_id": "CQ-005",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "options": "Documented and tested; Documented; None",
-      "ids": "CQ-001; CQ-006",
-      "text": "Is there a documented incident response plan?",
+      "level": "2",
+      "scope_description": "Production systems and data handling",
+      "on_site_required": "True",
+      "assessment_id": "ASS-001",
+      "assessment_type": "Initial",
+      "documentation_reviewed": "True",
+      "completion_date": "2024-08-15",
       "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "Incident Management",
-      "levels": "Partial; Complete; Regular review"
+      "scope_type": "StandardScope",
+      "methodology": "Risk-Based",
+      "status": "Completed",
+      "start_date": "2024-01-10",
+      "planned_duration_days": "180"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:750",
+      "mainLabel": "Assessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "labels": [
+        "Assessment"
+      ],
+      "level": "3",
+      "scope_description": "Full organizational security assessment",
+      "on_site_required": "True",
+      "assessment_id": "ASS-002",
+      "assessment_type": "Renewal",
+      "documentation_reviewed": "True",
+      "completion_date": "2023-12-20",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "scope_type": "CustomScope",
+      "methodology": "Comprehensive",
+      "status": "Completed",
+      "start_date": "2023-06-15",
+      "planned_duration_days": "180"
+    },
+    {
+      "mainLabel": "Assessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "labels": [
+        "Assessment"
+      ],
+      "level": "2",
+      "scope_description": "Supply chain information systems",
+      "on_site_required": "True",
+      "assessment_id": "ASS-003",
+      "assessment_type": "Initial",
+      "documentation_reviewed": "True",
+      "completion_date": "2024-11-10",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "scope_type": "StandardScope",
+      "methodology": "Risk-Based",
+      "status": "Completed",
+      "start_date": "2024-08-20",
+      "planned_duration_days": "90"
+    },
+    {
+      "mainLabel": "Assessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1672",
+      "labels": [
+        "Assessment"
+      ],
+      "level": "3",
+      "scope_description": "Manufacturing and R&D systems",
+      "on_site_required": "True",
+      "assessment_id": "ASS-004",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "assessment_type": "Upgrade",
+      "documentation_reviewed": "False",
+      "scope_type": "CustomScope",
+      "methodology": "Comprehensive",
+      "status": "InProgress",
+      "start_date": "2024-09-05",
+      "planned_duration_days": "120"
+    },
+    {
+      "mainLabel": "Assessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1673",
+      "labels": [
+        "Assessment"
+      ],
+      "level": "2",
+      "scope_description": "Customer-facing applications",
+      "on_site_required": "False",
+      "assessment_id": "ASS-005",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "assessment_type": "Renewal",
+      "documentation_reviewed": "False",
+      "scope_type": "StandardScope",
+      "methodology": "Risk-Based",
+      "status": "InProgress",
+      "start_date": "2024-10-01",
+      "planned_duration_days": "90"
+    },
+    {
+      "mainLabel": "Assessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1674",
+      "labels": [
+        "Assessment"
+      ],
+      "level": "1",
+      "scope_description": "Basic infrastructure audit",
+      "on_site_required": "False",
+      "assessment_id": "ASS-006",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "assessment_type": "Initial",
+      "documentation_reviewed": "False",
+      "scope_type": "StandardScope",
+      "methodology": "Basic",
+      "status": "Planned",
+      "start_date": "2024-11-15",
+      "planned_duration_days": "60"
+    },
+    {
+      "mainLabel": "AssessmentLevel",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1675",
+      "labels": [
+        "AssessmentLevel"
+      ],
+      "self_assessment_allowed": "True",
+      "protection_level": "Basic",
+      "description": "Basic security assessment for less sensitive environments",
+      "costs_implications": "Low costs",
+      "external_audit_required": "False",
+      "isa_catalogue_required": "ISA 1",
+      "typical_scope_size": "Small (50-100 controls)",
+      "requires_on_site_visit": "False",
+      "name": "Assessment Level 1",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "assessment_level_id": "1",
+      "data_protection_needs": "Standard data protection",
+      "certification_validity_years": "3"
+    },
+    {
+      "mainLabel": "AssessmentLevel",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1676",
+      "labels": [
+        "AssessmentLevel"
+      ],
+      "self_assessment_allowed": "False",
+      "protection_level": "Moderate",
+      "description": "Moderate security assessment for standard operations",
+      "costs_implications": "Medium costs",
+      "external_audit_required": "True",
+      "isa_catalogue_required": "ISA 1, ISA 2",
+      "typical_scope_size": "Medium (100-200 controls)",
+      "requires_on_site_visit": "True",
+      "name": "Assessment Level 2",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "assessment_level_id": "2",
+      "data_protection_needs": "Enhanced protection",
+      "certification_validity_years": "3"
+    },
+    {
+      "mainLabel": "AssessmentLevel",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1677",
+      "labels": [
+        "AssessmentLevel"
+      ],
+      "self_assessment_allowed": "False",
+      "protection_level": "Advanced",
+      "description": "Advanced security assessment for highly sensitive information",
+      "costs_implications": "High costs",
+      "external_audit_required": "True",
+      "isa_catalogue_required": "ISA 1, ISA 2, ISA 3",
+      "typical_scope_size": "Large (200+ controls)",
+      "requires_on_site_visit": "True",
+      "name": "Assessment Level 3",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "assessment_level_id": "3",
+      "data_protection_needs": "Maximum protection with encryption",
+      "certification_validity_years": "3"
+    },
+    {
+      "mainLabel": "AssessmentObjective",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1678",
+      "labels": [
+        "AssessmentObjective"
+      ],
+      "evidence_types_required": "Policies; Procedures; Training records",
+      "level": "High",
+      "count": "45",
+      "description": "Assessment of ISMS policies, processes and controls",
+      "typical_effort_hours": "80",
+      "version": "TISAX 5.0",
+      "standards": "ISO 27001",
+      "ref": "ISA 1.1",
+      "name": "Information Security Management System",
+      "assessment_objective_id": "OBJ-001",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "InformationSecurity",
+      "risk_area": "Governance"
+    },
+    {
+      "mainLabel": "AssessmentObjective",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1679",
+      "labels": [
+        "AssessmentObjective"
+      ],
+      "evidence_types_required": "Data registers; DPAs; Audit logs",
+      "level": "Critical",
+      "count": "38",
+      "description": "Compliance with data protection regulations",
+      "typical_effort_hours": "70",
+      "version": "TISAX 5.0",
+      "standards": "ISO 27001; ISO 9001",
+      "ref": "ISA 1.2",
+      "name": "Data Protection and Privacy",
+      "assessment_objective_id": "OBJ-002",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "DataProtection",
+      "risk_area": "Data Protection"
+    },
+    {
+      "mainLabel": "AssessmentObjective",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1680",
+      "labels": [
+        "AssessmentObjective"
+      ],
+      "evidence_types_required": "IP Policies; Contracts; Access logs",
+      "level": "High",
+      "count": "25",
+      "description": "Protection of sensitive product information",
+      "typical_effort_hours": "50",
+      "version": "TISAX 5.0",
+      "standards": "ISO 27001",
+      "ref": "ISA 1.3",
+      "name": "Prototype Protection",
+      "assessment_objective_id": "OBJ-003",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "PrototypeProtection",
+      "risk_area": "IP Protection"
+    },
+    {
+      "mainLabel": "AssessmentObjective",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1681",
+      "labels": [
+        "AssessmentObjective"
+      ],
+      "evidence_types_required": "User lists; MFA configs; Access reviews",
+      "level": "Critical",
+      "count": "32",
+      "description": "Access controls and identity management",
+      "typical_effort_hours": "60",
+      "version": "TISAX 5.0",
+      "standards": "ISO 27001",
+      "ref": "ISA 2.1",
+      "name": "Access Control and Authentication",
+      "assessment_objective_id": "OBJ-004",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "InformationSecurity",
+      "risk_area": "Access"
+    },
+    {
+      "mainLabel": "AssessmentObjective",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1682",
+      "labels": [
+        "AssessmentObjective"
+      ],
+      "evidence_types_required": "Risk registers; Assessment reports",
+      "level": "High",
+      "count": "40",
+      "description": "Risk assessment and vulnerability management",
+      "typical_effort_hours": "75",
+      "version": "TISAX 5.0",
+      "standards": "ISO 27005",
+      "ref": "ISA 2.2",
+      "name": "Risk and Vulnerability Management",
+      "assessment_objective_id": "OBJ-005",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "InformationSecurity",
+      "risk_area": "Risk Management"
+    },
+    {
       "mainLabel": "AuditProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1683",
       "labels": [
         "AuditProvider"
       ],
@@ -79,133 +414,8 @@
       "average_audit_duration_days": "120"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:742",
-      "mainLabel": "AssessmentLevel",
-      "labels": [
-        "AssessmentLevel"
-      ],
-      "self_assessment_allowed": "True",
-      "protection_level": "Basic",
-      "description": "Basic security assessment for less sensitive environments",
-      "costs_implications": "Low costs",
-      "external_audit_required": "False",
-      "isa_catalogue_required": "ISA 1",
-      "typical_scope_size": "Small (50-100 controls)",
-      "requires_on_site_visit": "False",
-      "name": "Assessment Level 1",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "assessment_level_id": "1",
-      "data_protection_needs": "Standard data protection",
-      "certification_validity_years": "3"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:740",
-      "mainLabel": "Assessment",
-      "labels": [
-        "Assessment"
-      ],
-      "level": "2",
-      "scope_description": "Customer-facing applications",
-      "on_site_required": "False",
-      "assessment_id": "ASS-005",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "assessment_type": "Renewal",
-      "documentation_reviewed": "False",
-      "scope_type": "StandardScope",
-      "methodology": "Risk-Based",
-      "status": "InProgress",
-      "start_date": "2024-10-01",
-      "planned_duration_days": "90"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "mainLabel": "ISACatalogue",
-      "labels": [
-        "ISACatalogue"
-      ],
-      "last_updated": "2024-06-20",
-      "total_control_questions": "180",
-      "isa_catalogue_id": "ISA-001",
-      "type": "InformationSecurity",
-      "version": "5.0",
-      "alignment_with_standards": "ISO 27001; ISO 27002; ISO 27005",
-      "url": "https://portal.enx.com/isa-1",
-      "geographic_applicability": "Global",
-      "release_date": "2023-01-15",
-      "name": "ISA Catalogue 1 - Fundamentals",
-      "scope_coverage": "Core information security controls",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "categories": "12",
-      "levels": "AL1, AL2, AL3",
-      "language_support": "German; English; French"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:760",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "types": "Training records; Attendance lists; Tests",
-      "last_revision_date": "2024-02-01",
-      "criticality": "High",
-      "guidance_url": "https://portal.enx.com/qa-004",
-      "number": "4",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-004",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "options": "Annual; Quarterly; No training",
-      "ids": "CQ-001; CQ-005",
-      "text": "Are regular security awareness trainings conducted?",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "Awareness",
-      "levels": "Partial; Complete; Continuous"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:757",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "types": "Policy documents; Approval records",
-      "last_revision_date": "2024-01-15",
-      "criticality": "High",
-      "guidance_url": "https://portal.enx.com/qa-001",
-      "number": "1",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-001",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "options": "Yes with evidence; Partial; Not implemented",
-      "ids": "CQ-005; CQ-006",
-      "text": "Is there a documented information security policy?",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "Governance",
-      "levels": "Documented; Implemented; Optimized"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:734",
-      "mainLabel": "Organization",
-      "labels": [
-        "Organization"
-      ],
-      "contact_phone": "+49-789-0123",
-      "industry_sector": "Automotive",
-      "certification_validity_end": "2027-07-05",
-      "assessment_status": "ResultsExchanged",
-      "highest_al_current": 3,
-      "type": "OEM",
-      "last_assessment_date": "2024-07-05",
-      "contact_email": "admin@manufacturing.de",
-      "registration_date": "2020-11-05",
-      "organization_id": "ORG-004",
-      "name": "Manufacturing LLC",
-      "location": "Germany",
-      "industry_standard_regulation_id": "TISAX 6.0"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:751",
       "mainLabel": "AuditProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1684",
       "labels": [
         "AuditProvider"
       ],
@@ -227,133 +437,8 @@
       "average_audit_duration_days": "100"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:744",
-      "mainLabel": "AssessmentLevel",
-      "labels": [
-        "AssessmentLevel"
-      ],
-      "self_assessment_allowed": "False",
-      "protection_level": "Advanced",
-      "description": "Advanced security assessment for highly sensitive information",
-      "costs_implications": "High costs",
-      "external_audit_required": "True",
-      "isa_catalogue_required": "ISA 1, ISA 2, ISA 3",
-      "typical_scope_size": "Large (200+ controls)",
-      "requires_on_site_visit": "True",
-      "name": "Assessment Level 3",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "assessment_level_id": "3",
-      "data_protection_needs": "Maximum protection with encryption",
-      "certification_validity_years": "3"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:739",
-      "mainLabel": "Assessment",
-      "labels": [
-        "Assessment"
-      ],
-      "level": "3",
-      "scope_description": "Manufacturing and R&D systems",
-      "on_site_required": "True",
-      "assessment_id": "ASS-004",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "assessment_type": "Upgrade",
-      "documentation_reviewed": "False",
-      "scope_type": "CustomScope",
-      "methodology": "Comprehensive",
-      "status": "InProgress",
-      "start_date": "2024-09-05",
-      "planned_duration_days": "120"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:755",
-      "mainLabel": "ISACatalogue",
-      "labels": [
-        "ISACatalogue"
-      ],
-      "last_updated": "2024-06-20",
-      "total_control_questions": "250",
-      "isa_catalogue_id": "ISA-002",
-      "type": "InformationSecurity",
-      "version": "5.0",
-      "alignment_with_standards": "ISO 27001; ISO 27035; BSI IT-Grundschutz",
-      "url": "https://portal.enx.com/isa-2",
-      "geographic_applicability": "Global",
-      "release_date": "2023-01-15",
-      "name": "ISA Catalogue 2 - Advanced",
-      "scope_coverage": "Advanced security and compliance",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "categories": "18",
-      "levels": "AL2, AL3",
-      "language_support": "German; English"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:759",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "types": "Encryption configs; Key management docs",
-      "last_revision_date": "2024-01-15",
-      "criticality": "Critical",
-      "guidance_url": "https://portal.enx.com/qa-003",
-      "number": "3",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-003",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "options": "Yes, all data; Partial encryption; No encryption",
-      "ids": "CQ-001",
-      "text": "Is encryption used for data in transit and at rest?",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "Data Protection",
-      "levels": "Implemented; Monitored; Optimized"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:758",
-      "mainLabel": "ControlQuestion",
-      "labels": [
-        "ControlQuestion"
-      ],
-      "types": "System configs; User listings; Audit logs",
-      "last_revision_date": "2024-01-15",
-      "criticality": "Critical",
-      "guidance_url": "https://portal.enx.com/qa-002",
-      "number": "2",
-      "applies_to_al1": "True",
-      "control_question_id": "CQ-002",
-      "applies_to_al3": "True",
-      "applies_to_al2": "True",
-      "options": "Fully implemented; Partially; Not implemented",
-      "ids": "CQ-007; CQ-008",
-      "text": "Are access controls implemented for sensitive systems?",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "Access Control",
-      "levels": "Implemented; Monitored; Optimized"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:733",
-      "mainLabel": "Organization",
-      "labels": [
-        "Organization"
-      ],
-      "contact_phone": "+41-79-1234567",
-      "industry_sector": "IT Services",
-      "certification_validity_end": "2027-11-10",
-      "assessment_status": "AssessmentInProgress",
-      "highest_al_current": 2,
-      "type": "ServiceProvider",
-      "last_assessment_date": "2024-11-10",
-      "contact_email": "compliance@techsolutions.ch",
-      "registration_date": "2023-03-10",
-      "organization_id": "ORG-003",
-      "name": "Tech Solutions GmbH",
-      "location": "Switzerland",
-      "industry_standard_regulation_id": "TISAX 6.0"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:752",
       "mainLabel": "AuditProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1685",
       "labels": [
         "AuditProvider"
       ],
@@ -375,190 +460,294 @@
       "average_audit_duration_days": "90"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:743",
-      "mainLabel": "AssessmentLevel",
+      "mainLabel": "AuditProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1686",
       "labels": [
-        "AssessmentLevel"
+        "AuditProvider"
       ],
-      "self_assessment_allowed": "False",
-      "protection_level": "Moderate",
-      "description": "Moderate security assessment for standard operations",
-      "costs_implications": "Medium costs",
-      "external_audit_required": "True",
-      "isa_catalogue_required": "ISA 1, ISA 2",
-      "typical_scope_size": "Medium (100-200 controls)",
-      "requires_on_site_visit": "True",
-      "name": "Assessment Level 2",
+      "date": "2021-09-20",
+      "geographic_coverage": "Germany",
+      "website": "www.eu-compliance.de",
+      "contact_person": "Klaus Weber",
+      "number": "AP-REG-2021-004",
+      "industry_specialization": "General",
+      "audit_provider_id": "AP-004",
+      "quality_rating": "3.2",
+      "max_concurrent_assessments": "5",
+      "name": "European Compliance Consultants",
       "industry_standard_regulation_id": "TISAX 6.0",
-      "assessment_level_id": "2",
-      "data_protection_needs": "Enhanced protection",
-      "certification_validity_years": "3"
+      "certification_count": "32",
+      "expiry": "2024-12-31",
+      "levels": "AL1",
+      "status": "Suspended",
+      "average_audit_duration_days": "60"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "mainLabel": "Assessment",
+      "mainLabel": "ISACatalogue",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
       "labels": [
-        "Assessment"
+        "ISACatalogue"
       ],
-      "level": "2",
-      "scope_description": "Supply chain information systems",
-      "on_site_required": "True",
-      "assessment_id": "ASS-003",
-      "assessment_type": "Initial",
-      "documentation_reviewed": "True",
-      "completion_date": "2024-11-10",
+      "last_updated": "2024-06-20",
+      "total_control_questions": "180",
+      "isa_catalogue_id": "ISA-001",
+      "type": "InformationSecurity",
+      "version": "5.0",
+      "alignment_with_standards": "ISO 27001; ISO 27002; ISO 27005",
+      "url": "https://portal.enx.com/isa-1",
+      "geographic_applicability": "Global",
+      "release_date": "2023-01-15",
+      "name": "ISA Catalogue 1 - Fundamentals",
+      "scope_coverage": "Core information security controls",
       "industry_standard_regulation_id": "TISAX 6.0",
-      "scope_type": "StandardScope",
-      "methodology": "Risk-Based",
-      "status": "Completed",
-      "start_date": "2024-08-20",
-      "planned_duration_days": "90"
+      "categories": "12",
+      "levels": "AL1, AL2, AL3",
+      "language_support": "German; English; French"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:767",
+      "mainLabel": "ISACatalogue",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "labels": [
+        "ISACatalogue"
+      ],
+      "last_updated": "2024-06-20",
+      "total_control_questions": "250",
+      "isa_catalogue_id": "ISA-002",
+      "type": "InformationSecurity",
+      "version": "5.0",
+      "alignment_with_standards": "ISO 27001; ISO 27035; BSI IT-Grundschutz",
+      "url": "https://portal.enx.com/isa-2",
+      "geographic_applicability": "Global",
+      "release_date": "2023-01-15",
+      "name": "ISA Catalogue 2 - Advanced",
+      "scope_coverage": "Advanced security and compliance",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "categories": "18",
+      "levels": "AL2, AL3",
+      "language_support": "German; English"
+    },
+    {
+      "mainLabel": "ISACatalogue",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "labels": [
+        "ISACatalogue"
+      ],
+      "last_updated": "2024-06-20",
+      "total_control_questions": "120",
+      "isa_catalogue_id": "ISA-003",
+      "type": "PrototypeProtection",
+      "version": "5.0",
+      "alignment_with_standards": "ISO 27001; Patent law; Trade secret law",
+      "url": "https://portal.enx.com/isa-3",
+      "geographic_applicability": "Germany, Austria, Switzerland",
+      "release_date": "2023-03-01",
+      "name": "ISA Catalogue 3 - Specialized",
+      "scope_coverage": "Prototype and IP protection",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "categories": "8",
+      "levels": "AL3",
+      "language_support": "German; English"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1690",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Policy documents; Approval records",
+      "last_revision_date": "2024-01-15",
+      "criticality": "High",
+      "guidance_url": "https://portal.enx.com/qa-001",
+      "number": "1",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-001",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Yes with evidence; Partial; Not implemented",
+      "ids": "CQ-005; CQ-006",
+      "text": "Is there a documented information security policy?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Governance",
+      "levels": "Documented; Implemented; Optimized"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1691",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "System configs; User listings; Audit logs",
+      "last_revision_date": "2024-01-15",
+      "criticality": "Critical",
+      "guidance_url": "https://portal.enx.com/qa-002",
+      "number": "2",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-002",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Fully implemented; Partially; Not implemented",
+      "ids": "CQ-007; CQ-008",
+      "text": "Are access controls implemented for sensitive systems?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Access Control",
+      "levels": "Implemented; Monitored; Optimized"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1692",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Encryption configs; Key management docs",
+      "last_revision_date": "2024-01-15",
+      "criticality": "Critical",
+      "guidance_url": "https://portal.enx.com/qa-003",
+      "number": "3",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-003",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Yes, all data; Partial encryption; No encryption",
+      "ids": "CQ-001",
+      "text": "Is encryption used for data in transit and at rest?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Data Protection",
+      "levels": "Implemented; Monitored; Optimized"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1693",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Training records; Attendance lists; Tests",
+      "last_revision_date": "2024-02-01",
+      "criticality": "High",
+      "guidance_url": "https://portal.enx.com/qa-004",
+      "number": "4",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-004",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Annual; Quarterly; No training",
+      "ids": "CQ-001; CQ-005",
+      "text": "Are regular security awareness trainings conducted?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Awareness",
+      "levels": "Partial; Complete; Continuous"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1694",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Plan document; Incident logs; Test results",
+      "last_revision_date": "2024-02-01",
+      "criticality": "Critical",
+      "guidance_url": "https://portal.enx.com/qa-005",
+      "number": "5",
+      "applies_to_al1": "False",
+      "control_question_id": "CQ-005",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Documented and tested; Documented; None",
+      "ids": "CQ-001; CQ-006",
+      "text": "Is there a documented incident response plan?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Incident Management",
+      "levels": "Partial; Complete; Regular review"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1695",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Contracts; Assessment reports; SLAs",
+      "last_revision_date": "2024-03-15",
+      "criticality": "High",
+      "guidance_url": "https://portal.enx.com/qa-006",
+      "number": "6",
+      "applies_to_al1": "False",
+      "control_question_id": "CQ-006",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Yes, verified; Yes, unverified; No",
+      "ids": "CQ-001",
+      "text": "Are vendor assessments and contracts in place?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Supply Chain",
+      "levels": "Documented; Monitored; Regular review"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1696",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Risk register; Assessment methodology; Reports",
+      "last_revision_date": "2024-01-15",
+      "criticality": "High",
+      "guidance_url": "https://portal.enx.com/qa-007",
+      "number": "7",
+      "applies_to_al1": "True",
+      "control_question_id": "CQ-007",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Formal process; Informal; None",
+      "ids": "CQ-002; CQ-006",
+      "text": "Is a risk assessment methodology documented?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Risk Management",
+      "levels": "Defined; Implemented; Continuous"
+    },
+    {
+      "mainLabel": "ControlQuestion",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1697",
+      "labels": [
+        "ControlQuestion"
+      ],
+      "types": "Security badges; CCTV logs; Access controls",
+      "last_revision_date": "2024-04-01",
+      "criticality": "Medium",
+      "guidance_url": "https://portal.enx.com/qa-008",
+      "number": "8",
+      "applies_to_al1": "False",
+      "control_question_id": "CQ-008",
+      "applies_to_al3": "True",
+      "applies_to_al2": "True",
+      "options": "Multiple layers; Basic; None",
+      "ids": "CQ-001",
+      "text": "Are physical security measures implemented?",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "category": "Physical Security",
+      "levels": "Basic; Enhanced; Advanced"
+    },
+    {
       "mainLabel": "ProtectionObject",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1698",
       "labels": [
         "ProtectionObject"
       ],
       "level": "High",
       "type": "Data",
       "classification": "Confidential",
-      "last_date": "2024-07-01",
-      "criticality_to_business": "High",
-      "contained": "Customer names; Contact info; Orders; Payment data",
+      "last_date": "2024-06-15",
+      "criticality_to_business": "Critical",
+      "contained": "Product specifications; Manufacturing parameters",
       "is_sensitive": "True",
-      "name": "Customer Database",
-      "protection_object_id": "PO-003",
-      "implemented": "Encryption; Access controls; Audit logs; DLP",
-      "location": "Munich Data Center",
+      "name": "Production Database",
+      "protection_object_id": "PO-001",
+      "implemented": "Encryption; Access controls; Backup",
+      "location": "Frankfurt Data Center",
       "industry_standard_regulation_id": "TISAX 6.0",
       "remaining_risk": "Low",
-      "department": "Sales"
+      "department": "Operations"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:746",
-      "mainLabel": "AssessmentObjective",
-      "labels": [
-        "AssessmentObjective"
-      ],
-      "evidence_types_required": "Data registers; DPAs; Audit logs",
-      "level": "Critical",
-      "count": "38",
-      "description": "Compliance with data protection regulations",
-      "typical_effort_hours": "70",
-      "version": "TISAX 5.0",
-      "standards": "ISO 27001; ISO 9001",
-      "ref": "ISA 1.2",
-      "name": "Data Protection and Privacy",
-      "assessment_objective_id": "OBJ-002",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "DataProtection",
-      "risk_area": "Data Protection"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:749",
-      "mainLabel": "AssessmentObjective",
-      "labels": [
-        "AssessmentObjective"
-      ],
-      "evidence_types_required": "Risk registers; Assessment reports",
-      "level": "High",
-      "count": "40",
-      "description": "Risk assessment and vulnerability management",
-      "typical_effort_hours": "75",
-      "version": "TISAX 5.0",
-      "standards": "ISO 27005",
-      "ref": "ISA 2.2",
-      "name": "Risk and Vulnerability Management",
-      "assessment_objective_id": "OBJ-005",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "InformationSecurity",
-      "risk_area": "Risk Management"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:748",
-      "mainLabel": "AssessmentObjective",
-      "labels": [
-        "AssessmentObjective"
-      ],
-      "evidence_types_required": "User lists; MFA configs; Access reviews",
-      "level": "Critical",
-      "count": "32",
-      "description": "Access controls and identity management",
-      "typical_effort_hours": "60",
-      "version": "TISAX 5.0",
-      "standards": "ISO 27001",
-      "ref": "ISA 2.1",
-      "name": "Access Control and Authentication",
-      "assessment_objective_id": "OBJ-004",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "InformationSecurity",
-      "risk_area": "Access"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:732",
-      "mainLabel": "Organization",
-      "labels": [
-        "Organization"
-      ],
-      "contact_phone": "+49-456-7890",
-      "industry_sector": "Automotive",
-      "certification_validity_end": "2027-06-20",
-      "assessment_status": "Assessed",
-      "highest_al_current": 3,
-      "type": "Supplier",
-      "last_assessment_date": "2024-06-20",
-      "contact_email": "contact@premium-auto.de",
-      "registration_date": "2021-06-20",
-      "organization_id": "ORG-002",
-      "name": "Premium Automotive",
-      "location": "Germany",
-      "industry_standard_regulation_id": "TISAX 6.0"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "mainLabel": "Assessment",
-      "labels": [
-        "Assessment"
-      ],
-      "level": "3",
-      "scope_description": "Full organizational security assessment",
-      "on_site_required": "True",
-      "assessment_id": "ASS-002",
-      "assessment_type": "Renewal",
-      "documentation_reviewed": "True",
-      "completion_date": "2023-12-20",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "scope_type": "CustomScope",
-      "methodology": "Comprehensive",
-      "status": "Completed",
-      "start_date": "2023-06-15",
-      "planned_duration_days": "180"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:769",
       "mainLabel": "ProtectionObject",
-      "labels": [
-        "ProtectionObject"
-      ],
-      "level": "Maximum",
-      "type": "Document",
-      "classification": "Secret",
-      "last_date": "2024-09-01",
-      "criticality_to_business": "Critical",
-      "contained": "Research results; Technical innovations; Lab notes",
-      "is_sensitive": "True",
-      "name": "R&D Documentation",
-      "protection_object_id": "PO-005",
-      "implemented": "Encryption; Access controls; Audit trails; Classification",
-      "location": "Munich Server Room",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "remaining_risk": "Medium",
-      "department": "Research & Development"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:766",
-      "mainLabel": "ProtectionObject",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1699",
       "labels": [
         "ProtectionObject"
       ],
@@ -578,107 +767,29 @@
       "department": "Engineering"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:745",
-      "mainLabel": "AssessmentObjective",
-      "labels": [
-        "AssessmentObjective"
-      ],
-      "evidence_types_required": "Policies; Procedures; Training records",
-      "level": "High",
-      "count": "45",
-      "description": "Assessment of ISMS policies, processes and controls",
-      "typical_effort_hours": "80",
-      "version": "TISAX 5.0",
-      "standards": "ISO 27001",
-      "ref": "ISA 1.1",
-      "name": "Information Security Management System",
-      "assessment_objective_id": "OBJ-001",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "InformationSecurity",
-      "risk_area": "Governance"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:747",
-      "mainLabel": "AssessmentObjective",
-      "labels": [
-        "AssessmentObjective"
-      ],
-      "evidence_types_required": "IP Policies; Contracts; Access logs",
-      "level": "High",
-      "count": "25",
-      "description": "Protection of sensitive product information",
-      "typical_effort_hours": "50",
-      "version": "TISAX 5.0",
-      "standards": "ISO 27001",
-      "ref": "ISA 1.3",
-      "name": "Prototype Protection",
-      "assessment_objective_id": "OBJ-003",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "category": "PrototypeProtection",
-      "risk_area": "IP Protection"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
-      "mainLabel": "Organization",
-      "labels": [
-        "Organization"
-      ],
-      "contact_phone": "+49-123-4567",
-      "industry_sector": "Automotive",
-      "certification_validity_end": "2027-08-15",
-      "assessment_status": "Assessed",
-      "highest_al_current": 2,
-      "type": "Supplier",
-      "last_assessment_date": "2024-08-15",
-      "contact_email": "info@autosupply.de",
-      "registration_date": "2022-01-15",
-      "organization_id": "ORG-001",
-      "name": "AutoSupply Corp",
-      "location": "Germany",
-      "industry_standard_regulation_id": "TISAX 6.0"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:741",
-      "mainLabel": "Assessment",
-      "labels": [
-        "Assessment"
-      ],
-      "level": "1",
-      "scope_description": "Basic infrastructure audit",
-      "on_site_required": "False",
-      "assessment_id": "ASS-006",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "assessment_type": "Initial",
-      "documentation_reviewed": "False",
-      "scope_type": "StandardScope",
-      "methodology": "Basic",
-      "status": "Planned",
-      "start_date": "2024-11-15",
-      "planned_duration_days": "60"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "mainLabel": "Assessment",
-      "labels": [
-        "Assessment"
-      ],
-      "level": "2",
-      "scope_description": "Production systems and data handling",
-      "on_site_required": "True",
-      "assessment_id": "ASS-001",
-      "assessment_type": "Initial",
-      "documentation_reviewed": "True",
-      "completion_date": "2024-08-15",
-      "industry_standard_regulation_id": "TISAX 6.0",
-      "scope_type": "StandardScope",
-      "methodology": "Risk-Based",
-      "status": "Completed",
-      "start_date": "2024-01-10",
-      "planned_duration_days": "180"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:768",
       "mainLabel": "ProtectionObject",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1700",
+      "labels": [
+        "ProtectionObject"
+      ],
+      "level": "High",
+      "type": "Data",
+      "classification": "Confidential",
+      "last_date": "2024-07-01",
+      "criticality_to_business": "High",
+      "contained": "Customer names; Contact info; Orders; Payment data",
+      "is_sensitive": "True",
+      "name": "Customer Database",
+      "protection_object_id": "PO-003",
+      "implemented": "Encryption; Access controls; Audit logs; DLP",
+      "location": "Munich Data Center",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "remaining_risk": "Low",
+      "department": "Sales"
+    },
+    {
+      "mainLabel": "ProtectionObject",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1701",
       "labels": [
         "ProtectionObject"
       ],
@@ -698,439 +809,769 @@
       "department": "IT"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:765",
       "mainLabel": "ProtectionObject",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1702",
       "labels": [
         "ProtectionObject"
       ],
-      "level": "High",
-      "type": "Data",
-      "classification": "Confidential",
-      "last_date": "2024-06-15",
+      "level": "Maximum",
+      "type": "Document",
+      "classification": "Secret",
+      "last_date": "2024-09-01",
       "criticality_to_business": "Critical",
-      "contained": "Product specifications; Manufacturing parameters",
+      "contained": "Research results; Technical innovations; Lab notes",
       "is_sensitive": "True",
-      "name": "Production Database",
-      "protection_object_id": "PO-001",
-      "implemented": "Encryption; Access controls; Backup",
-      "location": "Frankfurt Data Center",
+      "name": "R&D Documentation",
+      "protection_object_id": "PO-005",
+      "implemented": "Encryption; Access controls; Audit trails; Classification",
+      "location": "Munich Server Room",
       "industry_standard_regulation_id": "TISAX 6.0",
-      "remaining_risk": "Low",
-      "department": "Operations"
+      "remaining_risk": "Medium",
+      "department": "Research & Development"
+    },
+    {
+      "mainLabel": "Participant",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
+      "labels": [
+        "Participant"
+      ],
+      "joining_date": "2022-01-15",
+      "incidents_reported": "0",
+      "level": "Restricted",
+      "participant_id": "PART-001",
+      "received_count": "3",
+      "exchange_count": "2",
+      "type": "Supplier",
+      "name": "AutoSupply Corp",
+      "shared_count": "5",
+      "last_exchange_date": "2024-10-15",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "relationship": "True",
+      "status": "ActiveSharing"
+    },
+    {
+      "mainLabel": "Participant",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1704",
+      "labels": [
+        "Participant"
+      ],
+      "joining_date": "2021-06-20",
+      "incidents_reported": "1",
+      "level": "Public",
+      "participant_id": "PART-002",
+      "received_count": "15",
+      "exchange_count": "4",
+      "type": "Supplier",
+      "name": "Premium Automotive",
+      "shared_count": "12",
+      "last_exchange_date": "2024-11-01",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "relationship": "True",
+      "status": "ActiveSharing"
+    },
+    {
+      "mainLabel": "Participant",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1705",
+      "labels": [
+        "Participant"
+      ],
+      "joining_date": "2020-11-05",
+      "incidents_reported": "0",
+      "level": "Private",
+      "participant_id": "PART-003",
+      "received_count": "2",
+      "exchange_count": "3",
+      "type": "OEM",
+      "name": "Manufacturing LLC",
+      "shared_count": "8",
+      "last_exchange_date": "2024-08-20",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "relationship": "True",
+      "status": "Paused"
+    },
+    {
+      "mainLabel": "Participant",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "labels": [
+        "Participant"
+      ],
+      "joining_date": "2023-01-30",
+      "incidents_reported": "2",
+      "level": "Restricted",
+      "participant_id": "PART-004",
+      "received_count": "1",
+      "exchange_count": "1",
+      "type": "Supplier",
+      "name": "ElectroSystems AG",
+      "shared_count": "2",
+      "last_exchange_date": "2024-09-15",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "relationship": "False",
+      "status": "ActiveSharing"
+    },
+    {
+      "mainLabel": "AssessmentResult",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1707",
+      "labels": [
+        "AssessmentResult"
+      ],
+      "end_date": "2027-08-15",
+      "assessment_result_id": "RES-001",
+      "overall_compliance_percentage": "92.5",
+      "level_achieved": "2",
+      "findings_observations_count": "4",
+      "sign_off_date": "2024-08-20",
+      "findings_major_count": "3",
+      "non_conformities": "4",
+      "result_documentation_url": "https://portal.enx.com/result/RES-001",
+      "findings_minor_count": "8",
+      "corrective_actions_required": "True",
+      "validity_months": "36",
+      "findings_critical_count": "1",
+      "name": "Dr. Hans Mueller",
+      "issuing_body": "TISAX Registry - ENX Association",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "certification_date": "2024-08-15",
+      "confidentiality_level": "Restricted",
+      "status": "Active",
+      "start_date": "2024-08-15"
+    },
+    {
+      "mainLabel": "AssessmentResult",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1708",
+      "labels": [
+        "AssessmentResult"
+      ],
+      "end_date": "2026-12-20",
+      "assessment_result_id": "RES-002",
+      "overall_compliance_percentage": "96.0",
+      "level_achieved": "3",
+      "findings_observations_count": "2",
+      "sign_off_date": "2023-12-25",
+      "findings_major_count": "2",
+      "non_conformities": "2",
+      "result_documentation_url": "https://portal.enx.com/result/RES-002",
+      "findings_minor_count": "5",
+      "corrective_actions_required": "False",
+      "validity_months": "36",
+      "findings_critical_count": "0",
+      "name": "Johann Schmidt",
+      "issuing_body": "TISAX Registry - ENX Association",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "certification_date": "2023-12-20",
+      "confidentiality_level": "Public",
+      "status": "Active",
+      "start_date": "2023-12-20"
+    },
+    {
+      "mainLabel": "AssessmentResult",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1709",
+      "labels": [
+        "AssessmentResult"
+      ],
+      "end_date": "2027-11-10",
+      "assessment_result_id": "RES-003",
+      "overall_compliance_percentage": "88.5",
+      "level_achieved": "2",
+      "findings_observations_count": "6",
+      "sign_off_date": "2024-11-15",
+      "findings_major_count": "5",
+      "non_conformities": "7",
+      "result_documentation_url": "https://portal.enx.com/result/RES-003",
+      "findings_minor_count": "12",
+      "corrective_actions_required": "True",
+      "validity_months": "36",
+      "findings_critical_count": "2",
+      "name": "Dr. Hans Mueller",
+      "issuing_body": "TISAX Registry - ENX Association",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "certification_date": "2024-11-10",
+      "confidentiality_level": "Restricted",
+      "status": "Active",
+      "start_date": "2024-11-10"
+    },
+    {
+      "mainLabel": "TisaxExchange",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1710",
+      "labels": [
+        "TisaxExchange"
+      ],
+      "exchange_id": "TISAX_Exchange",
+      "name": "TISAX Exchange",
+      "description": "Central exchange platform for sharing TISAX assessment results and labels between participants.",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "operator": "ENX Association",
+      "status": "Active"
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1711",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "1",
+      "is_new_in_v6": false,
+      "category_id": "CAT-01",
+      "focus_area": "Governance",
+      "name": "Information Security Policies and Organization",
+      "display_order": 1,
+      "description": "Governance and strategy",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 5
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1712",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "2",
+      "is_new_in_v6": false,
+      "category_id": "CAT-02",
+      "focus_area": "People",
+      "name": "Human Resources and Awareness",
+      "display_order": 2,
+      "description": "Personnel security and training",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 7
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1713",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "3",
+      "is_new_in_v6": false,
+      "category_id": "CAT-03",
+      "focus_area": "Physical",
+      "name": "Physical and Environmental Security",
+      "display_order": 3,
+      "description": "Facility access and continuity",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 12
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1714",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "4",
+      "is_new_in_v6": false,
+      "category_id": "CAT-04",
+      "focus_area": "Access",
+      "name": "Identity and Access Management",
+      "display_order": 4,
+      "description": "User identification and authorization",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 15
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1715",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "5",
+      "is_new_in_v6": false,
+      "category_id": "CAT-05",
+      "focus_area": "Response",
+      "name": "Incident Management and Compliance",
+      "display_order": 5,
+      "description": "Detection and legal compliance",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 10
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1716",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "6",
+      "is_new_in_v6": false,
+      "category_id": "CAT-06",
+      "focus_area": "Technical",
+      "name": "Technical Security Measures",
+      "display_order": 6,
+      "description": "Network and system hardening",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 20
+    },
+    {
+      "mainLabel": "ControlCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1717",
+      "labels": [
+        "ControlCategory"
+      ],
+      "code": "7",
+      "is_new_in_v6": true,
+      "category_id": "CAT-07",
+      "focus_area": "Privacy",
+      "name": "Data Protection",
+      "display_order": 7,
+      "description": "GDPR and personal data handling",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "total_controls": 10
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1718",
+      "labels": [
+        "Role"
+      ],
+      "reporting_line": "CEO/CIO",
+      "responsibilities": "Oversight; Policy; Risk Assessment",
+      "qualification_reqs": "CISO/CISM Certification",
+      "role_id": "ROLE-01",
+      "description": "Leads the ISMS program",
+      "is_mandatory": true,
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Information Security Officer",
+      "typical_department": "IT/Security"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1719",
+      "labels": [
+        "Role"
+      ],
+      "reporting_line": "Legal/Compliance",
+      "responsibilities": "Data Protection; Subject Rights",
+      "qualification_reqs": "DPO Certification/Legal",
+      "role_id": "ROLE-02",
+      "description": "Manages GDPR compliance",
+      "is_mandatory": true,
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Privacy Officer",
+      "typical_department": "Legal"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1720",
+      "labels": [
+        "Role"
+      ],
+      "reporting_line": "ISO",
+      "responsibilities": "Program implementation; Monitoring",
+      "qualification_reqs": "Technical Security Background",
+      "role_id": "ROLE-03",
+      "description": "Operational security lead",
+      "is_mandatory": true,
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Qualified Individual",
+      "typical_department": "IT/Security"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1721",
+      "labels": [
+        "Role"
+      ],
+      "reporting_line": "General Counsel",
+      "responsibilities": "Audit coordination; Legal checks",
+      "qualification_reqs": "Legal/Compliance Background",
+      "role_id": "ROLE-04",
+      "description": "Ensures regulatory alignment",
+      "is_mandatory": false,
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Compliance Officer",
+      "typical_department": "Legal"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1722",
+      "labels": [
+        "Role"
+      ],
+      "reporting_line": "Board",
+      "responsibilities": "Resource allocation; Strategic oversight",
+      "qualification_reqs": "Executive Management",
+      "role_id": "ROLE-05",
+      "description": "Governance body",
+      "is_mandatory": true,
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Information Security Steering Committee",
+      "typical_department": "Management"
+    },
+    {
+      "mainLabel": "SecurityPolicy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1723",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "iso_reference": "5.2",
+      "enforcement_level": "Mandatory",
+      "policy_id": "POL-01",
+      "approval_status": "Approved",
+      "description": "Top-level governance and objectives",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Information Security Policy",
+      "type": "Strategic",
+      "version": "2.0",
+      "last_review_date": "2025-01-10",
+      "next_review_date": "2026-01-10",
+      "document_url": "http://internal/pol01"
+    },
+    {
+      "mainLabel": "SecurityPolicy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1724",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "iso_reference": "9.1",
+      "enforcement_level": "Strict",
+      "policy_id": "POL-02",
+      "approval_status": "Approved",
+      "description": "User access and authentication rules",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Access Control Policy",
+      "type": "Technical",
+      "version": "1.5",
+      "last_review_date": "2025-02-01",
+      "next_review_date": "2026-02-01",
+      "document_url": "http://internal/pol02"
+    },
+    {
+      "mainLabel": "SecurityPolicy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1725",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "iso_reference": "15.1",
+      "enforcement_level": "Mandatory",
+      "policy_id": "POL-03",
+      "approval_status": "Draft",
+      "description": "Vendor assessment and management",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Supplier Security Policy",
+      "type": "Third-Party",
+      "version": "1.0",
+      "last_review_date": "2025-03-15",
+      "next_review_date": "2026-03-15",
+      "document_url": "http://internal/pol03"
+    },
+    {
+      "mainLabel": "SecurityPolicy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1726",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "iso_reference": "16.1",
+      "enforcement_level": "Mandatory",
+      "policy_id": "POL-04",
+      "approval_status": "Approved",
+      "description": "Steps for breach response",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Incident Management Procedure",
+      "type": "Operational",
+      "version": "3.0",
+      "last_review_date": "2025-01-20",
+      "next_review_date": "2026-01-20",
+      "document_url": "http://internal/pol04"
+    },
+    {
+      "mainLabel": "SecurityPolicy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1727",
+      "labels": [
+        "SecurityPolicy"
+      ],
+      "iso_reference": "8.2",
+      "enforcement_level": "Mandatory",
+      "policy_id": "POL-05",
+      "approval_status": "Approved",
+      "description": "Labeling Public/Internal/Confidential",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "title": "Data Classification Standard",
+      "type": "Data",
+      "version": "1.2",
+      "last_review_date": "2024-11-30",
+      "next_review_date": "2025-11-30",
+      "document_url": "http://internal/pol05"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1728",
+      "labels": [
+        "DataCategory"
+      ],
+      "data_category_id": "DAT-01",
+      "is_prototype_data": true,
+      "handling_reqs": "Physical isolation; Biometrics",
+      "name": "Prototype Information",
+      "encryption_req": true,
+      "description": "Vehicle designs/physical prototypes",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "is_personal_data": false,
+      "classification": "Strictly Confidential",
+      "retention_period": "10 Years"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1729",
+      "labels": [
+        "DataCategory"
+      ],
+      "data_category_id": "DAT-02",
+      "is_prototype_data": false,
+      "handling_reqs": "Access control; Logging",
+      "name": "Product Development Data",
+      "encryption_req": true,
+      "description": "CAD files/specs/BOMs",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "is_personal_data": false,
+      "classification": "Confidential",
+      "retention_period": "15 Years"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1730",
+      "labels": [
+        "DataCategory"
+      ],
+      "data_category_id": "DAT-03",
+      "is_prototype_data": false,
+      "handling_reqs": "Data Minimization; Erasure",
+      "name": "Personal Information",
+      "encryption_req": true,
+      "description": "Customer/Employee PII",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "is_personal_data": true,
+      "classification": "Confidential",
+      "retention_period": "Per GDPR"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1731",
+      "labels": [
+        "DataCategory"
+      ],
+      "data_category_id": "DAT-04",
+      "is_prototype_data": false,
+      "handling_reqs": "Backup; Redundancy",
+      "name": "Operational Information",
+      "encryption_req": false,
+      "description": "Production/Logistics data",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "is_personal_data": false,
+      "classification": "High Availability",
+      "retention_period": "5 Years"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1732",
+      "labels": [
+        "DataCategory"
+      ],
+      "data_category_id": "DAT-05",
+      "is_prototype_data": false,
+      "handling_reqs": "NDA; Segregation",
+      "name": "Partner Information",
+      "encryption_req": true,
+      "description": "Third-party IP/Contracts",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "is_personal_data": false,
+      "classification": "Confidential",
+      "retention_period": "Contract Term"
+    },
+    {
+      "mainLabel": "AssessmentPhase",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1733",
+      "labels": [
+        "AssessmentPhase"
+      ],
+      "owner": "ENX Association",
+      "typical_duration": "1",
+      "name": "Registration",
+      "description": "Register on ENX portal; Scope definition",
+      "is_mandatory": true,
+      "phase_id": "PH-01",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "sequence_order": 1,
+      "required_inputs": "Company Details",
+      "deliverables": "Participant ID"
+    },
+    {
+      "mainLabel": "AssessmentPhase",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1734",
+      "labels": [
+        "AssessmentPhase"
+      ],
+      "owner": "Organization",
+      "typical_duration": "8",
+      "name": "Preparation",
+      "description": "Self-assessment; Gap analysis",
+      "is_mandatory": true,
+      "phase_id": "PH-02",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "sequence_order": 2,
+      "required_inputs": "ISA Questionnaire",
+      "deliverables": "Completed Self-Assessment"
+    },
+    {
+      "mainLabel": "AssessmentPhase",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1735",
+      "labels": [
+        "AssessmentPhase"
+      ],
+      "owner": "Audit Provider",
+      "typical_duration": "4",
+      "name": "Audit",
+      "description": "External verification (Remote or On-Site)",
+      "is_mandatory": true,
+      "phase_id": "PH-03",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "sequence_order": 3,
+      "required_inputs": "Evidence; Documentation",
+      "deliverables": "Audit Report"
+    },
+    {
+      "mainLabel": "AssessmentPhase",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1736",
+      "labels": [
+        "AssessmentPhase"
+      ],
+      "owner": "Organization",
+      "typical_duration": "12",
+      "name": "Remediation",
+      "description": "Fixing deviations (if any)",
+      "is_mandatory": false,
+      "phase_id": "PH-04",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "sequence_order": 4,
+      "required_inputs": "Corrective Action Plan",
+      "deliverables": "Closed Deviations"
+    },
+    {
+      "mainLabel": "AssessmentPhase",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1737",
+      "labels": [
+        "AssessmentPhase"
+      ],
+      "owner": "ENX Association",
+      "typical_duration": "1",
+      "name": "Label Issuance",
+      "description": "Formal recognition of compliance",
+      "is_mandatory": true,
+      "phase_id": "PH-05",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "sequence_order": 5,
+      "required_inputs": "Final Report",
+      "deliverables": "TISAX Label"
+    },
+    {
+      "mainLabel": "AssessmentPhase",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1738",
+      "labels": [
+        "AssessmentPhase"
+      ],
+      "owner": "Organization",
+      "typical_duration": "156",
+      "name": "Maintenance",
+      "description": "Ongoing validity period",
+      "is_mandatory": true,
+      "phase_id": "PH-06",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "sequence_order": 6,
+      "required_inputs": "ISMS Operations",
+      "deliverables": "Continuous Compliance"
+    },
+    {
+      "mainLabel": "Finding",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1739",
+      "labels": [
+        "Finding"
+      ],
+      "severity": "Critical",
+      "evidence_ref": "IMG-SEC-05",
+      "finding_id": "FND-001",
+      "date_identified": "2024-03-15",
+      "description": "Prototype room unlocked",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "type": "Major Deviation",
+      "auditor_comment": "Access control failure",
+      "remediation_deadline": "2024-04-15",
+      "status": "Open",
+      "root_cause": "Broken lock mechanism"
+    },
+    {
+      "mainLabel": "Finding",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1740",
+      "labels": [
+        "Finding"
+      ],
+      "severity": "Minor",
+      "evidence_ref": "DOC-POL-02",
+      "finding_id": "FND-002",
+      "date_identified": "2024-03-16",
+      "description": "Policy outdated",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "type": "Secondary Deviation",
+      "auditor_comment": "Review date missed",
+      "remediation_deadline": "2024-06-15",
+      "status": "Closed",
+      "root_cause": "Process oversight"
+    },
+    {
+      "mainLabel": "Finding",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1741",
+      "labels": [
+        "Finding"
+      ],
+      "severity": "Info",
+      "evidence_ref": "LOG-BKP-09",
+      "finding_id": "FND-003",
+      "date_identified": "2024-03-17",
+      "description": "Backup frequency optimal",
+      "industry_standard_regulation_id": "TISAX 6.0",
+      "type": "Observation",
+      "auditor_comment": "Best practice seen",
+      "status": "Closed",
+      "root_cause": "N/A"
     }
   ],
   "rels": [
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:730",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1162302537815032538",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:735",
-      "type": "REGISTERS_IN_TISAX",
-      "registration_date": "30-01-2023",
-      "initial_al_target": "1",
-      "registration_number": "REG-2023-002",
-      "scope_declaration": "Component supply",
-      "terms_acceptance_date": "25-01-2023"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153293139537036967",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "type": "PARTICIPANT_PARTICIPATES_IN_TISAX",
+      "participation_status": "Active",
+      "registration_date": "15-01-2022",
+      "agreement_signed_date": "10-01-2022"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:735",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917853383571276537",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:761",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "False",
-      "response_date": "2024-02-01",
-      "evidence_provided": "Plan document; Incident logs; Test results",
-      "maturity_level_achieved": "3",
-      "answer_status": "Compliant"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:735",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920102984361706222",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:750",
-      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
-      "contract_end_date": "2025-03-31",
-      "criteria_considered": "Cost optimization, Geographic reach, New supplier program",
-      "selection_date": "2024-03-05",
-      "budget_agreed": "\u20ac28000",
-      "primary_auditor_assigned": "Dr. Hans Mueller",
-      "contract_start_date": "2024-04-01"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:735",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917850085036393190",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:742",
-      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
-      "is_upgrade_from_previous": "False",
-      "approved_by": "Compliance Manager",
-      "selection_date": "2022-12-20",
-      "data_protection_justification": "Basic customer information",
-      "justification": "Initial compliance step"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:735",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917847886013137636",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:740",
-      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
-      "internal_resource_hours": "200",
-      "budget_allocated": "40000",
-      "assessment_start": "2024-10-01",
-      "scope_agreed": "All business processes",
-      "scheduled_completion": "2024-12-30"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:740",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922361381245158130",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
-      "applicability_date": "2024-10-01",
-      "catalogue_version_used": "5.0",
-      "control_questions_applicable_count": "160",
-      "exemptions_claimed": "Outsourced logistics",
-      "exemption_justification": "Third party managed"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155514153025143538",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:760",
-      "type": "ISA_CONTROLS_CONTROL_QUESTION",
-      "applicability_level": "AL1; AL2; AL3",
-      "question_order": "2",
-      "question_weight": "1.0",
-      "response_required": "True",
-      "inclusion_date": "2023-03-01"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153262353211458290",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:757",
-      "type": "ISA_CONTROLS_CONTROL_QUESTION",
-      "applicability_level": "AL1; AL2; AL3",
-      "question_order": "1",
-      "question_weight": "1.0",
-      "response_required": "True",
-      "inclusion_date": "2023-03-01"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:730",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1160050738001347290",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:734",
-      "type": "REGISTERS_IN_TISAX",
-      "registration_date": "05-11-2020",
-      "initial_al_target": "3",
-      "registration_number": "REG-2020-001",
-      "scope_declaration": "Manufacturing and design",
-      "terms_acceptance_date": "01-11-2020"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:734",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917853383571276536",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:760",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "False",
-      "response_date": "2024-08-25",
-      "evidence_provided": "Training schedule; Completion records",
-      "maturity_level_achieved": "3",
-      "answer_status": "Compliant"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:734",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920102984361706223",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:751",
-      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
-      "contract_end_date": "2025-06-30",
-      "criteria_considered": "Automotive specialization, AL3 capability, Track record",
-      "selection_date": "2022-06-15",
-      "budget_agreed": "\u20ac85000",
-      "primary_auditor_assigned": "Johann Schmidt",
-      "contract_start_date": "2022-07-01"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:734",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920101884850078440",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:744",
-      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
-      "is_upgrade_from_previous": "True",
-      "approved_by": "CEO",
-      "selection_date": "2020-10-01",
-      "data_protection_justification": "Prototype and technical designs",
-      "justification": "Design and manufacturing with patents"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:734",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917847886013137635",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:739",
-      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
-      "internal_resource_hours": "350",
-      "budget_allocated": "65000",
-      "assessment_start": "2024-09-05",
-      "scope_agreed": "Manufacturing and R&D",
-      "scheduled_completion": "2024-12-05"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:739",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920109581431472883",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:755",
-      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
-      "applicability_date": "2024-09-05",
-      "catalogue_version_used": "5.0",
-      "control_questions_applicable_count": "240",
-      "exemptions_claimed": "None",
-      "exemption_justification": "Full coverage applicable"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:755",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155514153025143539",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:759",
-      "type": "ISA_CONTROLS_CONTROL_QUESTION",
-      "applicability_level": "AL1; AL2; AL3",
-      "question_order": "2",
-      "question_weight": "1.0",
-      "response_required": "True",
-      "inclusion_date": "2023-06-15"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:755",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153262353211458291",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:758",
-      "type": "ISA_CONTROLS_CONTROL_QUESTION",
-      "applicability_level": "AL2; AL3",
-      "question_order": "1",
-      "question_weight": "1.2",
-      "response_required": "True",
-      "inclusion_date": "2023-06-15"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:730",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157798938187662042",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:733",
-      "type": "REGISTERS_IN_TISAX",
-      "registration_date": "10-03-2023",
-      "initial_al_target": "2",
-      "registration_number": "REG-2023-001",
-      "scope_declaration": "IT services only",
-      "terms_acceptance_date": "05-03-2023"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:733",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917853383571276535",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:759",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "False",
-      "response_date": "2024-01-20",
-      "evidence_provided": "Encryption config audit; Key management plan",
-      "maturity_level_achieved": "3",
-      "answer_status": "Compliant"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:733",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917851184548020976",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:752",
-      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
-      "contract_end_date": "2025-02-28",
-      "criteria_considered": "Geographic proximity, AL2 support, Service providers focus",
-      "selection_date": "2024-02-10",
-      "budget_agreed": "\u20ac35000",
-      "primary_auditor_assigned": "Maria Lopez",
-      "contract_start_date": "2024-03-01"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:733",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920101884850078439",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:743",
-      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
-      "is_upgrade_from_previous": "False",
-      "approved_by": "CTO",
-      "selection_date": "2023-02-10",
-      "data_protection_justification": "High sensitivity due to design access",
-      "justification": "IT services with access to proprietary systems"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:733",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917847886013137634",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
-      "internal_resource_hours": "150",
-      "budget_allocated": "35000",
-      "assessment_start": "2024-08-20",
-      "scope_agreed": "Supply chain IT",
-      "scheduled_completion": "2024-11-10"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917858881129415423",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:767",
-      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
-      "current_protection_level": "High",
-      "target_protection_level": "High",
-      "identified_gaps": "Access control logging; DLP tool gaps",
-      "inclusion_date": "2024-08-20"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920109581431472882",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
-      "applicability_date": "2024-08-20",
-      "catalogue_version_used": "5.0",
-      "control_questions_applicable_count": "175",
-      "exemptions_claimed": "Legacy system maintenance",
-      "exemption_justification": "Deprecated by 2025"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153246960048669410",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:746",
-      "type": "ASSESSMENT_MEETS_CRITERIA",
-      "auditor_notes": "Some gaps in encryption standards, remediation planned",
-      "confidence_level": "0.88",
-      "evidence_types_reviewed": "Policy review; Vendor contract audit",
-      "verification_date": "2024-11-05"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917852284059648749",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:749",
-      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
-      "weight_percentage": "40.0",
-      "pass_fail_criteria": "Risk register documented; remediation plan",
-      "priority_order": "2",
-      "estimated_hours": "55",
-      "inclusion_date": "2024-08-25"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:738",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917852284059648748",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:748",
-      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
-      "weight_percentage": "55.0",
-      "pass_fail_criteria": "MFA on all systems; <5% non-compliant",
-      "priority_order": "1",
-      "estimated_hours": "65",
-      "inclusion_date": "2024-08-20"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:730",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155547138373976794",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:732",
-      "type": "REGISTERS_IN_TISAX",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1704",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153293139537036968",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "type": "PARTICIPANT_PARTICIPATES_IN_TISAX",
+      "participation_status": "Active",
       "registration_date": "20-06-2021",
-      "initial_al_target": "3",
-      "registration_number": "REG-2021-001",
-      "scope_declaration": "Full organization scope",
-      "terms_acceptance_date": "15-06-2021"
+      "agreement_signed_date": "15-06-2021"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:732",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917853383571276534",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:758",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "True",
-      "response_date": "2023-06-25",
-      "evidence_provided": "Access control list; MFA pilot project plan",
-      "maturity_level_achieved": "2",
-      "remediation_due_date": "2024-03-15",
-      "answer_status": "PartiallyCompliant"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1705",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153293139537036969",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "type": "PARTICIPANT_PARTICIPATES_IN_TISAX",
+      "participation_status": "Active",
+      "registration_date": "10-03-2023",
+      "agreement_signed_date": "05-03-2023"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:732",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917851184548020975",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:751",
-      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
-      "contract_end_date": "2025-10-14",
-      "criteria_considered": "Industry specialization, Quality rating, Certification count",
-      "selection_date": "2023-09-20",
-      "budget_agreed": "\u20ac75000",
-      "primary_auditor_assigned": "Johann Schmidt",
-      "contract_start_date": "2023-10-15"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153293139537036970",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "type": "PARTICIPANT_PARTICIPATES_IN_TISAX",
+      "participation_status": "Active",
+      "registration_date": "05-11-2020",
+      "agreement_signed_date": "01-11-2020"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:732",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917850085036393192",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:744",
-      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
-      "is_upgrade_from_previous": "False",
-      "approved_by": "Board of Directors",
-      "selection_date": "2021-05-15",
-      "data_protection_justification": "Customer data, designs, financial records",
-      "justification": "OEM requirement with sensitive data"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:732",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917847886013137633",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
-      "internal_resource_hours": "400",
-      "budget_allocated": "75000",
-      "assessment_start": "2023-06-15",
-      "scope_agreed": "Complete organization",
-      "scheduled_completion": "2023-12-20"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917858881129415425",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:769",
-      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
-      "current_protection_level": "High",
-      "target_protection_level": "Maximum",
-      "identified_gaps": "Classification labeling; Vault protection",
-      "inclusion_date": "2023-06-25"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917858881129415422",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:766",
-      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
-      "current_protection_level": "Maximum",
-      "target_protection_level": "Maximum",
-      "identified_gaps": "None identified",
-      "inclusion_date": "2023-06-15"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917857781617787635",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:755",
-      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
-      "applicability_date": "2023-06-15",
-      "catalogue_version_used": "5.0",
-      "control_questions_applicable_count": "245",
-      "exemptions_claimed": "None",
-      "exemption_justification": "Full coverage applicable"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153246960048669409",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:745",
-      "type": "ASSESSMENT_MEETS_CRITERIA",
-      "auditor_notes": "Exemplary compliance with industry best practices",
-      "confidence_level": "0.98",
-      "evidence_types_reviewed": "Complete file review; System walkthrough; Staff interviews",
-      "verification_date": "2023-12-15"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917852284059648747",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:747",
-      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
-      "weight_percentage": "30.0",
-      "pass_fail_criteria": "No critical findings",
-      "priority_order": "2",
-      "estimated_hours": "60",
-      "inclusion_date": "2023-06-20"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:737",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920104083873333993",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:745",
-      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
-      "weight_percentage": "50.0",
-      "pass_fail_criteria": "AL3 requirements fully met",
-      "priority_order": "1",
-      "estimated_hours": "90",
-      "inclusion_date": "2023-06-15"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:730",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153295338560291546",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153295338560292479",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
       "type": "REGISTERS_IN_TISAX",
       "registration_date": "15-01-2022",
       "initial_al_target": "2",
@@ -1139,20 +1580,86 @@
       "terms_acceptance_date": "10-01-2022"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917853383571276533",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:757",
-      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
-      "remediation_required": "False",
-      "response_date": "2024-01-15",
-      "evidence_provided": "Policy document v2.1; Board approval minutes",
-      "maturity_level_achieved": "3",
-      "answer_status": "Compliant"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155547138373977727",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1665",
+      "type": "REGISTERS_IN_TISAX",
+      "registration_date": "20-06-2021",
+      "initial_al_target": "3",
+      "registration_number": "REG-2021-001",
+      "scope_declaration": "Full organization scope",
+      "terms_acceptance_date": "15-06-2021"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917851184548020974",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:750",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157798938187662975",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1666",
+      "type": "REGISTERS_IN_TISAX",
+      "registration_date": "10-03-2023",
+      "initial_al_target": "2",
+      "registration_number": "REG-2023-001",
+      "scope_declaration": "IT services only",
+      "terms_acceptance_date": "05-03-2023"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160050738001348223",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1667",
+      "type": "REGISTERS_IN_TISAX",
+      "registration_date": "05-11-2020",
+      "initial_al_target": "3",
+      "registration_number": "REG-2020-001",
+      "scope_declaration": "Manufacturing and design",
+      "terms_acceptance_date": "01-11-2020"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1663",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162302537815033471",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1668",
+      "type": "REGISTERS_IN_TISAX",
+      "registration_date": "30-01-2023",
+      "initial_al_target": "1",
+      "registration_number": "REG-2023-002",
+      "scope_declaration": "Component supply",
+      "terms_acceptance_date": "25-01-2023"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917847886013138565",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
+      "internal_resource_hours": "200",
+      "budget_allocated": "45000",
+      "assessment_start": "2024-01-10",
+      "scope_agreed": "Production and warehouse",
+      "scheduled_completion": "2024-08-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917847886013138570",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1674",
+      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
+      "internal_resource_hours": "80",
+      "budget_allocated": "20000",
+      "assessment_start": "2024-11-15",
+      "scope_agreed": "Basic infrastructure",
+      "scheduled_completion": "2024-12-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917850085036394124",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1676",
+      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
+      "is_upgrade_from_previous": "False",
+      "approved_by": "Chief Compliance Officer",
+      "selection_date": "2023-12-01",
+      "data_protection_justification": "Customer data and product specs",
+      "justification": "Standard automotive supply requirements"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917851184548021907",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1683",
       "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
       "contract_end_date": "2025-12-31",
       "criteria_considered": "Technical expertise, Cost-effectiveness, Geographic coverage",
@@ -1162,94 +1669,284 @@
       "contract_start_date": "2024-02-01"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917850085036393191",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:743",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917853383571277466",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1690",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "False",
+      "response_date": "2024-01-15",
+      "evidence_provided": "Policy document v2.1; Board approval minutes",
+      "maturity_level_achieved": "3",
+      "answer_status": "Compliant"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918472408617715382",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1718",
+      "type": "ORGANISATION_ASSIGNS_ROLE",
+      "assignment_date": "2024-02-15",
+      "assignee_name": "John Doe"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918472408617715383",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1719",
+      "type": "ORGANISATION_ASSIGNS_ROLE",
+      "assignment_date": "2024-02-15",
+      "assignee_name": "Jane Smith"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918472408617715384",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1720",
+      "type": "ORGANISATION_ASSIGNS_ROLE",
+      "assignment_date": "2024-03-01",
+      "assignee_name": "Mike Johnson"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918472408617715386",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1722",
+      "type": "ORGANISATION_ASSIGNS_ROLE",
+      "assignment_date": "2024-01-10",
+      "assignee_name": "Steering Committee A"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918473508129343163",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1723",
+      "type": "ORGANISATION_ESTABLISHES_POLICY",
+      "owner_role_id": "ROLE-01",
+      "establishment_date": "2024-01-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918473508129343164",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1724",
+      "type": "ORGANISATION_ESTABLISHES_POLICY",
+      "owner_role_id": "ROLE-03",
+      "establishment_date": "2024-01-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918473508129343165",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1725",
+      "type": "ORGANISATION_ESTABLISHES_POLICY",
+      "owner_role_id": "ROLE-04",
+      "establishment_date": "2024-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918473508129343166",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1726",
+      "type": "ORGANISATION_ESTABLISHES_POLICY",
+      "owner_role_id": "ROLE-01",
+      "establishment_date": "2024-01-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1664",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918473508129343167",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1727",
+      "type": "ORGANISATION_ESTABLISHES_POLICY",
+      "owner_role_id": "ROLE-02",
+      "establishment_date": "2024-02-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1665",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917847886013138566",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
+      "internal_resource_hours": "400",
+      "budget_allocated": "75000",
+      "assessment_start": "2023-06-15",
+      "scope_agreed": "Complete organization",
+      "scheduled_completion": "2023-12-20"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1665",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917850085036394125",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1677",
       "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
       "is_upgrade_from_previous": "False",
-      "approved_by": "Chief Compliance Officer",
-      "selection_date": "2023-12-01",
-      "data_protection_justification": "Customer data and product specs",
-      "justification": "Standard automotive supply requirements"
+      "approved_by": "Board of Directors",
+      "selection_date": "2021-05-15",
+      "data_protection_justification": "Customer data, designs, financial records",
+      "justification": "OEM requirement with sensitive data"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917847886013137637",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:741",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1665",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917851184548021908",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1684",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-10-14",
+      "criteria_considered": "Industry specialization, Quality rating, Certification count",
+      "selection_date": "2023-09-20",
+      "budget_agreed": "\u20ac75000",
+      "primary_auditor_assigned": "Johann Schmidt",
+      "contract_start_date": "2023-10-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1665",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917853383571277467",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1691",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "True",
+      "response_date": "2023-06-25",
+      "evidence_provided": "Access control list; MFA pilot project plan",
+      "maturity_level_achieved": "2",
+      "remediation_due_date": "2024-03-15",
+      "answer_status": "PartiallyCompliant"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1666",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917847886013138567",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
-      "internal_resource_hours": "80",
-      "budget_allocated": "20000",
-      "assessment_start": "2024-11-15",
-      "scope_agreed": "Basic infrastructure",
-      "scheduled_completion": "2024-12-15"
+      "internal_resource_hours": "150",
+      "budget_allocated": "35000",
+      "assessment_start": "2024-08-20",
+      "scope_agreed": "Supply chain IT",
+      "scheduled_completion": "2024-11-10"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:741",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924613181058843378",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
-      "applicability_date": "2024-11-15",
-      "catalogue_version_used": "5.0",
-      "control_questions_applicable_count": "120",
-      "exemptions_claimed": "None",
-      "exemption_justification": "None required"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1666",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920101884850079372",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1676",
+      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
+      "is_upgrade_from_previous": "False",
+      "approved_by": "CTO",
+      "selection_date": "2023-02-10",
+      "data_protection_justification": "High sensitivity due to design access",
+      "justification": "IT services with access to proprietary systems"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:731",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917847886013137632",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1666",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917851184548021909",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1685",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-02-28",
+      "criteria_considered": "Geographic proximity, AL2 support, Service providers focus",
+      "selection_date": "2024-02-10",
+      "budget_agreed": "\u20ac35000",
+      "primary_auditor_assigned": "Maria Lopez",
+      "contract_start_date": "2024-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1666",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917853383571277468",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1692",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "False",
+      "response_date": "2024-01-20",
+      "evidence_provided": "Encryption config audit; Key management plan",
+      "maturity_level_achieved": "3",
+      "answer_status": "Compliant"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1667",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917847886013138568",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1672",
+      "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
+      "internal_resource_hours": "350",
+      "budget_allocated": "65000",
+      "assessment_start": "2024-09-05",
+      "scope_agreed": "Manufacturing and R&D",
+      "scheduled_completion": "2024-12-05"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1667",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920101884850079373",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1677",
+      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
+      "is_upgrade_from_previous": "True",
+      "approved_by": "CEO",
+      "selection_date": "2020-10-01",
+      "data_protection_justification": "Prototype and technical designs",
+      "justification": "Design and manufacturing with patents"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1667",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920102984361707156",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1684",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-06-30",
+      "criteria_considered": "Automotive specialization, AL3 capability, Track record",
+      "selection_date": "2022-06-15",
+      "budget_agreed": "\u20ac85000",
+      "primary_auditor_assigned": "Johann Schmidt",
+      "contract_start_date": "2022-07-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1667",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917853383571277469",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1693",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "False",
+      "response_date": "2024-08-25",
+      "evidence_provided": "Training schedule; Completion records",
+      "maturity_level_achieved": "3",
+      "answer_status": "Compliant"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1668",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917847886013138569",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1673",
       "type": "ORGANISATION_UNDERGOES_ASSESSMENT",
       "internal_resource_hours": "200",
-      "budget_allocated": "45000",
-      "assessment_start": "2024-01-10",
-      "scope_agreed": "Production and warehouse",
-      "scheduled_completion": "2024-08-15"
+      "budget_allocated": "40000",
+      "assessment_start": "2024-10-01",
+      "scope_agreed": "All business processes",
+      "scheduled_completion": "2024-12-30"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917858881129415424",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:768",
-      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
-      "current_protection_level": "High",
-      "target_protection_level": "High",
-      "identified_gaps": "Backup encryption; MFA not everywhere",
-      "inclusion_date": "2024-01-20"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1668",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917850085036394123",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1675",
+      "type": "ORGANISATION_SELECTS_ASSESSMENT_LEVEL",
+      "is_upgrade_from_previous": "False",
+      "approved_by": "Compliance Manager",
+      "selection_date": "2022-12-20",
+      "data_protection_justification": "Basic customer information",
+      "justification": "Initial compliance step"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917858881129415421",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:765",
-      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
-      "current_protection_level": "High",
-      "target_protection_level": "High",
-      "identified_gaps": "Key management process; Encryption standard update",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1668",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920102984361707155",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1683",
+      "type": "ORGANISATION_CHOOSES_AUDIT_PROVIDER",
+      "contract_end_date": "2025-03-31",
+      "criteria_considered": "Cost optimization, Geographic reach, New supplier program",
+      "selection_date": "2024-03-05",
+      "budget_agreed": "\u20ac28000",
+      "primary_auditor_assigned": "Dr. Hans Mueller",
+      "contract_start_date": "2024-04-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1668",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917853383571277470",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1694",
+      "type": "ORGANISATION_ANSWERS_CONTROL_QUESTION",
+      "remediation_required": "False",
+      "response_date": "2024-02-01",
+      "evidence_provided": "Plan document; Incident logs; Test results",
+      "maturity_level_achieved": "3",
+      "answer_status": "Compliant"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917852284059649678",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1678",
+      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
+      "weight_percentage": "45.0",
+      "pass_fail_criteria": "All controls documented and evidence provided",
+      "priority_order": "1",
+      "estimated_hours": "80",
       "inclusion_date": "2024-01-10"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917857781617787634",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:754",
-      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
-      "applicability_date": "2024-01-10",
-      "catalogue_version_used": "5.0",
-      "control_questions_applicable_count": "165",
-      "exemptions_claimed": "Cloud data center operations",
-      "exemption_justification": "External provider, separate contract"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153246960048669408",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:745",
-      "type": "ASSESSMENT_MEETS_CRITERIA",
-      "auditor_notes": "Well-documented process with consistent implementation",
-      "confidence_level": "0.95",
-      "evidence_types_reviewed": "Documentation; Interviews; Technical testing",
-      "verification_date": "2024-08-10"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917852284059648746",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:746",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917852284059649679",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1679",
       "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
       "weight_percentage": "35.0",
       "pass_fail_criteria": "Compliance level >= 80%",
@@ -1258,15 +1955,441 @@
       "inclusion_date": "2024-01-15"
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:736",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917852284059648745",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:745",
-      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
-      "weight_percentage": "45.0",
-      "pass_fail_criteria": "All controls documented and evidence provided",
-      "priority_order": "1",
-      "estimated_hours": "80",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153246960048670341",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1678",
+      "type": "ASSESSMENT_MEETS_CRITERIA",
+      "auditor_notes": "Well-documented process with consistent implementation",
+      "confidence_level": "0.95",
+      "evidence_types_reviewed": "Documentation; Interviews; Technical testing",
+      "verification_date": "2024-08-10"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917857781617788567",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
+      "applicability_date": "2024-01-10",
+      "catalogue_version_used": "5.0",
+      "control_questions_applicable_count": "165",
+      "exemptions_claimed": "Cloud data center operations",
+      "exemption_justification": "External provider, separate contract"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917858881129416354",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1698",
+      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
+      "current_protection_level": "High",
+      "target_protection_level": "High",
+      "identified_gaps": "Key management process; Encryption standard update",
       "inclusion_date": "2024-01-10"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917858881129416357",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1701",
+      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
+      "current_protection_level": "High",
+      "target_protection_level": "High",
+      "identified_gaps": "Backup encryption; MFA not everywhere",
+      "inclusion_date": "2024-01-20"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1707",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153252457606809259",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1669",
+      "type": "ASSESSMENT_RESULT_OF_ASSESSMENT",
+      "result_date": "2024-08-15",
+      "final_status": "Certified",
+      "certification_body": "T\u00dcV S\u00dcD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920104083873334926",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1678",
+      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
+      "weight_percentage": "50.0",
+      "pass_fail_criteria": "AL3 requirements fully met",
+      "priority_order": "1",
+      "estimated_hours": "90",
+      "inclusion_date": "2023-06-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917852284059649680",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1680",
+      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
+      "weight_percentage": "30.0",
+      "pass_fail_criteria": "No critical findings",
+      "priority_order": "2",
+      "estimated_hours": "60",
+      "inclusion_date": "2023-06-20"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153246960048670342",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1678",
+      "type": "ASSESSMENT_MEETS_CRITERIA",
+      "auditor_notes": "Exemplary compliance with industry best practices",
+      "confidence_level": "0.98",
+      "evidence_types_reviewed": "Complete file review; System walkthrough; Staff interviews",
+      "verification_date": "2023-12-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917857781617788568",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
+      "applicability_date": "2023-06-15",
+      "catalogue_version_used": "5.0",
+      "control_questions_applicable_count": "245",
+      "exemptions_claimed": "None",
+      "exemption_justification": "Full coverage applicable"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917858881129416355",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1699",
+      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
+      "current_protection_level": "Maximum",
+      "target_protection_level": "Maximum",
+      "identified_gaps": "None identified",
+      "inclusion_date": "2023-06-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917858881129416358",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1702",
+      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
+      "current_protection_level": "High",
+      "target_protection_level": "Maximum",
+      "identified_gaps": "Classification labeling; Vault protection",
+      "inclusion_date": "2023-06-25"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1708",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153252457606809260",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1670",
+      "type": "ASSESSMENT_RESULT_OF_ASSESSMENT",
+      "result_date": "2023-12-20",
+      "final_status": "Certified",
+      "certification_body": "DEKRA"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917852284059649681",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1681",
+      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
+      "weight_percentage": "55.0",
+      "pass_fail_criteria": "MFA on all systems; <5% non-compliant",
+      "priority_order": "1",
+      "estimated_hours": "65",
+      "inclusion_date": "2024-08-20"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917852284059649682",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1682",
+      "type": "ASSESSMENT_CONTAINS_ASSESSMENT_OBJECTIVE",
+      "weight_percentage": "40.0",
+      "pass_fail_criteria": "Risk register documented; remediation plan",
+      "priority_order": "2",
+      "estimated_hours": "55",
+      "inclusion_date": "2024-08-25"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153246960048670343",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1679",
+      "type": "ASSESSMENT_MEETS_CRITERIA",
+      "auditor_notes": "Some gaps in encryption standards, remediation planned",
+      "confidence_level": "0.88",
+      "evidence_types_reviewed": "Policy review; Vendor contract audit",
+      "verification_date": "2024-11-05"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920109581431473815",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
+      "applicability_date": "2024-08-20",
+      "catalogue_version_used": "5.0",
+      "control_questions_applicable_count": "175",
+      "exemptions_claimed": "Legacy system maintenance",
+      "exemption_justification": "Deprecated by 2025"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917858881129416356",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1700",
+      "type": "ASSESSMENT_PROTECTS_PROTECTION_OBJECT",
+      "current_protection_level": "High",
+      "target_protection_level": "High",
+      "identified_gaps": "Access control logging; DLP tool gaps",
+      "inclusion_date": "2024-08-20"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1709",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153252457606809261",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1671",
+      "type": "ASSESSMENT_RESULT_OF_ASSESSMENT",
+      "result_date": "2024-11-10",
+      "final_status": "Certified",
+      "certification_body": "DNV GL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1672",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920109581431473816",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
+      "applicability_date": "2024-09-05",
+      "catalogue_version_used": "5.0",
+      "control_questions_applicable_count": "240",
+      "exemptions_claimed": "None",
+      "exemption_justification": "Full coverage applicable"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1673",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922361381245159063",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
+      "applicability_date": "2024-10-01",
+      "catalogue_version_used": "5.0",
+      "control_questions_applicable_count": "160",
+      "exemptions_claimed": "Outsourced logistics",
+      "exemption_justification": "Third party managed"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1674",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924613181058844311",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "type": "ASSESSMENT_SUBJECT_TO_ISA_CATALOGUE",
+      "applicability_date": "2024-11-15",
+      "catalogue_version_used": "5.0",
+      "control_questions_applicable_count": "120",
+      "exemptions_claimed": "None",
+      "exemption_justification": "None required"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153262353211459223",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1690",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL1; AL2; AL3",
+      "question_order": "1",
+      "question_weight": "1.0",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1687",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155514153025144471",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1693",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL1; AL2; AL3",
+      "question_order": "2",
+      "question_weight": "1.0",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153262353211459224",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1691",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL2; AL3",
+      "question_order": "1",
+      "question_weight": "1.2",
+      "response_required": "True",
+      "inclusion_date": "2023-06-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1688",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155514153025144472",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1692",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL1; AL2; AL3",
+      "question_order": "2",
+      "question_weight": "1.0",
+      "response_required": "True",
+      "inclusion_date": "2023-06-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153262353211459225",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1694",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL2; AL3",
+      "question_order": "1",
+      "question_weight": "1.3",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155514153025144473",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1695",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL2; AL3",
+      "question_order": "2",
+      "question_weight": "1.2",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157765952838829721",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1696",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL3",
+      "question_order": "3",
+      "question_weight": "1.4",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1689",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1160017752652514969",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1697",
+      "type": "ISA_CONTROLS_CONTROL_QUESTION",
+      "applicability_level": "AL3",
+      "question_order": "4",
+      "question_weight": "1.3",
+      "response_required": "True",
+      "inclusion_date": "2023-03-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1698",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153867084606736034",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1728",
+      "type": "PROTECTION_OBJECT_CLASSIFIED_AS",
+      "classification_date": "2024-01-01",
+      "volume_estimate": "High"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1698",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918475707152598720",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1728",
+      "type": "PROTECTION_OBJECT_CLASSIFIED_AS_DATA_CATEGORY",
+      "classification_date": "2024-01-01",
+      "volume_estimate": "High"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1699",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918474607640970946",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1730",
+      "type": "PROTECTION_OBJECT_CLASSIFIED_AS",
+      "classification_date": "2024-01-01",
+      "volume_estimate": "Medium"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1699",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918475707152598722",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1730",
+      "type": "PROTECTION_OBJECT_CLASSIFIED_AS_DATA_CATEGORY",
+      "classification_date": "2024-01-01",
+      "volume_estimate": "Medium"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1700",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153867084606736036",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1729",
+      "type": "PROTECTION_OBJECT_CLASSIFIED_AS",
+      "classification_date": "2024-01-01",
+      "volume_estimate": "Very High"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1700",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918475707152598721",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1729",
+      "type": "PROTECTION_OBJECT_CLASSIFIED_AS_DATA_CATEGORY",
+      "classification_date": "2024-01-01",
+      "volume_estimate": "Very High"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917856682106160814",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1710",
+      "type": "PARTICIPANT_PARTICIPATES_IN_EXCHANGE",
+      "participation_status": "Active",
+      "participation_start_date": "2022-02-01",
+      "agreement_signed_date": "2022-01-25"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153294239048664743",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1704",
+      "type": "PARTICIPANT_SHARES_RESULTS",
+      "consent_obtained": "True",
+      "expires_date": "2025-10-15",
+      "sharing_date": "2024-10-15",
+      "shared_by": "CISSO-001",
+      "confidentiality_level_granted": "Restricted",
+      "result_id_shared": "RES-001"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155546038862349991",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "type": "PARTICIPANT_SHARES_RESULTS",
+      "consent_obtained": "True",
+      "expires_date": "2025-09-20",
+      "sharing_date": "2024-09-20",
+      "shared_by": "CISSO-001",
+      "confidentiality_level_granted": "Restricted",
+      "result_id_shared": "RES-001"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1704",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155546038862349992",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1703",
+      "type": "PARTICIPANT_SHARES_RESULTS",
+      "consent_obtained": "True",
+      "expires_date": "2025-08-15",
+      "sharing_date": "2024-08-15",
+      "shared_by": "CISO-002",
+      "confidentiality_level_granted": "Public",
+      "result_id_shared": "RES-003"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1704",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920108481919846062",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1710",
+      "type": "PARTICIPANT_PARTICIPATES_IN_EXCHANGE",
+      "participation_status": "Active",
+      "participation_start_date": "2021-07-15",
+      "agreement_signed_date": "2021-07-01"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1704",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153294239048664744",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1705",
+      "type": "PARTICIPANT_SHARES_RESULTS",
+      "consent_obtained": "True",
+      "expires_date": "2025-11-01",
+      "sharing_date": "2024-11-01",
+      "shared_by": "CISO-002",
+      "confidentiality_level_granted": "Public",
+      "result_id_shared": "RES-002"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1705",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922360281733531310",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1710",
+      "type": "PARTICIPANT_PARTICIPATES_IN_EXCHANGE",
+      "participation_status": "Paused",
+      "participation_start_date": "2020-12-01",
+      "agreement_signed_date": "2020-11-15"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1706",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924612081547216558",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:1710",
+      "type": "PARTICIPANT_PARTICIPATES_IN_EXCHANGE",
+      "participation_status": "Active",
+      "participation_start_date": "2023-02-15",
+      "agreement_signed_date": "2023-02-01"
     }
   ]
 }

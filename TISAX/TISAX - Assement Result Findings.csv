@@ -1,0 +1,4 @@
+source_result_id,target_finding_id,relationship_type,impact_on_label,verification_method
+RES-001,FND-001,CONTAINS_FINDING,Label Withheld,On-Site Re-Check
+RES-001,FND-002,CONTAINS_FINDING,Temporary Label,Document Review
+RES-001,FND-003,CONTAINS_FINDING,None,Interview

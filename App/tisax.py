@@ -487,15 +487,15 @@ ON CREATE SET
   r.response_required = row.response_required;
 """
 
-#Isa_catalogue_has_category
+#Isa_catalogue_has_category#
 isa_catalogue_has_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ic:ISACatalogue {isa_catalogue_id: row.source_catalogue_id})
 MATCH (cc:ControlCategory {category_id: row.target_category_id})
 MERGE (ic)-[r:ISA_CATALOGUE_HAS_CATEGORY {type: row.relationship_type}]->(cc)
 ON CREATE SET
-  r.inclusion_date = date(row.inclusion_date),
-  r.is_mandatory   = toBoolean(row.is_mandatory);
+  r.inclusion_date = row.inclusion_date,
+  r.is_mandatory   = row.is_mandatory;
 """
 
 #Organization_assigns_role
@@ -525,33 +525,33 @@ protection_object_classified_as = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (po:ProtectionObject {protection_object_id: row.source_object_id})
 MATCH (dc:DataCategory {data_category_id: row.target_category_id})
-MERGE (po)-[r:PROTECTION_OBJECT_CLASSIFIED_AS {type: row.relationship_type}]->(dc)
+MERGE (po)-[r:PROTECTION_OBJECT_CLASSIFIED_AS_DATA_CATEGORY {type: row.relationship_type}]->(dc)
 ON CREATE SET
   r.classification_date = date(row.classification_date),
   r.volume_estimate     = row.volume_estimate;
 """
 
-#Assessment_includes_phase
+#Assessment_includes_phase#
 assessment_includes_phase = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ass:Assessment {assessment_id: row.source_assessment_id})
 MATCH (aph:AssessmentPhase {phase_id: row.target_phase_id})
 MERGE (ass)-[r:ASSESSMENT_INCLUDES_PHASE {type: row.relationship_type}]->(aph)
 ON CREATE SET
-  r.start_date = date(row.start_date),
-  r.end_date   = date(row.end_date),
+  r.start_date = row.start_date,
+  r.end_date   = row.end_date,
   r.status = row.status;
 """
 
-#Assessment_result_contains_finding
+#Assessment_result_contains_finding#
 assessment_result_contains_finding = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ar:AssessmentResult {assessment_result_id: row.source_result_id})
 MATCH (fd:Finding {finding_id: row.target_finding_id})
 MERGE (ar)-[r:ASSESSMENT_RESULT_CONTAINS_FINDING {type: row.relationship_type}]->(fd)
 ON CREATE SET
-  r.impact_on_label     = row.impact_on_label,
-  r.verification_method = row.verification_method;
+  r.impact_on_label     = row.impact_on_label,
+  r.verification_method = row.verification_method;
 """
 
 import os
@@ -609,22 +609,22 @@ time.sleep(2)
 
 client.query(exchange_node.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_Exchange_nodes.csv'))
 time.sleep(2)
-client.query(control_category.replace('$file_path',""))
+client.query(control_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/control_categories.csv"))
 time.sleep(2)
 
-client.query(role.replace('$file_path',""))
+client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/roles.csv"))
 time.sleep(2)
 
-client.query(security_policy.replace('$file_path',""))
+client.query(security_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/security_policies.csv"))
 time.sleep(2)
 
-client.query(data_category.replace('$file_path',""))
+client.query(data_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/data_categories.csv"))
 time.sleep(2)
 
-client.query(assessment_phase.replace('$file_path',""))
+client.query(assessment_phase.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/assessment_phases.csv"))
 time.sleep(2)
 
-client.query(finding.replace('$file_path',""))
+client.query(finding.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/findings.csv"))
 time.sleep(2)
 
 #Relationships
@@ -669,33 +669,31 @@ time.sleep(2)
 client.query(ISA_control.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CONTAINS_QUESTIONS.csv'))
 time.sleep(2)
 
-client.query(isa_catalogue_has_category.replace('$file_path',""))
+client.query(isa_catalogue_has_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_isa_has_category.csv"))
 time.sleep(2)
 
-client.query(organization_assigns_role.replace('$file_path',""))
+client.query(organization_assigns_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_org_assigns_role.csv"))
 time.sleep(2)
 
-client.query(organization_establishes_policy.replace('$file_path',""))
+client.query(organization_establishes_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_org_establishes_policy.csv"))
 time.sleep(2)
 
-client.query(protection_object_classified_as.replace('$file_path',""))
+client.query(protection_object_classified_as.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_object_classified_as.csv"))
 time.sleep(2)
 
-client.query(assessment_includes_phase.replace('$file_path',""))
+client.query(assessment_includes_phase.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_assessment_includes_phase.csv"))
 time.sleep(2)
 
-client.query(assessment_result_contains_finding.replace('$file_path',""))
+client.query(assessment_result_contains_finding.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_result_contains_finding.csv"))
 time.sleep(2)
  
  
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
-WITH collect(DISTINCT n) AS uniqueNodes,
-     collect(DISTINCT r) AS uniqueRels
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -710,14 +708,19 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
+results = client.query(query)
 
-graph = res[0]["graph_data"]   
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('tisax.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to tisax.json")
+else:
+    logger.error("No data returned from the query.")
 
-import json
-with open("tisax.json", "w", encoding="utf-8") as f:
-    f.write(json.dumps(graph, default=str, indent=2))
-
-logger.info("✓ Exported graph data to tisax.json")
 client.close()
