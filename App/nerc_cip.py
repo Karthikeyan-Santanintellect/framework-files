@@ -330,6 +330,203 @@ ON CREATE SET
   le.partnership_programs  = row.partnership_programs,
   le.response_time         = row.response_time;
 """
+
+#RiskAssessment
+risk_assessment = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ra:RiskAssessment {industry_standard_regulation_id: 'NERC_CIP', assessment_id: row.assessment_id})
+ON CREATE SET
+  ra.type                = row.assessment_type,
+  ra.date_conducted      = date(row.date_conducted),
+  ra.methodology         = row.methodology,
+  ra.residual_risk_level = row.residual_risk_level,
+  ra.assessor            = row.assessor,
+  ra.next_review_date    = date(row.next_review_date),
+  ra.status              = row.status;
+"""
+
+#ConfigurationBaseline
+configuration_baseline = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cb:ConfigurationBaseline {industry_standard_regulation_id: 'NERC_CIP', baseline_id: row.baseline_id})
+ON CREATE SET
+  cb.version               = row.version,
+  cb.approval_date         = date(row.approval_date),
+  cb.hash_value            = row.hash_value,
+  cb.approved_by           = row.approved_by,
+  cb.os_version            = row.os_version,
+  cb.patch_level_snapshot  = row.patch_level_snapshot;
+"""
+
+#Procedure
+procedure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (proc:Procedure {industry_standard_regulation_id: 'NERC_CIP', procedure_id: row.procedure_id})
+ON CREATE SET
+  proc.name             = row.name,
+  proc.cip_standard_ref = row.cip_standard_ref,
+  proc.last_updated     = date(row.last_updated),
+  proc.owner_role_id    = row.owner_role_id,
+  proc.review_cycle     = row.review_cycle;
+"""
+
+#Incident
+incident = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (inc:Incident {industry_standard_regulation_id: 'NERC_CIP', incident_id: row.incident_id})
+ON CREATE SET
+  inc.title           = row.title,
+  inc.date_occurred   = date(row.date_occurred),
+  inc.date_detected   = date(row.date_detected),
+  inc.severity        = row.severity,
+  inc.description     = row.description,
+  inc.root_cause      = row.root_cause,
+  inc.reported_to_erc = toBoolean(row.reported_to_erc),
+  inc.status          = row.status;
+"""
+
+#RecoveryPlan
+recovery_plan = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rp:RecoveryPlan {industry_standard_regulation_id: 'NERC_CIP', plan_id: row.plan_id})
+ON CREATE SET
+  rp.name                 = row.plan_name,
+  rp.scope                = row.scope,
+  rp.rto_goal             = row.rto_goal,
+  rp.rpo_goal             = row.rpo_goal,
+  rp.backup_location_type = row.backup_location_type,
+  rp.last_tested_date     = date(row.last_tested_date);
+"""
+
+#TestOrDrill
+test_or_drill = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (td:TestOrDrill {industry_standard_regulation_id: 'NERC_CIP', test_id: row.test_id})
+ON CREATE SET
+  td.type             = row.type,
+  td.date_conducted   = date(row.date_conducted),
+  td.participants     = row.participants,
+  td.outcome          = row.outcome,
+  td.lessons_learned  = row.lessons_learned;
+"""
+
+#Person
+person = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (p:Person {industry_standard_regulation_id: 'NERC_CIP', person_id: row.person_id})
+ON CREATE SET
+  p.first_name      = row.first_name,
+  p.last_name       = row.last_name,
+  p.pra_status      = row.pra_status,
+  p.pra_check_date  = date(row.pra_check_date),
+  p.clearance_level = row.clearance_level,
+  p.employment_type = row.employment_type;
+"""
+
+#TrainingModule
+training_module = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tm:TrainingModule {industry_standard_regulation_id: 'NERC_CIP', module_id: row.module_id})
+ON CREATE SET
+  tm.title                 = row.title,
+  tm.topic_category        = row.topic_category,
+  tm.frequency_requirement = row.frequency_requirement,
+  tm.version               = row.version;
+"""
+
+#Facility
+facility = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (fac:Facility {industry_standard_regulation_id: 'NERC_CIP', facility_id: row.facility_id})
+ON CREATE SET
+  fac.name                       = row.facility_name,
+  fac.type                       = row.facility_type,
+  fac.address                    = row.address,
+  fac.criticality_level          = row.criticality_level,
+  fac.manned_status              = row.manned_status,
+  fac.physical_security_plan_ref = row.physical_security_plan_ref;
+"""
+
+#Visitor
+visitor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (vis:Visitor {industry_standard_regulation_id: 'NERC_CIP', visitor_id: row.visitor_id})
+ON CREATE SET
+  vis.full_name        = row.full_name,
+  vis.company          = row.company,
+  vis.reason_for_visit = row.reason_for_visit,
+  vis.entry_time       = datetime(row.entry_time),
+  vis.exit_time        = datetime(row.exit_time),
+  vis.escort_person_id = row.escort_person_id;
+"""
+
+#PortService
+port_service = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ps:PortService {industry_standard_regulation_id: 'NERC_CIP', port_id: row.port_id})
+ON CREATE SET
+  ps.port_number   = toInteger(row.port_number),
+  ps.protocol      = row.protocol,
+  ps.service_name  = row.service_name,
+  ps.justification = row.justification,
+  ps.status        = row.status;
+"""
+
+#Vulnerability
+vulnerability = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (vuln:Vulnerability {industry_standard_regulation_id: 'NERC_CIP', cve_id: row.cve_id})
+ON CREATE SET
+  vuln.name                 = row.vulnerability_name,
+  vuln.cvss_score           = toFloat(row.cvss_score),
+  vuln.description          = row.description,
+  vuln.published_date       = date(row.published_date),
+  vuln.remediation_timeline = row.remediation_timeline;
+"""
+#Audit
+audit = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (aud:Audit {industry_standard_regulation_id: 'NERC_CIP', audit_id: row.audit_id})
+ON CREATE SET
+  aud.type       = row.audit_type,
+  aud.start_date = date(row.start_date),
+  aud.end_date   = date(row.end_date),
+  aud.outcome    = row.outcome;
+"""
+#Violation
+violation = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (vio:Violation {industry_standard_regulation_id: 'NERC_CIP', violation_id: row.violation_id})
+ON CREATE SET
+  vio.severity_level  = row.severity_level,
+  vio.date_identified = date(row.date_identified),
+  vio.description     = row.description,
+  vio.status          = row.status;
+"""
+
+#RemediationPlan
+remediation_plan = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rem:RemediationPlan {industry_standard_regulation_id: 'NERC_CIP', remediation_id: row.remediation_id})
+ON CREATE SET
+  rem.root_cause             = row.root_cause,
+  rem.corrective_action      = row.corrective_action,
+  rem.target_completion_date = date(row.target_completion_date),
+  rem.status                 = row.status;
+"""
+
+#ChangeAuthorization
+change_authorization = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (chg:ChangeAuthorization {industry_standard_regulation_id: 'NERC_CIP', change_id: row.change_id})
+ON CREATE SET
+  chg.ticket_number = row.ticket_number,
+  chg.justification = row.justification,
+  chg.approval_date = date(row.approval_date),
+  chg.risk_level    = row.risk_level;
+"""
+
+
 #Relationships
 #IndustryStandardAndRegulation → Standard
 # Framework relationships
@@ -489,6 +686,87 @@ MATCH (le:LawEnforcement {industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (org)-[:ORGANIZATION_COORDINATES_LAW_ENFORCEMENT {relationship_type: 'Incident_Coordination', basis: 'CIP-008'}]->(le);
 """
 
+#Rel: RiskAssessment to BESCyberSystem
+rel_risk_bcs = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ra:RiskAssessment {assessment_id: row.assessment_id})
+MATCH (bcs:BESCyberSystem {bcs_id: row.bcs_id})
+MERGE (ra)-[:EVALUATES {relationship_type: 'Risk_Evaluation', basis: 'CIP-002'}]->(bcs);
+"""
+
+#Rel: BESCyberSystem to Facility
+rel_bcs_facility = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (bcs:BESCyberSystem {bcs_id: row.bcs_id})
+MATCH (fac:Facility {facility_id: row.facility_id})
+MERGE (bcs)-[:LOCATED_AT {relationship_type: 'Physical_Location', basis: 'CIP-006'}]->(fac);
+"""
+
+#Rel: Person to Role
+rel_person_role = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (p:Person {person_id: row.person_id})
+MATCH (r:Role {role_id: row.role_id})
+MERGE (p)-[:HOLDS_ROLE {relationship_type: 'Personnel_Authorization', basis: 'CIP-004'}]->(r);
+"""
+
+#Rel: Person to TrainingModule
+rel_person_training = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (p:Person {person_id: row.person_id})
+MATCH (tm:TrainingModule {module_id: row.module_id})
+MERGE (p)-[:COMPLETED_TRAINING {relationship_type: 'Training_Record', completion_date: date(row.completion_date), score: toInteger(row.score), basis: 'CIP-004'}]->(tm);
+"""
+
+#Rel: Incident to BESCyberSystem
+rel_incident_bcs = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (inc:Incident {incident_id: row.incident_id})
+MATCH (bcs:BESCyberSystem {bcs_id: row.bcs_id})
+MERGE (inc)-[:AFFECTED_SYSTEM {relationship_type: 'Incident_Impact', basis: 'CIP-008'}]->(bcs);
+"""
+
+#Rel: BESCyberAsset to Vulnerability
+rel_asset_vuln = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (bca:BESCyberAsset {bca_id: row.bca_id})
+MATCH (vuln:Vulnerability {cve_id: row.cve_id})
+MERGE (bca)-[:HAS_VULNERABILITY {relationship_type: 'Vulnerability_Finding', detection_date: date(row.detection_date), status: row.status, basis: 'CIP-010'}]->(vuln);
+"""
+
+#Rel: TestOrDrill to RecoveryPlan
+rel_drill_plan = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (td:TestOrDrill {test_id: row.test_id})
+MATCH (rp:RecoveryPlan {plan_id: row.plan_id})
+MERGE (td)-[:TESTS_PLAN {relationship_type: 'Plan_Verification', basis: 'CIP-009'}]->(rp);
+"""
+
+#Rel: BESCyberAsset to PortService
+rel_asset_port = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (bca:BESCyberAsset {bca_id: row.bca_id})
+MATCH (ps:PortService {port_id: row.port_id})
+MERGE (bca)-[:EXPOSES_PORT {relationship_type: 'Port_Configuration', basis: 'CIP-007'}]->(ps);
+"""
+
+#Rel: Visitor to Facility
+rel_visitor_facility = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (vis:Visitor {visitor_id: row.visitor_id})
+MATCH (fac:Facility {facility_id: row.facility_id})
+MERGE (vis)-[:VISITED_FACILITY {relationship_type: 'Physical_Access_Log', basis: 'CIP-006'}]->(fac);
+"""
+
+#Rel: Procedure to Standard
+rel_proc_std = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (proc:Procedure {procedure_id: row.procedure_id})
+MATCH (std:Standard {standard_id: row.standard_id})
+MERGE (proc)-[:IMPLEMENTS_STANDARD {relationship_type: 'Compliance_Procedure'}]->(std);
+"""
+
+
 import os
 import re
 import time
@@ -560,6 +838,55 @@ time.sleep(2)
 
 client.query(law_enforcement.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NERC/nodes_LawEnforcement.csv'))
 time.sleep(2)
+
+client.query(risk_assessment.replace('$file_path',""))
+time.sleep(2)
+
+client.query(configuration_baseline.replace('$file_path',""))
+time.sleep(2)
+
+client.query(procedure.replace('$file_path',""))
+time.sleep(2)
+
+client.query(incident.replace('$file_path',""))
+time.sleep(2)
+
+client.query(recovery_plan.replace('$file_path',""))
+time.sleep(2)
+
+client.query(test_or_drill.replace('$file_path',""))
+time.sleep(2)
+
+client.query(person.replace('$file_path',""))
+time.sleep(2)
+
+client.query(training_module.replace('$file_path',""))
+time.sleep(2)
+
+client.query(facility.replace('$file_path',""))
+time.sleep(2)
+
+client.query(visitor.replace('$file_path',""))
+time.sleep(2)
+
+client.query(port_service.replace('$file_path',""))
+time.sleep(2)
+
+client.query(vulnerability.replace('$file_path',""))
+time.sleep(2)
+
+client.query(audit.replace('$file_path',""))
+time.sleep(2)
+
+client.query(violation.replace('$file_path',""))
+time.sleep(2)
+
+client.query(remediation_plan.replace('$file_path',""))
+time.sleep(2)
+
+client.query(change_authorization.replace('$file_path',""))
+time.sleep(2)
+
 
 #Relationships
 client.query(regulation_standard_rel)
@@ -634,6 +961,37 @@ time.sleep(2)
 
 client.query(organization_law_enforcement)
 time.sleep(2)
+
+client.query(rel_risk_bcs.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_bcs_facility.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_person_role.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_person_training.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_incident_bcs.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_asset_vuln.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_drill_plan.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_asset_port.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_visitor_facility.replace('$file_path',""))
+time.sleep(2)
+
+client.query(rel_proc_std.replace('$file_path',""))
+time.sleep(2)
+
  
 logger.info("Graph structure loaded successfully.")
 

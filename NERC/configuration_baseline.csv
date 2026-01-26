@@ -1,0 +1,3 @@
+baseline_id,version,approval_date,hash_value,approved_by,os_version,patch_level_snapshot
+CB-WIN-SRV-001,v2.4,2024-01-20,SHA256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,CISO,Windows Server 2019,Patch-Tuesday-Jan-2024
+CB-RTU-GEN-002,v1.1,2023-11-15,SHA256:88d4266fd4e6338d13b845fcf289579d209c897823b9217da3e161936f031589,Ops Director,Embedded Linux 4.0,Firmware-v3.2

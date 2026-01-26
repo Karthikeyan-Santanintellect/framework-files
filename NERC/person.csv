@@ -1,0 +1,4 @@
+person_id,first_name,last_name,pra_status,pra_check_date,clearance_level,employment_type
+EMP-001,John,Doe,Approved,2023-06-15,High Impact Access,Full-Time
+EMP-002,Jane,Smith,Approved,2023-08-20,Medium Impact Access,Contractor
+EMP-003,Robert,Jones,Pending,2024-01-10,None,Full-Time

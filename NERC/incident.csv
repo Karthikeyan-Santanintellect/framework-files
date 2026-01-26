@@ -1,0 +1,3 @@
+incident_id,title,date_occurred,date_detected,severity,description,root_cause,reported_to_erc,status
+INC-2024-001,Failed Login Anomaly,2024-03-10,2024-03-10,Non-Reportable,Multiple failed attempts on SCADA HMI,Brute Force Attempt,FALSE,Mitigated
+INC-2024-002,Malware Detection on EBS,2024-04-05,2024-04-05,CIP Incident,Ransomware signature detected on workstation,Phishing Email,TRUE,Closed

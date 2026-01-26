@@ -1,0 +1,3 @@
+violation_id,severity_level,date_identified,description,status,related_audit_id
+VIO-2024-001,Medium,2024-05-04,Missing patch documentation,Open,AUD-2024-01
+VIO-2024-002,High,2024-06-10,Unescorted visitor in PSP,Mitigated,Self-Reported

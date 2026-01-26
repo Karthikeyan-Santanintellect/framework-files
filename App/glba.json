@@ -1,8 +1,8 @@
 {
   "nodes": [
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3612",
       "mainLabel": "IndustryStandardAndRegulation",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
       "labels": [
         "IndustryStandardAndRegulation"
       ],
@@ -16,8 +16,585 @@
       "status": "Active"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3613",
+      "mainLabel": "Rule",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "labels": [
+        "Rule"
+      ],
+      "rule_id": "RULE-PRIVACY",
+      "citation": "12 CFR Part 1016",
+      "name": "Financial Privacy Rule (Reg P)",
+      "description": "Governs the collection and disclosure of customers' personal financial information.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Rule",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "labels": [
+        "Rule"
+      ],
+      "rule_id": "RULE-SAFEGUARDS",
+      "citation": "16 CFR Part 314",
+      "name": "Safeguards Rule (Reg S-P)",
+      "description": "Requires financial institutions to develop a secure information security program.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Rule",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "labels": [
+        "Rule"
+      ],
+      "rule_id": "RULE-PRETEXTING",
+      "citation": "Section 521",
+      "name": "Pretexting Provisions",
+      "description": "Prohibits obtaining customer information by false pretenses.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Rule",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "labels": [
+        "Rule"
+      ],
+      "rule_id": "RULE-BREACH",
+      "citation": "16 CFR 314.4(j)",
+      "name": "Breach Notification Rule (2024)",
+      "description": "Requires notification to the FTC and consumers for breaches affecting 500+ people.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Section",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "SEC-314.4",
+      "heading": "Elements of Security Program",
+      "text": "Develop",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "fullcitation": "16 CFR 314.4"
+    },
+    {
+      "mainLabel": "Section",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "SEC-313.4",
+      "heading": "Initial Privacy Notice",
+      "text": "Provide a clear and conspicuous notice that accurately reflects privacy policies and practices.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "fullcitation": "12 CFR 313.4"
+    },
+    {
+      "mainLabel": "Section",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "SEC-521.A",
+      "heading": "Prohibition on Pretexting",
+      "text": "It shall be unlawful for any person to obtain or attempt to obtain customer information of a financial institution by false pretenses.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "fullcitation": "GLBA Sec. 521(a)"
+    },
+    {
+      "mainLabel": "Section",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "labels": [
+        "Section"
+      ],
+      "section_id": "SEC-NOTIFY",
+      "heading": "Breach Notification",
+      "text": "Notify the FTC as soon as possible and no later than 30 days after discovery of a security event involving 500 or more consumers.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "fullcitation": "16 CFR 314.4(j)"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Designate a Qualified Individual to oversee the information security program.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Administrative",
+      "priority": "High",
+      "requirement_id": "REQ-SAFEGUARDS-01",
+      "frequency": "Ongoing"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Implement multi-factor authentication (MFA) for any individual accessing customer information.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Technical",
+      "priority": "High",
+      "requirement_id": "REQ-SAFEGUARDS-02",
+      "frequency": "Continuous"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Implement procedures for the secure disposal of customer information (shredding/wiping).",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Physical",
+      "priority": "Medium",
+      "requirement_id": "REQ-SAFEGUARDS-03",
+      "frequency": "As needed"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Provide initial privacy notice to customers no later than when the relationship is established.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Disclosure",
+      "priority": "High",
+      "requirement_id": "REQ-PRIVACY-01",
+      "frequency": "Event-driven"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Provide a reasonable opportunity and method for consumers to opt out of third-party sharing.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Consumer Right",
+      "priority": "High",
+      "requirement_id": "REQ-PRIVACY-02",
+      "frequency": "Ongoing"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Establish procedures to verify the identity of a person seeking information (Identity Verification).",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Anti-Fraud",
+      "priority": "High",
+      "requirement_id": "REQ-PRETEXT-01",
+      "frequency": "Per Request"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Notify the FTC of any security event affecting 500 or more consumers within 30 days.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Reporting",
+      "priority": "Critical",
+      "requirement_id": "REQ-NOTIFY-FTC",
+      "frequency": "Event-driven"
+    },
+    {
+      "mainLabel": "Requirement",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "labels": [
+        "Requirement"
+      ],
+      "text": "Oversee service providers to ensure they maintain appropriate safeguards.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Vendor Mgmt",
+      "priority": "Medium",
+      "requirement_id": "REQ-VENDOR-01",
+      "frequency": "Periodic"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "ROLE-FI",
+      "name": "Financial Institution",
+      "description": "Any institution significantly engaged in financial activities (Banks",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "ROLE-CUSTOMER",
+      "name": "Customer",
+      "description": "A consumer who has a continuing relationship with a financial institution.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "ROLE-CONSUMER",
+      "name": "Consumer",
+      "description": "An individual who obtains a financial product or service (broader than customer).",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "labels": [
+        "Role"
+      ],
+      "role_id": "ROLE-EMPLOYEE",
+      "name": "Employee",
+      "description": "Staff member of the financial institution who handles NPI.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "labels": [
+        "DataCategory"
+      ],
+      "examples": "Credit score",
+      "data_id": "DATA-NPI",
+      "name": "Nonpublic Personal Information",
+      "description": "Personally identifiable financial information that is not publicly available.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "labels": [
+        "DataCategory"
+      ],
+      "examples": "Name",
+      "data_id": "DATA-PII",
+      "name": "Personally Identifiable Information",
+      "description": "Information that can identify an individual.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "DataCategory",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "labels": [
+        "DataCategory"
+      ],
+      "examples": "Account number",
+      "data_id": "DATA-ACCT",
+      "name": "Account Information",
+      "description": "Specific details regarding financial accounts.",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "EventType",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "labels": [
+        "EventType"
+      ],
+      "event_id": "EVENT-ANNUAL",
+      "name": "Annual Review",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "deadline": "365 Days"
+    },
+    {
+      "mainLabel": "EventType",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "labels": [
+        "EventType"
+      ],
+      "event_id": "EVENT-BREACH",
+      "name": "Breach Discovery",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "deadline": "Immediate"
+    },
+    {
+      "mainLabel": "EventType",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "labels": [
+        "EventType"
+      ],
+      "event_id": "EVENT-ONBOARD",
+      "name": "Customer Onboarding",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "deadline": "Immediate"
+    },
+    {
+      "mainLabel": "EventType",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "labels": [
+        "EventType"
+      ],
+      "event_id": "EVENT-NOTIFY-30",
+      "name": "FTC Notification Deadline",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "deadline": "30 Days"
+    },
+    {
+      "mainLabel": "Safeguard",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "labels": [
+        "Safeguard"
+      ],
+      "safeguard_id": "SG-MFA-01",
+      "name": "Multi-Factor Authentication",
+      "description": "Authentication requiring two or more factors (Knowledge",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Technical"
+    },
+    {
+      "mainLabel": "Safeguard",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "labels": [
+        "Safeguard"
+      ],
+      "safeguard_id": "SG-ENCRYPT-01",
+      "name": "Encryption (Transit/Rest)",
+      "description": "Cryptographic protection of data while stored or moving across networks.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Technical"
+    },
+    {
+      "mainLabel": "Safeguard",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "labels": [
+        "Safeguard"
+      ],
+      "safeguard_id": "SG-TRAIN-01",
+      "name": "Security Awareness Training",
+      "description": "Regular training for employees on security risks and pretexting.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Administrative"
+    },
+    {
+      "mainLabel": "Safeguard",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "labels": [
+        "Safeguard"
+      ],
+      "safeguard_id": "SG-SHRED-01",
+      "name": "Secure Disposal",
+      "description": "Cross-cut shredding or secure wiping of media containing NPI.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Physical"
+    },
+    {
+      "mainLabel": "EnforcementAction",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "authority": "FTC / Banking Regulators",
+      "description": "Civil penalties of up to $100",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "enforcement_action_id": "ENF-CIVIL"
+    },
+    {
+      "mainLabel": "EnforcementAction",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "authority": "Department of Justice",
+      "description": "Criminal penalties including imprisonment for up to 5 years for knowing violations.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "enforcement_action_id": "ENF-CRIM"
+    },
+    {
+      "mainLabel": "EnforcementAction",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "labels": [
+        "EnforcementAction"
+      ],
+      "authority": "FTC",
+      "description": "Cease and Desist orders requiring the stopping of illegal practices.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "enforcement_action_id": "ENF-C&D"
+    },
+    {
+      "mainLabel": "Policy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Qualified Individual (CISO)",
+      "policy_id": "POL-ISP",
+      "name": "Information Security Program (WISP)",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Policy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Compliance Officer",
+      "policy_id": "POL-PRIVACY",
+      "name": "Privacy Policy",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Policy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Security Operations Lead",
+      "policy_id": "POL-IRP",
+      "name": "Incident Response Plan",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Policy",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "labels": [
+        "Policy"
+      ],
+      "owner": "Procurement/Risk Manager",
+      "policy_id": "POL-VENDOR",
+      "name": "Vendor Management Policy",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Control",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-ACCESS",
+      "name": "Role-Based Access Control (RBAC)",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Identity & Access Management"
+    },
+    {
+      "mainLabel": "Control",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-LOG",
+      "name": "Activity Logging",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Monitoring"
+    },
+    {
+      "mainLabel": "Control",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-ID-VER",
+      "name": "Identity Verification Questions",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Fraud Prevention"
+    },
+    {
+      "mainLabel": "Control",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "labels": [
+        "Control"
+      ],
+      "control_id": "CTRL-SCAN",
+      "name": "Vulnerability Scanning",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Vulnerability Management"
+    },
+    {
+      "mainLabel": "System",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:185",
+      "labels": [
+        "System"
+      ],
+      "system_id": "SYS-CORE",
+      "name": "Core Banking Platform",
+      "holds_npi": "TRUE",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "System",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:186",
+      "labels": [
+        "System"
+      ],
+      "system_id": "SYS-HR",
+      "name": "Human Resources System",
+      "holds_npi": "TRUE",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "System",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:187",
+      "labels": [
+        "System"
+      ],
+      "system_id": "SYS-EMAIL",
+      "name": "Corporate Email System",
+      "holds_npi": "TRUE",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "System",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:188",
+      "labels": [
+        "System"
+      ],
+      "system_id": "SYS-CRM",
+      "name": "Customer Relationship Management",
+      "holds_npi": "TRUE",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Process",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "labels": [
+        "Process"
+      ],
+      "process_id": "PROC-OPEN",
+      "name": "Account Opening Process",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Process",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "labels": [
+        "Process"
+      ],
+      "process_id": "PROC-OPTOUT",
+      "name": "Consumer Opt-Out Processing",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Process",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "labels": [
+        "Process"
+      ],
+      "process_id": "PROC-VERIFY",
+      "name": "Customer Verification (Call Center)",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
+      "mainLabel": "Process",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "labels": [
+        "Process"
+      ],
+      "process_id": "PROC-OFFBOARD",
+      "name": "Employee Termination/Offboarding",
+      "industry_standard_regulation_id": "GLBA 1999"
+    },
+    {
       "mainLabel": "QualifiedIndividual",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:193",
       "labels": [
         "QualifiedIndividual"
       ],
@@ -28,8 +605,8 @@
       "mandate_source": "Safeguards Rule 2024"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3614",
       "mainLabel": "BoardOfDirectors",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:194",
       "labels": [
         "BoardOfDirectors"
       ],
@@ -39,8 +616,8 @@
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3615",
       "mainLabel": "ServiceProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:195",
       "labels": [
         "ServiceProvider"
       ],
@@ -51,8 +628,8 @@
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3616",
       "mainLabel": "ServiceProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:196",
       "labels": [
         "ServiceProvider"
       ],
@@ -63,8 +640,8 @@
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
       "mainLabel": "RiskAssessment",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:197",
       "labels": [
         "RiskAssessment"
       ],
@@ -75,8 +652,8 @@
       "category": "Compliance"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3618",
       "mainLabel": "Threat",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:198",
       "labels": [
         "Threat"
       ],
@@ -87,8 +664,8 @@
       "category": "Social Engineering"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3619",
       "mainLabel": "Threat",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:199",
       "labels": [
         "Threat"
       ],
@@ -99,8 +676,8 @@
       "category": "Cybersecurity"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3620",
       "mainLabel": "Threat",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:200",
       "labels": [
         "Threat"
       ],
@@ -111,8 +688,8 @@
       "category": "Access Control"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3621",
       "mainLabel": "Asset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:201",
       "labels": [
         "Asset"
       ],
@@ -123,8 +700,8 @@
       "category": " Account Numbers)."
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3622",
       "mainLabel": "Asset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:202",
       "labels": [
         "Asset"
       ],
@@ -135,8 +712,8 @@
       "category": "Hardware"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3623",
       "mainLabel": "PrivacyNotice",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:203",
       "labels": [
         "PrivacyNotice"
       ],
@@ -147,8 +724,8 @@
       "notice_id": "PN-INIT"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3624",
       "mainLabel": "PrivacyNotice",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:204",
       "labels": [
         "PrivacyNotice"
       ],
@@ -159,8 +736,8 @@
       "notice_id": "PN-ANN"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3625",
       "mainLabel": "OptOutMechanism",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:205",
       "labels": [
         "OptOutMechanism"
       ],
@@ -171,8 +748,8 @@
       "type": "Telephone"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3626",
       "mainLabel": "OptOutMechanism",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:206",
       "labels": [
         "OptOutMechanism"
       ],
@@ -183,8 +760,8 @@
       "type": "Mail"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3627",
       "mainLabel": "NonAffiliatedThirdParty",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:207",
       "labels": [
         "NonAffiliatedThirdParty"
       ],
@@ -194,8 +771,8 @@
       "entity_id": "NATP-001"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3628",
       "mainLabel": "SecurityBreach",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:208",
       "labels": [
         "SecurityBreach"
       ],
@@ -205,8 +782,8 @@
       "breach_id": "SB-EXAMPLE"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3629",
       "mainLabel": "SocialEngineeringTactic",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:209",
       "labels": [
         "SocialEngineeringTactic"
       ],
@@ -216,8 +793,8 @@
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3630",
       "mainLabel": "SocialEngineeringTactic",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:210",
       "labels": [
         "SocialEngineeringTactic"
       ],
@@ -229,52 +806,2070 @@
   ],
   "rels": [
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3613",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153806611467210269",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3614",
-      "type": "REPORTS_TO",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153238163955646606",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "type": "REGULATION_HAS_RULE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155489963769331854",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "type": "REGULATION_HAS_RULE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157741763583017102",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "type": "REGULATION_HAS_RULE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159993563396702350",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "type": "REGULATION_HAS_RULE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153830800723017870",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:204",
+      "type": "REGULATION_MANDATES_PRIVACY_NOTICE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153831900234645646",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:206",
+      "type": "REGULATION_REQUIRES_OPT_OUT_MECHANISM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153832999746273422",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:200",
+      "type": "REGULATION_IDENTIFIES_SECURITY_THREAT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153234865420763279",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155486665234448527",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157738465048133775",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159990264861819023",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153234865420763280",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155486665234448528",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157738465048133776",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159990264861819024",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153234865420763281",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155486665234448529",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157738465048133777",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159990264861819025",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153234865420763282",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155486665234448530",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157738465048133778",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159990264861819026",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "type": "RULE_HAS_SECTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153173292769607827",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155425092583293075",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157676892396978323",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159928692210663571",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162180492024348819",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1164432291838034067",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1166684091651719315",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1168935891465404563",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153173292769607828",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155425092583293076",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157676892396978324",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159928692210663572",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162180492024348820",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1164432291838034068",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1166684091651719316",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1168935891465404564",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153173292769607829",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155425092583293077",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157676892396978325",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159928692210663573",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162180492024348821",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1164432291838034069",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1166684091651719317",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1168935891465404565",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153173292769607830",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155425092583293078",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157676892396978326",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159928692210663574",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1162180492024348822",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1164432291838034070",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1166684091651719318",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1168935891465404566",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "type": "SECTION_HAS_REQUIREMENT"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917750029478265002",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917750029478265003",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917750029478265004",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917750029478265005",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657879",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343127",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028375",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713623",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917752228501520561",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917752228501520562",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917752228501520563",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917752228501520564",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917753328013148341",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917753328013148342",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917753328013148343",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917753328013148344",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917755527036403901",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917755527036403902",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917755527036403903",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917755527036403904",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330071",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015319",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700567",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385815",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917781915315470510",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917781915315470511",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6917781915315470512",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391063",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076311",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761559",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918426229129347265",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:193",
+      "type": "REQUIRES_DESIGNATION_OF_QUALIFIED_INDIVIDUAL",
+      "description": "The 2024 Rule requires designating a Qualified Individual."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920001829291950250",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920001829291950251",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920001829291950252",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920001829291950253",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657880",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343128",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028376",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713624",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920004028315205809",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920004028315205810",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920004028315205811",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920004028315205812",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920005127826833589",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920005127826833590",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920005127826833591",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920005127826833592",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920007326850089149",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920007326850089150",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920007326850089151",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920007326850089152",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330072",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015320",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700568",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385816",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920033715129155758",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920033715129155759",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6920033715129155760",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391064",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076312",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761560",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922253629105635498",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922253629105635499",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922253629105635500",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922253629105635501",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657881",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343129",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028377",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713625",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922255828128891057",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922255828128891058",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922255828128891059",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922255828128891060",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922256927640518837",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922256927640518838",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922256927640518839",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922256927640518840",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922259126663774397",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922259126663774398",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922259126663774399",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922259126663774400",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330073",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015321",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700569",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385817",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922285514942841006",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922285514942841007",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922285514942841008",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391065",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076313",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761561",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924505428919320746",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924505428919320747",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924505428919320748",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924505428919320749",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657882",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343130",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028378",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713626",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924507627942576305",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924507627942576306",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924507627942576307",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924507627942576308",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924508727454204085",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924508727454204086",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924508727454204087",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924508727454204088",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924510926477459645",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924510926477459646",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924510926477459647",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924510926477459648",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330074",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015322",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700570",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385818",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924537314756526254",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924537314756526255",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924537314756526256",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391066",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076314",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761562",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918430627175858379",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:203",
+      "type": "REQUIREMENT_MUST_PROVIDE_PRIVACY_NOTICE",
+      "description": "Financial Institutions must provide an initial privacy notice at account opening."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926757228733005994",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926757228733005995",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926757228733005996",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926757228733005997",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657883",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343131",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028379",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713627",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926759427756261553",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926759427756261554",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926759427756261555",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926759427756261556",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926760527267889333",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926760527267889334",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926760527267889335",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926760527267889336",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926762726291144893",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926762726291144894",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926762726291144895",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926762726291144896",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330075",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015323",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700571",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385819",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926789114570211502",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926789114570211503",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926789114570211504",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391067",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076315",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761563",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929009028546691242",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929009028546691243",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929009028546691244",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929009028546691245",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657884",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343132",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028380",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713628",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929011227569946801",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929011227569946802",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929011227569946803",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929011227569946804",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929012327081574581",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929012327081574582",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929012327081574583",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929012327081574584",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929014526104830141",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929014526104830142",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929014526104830143",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929014526104830144",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330076",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015324",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700572",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385820",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929040914383896750",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929040914383896751",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929040914383896752",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391068",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076316",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761564",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918436124733997265",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:209",
+      "type": "REQUIREMENT_PROHIBITS_TACTIC",
+      "description": "GLBA explicitly prohibits obtaining customer info via phone pretexting."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918436124733997266",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:210",
+      "type": "REQUIREMENT_PROHIBITS_TACTIC",
+      "description": "GLBA prohibits obtaining customer info via fraudulent statements (phishing)."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931260828360376490",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931260828360376491",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931260828360376492",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931260828360376493",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657885",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343133",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028381",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713629",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931263027383632049",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931263027383632050",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931263027383632051",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931263027383632052",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931264126895259829",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931264126895259830",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931264126895259831",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931264126895259832",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931266325918515389",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931266325918515390",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931266325918515391",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931266325918515392",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330077",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015325",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700573",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385821",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931292714197581998",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931292714197581999",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931292714197582000",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391069",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076317",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761565",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:208",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153826402676506832",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "type": "SECURITY_BREACH_TRIGGERS_NOTIFICATION",
+      "description": "Breach affecting >500 individuals triggers the requirement to notify the FTC."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933512628174061738",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933512628174061739",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933512628174061740",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933512628174061741",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153143605955657886",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155395405769343134",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157647205583028382",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159899005396713630",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933514827197317297",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933514827197317298",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933514827197317299",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933514827197317300",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933515926708945077",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933515926708945078",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933515926708945079",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933515926708945080",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933518125732200637",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933518125732200638",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933518125732200639",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933518125732200640",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "type": "REQUIREMENT_IMPACTS_PROCESS"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153162297653330078",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155414097467015326",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157665897280700574",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159917697094385822",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933544514011267246",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933544514011267247",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6933544514011267248",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153235964932391070",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155487764746076318",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157739564559761566",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918435025222369475",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:195",
+      "type": "REQUIREMENT_REQUIRES_OVERSIGHT_OF_SERVICE_PROVIDER",
+      "description": "GLBA requires overseeing cloud providers who handle NPI."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6918435025222369476",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:196",
+      "type": "REQUIREMENT_REQUIRES_OVERSIGHT_OF_SERVICE_PROVIDER",
+      "description": "GLBA requires overseeing payment processors who handle NPI."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155488864257704095",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157740664071389343",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159992463885074591",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153237064444018847",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926851786732994719",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6929103586546679967",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6931355386360365215",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155488864257704096",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157740664071389344",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153237064444018848",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6924599986919309472",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6926851786732994720",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155488864257704097",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153237064444018849",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:6922348187105624225",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153237064444018850",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "type": "ROLE_HAS_ROLE"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153822004629995690",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:198",
+      "type": "SAFEGUARD_MITIGATES_THREAT",
+      "description": "Multi-factor authentication mitigates the risk of pretexting/unauthorized access."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153146904490541237",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:185",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155398704304226485",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:186",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157650504117911733",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:187",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159902303931596981",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:188",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153146904490541238",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:185",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155398704304226486",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:186",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157650504117911734",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:187",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159902303931596982",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:188",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153146904490541239",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:185",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155398704304226487",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:186",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157650504117911735",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:187",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159902303931596983",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:188",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153146904490541240",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:185",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1155398704304226488",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:186",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1157650504117911736",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:187",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1159902303931596984",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:188",
+      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:193",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153819805606740161",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:194",
+      "type": "QUALIFIED_INDIVIDUAL_REPORTS_TO_BOARD_OF_DIRECTORS",
       "description": "QI must report annually to the Board on the status of the security program."
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153807710978838049",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3621",
-      "type": "EVALUATES_RISK_IN",
-      "description": "Risk assessment must evaluate risks to customer databases."
-    },
-    {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1156059510792523297",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3622",
-      "type": "EVALUATES_RISK_IN",
-      "description": "Risk assessment must evaluate risks to employee devices."
-    },
-    {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153808810490465825",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3618",
-      "type": "IDENTIFIES_THREAT",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:197",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153820905118367941",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:198",
+      "type": "RISK_ASSESSMENT_IDENTIFIES_THREAT",
       "description": "Assessment identifies pretexting as a key social engineering threat."
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1156060610304151073",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3619",
-      "type": "IDENTIFIES_THREAT",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:197",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1156072704932053189",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:199",
+      "type": "RISK_ASSESSMENT_IDENTIFIES_THREAT",
       "description": "Assessment identifies phishing as a key cybersecurity threat."
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3623",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153809910002093607",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3625",
-      "type": "CONTAINS_MECHANISM",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:197",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153829701211390149",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:201",
+      "type": "RISK_ASSESSMENT_EVALUATES_RISK_IN_ASSET",
+      "description": "Risk assessment must evaluate risks to customer databases."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:197",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1156081501025075397",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:202",
+      "type": "RISK_ASSESSMENT_EVALUATES_RISK_IN_ASSET",
+      "description": "Risk assessment must evaluate risks to employee devices."
+    },
+    {
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:203",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153824203653251275",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:205",
+      "type": "PRIVACY_NOTICE_CONTAINS_MECHANISM",
       "description": "Privacy notice must detail the toll-free number for opting out."
     },
     {
-      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3625",
-      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153811009513721385",
-      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3627",
-      "type": "APPLIES_TO_SHARING_WITH",
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:205",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153825303164879053",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:207",
+      "type": "OPT_OUT_MECHANISM_APPLIES_TO_THIRD_PARTY",
       "description": "Opt-out rights apply to sharing with non-affiliated marketing firms."
     }
   ]

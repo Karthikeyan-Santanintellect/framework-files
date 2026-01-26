@@ -219,109 +219,89 @@ ON CREATE SET
     set.name = row.name,
     set.description = row.description;
 """
-
+#Relationships
 #Regulation → Rule
 regulation_rule ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id:'GLBA 1999'})
-MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999',rule_id:row.target_rule_id})
-MERGE (i)-[:REGULATION_HAS_RULE{type:row.relationship_type}]->(ru);
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (i)-[:REGULATION_HAS_RULE]->(ru);
 """
 #Rule → Section
 rule_section = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999',rule_id:row.source_rule_id})
-MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999',section_id:row.target_section_id})
-MERGE (ru)-[:RULE_HAS_SECTION{type:row.relationship_type}]->(sec);
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (ru)-[:RULE_HAS_SECTION]->(sec);
 """
 #Section → Requirement
 section_requirement = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999',section_id:row.source_section_id})
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.target_requirement_id})
-MERGE (sec)-[:SECTION_HAS_REQUIREMENT{type:row.relationship_type}]->(r);
+MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (sec)-[:SECTION_HAS_REQUIREMENT]->(r);
 """
 #Requirement → Role
 requirement_role = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (ro:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.target_role_id})
-MERGE (r)-[:REQUIREMENT_APPLIES_TO_ROLE{type:row.relationship_type}]->(ro);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (ro:Role{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_APPLIES_TO_ROLE]->(ro);
 """
 #Requirement → DataCategory
 requirement_datacategory = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (dc:DataCategory{industry_standard_regulation_id: 'GLBA 1999',data_id:row.target_data_id})
-MERGE (r)-[:REQUIREMENT_APPLIES_TO_DATACATEGORY{type:row.relationship_type}]->(dc);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (dc:DataCategory{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_APPLIES_TO_DATACATEGORY]->(dc);
 """
 #Requirement → EventType
 requirement_event_type ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (et:EventType{industry_standard_regulation_id: 'GLBA 1999',event_id:row.target_eventtype_id})
-MERGE (r)-[:REQUIREMENT_TRIGGERS_EVENT_TYPE{type:row.relationship_type}]->(et);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (et:EventType{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_TRIGGERS_EVENT_TYPE]->(et);
 """
 #Requirement → Safeguard
 requirement_safeguard = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999',safeguard_id:row.target_safeguard_id})
-MERGE (r)-[:REQUIREMENT_REQUIRES_SAFEGUARD{type:row.relationship_type}]->(s);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_REQUIRES_SAFEGUARD]->(s);
 """
 #Requirement → Policy
 requirement_policy = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {
-  industry_standard_regulation_id: 'GLBA 1999',
-  requirement_id: row.source_requirement_id
+  industry_standard_regulation_id: 'GLBA 1999'
 })
 MATCH (po:Policy {
-  industry_standard_regulation_id: 'GLBA 1999',
-  policy_id: row.target_policy_id
+  industry_standard_regulation_id: 'GLBA 1999'
 })
-MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY {
-  type: row.relationship_type
-}]->(po);
+MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY]->(po);
 """
 
 #Requirement → Control
 requirement_control ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999',control_id:row.target_control_id})
-MERGE (r)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL{type:row.relationship_type}]->(co);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL]->(co);
 """
 #Control → System
 control_system = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999',control_id:row.source_control_id})
-MATCH (sys:System{industry_standard_regulation_id: 'GLBA 1999',system_id:row.target_system_id})
-MERGE (co)-[:CONTROL_IMPLEMENTED_IN_SYSTEM{type:row.relationship_type}]->(sys);
+MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (sys:System{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (co)-[:CONTROL_IMPLEMENTED_IN_SYSTEM]->(sys);
 """
 #Requirement → Process
 requirement_process = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (pr:Process{industry_standard_regulation_id: 'GLBA 1999',process_id:row.target_process_id})
-MERGE (r)-[:REQUIREMENT_IMPACTS_PROCESS{type:row.relationship_type}]->(pr);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (pr:Process{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_IMPACTS_PROCESS]->(pr);
 """
 #Role → Role (Customer → Financial Institution)
 role_role = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (src:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.source_role_id})
-MATCH (tgt:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.target_role_id})
-MERGE (src)-[:ROLE_HAS_ROLE{
-    type:row.relationship_type,
-    description:row.relationship_description
-    }]->(tgt);
+MATCH (src:Role{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (tgt:Role{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (src)-[:ROLE_HAS_ROLE]->(tgt);
 """
 #Requirement → EnforcementAction
 requirement_enforcement_action = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
-MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA 1999',enforcement_action_id:row.target_enforcement_id})
-MERGE (r)-[:REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION{type:row.relationship_type}]->(ea);
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
+MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r)-[:REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION]->(ea);
 """
 
 #Requirement → QualifiedIndividual
@@ -329,7 +309,7 @@ requirement_qualified_individual = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
 MATCH (qi:QualifiedIndividual {industry_standard_regulation_id: 'GLBA 1999', qi_id: row.target_qi_id})
-MERGE (r)-[:REQUIRES_DESIGNATION_OF {
+MERGE (r)-[:REQUIRES_DESIGNATION_OF_QUALIFIED_INDIVIDUAL{
     type: row.relationship_type,
     description: row.description
 }]->(qi);
@@ -340,7 +320,7 @@ qualified_individual_board = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (qi:QualifiedIndividual {industry_standard_regulation_id: 'GLBA 1999', qi_id: row.source_qi_id})
 MATCH (bod:BoardOfDirectors {industry_standard_regulation_id: 'GLBA 1999', bod_id: row.target_bod_id})
-MERGE (qi)-[:REPORTS_TO {
+MERGE (qi)-[:QUALIFIED_INDIVIDUAL_REPORTS_TO_BOARD_OF_DIRECTORS{
     type: row.relationship_type,
     description: row.description
 }]->(bod);
@@ -351,7 +331,7 @@ risk_assessment_asset = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ra:RiskAssessment {industry_standard_regulation_id: 'GLBA 1999', assessment_id: row.source_assessment_id})
 MATCH (ast:Asset {industry_standard_regulation_id: 'GLBA 1999', asset_id: row.target_asset_id})
-MERGE (ra)-[:EVALUATES_RISK_IN {
+MERGE (ra)-[:RISK_ASSESSMENT_EVALUATES_RISK_IN_ASSET{
     type: row.relationship_type,
     description: row.description
 }]->(ast);
@@ -362,7 +342,7 @@ risk_assessment_threat = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ra:RiskAssessment {industry_standard_regulation_id: 'GLBA 1999', assessment_id: row.source_assessment_id})
 MATCH (t:Threat {industry_standard_regulation_id: 'GLBA 1999', threat_id: row.target_threat_id})
-MERGE (ra)-[:IDENTIFIES_THREAT {
+MERGE (ra)-[:RISK_ASSESSMENT_IDENTIFIES_THREAT {
     type: row.relationship_type,
     description: row.description
 }]->(t);
@@ -373,7 +353,7 @@ safeguard_threat = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {industry_standard_regulation_id: 'GLBA 1999', safeguard_id: row.source_safeguard_id})
 MATCH (t:Threat {industry_standard_regulation_id: 'GLBA 1999', threat_id: row.target_threat_id})
-MERGE (s)-[:MITIGATES_THREAT {
+MERGE (s)-[:SAFEGUARD_MITIGATES_THREAT {
     type: row.relationship_type,
     description: row.description
 }]->(t);
@@ -384,7 +364,7 @@ requirement_privacy_notice = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
 MATCH (pn:PrivacyNotice {industry_standard_regulation_id: 'GLBA 1999', notice_id: row.target_notice_id})
-MERGE (r)-[:MUST_PROVIDE {
+MERGE (r)-[:REQUIREMENT_MUST_PROVIDE_PRIVACY_NOTICE {
     type: row.relationship_type,
     description: row.description
 }]->(pn);
@@ -395,7 +375,7 @@ privacy_notice_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pn:PrivacyNotice {industry_standard_regulation_id: 'GLBA 1999', notice_id: row.source_notice_id})
 MATCH (oom:OptOutMechanism {industry_standard_regulation_id: 'GLBA 1999', mechanism_id: row.target_mechanism_id})
-MERGE (pn)-[:CONTAINS_MECHANISM {
+MERGE (pn)-[:PRIVACY_NOTICE_CONTAINS_MECHANISM {
     type: row.relationship_type,
     description: row.description
 }]->(oom);
@@ -406,7 +386,7 @@ opt_out_third_party = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (oom:OptOutMechanism {industry_standard_regulation_id: 'GLBA 1999', mechanism_id: row.source_mechanism_id})
 MATCH (natp:NonAffiliatedThirdParty {industry_standard_regulation_id: 'GLBA 1999', entity_id: row.target_entity_id})
-MERGE (oom)-[:APPLIES_TO_SHARING_WITH {
+MERGE (oom)-[:OPT_OUT_MECHANISM_APPLIES_TO_THIRD_PARTY {
     type: row.relationship_type,
     description: row.description
 }]->(natp);
@@ -417,7 +397,7 @@ breach_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sb:SecurityBreach {industry_standard_regulation_id: 'GLBA 1999', breach_id: row.source_breach_id})
 MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.target_requirement_id})
-MERGE (sb)-[:TRIGGERS_NOTIFICATION {
+MERGE (sb)-[:SECURITY_BREACH_TRIGGERS_NOTIFICATION {
     type: row.relationship_type,
     description: row.description
 }]->(r);
@@ -427,7 +407,7 @@ requirement_service_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
 MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'GLBA 1999', sp_id: row.target_sp_id})
-MERGE (r)-[:REQUIRES_OVERSIGHT_OF {
+MERGE (r)-[:REQUIREMENT_REQUIRES_OVERSIGHT_OF_SERVICE_PROVIDER {
     type: row.relationship_type,
     description: row.description
 }]->(sp);
@@ -436,11 +416,28 @@ MERGE (r)-[:REQUIRES_OVERSIGHT_OF {
 requirement_social_engineering = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
-MATCH (senot:SocialEngineeringTactic {industry_standard_regulation_id: 'GLBA 1999', tactic_id: row.target_tactic_id})
-MERGE (r)-[:PROHIBITS_TACTIC {
+MATCH (set:SocialEngineeringTactic {industry_standard_regulation_id: 'GLBA 1999', tactic_id: row.target_tactic_id})
+MERGE (r)-[:REQUIREMENT_PROHIBITS_TACTIC {
     type: row.relationship_type,
     description: row.description
 }]->(set);
+"""
+
+orphan_privacy_notice = """
+MATCH (orphan:PrivacyNotice) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (reg)-[:REGULATION_MANDATES_PRIVACY_NOTICE]->(orphan);
+"""
+
+orphan_opt_out = """
+MATCH (orphan:OptOutMechanism) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (reg)-[:REGULATION_REQUIRES_OPT_OUT_MECHANISM]->(orphan);
+"""
+orphan_threat = """
+MATCH (orphan:Threat) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (reg)-[:REGULATION_IDENTIFIES_SECURITY_THREAT]->(orphan);
 """
 import os
 import time
@@ -464,44 +461,56 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Rule_nodes.csv"))
+client.query(rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Rule.csv"))
 time.sleep(2)
 
-client.query(section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Section_nodes.csv"))
+client.query(section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Section.csv"))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Requirement_nodes.csv"))
+
+client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement.csv"))
 time.sleep(2)
 
-client.query(role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Role_nodes.csv"))
+
+client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Role.csv"))
 time.sleep(2)
 
-client.query(datacategory.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_DataCategory_nodes.csv"))
+
+client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Data%20Category.csv"))
 time.sleep(2)
 
-client.query(eventype.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_EventType_nodes.csv"))
+
+client.query(eventype.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Event%20types.csv"))
 time.sleep(2)
 
-client.query(safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Safeguard_nodes.csv"))
+client.query(safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Safeguard.csv"))
 time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_EnforcementAction_nodes.csv"))
+
+client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Enforcement%20Action.csv"))
 time.sleep(2)
 
-client.query(policy.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Policy_nodes.csv"))
+
+client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Policy.csv"))
 time.sleep(2)
 
-client.query(control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Control_nodes.csv"))
+
+client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Control.csv"))
 time.sleep(2)
 
-client.query(system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_System_nodes.csv"))
+
+client.query(system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20System.csv"))
 time.sleep(2)
 
-client.query(process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Process_nodes.csv"))
+
+client.query(process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Process.csv"))
 time.sleep(2)
+
+
 
 client.query(qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/QualifiedIndividual.csv"))
 time.sleep(2)
+
 
 client.query(board_of_directors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/BoardOfDirectors.csv"))
 time.sleep(2)
@@ -535,42 +544,44 @@ time.sleep(2)
 
 
 #relationships
-client.query(regulation_rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASRULE_relationships.csv"))  
-
-client.query(rule_section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASSECTION_relationships.csv"))
+client.query(regulation_rule) 
 time.sleep(2)
 
-client.query(section_requirement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASREQUIREMENT_relationships.csv"))
+client.query(rule_section)
 time.sleep(2)
 
-client.query(requirement_role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_APPLIESTOROLE_relationships.csv"))
-time.sleep(2)   
-
-client.query(requirement_datacategory.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_APPLIESTODATA_relationships.csv"))
+client.query(section_requirement)
 time.sleep(2)
 
-client.query(requirement_event_type.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_TRIGGERSEVENTTYPE_relationships.csv"))
+client.query(requirement_role)
 time.sleep(2)
 
-client.query(requirement_safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_REQUIRESSAFEGUARD_relationships.csv"))
-time.sleep(2)   
-
-client.query(requirement_policy.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_SUPPORTEDBYPOLICY_relationships.csv"))
-time.sleep(2)   
-
-client.query(requirement_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPLEMENTEDBYCONTROL_relationships.csv"))    
-time.sleep(2)   
-
-client.query(control_system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPLEMENTEDINSYSTEM_relationships.csv"))    
+client.query(requirement_datacategory)
 time.sleep(2)
 
-client.query(requirement_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPACTSPROCESS_relationships.csv"))
-time.sleep(2)   
-
-client.query(role_role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASRELATIONSHIPWITH_relationships.csv"))
+client.query(requirement_event_type)
 time.sleep(2)
 
-client.query(requirement_enforcement_action.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_ENFORCEDBY_relationships.csv"))
+client.query(requirement_safeguard)
+time.sleep(2)
+
+client.query(requirement_policy)
+time.sleep(2)
+
+client.query(requirement_control)
+time.sleep(2)
+
+
+client.query(control_system)
+time.sleep(2)
+
+client.query(requirement_process)
+time.sleep(2)
+
+client.query(role_role)
+time.sleep(2)
+
+client.query(requirement_enforcement_action)
 time.sleep(2)
 
 client.query(requirement_qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Requirement_QualifiedIndividual_rel.csv"))
@@ -606,6 +617,14 @@ time.sleep(2)
 client.query(requirement_social_engineering.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement%20Social%20EngineeringTactic.csv"))
 time.sleep(2)
 
+client.query(orphan_privacy_notice)
+time.sleep(2)
+
+client.query(orphan_opt_out)
+time.sleep(2)
+
+client.query(orphan_threat)
+time.sleep(2)
 
  
 logger.info("Graph structure loaded successfully.")

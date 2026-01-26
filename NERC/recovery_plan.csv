@@ -1,0 +1,3 @@
+plan_id,plan_name,scope,rto_goal,rpo_goal,backup_location_type,last_tested_date
+REC-GEN-001,Generation Control Recovery,Generation Control Center,4 Hours,1 Hour,Offsite Encrypted,2023-11-20
+REC-TRANS-002,Substation SCADA Restoration,Transmission Substations,24 Hours,4 Hours,Cloud Immutable,2023-10-15

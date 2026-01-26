@@ -1,0 +1,3 @@
+test_id,type,date_conducted,participants,outcome,lessons_learned
+TST-2023-01,Tabletop Exercise,2023-11-20,Ops Team; IT Security,Successful,Communication delay identified in step 4
+TST-2023-02,Full Restoration Drill,2023-10-15,Field Techs; NOC,Successful with Issues,Backup server latency high

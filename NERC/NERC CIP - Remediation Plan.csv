@@ -1,0 +1,3 @@
+remediation_id,root_cause,corrective_action,target_completion_date,status
+REM-2024-001,Human Error,Implement automated logging,2024-08-01,In Progress
+REM-2024-002,Process Gap,Update visitor access procedure,2024-07-01,Completed

@@ -1,0 +1,5 @@
+port_id,port_number,protocol,service_name,justification,status
+PRT-80,80,TCP,HTTP,Redirect to HTTPS,Open
+PRT-443,443,TCP,HTTPS,Web Interface,Open
+PRT-23,23,TCP,Telnet,Insecure Protocol,Blocked
+PRT-20000,20000,UDP,DNP3,SCADA Communication,Open

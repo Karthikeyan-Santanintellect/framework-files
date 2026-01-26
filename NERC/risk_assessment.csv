@@ -1,0 +1,4 @@
+assessment_id,assessment_type,date_conducted,methodology,residual_risk_level,assessor,next_review_date,status
+RA-2024-001,CIP-002 Asset Impact Assessment,2024-01-15,NIST SP 800-30,Low,Internal Audit Team,2025-01-15,Approved
+RA-2024-002,CIP-013 Supply Chain Risk,2024-02-10,Vendor Risk Framework,Medium,Third-Party Security,2025-02-10,Mitigation in Progress
+RA-2024-003,CIP-010 Vulnerability Assessment,2024-03-01,Active Scanning,High,Security Ops Center,2024-06-01,Remediation Required

@@ -1,0 +1,3 @@
+facility_id,facility_name,facility_type,address,criticality_level,manned_status,physical_security_plan_ref
+FAC-CC-01,Primary Control Center,Control Center,123 Grid Way,High,Manned 24/7,PSP-CC-001
+FAC-SUB-02,North Substation,Transmission Substation,456 High Voltage Ln,Medium,Unmanned,PSP-SUB-002

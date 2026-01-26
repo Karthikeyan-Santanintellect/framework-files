@@ -1,0 +1,4 @@
+procedure_id,name,cip_standard_ref,last_updated,owner_role_id,review_cycle
+PROC-ACC-001,Visitor Access Control,CIP-006 R2,2023-12-01,role_phy_sec_mgr,Annual
+PROC-PATCH-002,Patch Management Process,CIP-007 R2,2024-01-10,role_sys_admin,Annual
+PROC-INC-003,Cyber Incident Response,CIP-008 R1,2024-02-15,role_inc_resp_lead,Annual
