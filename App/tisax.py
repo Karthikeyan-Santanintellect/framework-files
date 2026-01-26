@@ -494,8 +494,8 @@ MATCH (ic:ISACatalogue {isa_catalogue_id: row.source_catalogue_id})
 MATCH (cc:ControlCategory {category_id: row.target_category_id})
 MERGE (ic)-[r:ISA_CATALOGUE_HAS_CATEGORY {type: row.relationship_type}]->(cc)
 ON CREATE SET
-  r.inclusion_date = row.inclusion_date,
-  r.is_mandatory   = row.is_mandatory;
+  r.inclusion_date = date(row.inclusion_date),
+  r.is_mandatory   = toBoolean(row.is_mandatory);
 """
 
 #Organization_assigns_role
@@ -538,9 +538,9 @@ MATCH (ass:Assessment {assessment_id: row.source_assessment_id})
 MATCH (aph:AssessmentPhase {phase_id: row.target_phase_id})
 MERGE (ass)-[r:ASSESSMENT_INCLUDES_PHASE {type: row.relationship_type}]->(aph)
 ON CREATE SET
-  r.start_date = row.start_date,
-  r.end_date   = row.end_date,
-  r.status = row.status;
+  r.start_date = date(row.start_date),
+  r.end_date   = date(row.end_date),
+  r.status     = row.status;
 """
 
 #Assessment_result_contains_finding#
@@ -553,7 +553,33 @@ ON CREATE SET
   r.impact_on_label     = row.impact_on_label,
   r.verification_method = row.verification_method;
 """
+#Orphan_assessment_phase
+orphan_assessment_phase = """
+MATCH (orphan:AssessmentPhase) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
+MERGE (reg)-[:TISAX_PRESCRIBES_PHASE]->(orphan);
+"""
 
+#Orphan_audit_provider
+orphan_audit_provider = """
+MATCH (orphan:AuditProvider) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
+MERGE (reg)-[:TISAX_ACCREDITS_PROVIDER]->(orphan);
+"""
+
+#Orphan_data_category
+orphan_data_category = """
+MATCH (orphan:DataCategory) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
+MERGE (reg)-[:TISAX_PROTECTS_DATA_CATEGORY]->(orphan);
+"""
+
+#Orphan_role
+orphan_role = """
+MATCH (orphan:Role) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
+MERGE (reg)-[:TISAX_DEFINES_ROLE]->(orphan);
+"""
 import os
 import time
 import logging
@@ -669,7 +695,7 @@ time.sleep(2)
 client.query(ISA_control.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_ISA_CONTAINS_QUESTIONS.csv'))
 time.sleep(2)
 
-client.query(isa_catalogue_has_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_isa_has_category.csv"))
+client.query(isa_catalogue_has_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX%20-%20ISA%20Catalogue%20Control%20Category.csv"))
 time.sleep(2)
 
 client.query(organization_assigns_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_org_assigns_role.csv"))
@@ -681,12 +707,23 @@ time.sleep(2)
 client.query(protection_object_classified_as.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_object_classified_as.csv"))
 time.sleep(2)
 
-client.query(assessment_includes_phase.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_assessment_includes_phase.csv"))
+client.query(assessment_includes_phase.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX%20-%20Assesment%20Assesment%20Phase.csv"))
 time.sleep(2)
 
-client.query(assessment_result_contains_finding.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/rel_result_contains_finding.csv"))
+client.query(assessment_result_contains_finding.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX%20-%20Assement%20Result%20Findings.csv"))
 time.sleep(2)
  
+client.query(orphan_assessment_phase)
+time.sleep(2)
+
+client.query(orphan_audit_provider)
+time.sleep(2)
+
+client.query(orphan_data_category)
+time.sleep(2)
+
+client.query(orphan_role)
+time.sleep(2)
  
 logger.info("Graph structure loaded successfully.")
 

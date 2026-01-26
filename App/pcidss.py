@@ -447,8 +447,82 @@ ON CREATE SET
   tpa.key_selection_criteria = row.key_selection_criteria;
 """
 
+# Sub-Requirement Nodes
+sub_requirement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sr:SubRequirement {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  sr.sub_requirement_id = row.sub_requirement_id,
+  sr.requirement_reference = row.requirement_reference,
+  sr.title = row.title,
+  sr.description = row.description,
+  sr.obligation_type = row.obligation_type,
+  sr.risk_area = row.risk_area,
+  sr.criticality = row.criticality;
+"""
 
+# Testing Procedure Nodes
+testing_procedure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (tp:TestingProcedure {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  tp.procedure_id = row.procedure_id,
+  tp.sub_requirement_reference = row.sub_requirement_reference,
+  tp.description = row.description,
+  tp.method_type = row.method_type,
+  tp.evidence_required = row.evidence_required;
+"""
 
+# Merchant Level Nodes
+merchant_level = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ml:MerchantLevel {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  ml.level = row.level,
+  ml.criteria = row.criteria,
+  ml.validation_requirements = row.validation_requirements;
+"""
+
+# Assessment Instrument Nodes
+assessment_instrument = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ai:AssessmentInstrument {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  ai.name = row.name,
+  ai.description = row.description,
+  ai.target_audience = row.target_audience;
+"""
+
+# Data State Nodes
+data_state = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ds:DataState {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  ds.state_name = row.state_name,
+  ds.description = row.description,
+  ds.primary_requirement_ref = row.primary_requirement_ref;
+"""
+
+# Authentication Factor Nodes
+authentication_factor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (af:AuthenticationFactor {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  af.factor_name = row.factor_name,
+  af.category = row.category,
+  af.examples = row.examples;
+"""
+# Compensating Control Nodes
+compensating_control = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cc:CompensatingControl {node_id: row.node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+ON CREATE SET
+  cc.name = row.name,
+  cc.description = row.description,
+  cc.validity_period = row.validity_period;
+"""
+
+#Relaitonships
 #  INDUSTRY REGULATION  TO STANDRAD
 industry_standard_regulation_standard = """
 MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'PCI-DSS 4.0'})
@@ -765,6 +839,59 @@ MATCH (tpa:ThirdPartyAssessor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (tpa)-[rel:THIRDPARTY_ASSESSOR_VALIDATES_REQUIREMENT]->(r);
 """
+# Requirement Contains Sub-Requirement Relationship
+requirement_sub_requirement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement {number: row.parent_req_number, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sr:SubRequirement {sub_requirement_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (r)-[rel:CONTAINS_SUB_REQUIREMENT]->(sr);
+"""
+# Sub-Requirement Verified By Procedure Relationship
+sub_requirement_procedure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sr:SubRequirement {sub_requirement_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (tp:TestingProcedure {procedure_id: row.testing_proc_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sr)-[rel:VERIFIED_BY_PROCEDURE]->(tp);
+"""
+# Merchant Level to Assessment Instrument Relationships
+merchant_assessment_relationships = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ml:MerchantLevel {node_id: row.merchant_level_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (ai:AssessmentInstrument {node_id: row.assessment_instrument_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (ml)-[:REQUIRES_ASSESSMENT_TYPE]->(ai);
+"""
+
+# SubRequirement to Compensating Control Relationships
+compensating_relationships = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cc:CompensatingControl {node_id: row.compensating_control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sr)-[:MITIGATED_BY_COMPENSATING_CONTROL]->(cc);
+"""
+# Security Control implements SubRequirement
+control_subreq_relationships = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {node_id: row.control_node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sc)-[:IMPLEMENTS_SUB_REQUIREMENT]->(sr);
+"""
+# SubRequirement to Authentication Factor Relationships
+auth_factor_relationships = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (af:AuthenticationFactor {node_id: row.auth_factor_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sr:SubRequirement {sub_requirement_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sr)-[:MANDATES_AUTHENTICATION_FACTOR]->(af);
+"""
+
+# ResponsibleEntity (Merchant) to Merchant Level Relationships
+entity_level_relationships = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (e:ResponsibleEntity {type: row.entity_type, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (ml:MerchantLevel {node_id: row.level_node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (e)-[:CLASSIFIED_AS_LEVEL]->(ml);
+"""
+
+
 
 import os
 import time

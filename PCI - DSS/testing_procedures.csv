@@ -1,0 +1,5 @@
+node_id,industry_standard_regulation_id,procedure_id,sub_requirement_reference,description,method_type,evidence_required
+TP-3.1.a,PCI-DSS 4.0,3.1.a,3.1,Examine data retention and disposal policies to verify they define how only necessary data is retained.,Examine,Policy Document
+TP-3.3.a,PCI-DSS 4.0,3.3.a,3.3,Examine display settings to verify PAN is masked when displayed, showing only first six and last four digits.,Examine,System Configuration
+TP-11.2.a,PCI-DSS 4.0,11.2.a,11.2,Review scan reports to verify that four quarterly internal scans occurred in the most recent 12-month period.,Examine,Scan Report
+TP-11.2.b,PCI-DSS 4.0,11.2.b,11.2,Verify that rescans were performed to verify all high-risk vulnerabilities were resolved.,Verify,Rescan Report

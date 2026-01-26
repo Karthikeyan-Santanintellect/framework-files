@@ -1,0 +1,6 @@
+data_state_id,cardholder_node_id
+DS-REST,CHD-PAN
+DS-REST,CHD-SAD
+DS-TRANSIT,CHD-PAN
+DS-TRANSIT,CHD-SAD
+DS-USE,CHD-PAN

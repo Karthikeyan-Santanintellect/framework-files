@@ -1,0 +1,7 @@
+data_state_id,control_keyword
+DS-REST,Encryption
+DS-REST,Masking
+DS-TRANSIT,TLS
+DS-TRANSIT,Cryptography
+DS-USE,Antivirus
+DS-USE,Access Control

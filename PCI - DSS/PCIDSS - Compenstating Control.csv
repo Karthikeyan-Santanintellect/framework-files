@@ -1,0 +1,3 @@
+node_id,industry_standard_regulation_id,name,description,validity_period
+CC-LEGACY-OS,PCI-DSS 4.0,Legacy OS Isolation,Network segmentation and host-based IPS used because OS cannot be patched.,12 Months
+CC-MFA-WORKAROUND,PCI-DSS 4.0,Physical Token MFA,Physical token exchange used where system does not support digital MFA integration.,12 Months
