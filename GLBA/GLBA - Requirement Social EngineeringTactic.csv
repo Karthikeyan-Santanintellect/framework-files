@@ -1,0 +1,3 @@
+source_requirement_id,target_tactic_id,relationship_type,description
+REQ-PRETEXT-01,SET-001,PROHIBITS_TACTIC,GLBA explicitly prohibits obtaining customer info via phone pretexting.
+REQ-PRETEXT-01,SET-002,PROHIBITS_TACTIC,GLBA prohibits obtaining customer info via fraudulent statements (phishing).

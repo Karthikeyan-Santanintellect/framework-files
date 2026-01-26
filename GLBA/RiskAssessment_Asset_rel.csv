@@ -1,0 +1,3 @@
+source_assessment_id,target_asset_id,relationship_type,description
+RA-2024,AST-001,EVALUATES_RISK_IN,Risk assessment must evaluate risks to customer databases.
+RA-2024,AST-002,EVALUATES_RISK_IN,Risk assessment must evaluate risks to employee devices.

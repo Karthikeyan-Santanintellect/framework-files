@@ -1,0 +1,3 @@
+source_assessment_id,target_threat_id,relationship_type,description
+RA-2024,TH-001,IDENTIFIES_THREAT,Assessment identifies pretexting as a key social engineering threat.
+RA-2024,TH-002,IDENTIFIES_THREAT,Assessment identifies phishing as a key cybersecurity threat.

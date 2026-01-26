@@ -1,0 +1,3 @@
+source_requirement_id,target_sp_id,relationship_type,description
+REQ-VENDOR-01,SP-001,REQUIRES_OVERSIGHT_OF,GLBA requires overseeing cloud providers who handle NPI.
+REQ-VENDOR-01,SP-002,REQUIRES_OVERSIGHT_OF,GLBA requires overseeing payment processors who handle NPI.

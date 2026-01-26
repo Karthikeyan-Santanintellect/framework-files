@@ -1,0 +1,2 @@
+source_requirement_id,target_notice_id,relationship_type,description
+REQ-PRIVACY-01,PN-INIT,MUST_PROVIDE,Financial Institutions must provide an initial privacy notice at account opening.

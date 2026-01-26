@@ -1,0 +1,3 @@
+id,name,description,service_type
+SP-001,Cloud Infrastructure Provider,Third-party maintaining customer data (e.g. AWS Azure).,Cloud Services
+SP-002,Payment Processor,Third-party processing credit card transactions.,Financial Services

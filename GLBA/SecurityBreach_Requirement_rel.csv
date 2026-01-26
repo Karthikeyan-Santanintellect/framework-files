@@ -1,0 +1,2 @@
+source_breach_id,target_requirement_id,relationship_type,description
+SB-EXAMPLE,REQ-NOTIFY-FTC,TRIGGERS_NOTIFICATION,Breach affecting >500 individuals triggers the requirement to notify the FTC.

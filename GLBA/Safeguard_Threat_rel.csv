@@ -1,0 +1,2 @@
+source_safeguard_id,target_threat_id,relationship_type,description
+SG-MFA-01,TH-001,MITIGATES_THREAT,Multi-factor authentication mitigates the risk of pretexting/unauthorized access.

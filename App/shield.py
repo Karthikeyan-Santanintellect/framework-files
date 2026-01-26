@@ -259,17 +259,17 @@ ON CREATE SET
 #private_information
 private_information = """
 Load CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pi:PrivateInformation {info_id: row.info_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (pvi:PrivateInformation {info_id: row.info_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
 ON CREATE SET 
-    pi.name = row.category_name,
-    pi.type = row.category_type,
-    pi.description = row.description,
-    pi.sensitivity_level = row.sensitivity_level,
-    pi.requires_combination_with_pi = row.requires_combination_with_pi,
-    pi.examples = row.examples,
-    pi.protection_level_required = row.protection_level_required,
-    pi.breach_notification_required = row.breach_notification_required,
-    pi.retention_guidance = row.retention_guidance;
+    pvi.name = row.category_name,
+    pvi.type = row.category_type,
+    pvi.description = row.description,
+    pvi.sensitivity_level = row.sensitivity_level,
+    pvi.requires_combination_with_pi = row.requires_combination_with_pi,
+    pvi.examples = row.examples,
+    pvi.protection_level_required = row.protection_level_required,
+    pvi.breach_notification_required = row.breach_notification_required,
+    pvi.retention_guidance = row.retention_guidance;
 """
 #risk_assessment
 risk_assesment ="""
@@ -300,7 +300,7 @@ ON CREATE SET
     ps.implementation_status = row.implementation_status,
     ps.last_inspection_date = row.last_inspection_date,
     ps.secure_disposal_method = row.secure_disposal_method,
-    ps.compliance_with_shield = toBoolean(row.compliance_with_shield);
+    ps.compliance_with_shield = row.compliance_with_shield;
 """
 # Data Element Combinations
 data_element_combination = """
@@ -310,7 +310,7 @@ MERGE (dec:DataElementCombination {combination_id: row.combination_id, regional_
 ON CREATE SET
     dec.type = row.type,
     dec.elements = row.elements_list,
-    dec.requires_name = toBoolean(row.requires_personal_name_boolean),
+    dec.requires_name = row.requires_personal_name_boolean,
     dec.description = row.description;
 """
 # Publicly Available Information
@@ -324,7 +324,7 @@ ON CREATE SET
 """
 # Personal Information (Parent Node)
 personal_information = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row'
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row WHERE row.combination_id STARTS WITH 'PI'
 MERGE (pi:PersonalInformation {type_id: row.combination_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
 ON CREATE SET
@@ -340,7 +340,7 @@ ON CREATE SET
     rb.name = row.name,
     rb.role = row.role,
     rb.jurisdiction = row.jurisdiction,
-    rb.exclusive_enforcement = toBoolean(row.exclusive_enforcement);
+    rb.exclusive_enforcement = row.exclusive_enforcement;
 """
 # Small Business Definition
 small_business_def = """
@@ -357,8 +357,8 @@ MERGE (cp:CivilPenalty {penalty_id: row.rule_id, regional_standard_regulation_id
 ON CREATE SET
     cp.name = row.name,
     cp.violation_type = row.violation_type,
-    cp.amount_per_violation = toInteger(row.amount),
-    cp.cap_amount = toInteger(row.cap_amount),
+    cp.amount_per_violation = row.amount,
+    cp.cap_amount = row.cap_amount,
     cp.description = row.description;
 """
 # Statute of Limitations
@@ -370,7 +370,7 @@ ON CREATE SET
     sol.name = row.name,
     sol.description = row.description;
 """
-# Inadvertent Disclosure=
+# Inadvertent Disclosure
 inadvertent_disclosure = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (id:InadvertentDisclosure {exception_id: row.rule_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
@@ -473,8 +473,8 @@ MERGE (br)-[:DATA_BREACH_NOTIFIES_AFFECTED_INDIVIDUAL_NY_RESIDENT]->(nr);
 datacontroller_private_information = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (dc:DataController {controller_id: row.source_controller_id})
-MATCH (pi:PrivateInformation {info_id: row.target_private_information_id})
-MERGE (dc)-[:DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION]->(pi);
+MATCH (pvi:PrivateInformation {info_id: row.target_private_information_id})
+MERGE (dc)-[:DATA_CONTROLLER_OWNS_LICENSES_PRIVATE_INFORMATION]->(pvi);
 """
 
 #security_program_trainingemployee
@@ -509,7 +509,7 @@ MERGE (dc)-[:DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT]->(ca);
 security_program_physical_safeguards = """
 MATCH (spg:SecurityProgram {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MATCH (ps:PhysicalSafeguard {regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (spg)-[:SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_PHYSICAL]->(ps);
+MERGE (spg)-[:SECURITY_PROGRAM_APPLIES_SAFEGUARDS_PHYSICAL_SAFEGUARD]->(ps);
 """
 # Link Data Controller to Small Business Definition
 
@@ -540,23 +540,23 @@ MERGE (br)-[:DATA_BREACH_MUST_NOTIFY_AUTHORITY]->(rb);
 """
 # Link Private Information to Data Element Combinations (Triggers)
 private_information_data_element_combination = """
-MATCH (pi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (pvi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MATCH (dec:DataElementCombination {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MERGE (pi)-[:PRIVACY_INFORMATION_DEFINED_BY_COMBINATION]->(dec);
 """
 
 #Link Private Information to Parent Category (Personal Information)
 personal_information_private_information = """
-MATCH (pi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MATCH (parent:PersonalInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (pi)-[:PRIVACY_INFORMATION_SUBTYPE]->(parent);
+MATCH (pvi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (parent:PersonalInformation {type_id: 'PI-PARENT-001', regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (pvi)-[:PRIVACY_INFORMATION_SUBTYPE_OF_PERSONAL_INFORMATION]->(parent);
 """
 
 # Link Private Information to Publicly Available Information (Exclusion)
 private_information_publicly_available_information = """
-MATCH (pi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (pvi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MATCH (pai:PubliclyAvailableInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (pi)-[:PRIVACY_INFORMATION_EXCLUDES_DEFINITION]->(pai);
+MERGE (pvi)-[:PRIVACY_INFORMATION_EXCLUDES_DEFINITION]->(pai);
 """
 
 # Link Data Breach to Unauthorized Access Definition
@@ -566,8 +566,50 @@ MATCH (ua:UnauthorizedAccess {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MERGE (br)-[:DATA_BREACH_CLASSIFIED_AS_UNAUTHORIZED_ACCESS]->(ua);
 """
 
+orphan_small_business = """
+MATCH (orphan:SmallBusinessDefinition) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (reg)-[:REGULATION_DEFINES_LEGAL_TERM]->(orphan);
+"""
 
+orphan_statute_limitations = """
+MATCH (orphan:StatuteOfLimitations) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (reg)-[:REGULATION_DEFINES_LEGAL_TERM]->(orphan);
+"""
 
+orphan_inadvertent_disclosure = """
+MATCH (orphan:InadvertentDisclosure) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (reg)-[:REGULATION_DEFINES_LEGAL_TERM]->(orphan);
+"""
+
+orphan_technical_safeguard = """
+MATCH (orphan:TechnicalSafeguard) WHERE NOT EXISTS ((orphan)--())
+MATCH (spg:SecurityProgram {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (spg)-[:SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_TECHNICAL]->(orphan);
+"""
+orphan_security_policy = """
+MATCH (orphan:SecurityPolicy) WHERE NOT EXISTS ((orphan)--())
+MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (dc)-[:DATA_CONTROLLER_ENFORCES_SECURITY_POLICY]->(orphan);
+"""
+orphan_incident_response = """
+MATCH (orphan:IncidentResponse) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (reg)-[:REGULATION_MANDATES_RESPONSE_PROCESS]->(orphan);
+"""
+
+orphan_notification_process = """
+MATCH (orphan:NotificationProcess) WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (reg)-[:REGULATION_MANDATES_RESPONSE_PROCESS]->(orphan);
+"""
+orphan_ny_resident = """
+MATCH (orphan:NYResident) WHERE NOT EXISTS ((orphan)--())
+MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (dc)-[:DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT]->(orphan);
+"""
 
 import sys
 import os
@@ -599,9 +641,6 @@ client.query(compliance_assessment.replace('$file_path',"https://github.com/Kart
 time.sleep(2)
 
 client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_DataBreach_nodes.csv"))
-time.sleep(2)
-
-client.query(data_controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataBreach_nodes.csv"))
 time.sleep(2)
 
 client.query(data_controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_DataController_nodes.csv"))
@@ -637,37 +676,37 @@ time.sleep(2)
 client.query(risk_assesment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_RiskAssessment_nodes.csv"))
 time.sleep(2)
 
-client.query(physical_safeguards.replace('$file_path',""))
+client.query(physical_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Physical%20Safeguard.csv"))
 time.sleep(2)
 
-client.query(data_element_combination.replace('$file_path',""))
+client.query(data_element_combination.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Data%20Definitions.csv"))
 time.sleep(2)
 
-client.query(public_info_exclusion.replace('$file_path',""))
+client.query(public_info_exclusion.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Data%20Definitions.csv"))
 time.sleep(2)
 
-client.query(personal_information.replace('$file_path',""))
+client.query(personal_information.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Data%20Definitions.csv"))
 time.sleep(2)
 
-client.query(regulatory_bodies.replace('$file_path',""))
+client.query(regulatory_bodies.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Legal%20Entities.csv"))
 time.sleep(2)
 
-client.query(small_business_def.replace('$file_path',""))
+client.query(small_business_def.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Legal%20Entities.csv"))
 time.sleep(2)
 
-client.query(civil_penalty.replace('$file_path',""))
+client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Legal%20Rules.csv"))
 time.sleep(2)
 
-client.query(statute_of_limitations.replace('$file_path',""))
+client.query(statute_of_limitations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Legal%20Rules.csv"))
 time.sleep(2)
 
-client.query(inadvertent_disclosure.replace('$file_path',""))
+client.query(inadvertent_disclosure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Legal%20Rules.csv"))
 time.sleep(2)
 
-client.query(unauthorized_access.replace('$file_path',""))
+client.query(unauthorized_access.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Legal%20Rules.csv"))
 time.sleep(2)
 
-client.query(compliant_regulated_entity.replace('$file_path',""))
+client.query(compliant_regulated_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Safe%20Harbor.csv"))
 time.sleep(2)
                                               
 
@@ -746,56 +785,66 @@ time.sleep(2)
 client.query(data_breach_unauthorized_access)
 time.sleep(2)   
 
+client.query(orphan_small_business)
+time.sleep(2)
+
+client.query(orphan_statute_limitations)
+time.sleep(2)
+
+client.query(orphan_inadvertent_disclosure)
+time.sleep(2)
+
+client.query(orphan_technical_safeguard)
+time.sleep(2)
+
+client.query(orphan_security_policy)
+time.sleep(2)
+
+client.query(orphan_incident_response)
+time.sleep(2)
+
+client.query(orphan_notification_process)
+time.sleep(2)
+
+client.query(orphan_ny_resident)
+time.sleep(2)
 
 
 
 logger.info("Graph structure loaded successfully.")
 
-output_filename = "shield.json"
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data
+"""
 
-res = client.query("""
-    MATCH path = (:RegionalStandardAndRegulation)-[*]->()
-    WITH path
-    UNWIND nodes(path) AS n
-    UNWIND relationships(path) AS r
-    WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-    RETURN {
-      nodes: [n IN uniqueNodes | n {
-        .*, 
-        id: elementId(n),     
-        labels: labels(n),      
-        mainLabel: head(labels(n)) 
-      }],
-      links: [r IN uniqueRels | r {
-        .*,
-        id: elementId(r),     
-        type: type(r),         
-        source: elementId(startNode(r)), 
-        target: elementId(endNode(r)) 
-      }]
-    } AS graph_data
-""")
+results = client.query(query)
 
-if isinstance(res, str):
-    logger.error(f"✗ Export query failed: {res}")
-    client.close()
-    sys.exit(1)
-
-if not res or len(res) == 0:
-    logger.warning(" No data returned from export query")
-    client.close()
-    sys.exit(1)
-
-graph_data = res[0].get('graph_data', res[0])
-
-with open(output_filename, 'w', encoding='utf-8') as f:
-    json.dump(graph_data, f, indent=2, default=str, ensure_ascii=False)
-
-node_count = len(graph_data.get('nodes', []))
-link_count = len(graph_data.get('links', []))
-
-logger.info(f" Exported {node_count} nodes and {link_count} relationships")
-logger.info(f" Graph data saved to: {output_filename}") 
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('shield.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to shileld.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
 
