@@ -724,7 +724,7 @@ MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (qsa)-[rel:QSA_ASSESSES_REQUIREMENT]->(r);
 """
 #ASV VALIDATES CONTROL
-asv_vulnerability_scan ="""
+asv_security_control ="""
 MATCH (asv:ApprovedScanningVendor {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (asv)-[rel:ASV_VALIDATES_CONTROL]->(sc);
@@ -843,22 +843,22 @@ MERGE (tpa)-[rel:THIRDPARTY_ASSESSOR_VALIDATES_REQUIREMENT]->(r);
 requirement_sub_requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (r:Requirement {number: row.parent_req_number, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (sr:SubRequirement {sub_requirement_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (r)-[rel:CONTAINS_SUB_REQUIREMENT]->(sr);
+MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (r)-[rel:REQUIREMENT_CONTAINS_SUB_REQUIREMENT]->(sr);
 """
 # Sub-Requirement Verified By Procedure Relationship
 sub_requirement_procedure = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sr:SubRequirement {sub_requirement_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (tp:TestingProcedure {procedure_id: row.testing_proc_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sr)-[rel:VERIFIED_BY_PROCEDURE]->(tp);
+MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (tp:TestingProcedure {node_id: row.testing_proc_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sr)-[rel:SUB_REQUIREMENT_VERIFIED_BY_PROCEDURE]->(tp);
 """
 # Merchant Level to Assessment Instrument Relationships
 merchant_assessment_relationships = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ml:MerchantLevel {node_id: row.merchant_level_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (ai:AssessmentInstrument {node_id: row.assessment_instrument_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (ml)-[:REQUIRES_ASSESSMENT_TYPE]->(ai);
+MERGE (ml)-[:MERCHANT_LEVEL_REQUIRES_ASSESSMENT_TYPE]->(ai);
 """
 
 # SubRequirement to Compensating Control Relationships
@@ -866,21 +866,21 @@ compensating_relationships = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (cc:CompensatingControl {node_id: row.compensating_control_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sr)-[:MITIGATED_BY_COMPENSATING_CONTROL]->(cc);
+MERGE (sr)-[:SUB_REQUIREMENT_MITIGATED_BY_COMPENSATING_CONTROL]->(cc);
 """
 # Security Control implements SubRequirement
 control_subreq_relationships = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (sc:SecurityControl {node_id: row.control_node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sc)-[:IMPLEMENTS_SUB_REQUIREMENT]->(sr);
+MERGE (sc)-[:SECURITY_CONTROL_IMPLEMENTS_SUB_REQUIREMENT]->(sr);
 """
 # SubRequirement to Authentication Factor Relationships
 auth_factor_relationships = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (af:AuthenticationFactor {node_id: row.auth_factor_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MATCH (sr:SubRequirement {sub_requirement_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sr)-[:MANDATES_AUTHENTICATION_FACTOR]->(af);
+MATCH (sr:SubRequirement {node_id: row.sub_req_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (sr)-[:SUB_REQUIREMENT_MANDATES_AUTHENTICATION_FACTOR]->(af);
 """
 
 # ResponsibleEntity (Merchant) to Merchant Level Relationships
@@ -888,7 +888,7 @@ entity_level_relationships = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (e:ResponsibleEntity {type: row.entity_type, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (ml:MerchantLevel {node_id: row.level_node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (e)-[:CLASSIFIED_AS_LEVEL]->(ml);
+MERGE (e)-[:RESPONSIBLE_ENTITY_CLASSIFIED_AS_LEVEL]->(ml);
 """
 # Security Control Protects Data State Relationship
 security_control_data_state = """
@@ -896,7 +896,7 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ds:DataState {node_id: row.data_state_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 WHERE sc.name CONTAINS row.control_keyword
-MERGE (sc)-[rel:PROTECTS_DATA_STATE]->(ds);
+MERGE (sc)-[rel:SECURITY_CONTROL_PROTECTS_DATA_STATE]->(ds);
 """
 # Cardholder Data Exists In State Relationship
 cardholder_data_exists_in_state = """
@@ -905,9 +905,64 @@ MATCH (ds:DataState {node_id: row.data_state_id, industry_standard_regulation_id
 MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 WHERE cd.node_id = row.cardholder_node_id 
    OR (row.cardholder_node_id IS NULL AND cd.name CONTAINS 'PAN')
-MERGE (cd)-[rel:EXISTS_IN_STATE]->(ds);
+MERGE (cd)-[rel:CARDHOLDER_DATA_EXISTS_IN_STATE]->(ds);
 """
-
+sub_req_orphan = """
+MATCH (sr:SubRequirement) WHERE NOT EXISTS ((sr)--())
+MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sr.parent_requirement_ref = toString(r.number)
+MERGE (r)-[:REQUIREMENT_CONTAINS_SUB_REQUIREMENT]->(sr);
+"""
+test_proc_orphan = """
+MATCH (tp:TestingProcedure) WHERE NOT EXISTS ((tp)--())
+MATCH (sr:SubRequirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE tp.procedure_id CONTAINS sr.sub_requirement_id
+MERGE (sr)-[:SUB_REQUIREMENT_VERIFIED_BY_PROCEDURE]->(tp);
+"""
+merchant_level_orphan = """
+MATCH (ml:MerchantLevel) WHERE NOT EXISTS ((ml)--())
+MATCH (e:ResponsibleEntity {type: 'Merchant', industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (e)-[:RESPONSIBLE_ENTITY_CLASSIFIED_AS_LEVEL]->(ml);
+"""
+assessment_orphan = """
+MATCH (ai:AssessmentInstrument) WHERE NOT EXISTS ((ai)--())
+MATCH (ml:MerchantLevel {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE (ml.level = 'Level 1' AND ai.name CONTAINS 'ROC')
+   OR (ml.level <> 'Level 1' AND ai.name CONTAINS 'SAQ')
+MERGE (ml)-[:MERCHANT_LEVEL_REQUIRES_ASSESSMENT_TYPE]->(ai);
+"""
+compensating_orphan = """
+MATCH (cc:CompensatingControl) WHERE NOT EXISTS ((cc)--())
+MATCH (sr:SubRequirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE (cc.name CONTAINS 'Legacy' AND sr.title CONTAINS 'Malware')
+   OR (cc.name CONTAINS 'Legacy' AND sr.title CONTAINS 'Software')
+   OR (cc.name CONTAINS 'Wifi' AND sr.title CONTAINS 'Diagrams')
+MERGE (sr)-[:SUB_REQUIREMENT_MITIGATED_BY_COMPENSATING_CONTROL]->(cc);
+"""
+auth_factor_orphan = """
+MATCH (af:AuthenticationFactor) WHERE NOT EXISTS ((af)--())
+MATCH (sr:SubRequirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sr.sub_requirement_id = '8.3.6'
+MERGE (sr)-[:SUB_REQUIREMENT_MANDATES_AUTHENTICATION_FACTOR]->(af);
+"""
+data_state_orphan = """
+MATCH (ds:DataState) WHERE NOT EXISTS ((ds)--())
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE (ds.state_name = 'Data At Rest' AND sc.name CONTAINS 'Encryption')
+   OR (ds.state_name = 'Data In Transit' AND sc.name CONTAINS 'TLS')
+   OR (ds.state_name = 'Data In Use' AND sc.name CONTAINS 'Antivirus')
+MERGE (sc)-[:SECURITY_CONTROL_PROTECTS_DATA_STATE]->(ds)
+WITH ds
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MERGE (cd)-[:CARDHOLDER_DATA_EXISTS_IN_STATE]->(ds);
+"""
+orphan_data_state = """
+MATCH (cd:CardholderData) WHERE NOT EXISTS ((cd)--())
+MATCH (ds:DataState {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE ds.state_name = "Data In Transit" 
+   OR ds.state_name = "Data Archived"
+MERGE (cd)-[:CARDHOLDER_DATA_EXISTS_IN_STATE]->(ds);
+"""
 
 import os
 import time
@@ -987,25 +1042,25 @@ time.sleep(2)
 client.query(third_party_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Third_party_asseror.csv"))
 time.sleep(2)
 
-client.query(sub_requirement.replace('$file_path',""))
+client.query(sub_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements.csv"))
 time.sleep(2)
 
-client.query(testing_procedure.replace('$file_path',""))
+client.query(testing_procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Testing%20Procedure.csv"))
 time.sleep(2)
 
-client.query(merchant_level.replace('$file_path',""))
+client.query(merchant_level.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Merchant%20Level.csv"))
 time.sleep(2)
 
-client.query(assessment_instrument.replace('$file_path',""))
+client.query(assessment_instrument.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Assessment%20Instruments.csv"))
 time.sleep(2)
 
-client.query(data_state.replace('$file_path',""))
+client.query(data_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Data%20State.csv"))
 time.sleep(2)
 
-client.query(authentication_factor.replace('$file_path',""))
+client.query(authentication_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Autentication%20Factor.csv"))
 time.sleep(2)
 
-client.query(compensating_control.replace('$file_path',""))
+client.query(compensating_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Compenstating%20Control.csv"))
 time.sleep(2)
 
 
@@ -1106,7 +1161,7 @@ time.sleep(2)
 client.query(qsa_assesses_requirement)
 time.sleep(2)
 
-client.query(asv_vulnerability_scan)
+client.query(asv_security_control)
 time.sleep(2)
 
 client.query(artifact_requirement)
@@ -1163,50 +1218,63 @@ time.sleep(2)
 client.query(third_party_assessor_requirement)
 time.sleep(2)
 
-client.query(requirement_sub_requirement.replace('$file_path',""))
+client.query(requirement_sub_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Requirements%20Sub%20Requirements.csv"))
 time.sleep(2)
 
-client.query(sub_requirement_procedure.replace('$file_path',""))
+client.query(sub_requirement_procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements%20Testing%20Procedure.csv"))
 time.sleep(2)
 
-client.query(merchant_assessment_relationships.replace('$file_path',""))
+client.query(merchant_assessment_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Merchant%20Level%20Assement%20Instrument.csv"))
 time.sleep(2)
 
-client.query(compensating_relationships.replace('$file_path',""))
+client.query(compensating_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements%20Compensating%20Control.csv"))
 time.sleep(2)
 
-client.query(control_subreq_relationships.replace('$file_path',""))
+client.query(control_subreq_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Security%20Control%20Sub%20Requirements.csv"))
 time.sleep(2)
 
-client.query(cardholder_data_exists_in_state.replace('$file_path',""))
+client.query(cardholder_data_exists_in_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20CardHolder%20Data%20State.csv"))
 time.sleep(2)
 
-client.query(security_control_data_state.replace('$file_path',""))
+client.query(security_control_data_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Security%20Control%20Data%20State.csv"))
 time.sleep(2)
 
-client.query(auth_factor_relationships.replace('$file_path',""))
+client.query(auth_factor_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirement%20Authentication%20Factor.csv"))
 time.sleep(2)
 
-client.query(entity_level_relationships.replace('$file_path',""))
+client.query(entity_level_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Responsible%20Entity%20Merchant%20Level.csv"))
 time.sleep(2)
 
+client.query(sub_req_orphan)
+time.sleep(2)
 
+client.query(test_proc_orphan)
+time.sleep(2)
 
+client.query(merchant_level_orphan)
+time.sleep(2)
 
+client.query(assessment_orphan)
+time.sleep(2)
 
+client.query(compensating_orphan)
+time.sleep(2)
 
+client.query(auth_factor_orphan)
+time.sleep(2)
 
+client.query(data_state_orphan)
+time.sleep(2)
 
-
+client.query(orphan_data_state)
+time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -1221,15 +1289,20 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('pci-dss.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to pci-dss.json")
-
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('pcidss.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to pcidss.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
 
