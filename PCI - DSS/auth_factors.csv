@@ -1,4 +1,0 @@
-node_id,industry_standard_regulation_id,factor_name,category,examples
-AF-KNOW,PCI-DSS 4.0,Something You Know,Knowledge,Password, PIN, Passphrase
-AF-HAVE,PCI-DSS 4.0,Something You Have,Possession,Smart Card, Hardware Token, Mobile Device
-AF-ARE,PCI-DSS 4.0,Something You Are,Inherence,Fingerprint, Facial Scan, Retina Scan

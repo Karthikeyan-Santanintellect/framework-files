@@ -1,0 +1,11 @@
+node_id,name,description,target_audience
+AI-ROC,Report on Compliance (ROC),Full onsite assessment verifying compliance with all PCI DSS requirements.,Level 1 Merchants and Service Providers
+AI-SAQ-A,SAQ A,Card-not-present merchants (e-commerce/mail/telephone) that have fully outsourced all cardholder data functions to compliant service providers.,E-commerce (Outsourced)
+AI-SAQ-A-EP,SAQ A-EP,E-commerce merchants who outsource all payment processing to PCI DSS validated third parties, and who have a website(s) that doesn’t receive cardholder data but that can impact the security of the payment transaction.,E-commerce (Partial Outsourcing)
+AI-SAQ-B,SAQ B,Merchants using only imprint machines or standalone, dial-out terminals with no electronic cardholder data storage.,Brick-and-Mortar (Dial-out)
+AI-SAQ-B-IP,SAQ B-IP,Merchants using only standalone, PTS-approved payment terminals with an IP connection to the payment processor, with no electronic cardholder data storage.,Brick-and-Mortar (IP Terminals)
+AI-SAQ-C-VT,SAQ C-VT,Merchants who manually enter a single transaction at a time via a keyboard into an Internet-based virtual terminal solution.,Call Centers / Virtual Terminals
+AI-SAQ-C,SAQ C,Merchants with payment application systems connected to the Internet, no electronic cardholder data storage.,Retail with POS Systems
+AI-SAQ-P2PE,SAQ P2PE-HW,Merchants using only hardware payment terminals that are included in and managed via a validated, PCI SSC-listed P2PE solution.,Merchants using P2PE Solutions
+AI-SAQ-D-M,SAQ D (Merchant),All merchants not included in descriptions for the above SAQ types.,Eligible Merchants (Catch-all)
+AI-SAQ-D-SP,SAQ D (Service Provider),Service providers defined by a payment brand as eligible to complete a Self-Assessment Questionnaire.,Service Providers

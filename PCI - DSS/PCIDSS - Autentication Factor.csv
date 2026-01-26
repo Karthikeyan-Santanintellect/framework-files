@@ -1,0 +1,4 @@
+node_id,factor_name,category,examples
+AF-KNOW,Something You Know,Knowledge,Password, Passphrase, PIN, Answers to secret questions
+AF-HAVE,Something You Have,Possession,Physical Hardware Token, Smart Card, Mobile Phone (SMS/App), USB Key
+AF-ARE,Something You Are,Inherence,Fingerprint scan, Retina/Iris scan, Facial recognition, Voice print

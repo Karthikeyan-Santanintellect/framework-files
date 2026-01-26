@@ -890,7 +890,23 @@ MATCH (e:ResponsibleEntity {type: row.entity_type, industry_standard_regulation_
 MATCH (ml:MerchantLevel {node_id: row.level_node_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (e)-[:CLASSIFIED_AS_LEVEL]->(ml);
 """
-
+# Security Control Protects Data State Relationship
+security_control_data_state = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ds:DataState {node_id: row.data_state_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (sc:SecurityControl {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE sc.name CONTAINS row.control_keyword
+MERGE (sc)-[rel:PROTECTS_DATA_STATE]->(ds);
+"""
+# Cardholder Data Exists In State Relationship
+cardholder_data_exists_in_state = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ds:DataState {node_id: row.data_state_id, industry_standard_regulation_id: 'PCI-DSS 4.0'})
+MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
+WHERE cd.node_id = row.cardholder_node_id 
+   OR (row.cardholder_node_id IS NULL AND cd.name CONTAINS 'PAN')
+MERGE (cd)-[rel:EXISTS_IN_STATE]->(ds);
+"""
 
 
 import os
@@ -970,6 +986,28 @@ time.sleep(2)
 
 client.query(third_party_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Third_party_asseror.csv"))
 time.sleep(2)
+
+client.query(sub_requirement.replace('$file_path',""))
+time.sleep(2)
+
+client.query(testing_procedure.replace('$file_path',""))
+time.sleep(2)
+
+client.query(merchant_level.replace('$file_path',""))
+time.sleep(2)
+
+client.query(assessment_instrument.replace('$file_path',""))
+time.sleep(2)
+
+client.query(data_state.replace('$file_path',""))
+time.sleep(2)
+
+client.query(authentication_factor.replace('$file_path',""))
+time.sleep(2)
+
+client.query(compensating_control.replace('$file_path',""))
+time.sleep(2)
+
 
 #Relationships
 client.query(industry_standard_regulation_standard)
@@ -1123,6 +1161,33 @@ client.query(third_party_assessor_artifact)
 time.sleep(2)
 
 client.query(third_party_assessor_requirement)
+time.sleep(2)
+
+client.query(requirement_sub_requirement.replace('$file_path',""))
+time.sleep(2)
+
+client.query(sub_requirement_procedure.replace('$file_path',""))
+time.sleep(2)
+
+client.query(merchant_assessment_relationships.replace('$file_path',""))
+time.sleep(2)
+
+client.query(compensating_relationships.replace('$file_path',""))
+time.sleep(2)
+
+client.query(control_subreq_relationships.replace('$file_path',""))
+time.sleep(2)
+
+client.query(cardholder_data_exists_in_state.replace('$file_path',""))
+time.sleep(2)
+
+client.query(security_control_data_state.replace('$file_path',""))
+time.sleep(2)
+
+client.query(auth_factor_relationships.replace('$file_path',""))
+time.sleep(2)
+
+client.query(entity_level_relationships.replace('$file_path',""))
 time.sleep(2)
 
 

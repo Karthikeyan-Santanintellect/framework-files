@@ -1,3 +1,4 @@
-node_id,industry_standard_regulation_id,name,description,validity_period
-CC-LEGACY-OS,PCI-DSS 4.0,Legacy OS Isolation,Network segmentation and host-based IPS used because OS cannot be patched.,12 Months
-CC-MFA-WORKAROUND,PCI-DSS 4.0,Physical Token MFA,Physical token exchange used where system does not support digital MFA integration.,12 Months
+node_id,name,description,validity_period
+CC-LEGACY-OS,Legacy OS Isolation,For systems that cannot be patched (e.g., legacy POS): Segregation from the rest of the network via strict firewall rules and host-based IPS.,12 Months
+CC-NO-WIFI-WPA2,Legacy Wireless Protection,For devices unable to support WPA2/3: Usage of a secure VPN tunnel for all wireless traffic to bypass the weak encryption layer.,12 Months
+CC-PHYSICAL-MFA,Physical Access MFA,For mainframes/consoles that cannot support digital MFA: "Something you have" is enforced via physical cage keys/biometric room access + "Something you know" (password).,12 Months

@@ -1,4 +1,0 @@
-node_id,industry_standard_regulation_id,state_name,description,primary_requirement_ref
-DS-REST,PCI-DSS 4.0,Data At Rest,Data that is stored on a hard drive, backup tape, or database.,3
-DS-TRANSIT,PCI-DSS 4.0,Data In Transit,Data moving across public or private networks.,4
-DS-USE,PCI-DSS 4.0,Data In Use,Data currently being processed in volatile memory by an application.,6

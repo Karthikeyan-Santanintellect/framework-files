@@ -1,5 +1,0 @@
-node_id,industry_standard_regulation_id,level,criteria,validation_requirements
-ML-1,PCI-DSS 4.0,Level 1,Merchants processing over 6 million Visa transactions per year,Annual ROC by QSA and Quarterly ASV Scan
-ML-2,PCI-DSS 4.0,Level 2,Merchants processing 1M to 6M Visa transactions per year,Annual ROC (or SAQ depending on brand) and Quarterly ASV Scan
-ML-3,PCI-DSS 4.0,Level 3,Merchants processing 20,000 to 1M Visa e-commerce transactions per year,Annual SAQ and Quarterly ASV Scan
-ML-4,PCI-DSS 4.0,Level 4,Merchants processing fewer than 20,000 Visa e-commerce transactions per year,Annual SAQ and Quarterly ASV Scan

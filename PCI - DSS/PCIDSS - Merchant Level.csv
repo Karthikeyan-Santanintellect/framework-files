@@ -1,0 +1,5 @@
+node_id,level,criteria,validation_requirements
+ML-1,Level 1,Merchants processing over 6 million transactions per year across all channels.,Annual Report on Compliance (ROC) by a QSA and Quarterly Network Scan by an ASV.
+ML-2,Level 2,Merchants processing 1 million to 6 million transactions per year.,Annual Self-Assessment Questionnaire (SAQ) or ROC (depending on card brand) and Quarterly Network Scan.
+ML-3,Level 3,Merchants processing 20,000 to 1 million e-commerce transactions per year.,Annual Self-Assessment Questionnaire (SAQ) and Quarterly Network Scan.
+ML-4,Level 4,Merchants processing fewer than 20,000 e-commerce transactions per year or up to 1 million real-world transactions.,Annual Self-Assessment Questionnaire (SAQ) and Quarterly Network Scan (if applicable).

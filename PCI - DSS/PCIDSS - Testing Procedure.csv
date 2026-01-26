@@ -1,0 +1,19 @@
+node_id,industry_standard_regulation_id,procedure_id,description,method_type
+TP-1.2.4.a,PCI-DSS 4.0,1.2.4.a,Examine network diagrams to verify they identify all connections between the CDE and other networks, including any wireless networks.,Examine
+TP-3.2.1.a,PCI-DSS 4.0,3.2.1.a,Examine data retention and disposal policies and procedures to verify that data is only retained for as long as necessary.,Examine
+TP-3.2.1.b,PCI-DSS 4.0,3.2.1.b,Interview responsible personnel to verify that data retention and disposal policies are defined and understood.,Interview
+TP-3.5.1.a,PCI-DSS 4.0,3.5.1.a,Examine system configurations or display settings to verify that PAN is masked when displayed.,Examine
+TP-3.5.1.b,PCI-DSS 4.0,3.5.1.b,Observe screens displaying PAN to verify that only the first six and last four digits are displayed.,Observe
+TP-5.3.2.1.a,PCI-DSS 4.0,5.3.2.1.a,Examine the targeted risk analysis (TRA) to verify that the frequency of periodic malware scans is defined.,Examine
+TP-5.4.1.a,PCI-DSS 4.0,5.4.1.a,Examine policies and procedures to verify processes are defined to detect and protect personnel against phishing attacks.,Examine
+TP-5.4.1.b,PCI-DSS 4.0,5.4.1.b,Observe security controls to verify that automated mechanisms are in place to detect and protect personnel against phishing.,Observe
+TP-6.3.2.a,PCI-DSS 4.0,6.3.2.a,Examine the inventory of bespoke and custom software to verify it is maintained and includes all custom software.,Examine
+TP-6.4.3.a,PCI-DSS 4.0,6.4.3.a,Examine configurations and script authorization records to verify a method is implemented to confirm each payment page script is authorized.,Examine
+TP-8.3.6.a,PCI-DSS 4.0,8.3.6.a,Examine system configuration settings to verify that passwords are required to be a minimum length of 12 characters and contain both numeric and alphabetic characters.,Examine
+TP-8.3.7.a,PCI-DSS 4.0,8.3.7.a,Examine system configuration settings to verify that individuals cannot submit a new password that is the same as any of the last four passwords used.,Examine
+TP-8.6.2.a,PCI-DSS 4.0,8.6.2.a,Examine configurations and scripts for application and system accounts to verify passwords/passphrases are protected against misuse.,Examine
+TP-11.6.1.a,PCI-DSS 4.0,11.6.1.a,Examine configuration settings to verify a change- and tamper-detection mechanism is deployed for payment pages.,Examine
+TP-11.6.1.b,PCI-DSS 4.0,11.6.1.b,Verify via observation or testing that the mechanism alerts personnel to unauthorized modifications of HTTP headers or page content.,Observe
+TP-12.5.2.a,PCI-DSS 4.0,12.5.2.a,Examine documentation to verify that PCI DSS scope is confirmed at least once every 12 months.,Examine
+TP-12.5.2.b,PCI-DSS 4.0,12.5.2.b,Interview responsible personnel to verify that the scope confirmation is accurate and includes all flows and locations of cardholder data.,Interview
+TP-12.10.7.a,PCI-DSS 4.0,12.10.7.a,Examine the incident response plan to verify it includes response procedures for alerts from change-detection mechanisms and detection of unencrypted PAN.,Examine

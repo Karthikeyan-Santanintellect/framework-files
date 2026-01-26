@@ -1,4 +1,0 @@
-node_id,industry_standard_regulation_id,name,description,target_audience
-AI-ROC,PCI-DSS 4.0,Report on Compliance (ROC),Full onsite assessment for Level 1 merchants.,Level 1 Merchants
-AI-SAQ-A,PCI-DSS 4.0,SAQ A,Card-not-present merchants (e-commerce/mail/telephone-order) that have fully outsourced all cardholder data functions.,E-commerce Outsourced
-AI-SAQ-D,PCI-DSS 4.0,SAQ D,All merchants not included in descriptions for the other SAQ types.,Service Providers & Eligible Merchants

@@ -1,0 +1,5 @@
+node_id,state_name,description,primary_requirement_ref
+DS-REST,Data At Rest,Cardholder data that is stored physically or digitally (e.g., databases, flat files, backups, logs).,Requirement 3
+DS-TRANSIT,Data In Transit,Cardholder data that is moving across open, public networks (e.g., internet, wireless technologies, cellular).,Requirement 4
+DS-USE,Data In Use,Cardholder data that is currently being processed by a system or application in volatile memory.,Requirement 8 (Access) & Req 3 (Retention)
+DS-ARCHIVE,Data Archived,Cardholder data stored for long-term retention requirements, often in cold storage or backups.,Requirement 3
