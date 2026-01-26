@@ -1,0 +1,5 @@
+ruleid,name,description,citation
+RULE-PRIVACY,Financial Privacy Rule (Reg P),Governs the collection and disclosure of customers' personal financial information.,12 CFR Part 1016
+RULE-SAFEGUARDS,Safeguards Rule (Reg S-P),Requires financial institutions to develop a secure information security program.,16 CFR Part 314
+RULE-PRETEXTING,Pretexting Provisions,Prohibits obtaining customer information by false pretenses.,Section 521
+RULE-BREACH,Breach Notification Rule (2024),Requires notification to the FTC and consumers for breaches affecting 500+ people.,16 CFR 314.4(j)

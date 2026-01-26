@@ -1,0 +1,5 @@
+systemid,name,holds_npi
+SYS-CORE,Core Banking Platform,TRUE
+SYS-HR,Human Resources System,TRUE
+SYS-EMAIL,Corporate Email System,TRUE
+SYS-CRM,Customer Relationship Management,TRUE

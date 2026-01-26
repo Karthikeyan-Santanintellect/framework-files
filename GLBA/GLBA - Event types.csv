@@ -1,0 +1,5 @@
+eventtypeid,name,deadline
+EVENT-ANNUAL,Annual Review,365 Days
+EVENT-BREACH,Breach Discovery,Immediate
+EVENT-ONBOARD,Customer Onboarding,Immediate
+EVENT-NOTIFY-30,FTC Notification Deadline,30 Days

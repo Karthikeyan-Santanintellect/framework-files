@@ -1,6 +1,4 @@
 #Regulation
-
-
 regulation = """
 MERGE (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'GLBA 1999'})
 ON CREATE SET
@@ -13,998 +11,437 @@ ON CREATE SET
   i.description = "Federal law that requires financial institutions to explain their information-sharing practices to their customers and to safeguard sensitive data. It includes the Financial Privacy Rule, Safeguards Rule, and pretexting provisions.";
 """
 
-#standard
-standard = """
+#rule
+rule = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Standard {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (ru:Rule{industry_standard_regulation_id: 'GLBA 1999', rule_id: row.ruleid})
 ON CREATE SET
-  s.name                = row.node_name,
-  s.nodeType            = row.node_type,
-  s.definition          = row.definition,
-  s.officialDescription = row.official_description,
-  s.applicableTo        = row.applicable_to,
-  s.organizationOwner   = row.organization_owner,
-  s.version             = row.version,
-  s.status              = row.status,
-  s.keyFeatures         = row.key_features;
-
+    ru.name = row.name,
+    ru.description = row.description,
+    ru.citation = row.citation;
 """
 
-#Requirement
+#section
+section = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sec:Section{industry_standard_regulation_id: 'GLBA 1999', section_id: row.sectionid})
+ON CREATE SET
+    sec.fullcitation = row.fullcitation,
+    sec.heading = row.heading,
+    sec.text = row.text;
+"""
+#requirement
 requirement = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (req:Requirement {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (r:Requirement{industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.requirementid})
 ON CREATE SET
-  req.name                = row.node_name,
-  req.nodeType            = row.node_type,
-  req.definition          = row.definition,
-  req.officialDescription = row.official_description,
-  req.applicableTo        = row.applicable_to,
-  req.organizationOwner   = row.organization_owner,
-  req.version             = row.version,
-  req.status              = row.status,
-  req.keyFeatures         = row.key_features;
+    r.type = row.type,
+    r.text = row.text,
+    r.priority = row.priority,
+    r.frequency = row.frequency;
 """
-#Domain
-domain = """
+#role
+role = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (d:Domain {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (ro:Role{industry_standard_regulation_id: 'GLBA 1999', role_id: row.roleid})
 ON CREATE SET
-  d.name                = row.node_name,
-  d.nodeType            = row.node_type,
-  d.definition          = row.definition,
-  d.officialDescription = row.official_description,
-  d.applicableTo        = row.applicable_to,
-  d.organizationOwner   = row.organization_owner,
-  d.version             = row.version,
-  d.status              = row.status,
-  d.keyFeatures         = row.key_features;
+    ro.name = row.name,
+    ro.description = row.description;
 """
-#Financial Institution
-financial_institution = """
+#datacategory
+datacategory = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (fi:FinancialInstitution {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (dc:DataCategory{industry_standard_regulation_id: 'GLBA 1999', data_id: row.dataid})
 ON CREATE SET
-  fi.name                = row.node_name,
-  fi.nodeType            = row.node_type,
-  fi.definition          = row.definition,
-  fi.officialDescription = row.official_description,
-  fi.applicableTo        = row.applicable_to,
-  fi.organizationOwner   = row.organization_owner,
-  fi.version             = row.version,
-  fi.status              = row.status,
-  fi.keyFeatures         = row.key_features;
+    dc.name = row.name,
+    dc.description = row.description,
+    dc.examples = row.examples;
 """
-#NPI
-NPI = """
+#Eventype
+eventype = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (n:NPI {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
+MERGE (et:EventType{industry_standard_regulation_id: 'GLBA 1999', event_id:row.eventtypeid})
 ON CREATE SET
-  n.name                = row.node_name,
-  n.nodeType            = row.node_type,
-  n.definition          = row.definition,
-  n.officialDescription = row.official_description,
-  n.applicableTo        = row.applicable_to,
-  n.organizationOwner   = row.organization_owner,
-  n.version             = row.version,
-  n.status              = row.status,
-  n.keyFeatures         = row.key_features;
+    et.name = row.name,
+    et.deadline = row.deadline;
 """
-# Privacy Notice
-privacy_notice = """
-MERGE (pn:PrivacyNotice {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
+#safeguard
+safeguard = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999', safeguard_id: row.safeguardid})
 ON CREATE SET
-  pn.name                = row.node_name,
-  pn.nodeType            = row.node_type,
-  pn.definition          = row.definition,
-  pn.officialDescription = row.official_description,
-  pn.applicableTo        = row.applicable_to,
-  pn.organizationOwner   = row.organization_owner,
-  pn.version             = row.version,
-  pn.status              = row.status,
-  pn.keyFeatures         = row.key_features;
+    s.name = row.name,
+    s.type = row.type,
+    s.description = row.description;
+"""
+#enforcement_action
+enforcement_action = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row  
+MERGE (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA 1999', enforcement_action_id: row.enforcementid})
+ON CREATE SET
+    ea.authority = row.authority,
+    ea.description = row.description;
+"""
+#policy
+policy = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (po:Policy{industry_standard_regulation_id: 'GLBA 1999', policy_id: row.policyid})
+ON CREATE SET
+    po.name = row.name,
+    po.owner = row.owner;
+"""
+#control
+control = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (co:Control{industry_standard_regulation_id: 'GLBA 1999', control_id: row.controlid})
+ON CREATE SET
+    co.name = row.name,
+    co.category = row.category;
+"""
+#system
+system = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sys:System{industry_standard_regulation_id: 'GLBA 1999', system_id: row.systemid})
+ON CREATE SET
+    sys.name = row.name,
+    sys.holds_npi = row.holds_npi;
+"""
+#process
+process = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pr:Process{industry_standard_regulation_id: 'GLBA 1999', process_id: row.processid})
+ON CREATE SET
+    pr.name = row.name;
 """
 
-#info_sec_program
-info_sec_program = """
+#QualifiedIndividual
+qualified_individual = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (isp:InfoSecProgram {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  isp.name                = row.node_name,
-  isp.nodeType            = row.node_type,
-  isp.definition          = row.definition,
-  isp.officialDescription = row.official_description,
-  isp.applicableTo        = row.applicable_to,
-  isp.organizationOwner   = row.organization_owner,
-  isp.version             = row.version,
-  isp.status              = row.status,
-  isp.keyFeatures         = row.key_features;
+MERGE (qi:QualifiedIndividual {industry_standard_regulation_id: 'GLBA 1999', qi_id: row.id})
+ON CREATE SET 
+    qi.name = row.name,
+    qi.description = row.description,
+    qi.mandate_source = row.mandate_source;
 """
+
+#BoardOfDirectors
+board_of_directors = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (bod:BoardOfDirectors {industry_standard_regulation_id: 'GLBA 1999', bod_id: row.id})
+ON CREATE SET 
+    bod.name = row.name,
+    bod.description = row.description;
+"""
+
+#ServiceProvider
+service_provider = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sp:ServiceProvider {industry_standard_regulation_id: 'GLBA 1999', sp_id: row.id})
+ON CREATE SET 
+    sp.name = row.name,
+    sp.description = row.description,
+    sp.service_type = row.service_type;
+"""
+
 #RiskAssessment
 risk_assessment = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ra:RiskAssessment {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ra.name                = row.node_name,
-  ra.nodeType            = row.node_type,
-  ra.definition          = row.definition,
-  ra.officialDescription = row.official_description,
-  ra.applicableTo        = row.applicable_to,
-  ra.organizationOwner   = row.organization_owner,
-  ra.version             = row.version,
-  ra.status              = row.status,
-  ra.keyFeatures         = row.key_features;
-"""
-#Safeguard
-safeguard = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row  
-MERGE (s:Safeguard {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  s.name                = row.node_name,
-  s.nodeType            = row.node_type,
-  s.definition          = row.definition,
-  s.officialDescription = row.official_description,
-  s.applicableTo        = row.applicable_to,
-  s.organizationOwner   = row.organization_owner,
-  s.version             = row.version,
-  s.status              = row.status,
-  s.keyFeatures         = row.key_features;
-"""
-#Regulator
-regulator = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Regulator {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  r.name                = row.node_name,
-  r.nodeType            = row.node_type,
-  r.definition          = row.definition,
-  r.officialDescription = row.official_description,
-  r.applicableTo        = row.applicable_to,
-  r.organizationOwner   = row.organization_owner,
-  r.version             = row.version,
-  r.status              = row.status,
-  r.keyFeatures         = row.key_features;
-"""
-#consumer_consumer
-consumer_consumer = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:ConsumerCustomer {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  c.name                = row.node_name,
-  c.nodeType            = row.node_type,
-  c.definition          = row.definition,
-  c.officialDescription = row.official_description,
-  c.applicableTo        = row.applicable_to,
-  c.organizationOwner   = row.organization_owner,
-  c.version             = row.version,
-  c.status              = row.status,
-  c.keyFeatures         = row.key_features;
-"""
-#Third_party_service
-third_party_service = """
-MERGE (tps:ThirdPartyService {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  tps.name                = row.node_name,
-  tps.nodeType            = row.node_type,
-  tps.definition          = row.definition,
-  tps.officialDescription = row.official_description,
-  tps.applicableTo        = row.applicable_to,
-  tps.organizationOwner   = row.organization_owner,
-  tps.version             = row.version,
-  tps.status              = row.status,
-  tps.keyFeatures         = row.key_features;
-"""
-#internal_role
-internal_role = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ir:InternalRole {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ir.name                = row.node_name,
-  ir.nodeType            = row.node_type,
-  ir.definition          = row.definition,
-  ir.officialDescription = row.official_description,
-  ir.applicableTo        = row.applicable_to,
-  ir.organizationOwner   = row.organization_owner,
-  ir.version             = row.version,
-  ir.status              = row.status,
-  ir.keyFeatures         = row.key_features,
-"""
-#Incident_response
-incident_response = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (in:IncidentResponse {id: row.node_id , industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  in.name                = row.node_name,
-  in.nodeType            = row.node_type,
-  in.definition          = row.definition,
-  in.officialDescription = row.official_description,
-  in.applicableTo        = row.applicable_to,
-  in.organizationOwner   = row.organization_owner,
-  in.version             = row.version,
-  in.status              = row.status,
-  in.keyFeatures         = row.key_features;
-  """
-#Training 
-training = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (t:Training {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  t.name                = row.node_name,
-  t.nodeType            = row.node_type,
-  t.definition          = row.definition,
-  t.officialDescription = row.official_description,
-  t.applicableTo        = row.applicable_to,
-  t.organizationOwner   = row.organization_owner,
-  t.version             = row.version,
-  t.status              = row.status,
-  t.keyFeatures         = row.key_features;
-"""
-#Breach Response procedure
-breach_response_procedure = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (brp:BreachResponseProcedure {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  brp.name                = row.node_name,
-  brp.nodeType            = row.node_type,
-  brp.definition          = row.definition,
-  brp.officialDescription = row.official_description,
-  brp.applicableTo        = row.applicable_to,
-  brp.organizationOwner   = row.organization_owner,
-  brp.version             = row.version,
-  brp.status              = row.status,
-  brp.keyFeatures         = row.key_features;
-"""
-#Enforcement mechanisms
-enforcement_mechanisms = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (e:EnforcementMechanisms {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  e.name                = row.node_name,
-  e.nodeType            = row.node_type,
-  e.definition          = row.definition,
-  e.officialDescription = row.official_description,
-  e.applicableTo        = row.applicable_to,
-  e.organizationOwner   = row.organization_owner,
-  e.version             = row.version,
-  e.status              = row.status,
-  e.keyFeatures         = row.key_features;
-"""
-#vendor evaluation
-vendor_evaluation = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ve:VendorEvaluation {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ve.name                = row.node_name,
-  ve.nodeType            = row.node_type,
-  ve.definition          = row.definition,
-  ve.officialDescription = row.official_description,
-  ve.applicableTo        = row.applicable_to,
-  ve.organizationOwner   = row.organization_owner,
-  ve.version             = row.version,
-  ve.status              = row.status,
-  ve.keyFeatures         = row.key_features;
-"""
-#Employee personal
-employee_personal = """
-MERGE (ep:EmployeePersonnel {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ep.name                = row.node_name,
-  ep.nodeType            = row.node_type,
-  ep.definition          = row.definition,
-  ep.officialDescription = row.official_description,
-  ep.applicableTo        = row.applicable_to,
-  ep.organizationOwner   = row.organization_owner,
-  ep.version             = row.version,
-  ep.status              = row.status,
-  ep.keyFeatures         = row.key_features;
-  """
-#Compliance Audit
-compliance_audit = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ca:ComplianceArtifact {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ca.name                = row.node_name,
-  ca.nodeType            = row.node_type,
-  ca.definition          = row.definition,
-  ca.officialDescription = row.official_description,
-  ca.applicableTo        = row.applicable_to,
-  ca.organizationOwner   = row.organization_owner,
-  ca.version             = row.version,
-  ca.status              = row.status,
-  ca.keyFeatures         = row.key_features;
+MERGE (ra:RiskAssessment {industry_standard_regulation_id: 'GLBA 1999', assessment_id: row.id})
+ON CREATE SET 
+    ra.name = row.name,
+    ra.description = row.description,
+    ra.category = row.category;
 """
 
-#Affiliate
-affiliate = """
+#Threat
+threat = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Affiliate {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  a.name                = row.node_name,
-  a.nodeType            = row.node_type,
-  a.definition          = row.definition,
-  a.officialDescription = row.official_description,
-  a.applicableTo        = row.applicable_to,
-  a.organizationOwner   = row.organization_owner,
-  a.version             = row.version,
-  a.status              = row.status,
-  a.keyFeatures         = row.key_features;
-"""
-#NewMedia
-new_media = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (nm:NewMedia {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  nm.name                = row.node_name,
-  nm.nodeType            = row.node_type,
-  nm.definition          = row.definition,
-  nm.officialDescription = row.official_description,
-  nm.applicableTo        = row.applicable_to,
-  nm.organizationOwner   = row.organization_owner,
-  nm.version             = row.version,
-  nm.status              = row.status,
-  nm.keyFeatures         = row.key_features;
-"""
-# Law enforcement
-law_enforcement = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (le:LawEnforcement {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  le.name                = row.node_name,
-  le.nodeType            = row.node_type,
-  le.definition          = row.definition,
-  le.officialDescription = row.official_description,
-  le.applicableTo        = row.applicable_to,
-  le.organizationOwner   = row.organization_owner,
-  le.version             = row.version,
-  le.status              = row.status,
-  le.keyFeatures         = row.key_features;
-"""
-# Identity Protection
-identity_protection = """
-MERGE (ip:IdentityProtection {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ip.name                = row.node_name,
-  ip.nodeType            = row.node_type,
-  ip.definition          = row.definition,
-  ip.officialDescription = row.official_description,
-  ip.applicableTo        = row.applicable_to,
-  ip.organizationOwner   = row.organization_owner,
-  ip.version             = row.version,
-  ip.status              = row.status,
-  ip.keyFeatures         = row.key_features;
+MERGE (t:Threat {industry_standard_regulation_id: 'GLBA 1999', threat_id: row.id})
+ON CREATE SET 
+    t.name = row.name,
+    t.description = row.description,
+    t.category = row.category;
 """
 
-# Background check agency
-background_check_agency = """
+#Asset
+asset = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (bca:BackgroundCheckAgency {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  bca.name                = row.node_name,
-  bca.nodeType            = row.node_type,
-  bca.definition          = row.definition,
-  bca.officialDescription = row.official_description,
-  bca.applicableTo        = row.applicable_to,
-  bca.organizationOwner   = row.organization_owner,
-  bca.version             = row.version,
-  bca.status              = row.status,
-  bca.keyFeatures         = row.key_features;
-"""
-# Service provider Agreement
-service_provider_agreement = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (spa:ServiceProviderAgreement {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  spa.name                = row.node_name,
-  spa.nodeType            = row.node_type,
-  spa.definition          = row.definition,
-  spa.officialDescription = row.official_description,
-  spa.applicableTo        = row.applicable_to,
-  spa.organizationOwner   = row.organization_owner,
-  spa.version             = row.version,
-  spa.status              = row.status,
-  spa.keyFeatures         = row.key_features;
+MERGE (ast:Asset {industry_standard_regulation_id: 'GLBA 1999', asset_id: row.id})
+ON CREATE SET 
+    ast.name = row.name,
+    ast.description = row.description,
+    ast.category = row.category;
 """
 
-#Pretexting Prevention Procedure
-pretexting_prevention_procedure = """
+#PrivacyNotice
+privacy_notice = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pp:PretextingPreventionProcedure {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  pp.name                = row.node_name,
-  pp.nodeType            = row.node_type,
-  pp.definition          = row.definition,
-  pp.officialDescription = row.official_description,
-  pp.applicableTo        = row.applicable_to,
-  pp.organizationOwner   = row.organization_owner,
-  pp.version             = row.version,
-  pp.status              = row.status,
-  pp.keyFeatures         = row.key_features;
+MERGE (pn:PrivacyNotice {industry_standard_regulation_id: 'GLBA 1999', notice_id: row.id})
+ON CREATE SET 
+    pn.name = row.name,
+    pn.details = row.details,
+    pn.timing = row.timing;
 """
-# Access Control List
-access_control_list = """
+
+#OptOutMechanism
+opt_out_mechanism = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (acl:AccessControlList {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  acl.name                = row.node_name,
-  acl.nodeType            = row.node_type,
-  acl.definition          = row.definition,
-  acl.officialDescription = row.official_description,
-  acl.applicableTo        = row.applicable_to,
-  acl.organizationOwner   = row.organization_owner,
-  acl.version             = row.version,
-  acl.status              = row.status,
-  acl.keyFeatures         = row.key_features;
+MERGE (oom:OptOutMechanism {industry_standard_regulation_id: 'GLBA 1999', mechanism_id: row.id})
+ON CREATE SET 
+    oom.name = row.name,
+    oom.details = row.details,
+    oom.type = row.type;
 """
-# Breach-Notification-Record
-breach_notification_record = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (bn:BreachNotificationRecord {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  bn.name                = row.node_name,
-  bn.nodeType            = row.node_type,
-  bn.definition          = row.definition,
-  bn.officialDescription = row.official_description,
-  bn.applicableTo        = row.applicable_to,
-  bn.organizationOwner   = row.organization_owner,
-  bn.version             = row.version,
-  bn.status              = row.status,
-  bn.keyFeatures         = row.key_features;
-"""
-# Non-Affiliated-Third-Party
+
+#NonAffiliatedThirdParty
 non_affiliated_third_party = """
-MERGE (ntp:NonAffiliatedThirdParty {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ntp.name                = row.node_name,
-  ntp.nodeType            = row.node_type,
-  ntp.definition          = row.definition,
-  ntp.officialDescription = row.official_description,
-  ntp.applicableTo        = row.applicable_to,
-  ntp.organizationOwner   = row.organization_owner,
-  ntp.version             = row.version,
-  ntp.status              = row.status,
-  ntp.keyFeatures         = row.key_features;
-"""
-#Threat-Intelligence-Provider
-threat_intelligence_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ti:ThreatIntelligenceProvider {id: row.node_id, industry_standard_regulation_id: 'GLBA 1999'})
-ON CREATE SET
-  ti.name                = row.node_name,
-  ti.nodeType            = row.node_type,
-  ti.definition          = row.definition,
-  ti.officialDescription = row.official_description,
-  ti.applicableTo        = row.applicable_to,
-  ti.organizationOwner   = row.organization_owner,
-  ti.version             = row.version,
-  ti.status              = row.status,
-  ti.keyFeatures         = row.key_features;
+MERGE (natp:NonAffiliatedThirdParty {industry_standard_regulation_id: 'GLBA 1999', entity_id: row.id})
+ON CREATE SET 
+    natp.name = row.name,
+    natp.details = row.details;
 """
 
-
-#Regulation → standard
-regulation_standard = """
-MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (s:Standard{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (i)-[:REGULATION_HAS_STANDARD}]->(s);
-"""
-# Standard -> requirement 
-standard_requirement = """
-MATCH (s:Standard{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (s)-[:STANDARD_HAS_REQUIREMENT]->(req);
-"""
-# Requirement -> domain
-requirement_domain = """
-MATCH (req:Requirement {industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (d:Domain {industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (req)-[:REQUIREMENT_APPLIES_TO_DOMAIN]->(d);
-"""
-# Standard -> Domain
-standard_domain = """
-MATCH (s:Standard{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (d:Domain{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (s)-[:STANDARD_APPLIES_TO_DOMAIN]->(d);
-"""
-# Regulator -> financial_institution
-regulator_financial_institution = """
-MATCH (r:Regulator{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (r)-[:REGULATOR_HAS_FINANCIAL_INSTITUTION]->(fi);
-"""
-# Regulator ->Enforcement_Mechanism
-regulator_enforcement_mechanisms = """
-MATCH (r:Regulator{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (e:EnforcementMechanisms{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (r)-[:REGULATOR_HAS_ENFORCEMENT_ACTION]->(e);
-"""
-# Enforecemt -> financial_institution
-enforcement_financial_institution = """
-MATCH (e:EnforcementMechanisms{industry_standard_regulation_id : 'GLBA 1999'})
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (e)-[:ENFORCEMENT_HAS_FINANCIAL_INSTITUTION]->(fi);
-"""
-# Fiancial Institution -> consumer_customer
-financial_institution_consumer_consumer = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (c:ConsumerCustomer{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FINANCIAL_INSTITUTION_HAS_CONSUMER_CUSTOMER]->(c);
-"""
-# Consumer_customer -> NPI
-consumer_consumer_npi = """
-MATCH (c:ConsumerCustomer{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (n:NPI{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (c)-[:CONSUMER_CUSTOMER_HAS_NPI]->(n);
-"""
-# Requirement -> NPI
-requirement_npi = """
-MATCH (req:Requirement {industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (n:NPI{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (req)-[:REQUIREMENT_APPLIES_TO_NPI]->(n);
-"""
-# Safeguard -> NPI
-safeguard_npi = """
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (n:NPI{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (s)-[:SAFEGUARD_PROTECTS_NPI]->(n);
-"""
-# Internal Role -> Infosec program
-internal_role_infosec_program ="""
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ir)-[:INTERNAL_ROLE_HAS_INFOSEC_PROGRAM]->(isp);
-"""
-# Internal Role -> RiskAssessment
-internal_role_risk_assessment ="""
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ra:RiskAssessment{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ir)-[:INTERNAL_ROLE_HAS_RISK_ASSESSMENT]->(ra);  
-"""
-# Internal Role -> Incident Response
-internal_role_incident_response ="""
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (in:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ir)-[:INTERNAL_ROLE_HAS_INCIDENT_RESPONSE]->(in);
-"""
-# Internal Role -> Training
-internal_role_training ="""
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ir)-[:INTERNAL_ROLE_RESPONSIBLE_FOR_TRAINING]->(t);
-"""
-# Employee Personnel -> Internal Role
-employee_personnel_internal_role ="""
-MATCH (ep:EmployeePersonnel{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ep)-[:EMPLOYEE_PLAYS_INTERNAL_ROLE]->(ir);
-"""
-# Employee Personnel -> InfosecProgram
-employee_personnel_infosec ="""
-MATCH (ep:EmployeePersonnel{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ep)-[:EMPLOYEE_PART_OF_INFOSEC_PROGRAM]->(isp);
-"""
-#Privacy_notice -> Requirement
-privacy_notice_requirement = """
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (pn)-[:PRIVACY_NOTICE_APPLIES_TO_REQUIREMENT]->(req);
-"""
-# Privacy_notice -> NPI
-privacy_notice_npi = """
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (n:NPI{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (pn)-[:PRIVACY_NOTICE_COVERS_TO_NPI]->(n);
-"""
-# Privacy_notice -> Consumer_customer
-privacy_notice_consumer_customer = """
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (c:ConsumerCustomer{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (pn)-[:PRIVACY_NOTICE_COVERS_TO_CONSUMER_CUSTOMER]->(c);
-"""
-# Affiliate -> Privacy_notice
-affiliate_privacy_notice = """
-MATCH (a:Affiliate{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (a)-[:AFFILIATE_HAS_PRIVACY_NOTICE]->(pn);
-"""
-#NonAffiliatedThirdParty -> Privacy_notice
-non_affiliated_third_party_privacy_notice = """
-MATCH (ntp:NonAffiliatedThirdParty{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (n)-[:NON_AFFILIATED_THIRD_PARTY_HAS_PRIVACY_NOTICE]->(pn);
-"""
-# Infosec_program -> Requirement
-infosec_program_requirement = """
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (isp)-[:INFOSEC_PROGRAM_HAS_REQUIREMENT]->(req);
-"""
-# Risk Assessment -> Infosec_program
-risk_assessment_infosec_program = """
-MATCH (ra:RiskAssessment{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ra)-[:RISK_ASSESSMENT_HAS_INFOSEC_PROGRAM]->(isp);
+#SecurityBreach
+security_breach = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sb:SecurityBreach {industry_standard_regulation_id: 'GLBA 1999', breach_id: row.id})
+ON CREATE SET 
+    sb.name = row.name,
+    sb.description = row.description;
 """
 
-# Safeguard -> Requirement
-safeguard_requirement = """
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (s)-[:SAFEGUARD_DERIVED_FROM_REQUIREMENT]->(r);
+#SocialEngineeringTactic
+social_engineering_tactic = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (set:SocialEngineeringTactic {industry_standard_regulation_id: 'GLBA 1999', tactic_id: row.id})
+ON CREATE SET 
+    set.name = row.name,
+    set.description = row.description;
 """
 
-# Safeguard -> RiskAssessment
-safeguard_risk_assessment = """
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ra:RiskAssessment{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (s)-[:SAFEGUARD_ADDRESSES_RISK_IDENTIFIED_IN]->(ra);
+#Regulation → Rule
+regulation_rule ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (i:IndustryStandardAndRegulation{industry_standard_regulation_id:'GLBA 1999'})
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999',rule_id:row.target_rule_id})
+MERGE (i)-[:REGULATION_HAS_RULE{type:row.relationship_type}]->(ru);
 """
-# Training -> Requirement
-training_requirement = """
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (t)-[:TRAINING_SUPPORTS_REQUIREMENT]->(req);
+#Rule → Section
+rule_section = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ru:Rule{industry_standard_regulation_id: 'GLBA 1999',rule_id:row.source_rule_id})
+MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999',section_id:row.target_section_id})
+MERGE (ru)-[:RULE_HAS_SECTION{type:row.relationship_type}]->(sec);
 """
-
-# Training -> Safeguard
-training_safeguard = """
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (t)-[:TRAINING_COVERS_SAFEGUARD]->(s);
+#Section → Requirement
+section_requirement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section{industry_standard_regulation_id: 'GLBA 1999',section_id:row.source_section_id})
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.target_requirement_id})
+MERGE (sec)-[:SECTION_HAS_REQUIREMENT{type:row.relationship_type}]->(r);
 """
-
-# Training -> InternalRole
-training_internal_role = """
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (t)-[:TRAINING_TARGETS_ROLE]->(ir);
+#Requirement → Role
+requirement_role = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (ro:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.target_role_id})
+MERGE (r)-[:REQUIREMENT_APPLIES_TO_ROLE{type:row.relationship_type}]->(ro);
 """
-
-# Training -> InfoSecProgram
-training_infosec_program = """
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (t)-[:TRAINING_SUPPORTS_PROGRAM]->(isp);
+#Requirement → DataCategory
+requirement_datacategory = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (dc:DataCategory{industry_standard_regulation_id: 'GLBA 1999',data_id:row.target_data_id})
+MERGE (r)-[:REQUIREMENT_APPLIES_TO_DATACATEGORY{type:row.relationship_type}]->(dc);
 """
-# FinancialInstitution -> ThirdPartyService
-financial_institution_third_party_service = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (tps:ThirdPartyService{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FINANCIAL_INSTITUTION_USES_SERVICE_PROVIDER]->(tps);
+#Requirement → EventType
+requirement_event_type ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (et:EventType{industry_standard_regulation_id: 'GLBA 1999',event_id:row.target_eventtype_id})
+MERGE (r)-[:REQUIREMENT_TRIGGERS_EVENT_TYPE{type:row.relationship_type}]->(et);
 """
-
-# FinancialInstitution -> VendorEvaluation
-financial_institution_vendor_evaluation = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ve:VendorEvaluation{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FINANCIAL_ENGAGES_VENDOR]->(ve);
+#Requirement → Safeguard
+requirement_safeguard = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999',safeguard_id:row.target_safeguard_id})
+MERGE (r)-[:REQUIREMENT_REQUIRES_SAFEGUARD{type:row.relationship_type}]->(s);
 """
-
-# VendorEvaluation -> ThirdPartyService
-vendor_evaluation_third_party_service = """
-MATCH (ve:VendorEvaluation{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (tps:ThirdPartyService{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ve)-[:VENDOR_EVALUATES_THIRD_PARTY_SERVICE]->(tps);
-"""
-# ThirdPartyService -> ServiceProviderAgreement
-third_party_service_spa = """
-MATCH (tps:ThirdPartyService{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (spa:ServiceProviderAgreement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (tps)-[:THIRD_PARTY_SERVICE_GOVERNED_BY_SERVICE_PROVIDER]->(spa);
-"""
-# ServiceProviderAgreement -> BackgroundCheckAgency
-spa_background_check_agency = """
-MATCH (spa:ServiceProviderAgreement{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bca:BackgroundCheckAgency{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (spa)-[:SERVICE_PROVIDER_AGREEMENT_COVERS_VENDOR]->(bca);
-"""
-
-# NonAffiliatedThirdParty -> ThirdPartyService
-non_affiliated_third_party_tps = """
-MATCH (ntp:NonAffiliatedThirdParty{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (tps:ThirdPartyService{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ntp)-[:NON_AFFILIATED_THIRD_PARTY_USES_INCLUDES_PROVIDER]->(tps);
-"""
-# NonAffiliatedThirdParty -> BackgroundCheckAgency
-non_affiliated_third_party_bca = """
-MATCH (ntp:NonAffiliatedThirdParty{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bca:BackgroundCheckAgency{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ntp)-[:NON_AFFILIATED_THIRD_PARTY_INCLUDES_PROVIDER]->(bca);
+#Requirement → Policy
+requirement_policy = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement {
+  industry_standard_regulation_id: 'GLBA 1999',
+  requirement_id: row.source_requirement_id
+})
+MATCH (po:Policy {
+  industry_standard_regulation_id: 'GLBA 1999',
+  policy_id: row.target_policy_id
+})
+MERGE (r)-[:REQUIREMENT_SUPPORTED_BY_POLICY {
+  type: row.relationship_type
+}]->(po);
 """
 
-# FinancialInstitution -> Affiliate
-financial_institution_affiliate = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (a:Affiliate{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FIANICAL_INSTITUTION_HAS_AFFILIATE]->(a);
+#Requirement → Control
+requirement_control ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999',control_id:row.target_control_id})
+MERGE (r)-[:REQUIREMENT_IMPLEMENTED_BY_CONTROL{type:row.relationship_type}]->(co);
+"""
+#Control → System
+control_system = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (co:Control{industry_standard_regulation_id: 'GLBA 1999',control_id:row.source_control_id})
+MATCH (sys:System{industry_standard_regulation_id: 'GLBA 1999',system_id:row.target_system_id})
+MERGE (co)-[:CONTROL_IMPLEMENTED_IN_SYSTEM{type:row.relationship_type}]->(sys);
+"""
+#Requirement → Process
+requirement_process = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (pr:Process{industry_standard_regulation_id: 'GLBA 1999',process_id:row.target_process_id})
+MERGE (r)-[:REQUIREMENT_IMPACTS_PROCESS{type:row.relationship_type}]->(pr);
+"""
+#Role → Role (Customer → Financial Institution)
+role_role = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (src:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.source_role_id})
+MATCH (tgt:Role{industry_standard_regulation_id: 'GLBA 1999',role_id:row.target_role_id})
+MERGE (src)-[:ROLE_HAS_ROLE{
+    type:row.relationship_type,
+    description:row.relationship_description
+    }]->(tgt);
+"""
+#Requirement → EnforcementAction
+requirement_enforcement_action = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement{industry_standard_regulation_id: 'GLBA 1999',requirement_id:row.source_requirement_id})
+MATCH (ea:EnforcementAction{industry_standard_regulation_id: 'GLBA 1999',enforcement_action_id:row.target_enforcement_id})
+MERGE (r)-[:REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION{type:row.relationship_type}]->(ea);
 """
 
-# Affiliate -> Requirement (sharing rules)
-affiliate_requirement = """
-MATCH (a:Affiliate{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (a)-[:AFFILIATE_SHARES_INFORMATION_UNDER_RULES]->(req);
+#Requirement → QualifiedIndividual
+requirement_qualified_individual = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
+MATCH (qi:QualifiedIndividual {industry_standard_regulation_id: 'GLBA 1999', qi_id: row.target_qi_id})
+MERGE (r)-[:REQUIRES_DESIGNATION_OF {
+    type: row.relationship_type,
+    description: row.description
+}]->(qi);
 """
 
-# Affiliate -> PrivacyNotice (opt-out context)
-affiliate_privacy_notice_optout = """
-MATCH (a:Affiliate{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (a)-[:AFFILIATE_NOTICED_OF_PRIVACY_NOTICE]->(pn);
-"""
-# NonAffiliatedThirdParty -> PrivacyNotice (opt-out)
-non_affiliated_third_party_privacy_notice_optout = """
-MATCH (ntp:NonAffiliatedThirdParty{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ntp)-[:NON_AFFILIATED_THIRD_PARTY_NOTICED_OF_PRIVACY_NOTICE]->(pn);
+#QualifiedIndividual → BoardOfDirectors
+qualified_individual_board = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (qi:QualifiedIndividual {industry_standard_regulation_id: 'GLBA 1999', qi_id: row.source_qi_id})
+MATCH (bod:BoardOfDirectors {industry_standard_regulation_id: 'GLBA 1999', bod_id: row.target_bod_id})
+MERGE (qi)-[:REPORTS_TO {
+    type: row.relationship_type,
+    description: row.description
+}]->(bod);
 """
 
-# FinancialInstitution -> BackgroundCheckAgency
-financial_institution_background_check_agency = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bca:BackgroundCheckAgency{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FIANICAL_INSTITUTION_USES_BACKGROUND_CHECK_PROVIDER]->(bca);
+#RiskAssessment → Asset
+risk_assessment_asset = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ra:RiskAssessment {industry_standard_regulation_id: 'GLBA 1999', assessment_id: row.source_assessment_id})
+MATCH (ast:Asset {industry_standard_regulation_id: 'GLBA 1999', asset_id: row.target_asset_id})
+MERGE (ra)-[:EVALUATES_RISK_IN {
+    type: row.relationship_type,
+    description: row.description
+}]->(ast);
 """
 
-# EmployeePersonnel -> BackgroundCheckAgency
-employee_personnel_background_check_agency = """
-MATCH (ep:EmployeePersonnel{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bca:BackgroundCheckAgency{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ep)-[:EMPLOYEE_PERSONNEL_ENFORCED_BY_BACKGROUND]->(bca);
+#RiskAssessment → Threat
+risk_assessment_threat = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ra:RiskAssessment {industry_standard_regulation_id: 'GLBA 1999', assessment_id: row.source_assessment_id})
+MATCH (t:Threat {industry_standard_regulation_id: 'GLBA 1999', threat_id: row.target_threat_id})
+MERGE (ra)-[:IDENTIFIES_THREAT {
+    type: row.relationship_type,
+    description: row.description
+}]->(t);
 """
 
-# ServiceProviderAgreement -> BackgroundCheckAgency (governance)
-spa_governs_background_check_agency = """
-MATCH (spa:ServiceProviderAgreement{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bca:BackgroundCheckAgency{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (spa)-[:SPA_GOVERNS_BACKGROUND_CHECK_PROVIDER]->(bca);
+#Safeguard → Threat
+safeguard_threat = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (s:Safeguard {industry_standard_regulation_id: 'GLBA 1999', safeguard_id: row.source_safeguard_id})
+MATCH (t:Threat {industry_standard_regulation_id: 'GLBA 1999', threat_id: row.target_threat_id})
+MERGE (s)-[:MITIGATES_THREAT {
+    type: row.relationship_type,
+    description: row.description
+}]->(t);
 """
 
-# BackgroundCheckAgency -> Requirement
-background_check_agency_requirement = """
-MATCH (bca:BackgroundCheckAgency{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (bca)-[:BACKGROUND_CHECK_AGENCY_SUBJECT_TO_REQUIREMENT]->(req);
+#Requirement → PrivacyNotice
+requirement_privacy_notice = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
+MATCH (pn:PrivacyNotice {industry_standard_regulation_id: 'GLBA 1999', notice_id: row.target_notice_id})
+MERGE (r)-[:MUST_PROVIDE {
+    type: row.relationship_type,
+    description: row.description
+}]->(pn);
 """
 
-# FinancialInstitution -> LawEnforcement
-financial_institution_law_enforcement = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (le:LawEnforcement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FINANCIAL_INSTITUTION_ENFORCED_BY_LAW]->(le);
+#PrivacyNotice → OptOutMechanism
+privacy_notice_mechanism = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pn:PrivacyNotice {industry_standard_regulation_id: 'GLBA 1999', notice_id: row.source_notice_id})
+MATCH (oom:OptOutMechanism {industry_standard_regulation_id: 'GLBA 1999', mechanism_id: row.target_mechanism_id})
+MERGE (pn)-[:CONTAINS_MECHANISM {
+    type: row.relationship_type,
+    description: row.description
+}]->(oom);
 """
 
-# IncidentResponse -> LawEnforcement
-incident_response_law_enforcement = """
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (le:LawEnforcement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (irsp)-[:INCIDENT_RESPONSE_ENFORCED_BY_LAW]->(le);
+#OptOutMechanism → NonAffiliatedThirdParty
+opt_out_third_party = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (oom:OptOutMechanism {industry_standard_regulation_id: 'GLBA 1999', mechanism_id: row.source_mechanism_id})
+MATCH (natp:NonAffiliatedThirdParty {industry_standard_regulation_id: 'GLBA 1999', entity_id: row.target_entity_id})
+MERGE (oom)-[:APPLIES_TO_SHARING_WITH {
+    type: row.relationship_type,
+    description: row.description
+}]->(natp);
 """
 
-# LawEnforcement -> Requirement (exceptions)
-law_enforcement_requirement = """
-MATCH (le:LawEnforcement{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (le)-[:LAW_ENFORECEMENT_HAS_REQUIREMENT]->(req);
+#SecurityBreach → Requirement
+breach_requirement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sb:SecurityBreach {industry_standard_regulation_id: 'GLBA 1999', breach_id: row.source_breach_id})
+MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.target_requirement_id})
+MERGE (sb)-[:TRIGGERS_NOTIFICATION {
+    type: row.relationship_type,
+    description: row.description
+}]->(r);
 """
-
-# Enforcement -> LawEnforcement
-enforcement_law_enforcement = """
-MATCH (e:Enforcement{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (le:LawEnforcement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (e)-[:ENFORCEMENT_ENFORCED_BY_LAW]->(le);
+#Requirement → ServiceProvider
+requirement_service_provider = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
+MATCH (sp:ServiceProvider {industry_standard_regulation_id: 'GLBA 1999', sp_id: row.target_sp_id})
+MERGE (r)-[:REQUIRES_OVERSIGHT_OF {
+    type: row.relationship_type,
+    description: row.description
+}]->(sp);
 """
-
-# IncidentResponse -> InfoSecProgram
-incident_response_infosec_program = """
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (irsp)-[:INCIDENT_RESPONSE_PART_OF_PROGRAM]->(isp);
+#Requirement → SocialEngineeringTactic
+requirement_social_engineering = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (r:Requirement {industry_standard_regulation_id: 'GLBA 1999', requirement_id: row.source_requirement_id})
+MATCH (senot:SocialEngineeringTactic {industry_standard_regulation_id: 'GLBA 1999', tactic_id: row.target_tactic_id})
+MERGE (r)-[:PROHIBITS_TACTIC {
+    type: row.relationship_type,
+    description: row.description
+}]->(set);
 """
-
-# IncidentResponse -> BreachResponseProcedure
-incident_response_breach_response_procedure = """
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (brp:BreachResponseProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (irsp)-[:INCIDENT_RESPONSE_USES_PROCEDURE]->(brp);
-"""
-
-# IncidentResponse -> BreachNotificationRecord
-incident_response_breach_notification_record = """
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bn:BreachNotificationRecord{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (irsp)-[:INCIDENT_RESPONSE_USES_CREATES_RECORD]->(bn);
-"""
-
-# BreachNotificationRecord -> BreachResponseProcedure
-breach_notification_record_breach_response_procedure = """
-MATCH (bn:BreachNotificationRecord{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (brp:BreachResponseProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (bn)-[:BREACH_NOTIFICATION_USES_PROCEDURE]->(brp);
-"""
-# IncidentResponse -> NPI
-incident_response_npi = """
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (n:NPI{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (irsp)-[:INCIDENT_RESPONSE_PROTECTS_DATA_CATEGORY]->(n);
-"""
-
-# BreachNotificationRecord -> IdentityProtection
-breach_notification_record_identity_protection = """
-MATCH (bn:BreachNotificationRecord{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ip:IdentityProtection{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (bn)-[:BREACH_NOTIFICATION_TRIGGERS_IDENTITY_PROTECTION]->(ip);
-"""
-
-# IdentityProtection -> ConsumerCustomer
-identity_protection_consumer_customer = """
-MATCH (ip:IdentityProtection{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (c:ConsumerCustomer{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ip)-[:IDENTITY_APPLIES_TO_CUSTOMER_TYPE]->(c);
-"""
-
-# IdentityProtection -> IncidentResponse
-identity_protection_incident_response = """
-MATCH (ip:IdentityProtection{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ip)-[:IDENTITY_RESPONDS_TO_INCIDENT]->(irsp);
-"""
-
-# IdentityProtection -> Requirement
-identity_protection_requirement = """
-MATCH (ip:IdentityProtection{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ip)-[:IDENTITY_PROTECTION_IMPLEMENTS_REQUIREMENT]->(req);
-"""
-
-# AccessControlList -> Safeguard
-access_control_list_safeguard = """
-MATCH (acl:AccessControlList{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (acl)-[:ACCESS_CONTROL_SUPPORTS_SAFEGUARD]->(s);
-"""
-
-# AccessControlList -> InfoSecProgram
-access_control_list_infosec_program = """
-MATCH (acl:AccessControlList{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (acl)-[:ACESS_CONTROL_IMPLEMENTED_IN_PROGRAM]->(isp);
-"""
-
-# AccessControlList -> Requirement
-access_control_list_requirement = """
-MATCH (acl:AccessControlList{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (acl)-[:ACCESS_CONTROL_ENFORCES_REQUIREMENT]->(req);
-"""
-
-# InternalRole -> AccessControlList
-internal_role_access_control_list = """
-MATCH (ir:InternalRole{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (acl:AccessControlList{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ir)-[:INTERNAL_ROLE_USES_ACCESS_CONTROL]->(acl);
-"""
-
-# PretextingPreventionProcedure -> InfoSecProgram
-pretexting_prevention_infosec_program = """
-MATCH (pp:PretextingPreventionProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (pp)-[:PRETEXTING_PART_OF_PROGRAM]->(isp);
-"""
-
-# PretextingPreventionProcedure -> ConsumerCustomer
-pretexting_prevention_consumer_customer = """
-MATCH (pp:PretextingPreventionProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (c:ConsumerCustomer{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (pp)-[:PRETEXTING_PROTECTS_INTERACTIONS_WITH]->(c);
-"""
-
-# PretextingPreventionProcedure -> Requirement
-pretexting_prevention_requirement = """
-MATCH (pp:PretextingPreventionProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (pp)-[:PRETEXTING_PREVENTION_IMPLEMENTS_REQUIREMENT]->(req);
-"""
-
-# Training -> PretextingPreventionProcedure
-training_pretexting_prevention_procedure = """
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pp:PretextingPreventionProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (t)-[:TRAINING_COVERS_PRETEXTING_PROCEDURE]->(pp);
-"""
-
-# NewMedia -> PrivacyNotice
-new_media_privacy_notice = """
-MATCH (nm:NewMedia{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pn:PrivacyNotice{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (nm)-[:NEW_MEDIA_COVERS_PRIVACY_NOTICE]->(pn);
-"""
-
-# NewMedia -> IdentityProtection
-new_media_identity_protection = """
-MATCH (nm:NewMedia{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ip:IdentityProtection{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (nm)-[:NEW_MEDIA_USES_IDENTITY]->(ip);
-"""
-
-# NewMedia -> PretextingPreventionProcedure
-new_media_pretexting_prevention_procedure = """
-MATCH (nm:NewMedia{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (pp:PretextingPreventionProcedure{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (nm)-[:NEW_MEDIA_SUBJECT_TO_PRETEXTING_CONTROLS]->(pp);
-"""
-
-# FinancialInstitution -> ThreatIntelligenceProvider
-financial_institution_threat_intel = """
-MATCH (fi:FinancialInstitution{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ti:ThreatIntelligenceProvider{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (fi)-[:FINANCIAL_INSTITUTION_USES_THREAT_INTEL_]->(ti);
-"""
-
-# ThreatIntelligenceProvider -> RiskAssessment
-threat_intel_risk_assessment = """
-MATCH (ti:ThreatIntelligenceProvider{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ra:RiskAssessment{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ti)-[:THREAT_INTELLIGENCE_PROVIDER_INFORMS_RISK_ASSESSMENT]->(ra);
-"""
-
-# ThreatIntelligenceProvider -> Safeguard
-threat_intel_safeguard = """
-MATCH (ti:ThreatIntelligenceProvider{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ti)-[:THREAT_INTELLIGENCE_PROVIDER_INFORMS_SAFEGUARD]->(s);
-"""
-
-# ThreatIntelligenceProvider -> IncidentResponse
-threat_intel_incident_response = """
-MATCH (ti:ThreatIntelligenceProvider{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (irsp:IncidentResponse{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ti)-[:THREAT_INTELLIGENCE_PROVIDER_INFORMS_INCIDENT_RESPONSE]->(irsp);
-"""
-
-# ComplianceArtifact -> Requirement
-compliance_artifact_requirement = """
-MATCH (ca:ComplianceArtifact{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (req:Requirement{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ca)-[:COMPLIANCES_ARTIFACT_APPLIES_TO_REQUIREMENTS]->(req);
-"""
-
-# ComplianceArtifact -> InfoSecProgram
-compliance_artifact_infosec_program = """
-MATCH (ca:ComplianceArtifact{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (isp:InfoSecProgram{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ca)-[:COMPLIANCES_ARTIFACT_DOCUMENTS_PROGRAM]->(isp);
-"""
-
-# ComplianceArtifact -> Safeguard
-compliance_artifact_safeguard = """
-MATCH (ca:ComplianceArtifact{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (s:Safeguard{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ca)-[:COMPLIANCES_ARTIFACT_DOCUMENTS_SAFEGUARD]->(s);
-"""
-
-# ComplianceArtifact -> Training
-compliance_artifact_training = """
-MATCH (ca:ComplianceArtifact{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (t:Training{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ca)-[:COMPLIANCES_ARTIFACT_DOCUMENTS_TRAINING]->(t);
-"""
-
-# ComplianceArtifact -> VendorEvaluation
-compliance_artifact_vendor_evaluation = """
-MATCH (ca:ComplianceArtifact{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (ve:VendorEvaluation{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ca)-[:COMPLIANCES_ARTIFACT_DOCUMENTS_VENDOR_EVALUATION]->(ve);
-"""
-
-# ComplianceArtifact -> BreachNotificationRecord
-compliance_artifact_breach_notification_record = """
-MATCH (ca:ComplianceArtifact{industry_standard_regulation_id: 'GLBA 1999'})
-MATCH (bn:BreachNotificationRecord{industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (ca)-[:COMPLIANCES_ARTIFACT_DOCUMENTS_BREACH_RECORD]->(bn);
-"""
-
-
 import os
 import time
 import logging
@@ -1027,103 +464,156 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(standard)
+client.query(rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Rule_nodes.csv"))
 time.sleep(2)
 
-client.query(requirement)
+client.query(section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Section_nodes.csv"))
 time.sleep(2)
 
-client.query(domain)
+client.query(requirement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Requirement_nodes.csv"))
 time.sleep(2)
 
-client.query(breach_notification_record)
+client.query(role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Role_nodes.csv"))
 time.sleep(2)
 
-client.query(non_affiliated_third_party)
+client.query(datacategory.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_DataCategory_nodes.csv"))
 time.sleep(2)
 
-client.query(threat_intelligence_provider)
+client.query(eventype.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_EventType_nodes.csv"))
 time.sleep(2)
 
-client.query(regulator)
+client.query(safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Safeguard_nodes.csv"))
 time.sleep(2)
 
-client.query(financial_institution)
+client.query(enforcement_action.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_EnforcementAction_nodes.csv"))
 time.sleep(2)
 
-client.query(safeguard)
+client.query(policy.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Policy_nodes.csv"))
 time.sleep(2)
 
-client.query(infosec_program)
+client.query(control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Control_nodes.csv"))
 time.sleep(2)
 
-client.query(training)
+client.query(system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_System_nodes.csv"))
 time.sleep(2)
 
-client.query(internal_role)
+client.query(process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_Process_nodes.csv"))
 time.sleep(2)
 
-client.query(privacy_notice)
+client.query(qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/QualifiedIndividual.csv"))
 time.sleep(2)
 
-client.query(affiliate)
+client.query(board_of_directors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/BoardOfDirectors.csv"))
 time.sleep(2)
 
-client.query(vendor_evaluation)
+client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/ServiceProvider.csv"))
 time.sleep(2)
 
-client.query(third_party_service)
+client.query(risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/RiskAssessment.csv"))
 time.sleep(2)
 
-client.query(background_check_agency)
+client.query(threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Threat.csv"))
 time.sleep(2)
 
-client.query(law_enforcement)
+client.query(asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Asset.csv"))
 time.sleep(2)
 
-client.query(incident_response)
+client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/PrivacyNotice.csv"))
 time.sleep(2)
 
-client.query(breach_response_procedure)
+client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/OptOutMechanism.csv"))
 time.sleep(2)
 
-client.query(identity_protection)
+client.query(non_affiliated_third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/NonAffiliatedThirdParty.csv"))
 time.sleep(2)
 
-client.query(access_control_list)
+client.query(security_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/SecurityBreach.csv"))
 time.sleep(2)
 
-client.query(pretexting_prevention_procedure)
+client.query(social_engineering_tactic.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/SocialEngineeringTactic.csv"))
 time.sleep(2)
 
-client.query(new_media)
+
+#relationships
+client.query(regulation_rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASRULE_relationships.csv"))  
+
+client.query(rule_section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASSECTION_relationships.csv"))
 time.sleep(2)
 
-client.query(compliance_artifact)
+client.query(section_requirement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASREQUIREMENT_relationships.csv"))
 time.sleep(2)
 
-client.query(employee_personnel)
+client.query(requirement_role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_APPLIESTOROLE_relationships.csv"))
+time.sleep(2)   
+
+client.query(requirement_datacategory.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_APPLIESTODATA_relationships.csv"))
 time.sleep(2)
 
-client.query(consumer_customer)
+client.query(requirement_event_type.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_TRIGGERSEVENTTYPE_relationships.csv"))
 time.sleep(2)
 
-client.query(NPI)
+client.query(requirement_safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_REQUIRESSAFEGUARD_relationships.csv"))
+time.sleep(2)   
+
+client.query(requirement_policy.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_SUPPORTEDBYPOLICY_relationships.csv"))
+time.sleep(2)   
+
+client.query(requirement_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPLEMENTEDBYCONTROL_relationships.csv"))    
+time.sleep(2)   
+
+client.query(control_system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPLEMENTEDINSYSTEM_relationships.csv"))    
 time.sleep(2)
 
-client.query(regulation_standard)
+client.query(requirement_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_IMPACTSPROCESS_relationships.csv"))
+time.sleep(2)   
+
+client.query(role_role.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_HASRELATIONSHIPWITH_relationships.csv"))
+time.sleep(2)
+
+client.query(requirement_enforcement_action.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA_ENFORCEDBY_relationships.csv"))
+time.sleep(2)
+
+client.query(requirement_qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Requirement_QualifiedIndividual_rel.csv"))
+time.sleep(2)
+
+client.query(qualified_individual_board.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/QualifiedIndividual_BoardOfDirectors_rel.csv"))
+time.sleep(2)
+
+client.query(risk_assessment_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/RiskAssessment_Asset_rel.csv"))
+time.sleep(2)
+
+client.query(risk_assessment_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/RiskAssessment_Threat_rel.csv"))
+time.sleep(2)
+
+client.query(safeguard_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Safeguard_Threat_rel.csv"))
+time.sleep(2)
+
+client.query(requirement_privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Requirement_PrivacyNotice_rel.csv"))
+time.sleep(2)
+
+client.query(privacy_notice_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/PrivacyNotice_OptOutMechanism_rel.csv"))
+time.sleep(2)
+
+client.query(opt_out_third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/OptOutMechanism_NonAffiliatedThirdParty_rel.csv"))
+time.sleep(2)
+
+client.query(breach_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/SecurityBreach_Requirement_rel.csv"))
+time.sleep(2)
+
+client.query(requirement_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement%20Service%20Provider.csv"))
+time.sleep(2)
+
+client.query(requirement_social_engineering.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement%20Social%20EngineeringTactic.csv"))
 time.sleep(2)
 
 
  
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -1138,14 +628,19 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('glba.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to glba.json")
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('glba.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to glba.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
-

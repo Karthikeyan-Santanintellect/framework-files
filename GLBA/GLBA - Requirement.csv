@@ -1,0 +1,9 @@
+requirementid,type,text,priority,frequency
+REQ-SAFEGUARDS-01,Administrative,Designate a Qualified Individual to oversee the information security program.,High,Ongoing
+REQ-SAFEGUARDS-02,Technical,Implement multi-factor authentication (MFA) for any individual accessing customer information.,High,Continuous
+REQ-SAFEGUARDS-03,Physical,Implement procedures for the secure disposal of customer information (shredding/wiping).,Medium,As needed
+REQ-PRIVACY-01,Disclosure,Provide initial privacy notice to customers no later than when the relationship is established.,High,Event-driven
+REQ-PRIVACY-02,Consumer Right,Provide a reasonable opportunity and method for consumers to opt out of third-party sharing.,High,Ongoing
+REQ-PRETEXT-01,Anti-Fraud,Establish procedures to verify the identity of a person seeking information (Identity Verification).,High,Per Request
+REQ-NOTIFY-FTC,Reporting,Notify the FTC of any security event affecting 500 or more consumers within 30 days.,Critical,Event-driven
+REQ-VENDOR-01,Vendor Mgmt,Oversee service providers to ensure they maintain appropriate safeguards.,Medium,Periodic

@@ -1,0 +1,4 @@
+dataid,name,description,examples
+DATA-NPI,Nonpublic Personal Information,Personally identifiable financial information that is not publicly available.,Credit score, account balance, payment history.
+DATA-PII,Personally Identifiable Information,Information that can identify an individual.,Name, SSN, Driver's License Number.
+DATA-ACCT,Account Information,Specific details regarding financial accounts.,Account number, routing number, transaction log.

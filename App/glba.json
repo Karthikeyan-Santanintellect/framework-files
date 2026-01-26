@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11765",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3612",
       "mainLabel": "IndustryStandardAndRegulation",
       "labels": [
         "IndustryStandardAndRegulation"
@@ -16,923 +16,266 @@
       "status": "Active"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11767",
-      "mainLabel": "Rule",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3613",
+      "mainLabel": "QualifiedIndividual",
       "labels": [
-        "Rule"
+        "QualifiedIndividual"
       ],
-      "rule_id": "SAFEGUARDS_RULE",
-      "citation": "16 CFR Part 314",
-      "name": "Safeguards Rule",
-      "description": "Requires comprehensive information security program",
+      "name": "Chief Information Security Officer (CISO)",
+      "description": "Designated individual responsible for overseeing and implementing the information security program.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "qi_id": "QI-001",
+      "mandate_source": "Safeguards Rule 2024"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3614",
+      "mainLabel": "BoardOfDirectors",
+      "labels": [
+        "BoardOfDirectors"
+      ],
+      "bod_id": "BOD-001",
+      "name": "Board of Directors",
+      "description": "Governing body that must receive annual reports on the information security program.",
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11771",
-      "mainLabel": "Section",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3615",
+      "mainLabel": "ServiceProvider",
       "labels": [
-        "Section"
+        "ServiceProvider"
       ],
-      "section_id": "314.4",
-      "heading": "Elements of Information Security Program",
-      "text": "Designate a qualified individual, conduct risk assessments, design safeguards, monitor effectiveness",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "fullcitation": "16 CFR \u00a7 314.4"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "text": "Oversee service providers to ensure they maintain appropriate safeguards.",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Vendor Oversight",
-      "priority": "Medium",
-      "requirement_id": "GLBA-314.4-R3",
-      "frequency": "Ongoing"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11783",
-      "mainLabel": "DataCategory",
-      "labels": [
-        "DataCategory"
-      ],
-      "examples": "Account balance, payment history, credit score, fact of relationship",
-      "data_id": "NPI",
-      "name": "Nonpublic Personal Information",
-      "description": "Personally identifiable financial information that is not publicly available",
+      "service_type": "Cloud Services",
+      "sp_id": "SP-001",
+      "name": "Cloud Infrastructure Provider",
+      "description": "Third-party maintaining customer data (e.g. AWS Azure).",
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11799",
-      "mainLabel": "EnforcementAction",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3616",
+      "mainLabel": "ServiceProvider",
       "labels": [
-        "EnforcementAction"
+        "ServiceProvider"
       ],
-      "authority": "FTC, CFPB, Federal Banking Agencies",
-      "description": "Cease and desist orders to stop violations",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "enforcement_action_id": "EA-CEASE_AND_DESIST"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "role_id": "FINANCIAL_INSTITUTION",
-      "name": "Financial Institution",
-      "description": "Institution significantly engaged in financial activities (banks, insurers, lenders)",
+      "service_type": "Financial Services",
+      "sp_id": "SP-002",
+      "name": "Payment Processor",
+      "description": "Third-party processing credit card transactions.",
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11782",
-      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
+      "mainLabel": "RiskAssessment",
       "labels": [
-        "Role"
+        "RiskAssessment"
       ],
-      "role_id": "SERVICE_PROVIDER",
-      "name": "Service Provider",
-      "description": "Entity that maintains or processes customer information for the institution",
+      "name": "Annual Security Risk Assessment",
+      "description": "Written assessment identifying foreseeable internal and external risks.",
+      "assessment_id": "RA-2024",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Compliance"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3618",
+      "mainLabel": "Threat",
+      "labels": [
+        "Threat"
+      ],
+      "name": "Pretexting",
+      "description": "Social engineering attempts to obtain NPI by false pretenses.",
+      "threat_id": "TH-001",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Social Engineering"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3619",
+      "mainLabel": "Threat",
+      "labels": [
+        "Threat"
+      ],
+      "name": "Phishing",
+      "description": "Deceptive emails targeting employee credentials.",
+      "threat_id": "TH-002",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Cybersecurity"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3620",
+      "mainLabel": "Threat",
+      "labels": [
+        "Threat"
+      ],
+      "name": "Unauthorized Access",
+      "description": "Internal or external actors accessing NPI without permission.",
+      "threat_id": "TH-003",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "category": "Access Control"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3621",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "name": "Customer Database",
+      "description": "SQL database containing NPI (SSN",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "asset_id": "AST-001",
+      "category": " Account Numbers)."
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3622",
+      "mainLabel": "Asset",
+      "labels": [
+        "Asset"
+      ],
+      "name": "Employee Laptop",
+      "description": "Endpoint devices used to access financial data.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "asset_id": "AST-002",
+      "category": "Hardware"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3623",
+      "mainLabel": "PrivacyNotice",
+      "labels": [
+        "PrivacyNotice"
+      ],
+      "timing": "Initial",
+      "name": "Initial Privacy Notice",
+      "details": "Provided at account opening describing data sharing practices.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "notice_id": "PN-INIT"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3624",
+      "mainLabel": "PrivacyNotice",
+      "labels": [
+        "PrivacyNotice"
+      ],
+      "timing": "Annual",
+      "name": "Annual Privacy Notice",
+      "details": "Provided annually to existing customers describing changes.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "notice_id": "PN-ANN"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3625",
+      "mainLabel": "OptOutMechanism",
+      "labels": [
+        "OptOutMechanism"
+      ],
+      "mechanism_id": "OOM-001",
+      "name": "Toll-Free Number",
+      "details": "1-800 number for customers to call and opt-out.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Telephone"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3626",
+      "mainLabel": "OptOutMechanism",
+      "labels": [
+        "OptOutMechanism"
+      ],
+      "mechanism_id": "OOM-002",
+      "name": "Detached Form",
+      "details": "Mail-in form included with the privacy notice.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "type": "Mail"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3627",
+      "mainLabel": "NonAffiliatedThirdParty",
+      "labels": [
+        "NonAffiliatedThirdParty"
+      ],
+      "name": "External Marketing Firm",
+      "details": "Third party company not owned by the financial institution used for marketing.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "entity_id": "NATP-001"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3628",
+      "mainLabel": "SecurityBreach",
+      "labels": [
+        "SecurityBreach"
+      ],
+      "name": "Hypothetical Breach Event",
+      "description": "Unauthorized acquisition of unencrypted NPI involving >500 consumers.",
+      "industry_standard_regulation_id": "GLBA 1999",
+      "breach_id": "SB-EXAMPLE"
+    },
+    {
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3629",
+      "mainLabel": "SocialEngineeringTactic",
+      "labels": [
+        "SocialEngineeringTactic"
+      ],
+      "tactic_id": "SET-001",
+      "name": "Phone Pretexting",
+      "description": "Caller impersonating account holder to bypass verification.",
       "industry_standard_regulation_id": "GLBA 1999"
     },
     {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11781",
-      "mainLabel": "Role",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3630",
+      "mainLabel": "SocialEngineeringTactic",
       "labels": [
-        "Role"
+        "SocialEngineeringTactic"
       ],
-      "role_id": "NONAFFILIATED_THIRD_PARTY",
-      "name": "Nonaffiliated Third Party",
-      "description": "Any entity that is not an affiliate of the financial institution",
+      "tactic_id": "SET-002",
+      "name": "Email Spear Phishing",
+      "description": "Targeted email to executive to install malware.",
       "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11820",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-VENDOR_CONTRACTING",
-      "name": "Vendor Contracting",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11809",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-VENDOR_DUE_DILIGENCE",
-      "name": "Vendor Due Diligence Process",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "category": "Administrative"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11804",
-      "mainLabel": "Policy",
-      "labels": [
-        "Policy"
-      ],
-      "owner": "CISO",
-      "policy_id": "POL-VENDOR_MGMT",
-      "name": "Vendor Management Policy",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11787",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "event_id": "SHARE_NPI_THIRD_PARTY",
-      "name": "Share NPI with Third Party",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "deadline": "Before disclosure, with opt-out opportunity"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11795",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-VENDOR_DUE_DILIGENCE",
-      "name": "Service Provider Assessment",
-      "description": "Due diligence and oversight of service providers handling NPI",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Organizational"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "text": "Implement safeguards to control risks identified in assessment (encryption, MFA, etc.).",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Security Controls",
-      "priority": "High",
-      "requirement_id": "GLBA-314.4-R2",
-      "frequency": "Ongoing"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11800",
-      "mainLabel": "EnforcementAction",
-      "labels": [
-        "EnforcementAction"
-      ],
-      "authority": "Federal Banking Agencies",
-      "description": "Administrative actions by banking regulators",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "enforcement_action_id": "EA-BANKING_AGENCY_ACTION"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11821",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-INCIDENT_MANAGEMENT",
-      "name": "Security Incident Management",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11812",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-SECURITY_MONITORING",
-      "name": "Security Monitoring and Alerting",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "category": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11813",
-      "mainLabel": "System",
-      "labels": [
-        "System"
-      ],
-      "system_id": "SYS-CORE_BANKING",
-      "name": "Core Banking System",
-      "holds_npi": "True",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11810",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-MFA_ENFORCEMENT",
-      "name": "MFA Enforcement",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "category": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11817",
-      "mainLabel": "System",
-      "labels": [
-        "System"
-      ],
-      "system_id": "SYS-CUSTOMER_PORTAL",
-      "name": "Customer Portal",
-      "holds_npi": "True",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11807",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-AUTO_ENCRYPTION",
-      "name": "Automated Encryption",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "category": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11815",
-      "mainLabel": "System",
-      "labels": [
-        "System"
-      ],
-      "system_id": "SYS-CRM",
-      "name": "Customer Relationship Management",
-      "holds_npi": "True",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11814",
-      "mainLabel": "System",
-      "labels": [
-        "System"
-      ],
-      "system_id": "SYS-LOAN_ORIGINATION",
-      "name": "Loan Origination System",
-      "holds_npi": "True",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11803",
-      "mainLabel": "Policy",
-      "labels": [
-        "Policy"
-      ],
-      "owner": "CISO",
-      "policy_id": "POL-INFO_SEC_PROGRAM",
-      "name": "Information Security Program Policy",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11789",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "event_id": "SECURITY_INCIDENT",
-      "name": "Security Incident",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "deadline": "Notify qualifying customers without unreasonable delay"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11796",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-ACCESS_CONTROLS",
-      "name": "Access Controls",
-      "description": "Role-based access controls limiting access to NPI",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11793",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-MFA",
-      "name": "Multi-Factor Authentication",
-      "description": "Multi-factor authentication for access to systems containing NPI",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11792",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-ENCRYPTION",
-      "name": "Encryption of NPI at Rest and Transit",
-      "description": "Encryption of customer information held or transmitted by the institution",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "text": "Conduct a written risk assessment identifying internal and external risks to NPI.",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Risk Assessment",
-      "priority": "High",
-      "requirement_id": "GLBA-314.4-R1",
-      "frequency": "Annual"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11790",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "event_id": "ANNUAL_NOTICE_DUE",
-      "name": "Annual Notice Due",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "deadline": "At least once in any period of 12 consecutive months"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11791",
-      "mainLabel": "Safeguard",
-      "labels": [
-        "Safeguard"
-      ],
-      "safeguard_id": "SG-RISK_ASSESSMENT",
-      "name": "Written Risk Assessment",
-      "description": "Periodic written risk assessment identifying internal and external risks to NPI",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Administrative"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11770",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "section_id": "314.3",
-      "heading": "Standards for Safeguarding",
-      "text": "You shall develop, implement, and maintain a comprehensive information security program",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "fullcitation": "16 CFR \u00a7 314.3"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11766",
-      "mainLabel": "Rule",
-      "labels": [
-        "Rule"
-      ],
-      "rule_id": "PRIVACY_RULE",
-      "citation": "16 CFR Part 313",
-      "name": "Financial Privacy Rule",
-      "description": "Governs disclosure of nonpublic personal information",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11769",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "section_id": "313.10",
-      "heading": "Limits on disclosure to nonaffiliated third parties",
-      "text": "You may not disclose any NPI to a nonaffiliated third party unless you have provided notice and reasonable opportunity to opt out.",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "fullcitation": "16 CFR \u00a7 313.10"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "text": "Provide reasonable opportunity and means for consumers to opt out of NPI sharing with nonaffiliated third parties.",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Opt-Out",
-      "priority": "High",
-      "requirement_id": "GLBA-313.10-R1",
-      "frequency": "On Change"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11798",
-      "mainLabel": "EnforcementAction",
-      "labels": [
-        "EnforcementAction"
-      ],
-      "authority": "FTC",
-      "description": "Civil penalties for violations of GLBA",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "enforcement_action_id": "EA-FTC_CIVIL_PENALTY"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11778",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "role_id": "CONSUMER",
-      "name": "Consumer",
-      "description": "Individual who obtains a financial product/service for personal/family use",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11819",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-MARKETING_SHARING",
-      "name": "Marketing Information Sharing",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11808",
-      "mainLabel": "Control",
-      "labels": [
-        "Control"
-      ],
-      "control_id": "CTRL-OPT_OUT_PORTAL",
-      "name": "Opt-Out Portal",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "category": "Technical"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11802",
-      "mainLabel": "Policy",
-      "labels": [
-        "Policy"
-      ],
-      "owner": "Chief Compliance Officer",
-      "policy_id": "POL-PRIVACY_NOTICE",
-      "name": "Privacy Notice Policy",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11768",
-      "mainLabel": "Section",
-      "labels": [
-        "Section"
-      ],
-      "section_id": "313.4",
-      "heading": "Content of privacy notices",
-      "text": "The privacy notice must include: categories of NPI collected, categories of NPI disclosed, categories of affiliates and nonaffiliated third parties to whom NPI is disclosed",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "fullcitation": "16 CFR \u00a7 313.4"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "mainLabel": "Requirement",
-      "labels": [
-        "Requirement"
-      ],
-      "text": "Provide clear and conspicuous notice to customers that accurately reflects privacy policies and practices.",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "type": "Privacy Notice",
-      "priority": "High",
-      "requirement_id": "GLBA-313.4-R1",
-      "frequency": "Initial"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11779",
-      "mainLabel": "Role",
-      "labels": [
-        "Role"
-      ],
-      "role_id": "CUSTOMER",
-      "name": "Customer",
-      "description": "Consumer who has a continuing relationship with the financial institution (e.g., loan, account)",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11822",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-ANNUAL_NOTICE",
-      "name": "Annual Privacy Notice Distribution",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11818",
-      "mainLabel": "Process",
-      "labels": [
-        "Process"
-      ],
-      "process_id": "PROC-ONBOARDING",
-      "name": "Customer Onboarding",
-      "industry_standard_regulation_id": "GLBA 1999"
-    },
-    {
-      "id": "4:933b1b58-e496-4df8-90cf-592c911f843f:11786",
-      "mainLabel": "EventType",
-      "labels": [
-        "EventType"
-      ],
-      "event_id": "ESTABLISH_RELATIONSHIP",
-      "name": "Establish Customer Relationship",
-      "industry_standard_regulation_id": "GLBA 1999",
-      "deadline": "Not later than when relationship is established"
     }
   ],
   "rels": [
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11765",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155489963769343477",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11767",
-      "type": "REGULATION_HAS_RULE"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3613",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153806611467210269",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3614",
+      "type": "REPORTS_TO",
+      "description": "QI must report annually to the Board on the status of the security program."
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11767",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155486665234460151",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11771",
-      "type": "RULE_HAS_SECTION"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153807710978838049",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3621",
+      "type": "EVALUATES_RISK_IN",
+      "description": "Risk assessment must evaluate risks to customer databases."
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11771",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157676892396989947",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "type": "SECTION_HAS_REQUIREMENT"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1156059510792523297",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3622",
+      "type": "EVALUATES_RISK_IN",
+      "description": "Risk assessment must evaluate risks to employee devices."
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6926850687221378567",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11783",
-      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153808810490465825",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3618",
+      "type": "IDENTIFIES_THREAT",
+      "description": "Assessment identifies pretexting as a key social engineering threat."
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917781915315482135",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11799",
-      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3617",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1156060610304151073",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3619",
+      "type": "IDENTIFIES_THREAT",
+      "description": "Assessment identifies phishing as a key cybersecurity threat."
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153162297653341696",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3623",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153809910002093607",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3625",
+      "type": "CONTAINS_MECHANISM",
+      "description": "Privacy notice must detail the toll-free number for opting out."
     },
     {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917844587478265350",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11782",
-      "type": "ROLE_HAS_ROLE",
-      "description": "Institution contracts with service providers"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917844587478265349",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11781",
-      "type": "ROLE_HAS_ROLE",
-      "description": "Institution shares data with third parties"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917755527036415532",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11820",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917753328013159969",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11809",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917752228501532188",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11804",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920002928803589643",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11787",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11776",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917750029478276627",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11795",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11771",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155425092583304699",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "type": "SECTION_HAS_REQUIREMENT"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6924598887407693319",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11783",
-      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920033715129167384",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11800",
-      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153162297653341695",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917755527036415533",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11821",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917753328013159972",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11812",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11812",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490552868",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11813",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917753328013159970",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11810",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11810",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155398704304238114",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11817",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11810",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490552866",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11813",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917753328013159967",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11807",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11807",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1157650504117923359",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11815",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11807",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155398704304238111",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11814",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11807",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490552863",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11813",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920004028315217435",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11803",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917751128989904397",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11789",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917750029478276628",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11796",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917750029478276625",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11793",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11775",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917750029478276624",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11792",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11771",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153173292769619451",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "type": "SECTION_HAS_REQUIREMENT"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6922347087594008071",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11783",
-      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917781915315482136",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11800",
-      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153162297653341694",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917752228501532187",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11803",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917751128989904398",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11790",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11774",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917750029478276623",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11791",
-      "type": "REQUIREMENT_REQUIRES_SAFEGUARD"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11767",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153234865420774903",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11770",
-      "type": "RULE_HAS_SECTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11765",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153238163955658229",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11766",
-      "type": "REGULATION_HAS_RULE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11766",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155486665234460150",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11769",
-      "type": "RULE_HAS_SECTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11769",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153173292769619449",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "type": "SECTION_HAS_REQUIREMENT"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920095287780322823",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11783",
-      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920033715129167382",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11798",
-      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155414097467026941",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11778",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11778",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153237064444030466",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "ROLE_HAS_ROLE",
-      "description": "Consumer obtains financial products/services"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153162297653341693",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917755527036415531",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11819",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920005127826845216",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11808",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11808",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153146904490552864",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11817",
-      "type": "CONTROL_IMPLEMENTED_IN_SYSTEM"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6920004028315217434",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11802",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11773",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917751128989904395",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11787",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11766",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153234865420774902",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11768",
-      "type": "RULE_HAS_SECTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11768",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153173292769619448",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "type": "SECTION_HAS_REQUIREMENT"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917843487966637575",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11783",
-      "type": "REQUIREMENT_APPLIES_TO_DATACATEGORY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917781915315482134",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11798",
-      "type": "REQUIREMENT_ENFORCED_BY_ENFORCEMENT_ACTION"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1155414097467026940",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11779",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11779",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153237064444030467",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "ROLE_HAS_ROLE",
-      "description": "Customer has continuing relationship with institution"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:1153162297653341692",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11777",
-      "type": "REQUIREMENT_APPLIES_TO_ROLE"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917755527036415534",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11822",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917755527036415530",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11818",
-      "type": "REQUIREMENT_IMPACTS_PROCESS"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917753328013159968",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11808",
-      "type": "REQUIREMENT_IMPLEMENTED_BY_CONTROL"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917752228501532186",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11802",
-      "type": "REQUIREMENT_SUPPORTED_BY_POLICY"
-    },
-    {
-      "from": "4:933b1b58-e496-4df8-90cf-592c911f843f:11772",
-      "id": "5:933b1b58-e496-4df8-90cf-592c911f843f:6917751128989904394",
-      "to": "4:933b1b58-e496-4df8-90cf-592c911f843f:11786",
-      "type": "REQUIREMENT_TRIGGERS_EVENT_TYPE"
+      "from": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3625",
+      "id": "5:5ad33362-7a76-4561-94af-1b68b08b0d51:1153811009513721385",
+      "to": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:3627",
+      "type": "APPLIES_TO_SHARING_WITH",
+      "description": "Opt-out rights apply to sharing with non-affiliated marketing firms."
     }
   ]
 }

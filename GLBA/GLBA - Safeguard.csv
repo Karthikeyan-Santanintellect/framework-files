@@ -1,0 +1,5 @@
+safeguardid,name,type,description
+SG-MFA-01,Multi-Factor Authentication,Technical,Authentication requiring two or more factors (Knowledge, Possession, Inherence).
+SG-ENCRYPT-01,Encryption (Transit/Rest),Technical,Cryptographic protection of data while stored or moving across networks.
+SG-TRAIN-01,Security Awareness Training,Administrative,Regular training for employees on security risks and pretexting.
+SG-SHRED-01,Secure Disposal,Physical,Cross-cut shredding or secure wiping of media containing NPI.

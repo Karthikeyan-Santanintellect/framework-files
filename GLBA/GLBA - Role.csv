@@ -1,0 +1,5 @@
+roleid,name,description
+ROLE-FI,Financial Institution,Any institution significantly engaged in financial activities (Banks, Lenders, Tax Preparers).
+ROLE-CUSTOMER,Customer,A consumer who has a continuing relationship with a financial institution.
+ROLE-CONSUMER,Consumer,An individual who obtains a financial product or service (broader than customer).
+ROLE-EMPLOYEE,Employee,Staff member of the financial institution who handles NPI.

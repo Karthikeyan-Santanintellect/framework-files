@@ -1,0 +1,5 @@
+controlid,name,category
+CTRL-ACCESS,Role-Based Access Control (RBAC),Identity & Access Management
+CTRL-LOG,Activity Logging,Monitoring
+CTRL-ID-VER,Identity Verification Questions,Fraud Prevention
+CTRL-SCAN,Vulnerability Scanning,Vulnerability Management
