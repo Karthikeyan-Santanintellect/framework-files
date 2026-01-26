@@ -1,0 +1,6 @@
+authority_id,name,role,jurisdiction,exclusive_enforcement,description,regional_standard_regulation_id
+NY_AG,New York Attorney General,Enforcement & Notification,New York,true,The primary enforcer of the SHIELD Act.,NY SHIELD 1.0
+NY_DOS,NY Department of State,Notification,New York,false,Receives notice of breaches.,NY SHIELD 1.0
+NY_SP,NY State Police,Notification,New York,false,Receives notice for criminal investigation purposes.,NY SHIELD 1.0
+CRA_001,Consumer Reporting Agencies,Notification,USA,false,Must be notified if breach affects >5000 residents.,NY SHIELD 1.0
+SB_DEF_001,Small Business Definition,Classification,New York,false,Entity with <50 employees <$3M gross revenue or <$5M assets.,NY SHIELD 1.0

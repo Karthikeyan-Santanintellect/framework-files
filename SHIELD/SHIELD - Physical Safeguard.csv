@@ -1,0 +1,5 @@
+safeguard_id,safeguard_name,description,implementation_status,last_inspection_date,secure_disposal_method,compliance_with_shield,regional_standard_regulation_id
+PHYS-001,Data Storage Risk Assessment,Assess risks to information storage and disposal,Implemented,2023-10-15,N/A,true,NY SHIELD 1.0
+PHYS-002,Intrusion Detection,Detect prevent and respond to intrusions,Implemented,2023-11-01,N/A,true,NY SHIELD 1.0
+PHYS-003,Unauthorized Access Prevention,Protect against unauthorized access/use during data lifecycle,In Progress,2023-09-20,Role-Based Access,true,NY SHIELD 1.0
+PHYS-004,Secure Disposal,Dispose of private information within reasonable time,Implemented,2023-12-05,Shredding/Wiping,true,NY SHIELD 1.0

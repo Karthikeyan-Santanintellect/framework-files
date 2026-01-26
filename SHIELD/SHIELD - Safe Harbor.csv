@@ -1,0 +1,4 @@
+entity_id,regulation_type,deemed_compliant_status,validation_date,regional_standard_regulation_id
+SH-HIPAA,HIPAA,true,2023-01-01,NY SHIELD 1.0
+SH-GLBA,GLBA,true,2023-01-01,NY SHIELD 1.0
+SH-NYDFS,NY DFS 500,true,2023-01-01,NY SHIELD 1.0

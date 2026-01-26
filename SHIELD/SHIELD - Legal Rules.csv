@@ -1,0 +1,6 @@
+rule_id,name,violation_type,amount,cap_amount,description,regional_standard_regulation_id
+CP-001,Security Violation Penalty,Data Security,5000,0,Civil penalty for failing to maintain reasonable safeguards (per violation).,NY SHIELD 1.0
+CP-002,Notification Violation Penalty,Breach Notification,20,250000,Civil penalty for failing to notify residents (capped at $250k).,NY SHIELD 1.0
+SOL-001,Statute of Limitations,Civil Action,0,0,Action must be brought within 3 years of notice or 6 years of breach.,NY SHIELD 1.0
+EXC-001,Inadvertent Disclosure,Exception,0,0,Good faith access by employee that does not result in further disclosure.,NY SHIELD 1.0
+DEF-001,Unauthorized Access,Definition,0,0,Viewing communicating altering or using data without authorization.,NY SHIELD 1.0

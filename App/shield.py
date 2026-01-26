@@ -290,6 +290,114 @@ ON CREATE SET
     ra.last_review_date = row.last_review_date,
     ra.next_review_date = row.next_review_date;
 """
+# Physical Safeguards
+physical_safeguards = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ps:PhysicalSafeguard {safeguard_id: row.safeguard_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    ps.name = row.safeguard_name,
+    ps.description = row.description,
+    ps.implementation_status = row.implementation_status,
+    ps.last_inspection_date = row.last_inspection_date,
+    ps.secure_disposal_method = row.secure_disposal_method,
+    ps.compliance_with_shield = toBoolean(row.compliance_with_shield);
+"""
+# Data Element Combinations
+data_element_combination = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.combination_id STARTS WITH 'DEC'
+MERGE (dec:DataElementCombination {combination_id: row.combination_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    dec.type = row.type,
+    dec.elements = row.elements_list,
+    dec.requires_name = toBoolean(row.requires_personal_name_boolean),
+    dec.description = row.description;
+"""
+# Publicly Available Information
+public_info_exclusion = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.combination_id STARTS WITH 'PAI'
+MERGE (pai:PubliclyAvailableInformation {exclusion_id: row.combination_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    pai.name = row.type,
+    pai.description = row.description;
+"""
+# Personal Information (Parent Node)
+personal_information = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row'
+WITH row WHERE row.combination_id STARTS WITH 'PI'
+MERGE (pi:PersonalInformation {type_id: row.combination_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    pi.name = row.type,
+    pi.description = row.description;
+"""
+# Regulatory Bodies
+regulatory_bodies = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.authority_id <> 'SB_DEF_001'
+MERGE (rb:RegulatoryBody {authority_id: row.authority_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    rb.name = row.name,
+    rb.role = row.role,
+    rb.jurisdiction = row.jurisdiction,
+    rb.exclusive_enforcement = toBoolean(row.exclusive_enforcement);
+"""
+# Small Business Definition
+small_business_def = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sb:SmallBusinessDefinition {definition_id: row.authority_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    sb.name = row.name,
+    sb.description = row.description; 
+"""
+# Civil Penalties
+civil_penalty = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cp:CivilPenalty {penalty_id: row.rule_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    cp.name = row.name,
+    cp.violation_type = row.violation_type,
+    cp.amount_per_violation = toInteger(row.amount),
+    cp.cap_amount = toInteger(row.cap_amount),
+    cp.description = row.description;
+"""
+# Statute of Limitations
+statute_of_limitations = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.rule_id STARTS WITH 'SOL'
+MERGE (sol:StatuteOfLimitations {rule_id: row.rule_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    sol.name = row.name,
+    sol.description = row.description;
+"""
+# Inadvertent Disclosure=
+inadvertent_disclosure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (id:InadvertentDisclosure {exception_id: row.rule_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    id.name = row.name,
+    id.description = row.description;
+"""
+
+# Unauthorized Access
+unauthorized_access = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ua:UnauthorizedAccess {definition_id: row.rule_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    ua.name = row.name,
+    ua.description = row.description;
+"""
+# Compliant Regulated Entity 
+compliant_regulated_entity = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cre:CompliantRegulatedEntity {entity_id: row.entity_id, regional_standard_regulation_id: row.regional_standard_regulation_id})
+ON CREATE SET
+    cre.regulation_type = row.regulation_type,
+    cre.deemed_compliant_status = row.deemed_compliant_status,
+    cre.validation_date = row.validation_date;
+"""
+
+
 #Relationships
 #regulation_data_controller
 regulation_data_controller = """
@@ -397,6 +505,68 @@ MATCH (ca:ComplianceAssessment {assessment_id: row.target_assessment_id, regiona
 MERGE (dc)-[:DATA_CONTROLLER_UNDERGOES_COMPLIANCE_ASSESSMENT]->(ca);
 """
 
+# Link Security Program to Physical Safeguards
+security_program_physical_safeguards = """
+MATCH (spg:SecurityProgram {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (ps:PhysicalSafeguard {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (spg)-[:SECURITY_PROGRAM_APPLIES_SAFEGUARDS_TO_PHYSICAL]->(ps);
+"""
+# Link Data Controller to Small Business Definition
+
+datacontroller_small_business_definition = """
+MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (sb:SmallBusinessDefinition {definition_id: 'SB_DEF_001'})
+MERGE (dc)-[:DATA_CONTROLLER_QUALIFIES_AS_SMALL_BUSINESS]->(sb);
+"""
+# Link Data Controller to Compliant Regulated Entity
+datacontroller_compliant_regulated_entity = """
+MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (cre:CompliantRegulatedEntity {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (dc)-[:DATA_CONTROLLER_HAS_SAFE_HARBOR_STATUS]->(cre);
+"""
+# Link Attorney General to Civil Penalties
+regulatory_bodies_civil_penalties = """
+MATCH (rb:RegulatoryBody {authority_id: 'NY_AG'})
+MATCH (cp:CivilPenalty {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (rb)-[:ATTORNEY_GENERAL_ENFORCES_PENALTY]->(cp);
+"""
+
+# Link Data Breach to Specific Regulatory Bodies (Notification Duty)
+regulatory_bodies_data_breach = """
+MATCH (br:DataBreach {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (rb:RegulatoryBody {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+WHERE rb.authority_id IN ['NY_AG', 'NY_DOS', 'NY_SP', 'CRA_001']
+MERGE (br)-[:DATA_BREACH_MUST_NOTIFY_AUTHORITY]->(rb);
+"""
+# Link Private Information to Data Element Combinations (Triggers)
+private_information_data_element_combination = """
+MATCH (pi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (dec:DataElementCombination {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (pi)-[:PRIVACY_INFORMATION_DEFINED_BY_COMBINATION]->(dec);
+"""
+
+#Link Private Information to Parent Category (Personal Information)
+personal_information_private_information = """
+MATCH (pi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (parent:PersonalInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (pi)-[:PRIVACY_INFORMATION_SUBTYPE]->(parent);
+"""
+
+# Link Private Information to Publicly Available Information (Exclusion)
+private_information_publicly_available_information = """
+MATCH (pi:PrivateInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (pai:PubliclyAvailableInformation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (pi)-[:PRIVACY_INFORMATION_EXCLUDES_DEFINITION]->(pai);
+"""
+
+# Link Data Breach to Unauthorized Access Definition
+data_breach_unauthorized_access = """
+MATCH (br:DataBreach {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (ua:UnauthorizedAccess {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (br)-[:DATA_BREACH_CLASSIFIED_AS_UNAUTHORIZED_ACCESS]->(ua);
+"""
+
+
 
 
 import sys
@@ -467,6 +637,45 @@ time.sleep(2)
 client.query(risk_assesment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_RiskAssessment_nodes.csv"))
 time.sleep(2)
 
+client.query(physical_safeguards.replace('$file_path',""))
+time.sleep(2)
+
+client.query(data_element_combination.replace('$file_path',""))
+time.sleep(2)
+
+client.query(public_info_exclusion.replace('$file_path',""))
+time.sleep(2)
+
+client.query(personal_information.replace('$file_path',""))
+time.sleep(2)
+
+client.query(regulatory_bodies.replace('$file_path',""))
+time.sleep(2)
+
+client.query(small_business_def.replace('$file_path',""))
+time.sleep(2)
+
+client.query(civil_penalty.replace('$file_path',""))
+time.sleep(2)
+
+client.query(statute_of_limitations.replace('$file_path',""))
+time.sleep(2)
+
+client.query(inadvertent_disclosure.replace('$file_path',""))
+time.sleep(2)
+
+client.query(unauthorized_access.replace('$file_path',""))
+time.sleep(2)
+
+client.query(compliant_regulated_entity.replace('$file_path',""))
+time.sleep(2)
+                                              
+
+
+
+
+
+
 #Relationships
 client.query(regulation_data_controller)
 time.sleep(2)
@@ -509,6 +718,34 @@ time.sleep(2)
 
 client.query(datacontroller_compliance_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_UNDERGOES_COMPLIANCE_ASSESSMENT_relationships.csv"))
 time.sleep(2)
+
+client.query(security_program_physical_safeguards)
+time.sleep(2)
+
+client.query(datacontroller_small_business_definition)
+time.sleep(2)
+
+client.query(datacontroller_compliant_regulated_entity)
+time.sleep(2)
+
+client.query(regulatory_bodies_civil_penalties)
+time.sleep(2)
+
+client.query(regulatory_bodies_data_breach)
+time.sleep(2)
+
+client.query(private_information_data_element_combination)
+time.sleep(2)
+
+client.query(personal_information_private_information)
+time.sleep(2)
+
+client.query(private_information_publicly_available_information)
+time.sleep(2)
+
+client.query(data_breach_unauthorized_access)
+time.sleep(2)   
+
 
 
 

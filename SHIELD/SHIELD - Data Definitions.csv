@@ -1,0 +1,7 @@
+combination_id,type,elements_list,requires_personal_name_boolean,description,regional_standard_regulation_id
+DEC-001,Standard PII,"Name + (SSN OR Driver License OR Account #)",true,Traditional PII definition requiring a name identifier.,NY SHIELD 1.0
+DEC-002,Online Credential,"Username/Email + Password/Security Question",false,Allows access to an online account. Does NOT require a name.,NY SHIELD 1.0
+DEC-003,Biometric Data,"Fingerprint / Retina / Biometric Template",true,Biometric data used for authentication.,NY SHIELD 1.0
+PAI-EXCL-001,Government Records,N/A,false,Information lawfully made available from federal state or local government records.,NY SHIELD 1.0
+PAI-EXCL-002,Widely Distributed Media,N/A,false,Information available via widely distributed media.,NY SHIELD 1.0
+PI-PARENT-001,Personal Information,Generic Personal Info,false,Broader category (Name Number Mark) that acts as a parent to Private Information.,NY SHIELD 1.0
