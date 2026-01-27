@@ -28,6 +28,15 @@ ON CREATE SET
     cfr.url = row.url,
     cfr.full_citation = row.full_citation;
 """
+# cfr citation 
+cfr_citation = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (cfr:CFRCitation {citation: row.citation})
+ON CREATE SET 
+    cfr.hipaa_title = row.hipaa_title,
+    cfr.full_citation = row.full_citation,
+    cfr.industry_standard_regulation_id = row.industry_standard_regulation_id;
+"""
 
 # 1.2 Load Regulatory Standards
 regulatory_standards = """
@@ -1533,7 +1542,7 @@ ON CREATE SET
     rel.created_date = row.created_date;
 """
 
-#CoveredEntity → Designatedofficial
+#CoveredEntity → Designatedofficial#
 covered_entity_designated_official = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.source_id}) 
@@ -1543,7 +1552,7 @@ ON CREATE SET
     rel.description = row.description,
     rel.citation = row.source_citation_id;
 """
-# PreemptionCondition → IndustryStandardAndRegulation
+# PreemptionCondition → IndustryStandardAndRegulation#
 preemption_condition_industry_standard_and_regulation = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (pc:PreemptionCondition {node_id: row.source_id})
@@ -1553,7 +1562,7 @@ ON CREATE SET
     rel.description = row.description,
     rel.citation = row.source_citation_id;
 """
-# HealthPlan → Plan Sponsor
+# HealthPlan → Plan Sponsor#
 health_plan_plan_sponsor = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (hpl:HealthPlan {plan_id: row.source_id})
@@ -1565,7 +1574,7 @@ CALL apoc.create.relationship(hpl, row.relationship_type, {
 RETURN count(rel);
 """
 
-# CoveredEntity → ExternalRecipient
+# CoveredEntity → ExternalRecipient#
 covered_entity_external_recipient = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (ce:CoveredEntity {entity_id: row.source_id})
@@ -1789,16 +1798,16 @@ time.sleep(2)
 client.query(Regulators.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/regulators.csv"))
 time.sleep(2)
 
-client.query(designated_officials.replace('$file_path',""))
+client.query(designated_officials.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Designated%20Official.csv"))
 time.sleep(2)
 
-client.query(preemption_conditions.replace('$file_path',""))
+client.query(preemption_conditions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Preemption%20Condition.csv"))
 time.sleep(2)
 
-client.query(plan_sponsors.replace('$file_path',""))
+client.query(plan_sponsors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Plan%20Sponser.csv"))
 time.sleep(2)
 
-client.query(external_recipients.replace('$file_path',""))
+client.query(external_recipients.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20External%20Receiptent.csv"))
 time.sleep(2)
 
 
@@ -1987,16 +1996,16 @@ time.sleep(2)
 client.query(compliance_violation_regulatory_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cv-regulatory-std.csv"))
 time.sleep(2)
 
-client.query(covered_entity_designated_official.replace('$file_path',""))
+client.query(covered_entity_designated_official.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Covered%20Entity%20Designated%20Officials.csv"))
 time.sleep(2)
 
-client.query(preemption_condition_industry_standard_and_regulation.replace('$file_path',""))
+client.query(preemption_condition_industry_standard_and_regulation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Preemption%20Condition%20Regulation.csv"))
 time.sleep(2)
 
-client.query(health_plan_plan_sponsor.replace('$file_path',""))
+client.query(health_plan_plan_sponsor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Health%20Plan%20Plan%20Sponsor.csv"))
 time.sleep(2)
 
-client.query(covered_entity_external_recipient.replace('$file_path',""))
+client.query(covered_entity_external_recipient.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Covered%20Entity%20External%20Recipients.csv"))
 time.sleep(2)
 
 
