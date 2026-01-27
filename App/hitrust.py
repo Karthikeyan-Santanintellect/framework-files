@@ -59,7 +59,10 @@ ON CREATE SET al.description = row.description;
 hitrust_requirement_nodes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.id})
-ON CREATE SET req.description = row.text;
+ON CREATE SET 
+    req.control_id = row.control_id,
+    req.level = row.level,
+    req.description = row.text;
 """
 
 #Load Assessment Procedures
@@ -84,22 +87,17 @@ ON CREATE SET
 hitrust_risk_threat_nodes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (t:HealthcareThreat {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.threat_name})
-ON CREATE SET t.category = row.threat_category
-MERGE (r:HealthcareRisk {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.risk_name})
-ON CREATE SET r.description = row.risk_desc;
+ON CREATE SET 
+  t.category = row.threat_category,
+  t.risk_name = row.risk_name,
+  t.description = row.risk_description;
 """
 
 #Load Roles & Organization
 hitrust_role_nodes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-FOREACH (_ IN CASE WHEN row.role_name = 'Standard Healthcare Organization' THEN [1] ELSE [] END |
-    MERGE (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.role_name})
-    ON CREATE SET org.type = row.responsibility
-)
-FOREACH (_ IN CASE WHEN row.role_name <> 'Standard Healthcare Organization' THEN [1] ELSE [] END |
-    MERGE (rl:Role {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.role_name})
-    ON CREATE SET rl.primary_responsibility = row.responsibility
-);
+MERGE (rl:Role {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.role_name})
+ON CREATE SET rl.primary_responsibility = row.responsibility;
 """
 
 #Load Regulations
@@ -151,8 +149,8 @@ MERGE (co)-[:CONTROL_OBJECTIVE_HAS_SPECIFICATION]->(cs);
 # Link Framework to Assurance Levels
 hitrust_framework_assurance_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
-MATCH (al:AssuranceLevel {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0',framework_id: row.framework_id})
+MATCH (al:AssuranceLevel {industry_standard_regulation_id: 'HITRUST 11.6.0',level: row.assurance_level})
 MERGE (s)-[:DEFINES_ASSURANCE_LEVEL]->(al);
 """
 hitrust_rel_control_has_requirement = """
@@ -290,28 +288,28 @@ client.query(hitrust_control_specification.replace('$file_path',
                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
 time.sleep(2)
 
-client.query(hitrust_assurance_nodes.replace('$file_path',""))
+client.query(hitrust_assurance_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_assurance_levels.csv"))
 time.sleep(2)
 
-client.query(hitrust_requirement_nodes.replace('$file_path',""))
+client.query(hitrust_requirement_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_implementation_requirements.csv"))
 time.sleep(2)
 
-client.query(hitrust_procedure_nodes.replace('$file_path',""))
+client.query(hitrust_procedure_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_assessment_procedures.csv"))
 time.sleep(2)
 
-client.query(hitrust_data_nodes.replace('$file_path',""))
+client.query(hitrust_data_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_data_categories.csv"))
 time.sleep(2)
 
-client.query(hitrust_risk_threat_nodes.replace('$file_path',""))
+client.query(hitrust_risk_threat_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_risks_threats.csv"))
 time.sleep(2)
 
-client.query(hitrust_role_nodes.replace('$file_path',""))
+client.query(hitrust_role_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_roles.csv"))
 time.sleep(2)
 
-client.query(hitrust_regulation_nodes.replace('$file_path',""))
+client.query(hitrust_regulation_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_regulations.csv"))
 time.sleep(2)
 
-client.query(hitrust_ecosystem_nodes.replace('$file_path',""))
+client.query(hitrust_ecosystem_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_ecosystem.csv"))
 time.sleep(2)
 
 
