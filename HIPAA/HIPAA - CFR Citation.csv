@@ -5,52 +5,52 @@ citation,hipaa_title,full_citation,industry_standard_regulation_id
 45 CFR 164.308(a)(1)(ii)(C),Sanction Policy,45 CFR § 164.308(a)(1)(ii)(C),HIPAA 1996
 45 CFR 164.308(a)(1)(ii)(D),Information System Activity Review,45 CFR § 164.308(a)(1)(ii)(D),HIPAA 1996
 45 CFR 164.308(a)(2),Assigned Security Responsibility,45 CFR § 164.308(a)(2),HIPAA 1996
-45 CFR 164.308(a)(3)(i),Workforce Security,45 CFR § 164.308(a)(3)(i),HIPAA 1996
-45 CFR 164.308(a)(3)(ii)(A),Authorization and/or Supervision,45 CFR § 164.308(a)(3)(ii)(A),HIPAA 1996
-45 CFR 164.308(a)(3)(ii)(B),Workforce Clearance Procedure,45 CFR § 164.308(a)(3)(ii)(B),HIPAA 1996
+45 CFR 164.308(a)(3),Workforce Security,45 CFR § 164.308(a)(3),HIPAA 1996
+45 CFR 164.308(a)(3)(ii)(A),Authorization and Supervision,45 CFR § 164.308(a)(3)(ii)(A),HIPAA 1996
+45 CFR 164.308(a)(3)(ii)(B),Workforce Clearance,45 CFR § 164.308(a)(3)(ii)(B),HIPAA 1996
 45 CFR 164.308(a)(3)(ii)(C),Termination Procedures,45 CFR § 164.308(a)(3)(ii)(C),HIPAA 1996
-45 CFR 164.308(a)(4)(i),Information Access Management,45 CFR § 164.308(a)(4)(i),HIPAA 1996
-45 CFR 164.308(a)(4)(ii)(A),Isolating Health Care Clearinghouse Functions,45 CFR § 164.308(a)(4)(ii)(A),HIPAA 1996
+45 CFR 164.308(a)(4),Information Access Management,45 CFR § 164.308(a)(4),HIPAA 1996
 45 CFR 164.308(a)(4)(ii)(B),Access Authorization,45 CFR § 164.308(a)(4)(ii)(B),HIPAA 1996
-45 CFR 164.308(a)(4)(ii)(C),Access Establishment and Modification,45 CFR § 164.308(a)(4)(ii)(C),HIPAA 1996
-45 CFR 164.308(a)(5)(i),Security Awareness and Training,45 CFR § 164.308(a)(5)(i),HIPAA 1996
+45 CFR 164.308(a)(4)(ii)(C),Access Review,45 CFR § 164.308(a)(4)(ii)(C),HIPAA 1996
+45 CFR 164.308(a)(5),Security Awareness and Training,45 CFR § 164.308(a)(5),HIPAA 1996
 45 CFR 164.308(a)(5)(ii)(A),Security Reminders,45 CFR § 164.308(a)(5)(ii)(A),HIPAA 1996
-45 CFR 164.308(a)(5)(ii)(B),Protection from Malicious Software,45 CFR § 164.308(a)(5)(ii)(B),HIPAA 1996
-45 CFR 164.308(a)(5)(ii)(C),Log-in Monitoring,45 CFR § 164.308(a)(5)(ii)(C),HIPAA 1996
+45 CFR 164.308(a)(5)(ii)(B),Malware Protection,45 CFR § 164.308(a)(5)(ii)(B),HIPAA 1996
+45 CFR 164.308(a)(5)(ii)(C),Login Monitoring,45 CFR § 164.308(a)(5)(ii)(C),HIPAA 1996
 45 CFR 164.308(a)(5)(ii)(D),Password Management,45 CFR § 164.308(a)(5)(ii)(D),HIPAA 1996
-45 CFR 164.308(a)(6)(i),Security Incident Procedures,45 CFR § 164.308(a)(6)(i),HIPAA 1996
-45 CFR 164.308(a)(6)(ii),Response and Reporting,45 CFR § 164.308(a)(6)(ii),HIPAA 1996
-45 CFR 164.308(a)(7)(i),Contingency Plan,45 CFR § 164.308(a)(7)(i),HIPAA 1996
+45 CFR 164.308(a)(6),Security Incident Procedures,45 CFR § 164.308(a)(6),HIPAA 1996
+45 CFR 164.308(a)(6)(ii),Incident Reporting and Response,45 CFR § 164.308(a)(6)(ii),HIPAA 1996
+45 CFR 164.308(a)(7),Contingency Planning,45 CFR § 164.308(a)(7),HIPAA 1996
 45 CFR 164.308(a)(7)(ii)(A),Data Backup Plan,45 CFR § 164.308(a)(7)(ii)(A),HIPAA 1996
 45 CFR 164.308(a)(7)(ii)(B),Disaster Recovery Plan,45 CFR § 164.308(a)(7)(ii)(B),HIPAA 1996
-45 CFR 164.308(a)(7)(ii)(C),Emergency Mode Operation Plan,45 CFR § 164.308(a)(7)(ii)(C),HIPAA 1996
+45 CFR 164.308(a)(7)(ii)(C),Emergency Mode Operations Plan,45 CFR § 164.308(a)(7)(ii)(C),HIPAA 1996
 45 CFR 164.308(a)(7)(ii)(D),Testing and Revision Procedures,45 CFR § 164.308(a)(7)(ii)(D),HIPAA 1996
-45 CFR 164.308(a)(7)(ii)(E),Applications and Data Criticality Analysis,45 CFR § 164.308(a)(7)(ii)(E),HIPAA 1996
 45 CFR 164.308(a)(8),Evaluation,45 CFR § 164.308(a)(8),HIPAA 1996
+45 CFR 164.308(b)(1),Business Associate Contracts,45 CFR § 164.308(b)(1),HIPAA 1996
 45 CFR 164.310(a)(1),Facility Access Controls,45 CFR § 164.310(a)(1),HIPAA 1996
-45 CFR 164.310(a)(2)(i),Contingency Operations,45 CFR § 164.310(a)(2)(i),HIPAA 1996
-45 CFR 164.310(a)(2)(ii),Facility Security Plan,45 CFR § 164.310(a)(2)(ii),HIPAA 1996
-45 CFR 164.310(a)(2)(iii),Access Control and Validation Procedures,45 CFR § 164.310(a)(2)(iii),HIPAA 1996
-45 CFR 164.310(a)(2)(iv),Maintenance Records,45 CFR § 164.310(a)(2)(iv),HIPAA 1996
+45 CFR 164.310(a)(2),Visitor Access Logs,45 CFR § 164.310(a)(2),HIPAA 1996
 45 CFR 164.310(b),Workstation Use,45 CFR § 164.310(b),HIPAA 1996
-45 CFR 164.310(c),Workstation Security,45 CFR § 164.310(c),HIPAA 1996
-45 CFR 164.310(d)(1),Device and Media Controls,45 CFR § 164.310(d)(1),HIPAA 1996
-45 CFR 164.310(d)(2)(i),Disposal,45 CFR § 164.310(d)(2)(i),HIPAA 1996
+45 CFR 164.310(c),Workstation Physical Safeguards,45 CFR § 164.310(c),HIPAA 1996
+45 CFR 164.310(d)(2)(i),Disposal of Media,45 CFR § 164.310(d)(2)(i),HIPAA 1996
 45 CFR 164.310(d)(2)(ii),Media Re-use,45 CFR § 164.310(d)(2)(ii),HIPAA 1996
-45 CFR 164.310(d)(2)(iii),Accountability,45 CFR § 164.310(d)(2)(iii),HIPAA 1996
-45 CFR 164.310(d)(2)(iv),Data Backup and Storage,45 CFR § 164.310(d)(2)(iv),HIPAA 1996
 45 CFR 164.312(a)(1),Access Control,45 CFR § 164.312(a)(1),HIPAA 1996
 45 CFR 164.312(a)(2)(i),Unique User Identification,45 CFR § 164.312(a)(2)(i),HIPAA 1996
-45 CFR 164.312(a)(2)(ii),Emergency Access Procedure,45 CFR § 164.312(a)(2)(ii),HIPAA 1996
-45 CFR 164.312(a)(2)(iii),Automatic Logoff,45 CFR § 164.312(a)(2)(iii),HIPAA 1996
+45 CFR 164.312(a)(2)(ii),Emergency Access Procedures,45 CFR § 164.312(a)(2)(ii),HIPAA 1996
 45 CFR 164.312(a)(2)(iv),Encryption and Decryption,45 CFR § 164.312(a)(2)(iv),HIPAA 1996
 45 CFR 164.312(b),Audit Controls,45 CFR § 164.312(b),HIPAA 1996
 45 CFR 164.312(c)(1),Integrity,45 CFR § 164.312(c)(1),HIPAA 1996
-45 CFR 164.312(c)(2),Mechanism to Authenticate Electronic Protected Health Information,45 CFR § 164.312(c)(2),HIPAA 1996
+45 CFR 164.312(c)(2),Mechanism to Authenticate PHI,45 CFR § 164.312(c)(2),HIPAA 1996
 45 CFR 164.312(d),Person or Entity Authentication,45 CFR § 164.312(d),HIPAA 1996
 45 CFR 164.312(e)(1),Transmission Security,45 CFR § 164.312(e)(1),HIPAA 1996
-45 CFR 164.312(e)(2)(i),Integrity Controls,45 CFR § 164.312(e)(2)(i),HIPAA 1996
-45 CFR 164.312(e)(2)(ii),Encryption,45 CFR § 164.312(e)(2)(ii),HIPAA 1996
+45 CFR 164.312(e)(2)(i),Integrity Controls (Transit),45 CFR § 164.312(e)(2)(i),HIPAA 1996
+45 CFR 164.312(e)(2)(ii),Encryption (Transit),45 CFR § 164.312(e)(2)(ii),HIPAA 1996
+45 CFR 164.316(a),Policies and Procedures,45 CFR § 164.316(a),HIPAA 1996
+45 CFR 164.316(b)(1),Documentation,45 CFR § 164.316(b)(1),HIPAA 1996
 45 CFR 164.404(b),Individual Notification,45 CFR § 164.404(b),HIPAA 1996
-45 CFR 164.406(b),Notification Procedures,45 CFR § 164.406(b),HIPAA 1996
+45 CFR 164.406(b),Media Notification,45 CFR § 164.406(b),HIPAA 1996
 45 CFR 164.410(b),HHS Notification,45 CFR § 164.410(b),HIPAA 1996
+45 CFR 164.504(e),Privacy BA Contracts,45 CFR § 164.504(e),HIPAA 1996
+45 CFR 164.520,Notice of Privacy Practices,45 CFR § 164.520,HIPAA 1996
+45 CFR 164.524,Right to Access PHI,45 CFR § 164.524,HIPAA 1996
+45 CFR 164.526,Right to Amend PHI,45 CFR § 164.526,HIPAA 1996
+45 CFR 164.528,Right to Accounting of Disclosures,45 CFR § 164.528,HIPAA 1996
+45 CFR 164.530,Administrative Requirements,45 CFR § 164.530,HIPAA 1996

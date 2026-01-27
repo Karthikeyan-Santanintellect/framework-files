@@ -870,185 +870,185 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-# client.query(regulation)
-# time.sleep(2)
+client.query(regulation)
+time.sleep(2)
 
-# client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles_Modified.csv'))
-# time.sleep(2)
+client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles_Modified.csv'))
+time.sleep(2)
 
-# client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles_Modified.csv'))
-# time.sleep(2)
+client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles_Modified.csv'))
+time.sleep(2)
 
-# client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections_Modified.csv'))
-# time.sleep(2)
+client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections_Modified.csv'))
+time.sleep(2)
 
-# client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements_Modified.csv'))
-# time.sleep(2)
+client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements_Modified.csv'))
+time.sleep(2)
 
-# client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
-# time.sleep(2)
+client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
+time.sleep(2)
 
-# client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_DataCategories.csv'))
-# time.sleep(2)
+client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_DataCategories.csv'))
+time.sleep(2)
 
-# client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Safeguards.csv'))
-# time.sleep(2)
+client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Safeguards.csv'))
+time.sleep(2)
 
-# client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
-# time.sleep(2)
+client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
+time.sleep(2)
 
-# client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions_Final.csv'))
-# time.sleep(2)
+client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions_Final.csv'))
+time.sleep(2)
 
-# client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms_Final.csv'))
-# time.sleep(2)
+client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms_Final.csv'))
+time.sleep(2)
 
-# client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria_Final.csv'))
-# time.sleep(2)
+client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria_Final.csv'))
+time.sleep(2)
 
-# client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs_Final.csv'))
-# time.sleep(2)
+client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs_Final.csv'))
+time.sleep(2)
 
-# client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies_Final.csv'))
-# time.sleep(2)
+client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies_Final.csv'))
+time.sleep(2)
 
-# client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls_Final.csv'))
-# time.sleep(2)
+client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls_Final.csv'))
+time.sleep(2)
 
-# client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems_Final.csv'))
-# time.sleep(2)
+client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems_Final.csv'))
+time.sleep(2)
 
 
-# client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH-Processes-COMPLETE.csv'))
-# time.sleep(2)
+client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH-Processes-COMPLETE.csv'))
+time.sleep(2)
 
-# client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  
-# time.sleep(2)
+client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  
+time.sleep(2)
 
-# client.query(organization.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/organization.csv"))
-# time.sleep(2)
+client.query(organization.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/organization.csv"))
+time.sleep(2)
 
-# client.query(contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/contract.csv"))
-# time.sleep(2)
+client.query(contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/contract.csv"))
+time.sleep(2)
 
-# client.query(violation_tier.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/violation_tier.csv"))
-# time.sleep(2)
+client.query(violation_tier.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/violation_tier.csv"))
+time.sleep(2)
 
-# client.query(breach_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/breach_risk_assessment.csv"))
-# time.sleep(2)
+client.query(breach_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/breach_risk_assessment.csv"))
+time.sleep(2)
 
-# client.query(certified_ehr_technology.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/certified_ehr_tech.csv"))
-# time.sleep(2)
+client.query(certified_ehr_technology.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/certified_ehr_tech.csv"))
+time.sleep(2)
 
-# #Relationships
-# client.query(regulation_title_rel)
-# time.sleep(2)
+#Relationships
+client.query(regulation_title_rel)
+time.sleep(2)
 
-# client.query(title_subtitle_rel)
-# time.sleep(2)
+client.query(title_subtitle_rel)
+time.sleep(2)
 
-# client.query(subtitle_section_rel)
-# time.sleep(2)   
+client.query(subtitle_section_rel)
+time.sleep(2)   
 
-# client.query(section_requirement_rel)
-# time.sleep(2)
+client.query(section_requirement_rel)
+time.sleep(2)
 
-# client.query(requirement_role_rel)
-# time.sleep(2)
+client.query(requirement_role_rel)
+time.sleep(2)
 
-# client.query(requirement_data_category_rel)
-# time.sleep(2)   
+client.query(requirement_data_category_rel)
+time.sleep(2)   
 
-# client.query(requirement_safeguard_rel)
-# time.sleep(2)   
+client.query(requirement_safeguard_rel)
+time.sleep(2)   
 
-# client.query(requirement_event_type_rel)    
-# time.sleep(2)   
+client.query(requirement_event_type_rel)    
+time.sleep(2)   
 
-# client.query(requirement_policy_rel)    
-# time.sleep(2)
+client.query(requirement_policy_rel)    
+time.sleep(2)
 
-# client.query(requirement_control_rel)
-# time.sleep(2)   
+client.query(requirement_control_rel)
+time.sleep(2)   
 
-# client.query(control_system_rel)
-# time.sleep(2)
+client.query(control_system_rel)
+time.sleep(2)
 
-# client.query(requirement_process_rel)
-# time.sleep(2)
+client.query(requirement_process_rel)
+time.sleep(2)
 
-# client.query(title_incentive_program_rel)
-# time.sleep(2)
+client.query(title_incentive_program_rel)
+time.sleep(2)
 
-# client.query(incentive_program_meaningful_use_criterion_rel)
-# time.sleep(2)
+client.query(incentive_program_meaningful_use_criterion_rel)
+time.sleep(2)
 
-# client.query(requirement_meaningful_use_criterion_rel)
-# time.sleep(2)
+client.query(requirement_meaningful_use_criterion_rel)
+time.sleep(2)
 
-# client.query(requirement_enforcement_action_rel)
-# time.sleep(2)
+client.query(requirement_enforcement_action_rel)
+time.sleep(2)
 
 
-# client.query(section_enforcement_action_rel)
-# time.sleep(2)
+client.query(section_enforcement_action_rel)
+time.sleep(2)
 
 
-# client.query(requirements_implementation_spec_rel)
-# time.sleep(2)
+client.query(requirements_implementation_spec_rel)
+time.sleep(2)
 
 
-# client.query(implementation_spec_control_rel)
-# time.sleep(2)
+client.query(implementation_spec_control_rel)
+time.sleep(2)
 
 
-# client.query(policy_control_rel)
-# time.sleep(2)
+client.query(policy_control_rel)
+time.sleep(2)
 
 
-# client.query(process_system_rel)
-# time.sleep(2)
+client.query(process_system_rel)
+time.sleep(2)
 
 
-# client.query(requirement_external_framework_requirements_rel)
-# time.sleep(2)
+client.query(requirement_external_framework_requirements_rel)
+time.sleep(2)
 
 
-# client.query(organization_role_rel)
-# time.sleep(2)
+client.query(organization_role_rel)
+time.sleep(2)
 
-# client.query(organization_contract_rel)
-# time.sleep(2)
+client.query(organization_contract_rel)
+time.sleep(2)
 
-# client.query(contract_requirement_rel)
-# time.sleep(2)
+client.query(contract_requirement_rel)
+time.sleep(2)
 
-# client.query(violation_tier_section_rel)
-# time.sleep(2)
+client.query(violation_tier_section_rel)
+time.sleep(2)
 
-# client.query(violation_tier_enforcement_rel)
-# time.sleep(2)
+client.query(violation_tier_enforcement_rel)
+time.sleep(2)
 
-# client.query(breach_risk_assessment_event_rel)
-# time.sleep(2)
+client.query(breach_risk_assessment_event_rel)
+time.sleep(2)
 
-# client.query(breach_risk_assessment_safeguard_rel)
-# time.sleep(2)
+client.query(breach_risk_assessment_safeguard_rel)
+time.sleep(2)
 
-# client.query(ehr_tech_rel)
-# time.sleep(2)
+client.query(ehr_tech_rel)
+time.sleep(2)
 
-# client.query(hitech_rel_ehr_tech_framework)
-# time.sleep(2)
+client.query(hitech_rel_ehr_tech_framework)
+time.sleep(2)
 
-# client.query(hitech_rel_organization_framework)
-# time.sleep(2)
+client.query(hitech_rel_organization_framework)
+time.sleep(2)
 
-# client.query(hitech_rel_violation_tier_framework)
-# time.sleep(2)
+client.query(hitech_rel_violation_tier_framework)
+time.sleep(2)
 
-# client.query(hitech_rel_roles_framework)
-# time.sleep(2)
+client.query(hitech_rel_roles_framework)
+time.sleep(2)
 
 client.query(hitech_rel_framework_framework)
 time.sleep(2)
