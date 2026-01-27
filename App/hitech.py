@@ -504,6 +504,86 @@ ON CREATE SET
   f.documentation_level = row.documentation_level,
   f.status = row.status;
 """
+#organization
+organization = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (o:Organization {
+  organization_id: row.organization_id,
+  industry_standard_regulation_id: "HITECH_ACT_2009"
+})
+ON CREATE SET
+  o.name = row.name,
+  o.org_type = row.org_type,
+  o.description = row.description,
+  o.npi_code = row.npi_code,
+  o.location = row.location,
+  o.status = "Active";
+"""
+
+#contract
+contract = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (c:Contract {
+  contract_id: row.contract_id,
+  industry_standard_regulation_id: "HITECH_ACT_2009"
+})
+ON CREATE SET
+  c.name = row.name,
+  c.contract_type = row.contract_type,
+  c.effective_date = date(row.effective_date),
+  c.expiration_date = date(row.expiration_date),
+  c.key_clauses = row.key_clauses,
+  c.status = "Active";
+"""
+
+#violation_tier
+violation_tier = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (vt:ViolationTier {
+  tier_id: row.tier_id,
+  industry_standard_regulation_id: "HITECH_ACT_2009"
+})
+ON CREATE SET
+  vt.name = row.name,
+  vt.culpability_level = row.culpability_level,
+  vt.min_penalty_per_violation = toInteger(row.min_penalty_per_violation),
+  vt.max_penalty_per_violation = toInteger(row.max_penalty_per_violation),
+  vt.annual_cap = toInteger(row.annual_cap),
+  vt.description = row.description;
+"""
+
+#breach_risk_assessment
+breach_risk_assessment = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (bra:BreachRiskAssessment {
+  assessment_id: row.assessment_id,
+  industry_standard_regulation_id: "HITECH_ACT_2009"
+})
+ON CREATE SET
+  bra.name = row.name,
+  bra.description = row.description,
+  bra.factor_nature_of_phi = row.factor_1,
+  bra.factor_unauthorized_person = row.factor_2,
+  bra.factor_acquired_viewed = row.factor_3,
+  bra.factor_mitigation = row.factor_4;
+"""
+
+#certified_ehr_technology
+certified_ehr_technology = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ce:CertifiedEHRTechnology {
+  tech_id: row.tech_id,
+  industry_standard_regulation_id: "HITECH_ACT_2009"
+})
+ON CREATE SET
+  ce.name = row.name,
+  ce.edition = row.edition,
+  ce.certification_body = row.certification_body,
+  ce.mandate_year = row.mandate_year,
+  ce.functional_requirements = row.functional_requirements;
+"""
+
+# Relationships
 #regulation_title_rel
 regulation_title_rel = """
 MATCH (r:IndustryStandardAndRegulation {industry_standard_regulation_id: "HITECH_ACT_2009"})
@@ -636,6 +716,65 @@ MATCH (rq:Requirement {industry_standard_regulation_id: "HITECH_ACT_2009"})
 MATCH (efr:ExternalFrameworkRequirement {framework_requirement_id: "FRAMEWORK-HIPAA-PRIVACY",industry_standard_regulation_id: "HITECH_ACT_2009"})
 MERGE (rq)-[:REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT]->(efr);
 """
+#organization_role_rel
+organization_role_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.source_node_type = 'Organization' AND row.target_node_type = 'Role'
+MATCH (o:Organization {organization_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (r:Role {role_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (o)-[rel:PLAYS_ROLE]->(r)
+ON CREATE SET rel.description = row.description;
+"""
+
+#organization_contract_rel
+organization_contract_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.source_node_type = 'Organization' AND row.target_node_type = 'Contract'
+MATCH (o:Organization {organization_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (c:Contract {contract_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+CALL apoc.create.relationship(o, row.rel_type, {description: row.description}, c) YIELD rel
+RETURN count(rel);
+"""
+
+#contract_requirement_rel
+contract_requirement_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.source_node_type = 'Contract' AND row.target_node_type = 'Requirement'
+MATCH (c:Contract {contract_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (req:Requirement {requirement_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (c)-[rel:FLOWS_DOWN_REQUIREMENT]->(req)
+ON CREATE SET rel.description = row.description;
+"""
+
+#violation_tier_rel
+violation_tier_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.source_node_type = 'ViolationTier'
+MATCH (vt:ViolationTier {tier_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (target {industry_standard_regulation_id: "HITECH_ACT_2009"}) WHERE target.section_id = row.target_id OR target.enforcement_action_id = row.target_id
+CALL apoc.create.relationship(vt, row.rel_type, {description: row.description}, target) YIELD rel
+RETURN count(rel);
+"""
+
+#breach_risk_rel
+breach_risk_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.source_node_type = 'BreachRiskAssessment'
+MATCH (bra:BreachRiskAssessment {assessment_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (target {industry_standard_regulation_id: "HITECH_ACT_2009"}) WHERE target.event_type_id = row.target_id OR target.safeguard_id = row.target_id
+CALL apoc.create.relationship(bra, row.rel_type, {description: row.description}, target) YIELD rel
+RETURN count(rel);
+"""
+
+#ehr_tech_rel
+ehr_tech_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.source_node_type = 'CertifiedEHRTechnology'
+MATCH (ce:CertifiedEHRTechnology {tech_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (muc:MeaningfulUseCriterion {criterion_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (ce)-[rel:SUPPORTS_CRITERION]->(muc)
+ON CREATE SET rel.description = row.description;
+"""
 
 
 import os
@@ -710,7 +849,24 @@ client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santa
 time.sleep(2)
 
 client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  
+time.sleep(2)
 
+client.query(organization.replace('$file_path',""))
+time.sleep(2)
+
+client.query(contract.replace('$file_path',""))
+time.sleep(2)
+
+client.query(violation_tier.replace('$file_path',""))
+time.sleep(2)
+
+client.query(breach_risk_assessment.replace('$file_path',""))
+time.sleep(2)
+
+client.query(certified_ehr_technology.replace('$file_path',""))
+time.sleep(2)
+
+#Relationships
 client.query(regulation_title_rel)
 time.sleep(2)
 
@@ -784,6 +940,23 @@ client.query(requirement_external_framework_requirements_rel)
 time.sleep(2)
 
 
+client.query(organization_role_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(organization_contract_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(contract_requirement_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(violation_tier_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(breach_risk_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(ehr_tech_rel.replace('$file_path',""))
+time.sleep(2)
 
 
 

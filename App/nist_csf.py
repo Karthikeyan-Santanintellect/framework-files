@@ -74,6 +74,7 @@ MERGE (c)-[:CATEGORY_CONTAINS_SUBCATEGORIES]->(s);
 """
 
 
+
 import os
 import time
 import logging

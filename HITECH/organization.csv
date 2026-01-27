@@ -1,0 +1,5 @@
+organization_id,name,org_type,description,npi_code,location,industry_standard_regulation_id
+ORG-CE-001,General Mercy Hospital,Covered Entity,Acute care hospital system handling ePHI.,1234567890,New York,HITECH_ACT_2009
+ORG-BA-001,CloudVault Data Inc,Business Associate,Cloud storage provider hosting encrypted backups.,9876543210,California,HITECH_ACT_2009
+ORG-SUB-001,SecureAudit Partners,Subcontractor,Security auditing firm hired by CloudVault.,5555555555,Texas,HITECH_ACT_2009
+ORG-AG-001,HHS Office for Civil Rights,Regulatory Agency,Primary enforcer of HIPAA/HITECH.,N/A,Washington DC,HITECH_ACT_2009

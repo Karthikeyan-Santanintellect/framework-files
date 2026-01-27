@@ -1,0 +1,5 @@
+source_id,rel_type,target_id,description
+ORG-CE-001,SIGNS_CONTRACT,CTR-BAA-2024,Hospital signs BAA with Vendor
+ORG-BA-001,BOUND_BY_CONTRACT,CTR-BAA-2024,Vendor bound by BAA terms
+ORG-BA-001,SIGNS_CONTRACT,CTR-SUB-2024,Vendor signs Subcontract
+ORG-SUB-001,BOUND_BY_CONTRACT,CTR-SUB-2024,Subcontractor bound by terms

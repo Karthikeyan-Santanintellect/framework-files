@@ -1,0 +1,3 @@
+contract_id,name,contract_type,effective_date,expiration_date,key_clauses,industry_standard_regulation_id
+CTR-BAA-2024,Standard Business Associate Agreement,BAA,2024-01-01,2026-01-01,Breach Reporting < 60 days; Return/Destroy PHI on term,HITECH_ACT_2009
+CTR-SUB-2024,Downstream Data Processing Addendum,Subcontractor Agreement,2024-02-01,2026-02-01,Flow-down of all BAA terms; Audit Rights,HITECH_ACT_2009

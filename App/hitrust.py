@@ -64,6 +64,12 @@ ON CREATE SET
     req.level = row.level,
     req.description = row.text;
 """
+#Load Healthcare Organizations
+hitrust_organization_node = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.name})
+ON CREATE SET org.type = row.type;
+"""
 
 #Load Assessment Procedures
 hitrust_procedure_nodes = """
@@ -153,13 +159,19 @@ MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: row.fra
 MATCH (al:AssuranceLevel {industry_standard_regulation_id: row.framework_id, name: row.assurance_level})
 MERGE (s)-[:INDUSTRY_STANDARD_REGULATION_DEFINES_ASSURANCE_LEVEL]->(al);
 """
-# Link Controls to Implementation Requirements#
+# Link Controls to Implementation Requirements
 hitrust_rel_control_has_requirement = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0', control_id: row.control_id})
-MATCH (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.requirement_id})
+UNWIND [
+  {ctrl_id: "HITRUST-05.a", req_id: "IMP-05.a-L1"},
+  {ctrl_id: "HITRUST-05.a", req_id: "IMP-05.a-L2"},
+  {ctrl_id: "HITRUST-05.a", req_id: "IMP-05.a-L3"}
+] AS data
+MATCH (ctrl:Control {control_id: data.ctrl_id})
+MATCH (req:ImplementationRequirement {requirement_id: data.req_id})
 MERGE (ctrl)-[:CONTROL_HAS_REQUIREMENT]->(req);
 """
+
+# Link Requirements to Assurance Levels
 hitrust_rel_requirement_assurance_level = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.requirement_id})
@@ -192,7 +204,7 @@ MATCH (d:HealthcareDataCategory {industry_standard_regulation_id: 'HITRUST 11.6.
 MERGE (t)-[:THREAT_TARGETS_DATA_CATEGORY]->(d);
 """
 
-# Create Organization and Link Roles#
+# Create Organization and Link Roles
 hitrust_org_structure = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.org_name})
@@ -208,7 +220,7 @@ MERGE (s)-[:INDUSTRY_STANDARD_REGULATION_HARMONIZES_REGULATION]->(reg);
 """
 
 
-# Link Org to Ecosystem#
+# Link Org to Ecosystem
 hitrust_org_ecosystem_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.org_name})
@@ -218,15 +230,13 @@ MERGE (org)-[:ORGANIZATION_ENGAGES_BUSINESS_ASSOCIATE]->(ba);
 # Map HITRUST Controls to NIST CSF Subcategories#
 hitrust_controls_nist_CSF_subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {
-  industry_standard_regulation_id: 'HITRUST 11.6.0'
-})
-WHERE ctrl.control_id = row.start_id OR ctrl.control_id = replace(row.start_id, 'HITRUST-', '')
-MATCH (sc:Subcategory {
-  id: row.end_id,
-  IS_framework_standard_id: 'NIST_CSF_2.0'
-})
-
+MATCH (ctrl:Control)
+WHERE ctrl.id = row.start_id 
+   OR ctrl.control_id = row.start_id 
+   OR ctrl.control_id = replace(row.start_id, 'HITRUST-', '')
+MATCH (sc:Subcategory)
+WHERE sc.Subcategory_Code = row.end_id 
+   OR sc.id = row.end_id
 MERGE (ctrl)-[:CONTROLS_MAPS_TO_SUBCATEGORIES {
   mapping_type: row.mapping_type,
   confidence: row.confidence,
@@ -235,7 +245,27 @@ MERGE (ctrl)-[:CONTROLS_MAPS_TO_SUBCATEGORIES {
   created_date: row.created_date
 }]->(sc);
 """
-
+# Link HITRUST Framework to all Assessment Procedures
+hitrust_framework_assessment_procedure_rel = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (ap:AssessmentProcedure)
+WHERE NOT (framework)-[:INDUSTRY_STANDARD_REGULATION_DEFINES_ASSESSMENT_PROCEDURE]->(ap)
+MERGE (framework)-[:INDUSTRY_STANDARD_REGULATION_DEFINES_ASSESSMENT_PROCEDURE]->(ap);
+"""
+# Link HITRUST Framework to all Roles
+hitrust_org_roles = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (rl:Role)
+WHERE NOT (framework)-[:INDUSTRY_STANDARD_REGULATION_DEFINES_ROLE]->(rl)
+MERGE (framework)-[:INDUSTRY_STANDARD_REGULATION_DEFINES_ROLE]->(rl);
+"""
+# Link HITRUST Framework to all Threats
+hitrust_rel_threats_framework = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (t:HealthcareThreat)
+WHERE NOT (framework)-[:INDUSTRY_STANDARD_REGULATION_ADDRESSES_THREAT]->(t)
+MERGE (framework)-[:INDUSTRY_STANDARD_REGULATION_ADDRESSES_THREAT]->(t);
+"""
 
 import os
 import time
@@ -281,6 +311,10 @@ time.sleep(2)
 client.query(hitrust_requirement_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_implementation_requirements.csv"))
 time.sleep(2)
 
+client.query(hitrust_organization_node.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20Organization.csv"))
+time.sleep(2)
+
+
 client.query(hitrust_procedure_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_assessment_procedures.csv"))
 time.sleep(2)
 
@@ -320,8 +354,9 @@ time.sleep(2)
 client.query(hitrust_framework_assurance_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_framework_assurance.csv"))
 time.sleep(2)
 
-client.query(hitrust_rel_control_has_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20Control%20Requirements.csv"))
+client.query(hitrust_rel_control_has_requirement)
 time.sleep(2)
+
 
 client.query(hitrust_rel_requirement_assurance_level.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20Requirment%20Assurance%20Level.csv"))
 time.sleep(2)
@@ -345,6 +380,14 @@ time.sleep(2)
 client.query(hitrust_org_ecosystem_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_org_ecosystem.csv"))
 time.sleep(2)
 
+client.query(hitrust_framework_assessment_procedure_rel)
+time.sleep(2)
+
+client.query(hitrust_org_roles)
+time.sleep(2)
+
+client.query(hitrust_rel_threats_framework)
+time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 

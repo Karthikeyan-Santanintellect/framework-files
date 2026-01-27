@@ -1,0 +1,2 @@
+assessment_id,name,description,factor_1,factor_2,factor_3,factor_4,industry_standard_regulation_id
+BRA-4FACTOR,Four Factor Risk Assessment,Mandatory test to determine low probability of compromise.,Nature and extent of PHI involved.,Who the unauthorized person was.,Whether PHI was actually acquired or viewed.,Extent to which risk has been mitigated.,HITECH_ACT_2009

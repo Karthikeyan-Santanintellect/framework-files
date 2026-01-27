@@ -1,0 +1,4 @@
+source_id,rel_type,target_id,description
+ORG-CE-001,PLAYS_ROLE,ROLE-CE,General Mercy acts as Covered Entity
+ORG-BA-001,PLAYS_ROLE,ROLE-BA,CloudVault acts as Business Associate
+ORG-SUB-001,PLAYS_ROLE,ROLE-SUB,SecureAudit acts as Subcontractor

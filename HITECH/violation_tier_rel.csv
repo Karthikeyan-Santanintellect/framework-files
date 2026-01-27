@@ -1,0 +1,3 @@
+source_id,rel_type,target_node_type,target_id,description
+TIER-1,DEFINED_IN_SECTION,Section,SEC-13410,Tier 1 defined in Enforcement section
+TIER-4,TRIGGERS_ENFORCEMENT,EnforcementAction,EA-MAX-PENALTY,Tier 4 triggers max penalty

@@ -1,0 +1,5 @@
+tier_id,name,culpability_level,min_penalty_per_violation,max_penalty_per_violation,annual_cap,description,industry_standard_regulation_id
+TIER-1,Tier 1 Violation,Unknowing,100,50000,1500000,Violator did not know and reasonably should not have known.,HITECH_ACT_2009
+TIER-2,Tier 2 Violation,Reasonable Cause,1000,50000,1500000,Violator knew or should have known; not willful neglect.,HITECH_ACT_2009
+TIER-3,Tier 3 Violation,Willful Neglect (Corrected),10000,50000,1500000,Willful neglect corrected within 30 days.,HITECH_ACT_2009
+TIER-4,Tier 4 Violation,Willful Neglect (Uncorrected),50000,1500000,1500000,Willful neglect not corrected within 30 days.,HITECH_ACT_2009
