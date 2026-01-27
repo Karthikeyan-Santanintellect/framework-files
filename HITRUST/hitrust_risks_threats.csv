@@ -1,0 +1,5 @@
+threat_name,threat_category,risk_name,risk_description
+Ransomware,Malware,Operational Disruption & Patient Safety,Risk resulting from Ransomware
+Insider Threat,Human Error/Malice,Unauthorized Data Exfiltration,Risk resulting from Insider Threat
+Medical Identity Theft,Fraud,Financial Fraud & Privacy Violation,Risk resulting from Medical Identity Theft
+Supply Chain Attack,External,Third-Party Compromise,Risk resulting from Supply Chain Attack

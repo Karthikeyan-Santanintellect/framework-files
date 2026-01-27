@@ -956,13 +956,7 @@ WITH ds
 MATCH (cd:CardholderData {industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (cd)-[:CARDHOLDER_DATA_EXISTS_IN_STATE]->(ds);
 """
-orphan_data_state = """
-MATCH (cd:CardholderData) WHERE NOT EXISTS ((cd)--())
-MATCH (ds:DataState {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-WHERE ds.state_name = "Data In Transit" 
-   OR ds.state_name = "Data Archived"
-MERGE (cd)-[:CARDHOLDER_DATA_EXISTS_IN_STATE]->(ds);
-"""
+
 
 import os
 import time
@@ -1266,8 +1260,6 @@ time.sleep(2)
 client.query(data_state_orphan)
 time.sleep(2)
 
-client.query(orphan_data_state)
-time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 

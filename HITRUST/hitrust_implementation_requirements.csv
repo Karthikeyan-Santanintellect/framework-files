@@ -1,0 +1,4 @@
+id,control_id,level,text
+IMP-05.a-L1,05.a,Level 1 (Validated),Document a formal user registration process.
+IMP-05.a-L2,05.a,Level 2 (Validated),Implement automated reviews of user access rights semi-annually.
+IMP-05.a-L3,05.a,Level 3 (Certified),Continuous monitoring of user privilege changes with real-time alerts.

@@ -1,0 +1,5 @@
+name,type,is_sensitive
+Protected Health Information,PHI,true
+Electronic Protected Health Information,ePHI,true
+Genetic Data,Sensitive Medical,true
+Payment Card Data,PCI,true

@@ -48,7 +48,76 @@ ON CREATE SET
     cs.control_id = row.control_id,
     cs.description = row.text;
 """
+# Load Assurance Levels
+hitrust_assurance_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (al:AssuranceLevel {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.level})
+ON CREATE SET al.description = row.description;
+"""
 
+#Load Implementation Requirements
+hitrust_requirement_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.id})
+ON CREATE SET req.description = row.text;
+"""
+
+#Load Assessment Procedures
+hitrust_procedure_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ap:AssessmentProcedure {industry_standard_regulation_id: 'HITRUST 11.6.0', procedure_id: row.id})
+ON CREATE SET 
+    ap.method = row.method, 
+    ap.description = row.description;
+"""
+
+#Load Healthcare Data Categories
+hitrust_data_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (d:HealthcareDataCategory {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.name})
+ON CREATE SET 
+    d.type = row.type, 
+    d.is_sensitive = toBoolean(row.is_sensitive);
+"""
+
+#Load Risks & Threats
+hitrust_risk_threat_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (t:HealthcareThreat {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.threat_name})
+ON CREATE SET t.category = row.threat_category
+MERGE (r:HealthcareRisk {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.risk_name})
+ON CREATE SET r.description = row.risk_desc;
+"""
+
+#Load Roles & Organization
+hitrust_role_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+FOREACH (_ IN CASE WHEN row.role_name = 'Standard Healthcare Organization' THEN [1] ELSE [] END |
+    MERGE (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.role_name})
+    ON CREATE SET org.type = row.responsibility
+)
+FOREACH (_ IN CASE WHEN row.role_name <> 'Standard Healthcare Organization' THEN [1] ELSE [] END |
+    MERGE (rl:Role {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.role_name})
+    ON CREATE SET rl.primary_responsibility = row.responsibility
+);
+"""
+
+#Load Regulations
+hitrust_regulation_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (reg:Regulation {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.rule_name})
+ON CREATE SET reg.cfr_reference = row.cfr;
+"""
+
+#Load Ecosystem
+hitrust_ecosystem_nodes = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ba:BusinessAssociate {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.name})
+ON CREATE SET ba.type = row.type;
+"""
+
+
+#Relationships
 # Create CONTAINS relationships (standard -> category)
 hitrust_standard_category_rel = """
 MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
@@ -78,6 +147,89 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (co:ControlObjective {industry_standard_regulation_id: 'HITRUST 11.6.0', objective_id: row.start_id})
 MATCH (cs:ControlSpecification {industry_standard_regulation_id: 'HITRUST 11.6.0', specification_id: row.end_id})
 MERGE (co)-[:CONTROL_OBJECTIVE_HAS_SPECIFICATION]->(cs);
+"""
+# Link Framework to Assurance Levels
+hitrust_framework_assurance_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (al:AssuranceLevel {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (s)-[:DEFINES_ASSURANCE_LEVEL]->(al);
+"""
+hitrust_rel_control_has_requirement = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0', control_id: row.control_id})
+MATCH (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.requirement_id})
+MERGE (ctrl)-[:HAS_REQUIREMENT]->(req);
+"""
+hitrust_rel_requirement_assurance_level = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.requirement_id})
+MATCH (al:AssuranceLevel {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.assurance_level})
+MERGE (req)-[:DEFINES_FOR_ASSURANCE_LEVEL]->(al);
+"""
+
+# Link Requirements to Procedures
+hitrust_requirement_procedure_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (ap:AssessmentProcedure {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (req)-[:EVALUATED_BY]->(ap);
+"""
+
+# Link Framework to Data Assets
+hitrust_framework_data_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (d:HealthcareDataCategory {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (s)-[:PROTECTS_DATA_ASSET]->(d);
+"""
+
+# Link Threats to Risk
+hitrust_rel_threat_risk = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (t:HealthcareThreat {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.threat_name})
+MATCH (r:HealthcareRisk {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.risk_name})
+MERGE (t)-[:CREATES_RISK]->(r);
+"""
+
+# Link Threats to Data Targets
+hitrust_rel_threat_target = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (t:HealthcareThreat {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.threat_name})
+MATCH (d:HealthcareDataCategory {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.target_data})
+MERGE (t)-[:TARGETS]->(d);
+"""
+
+# Create Organization and Link Roles
+hitrust_org_structure = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.org_name})
+MATCH (rl:Role {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.role_name})
+MERGE (org)-[:EMPLOYS_OR_APPOINTS]->(rl);
+"""
+
+# Link Framework to Regulations
+hitrust_framework_regulation_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (s:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (reg:Regulation {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (s)-[:HARMONIZES_REGULATION]->(reg);
+"""
+
+# Link Controls to Regulations (Example mapping)
+hitrust_control_regulation_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (reg:Regulation {industry_standard_regulation_id: 'HITRUST 11.6.0', name: 'HIPAA Security Rule'})
+MERGE (ctrl)-[:ADDRESSES_REGULATORY_REQUIREMENT]->(reg);
+"""
+
+# Link Org to Ecosystem
+hitrust_org_ecosystem_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (org:HealthcareOrganization {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MATCH (ba:BusinessAssociate {industry_standard_regulation_id: 'HITRUST 11.6.0'})
+MERGE (org)-[:ENGAGES_THIRD_PARTY]->(ba);
 """
 
 hitrust_controls_nist_CSF_subcategories = """
@@ -138,6 +290,33 @@ client.query(hitrust_control_specification.replace('$file_path',
                                                    "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
 time.sleep(2)
 
+client.query(hitrust_assurance_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_requirement_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_procedure_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_data_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_risk_threat_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_role_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_regulation_nodes.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_ecosystem_nodes.replace('$file_path',""))
+time.sleep(2)
+
+
+
+#Relationships
 client.query(hitrust_standard_category_rel)
 time.sleep(2)
 
@@ -156,6 +335,34 @@ time.sleep(2)
 client.query(hitrust_controls_nist_CSF_subcategories.replace('$file_path',
                                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/MAPS_TO.csv"))
 time.sleep(2)
+
+client.query(hitrust_framework_assurance_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_requirement_procedure_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_framework_data_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_rel_threat_risk.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_rel_threat_target.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_org_structure.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_framework_regulation_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_control_regulation_rel.replace('$file_path',""))
+time.sleep(2)
+
+client.query(hitrust_org_ecosystem_rel.replace('$file_path',""))
+time.sleep(2)
+
 
 logger.info("Graph structure loaded successfully.")
 
