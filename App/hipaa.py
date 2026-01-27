@@ -527,17 +527,6 @@ ON CREATE SET
     bra.cfr_citation = row.cfr_citation;
 """
 
-# 5.3 Load Breach Notification Process
-breach_notification_process = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (bnp:BreachNotificationProcess {process_id: row.process_id, industry_standard_regulation_id: 'HIPAA 1996'})
-ON CREATE SET
-    bnp.name = row.name,
-    bnp.description = row.description,
-    bnp.timeline = row.timeline,
-    bnp.notification_recipients = row.notification_recipients,
-    bnp.cfr_citation = row.cfr_citation;
-"""
 
 # 5.4 Load Affected Individuals
 affected_individuals = """
@@ -580,29 +569,6 @@ ON CREATE SET
     bt.discovery_date = row.discovery_date,
     bt.notification_date = row.notification_date,
     bt.cfr_citation = row.cfr_citation;
-"""
-
-# 5.8 Load Mitigation Services
-mitigation_services ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ms:MitigationServices {service_id: row.service_id, industry_standard_regulation_id: 'HIPAA 1996'})
-ON CREATE SET
-    ms.service_type = row.service_type,
-    ms.description = row.description,
-    ms.duration = row.duration,
-    ms.cost_bearer = row.cost_bearer,
-    ms.cfr_citation = row.cfr_citation;
-"""
-
-# 5.9 Load Media Notifications
-media_notifications = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (mn:MediaNotification {notification_id: row.notification_id, industry_standard_regulation_id: 'HIPAA 1996'})
-ON CREATE SET
-    mn.threshold = row.threshold,
-    mn.media_types = row.media_types,
-    mn.content_requirements = row.content_requirements,
-    mn.cfr_citation = row.cfr_citation;
 """
 
 # SUBGRAPH 6: COVERED ENTITIES & BUSINESS ASSOCIATES (9 NODES)
@@ -838,6 +804,42 @@ ON CREATE SET
     reg.investigation_process = row.investigation_process,
     reg.cfr_citation = row.cfr_citation;
 """
+# Designated officials
+designated_officials = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (do:DesignatedOfficial {node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET 
+    do.name = row.name,
+    do.description = row.description,
+    do.source_citation = row.source_citation_id;
+"""
+# Preemption conditions
+preemption_conditions = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (pc:PreemptionCondition {node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET 
+    pc.name = row.name,
+    pc.description = row.description,
+    pc.source_citation = row.source_citation_id;
+"""
+# Plan sponsors
+plan_sponsors = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (psp:PlanSponsor {node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET 
+    psp.name = row.name,
+    psp.description = row.description,
+    psp.source_citation = row.source_citation_id;
+"""
+# External receipients
+external_recipients = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (rec:ExternalRecipient {node_id: row.node_id, industry_standard_regulation_id: 'HIPAA 1996'})
+ON CREATE SET 
+    rec.name = row.name,
+    rec.description = row.description,
+    rec.source_citation = row.source_citation_id;
+"""
 
 
 
@@ -868,9 +870,7 @@ ON CREATE SET
     rel.created_date = row.created_date,
     rel.created_by = row.created_by;
 """
-
-
-
+ 
 #IndustryStandardAndRegulation → CFRSection
 industry_standard_and_regulation_cfr_section = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -1279,36 +1279,7 @@ ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
 """
-#SecurityBreach → BreachNotificationProcess
-security_breach_breach_notification_process = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sb:SecurityBreach {breach_id: row.breach_id})
-MATCH (bnp:BreachNotificationProcess {process_id: row.process_id})
-MERGE (sb)-[rel:SECURITYBREACH_TRIGGERS_BREACH_NOTIFICATION_PROCESS {relationship_id: row.relationship_id}]->(bnp)
-ON CREATE SET
-    rel.description = row.description,
-    rel.created_date = row.created_date;
-"""
-#BreachNotificationProcess → AffectedIndividual
-breach_notification_process_affected_individual = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bnp:BreachNotificationProcess {process_id: row.process_id})
-MATCH (ai:AffectedIndividual {individual_id: row.individual_id})
-MERGE (bnp)-[rel:BREACHNOTIFICATIONPROCESS_REQUIRES_AFFECTED_INDIVIDUALS {relationship_id: row.relationship_id}]->(ai)
-ON CREATE SET
-    rel.description = row.description,
-    rel.created_date = row.created_date;
-"""
-#BreachNotificationProcess → NotificationRecipient
-breach_notification_process_notification_recipient = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bnp:BreachNotificationProcess {process_id: row.process_id})
-MATCH (nr:NotificationRecipient {recipient_id: row.recipient_id})
-MERGE (bnp)-[rel:BREACHNOTIFICATIONPROCESS_REQUIRES_NOTIFICATION_RECIPIENTS {relationship_id: row.relationship_id}]->(nr)
-ON CREATE SET
-    rel.description = row.description,
-    rel.created_date = row.created_date;
-"""
+
 #NotificationRecipient → NotificationContent
 notification_recipient_notification_content = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -1329,16 +1300,6 @@ ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
 """
-#SecurityBreach → MitigationServices
-security_breach_mitigation_services = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sb:SecurityBreach {breach_id: row.breach_id})
-MATCH (ms:MitigationServices {service_id: row.service_id})
-MERGE (sb)-[rel:SECURITYBREACH_REQUIRES_MITIGATION_SERVICES {relationship_id: row.relationship_id}]->(ms)
-ON CREATE SET
-    rel.description = row.description,
-    rel.created_date = row.created_date;
-"""
 # SecurityBreach → MediaNotification
 security_breach_media_notification = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -1349,16 +1310,7 @@ ON CREATE SET
     rel.description = row.description,
     rel.created_date = row.created_date;
 """
-#BreachNotificationProcess → BreachTimeline
-breach_notification_process_breach_timeline = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (bnp:BreachNotificationProcess {process_id: row.process_id})
-MATCH (bt:BreachTimeline {timeline_id: row.timeline_id})
-MERGE (bnp)-[rel:BREACHNOTIFICATIONPROCESS_HAS_TIMELINE {relationship_id: row.relationship_id}]->(bt)
-ON CREATE SET
-    rel.description = row.description,
-    rel.created_date = row.created_date;
-"""
+
 #IndustryStandardAndRegulation → CoveredEntity
 industry_standard_and_regulation_covered_entity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -1581,7 +1533,48 @@ ON CREATE SET
     rel.created_date = row.created_date;
 """
 
+#CoveredEntity → Designatedofficial
+covered_entity_designated_official = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ce:CoveredEntity {entity_id: row.source_id}) 
+MATCH (do:DesignatedOfficial {node_id: row.target_id})
+MERGE (ce)-[rel:DESIGNATES]->(do)
+ON CREATE SET 
+    rel.description = row.description,
+    rel.citation = row.source_citation_id;
+"""
+# PreemptionCondition → IndustryStandardAndRegulation
+preemption_condition_industry_standard_and_regulation = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (pc:PreemptionCondition {node_id: row.source_id})
+MATCH (hipaa:IndustryStandardAndRegulation {industry_standard_regulation_id: row.target_id})
+MERGE (pc)-[rel:PREEMPTS]->(hipaa)
+ON CREATE SET 
+    rel.description = row.description,
+    rel.citation = row.source_citation_id;
+"""
+# HealthPlan → Plan Sponsor
+health_plan_plan_sponsor = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (hpl:HealthPlan {plan_id: row.source_id})
+MATCH (psp:PlanSponsor {node_id: row.target_id})
+CALL apoc.create.relationship(hpl, row.relationship_type, {
+    description: row.description, 
+    citation: row.source_citation_id
+}, psp) YIELD rel
+RETURN count(rel);
+"""
 
+# CoveredEntity → ExternalRecipient
+covered_entity_external_recipient = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ce:CoveredEntity {entity_id: row.source_id})
+MATCH (rec:ExternalRecipient {node_id: row.target_id})
+MERGE (ce)-[rel:PERMITTED_DISCLOSURE_TO]->(rec)
+ON CREATE SET 
+    rel.description = row.description,
+    rel.citation = row.source_citation_id;
+"""
 
 import os
 import time
@@ -1727,9 +1720,6 @@ client.query(breach_risk_assessment.replace('$file_path',"https://github.com/Kar
 time.sleep(2)
 
 
-client.query(breach_notification_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-notif-process.csv"))
-time.sleep(2)
-
 client.query(affected_individuals.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/affected-individuals.csv"))
 time.sleep(2)
 
@@ -1740,12 +1730,6 @@ client.query(notfication_content.replace('$file_path',"https://github.com/Karthi
 time.sleep(2)
 
 client.query(breach_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-timeline.csv"))
-time.sleep(2)
-
-client.query(mitigation_services.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/mitigation-services.csv"))
-time.sleep(2)
-
-client.query(media_notifications.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/media-notifications.csv"))
 time.sleep(2)
 
 client.query(Covered_Entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/covered-entities.csv"))
@@ -1804,6 +1788,20 @@ time.sleep(2)
 
 client.query(Regulators.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/regulators.csv"))
 time.sleep(2)
+
+client.query(designated_officials.replace('$file_path',""))
+time.sleep(2)
+
+client.query(preemption_conditions.replace('$file_path',""))
+time.sleep(2)
+
+client.query(plan_sponsors.replace('$file_path',""))
+time.sleep(2)
+
+client.query(external_recipients.replace('$file_path',""))
+time.sleep(2)
+
+
 
 #Relationships
 
@@ -1928,28 +1926,14 @@ time.sleep(2)
 client.query(security_breach_breach_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-breachrisk.csv"))
 time.sleep(2)
 
-client.query(security_breach_breach_notification_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-media-notif.csv"))
-time.sleep(2)
-
-client.query(breach_notification_process_affected_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/bnp-affected.csv"))
-time.sleep(2)
-
-client.query(breach_notification_process_notification_recipient.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/bnp-recipients.csv"))
-time.sleep(2)
-
 client.query(notification_recipient_notification_content.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/nr-notifcontent.csv"))
 time.sleep(2)
 
 client.query(security_breach_breach_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-timeline.csv"))
 time.sleep(2)
 
-client.query(security_breach_mitigation_services.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-mitigation.csv"))
-time.sleep(2)
 
 client.query(security_breach_media_notification.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/sb-media-notif.csv"))
-time.sleep(2)
-
-client.query(breach_notification_process_breach_timeline.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/breach-notif-process.csv"))
 time.sleep(2)
 
 client.query(covered_entity_hybrid_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/ce-hybrid.csv"))
@@ -2003,6 +1987,17 @@ time.sleep(2)
 client.query(compliance_violation_regulatory_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/cv-regulatory-std.csv"))
 time.sleep(2)
 
+client.query(covered_entity_designated_official.replace('$file_path',""))
+time.sleep(2)
+
+client.query(preemption_condition_industry_standard_and_regulation.replace('$file_path',""))
+time.sleep(2)
+
+client.query(health_plan_plan_sponsor.replace('$file_path',""))
+time.sleep(2)
+
+client.query(covered_entity_external_recipient.replace('$file_path',""))
+time.sleep(2)
 
 
 

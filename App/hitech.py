@@ -713,70 +713,144 @@ MERGE (po)-[:PROCESS_INVOLVES_SYSTEM]->(sy);
 #requirement_external_framework_requirements_rel
 requirement_external_framework_requirements_rel = """
 MATCH (rq:Requirement {industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (efr:ExternalFrameworkRequirement {framework_requirement_id: "FRAMEWORK-HIPAA-PRIVACY",industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (rq)-[:REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT]->(efr);
+MATCH (f:FrameworkRequirement {framework_requirement_id: "FRAMEWORK-HIPAA-PRIVACY",industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (rq)-[:REQUIREMENT_MAPS_TO_EXTERNAL_FRAMEWORK_REQUIREMENT]->(f);
 """
 #organization_role_rel
 organization_role_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.source_node_type = 'Organization' AND row.target_node_type = 'Role'
-MATCH (o:Organization {organization_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (r:Role {role_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (o)-[rel:PLAYS_ROLE]->(r)
-ON CREATE SET rel.description = row.description;
+UNWIND [
+  {source: "ORG-CE-001", target: "COVERED_ENTITY", desc: "General Mercy acts as Covered Entity"},
+  {source: "ORG-BA-001", target: "BUSINESS_ASSOCIATE", desc: "CloudVault acts as Business Associate"},
+  {source: "ORG-SUB-001", target: "SUBCONTRACTOR", desc: "SecureAudit acts as Subcontractor"}
+] AS row
+MATCH (o:Organization {organization_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (r:Role {role_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (o)-[rel:ORGANIZATION_PLAYS_ROLE]->(r)
+SET rel.description = row.desc;
 """
 
 #organization_contract_rel
 organization_contract_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.source_node_type = 'Organization' AND row.target_node_type = 'Contract'
-MATCH (o:Organization {organization_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (c:Contract {contract_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-CALL apoc.create.relationship(o, row.rel_type, {description: row.description}, c) YIELD rel
-RETURN count(rel);
+UNWIND [
+  {source: "ORG-CE-001", target: "CTR-BAA-2024", type: "ORGANIZATION_SIGNS_CONTRACT", desc: "Hospital signs BAA with Vendor"},
+  {source: "ORG-BA-001", target: "CTR-BAA-2024", type: "ORGANIZATION_BOUND_BY_CONTRACT", desc: "Vendor bound by BAA terms"},
+  {source: "ORG-BA-001", target: "CTR-SUB-2024", type: "ORGANIZATION_SIGNS_CONTRACT", desc: "Vendor signs Subcontract"},
+  {source: "ORG-SUB-001", target: "CTR-SUB-2024", type: "ORGANIZATION_BOUND_BY_CONTRACT", desc: "Subcontractor bound by terms"}
+] AS row
+MATCH (o:Organization {organization_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (c:Contract {contract_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+FOREACH (_ IN CASE WHEN row.type = 'ORGANIZATION_SIGNS_CONTRACT' THEN [1] ELSE [] END |
+   MERGE (o)-[r1:ORGANIZATION_SIGNS_CONTRACT]->(c) 
+   SET r1.description = row.desc
+)
+FOREACH (_ IN CASE WHEN row.type = 'ORGANIZATION_BOUND_BY_CONTRACT' THEN [1] ELSE [] END |
+   MERGE (o)-[r2:ORGANIZATION_BOUND_BY_CONTRACT]->(c) 
+   SET r2.description = row.desc
+);
 """
+
 
 #contract_requirement_rel
 contract_requirement_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.source_node_type = 'Contract' AND row.target_node_type = 'Requirement'
-MATCH (c:Contract {contract_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (req:Requirement {requirement_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (c)-[rel:FLOWS_DOWN_REQUIREMENT]->(req)
-ON CREATE SET rel.description = row.description;
+UNWIND [
+  {source: "CTR-BAA-2024", target: "HITECH-13404-R1", desc: "BAA enforces breach notification"}
+] AS row
+MATCH (c:Contract {contract_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (req:Requirement {requirement_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (c)-[rel:CONTRACT_REQUIRES_REQUIREMENT]->(req)
+SET rel.description = row.desc;
 """
 
-#violation_tier_rel
-violation_tier_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.source_node_type = 'ViolationTier'
-MATCH (vt:ViolationTier {tier_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (target {industry_standard_regulation_id: "HITECH_ACT_2009"}) WHERE target.section_id = row.target_id OR target.enforcement_action_id = row.target_id
-CALL apoc.create.relationship(vt, row.rel_type, {description: row.description}, target) YIELD rel
-RETURN count(rel);
+#violation_tier_section_rel#
+violation_tier_section_rel = """
+UNWIND [
+  {source: "TIER-1", target: "13410", desc: "Tier 1 defined in Enforcement section"}
+] AS row
+MATCH (vt:ViolationTier {tier_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (sec:Section {section_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (vt)-[rel:VIOLATION_TIER_DEFINES_SECTION]->(sec)
+SET rel.description = row.desc;
+"""
+#violation_tier_enforcement_rel
+violation_tier_enforcement_rel = """
+UNWIND [
+  {source: "TIER-4", target: "EA-CIVIL-OCR-P1", desc: "Tier 4 triggers max penalty"}
+] AS row
+MATCH (vt:ViolationTier {tier_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (ea:EnforcementAction {enforcement_action_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (vt)-[rel:VIOLATION_TIER_TRIGGERS_ENFORCEMENT]->(ea)
+SET rel.description = row.desc;
 """
 
-#breach_risk_rel
-breach_risk_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.source_node_type = 'BreachRiskAssessment'
-MATCH (bra:BreachRiskAssessment {assessment_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (target {industry_standard_regulation_id: "HITECH_ACT_2009"}) WHERE target.event_type_id = row.target_id OR target.safeguard_id = row.target_id
-CALL apoc.create.relationship(bra, row.rel_type, {description: row.description}, target) YIELD rel
-RETURN count(rel);
+
+
+#breach_risk_assessment_event_rel
+breach_risk_assessment_event_rel = """
+UNWIND [
+  {source: "BRA-4FACTOR", target: "BREACH", desc: "Assessment evaluates breach event"}
+] AS row
+MATCH (bra:BreachRiskAssessment {assessment_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (evt:EventType {event_type_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (bra)-[rel:BREACH_EVALUATES_EVENT]->(evt)
+SET rel.description = row.desc;
+"""
+#breach_risk_assessment_safeguard_rel
+breach_risk_assessment_safeguard_rel = """
+UNWIND [
+  {source: "BRA-4FACTOR", target: "SG-A-RISK-ASSESSMENT", desc: "Assessment supports risk management"}
+] AS row
+MATCH (bra:BreachRiskAssessment {assessment_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (sg:Safeguard {safeguard_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (bra)-[rel:BREACH_RISK_ASSESSMENT_MITIGATES_RISK]->(sg)
+SET rel.description = row.desc;
 """
 
 #ehr_tech_rel
 ehr_tech_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.source_node_type = 'CertifiedEHRTechnology'
-MATCH (ce:CertifiedEHRTechnology {tech_id: row.source_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MATCH (muc:MeaningfulUseCriterion {criterion_id: row.target_id, industry_standard_regulation_id: "HITECH_ACT_2009"})
-MERGE (ce)-[rel:SUPPORTS_CRITERION]->(muc)
-ON CREATE SET rel.description = row.description;
+UNWIND [
+  {source: "CEHRT-2015", target: "MU3-HIE-EXCHANGE", desc: "Tech supports Stage 3 criteria"}
+] AS row
+MATCH (ce:CertifiedEHRTechnology {tech_id: row.source, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MATCH (muc:MeaningfulUseCriterion {criterion_id: row.target, industry_standard_regulation_id: "HITECH_ACT_2009"})
+MERGE (ce)-[rel:CERTIFIED_IN_MEANINGFUL_SUPPORTS_CRITERION]->(muc)
+SET rel.description = row.desc;
 """
-
-
+# Link HITECH Regulation to all Certified Tech
+hitech_rel_ehr_tech_framework = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITECH_ACT_2009'})
+MATCH (ce:CertifiedEHRTechnology)
+WHERE NOT (framework)-[:REGULATION_CERTIFIES_TECH]->(ce)
+MERGE (framework)-[:REGULATION_CERTIFIES_TECH]->(ce);
+"""
+# Link HITECH Regulation to all Organizations
+hitech_rel_organization_framework = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITECH_ACT_2009'})
+MATCH (o:Organization)
+WHERE NOT (framework)-[:REGULATION_GOVERNS_ORGANIZATION]->(o)
+MERGE (framework)-[:REGULATION_GOVERNS_ORGANIZATION]->(o);
+"""
+# Link HITECH Regulation to all Violation Tiers
+hitech_rel_violation_tier_framework = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITECH_ACT_2009'})
+MATCH (vt:ViolationTier)
+WHERE NOT (framework)-[:REGULATION_DEFINES_PENALTY_TIER]->(vt)
+MERGE (framework)-[:REGULATION_DEFINES_PENALTY_TIER]->(vt);
+"""
+# Link HITECH Regulation to all Roles
+hitech_rel_roles_framework = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITECH_ACT_2009'})
+MATCH (r:Role)
+WHERE NOT (framework)-[:REGULATION_DEFINES_ROLE]->(r)
+MERGE (framework)-[:REGULATION_DEFINES_ROLE]->(r);
+"""
+# Link HITECH Regulation to all Frameworks
+#hitech_rel_framework_framework
+hitech_rel_framework_framework = """
+MATCH (framework:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HITECH_ACT_2009'})
+MATCH (f:FrameworkRequirement)
+WHERE NOT (framework)-[:REGULATION_DEFINES_FRAMEWORK_REQUIREMENT]->(f)
+MERGE (framework)-[:REGULATION_DEFINES_FRAMEWORK_REQUIREMENT]->(f);
+"""
 import os
 import time
 import logging
@@ -796,178 +870,199 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(regulation)
+# client.query(regulation)
+# time.sleep(2)
+
+# client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles_Modified.csv'))
+# time.sleep(2)
+
+# client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles_Modified.csv'))
+# time.sleep(2)
+
+# client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections_Modified.csv'))
+# time.sleep(2)
+
+# client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements_Modified.csv'))
+# time.sleep(2)
+
+# client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
+# time.sleep(2)
+
+# client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_DataCategories.csv'))
+# time.sleep(2)
+
+# client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Safeguards.csv'))
+# time.sleep(2)
+
+# client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
+# time.sleep(2)
+
+# client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions_Final.csv'))
+# time.sleep(2)
+
+# client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms_Final.csv'))
+# time.sleep(2)
+
+# client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria_Final.csv'))
+# time.sleep(2)
+
+# client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs_Final.csv'))
+# time.sleep(2)
+
+# client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies_Final.csv'))
+# time.sleep(2)
+
+# client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls_Final.csv'))
+# time.sleep(2)
+
+# client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems_Final.csv'))
+# time.sleep(2)
+
+
+# client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH-Processes-COMPLETE.csv'))
+# time.sleep(2)
+
+# client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  
+# time.sleep(2)
+
+# client.query(organization.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/organization.csv"))
+# time.sleep(2)
+
+# client.query(contract.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/contract.csv"))
+# time.sleep(2)
+
+# client.query(violation_tier.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/violation_tier.csv"))
+# time.sleep(2)
+
+# client.query(breach_risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/breach_risk_assessment.csv"))
+# time.sleep(2)
+
+# client.query(certified_ehr_technology.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/certified_ehr_tech.csv"))
+# time.sleep(2)
+
+# #Relationships
+# client.query(regulation_title_rel)
+# time.sleep(2)
+
+# client.query(title_subtitle_rel)
+# time.sleep(2)
+
+# client.query(subtitle_section_rel)
+# time.sleep(2)   
+
+# client.query(section_requirement_rel)
+# time.sleep(2)
+
+# client.query(requirement_role_rel)
+# time.sleep(2)
+
+# client.query(requirement_data_category_rel)
+# time.sleep(2)   
+
+# client.query(requirement_safeguard_rel)
+# time.sleep(2)   
+
+# client.query(requirement_event_type_rel)    
+# time.sleep(2)   
+
+# client.query(requirement_policy_rel)    
+# time.sleep(2)
+
+# client.query(requirement_control_rel)
+# time.sleep(2)   
+
+# client.query(control_system_rel)
+# time.sleep(2)
+
+# client.query(requirement_process_rel)
+# time.sleep(2)
+
+# client.query(title_incentive_program_rel)
+# time.sleep(2)
+
+# client.query(incentive_program_meaningful_use_criterion_rel)
+# time.sleep(2)
+
+# client.query(requirement_meaningful_use_criterion_rel)
+# time.sleep(2)
+
+# client.query(requirement_enforcement_action_rel)
+# time.sleep(2)
+
+
+# client.query(section_enforcement_action_rel)
+# time.sleep(2)
+
+
+# client.query(requirements_implementation_spec_rel)
+# time.sleep(2)
+
+
+# client.query(implementation_spec_control_rel)
+# time.sleep(2)
+
+
+# client.query(policy_control_rel)
+# time.sleep(2)
+
+
+# client.query(process_system_rel)
+# time.sleep(2)
+
+
+# client.query(requirement_external_framework_requirements_rel)
+# time.sleep(2)
+
+
+# client.query(organization_role_rel)
+# time.sleep(2)
+
+# client.query(organization_contract_rel)
+# time.sleep(2)
+
+# client.query(contract_requirement_rel)
+# time.sleep(2)
+
+# client.query(violation_tier_section_rel)
+# time.sleep(2)
+
+# client.query(violation_tier_enforcement_rel)
+# time.sleep(2)
+
+# client.query(breach_risk_assessment_event_rel)
+# time.sleep(2)
+
+# client.query(breach_risk_assessment_safeguard_rel)
+# time.sleep(2)
+
+# client.query(ehr_tech_rel)
+# time.sleep(2)
+
+# client.query(hitech_rel_ehr_tech_framework)
+# time.sleep(2)
+
+# client.query(hitech_rel_organization_framework)
+# time.sleep(2)
+
+# client.query(hitech_rel_violation_tier_framework)
+# time.sleep(2)
+
+# client.query(hitech_rel_roles_framework)
+# time.sleep(2)
+
+client.query(hitech_rel_framework_framework)
 time.sleep(2)
 
-client.query(title.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Titles_Modified.csv'))
-time.sleep(2)
 
-client.query(subtitle.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Subtitles_Modified.csv'))
-time.sleep(2)
-
-client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Sections_Modified.csv'))
-time.sleep(2)
-
-client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Requirements_Modified.csv'))
-time.sleep(2)
-
-client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Roles.csv'))
-time.sleep(2)
-
-client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_DataCategories.csv'))
-time.sleep(2)
-
-client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Safeguards.csv'))
-time.sleep(2)
-
-client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EventTypes.csv'))
-time.sleep(2)
-
-client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_EnforcementActions_Final.csv'))
-time.sleep(2)
-
-client.query(incentive_program.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_IncentivePrograms_Final.csv'))
-time.sleep(2)
-
-client.query(meaningful_use_criterion.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_MeaningfulUseCriteria_Final.csv'))
-time.sleep(2)
-
-client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ImplementationSpecs_Final.csv'))
-time.sleep(2)
-
-client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Policies_Final.csv'))
-time.sleep(2)
-
-client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Controls_Final.csv'))
-time.sleep(2)
-
-client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_Systems_Final.csv'))
-time.sleep(2)
-
-
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH-Processes-COMPLETE.csv'))
-time.sleep(2)
-
-client.query(external_framework_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITECH/HITECH_ExternalFrameworkRequirements_Final.csv'))  
-time.sleep(2)
-
-client.query(organization.replace('$file_path',""))
-time.sleep(2)
-
-client.query(contract.replace('$file_path',""))
-time.sleep(2)
-
-client.query(violation_tier.replace('$file_path',""))
-time.sleep(2)
-
-client.query(breach_risk_assessment.replace('$file_path',""))
-time.sleep(2)
-
-client.query(certified_ehr_technology.replace('$file_path',""))
-time.sleep(2)
-
-#Relationships
-client.query(regulation_title_rel)
-time.sleep(2)
-
-client.query(title_subtitle_rel)
-time.sleep(2)
-
-client.query(subtitle_section_rel)
-time.sleep(2)   
-
-client.query(section_requirement_rel)
-time.sleep(2)
-
-client.query(requirement_role_rel)
-time.sleep(2)
-
-client.query(requirement_data_category_rel)
-time.sleep(2)   
-
-client.query(requirement_safeguard_rel)
-time.sleep(2)   
-
-client.query(requirement_event_type_rel)    
-time.sleep(2)   
-
-client.query(requirement_policy_rel)    
-time.sleep(2)
-
-client.query(requirement_control_rel)
-time.sleep(2)   
-
-client.query(control_system_rel)
-time.sleep(2)
-
-client.query(requirement_process_rel)
-time.sleep(2)
-
-client.query(title_incentive_program_rel)
-time.sleep(2)
-
-client.query(incentive_program_meaningful_use_criterion_rel)
-time.sleep(2)
-
-client.query(requirement_meaningful_use_criterion_rel)
-time.sleep(2)
-
-client.query(requirement_enforcement_action_rel)
-time.sleep(2)
-
-
-client.query(section_enforcement_action_rel)
-time.sleep(2)
-
-
-client.query(requirements_implementation_spec_rel)
-time.sleep(2)
-
-
-client.query(implementation_spec_control_rel)
-time.sleep(2)
-
-
-client.query(policy_control_rel)
-time.sleep(2)
-
-
-client.query(process_system_rel)
-time.sleep(2)
-
-
-client.query(requirement_external_framework_requirements_rel)
-time.sleep(2)
-
-
-client.query(organization_role_rel.replace('$file_path',""))
-time.sleep(2)
-
-client.query(organization_contract_rel.replace('$file_path',""))
-time.sleep(2)
-
-client.query(contract_requirement_rel.replace('$file_path',""))
-time.sleep(2)
-
-client.query(violation_tier_rel.replace('$file_path',""))
-time.sleep(2)
-
-client.query(breach_risk_rel.replace('$file_path',""))
-time.sleep(2)
-
-client.query(ehr_tech_rel.replace('$file_path',""))
-time.sleep(2)
 
 
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:IndustryStandardAndRegulation)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -982,17 +1077,23 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('hitech.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to hitech.json")
-
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('hitech.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to hitech.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
+
 
 
 

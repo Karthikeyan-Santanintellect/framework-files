@@ -1,3 +1,0 @@
-source_id,rel_type,target_node_type,target_id,description
-BRA-4FACTOR,EVALUATES_EVENT,EventType,EVT-BREACH,Assessment evaluates breach event
-BRA-4FACTOR,MITIGATES_RISK,Safeguard,SG-RISK-MGMT,Assessment supports risk management

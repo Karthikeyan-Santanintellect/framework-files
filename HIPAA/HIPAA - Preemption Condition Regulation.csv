@@ -1,0 +1,4 @@
+source_id,target_id,relationship_type,description,source_citation_id
+PC-001,HIPAA 1996,PREEMPTS,State law preempts HIPAA if it is more stringent.,1892
+PC-002,HIPAA 1996,PREEMPTS,State law preempts HIPAA for public health reporting.,1894
+PC-003,HIPAA 1996,PREEMPTS,State law preempts HIPAA regarding health plan audits.,1896

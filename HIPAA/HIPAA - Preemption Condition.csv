@@ -1,0 +1,4 @@
+node_id,type,name,description,source_citation_id
+PC-001,PreemptionCondition,Stringent State Law,State law relates to privacy of health information and is more stringent than HIPAA.,1892
+PC-002,PreemptionCondition,Public Health Reporting,State law provides for reporting of disease, injury, child abuse, birth, or death.,1894
+PC-003,PreemptionCondition,Health Plan Audit,State law requires health plans to report or allow access for audit or licensing.,1896
