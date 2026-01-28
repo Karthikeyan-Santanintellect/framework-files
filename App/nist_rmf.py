@@ -90,13 +90,6 @@ MATCH (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_STEP]->(s);
 """
 
-# UPDATED: Scoped MATCH to framework_id.
-step_step_rel = """
-MATCH (s1:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'}), (s2:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-WHERE s2.step_number = s1.step_number + 1
-MERGE (s1)-[:STEP_PRECEDES_STEP]->(s2);
-"""
-
 # UPDATED: Scoped MATCH and changed CREATE to MERGE.
 framework_standard_control_family_rel = """
 MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
@@ -106,16 +99,17 @@ MERGE (f)-[:FRAMEWORK_REFERENCES_CONTROL_FAMILY]->(cf);
 
 # UPDATED: Scoped MATCH to framework_id.
 control_family_control_rel = """
-MATCH (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2'}), (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-WHERE cf.family_id = c.family_id
+MATCH (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+WITH cf
+MATCH (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2', family_id: cf.family_id})
 MERGE (cf)-[:CONTROL_FAMILY_INCLUDES_CONTROL]->(c);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 role_step_rel = """
-MATCH (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2', role_id: 'authorizing_official'})
+MATCH (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2', role_id: 'AO'})
 MATCH (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-WHERE s.step_id IN ['2_categorize', '3_select', '6_authorize', '7_monitor']
+WHERE s.step_id IN ['step_2', 'step_3', 'step_6', 'step_7']
 MERGE (r)-[:ROLE_INVOLVED_IN_STEP {involvement_type: 'Decision_Making'}]->(s);
 """
 
@@ -123,12 +117,16 @@ MERGE (r)-[:ROLE_INVOLVED_IN_STEP {involvement_type: 'Decision_Making'}]->(s);
 control_system_rel = """
 MATCH (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 MATCH (sys:System {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-WHERE sys.authorization_status = 'Authorized'
-MERGE (c)-[:CONTROL_IMPLEMENTED_BY_SYSTEM {
-    implementation_status: 'Required',
-    system_type: sys.system_type
-}]->(sys);
+MERGE (c)-[:CONTROL_USES_SYSTEM]->(sys);
 """
+
+# Framework -> Roles
+framework_roles_rel = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MATCH (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MERGE (f)-[:FRAMEWORK_DEFINES_ROLE]->(r)
+"""
+
 
 
 
@@ -156,34 +154,33 @@ client.query(framework_and_standard)
 time.sleep(2)
 logger.info('Framework')
 
-client.query(steps.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/nist_rmf_steps.csv'))
+client.query(steps.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Steps.csv"))
 time.sleep(2)
 logger.info('Steps')
 
-client.query(control_families.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/nist_control_families.csv'))
+client.query(control_families.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Control%20Families.csv"))
 time.sleep(2)
 logger.info('Control Families')
 
-client.query(controls.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/nist_security_contorls.csv'))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Security%20Controls.csv"))
 time.sleep(2)
 logger.info('Controls')
 
-client.query(roles.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/nist_rmf_roles.csv'))
+client.query(roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Roles.csv"))
 time.sleep(2)
 logger.info('Roles')
 
-client.query(systems.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/nist_rmf_systems.csv'))
+
+client.query(systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20systems.csv"))
 time.sleep(2)
 logger.info('Systems')
 
+# Relationships
 logger.info("Creating relationships...")
 client.query(framework_standard_step_rel)
 time.sleep(2)
 
 client.query(framework_standard_control_family_rel)
-time.sleep(2)
-
-client.query(step_step_rel)
 time.sleep(2)
 
 client.query(control_family_control_rel)
@@ -195,14 +192,16 @@ time.sleep(2)
 client.query(control_system_rel)
 time.sleep(2)
 
+client.query(framework_roles_rel)
+time.sleep(2)
+
+
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+query = """
+MATCH (n)
+OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -217,14 +216,19 @@ RETURN {
     from: elementId(startNode(r)),
     to: elementId(endNode(r))
   }]
-} AS graph_data""")
+} AS graph_data
+"""
 
-res = res[-1]['graph_data']
+results = client.query(query)
 
-import json
-with open('nist-rmf.json', 'w', encoding='utf-8') as f:
-    f.write(json.dumps(res, default=str, indent=2))
-logger.info("✓ Exported graph data to nist-rmf.json")
-
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('nist_rmf.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to nist_rmf.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
