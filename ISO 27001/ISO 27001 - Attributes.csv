@@ -1,0 +1,31 @@
+attribute_type,attribute_value,description
+Control Type,Preventive,Control acts before a threat event occurs.
+Control Type,Detective,Control acts when a threat event occurs.
+Control Type,Corrective,Control acts after a threat event occurs.
+Information Security Properties,Confidentiality,Preserving authorized restrictions on access and disclosure.
+Information Security Properties,Integrity,Guarding against improper information modification or destruction.
+Information Security Properties,Availability,Ensuring timely and reliable access to and use of information.
+Cybersecurity Concepts,Identify,Develop an organizational understanding to manage cybersecurity risk.
+Cybersecurity Concepts,Protect,Develop and implement appropriate safeguards to ensure delivery of critical services.
+Cybersecurity Concepts,Detect,Develop and implement appropriate activities to identify the occurrence of a cybersecurity event.
+Cybersecurity Concepts,Respond,Develop and implement appropriate activities to take action regarding a detected cybersecurity incident.
+Cybersecurity Concepts,Recover,Develop and implement appropriate activities to maintain plans for resilience and to restore any capabilities or services that were impaired.
+Security Domains,Governance and Ecosystem,"Controls related to governance, risk management, and ecosystem."
+Security Domains,Protection,Controls focusing on protection of assets.
+Security Domains,Defence,Controls focusing on defence against threats.
+Security Domains,Resilience,Controls focusing on resilience and recovery.
+Operational Capabilities,Governance,Capabilities related to governance.
+Operational Capabilities,Asset management,Capabilities related to managing assets.
+Operational Capabilities,Information protection,Capabilities related to protecting information.
+Operational Capabilities,Human resource security,Capabilities related to HR security.
+Operational Capabilities,Physical security,Capabilities related to physical security.
+Operational Capabilities,System and network security,Capabilities related to systems and networks.
+Operational Capabilities,Application security,Capabilities related to application security.
+Operational Capabilities,Secure configuration,Capabilities related to secure configuration.
+Operational Capabilities,Identity and access management,Capabilities related to IAM.
+Operational Capabilities,Threat and vulnerability management,Capabilities related to TVM.
+Operational Capabilities,Continuity,Capabilities related to continuity.
+Operational Capabilities,Supplier relationships security,Capabilities related to supplier security.
+Operational Capabilities,Legal and compliance,Capabilities related to legal and compliance.
+Operational Capabilities,Information security event management,Capabilities related to event management.
+Operational Capabilities,Information security assurance,Capabilities related to assurance.
