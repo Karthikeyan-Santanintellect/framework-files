@@ -1,5 +1,0 @@
-id,name,type,description
-RF_01,Problematic Data Action,Trigger,A data action that could cause an adverse effect for individuals.
-RF_02,Likelihood,Calculation,Contextual analysis that a data action is likely to create a problem.
-RF_03,Impact,Calculation,Analysis of costs (individual or organizational) should the problem occur.
-RF_04,Problem,Outcome,The adverse effect experienced by the individual.

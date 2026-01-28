@@ -64,16 +64,11 @@ RETURN f;
 # Functions
 functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (fn:Function {function_id: row.function_id, IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (fn:Function {function_id: row.Function_ID, IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 ON CREATE SET 
-    fn.name = row.function_name,
-    fn.definition = row.function_definition,
-    fn.is_foundational = CASE row.is_foundational WHEN 'True' THEN true ELSE false END,
-    fn.category_count = toInteger(row.category_count),
-    fn.subcategory_count = toInteger(row.subcategory_count),
-    fn.primary_focus = row.primary_focus,
-    fn.key_activities = row.key_activities;
-
+    fn.name = row.Function_Name,
+    fn.definition = row.Function_Definition,
+    fn.is_foundational = row.Is_Foundational;
 """
 
 #categories
@@ -90,12 +85,26 @@ ON CREATE SET
 #subcategories
 subcategories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Subcategory { subcategory_id: row.`Sub-Category`, IS_frameworks_standard_id: 'NIST_PMF_1.0' })
+MERGE (s:Subcategory { subcategory_id: row.Subcategory_Code, IS_frameworks_standard_id: 'NIST_PMF_1.0' })
 ON CREATE SET 
-    s.category_id = row.Category,
-    s.function_id = row.Function,
-    s.name = row.subcategory_name,
-    s.type = row.subcategory_type;
+    s.category_id = row.Category_Code,
+    s.function_id = row.Function_Code,
+    s.description = row.Subcategory_Description;
+"""
+# Tiers
+tiers = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (t:ImplementationTier { tier_id: row.Tier_ID, IS_frameworks_standard_id: 'NIST_PMF_1.0' })
+ON CREATE SET 
+    t.name = row.Tier_Name,
+    t.description = row.Tier_Description;
+"""
+# Term (Glossary)
+terms = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (t:Term { name: row.Term, IS_frameworks_standard_id: 'NIST_PMF_1.0' })
+ON CREATE SET 
+    t.definition = row.Definition;
 """
 
 # Relationships
@@ -120,8 +129,18 @@ WHERE c.category_id = s.category_id
 MERGE (c)-[:CATEGORY_CONTAINS_SUBCATEGORIES]->(s)
 RETURN count(*) as created;
 """
-
-
+# Framework -> Tiers
+framework_tiers_rel = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MATCH (t:ImplementationTier {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (f)-[:FRAMEWORK_DEFINES_TIER]->(t)
+"""
+# Framework -> Glossary Terms
+framework_glossary_rel = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MATCH (t:Term {IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (f)-[:FRAMEWORK_DEFINES_TERM]->(t)
+"""
 
 import os
 import time
@@ -159,6 +178,15 @@ client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan
 time.sleep(2)
 logger.info('Subcategories')
 
+client.query(tiers.replace('$file_path', ""))
+time.sleep(2)
+logger.info('Tiers')
+
+client.query(terms.replace('$file_path', ""))
+time.sleep(2)
+logger.info('Terms')
+
+# Relationships
 logger.info("Creating relationships...")
 client.query(framework_standard_functions_rel)
 time.sleep(2)
@@ -167,6 +195,12 @@ client.query(function_categories_rel)
 time.sleep(2)
 
 client.query(category_subcategories_rel)
+time.sleep(2)
+
+client.query(framework_tiers_rel)
+time.sleep(2)
+
+client.query(framework_glossary_rel)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")

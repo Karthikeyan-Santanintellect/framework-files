@@ -1,7 +1,0 @@
-id,name,type,description
-OBJ_PE_01,Predictability,Privacy Engineering,Enabling reliable assumptions by individuals owners and operators about data and their processing.
-OBJ_PE_02,Manageability,Privacy Engineering,Providing the capability for granular administration of data.
-OBJ_PE_03,Disassociability,Privacy Engineering,Enabling the processing of data or events without association to individuals or devices.
-OBJ_SEC_01,Confidentiality,Security,Preserving authorized restrictions on information access and disclosure.
-OBJ_SEC_02,Integrity,Security,Guarding against improper information modification or destruction.
-OBJ_SEC_03,Availability,Security,Ensuring timely and reliable access to and use of information.
