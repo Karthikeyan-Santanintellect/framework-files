@@ -1,0 +1,31 @@
+attribute_type,attribute_value,description
+Control type,Preventive,Control type: Preventive
+Control type,Detective,Control type: Detective
+Control type,Corrective,Control type: Corrective
+Information security properties,Confidentiality,Information security properties: Confidentiality
+Information security properties,Integrity,Information security properties: Integrity
+Information security properties,Availability,Information security properties: Availability
+Cybersecurity concepts,Identify,Cybersecurity concepts: Identify
+Cybersecurity concepts,Protect,Cybersecurity concepts: Protect
+Cybersecurity concepts,Detect,Cybersecurity concepts: Detect
+Cybersecurity concepts,Respond,Cybersecurity concepts: Respond
+Cybersecurity concepts,Recover,Cybersecurity concepts: Recover
+Security domains,Governance and Ecosystem,Security domains: Governance and Ecosystem
+Security domains,Protection,Security domains: Protection
+Security domains,Defence,Security domains: Defence
+Security domains,Resilience,Security domains: Resilience
+Operational capabilities,Governance,Operational capabilities: Governance
+Operational capabilities,Asset management,Operational capabilities: Asset management
+Operational capabilities,Information protection,Operational capabilities: Information protection
+Operational capabilities,Human resource security,Operational capabilities: Human resource security
+Operational capabilities,Physical security,Operational capabilities: Physical security
+Operational capabilities,System and network security,Operational capabilities: System and network security
+Operational capabilities,Application security,Operational capabilities: Application security
+Operational capabilities,Secure configuration,Operational capabilities: Secure configuration
+Operational capabilities,Identity and access management,Operational capabilities: Identity and access management
+Operational capabilities,Threat and vulnerability management,Operational capabilities: Threat and vulnerability management
+Operational capabilities,Continuity,Operational capabilities: Continuity
+Operational capabilities,Supplier relationships security,Operational capabilities: Supplier relationships security
+Operational capabilities,Legal and compliance,Operational capabilities: Legal and compliance
+Operational capabilities,Information security event management,Operational capabilities: Information security event management
+Operational capabilities,Information security assurance,Operational capabilities: Information security assurance

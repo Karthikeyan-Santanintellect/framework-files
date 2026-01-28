@@ -52,28 +52,20 @@ ON CREATE SET
     ig.title = row.title,
     ig.description = row.description;
 """
-# 1.CREATE FRAMEWORK -> GOVERNING BODY RELATIONSHIPS 
-framework_and_standard_governing_body ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: row.from_node_id}) 
-MATCH (gb:GoverningBody {name: row.to_node_id})
-MERGE (f)-[:FRAMEWORK_PUBLISHED_BY_GOVERNING_BODY]->(gb);
-"""
-# 2.CREATE FRAMEWORK -> CONTROL RELATIONSHIPS 
+# CREATE FRAMEWORK -> CONTROL RELATIONSHIPS 
 framework_and_standard_control ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: row.from_node_id})
-MATCH (c:Control {control_id: row.to_node_id})
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'CIS CONTROLS 8.1'})
+MATCH (c:Control {IS_frameworks_standard_id: 'CIS CONTROLS 8.1'})
 MERGE (f)-[:FRAMEWORK_HAS_CONTROL]->(c);
 """
-# 3. CREATE CONTROL -> SAFEGUARD RELATIONSHIPS 
+# CREATE CONTROL -> SAFEGUARD RELATIONSHIPS 
 control_safeguard ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (c:Control {control_id: row.from_node_id})
 MATCH (s:Safeguard {safeguard_id: row.to_node_id})
 MERGE (c)-[:CONTROL_HAS_SAFEGUARD]->(s);
 """
-# 4. CREATE SAFEGUARD -> IMPLEMENTATION GROUP RELATIONSHIPS 
+# CREATE SAFEGUARD -> IMPLEMENTATION GROUP RELATIONSHIPS 
 safeguard_implementation_group ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
@@ -81,21 +73,28 @@ MATCH (ig:ImplementationGroup {name: row.to_node_id})
 MERGE (s)-[:SAFEGUARD_BELONGS_TO_IMPLEMENTATION_GROUP]->(ig);
 """
 
-# 5. CREATE SAFEGUARD -> ASSET CLASS RELATIONSHIPS 
+# CREATE SAFEGUARD -> ASSET CLASS RELATIONSHIPS 
 safeguard_asset_class ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (ac:AssetClass {name: row.to_node_id})
-MERGE (s)-[:SAGEGUARD_APPLIES_TO_ASSET_CLASS]->(ac);
+MERGE (s)-[:SAFEGUARD_APPLIES_TO_ASSET]->(ac);
 """
 
-# 6. CREATE SAFEGUARD -> SECURITY FUNCTION RELATIONSHIPS 
+# CREATE SAFEGUARD -> SECURITY FUNCTION RELATIONSHIPS 
 safeguard_security_function ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (s:Safeguard {safeguard_id: row.from_node_id})
 MATCH (sf:SecurityFunction {name: row.to_node_id})
 MERGE (s)-[:SAFEGUARD_MAPS_TO_SECURITY_FUNCTION]->(sf);
 """
+# Framework -> Assets relationships
+framework_assets_rel = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'CIS CONTROLS 8.1'})
+MATCH (a:AssetClass {IS_frameworks_standard_id: 'CIS CONTROLS 8.1'}) 
+MERGE (f)-[:FRAMEWORK_CONTAINS_ASSET]->(a);
+"""
+
 
 
 
@@ -120,41 +119,41 @@ logger.info("Loading graph structure...")
 client.query(framework_and_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_framework.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_controls.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Controls.csv"))
 time.sleep(2)
 
-client.query(safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_safeguards.csv"))
+client.query(safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Safeguard.csv"))
 time.sleep(2)
 
-client.query(asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_asset_class.csv"))
+client.query(asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Asset%20Class.csv"))
 time.sleep(2)
 
-client.query(security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_security_function.csv"))
+client.query(security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Security%20Functions.csv"))
 time.sleep(2)
 
-client.query(implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_implementation_group.csv"))
+client.query(implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Implementation%20Group.csv"))
 time.sleep(2)
 
 
 # Relationships
 
-client.query(framework_and_standard_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_control_CORRECTED.csv"))
+client.query(framework_and_standard_control)
 time.sleep(2)
 
-client.query(control_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_control_to_safeguard.csv"))
+client.query(control_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Control%20-%20Control%20Safeguard.csv"))
 time.sleep(2)
 
-
-client.query(safeguard_implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_safeguard_to_implementation_group.csv"))
+client.query(safeguard_implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Safeguard%20Implementation.csv"))
 time.sleep(2)
 
-client.query(safeguard_asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_safeguard_to_asset_class.csv"))
+client.query(safeguard_asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Control%20-%20Safeguard%20Asset.csv"))
 time.sleep(2)
 
-client.query(safeguard_security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_safeguard_to_security_function.csv"))
+client.query(safeguard_security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Control%20-%20Safeguard%20Security%20Function.csv"))
 time.sleep(2)
 
-
+client.query(framework_assets_rel)
+time.sleep(2)
 
 
 

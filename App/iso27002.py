@@ -34,51 +34,44 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Category {IS_frameworks_standard_id: 'ISO27002_2022', category_id: row.category_id})
+MERGE (cc:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO_IEC_27002_2022'})
 ON CREATE SET
-    c.code = row.category_code,
-    c.name = row.category_name,
-    c.count = toInteger(row.control_count),
-    c.range = row.control_range,
-    c.description = row.description;
+    cc.name = row.category_name,
+    cc.description = row.description;
 """
 
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022', control_id: row.control_id})
+MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO_IEC_27002_2022'})
 ON CREATE SET
-    ctrl.name = row.control_name,
-    ctrl.purpose = row.purpose,
-    ctrl.category_id = row.category_id,
-    ctrl.category_code = row.category_code,
-    ctrl.legacy_mapping = row.legacy_mapping,
-    ctrl.is_new = CASE WHEN row.is_new = 'Yes' THEN true ELSE false END,
-    ctrl.implementation_guidance = row.implementation_guidance,
-    ctrl.description = row.control_description;
+    c.name = row.control_name,
+    c.purpose = row.purpose,
+    c.legacy_mapping = row.legacy_mapping,
+    c.is_new = row.is_new;
 """
 
 # UPDATED: Added framework_id and switched to MERGE.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Attribute {IS_frameworks_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
+LOAD CSV WITH HEADERS FROM 'file:///ISO 27002 - Attributes.csv' AS row
+MERGE (a:Attribute {
+    IS_frameworks_standard_id: 'ISO_IEC_27002_2022', 
+    type: row.attribute_type, 
+    value: row.attribute_value
+})
 ON CREATE SET
-    a.type = row.attribute_type,
-    a.value = row.attribute_value,
-    a.description = row.attribute_description,
-    a.usage_context = row.usage_context;
+    a.description = row.description;
 """
+
 
 # UPDATED: Added framework_id and switched to MERGE.
 guidelines = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (g:Guideline {IS_frameworks_standard_id: 'ISO27002_2022', guideline_id: row.guideline_id})
+MERGE (g:Guideline {guideline_id: row.guideline_id, IS_frameworks_standard_id: 'ISO_IEC_27002_2022'})
 ON CREATE SET
-    g.control_id = row.control_id,
-    g.type = row.guideline_type,
     g.text = row.guideline_text,
-    g.implementation_considerations = row.implementation_considerations,
-    g.measurement_criteria = row.measurement_criteria;
+    g.type = row.guideline_type;
 """
 
 # UPDATED: Scoped MATCH to framework_id.
@@ -92,7 +85,6 @@ MERGE (f)-[:FRAMEWORK_CONTAINS_CATEGORY]->(c);
 category_control_rel = """
 MATCH (cat:Category {IS_frameworks_standard_id: 'ISO27002_2022'})
 MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
-WHERE cat.category_id = ctrl.category_id
 MERGE (cat)-[:CATEGORY_CONTAINS_CONTROL]->(ctrl);
 """
 
@@ -100,17 +92,16 @@ MERGE (cat)-[:CATEGORY_CONTAINS_CONTROL]->(ctrl);
 control_guideline_rel = """
 MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
 MATCH (guide:Guideline {IS_frameworks_standard_id: 'ISO27002_2022'})
-WHERE ctrl.control_id = guide.control_id
 MERGE (ctrl)-[:CONTROL_HAS_GUIDELINE]->(guide);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 control_attribute_rel = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022', control_id: row.control_id})
-MATCH (attr:Attribute {IS_frameworks_standard_id: 'ISO27002_2022', attribute_id: row.attribute_id})
-MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE {relevance: row.relevance}]->(attr);
+MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
+MATCH (a:Attribute {IS_frameworks_standard_id: 'ISO27002_2022'})
+MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE]->(a);
 """
+
 # ... (rest of the python script remains the same)
 
 
@@ -157,7 +148,8 @@ time.sleep(2)
 client.query(control_guideline_rel)
 time.sleep(2)
 
-client.query(control_attribute_rel.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_control_attributes.csv'))
+client.query(control_attribute_rel)
+time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 

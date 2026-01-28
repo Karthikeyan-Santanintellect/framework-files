@@ -1,0 +1,16 @@
+control_id,control_name,purpose,category_code,legacy_mapping,is_new
+5.1,Policies for information security,"To ensure continuing suitability, adequacy, effectiveness of management direction and support for information security in accordance with business, legal, statutory, regulatory and contractual requirements.",5,"5.1.1, 5.1.2",No
+5.2,Information security roles and responsibilities,"To establish a defined, approved and understood structure for the implementation, operation and management of information security within the organization.",5,6.1.1,No
+5.3,Segregation of duties,"To reduce the risk of fraud, error and bypassing of information security controls.",5,6.1.2,No
+5.4,Management responsibilities,"To ensure management understand their role in information security and undertake actions aiming to ensure all personnel are aware of and fulfil their information security responsibilities.",5,7.2.1,No
+5.7,Threat intelligence,"To provide awareness of the organization’s threat environment so that the appropriate mitigation actions can be taken.",5,New,Yes
+5.23,Information security for use of cloud services,"To specify and manage information security for the use of cloud services.",5,New,Yes
+5.30,ICT readiness for business continuity,"To ensure the availability of the organization’s information and other associated assets during disruption.",5,New,Yes
+8.1,User endpoint devices,"To protect information against the risks introduced by using user endpoint devices.",8,"6.2.1, 11.2.8",No
+8.2,Privileged access rights,"To ensure only authorized users, software components and services are provided with privileged access rights.",8,9.2.3,No
+8.3,Information access restriction,"To ensure only authorized access and to prevent unauthorized access to information and other associated assets.",8,9.4.1,No
+8.9,Configuration management,"To ensure hardware, software, services and networks function correctly with required security settings, and configuration is not altered by unauthorized or incorrect changes.",8,New,Yes
+8.10,Information deletion,"To prevent unnecessary exposure of sensitive information and to comply with legal, statutory, regulatory and contractual requirements for information deletion.",8,New,Yes
+8.11,Data masking,"To limit the exposure of sensitive data including PII, and to comply with legal, statutory, regulatory and contractual requirements.",8,New,Yes
+8.12,Data leakage prevention,"To detect and prevent the unauthorized disclosure and extraction of information by individuals or systems.",8,New,Yes
+8.16,Monitoring activities,"To detect anomalous behaviour and potential information security incidents.",8,New,Yes
