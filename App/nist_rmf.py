@@ -37,10 +37,7 @@ steps = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2', step_id: row.step_id})
 ON CREATE SET
-    s.number = toInteger(row.step_number),
     s.name = row.step_name,
-    s.objective = row.objective,
-    s.is_new_in_rev2 = CASE WHEN row.is_new_in_rev2 = 'True' THEN true ELSE false END,
     s.description = row.step_description;
 """
 
@@ -50,21 +47,18 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2', family_id: row.family_id})
 ON CREATE SET
     cf.name = row.family_name,
-    cf.count = toInteger(row.control_count),
     cf.description = row.family_description,
-    cf.category = row.control_category,
     cf.nist_publication = 'NIST SP 800-53 Rev 5';
 """
 
 # UPDATED: Using MERGE and adding framework_id.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2', control_id: row.`Control Identifier`})
+MERGE (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2', control_id: row.control_id})
 ON CREATE SET
-    c.family_id = row.`Family`,
-    c.name = row.`Control Name`,
-    c.description = row.`Control`,
-    c.related_controls = split(row.`Related Controls`, ',');
+    c.family_id = row.family_id,
+    c.name = row.control_name,
+    c.description = row.control_text;
 """
 
 # UPDATED: Using MERGE and adding framework_id.
@@ -73,9 +67,7 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2', role_id: row.role_id})
 ON CREATE SET
     r.name = row.role_name,
-    r.description = row.role_description,
-    r.type = row.role_type,
-    r.decision_authority = row.decision_authority;
+    r.description = row.role_description;
 """
 
 # UPDATED: Using MERGE and adding framework_id.
@@ -87,8 +79,8 @@ ON CREATE SET
     sys.type = row.system_type,
     sys.categorization = row.categorization,
     sys.authorization_status = row.authorization_status,
-    sys.ato_date = date(row.ato_date),
-    sys.ato_expiration = CASE WHEN row.ato_expiration = '' THEN null ELSE date(row.ato_expiration) END;
+    sys.ato_date = row.ato_date,
+    sys.ato_expiration = row.ato_expiration;
 """
 
 # UPDATED: Scoped MATCH to framework_id.
