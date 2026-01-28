@@ -1,0 +1,7 @@
+role_id,role_name,role_description
+AO,Authorizing Official,"Senior official with the authority to formally assume responsibility for operating an information system at an acceptable level of risk."
+CIO,Chief Information Officer,"Official responsible for the organization’s information management functions."
+SISO,Senior Information Security Officer,"Official responsible for serving as the primary liaison between the organization’s authorizing officials, information system owners, and common control providers."
+SO,System Owner,"Official responsible for the procurement, development, integration, modification, operation, maintenance, and disposal of an information system."
+CCP,Common Control Provider,"Individual or group responsible for the development, implementation, assessment, and monitoring of common controls."
+SCA,Control Assessor,"Individual or group responsible for conducting a comprehensive assessment of the management, operational, and technical controls."

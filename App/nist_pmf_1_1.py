@@ -54,6 +54,7 @@ ON CREATE SET
 
 # UPDATED: Using MERGE and adding ISFrameworksAndStandard_id.
 subcategories = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (s:Subcategory {subcategory_id: row.Subcategory_Code, IS_frameworks_standard_id: 'NIST_PMF_1.1' })
 ON CREATE SET 
     s.category_id = row.Category_Code,
@@ -115,12 +116,6 @@ MERGE (c)-[:CATEGORY_HAS_SUBCATEGORY]->(s);
 """
 
 # UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
-function_support_imp_function_rel = """
-MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_PMF_1.1', is_foundational: true})
-MATCH (nfn:Function {IS_frameworks_standard_id: 'NIST_PMF_1.1', is_foundational: false})
-MERGE (fn)-[:FUNCTION_HAS_FOUNDATIONAL_SUPPORT {relationship_type: 'Foundational_Support', support_area: fn.primary_focus}]->(nfn);
-"""
-# UPDATED: Scoped MATCH to ISFrameworksAndStandard_id.
 function_objective_rel = """
 MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_PMF_1.1'})
 MATCH (po:PrivacyObjective {IS_frameworks_standard_id: 'NIST_PMF_1.1'})
@@ -159,32 +154,30 @@ client.query(IS_frameworks_standard)
 time.sleep(2)
 logger.info('ISFrameworksAndStandard')
 
-client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/nist_privacy_framework_11_functions.csv"))
+client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Functions.csv"))
 time.sleep(2)
 logger.info('Function')
 
-client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/nist_privacy_framework_11_categories.csv"))
+client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Categories.csv"))
 time.sleep(2)
 logger.info('Category')
 
-client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/nist_privacy_framework_11_subcategories.csv"))
+client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Subcategories.csv"))
 time.sleep(2)
 logger.info('Subcategory')
 
-client.query(objectives.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/nist_privacy_framework_11_objectives.csv"))
+client.query(objectives.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Objectives.csv"))
 time.sleep(2)
 logger.info('Objective')
 
 
-client.query(implementation_tiers.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/nist_privacy_framework_11_tiers.csv"))
+client.query(implementation_tiers.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Tiers.csv"))
 time.sleep(2)
 logger.info('ImplementationTier')
 
 
-
-
-
 logger.info("Creating relationships...")
+
 client.query(framework_standard_function_rel)
 time.sleep(2)
 
@@ -194,10 +187,7 @@ time.sleep(2)
 client.query(category_subcategory_rel)
 time.sleep(2)
 
-client.query(category_subcategory_rel)
-time.sleep(2)
-
-client.query(function_support_imp_function_rel)
+client.query(framework_tiers_rel)
 time.sleep(2)
 
 client.query(function_objective_rel)
