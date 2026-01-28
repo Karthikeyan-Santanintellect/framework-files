@@ -1,8 +1,0 @@
-step_id,step_name,step_description
-step_1,Prepare,Carry out essential activities to help prepare the organization to manage its security and privacy risks using the Risk Management Framework.
-step_2,Categorize,Categorize the system and the information processed, stored, and transmitted by the system based on an analysis of the impact of loss.
-step_3,Select,Select an initial set of controls for the system and tailor the controls as needed to reduce risk to an acceptable level.
-step_4,Implement,Implement the controls and describe how the controls are employed within the system and its environment of operation.
-step_5,Assess,Assess the controls to determine if the controls are implemented correctly, operating as intended, and producing the desired outcome.
-step_6,Authorize,Authorize the system or common controls based on a determination that the risk to organizational operations and assets is acceptable.
-step_7,Monitor,Monitor the system and the associated controls on an ongoing basis to include assessing control effectiveness and documenting changes.

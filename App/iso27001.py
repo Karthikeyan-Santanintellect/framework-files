@@ -1,6 +1,9 @@
 # iso27001.py
 
 # UPDATED: Constraints are now composite, requiring IDs to be unique within a framework.
+from ctypes.macholib import framework
+
+
 constraints = """
 CREATE CONSTRAINT framework_id_unique FOR (f:ISFrameworksAndStandard) REQUIRE f.IS_frameworks_standard_id IS UNIQUE;
 CREATE CONSTRAINT clause_framework_composite_unique FOR (c:Clause) REQUIRE (c.IS_frameworks_standard_id, c.clause_id) IS UNIQUE;
@@ -29,7 +32,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 control_categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cc:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
+MERGE (cc:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO27001_2022'})
 ON CREATE SET
     cc.name = row.category_name,
     cc.description = row.description;
@@ -38,7 +41,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 clauses = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cl:Clause {clause_id: row.clause_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
+MERGE (cl:Clause {clause_id: row.clause_id, IS_frameworks_standard_id: 'ISO27001_2022'})
 ON CREATE SET
     cl.title = row.title,
     cl.type = row.category,
@@ -47,7 +50,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
+MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO27001_2022'})
 ON CREATE SET
     c.name = row.control_name,
     c.category_id = row.category_id;
@@ -57,7 +60,7 @@ ON CREATE SET
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (a:Attribute {
-    IS_frameworks_standard_id: 'ISO_IEC_27001_2022', 
+    IS_frameworks_standard_id: 'ISO27001_2022', 
     type: row.attribute_type, 
     value: row.attribute_value
 })
@@ -68,7 +71,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement {requirement_id: row.requirement_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
+MERGE (r:Requirement {requirement_id: row.requirement_id, IS_frameworks_standard_id: 'ISO27001_2022'})
 ON CREATE SET
     r.clause_id = row.clause_id,
     r.text = row.requirement_text;
@@ -77,16 +80,8 @@ ON CREATE SET
 # No changes needed here, as the MATCH is already specific.
 framework_standard_clauses = """
 MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO27001_2022'})
-MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022', category: 'main_clause'})
+MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_CLAUSES]->(c);
-"""
-
-# UPDATED: Scoped MATCH to framework_id for precision.
-clause_subclauses = """
-MATCH (main:Clause {IS_frameworks_standard_id: 'ISO27001_2022', category: 'main_clause'})
-MATCH (sub:Clause {IS_frameworks_standard_id: 'ISO27001_2022', category: 'subclause'})
-WHERE sub.parent_clause = main.clause_id
-MERGE (main)-[:CLAUSE_CONTAINS_SUBCLAUSES]->(sub);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
@@ -100,7 +95,6 @@ MERGE (f)-[:FRAMEWORK_CONTAINS_CONTROL_CATEGORY]->(cat);
 control_categories_control = """
 MATCH (cat:ControlCategory {IS_frameworks_standard_id: 'ISO27001_2022'})
 MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27001_2022'})
-WHERE cat.category_id = ctrl.category
 MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROL]->(ctrl);
 """
 
@@ -108,10 +102,15 @@ MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROL]->(ctrl);
 clause_requirements = """
 MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
 MATCH (r:Requirement {IS_frameworks_standard_id: 'ISO27001_2022'})
-WHERE c.clause_id = r.clause_id
 MERGE (c)-[:CLAUSE_REQUIRES_REQUIREMENT]->(r);
 """
-# ... (rest of the python script remains the same)s
+# Framework -> Attributes relationships 
+framework_attributes_rel = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO27001_2022'})
+MATCH (a:Attribute {IS_frameworks_standard_id: 'ISO27001_2022'})
+MERGE (f)-[:FRAMEWORK_CONTAINS_ATTRIBUTES]->(a);
+"""
+
 
 import os
 import time
@@ -135,26 +134,25 @@ logger.info("Loading graph structure...")
 client.query(framework_standard)
 time.sleep(2)
 
-client.query(control_categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_control_categories.csv'))
+client.query(control_categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Control%20Categories.csv"))
 time.sleep(2)
 
-client.query(clauses.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_clauses.csv'))
+client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_controls.csv'))
+client.query(controls.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Controls.csv"))
 time.sleep(2)
 
-client.query(attributes.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_attributes.csv'))
+client.query(attributes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Attributes.csv"))
 time.sleep(2)
 
-client.query(requirements.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/iso27001_requirements.csv'))
+client.query(requirements.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Requirements.csv"))
 time.sleep(2)
+
 
 client.query(framework_standard_clauses)
 time.sleep(2)
 
-client.query(clause_subclauses)
-time.sleep(2)
 
 client.query(framework_standard_control_category)
 time.sleep(2)
@@ -164,6 +162,10 @@ time.sleep(2)
 
 client.query(clause_requirements)
 time.sleep(2)
+
+client.query(framework_attributes_rel)
+time.sleep(2)
+
 
 logger.info("Graph structure loaded successfully.")
 

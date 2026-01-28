@@ -1,5 +1,0 @@
-category_id,category_code,category_name,control_count,control_range,description
-organizational,5,Organisational Controls,37,5.1-5.37,"Controls focused on policies, procedures, responsibilities and organizational measures for information security"
-people,6,People Controls,8,6.1-6.8,"Controls related to personnel security including screening, training, and responsibilities"
-physical,7,Physical Controls,14,7.1-7.14,Controls for physical and environmental protection of information assets
-technological,8,Technological Controls,34,8.1-8.34,"Technical controls including systems security, cryptography, and access controls"

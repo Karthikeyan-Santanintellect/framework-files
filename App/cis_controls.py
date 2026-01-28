@@ -15,7 +15,7 @@ ON CREATE SET
 # Load Controls
 controls ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {control_id: row.control_id})
+MERGE (c:Control {control_id: row.control_id,IS_frameworks_standard_id : 'CIS CONTROLS 8.1'})
 ON CREATE SET
   c.name = row.name,
   c.description = row.description;
@@ -24,43 +24,34 @@ ON CREATE SET
 #Load Safeguards
 safeguards ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (s:Safeguard {safeguard_id: row.safeguard_id})
-ON CREATE SET
-  s.description = row.description,
-  s.version = row.version;
+MERGE (s:Safeguard {safeguard_id: row.safeguard_id,IS_frameworks_standard_id : 'CIS CONTROLS 8.1'})
+ON CREATE SET 
+    s.title = row.title,
+    s.description = row.description;
 """
 #Load Asset class
 asset_class ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE(a:AssetClass{name:row.name})
-ON CREATE SET
-    a.description = row.description;
+MERGE (a:AssetClass {name: row.name,IS_frameworks_standard_id : 'CIS CONTROLS 8.1'})
+ON CREATE SET 
+  a.description = row.description;
 """
 #Load Security function
 security_function ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE(sf:SecurityFunction{name:row.name})
-ON CREATE SET
-    sf.source = row.source;
+MERGE (sf:SecurityFunction {name: row.name,IS_frameworks_standard_id : 'CIS CONTROLS 8.1'})
+ON CREATE SET 
+    sf.source = row.source,
+    sf.description = row.description;
 """
 # Load IMPLEMENTATION GROUP 
 implementation_group ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE(ig:ImplementationGroup {name: row.name})
-ON CREATE SET
-  ig.description = row.description,
-  ig.safeguard_count = toInteger(row.safeguard_count);
+MERGE(ig:ImplementationGroup {name: row.name,IS_frameworks_standard_id : 'CIS CONTROLS 8.1'})
+ON CREATE SET 
+    ig.title = row.title,
+    ig.description = row.description;
 """
-#Load  GOVERNING BODY NODE 
-governing_body ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (gb:GoverningBody {name: row.name})
-ON CREATE SET
-  gb.alias = row.alias,
-  gb.type = row.type,
-  gb.mission = row.mission;
-"""
-
 # 1.CREATE FRAMEWORK -> GOVERNING BODY RELATIONSHIPS 
 framework_and_standard_governing_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -144,11 +135,8 @@ time.sleep(2)
 client.query(implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_implementation_group.csv"))
 time.sleep(2)
 
-client.query(governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_governing_body.csv"))
-time.sleep(2)
 
-client.query(framework_and_standard_governing_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_governing_body_CORRECTED.csv"))
-time.sleep(2)
+# Relationships
 
 client.query(framework_and_standard_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/relations_framework_to_control_CORRECTED.csv"))
 time.sleep(2)

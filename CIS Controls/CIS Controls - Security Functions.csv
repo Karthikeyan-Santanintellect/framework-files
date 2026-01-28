@@ -1,0 +1,7 @@
+name,source,description
+Govern,NIST CSF 2.0,"Establish and monitor the organization’s cybersecurity risk management strategy, expectations, and policy."
+Identify,NIST CSF 2.0,"Understand the organization to manage cybersecurity risk to systems, people, assets, data, and capabilities."
+Protect,NIST CSF 2.0,"Develop and implement appropriate safeguards to ensure delivery of critical services."
+Detect,NIST CSF 2.0,"Develop and implement appropriate activities to identify the occurrence of a cybersecurity event."
+Respond,NIST CSF 2.0,"Develop and implement appropriate activities to take action regarding a detected cybersecurity incident."
+Recover,NIST CSF 2.0,"Develop and implement appropriate activities to maintain plans for resilience and to restore any capabilities or services that were impaired."
