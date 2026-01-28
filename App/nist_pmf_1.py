@@ -166,23 +166,23 @@ client.query(IS_framework_and_standard)
 time.sleep(2)
 logger.info('ISFrameworksAndStandard')
 
-client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/functions.csv"))
+client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/NIST%20PMF%201.0%20-%20Functions.csv"))
 time.sleep(2)
 logger.info('Functions')
 
-client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/categories.csv"))
+client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/NIST%20PMF%201.0%20-%20Categories.csv"))
 time.sleep(2)
 logger.info('Categories')
 
-client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/subcategories.csv"))
+client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/NIST%20PMF%201.0%20-%20Subcategories.csv"))
 time.sleep(2)
 logger.info('Subcategories')
 
-client.query(tiers.replace('$file_path', ""))
+client.query(tiers.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/NIST%20PMF%201.0%20-%20Tiers.csv"))
 time.sleep(2)
 logger.info('Tiers')
 
-client.query(terms.replace('$file_path', ""))
+client.query(terms.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.0/NIST%20PMF%201.0%20-%20Term.csv"))
 time.sleep(2)
 logger.info('Terms')
 
