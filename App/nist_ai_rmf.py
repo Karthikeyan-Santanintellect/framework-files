@@ -44,8 +44,8 @@ functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (fn:Function {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0', function_id: row.Function_ID})
 ON CREATE SET
-    fn.name = row.Function,
-    fn.definition = row.Function_Description;
+    fn.name = row.Function_Name,
+    fn.definition = row.Description;    
 """
 
 # UPDATED: Using MERGE and adding framework_id.
@@ -54,7 +54,8 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (c:Category {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0', category_id: row.Category_ID})
 ON CREATE SET
     c.function_id = row.Function_ID,
-    c.name = row.Category;
+    c.name = row.Category_Number,   
+    c.description = row.Description;
 """
 
 # UPDATED: Using MERGE and adding framework_id.
@@ -64,7 +65,8 @@ MERGE (s:Subcategory {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0', subcategory_
 ON CREATE SET
     s.function_id = row.Function_ID,
     s.category_id = row.Category_ID,
-    s.name = row.Subcategory;
+    s.name = row.Subcategory_Number,  
+    s.description = row.Description;  
 """
 
 framework_functions_rel = """
@@ -76,14 +78,12 @@ MERGE (f)-[:FRAMEWORK_CONTAINS_FUNCTIONS]->(fn);
 function_categories_rel = """
 MATCH (fn:Function {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
 MATCH (c:Category {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
-WHERE fn.function_id = c.function_id
 MERGE (fn)-[:FUNCTION_HAS_CATEGORY]->(c);
 """
 
 category_subcategories_rel = """
 MATCH (c:Category {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
 MATCH (s:Subcategory {IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
-WHERE c.category_id = s.category_id
 MERGE (c)-[:CATEGORY_CONTAINS_SUBCATEGORIES]->(s);
 """
 
@@ -110,15 +110,16 @@ logger.info("Loading graph structure...")
 client.query(framework_and_standards)
 time.sleep(2)
 
-client.query(functions.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/ai_rmf_functions.csv'))
+client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Functions.csv"))
+time.sleep(2)
+    
+client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Categories.csv"))
 time.sleep(2)
 
-client.query(categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/ai_rmf_categories.csv'))
+client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Subcategories.csv"))
 time.sleep(2)
 
-client.query(subcategories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/ai_rmf_subcategories.csv'))
-time.sleep(2)
-
+# Relationships
 client.query(framework_functions_rel)
 time.sleep(2)
 

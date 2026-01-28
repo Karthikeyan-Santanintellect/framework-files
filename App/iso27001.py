@@ -29,42 +29,38 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 control_categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cc:ControlCategory {IS_frameworks_standard_id: 'ISO27001_2022', category_id: row.category_id})
+MERGE (cc:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
 ON CREATE SET
     cc.name = row.category_name,
-    cc.range = row.control_range,
-    cc.description = row.description,   
-    cc.control_count = toInteger(row.control_count);
+    cc.description = row.description;
 """
 
 # UPDATED: Added framework_id and switched to MERGE.
 clauses = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022', clause_id: row.clause_id})
+MERGE (cl:Clause {clause_id: row.clause_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
 ON CREATE SET
-    c.name = row.clause_name,
-    c.description = row.description,
-    c.category = row.category,
-    c.parent_clause = CASE WHEN row.parent_clause <> '' THEN row.parent_clause ELSE null END;
+    cl.title = row.title,
+    cl.type = row.category,
+    cl.parent_clause = row.parent_clause;
 """
-
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctrl:Control {IS_frameworks_standard_id: 'ISO27001_2022', control_id: row.control_id})
+MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
 ON CREATE SET
-    ctrl.name = row.control_name,
-    ctrl.category = row.category,
-    ctrl.category_name = row.category_name,
-    ctrl.legacy_mapping = row.legacy_mapping,
-    ctrl.is_new = CASE WHEN row.is_new = 'Yes' THEN true ELSE false END,
-    ctrl.full_description = row.full_description;
+    c.name = row.control_name,
+    c.category_id = row.category_id;
 """
 
 # UPDATED: Added framework_id and switched to MERGE. Attribute combination is the key.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Attribute {IS_frameworks_standard_id: 'ISO27001_2022', attribute_type: row.attribute_type, attribute_value: row.attribute_value})
+MERGE (a:Attribute {
+    IS_frameworks_standard_id: 'ISO_IEC_27001_2022', 
+    type: row.attribute_type, 
+    value: row.attribute_value
+})
 ON CREATE SET
     a.description = row.description;
 """
@@ -72,11 +68,10 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (r:Requirement {IS_frameworks_standard_id: 'ISO27001_2022', requirement_id: row.requirement_id})
+MERGE (r:Requirement {requirement_id: row.requirement_id, IS_frameworks_standard_id: 'ISO_IEC_27001_2022'})
 ON CREATE SET
     r.clause_id = row.clause_id,
-    r.text = row.requirement_text,
-    r.type = row.requirement_type;
+    r.text = row.requirement_text;
 """
 
 # No changes needed here, as the MATCH is already specific.
