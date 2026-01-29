@@ -150,9 +150,8 @@ MERGE (ds:DataSubjectRight {data_subject_id: row.Node_ID, regional_standard_regu
 ON CREATE SET
   ds.name = row.name,
   ds.definition = row.definition,
-  ds.regulated_by_articles = row.regulated_by_articles,
-  ds.applies_to_actors = row.applies_to_actors,
-  ds.enforcement_mechanism = row.enforcement_mechanism;
+  ds.right_id = row.right_id,
+  ds.type = row.Node_Type;
 """
 #Lawful_basis
 gdpr_lawful_basis ="""
@@ -162,6 +161,7 @@ ON CREATE SET
   lb.name = row.name,
   lb.definition = row.definition,
   lb.type = row.type,
+  lb.Node_Type = row.Node_Type,
   lb.restricted = row.restricted,
   lb.regulated_by_articles = row.regulated_by_articles,
   lb.use_cases = row.use_cases;
@@ -174,6 +174,8 @@ ON CREATE SET
   pl.name = row.name,
   pl.definition = row.definition,
   pl.aspect = row.aspect,
+  pl.type = row.Node_Type,
+  pl.id = row.principle_id,
   pl.regulated_by_articles = row.regulated_by_articles,
   pl.applies_to_processing = row.applies_to_processing,
   pl.applies_to_data_category = row.applies_to_data_category;
@@ -200,6 +202,8 @@ MERGE (cm:ComplianceMechanism {mechanism_id: row.Node_ID, regional_standard_regu
 ON CREATE SET
   cm.name = row.name,
   cm.definition = row.definition,
+  cm.type = row.Node_Type,
+  cm.id = row.mechanism_id,
   cm.category = row.category,
   cm.is_mandatory = row.is_mandatory,
   cm.regulated_by_articles = row.regulated_by_articles,
@@ -737,46 +741,51 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_and_regulation)
 time.sleep(2)
 
-client.query(gdpr_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/2_chapter_nodes.csv"))
+client.query(gdpr_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Chapter.csv"))
 time.sleep(2)
 
-client.query(gdpr_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/3_section_nodes.csv"))
+client.query(gdpr_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Section.csv"))
 time.sleep(2)
 
-client.query(gdpr_article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/article_node.csv"))
+client.query(gdpr_article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Article.csv"))
 time.sleep(2)
 
-client.query(gdpr_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/5_recital_nodes.csv"))
+client.query(gdpr_recital.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Recital.csv"))
 time.sleep(2)
 
-client.query(gdpr_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/12_paragraph_nodes.csv"))
+client.query(gdpr_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Paragraph.csv"))
 time.sleep(2)
 
-client.query(gdpr_sub_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/13_subparagraph_nodes.csv"))
+client.query(gdpr_sub_paragraph.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Subgraph.csv"))
 time.sleep(2)
 
-client.query(gdpr_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/14_legislative_action_nodes.csv"))
+client.query(gdpr_legislative_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Legislative%20Action.csv"))
 time.sleep(2)
 
-client.query(gdpr_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/15_concept_nodes_COMPLETE.csv"))
+
+client.query(gdpr_concept.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Concept.csv"))
 time.sleep(2)
 
-client.query(gdpr_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/1_framework_nodes_CORRECTED.csv"))
+
+client.query(gdpr_framework.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Framework.csv"))
 time.sleep(2)
 
-client.query(gdpr_actor_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_ActorRoles.csv"))
+
+client.query(gdpr_actor_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Actor%20Roles.csv"))
 time.sleep(2)
 
-client.query(gdpr_data_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_DataCategories.csv"))
+
+client.query(gdpr_data_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Data%20Categories.csv"))
 time.sleep(2)
 
-client.query(gdpr_data_subject.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_DataSubjectRights.csv"))
+
+client.query(gdpr_data_subject.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Data%20Subject%20Rights.csv"))
 time.sleep(2)
 
-client.query(gdpr_lawful_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_LawfulBasis.csv"))
+client.query(gdpr_lawful_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Lawful%20Basis.csv"))
 time.sleep(2)
 
-client.query(gdpr_principle.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_Principles.csv"))
+client.query(gdpr_principle.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR/GDPR%20-%20Principles.csv"))
 time.sleep(2)
 
 client.query(gdpr_processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/GDPR_ProcessingActivities.csv"))
