@@ -185,6 +185,8 @@ MERGE (pa:ProcessingActivity {processing_id : row.Node_ID,regional_standard_regu
 ON CREATE SET
   pa.name = row.name,
   pa.definition = row.definition,
+  pa.id = row.processing_id,
+  pa.type = row.Node_Type,
   pa.category = row.category,
   pa.regulated_by_articles = row.regulated_by_articles,
   pa.requires_lawful_basis = row.requires_lawful_basis,
@@ -820,8 +822,6 @@ time.sleep(2)
 
 client.query(representative.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GDPR_NEW/representative.csv"))
 time.sleep(2)
-
-
 
 
 # Relationships

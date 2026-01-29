@@ -20,7 +20,7 @@ CREATE INDEX control_new_index FOR (ctrl:Control) ON (ctrl.is_new);
 # UPDATED: Switched to MERGE.
 framework_standard = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: row."ISO27002_2022"})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: row.framework_id})
 ON CREATE SET
     f.name = row.name,
     f.full_name = row.full_name,
@@ -34,7 +34,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 categories = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cc:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO_IEC_27002_2022'})
+MERGE (cc:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO27002_2022'})
 ON CREATE SET
     cc.name = row.category_name,
     cc.description = row.description;
@@ -43,7 +43,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO_IEC_27002_2022'})
+MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO27002_2022'})
 ON CREATE SET
     c.name = row.control_name,
     c.purpose = row.purpose,
@@ -54,9 +54,8 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-LOAD CSV WITH HEADERS FROM 'file:///ISO 27002 - Attributes.csv' AS row
 MERGE (a:Attribute {
-    IS_frameworks_standard_id: 'ISO_IEC_27002_2022', 
+    IS_frameworks_standard_id: 'ISO27002_2022', 
     type: row.attribute_type, 
     value: row.attribute_value
 })
@@ -68,7 +67,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE.
 guidelines = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (g:Guideline {guideline_id: row.guideline_id, IS_frameworks_standard_id: 'ISO_IEC_27002_2022'})
+MERGE (g:Guideline {guideline_id: row.guideline_id, IS_frameworks_standard_id: 'ISO27002_2022'})
 ON CREATE SET
     g.text = row.guideline_text,
     g.type = row.guideline_type;
@@ -77,15 +76,15 @@ ON CREATE SET
 # UPDATED: Scoped MATCH to framework_id.
 framework_standard_category_rel = """
 MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO27002_2022'})
-MATCH (c:Category {IS_frameworks_standard_id: 'ISO27002_2022'})
-MERGE (f)-[:FRAMEWORK_CONTAINS_CATEGORY]->(c);
+MATCH (cc:ControlCategory {IS_frameworks_standard_id: 'ISO27002_2022'})
+MERGE (f)-[:FRAMEWORK_CONTAINS_CONTROL_CATEGORY]->(cc);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
 category_control_rel = """
-MATCH (cat:Category {IS_frameworks_standard_id: 'ISO27002_2022'})
+MATCH (cc:ControlCategory {IS_frameworks_standard_id: 'ISO27002_2022'})
 MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
-MERGE (cat)-[:CATEGORY_CONTAINS_CONTROL]->(ctrl);
+MERGE (cc)-[:CONTROL_CATEGORY_CONTAINS_CONTROL]->(ctrl);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
@@ -127,16 +126,16 @@ logger.info("Loading graph structure...")
 client.query(framework_standard.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_framework.csv'))
 time.sleep(2)
 
-client.query(categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_categories.csv'))
+client.query(categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Categories.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_controls.csv'))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Controls.csv"))
 time.sleep(2)
 
-client.query(attributes.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_attributes.csv'))
+client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Attributes.csv"))
 time.sleep(2)
 
-client.query(guidelines.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_guidelines.csv'))
+client.query(guidelines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Guidelines.csv"))
 time.sleep(2)
 
 client.query(framework_standard_category_rel)
