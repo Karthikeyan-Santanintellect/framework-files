@@ -1,4 +1,16 @@
-Node_ID,content_elements,last_updated,regulated_by_articles
-ROPA-HR-001,"Purposes; Categories of data; Recipients; Transfers; Time limits; Security measures",2025-10-01,30
-ROPA-MKT-002,"Controller contact; Purpose (Direct Marketing); Consent records; Third-party recipients",2025-11-15,30
-ROPA-IT-003,"System logs; Access controls; Data retention schedules; Technical security measures",2025-09-20,30
+Node_ID,Node_Type,processing_id,name,definition,category,regulated_by_articles,requires_lawful_basis,requires_principle_compliance
+PA001,ProcessingActivity,GDPR-PA,Processing Activity,"Operation performed on personal data",Framework,"Article 4(11)",true,true
+PA002,ProcessingActivity,GDPR-COL,Collection,"Gathering, obtaining or harvesting of personal data from various sources",Input,"Article 13-14",true,true
+PA003,ProcessingActivity,GDPR-REC,Recording,"Fixing data in tangible medium or electronic storage",Storage,"Article 4(11)",true,true
+PA004,ProcessingActivity,GDPR-ORG,Organization,"Structuring data in retrievable form or database for efficient access",Storage,"Article 4(11)",true,true
+PA005,ProcessingActivity,GDPR-STOR,Storage,"Keeping, maintaining and retaining personal data over time",Preservation,"Article 5(1)(e)",true,true
+PA006,ProcessingActivity,GDPR-USE,Use,"Application or exploitation of personal data for specified purposes",Utilization,"Article 6",true,true
+PA007,ProcessingActivity,GDPR-CONS,Consultation,"Reference to or retrieval of personal data",Access,"Article 15",true,true
+PA008,ProcessingActivity,GDPR-DISC,Disclosure/Transmission,"Making personal data known to other parties or recipients",Sharing,"Article 6(1)",true,true
+PA009,ProcessingActivity,GDPR-ALIGN,Alignment,"Combining, linking or merging personal data from different sources",Transformation,"Article 6",true,true
+PA010,ProcessingActivity,GDPR-REST,Restriction,"Limiting or freezing processing of personal data",Control,"Article 18",true,true
+PA011,ProcessingActivity,GDPR-ERAS,Erasure,"Deletion or destruction of personal data",Removal,"Article 17",false,true
+PA012,ProcessingActivity,GDPR-DEST,Destruction,"Permanent removal of personal data rendering it unrecoverable",Final Removal,"Article 17",false,true
+PA013,ProcessingActivity,GDPR-ANON,Anonymization,"Making data permanently irreversibly unidentifiable so GDPR no longer applies",Transformation,"Article 4(1)",false,true
+PA014,ProcessingActivity,GDPR-PSEU,Pseudonymization,"Processing that cannot be attributed to a data subject without additional information",Transformation,"Article 4(11)",true,true
+PA015,ProcessingActivity,GDPR-ADAPT,Adaptation,"Modifying or altering personal data to match specific requirements",Transformation,"Article 6",true,true
