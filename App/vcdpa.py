@@ -850,8 +850,8 @@ MERGE (proc)-[:PROCESSOR_ENGAGES_SUBCONTRACTOR {
 #Cross‑Framework Mapping
 requirement_external_frameworks ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.source_requirement_id})
-MATCH (efr:ExternalFrameworkRequirement {regional_standard_regulation_id: 'VCDPA 2023', external_id: row.target_requirement_id})
+MATCH (req:Requirement {regional_standard_regulation_id: 'VCDPA 2023', requirement_id: row.Source_ID})
+MATCH (efr:ExternalFrameworkRequirement {external_id: row.Target_ID})
 MERGE (req)-[r:REQUIREMENT_MAPPED_TO_EXTERNAL_FRAMEWORK]->(efr)
 ON CREATE SET
     r.source_framework = row.source_framework,
@@ -1254,431 +1254,429 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(regulation.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Node.csv'))
+# client.query(regulation.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Node.csv'))
+# time.sleep(2)
+
+# client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Title.csv"))
+# time.sleep(2)
+
+# client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Sections.csv'))
+# time.sleep(2)
+
+# client.query(subsection.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Subsection.csv"))
+# time.sleep(2)
+
+
+# client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirements.csv'))
+# time.sleep(2)
+
+# client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Roles.csv'))
+# time.sleep(2)
+
+
+# client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DataCategories.csv'))
+# time.sleep(2)
+
+# client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EventTypes.csv'))
+# time.sleep(2)
+
+# client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Safeguards.csv'))
+# time.sleep(2)
+
+# client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EnforcementActions_Filled.csv'))
+# time.sleep(2)
+
+# client.query(data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DataProtectionAssessments.csv'))
+# time.sleep(2)
+
+# client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_ImplementationSpecs.csv'))
+# time.sleep(2)
+
+# client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Policies.csv'))
+# time.sleep(2)
+
+# client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Controls.csv'))
+# time.sleep(2)
+
+# client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Systems.csv'))
+# time.sleep(2)
+
+# client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processes.csv'))
+# time.sleep(2)
+
+client.query(External_Framework_Requirements.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20External%20Frameworks.csv'))
 time.sleep(2)
 
-client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Title.csv"))
+# client.query(Threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Thresholds.csv'))
+# time.sleep(2)
+
+# client.query(Exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Exemptions.csv'))
+# time.sleep(2)
+
+# client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Definition.csv"))
+# time.sleep(2)
+
+# client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Right.csv"))
+# time.sleep(2)
+
+# client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consumer.csv"))
+# time.sleep(2)
+
+# client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Duty.csv"))
+# time.sleep(2)
+
+# client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20OptOut%20Mechanism.csv"))
+# time.sleep(2)
+
+# client.query(employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Employee.csv"))
+# time.sleep(2)
+
+# client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SensitiveData.csv"))
+# time.sleep(2)
+
+# client.query(personal_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PersonalData.csv"))
+# time.sleep(2)
+
+# client.query(sensitive_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SensitiveCategory.csv"))
+# time.sleep(2)
+
+# client.query(opt_in_consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/OptInConsent.csv"))
+# time.sleep(2)
+
+# client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ProcessingActivity.csv"))
+# time.sleep(2)
+
+# client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PrivacyNotice.csv"))
+# time.sleep(2)
+
+# client.query(cure_period.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CurePeriod.csv"))
+# time.sleep(2)
+
+# client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CivilPenalty.csv"))
+# time.sleep(2)
+
+# client.query(civil_investigative_demand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CivilInvestigativeDemand.csv"))
+# time.sleep(2)
+
+# client.query(injunction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Injunction.csv"))
+# time.sleep(2)
+
+# client.query(controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Controller.csv"))
+# time.sleep(2)
+
+# client.query(processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Processor.csv"))
+# time.sleep(2)
+
+# client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ThirdParty.csv"))
+# time.sleep(2)
+
+# client.query(attorney_general.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/AttorneyGeneral.csv"))
+# time.sleep(2)
+
+# client.query(violation_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ViolationNotice.csv"))
+# time.sleep(2)
+
+# client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Chapter.csv"))
+# time.sleep(2)
+
+# client.query(commercial_entity.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CommercialEntity.csv"))
+# time.sleep(2)
+
+# client.query(deidentified_data.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/DeidentifiedData.csv"))
+# time.sleep(2)
+
+# client.query(public_data.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PubliclyAvailableInformation.csv"))
+# time.sleep(2)
+
+# client.query(rights_request_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/RightsRequestProcess.csv"))
+# time.sleep(2)
+
+# client.query(security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SecurityMeasures.csv"))
+# time.sleep(2)
+
+# client.query(consent.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consent.csv"))
+# time.sleep(2)
+
+# client.query(data_processing_agreement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Data%20Processing%20Agreement.csv"))
+# time.sleep(2)
+
+client.query(appeal_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20AppealMechanisms.csv"))
 time.sleep(2)
 
-client.query(section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Sections.csv'))
-time.sleep(2)
+# client.query(denial_reason.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Denial%20Reasons.csv"))
+# time.sleep(2)
 
-client.query(subsection.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Subsection.csv"))
-time.sleep(2)
+# client.query(risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Risk.csv"))
+# time.sleep(2)
 
+# client.query(benefit.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Benefit.csv"))
+# time.sleep(2)
 
-client.query(requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirements.csv'))
-time.sleep(2)
+# client.query(dark_pattern.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Dark%20Pattern.csv"))
+# time.sleep(2)
 
-client.query(role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Roles.csv'))
-time.sleep(2)
+# client.query(cure_statement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Cure%20Statement.csv"))
+# time.sleep(2)
 
+# client.query(child.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Child.csv"))
+# time.sleep(2)
 
-client.query(data_category.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DataCategories.csv'))
-time.sleep(2)
+# client.query(affilate.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Affilate.csv"))
+# time.sleep(2)
 
-client.query(event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EventTypes.csv'))
-time.sleep(2)
+# client.query(department.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Department.csv"))
+# time.sleep(2)
 
-client.query(safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Safeguards.csv'))
-time.sleep(2)
+# client.query(sub_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Subprocessor.csv"))
+# time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_EnforcementActions_Filled.csv'))
-time.sleep(2)
+# client.query(exempted_purpose.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Exempted%20Purpose.csv"))
+# time.sleep(2)
 
-client.query(data_protection_assessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DataProtectionAssessments.csv'))
-time.sleep(2)
+# client.query(pseudonymous_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Pseudonoyms%20Data.csv"))
+# time.sleep(2)
 
-client.query(implementation_spec.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_ImplementationSpecs.csv'))
-time.sleep(2)
+# client.query(authenication_method.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Authentication%20Method.csv"))
+# time.sleep(2)
 
-client.query(policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Policies.csv'))
-time.sleep(2)
-
-client.query(control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Controls.csv'))
-time.sleep(2)
-
-client.query(system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Systems.csv'))
-time.sleep(2)
-
-client.query(process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processes.csv'))
-time.sleep(2)
-
-client.query(External_Framework_Requirements.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20External%20Frameworks%20Requirement.csv'))  
-time.sleep(2)
-
-client.query(Threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Thresholds.csv'))
-time.sleep(2)
-
-client.query(Exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Exemptions.csv'))
-time.sleep(2)
-
-client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Definition.csv"))
-time.sleep(2)
-
-client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Right.csv"))
-time.sleep(2)
-
-client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consumer.csv"))
-time.sleep(2)
-
-client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Duty.csv"))
-time.sleep(2)
-
-client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20OptOut%20Mechanism.csv"))
-time.sleep(2)
-
-client.query(employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Employee.csv"))
-time.sleep(2)
-
-client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SensitiveData.csv"))
-time.sleep(2)
-
-client.query(personal_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PersonalData.csv"))
-time.sleep(2)
-
-client.query(sensitive_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SensitiveCategory.csv"))
-time.sleep(2)
-
-client.query(opt_in_consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/OptInConsent.csv"))
-time.sleep(2)
-
-client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ProcessingActivity.csv"))
-time.sleep(2)
-
-client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PrivacyNotice.csv"))
-time.sleep(2)
-
-client.query(cure_period.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CurePeriod.csv"))
-time.sleep(2)
-
-client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CivilPenalty.csv"))
-time.sleep(2)
-
-client.query(civil_investigative_demand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CivilInvestigativeDemand.csv"))
-time.sleep(2)
-
-client.query(injunction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Injunction.csv"))
-time.sleep(2)
-
-client.query(controller.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Controller.csv"))
-time.sleep(2)
-
-client.query(processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Processor.csv"))
-time.sleep(2)
-
-client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ThirdParty.csv"))
-time.sleep(2)
-
-client.query(attorney_general.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/AttorneyGeneral.csv"))
-time.sleep(2)
-
-client.query(violation_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/ViolationNotice.csv"))
-time.sleep(2)
-
-client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Chapter.csv"))
-time.sleep(2)
-
-client.query(commercial_entity.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/CommercialEntity.csv"))
-time.sleep(2)
-
-client.query(deidentified_data.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/DeidentifiedData.csv"))
-time.sleep(2)
-
-client.query(public_data.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/PubliclyAvailableInformation.csv"))
-time.sleep(2)
-
-client.query(rights_request_process.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/RightsRequestProcess.csv"))
-time.sleep(2)
-
-client.query(security_measures.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/SecurityMeasures.csv"))
-time.sleep(2)
-
-client.query(consent.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/Consent.csv"))
-time.sleep(2)
-
-client.query(data_processing_agreement.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Data%20Processing%20Agreement.csv"))
-time.sleep(2)
-
-client.query(appeal_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Appeal%20Mechanisms.csv"))
-time.sleep(2)
-
-client.query(denial_reason.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Denial%20Reasons.csv"))
-time.sleep(2)
-
-client.query(risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Risk.csv"))
-time.sleep(2)
-
-client.query(benefit.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Benefit.csv"))
-time.sleep(2)
-
-client.query(dark_pattern.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Dark%20Pattern.csv"))
-time.sleep(2)
-
-client.query(cure_statement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Cure%20Statement.csv"))
-time.sleep(2)
-
-client.query(child.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Child.csv"))
-time.sleep(2)
-
-client.query(affilate.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Affilate.csv"))
-time.sleep(2)
-
-client.query(department.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Department.csv"))
-time.sleep(2)
-
-client.query(sub_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Subprocessor.csv"))
-time.sleep(2)
-
-client.query(exempted_purpose.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Exempted%20Purpose.csv"))
-time.sleep(2)
-
-client.query(pseudonymous_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Pseudonoyms%20Data.csv"))
-time.sleep(2)
-
-client.query(authenication_method.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Authentication%20Method.csv"))
-time.sleep(2)
-
-client.query(dpa_trigger.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20DPA%20Trigger.csv"))
-time.sleep(2)
+# client.query(dpa_trigger.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20DPA%20Trigger.csv"))
+# time.sleep(2)
 
 
 #Relationships
-client.query(regulation_section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Section_Relationship.csv'))
-time.sleep(2)
+# client.query(regulation_section.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Regulation_Section_Relationship.csv'))
+# time.sleep(2)
 
-client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Requirements.csv'))
-time.sleep(2)
+# client.query(section_requirement.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Requirements.csv'))
+# time.sleep(2)
 
-client.query(requirement_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Roles.csv'))
-time.sleep(2)
+# client.query(requirement_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Roles.csv'))
+# time.sleep(2)
 
-client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Data.csv'))
-time.sleep(2)   
+# client.query(requirement_datacategory.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Data.csv'))
+# time.sleep(2)   
 
-client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20EvenType%20Relationship.csv'))
-time.sleep(2)   
+# client.query(requirement_event_type.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20EvenType%20Relationship.csv'))
+# time.sleep(2)   
 
-client.query(role_threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Thresholds.csv'))    
-time.sleep(2)   
+# client.query(role_threshold.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Role_Thresholds.csv'))    
+# time.sleep(2)   
 
-client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Role%20Exemption%20Relationship.csv'))    
-time.sleep(2)
+# client.query(role_exemption.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Role%20Exemption%20Relationship.csv'))    
+# time.sleep(2)
 
-client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirements%20Safeguard%20Relationship.csv'))
-time.sleep(2)   
+# client.query(requirement_safeguard.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirements%20Safeguard%20Relationship.csv'))
+# time.sleep(2)   
 
-client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Policy%20Relationship.csv'))
-time.sleep(2)
+# client.query(requirement_policy.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Policy%20Relationship.csv'))
+# time.sleep(2)
 
-client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Control%20Relationship.csv'))
-time.sleep(2)
+# client.query(requirement_control.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Control%20Relationship.csv'))
+# time.sleep(2)
 
-client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Control_Systems.csv'))
-time.sleep(2)
+# client.query(control_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Control_Systems.csv'))
+# time.sleep(2)
 
-client.query(requirement_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Processes.csv'))
-time.sleep(2)
+# client.query(requirement_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_Processes.csv'))
+# time.sleep(2)
 
-client.query(process_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Process_Systems.csv'))
-time.sleep(2)
+# client.query(process_system.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Process_Systems.csv'))
+# time.sleep(2)
 
-client.query(requirement_dataprotectionassessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_DPAs.csv'))
-time.sleep(2)
+# client.query(requirement_dataprotectionassessment.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Requirement_DPAs.csv'))
+# time.sleep(2)
 
-client.query(dpa_systems.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Systems.csv'))
-time.sleep(2)
+# client.query(dpa_systems.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Systems.csv'))
+# time.sleep(2)
 
-client.query(dpa_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Processes.csv'))
-time.sleep(2)
+# client.query(dpa_process.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_DPA_Processes.csv'))
+# time.sleep(2)
 
-client.query(requirement_enforcementaction.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Enforcement%20Relationship.csv'))
-time.sleep(2)
+# client.query(requirement_enforcementaction.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Enforcement%20Relationship.csv'))
+# time.sleep(2)
 
-client.query(enforcement_action_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Enforcement%20Actions%20Roles%20Relationship.csv'))
-time.sleep(2)
+# client.query(enforcement_action_role.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Enforcement%20Actions%20Roles%20Relationship.csv'))
+# time.sleep(2)
 
-client.query(section_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Enforcement.csv'))
-time.sleep(2)
+# client.query(section_enforcement_action.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Section_Enforcement.csv'))
+# time.sleep(2)
 
-client.query(processor_controller.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Controller.csv'))
-time.sleep(2)   
+# client.query(processor_controller.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Controller.csv'))
+# time.sleep(2)   
 
-client.query(processor_subcontractor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Subcontractor.csv'))
-time.sleep(2)  
+# client.query(processor_subcontractor.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA_Processor_Subcontractor.csv'))
+# time.sleep(2)  
 
 client.query(requirement_external_frameworks.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20ExternalFramework%20Relationship.csv'))
 time.sleep(2)  
 
-client.query(requirement_implementation_spec.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Implementation%20Spec%20Relationship.csv"))
-time.sleep(2)
+# client.query(requirement_implementation_spec.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Requirement%20Implementation%20Spec%20Relationship.csv"))
+# time.sleep(2)
 
-client.query(implementation_spec_department.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Implementation%20Spec%20Department%20Relationship.csv"))
-time.sleep(2)
+# client.query(implementation_spec_department.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/VCDPA/VCDPA%20-%20Implementation%20Spec%20Department%20Relationship.csv"))
+# time.sleep(2)
 
-client.query(controller_third_party)
-time.sleep(2)
+# client.query(controller_third_party)
+# time.sleep(2)
 
-client.query(duty_section)
-time.sleep(2)
+# client.query(duty_section)
+# time.sleep(2)
 
-client.query(personal_data_pseudonymous_data)
-time.sleep(2)
+# client.query(personal_data_pseudonymous_data)
+# time.sleep(2)
 
-client.query(sensitive_data_consent)
-time.sleep(2)
+# client.query(sensitive_data_consent)
+# time.sleep(2)
 
-client.query(controller_rights_request_process)
-time.sleep(2)
+# client.query(controller_rights_request_process)
+# time.sleep(2)
 
+# client.query(regulation_title)
+# time.sleep(2)
 
+# client.query(title_chapter)
+# time.sleep(2)
 
-client.query(regulation_title)
-time.sleep(2)
+# client.query(chapter_section_rel)
+# time.sleep(2)
 
-client.query(title_chapter)
-time.sleep(2)
+# client.query(section_subsection_rel)
+# time.sleep(2)
 
-client.query(chapter_section_rel)
-time.sleep(2)
+# client.query(section_definition_rel)
+# time.sleep(2)
 
-client.query(section_subsection_rel)
-time.sleep(2)
+# client.query(section_right_rel)
+# time.sleep(2)
 
-client.query(section_definition_rel)
-time.sleep(2)
+# client.query(section_dpa_rel)
+# time.sleep(2)
 
-client.query(section_right_rel)
-time.sleep(2)
+# client.query(consumer_right)
+# time.sleep(2)
 
-client.query(section_dpa_rel)
-time.sleep(2)
+# client.query(controller_consumer_duty)
+# time.sleep(2)
 
-client.query(consumer_right)
-time.sleep(2)
+# client.query(controller_threshold)
+# time.sleep(2)
 
-client.query(controller_consumer_duty)
-time.sleep(2)
+# client.query(controller_processor)
+# time.sleep(2)
 
-client.query(controller_threshold)
-time.sleep(2)
+# client.query(controller_excludes_context)
+# time.sleep(2)
 
-client.query(controller_processor)
-time.sleep(2)
+# client.query(sensitive_subtype_of_personal)
+# time.sleep(2)
 
-client.query(controller_excludes_context)
-time.sleep(2)
+# client.query(sensitive_includes_category_rel)
+# time.sleep(2)
 
-client.query(sensitive_subtype_of_personal)
-time.sleep(2)
+# client.query(sensitive_requires_consent_rel)
+# time.sleep(2)
 
-client.query(sensitive_includes_category_rel)
-time.sleep(2)
+# client.query(controller_processing)
+# time.sleep(2)
 
-client.query(sensitive_requires_consent_rel)
-time.sleep(2)
+# client.query(processing_operates_on_data)
+# time.sleep(2)
 
-client.query(controller_processing)
-time.sleep(2)
+# client.query(processing_subject_to_right)
+# time.sleep(2)
 
-client.query(processing_operates_on_data)
-time.sleep(2)
+# client.query(processing_requires_dpa)
+# time.sleep(2)
 
-client.query(processing_subject_to_right)
-time.sleep(2)
+# client.query(controller_privacy_notice)
+# time.sleep(2)
 
-client.query(processing_requires_dpa)
-time.sleep(2)
+# client.query(privacy_notice_discloses_datacategory)
+# time.sleep(2)
 
-client.query(controller_privacy_notice)
-time.sleep(2)
+# client.query(privacy_notice_optout_mechanism)
+# time.sleep(2)
 
-client.query(privacy_notice_discloses_datacategory)
-time.sleep(2)
+# client.query(controller_must_obtain_optin)
+# time.sleep(2)
 
-client.query(privacy_notice_optout_mechanism)
-time.sleep(2)
+# client.query(ag_enforces_regulation)
+# time.sleep(2)
 
-client.query(controller_must_obtain_optin)
-time.sleep(2)
+# client.query(ag_issues_violation_notice)
+# time.sleep(2)
 
-client.query(ag_enforces_regulation)
-time.sleep(2)
+# client.query(violation_triggers_cure)
+# time.sleep(2)
 
-client.query(ag_issues_violation_notice)
-time.sleep(2)
+# client.query(ag_seeks_penalty)
+# time.sleep(2)
 
-client.query(violation_triggers_cure)
-time.sleep(2)
+# client.query(ag_can_issue_cid)
+# time.sleep(2)
 
-client.query(ag_seeks_penalty)
-time.sleep(2)
+# client.query(ag_can_seek_injunction)
+# time.sleep(2)
 
-client.query(ag_can_issue_cid)
-time.sleep(2)
+# client.query(violation_requests_dpa)
+# time.sleep(2)
 
-client.query(ag_can_seek_injunction)
-time.sleep(2)
+# client.query(controller_contract)
+# time.sleep(2)
 
-client.query(violation_requests_dpa)
-time.sleep(2)
+# client.query(processor_contract)
+# time.sleep(2)
 
-client.query(controller_contract)
-time.sleep(2)
+# client.query(processor_subprocessor)
+# time.sleep(2)
 
-client.query(processor_contract)
-time.sleep(2)
+# client.query(affiliate_controller)
+# time.sleep(2)
 
-client.query(processor_subprocessor)
-time.sleep(2)
-
-client.query(affiliate_controller)
-time.sleep(2)
-
-client.query(rights_request_mechanism)
-time.sleep(2)
+# client.query(rights_request_mechanism)
+# time.sleep(2)
 
 client.query(appeal_mechanism_denial_reason)
 time.sleep(2)
 
-client.query(rights_request_authentication_method)
-time.sleep(2)
+# client.query(rights_request_authentication_method)
+# time.sleep(2)
 
-client.query(dpa_risk)
-time.sleep(2)
+# client.query(dpa_risk)
+# time.sleep(2)
 
-client.query(dpa_benefit)
-time.sleep(2)
+# client.query(dpa_benefit)
+# time.sleep(2)
 
-client.query(dpa_dpa_trigger)
-time.sleep(2)
+# client.query(dpa_dpa_trigger)
+# time.sleep(2)
 
-client.query(dark_pattern_consent)
-time.sleep(2)
+# client.query(dark_pattern_consent)
+# time.sleep(2)
 
-client.query(child_implies_sensitive)
-time.sleep(2)
+# client.query(child_implies_sensitive)
+# time.sleep(2)
 
-client.query(pseudonymous_exempted_purpose)
-time.sleep(2)
+# client.query(pseudonymous_exempted_purpose)
+# time.sleep(2)
 
-client.query(violation_notice_cure_statement)
-time.sleep(2)
+# client.query(violation_notice_cure_statement)
+# time.sleep(2)
 
-client.query(cure_statement_attorney_general)
-time.sleep(2)
+# client.query(cure_statement_attorney_general)
+# time.sleep(2)
 
-client.query(department_processing_activity)
-time.sleep(2)
+# client.query(department_processing_activity)
+# time.sleep(2)
 
-client.query(department_security_measures)
-time.sleep(2)
+# client.query(department_security_measures)
+# time.sleep(2)
 
-client.query(personal_data_deidentified_data)
-time.sleep(2)
+# client.query(personal_data_deidentified_data)
+# time.sleep(2)
 
-client.query(personal_data_publicly_available_information)
-time.sleep(2)
+# client.query(personal_data_publicly_available_information)
+# time.sleep(2)
 
 
 

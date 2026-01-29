@@ -1,0 +1,8 @@
+Source_ID,Target_ID,source_framework,target_framework,strength,justification,mapping_type
+VCDPA-59.1-577-R1,GDPR-Article_15,VCDPA 2023,GDPR,High,Text similarity score: 0.86,Automated Inference
+VCDPA-59.1-577-R3,GDPR-Article_15,VCDPA 2023,GDPR,Medium,Text similarity score: 0.47,Automated Inference
+VCDPA-59.1-578-R1,NIST-PR.IP-1,VCDPA 2023,NIST Privacy Framework,Medium,Text similarity score: 0.39,Automated Inference
+VCDPA-59.1-578-R3,GDPR-Article_32,VCDPA 2023,GDPR,Medium,Text similarity score: 0.37,Automated Inference
+VCDPA-59.1-578-R5,NIST-PR.IP-4,VCDPA 2023,NIST Privacy Framework,Medium,Text similarity score: 0.33,Automated Inference
+VCDPA-59.1-580-R1,NIST-PR.PO-3,VCDPA 2023,NIST Privacy Framework,Medium,Text similarity score: 0.40,Automated Inference
+VCDPA-59.1-580-R2,NIST-PR.PO-3,VCDPA 2023,NIST Privacy Framework,Medium,Text similarity score: 0.61,Automated Inference
