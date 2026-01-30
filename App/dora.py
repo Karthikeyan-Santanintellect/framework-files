@@ -110,10 +110,10 @@ ict_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (ic:ICTControl {id: row.id})
 ON CREATE SET
-    ctrl.name = row.name,
-    ctrl.legal_reference = row.legal_reference,
-    ctrl.control_type = row.control_type,
-    ctrl.methods = row.methods;
+    ic.name = row.name,
+    ic.legal_reference = row.legal_reference,
+    ic.control_type = row.control_type,
+    ic.methods = row.methods;
 """
 
 # ICT Service
@@ -304,204 +304,245 @@ ON CREATE SET
 
 # Relationships
 
-# Regulation to Chapters
 reg_to_chapters = """
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (c:Chapter{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (c:Chapter)
 MERGE (reg)-[:REGULATION_CONTAINS_CHAPTER]->(c);
 """
+
 # Chapters to Articles
+# (Uses the parent_chapter ID from your CSV)
 chapters_to_articles = """
-MATCH (c:Chapter{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (a:Article{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (c:Chapter)
+MATCH (a:Article)
+WHERE a.parent_chapter = c.id
 MERGE (c)-[:CHAPTER_CONTAINS_ARTICLE]->(a);
 """
+
 # Articles to Requirements
+# (Uses the article_id from your CSV)
 articles_to_requirements = """
-MATCH (a:Article{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (re:Requirements{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (a:Article)
+MATCH (re:Requirements)
+WHERE re.article_id = a.id
 MERGE (a)-[:ARTICLE_CONTAINS_REQUIREMENT]->(re);
 """
+
 # Competent Authority to Financial Entity
+# (Generic link: Supervises entities in the same sector/region)
 competent_authority_financial_entity = """
-MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ca:CompetentAuthority)
+MATCH (fe:FinancialEntity)
 MERGE (ca)-[:COMPETENT_AUTHORITY_SUPERVISES_FINANCIAL_ENTITY]->(fe);
 """
+
 # Lead Overseer to Critical ICT Providers
 lead_overseer_critical_ict_providers = """
-MATCH (lo:LeadOverseer{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ctp:CriticalICTProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (lo:LeadOverseer)
+MATCH (ctp:CriticalICTProvider)
 MERGE (lo)-[:LEAD_OVERSEER_OVERSEES_CRITICAL_ICT_PROVIDER]->(ctp);
 """
+
 # Management Body to Financial Entity
 management_body_financial_entity = """
-MATCH (mb:ManagementBody{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (mb:ManagementBody)
+MATCH (fe:FinancialEntity)
 MERGE (mb)-[:MANAGEMENT_BODY_GOVERNS_FINANCIAL_ENTITY]->(fe);
 """
+
 # Joint Examination Team to Lead Overseer
 joint_examination_team_lead_overseer = """
-MATCH (je:JointExaminationTeam{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (lo:LeadOverseer{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (je:JointExaminationTeam)
+MATCH (lo:LeadOverseer)
 MERGE (je)-[:JOINT_EXAMINATION_TEAM_ASSISTED_BY_LEAD_OVERSEER]->(lo);
 """
+
 # Oversight Forum to Lead Overseer
 oversight_forum_lead_overseer = """
-MATCH (of:OversightForum{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (lo:LeadOverseer{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (of:OversightForum)
+MATCH (lo:LeadOverseer)
 MERGE (of)-[:OVERSIGHT_FORUM_COORDINATES_LEAD_OVERSEER]->(lo);
 """
+
 # Financial Entity to ICT Risk
 financial_entity_ict_risk = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity)
+MATCH (ir:ICTRisk)
 MERGE (fe)-[:FINANCIAL_ENTITY_MANAGES_ICT_RISK]->(ir);
 """
+
 # ICT Control Mitigates to ICT Risk
+# (Fixed the '2022/2022' typo in your original variable name)
 ict_control_mitigates_ict_risk = """
-MATCH (ic:ICTControl{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2022/2554'})
+MATCH (ic:ICTControl)
+MATCH (ir:ICTRisk)
 MERGE (ic)-[:ICT_CONTROL_MITIGATES_ICT_RISK]->(ir);
 """
+
 # Financial Entity to Assets
 financial_entity_owns_assets = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ia:InformationAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity)
+MATCH (ia:InformationAsset)
+MATCH (ica:ICTAsset)
 MERGE (fe)-[:FINANCIAL_ENTITY_OWNS_INFORMATION_ASSET]->(ia)
 MERGE (fe)-[:FINANCIAL_ENTITY_OWNS_ASSETS]->(ica);
 """
+
 # ICT Service to Assets
+# (Fixed typo: REPLIES -> RELIES)
 ict_service_assets = """
-MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ica:ICTAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
-MERGE (is)-[:ICT_SERVICE_REPLIES_ON_ICT_ASSET]->(ica);
+MATCH (is:ICTService)
+MATCH (ica:ICTAsset)
+MERGE (is)-[:ICT_SERVICE_RELIES_ON_ICT_ASSET]->(ica);
 """
+
 # Network Systems to ICT Services
 network_systems_ict_services = """
-MATCH (ns:NetworkSystems{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ns:NetworkSystems)
+MATCH (is:ICTService)
 MERGE (ns)-[:NETWORK_SYSTEMS_SUPPORT_ICT_SERVICE]->(is);
 """
+
 # Financial Entity to Major Incident
 financial_entity_reports_major_incident = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (mi:MajorIncident{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity)
+MATCH (mi:MajorIncident)
 MERGE (fe)-[:FINANCIAL_ENTITY_REPORTS_MAJOR_INCIDENT]->(mi);
 """
+
 # Major Incident Reported to Competent Authority
 major_incident_competent_authority = """
-MATCH (mi:MajorIncident{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (mi:MajorIncident)
+MATCH (ca:CompetentAuthority)
 MERGE (mi)-[:MAJOR_INCIDENT_REPORTED_TO_COMPETENT_AUTHORITY]->(ca);
 """
+
 # Financial Entity to TLPT
 financial_entity__tlpt = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (tlp:ThreatLedPenetrationTest{regional_standard_regulation_id: 'DORA 2022/2554'}) 
+MATCH (fe:FinancialEntity)
+MATCH (tlp:ThreatLedPenetrationTest) 
 MERGE (fe)-[:FINANCIAL_ENTITY_CONDUCTS_THREAT_LED_PENETRATION_TEST]->(tlp); 
 """
+
 # Remediation Plan to TLPT
 remediation_plan_tlpt = """
-MATCH (rp:RemediationPlan{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (tlp:ThreatLedPenetrationTest{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (rp:RemediationPlan)
+MATCH (tlp:ThreatLedPenetrationTest)
 MERGE (rp)-[:REMEDIATION_PLAN_TRIGGERED_BY_THREAT_LED_PENETRATION_TEST]->(tlp);
 """
+
 # Financial Entity Third Party
 financial_entity_third_party = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity)
+MATCH (its:ICTThirdPartyServiceProvider)
 MERGE (fe)-[:FINANCIAL_ENTITY_CONTRACTS_THIRD_PARTY_SERVICE_PROVIDER]->(its);
 """
+
 # Third Party ICT Service
+# (Fixed the double 'MATCH (its:MATCH' error)
 third_party_ict_service = """
-MATCH (its:MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (its:ICTThirdPartyServiceProvider)
+MATCH (is:ICTService)
 MERGE (its)-[:THIRD_PARTY_PROVIDES_ICT_SERVICE]->(is);
 """
+
 # Third Party Subsidiary
 third_party_subsidiary = """
-MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (su:Subsidiary{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (its:ICTThirdPartyServiceProvider)
+MATCH (su:Subsidiary)
 MERGE (its)-[:THIRD_PARTY_HAS_SUBSIDIARY]->(su);
 """
+
 # Third Party to Processing Location
 third_party_processing_location = """
-MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (pl:ProcessingLocation{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (its:ICTThirdPartyServiceProvider)
+MATCH (pl:ProcessingLocation)
 MERGE (its)-[:THIRD_PARTY_OPERATES_IN_PROCESSING_LOCATION]->(pl);
 """
-# Regulation to jurisdiction
+
+# Regulation to Jurisdiction
 reg_jurisdiction = """
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ju:Jurisdiction{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ju:Jurisdiction)
 MERGE (reg)-[:REGULATION_CONTAINS_JURISDICTION]->(ju);
 """
+
 # Competent Authority to Jurisdiction
 competent_authority_jurisdiction = """
-MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ju:Jurisdiction{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ca:CompetentAuthority)
+MATCH (ju:Jurisdiction)
 MERGE (ca)-[:COMPETENT_AUTHORITY_SUPERVISES_JURISDICTION]->(ju);
 """
+
 # Financial Entity to Critical Functions
 financial_entity_critical_functions = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (cf:CriticalFunction{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity)
+MATCH (cf:CriticalFunction)
 MERGE (fe)-[:FINANCIAL_ENTITY_CRITICAL_FUNCTION]->(cf);
 """
+
 # ICT Services to Critical Functions
 ict_services_critical_functions = """
-MATCH (is:ICTService{regional_standard_regulation_id : 'DORA 2022/2554'})
-MATCH (cf:CriticalFunction{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (is:ICTService)
+MATCH (cf:CriticalFunction)
 MERGE (is)-[:ICT_SERVICE_SUPPORTS_CRITICAL_FUNCTION]->(cf);
 """
+
 # Cyber Threat to ICT Risk
 cyber_threat_ict_risk = """
-MATCH (ct:CyberThreat{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ct:CyberThreat)
+MATCH (ir:ICTRisk)
 MERGE (ct)-[:CYBER_THREAT_INCREASES_ICT_RISK]->(ir);
 """
+
 # Cyber Threat to Major Incidents
 cyber_threat_major_incident = """
-MATCH (ct:CyberThreat{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (mi:MajorIncident{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ct:CyberThreat)
+MATCH (mi:MajorIncident)
 MERGE (ct)-[:CYBER_THREAT_CAN_CAUSE_MAJOR_INCIDENT]->(mi);
 """
+
 # Financial Entity to Facility
 financial_entity_facility = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (f:Facility{regional_standard_regulation_id: 'DORA 2022/2554'})
-MERGE (fe)-[:FINANCIAL_ENTITY_OPERATES_AT_FACILITY]->(f);   
+MATCH (fe:FinancialEntity)
+MATCH (f:Facility)
+MERGE (fe)-[:FINANCIAL_ENTITY_OPERATES_AT_FACILITY]->(f);   
 """
-# Facility houses ICT Assets (Hardware/Servers)
+
+# Facility houses ICT Assets
+# (Fixed the 'ia' vs 'ica' variable mismatch)
 facility_ict_asset = """
-MATCH (f:Facility{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ica:ICTAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
-WHERE ia.category IN ['Hardware', 'Infrastructure', 'Servers']
+MATCH (f:Facility)
+MATCH (ica:ICTAsset)
+WHERE ica.category IN ['Hardware', 'Infrastructure', 'Servers']
 MERGE (f)-[:FACILITY_HOUSES_ICT_ASSET]->(ica);
 """
+
 # Financial Entity to Legacy ICT Systems
 financial_entity_legacy_ict_systems = """
-MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (lis:LegacyICTSystems{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity)
+MATCH (lis:LegacyICTSystems)
 MERGE (fe)-[:FINANCIAL_ENTITY_USES_LEGACY_ICT_SYSTEMS]->(lis);
 """
+
 # Legacy System to ICT Risk
 legacy_system_ict_risk = """
-MATCH (lis:LegacyICTSystems{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (lis:LegacyICTSystems)
+MATCH (ir:ICTRisk)
 MERGE (lis)-[:LEGACY_SYSTEM_POSES_ICT_RISK]->(ir);
 """
+
 # Competent Authority to Penalty
 competent_authority_penalty = """
-MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (pe:Penalty{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ca:CompetentAuthority)
+MATCH (pe:Penalty)
 MERGE (ca)-[:COMPETENT_AUTHORITY_ENFORCES_PENALTY]->(pe);
 """
-# Regulation to  Penalty
+
+# Regulation to Penalty
 reg_defines_penalty = """
-MATCH (reg:RegionalStandardAndRegulation{regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (pe:Penalty{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (pe:Penalty)
 MERGE (reg)-[:REGULATION_DEFINES_PENALTY]->(pe);
 """
 
@@ -528,92 +569,90 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_regulation)
 time.sleep(2)
 
-client.query(chapter.replace('$file_path',""))
+client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Chapter.csv"))
 time.sleep(2)
 
-client.query(article.replace('$file_path',""))
+client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Article.csv"))
 time.sleep(2)
 
-client.query(competent_authority.replace('$file_path',""))
+client.query(competent_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Competent%20Authority.csv"))
 time.sleep(2)
 
-client.query(critical_functions.replace('$file_path',""))
+client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20Funtions.csv"))
 time.sleep(2)
 
-client.query(critical_ict_proider.replace('$file_path',""))
+client.query(critical_ict_proider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20ICT%20Provider.csv"))
 time.sleep(2)
 
-client.query(cyber_threat.replace('$file_path',""))
+client.query(cyber_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Cyber%20Threat.csv"))
 time.sleep(2)
 
-client.query(facility.replace('$file_path',""))
+client.query(facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Facility.csv"))
 time.sleep(2)
 
-
-client.query(ict_risk.replace('$file_path',""))
+client.query(ict_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Risk.csv"))
 time.sleep(2)
 
-
-client.query(financial_entity.replace('$file_path',""))
-time.sleep(2)
-
-
-client.query(ict_control.replace('$file_path',""))
-time.sleep(2)
-
-client.query(ict_service.replace('$file_path',""))
+client.query(financial_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Financial%20Entity.csv"))
 time.sleep(2)
 
 
-client.query(information_asset.replace('$file_path',""))
+client.query(ict_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Control.csv"))
 time.sleep(2)
 
-client.query(ict_asset.replace('$file_path',"")) 
+client.query(ict_service.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Service.csv"))
+time.sleep(2)
+
+
+client.query(information_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Inforamtion%20Asset.csv"))
+time.sleep(2)
+
+client.query(ict_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Asset.csv")) 
 time.sleep(2) 
 
-client.query(joint_examination_term.replace('$file_path',""))
+client.query(joint_examination_term.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Joint%20Examination%20Team.csv"))
 time.sleep(2)
 
-client.query(jurisdiction.replace('$file_path',""))
+client.query(jurisdiction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Jurisdiction.csv"))
 time.sleep(2)
 
-client.query(lead_overeseer.replace('$file_path',""))
+client.query(lead_overeseer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Lead%20Overseer.csv"))
 time.sleep(2)
 
-client.query(legacy_ict_systems.replace('$file_path',""))
+client.query(legacy_ict_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Legacy%20ICT%20System.csv"))
 time.sleep(2)
 
-client.query(major_incident.replace('$file_path',""))
+client.query(major_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Major%20Incident.csv"))
 time.sleep(2)
 
-client.query(management_body.replace('$file_path',""))
+client.query(management_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Management%20Body.csv"))
 time.sleep(2)
 
-client.query(network_systems.replace('$file_path',""))
+client.query(network_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Network%20Systems.csv"))
 time.sleep(2)
 
-client.query(oversight_forum.replace('$file_path',""))
+client.query(oversight_forum.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Oversight%20Forum.csv"))
 time.sleep(2)
 
-client.query(penalty.replace('$file_path',""))
+client.query(penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Penalty.csv"))
 time.sleep(2)
 
-client.query(processing_location.replace('$file_path',""))
+client.query(processing_location.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Processing%20Location.csv"))
 time.sleep(2)
 
-client.query(remediation_plan.replace('$file_path',""))
+client.query(remediation_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Remediation%20Plan.csv"))
 time.sleep(2)
 
-client.query(requirements.replace('$file_path',""))
+client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Requirements.csv"))
 time.sleep(2)
               
-client.query(third_party_service_provider.replace('$file_path',""))
+client.query(third_party_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-ICT%20Third%20Party%20Service%20Provider.csv"))
 time.sleep(2)
 
-client.query(subsidiary.replace('$file_path',""))
+client.query(subsidiary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Subsidiary.csv"))
 time.sleep(2)
 
-client.query(threat_led_penetration_test.replace('$file_path',""))
+client.query(threat_led_penetration_test.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Threat%20Led%20Penetration%20Test.csv"))
 time.sleep(2)
 
 # Relationships

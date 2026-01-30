@@ -1,0 +1,1095 @@
+{
+  "nodes": [
+    {
+      "mainLabel": "RegionalStandardAndRegulation",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:104",
+      "labels": [
+        "RegionalStandardAndRegulation"
+      ],
+      "regional_standard_regulation_id": "DORA 2022/2554",
+      "citation": "Regulation (EU) 2022/2554",
+      "jurisdiction": "EU/EEA",
+      "name": "Digital Operational Resilience Act",
+      "effective_date": "2025-01-17",
+      "description": "EU regulation on digital operational resilience for the financial sector, ensuring financial entities can withstand, respond to, and recover from ICT-related disruptions and threats.",
+      "publication_date": "2022-12-27",
+      "type": "EU Legislative",
+      "version": "2022/2554"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:105",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "General provisions",
+      "chapter_number": "I",
+      "description": "Subject matter, scope, and definitions [cite: 567,568]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:106",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "ICT risk management",
+      "chapter_number": "II",
+      "description": "Governance, systems, identification, and protection [cite: 737,738]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:107",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "ICT-related incident management, classification and reporting",
+      "chapter_number": "III",
+      "description": "Process, classification, and reporting obligations [cite: 1007,1008]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:108",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "Digital operational resilience testing",
+      "chapter_number": "IV",
+      "description": "General requirements and advanced testing (TLPT) [cite: 1140,1141]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:109",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "Managing of ICT third-party risk",
+      "chapter_number": "V",
+      "description": "Key principles and oversight framework [cite: 1234,1235]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:110",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "Information-sharing arrangements",
+      "chapter_number": "VI",
+      "description": "Exchange of cyber threat intelligence [cite: 1711,1712]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Chapter",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:111",
+      "labels": [
+        "Chapter"
+      ],
+      "name": "Competent authorities",
+      "chapter_number": "VII",
+      "description": "Supervision, enforcement, and penalties [cite: 1726,1727]",
+      "label": "Chapter"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:112",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "1",
+      "name": "Subject matter",
+      "parent_chapter": "CH_01 [cite: 569,570]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:113",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "2",
+      "name": "Scope",
+      "parent_chapter": "CH_01 [cite: 590,591]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:114",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "3",
+      "name": "Definitions",
+      "parent_chapter": "CH_01 [cite: 638,639]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:115",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "5",
+      "name": "Governance and organisation",
+      "parent_chapter": "CH_02 [cite: 740,741]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:116",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "6",
+      "name": "ICT risk management framework",
+      "parent_chapter": "CH_02 [cite: 764,766]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:117",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "8",
+      "name": "Identification",
+      "parent_chapter": "CH_02 [cite: 810,811]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:118",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "12",
+      "name": "Backup policies and procedures",
+      "parent_chapter": "CH_02 [cite: 893,894]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:119",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "17",
+      "name": "ICT-related incident management process",
+      "parent_chapter": "CH_03 [cite: 1010,1011]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:120",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "24",
+      "name": "Performance of digital operational resilience testing",
+      "parent_chapter": "CH_04 [cite: 1142,1144]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "Article",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:121",
+      "labels": [
+        "Article"
+      ],
+      "article_number": "30",
+      "name": "Key contractual provisions",
+      "parent_chapter": "CH_05 [cite: 1317,1319]",
+      "label": "Article"
+    },
+    {
+      "mainLabel": "CompetentAuthority",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:122",
+      "labels": [
+        "CompetentAuthority"
+      ],
+      "legal_reference": "Art 46",
+      "sector_responsibility": "Credit institutions, Investment firms, Insurance, etc. [cite: 1731, 1735, 1746]",
+      "primary_powers": "Supervisory, Investigatory, Sanctioning [cite: 522, 1785]",
+      "name": "National Regulator",
+      "label": "CompetentAuthority"
+    },
+    {
+      "mainLabel": "CompetentAuthority",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:123",
+      "labels": [
+        "CompetentAuthority"
+      ],
+      "legal_reference": "Art 46(a)",
+      "sector_responsibility": "Significant Banking Sector [cite: 346, 1731]",
+      "primary_powers": "Prudential supervision of significant credit institutions [cite: 1731]",
+      "name": "ECB (Significant)",
+      "label": "CompetentAuthority"
+    },
+    {
+      "mainLabel": "CriticalICTProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:124",
+      "labels": [
+        "CriticalICTProvider"
+      ],
+      "legal_reference": "Art 31",
+      "name": "Designated Critical Provider",
+      "oversight_status": "Subject to Union Oversight Framework and Lead Overseer recommendations [cite: 200, 428]",
+      "designation_criteria": "Systemic impact, Substitutability, G-SII reliance [cite: 525, 1372, 1374]"
+    },
+    {
+      "mainLabel": "CyberThreat",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:125",
+      "labels": [
+        "CyberThreat"
+      ],
+      "notification_type": "Voluntary: Encouraged to notify authorities and potentially affected clients",
+      "legal_reference": "Art 3(13)",
+      "name": "Significant Cyber Threat",
+      "threat_type": "Malware, Phishing, Ransomware campaign, DDoS",
+      "properties": "Status: Potential; Risk: High; Intelligence: Shared"
+    },
+    {
+      "mainLabel": "CyberThreat",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:126",
+      "labels": [
+        "CyberThreat"
+      ],
+      "notification_type": "Voluntary: Shared via information-sharing arrangements (Art 45)",
+      "legal_reference": "Art 3(13)",
+      "name": "Zero-Day Vulnerability",
+      "threat_type": "Exploitation of unknown software flaws",
+      "properties": "Status: Potential; Risk: Critical"
+    },
+    {
+      "mainLabel": "CyberThreat",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:127",
+      "labels": [
+        "CyberThreat"
+      ],
+      "notification_type": "Internal tracking; Voluntary reporting if systemic",
+      "legal_reference": "Art 3(13)",
+      "name": "Insider Threat",
+      "threat_type": "Malicious or negligent internal actor",
+      "properties": "Status: Potential; Risk: Medium"
+    },
+    {
+      "mainLabel": "Facility",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:128",
+      "labels": [
+        "Facility"
+      ],
+      "legal_reference": "Art 39",
+      "inspection_rights": "Unrestricted rights of onsite and off-site inspection",
+      "name": "ICT Facility",
+      "facility_types": "Head offices, Operation centres, Data centres, Secondary premises"
+    },
+    {
+      "mainLabel": "ICTRisk",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:129",
+      "labels": [
+        "ICTRisk"
+      ],
+      "legal_reference": "Art 3(5)",
+      "name": "ICT Risk",
+      "description": "Any circumstance producing an adverse effect on network systems",
+      "source": "Internal/External",
+      "impact_area": "Confidentiality, Integrity, Availability"
+    },
+    {
+      "mainLabel": "ICTRisk",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:130",
+      "labels": [
+        "ICTRisk"
+      ],
+      "legal_reference": "Art 29",
+      "name": "Concentration Risk",
+      "description": "Risk arising from reliance on a single/dominant ICT third-party",
+      "source": "External Vendor",
+      "impact_area": "Supply Chain Continuity"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:131",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Credit Institution",
+      "legal_reference": "Art 2(1)(a)",
+      "size_attribute": "Large/Significant",
+      "compliance_regime": "Full DORA",
+      "name": "Credit Institution"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:132",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Payment Institution",
+      "legal_reference": "Art 2(1)(b)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Payment Institution"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:133",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Payment Institution",
+      "legal_reference": "Art 2(1)(b)",
+      "size_attribute": "Small/Exempt",
+      "compliance_regime": "Simplified (Art 16)",
+      "name": "Exempt Payment Institution"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:134",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "AISP",
+      "legal_reference": "Art 2(1)(c)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Account Information Provider"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:135",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "E-Money",
+      "legal_reference": "Art 2(1)(d)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Electronic Money Institution"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:136",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Investment Firm",
+      "legal_reference": "Art 2(1)(e)",
+      "size_attribute": "Large/Interconnected",
+      "compliance_regime": "Full DORA",
+      "name": "Investment Firm"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:137",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Investment Firm",
+      "legal_reference": "Art 2(1)(e)",
+      "size_attribute": "Small/Non-interconnected",
+      "compliance_regime": "Simplified (Art 16)",
+      "name": "Small Investment Firm"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:138",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "CASP",
+      "legal_reference": "Art 2(1)(f)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Crypto-Asset Provider"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:139",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "CSD",
+      "legal_reference": "Art 2(1)(g)",
+      "size_attribute": "Systemic",
+      "compliance_regime": "Full DORA + Advanced Testing",
+      "name": "Central Securities Depository"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:140",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "CCP",
+      "legal_reference": "Art 2(1)(h)",
+      "size_attribute": "Systemic",
+      "compliance_regime": "Full DORA + Advanced Testing",
+      "name": "Central Counterparty"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:141",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Trading Venue",
+      "legal_reference": "Art 2(1)(i)",
+      "size_attribute": "Systemic",
+      "compliance_regime": "Full DORA + Advanced Testing",
+      "name": "Trading Venue"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:142",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Trade Repository",
+      "legal_reference": "Art 2(1)(j)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Trade Repository"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:143",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Manager of Alternative Investment Funds",
+      "legal_reference": "Art 2(1)(k)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "AIFM"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:144",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "UCITS Management Company",
+      "legal_reference": "Art 2(1)(l)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Management Company"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:145",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "DRSP",
+      "legal_reference": "Art 2(1)(m)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Data Reporting Provider"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:146",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Insurance/Reinsurance",
+      "legal_reference": "Art 2(1)(n)",
+      "size_attribute": "Large",
+      "compliance_regime": "Full DORA",
+      "name": "Insurance Undertaking"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:147",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Intermediary",
+      "legal_reference": "Art 2(1)(o)",
+      "size_attribute": "SME/Micro",
+      "compliance_regime": "Exempt (Art 2(3)(e))",
+      "name": "Insurance Intermediary"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:148",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Occupational Retirement Provision",
+      "legal_reference": "Art 2(1)(p)",
+      "size_attribute": "Large",
+      "compliance_regime": "Full DORA",
+      "name": "IORP"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:149",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Occupational Retirement Provision",
+      "legal_reference": "Art 2(1)(p)",
+      "size_attribute": "Small (<100 members)",
+      "compliance_regime": "Simplified (Art 16)",
+      "name": "Small IORP"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:150",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "CRA",
+      "legal_reference": "Art 2(1)(q)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Credit Rating Agency"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:151",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Critical Benchmarks",
+      "legal_reference": "Art 2(1)(r)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Benchmark Administrator"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:152",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Crowdfunding",
+      "legal_reference": "Art 2(1)(s)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Crowdfunding Provider"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:153",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "Securitisation",
+      "legal_reference": "Art 2(1)(t)",
+      "size_attribute": "Standard",
+      "compliance_regime": "Full DORA",
+      "name": "Securitisation Repository"
+    },
+    {
+      "mainLabel": "FinancialEntity",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:154",
+      "labels": [
+        "FinancialEntity"
+      ],
+      "entity_type": "General Microenterprise",
+      "legal_reference": "Art 3(60)",
+      "size_attribute": "<10 persons/\u20ac2m turnover",
+      "compliance_regime": "Exempt from TLPT/Audits",
+      "name": "Microenterprise"
+    },
+    {
+      "mainLabel": "ICTControl",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:155",
+      "labels": [
+        "ICTControl"
+      ],
+      "legal_reference": "Art 9(4)(c)",
+      "methods": "Identity Management, MFA, Least Privilege",
+      "name": "Access Rights",
+      "control_type": "Preventive"
+    },
+    {
+      "mainLabel": "ICTControl",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:156",
+      "labels": [
+        "ICTControl"
+      ],
+      "legal_reference": "Art 9(2)",
+      "methods": "Data-at-rest encryption, Data-in-transit encryption",
+      "name": "Encryption",
+      "control_type": "Protective"
+    },
+    {
+      "mainLabel": "ICTControl",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:157",
+      "labels": [
+        "ICTControl"
+      ],
+      "legal_reference": "Art 9(4)(a)",
+      "methods": "Vulnerability remediation, Software updates",
+      "name": "Patch Management",
+      "control_type": "Corrective"
+    },
+    {
+      "mainLabel": "ICTControl",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:158",
+      "labels": [
+        "ICTControl"
+      ],
+      "legal_reference": "Art 10",
+      "methods": "IDS/IPS, SIEM, Network Monitoring",
+      "name": "Detection Systems",
+      "control_type": "Detective"
+    },
+    {
+      "mainLabel": "ICTService",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:159",
+      "labels": [
+        "ICTService"
+      ],
+      "service_type": "Digital and data services",
+      "scope_exclusions": "Excludes traditional analogue telephone services (PSTN/POTS)",
+      "legal_reference": "Art 3(21)",
+      "mandatory_attributes": "Ongoing basis; Provision of technical support; Software/Firmware updates",
+      "name": "ICT Service"
+    },
+    {
+      "mainLabel": "InformationAsset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:160",
+      "labels": [
+        "InformationAsset"
+      ],
+      "legal_reference": "Art 3(6)",
+      "name": "Client Data",
+      "classification": "Confidentiality, Integrity, Availability [cite: 648,839]"
+    },
+    {
+      "mainLabel": "InformationAsset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:161",
+      "labels": [
+        "InformationAsset"
+      ],
+      "legal_reference": "Art 3(6)",
+      "name": "Financial Records",
+      "classification": "High Integrity [cite: 648,831]"
+    },
+    {
+      "mainLabel": "InformationAsset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:162",
+      "labels": [
+        "InformationAsset"
+      ],
+      "legal_reference": "Art 3(6)",
+      "name": "Proprietary Algorithms",
+      "classification": "Intellectual Property"
+    },
+    {
+      "mainLabel": "ICTAsset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:163",
+      "labels": [
+        "ICTAsset"
+      ],
+      "legal_reference": "Art 3(7)",
+      "name": "Computer Software",
+      "category": "Software",
+      "properties": "Inventory must be maintained and updated [cite: 650,821]"
+    },
+    {
+      "mainLabel": "ICTAsset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:164",
+      "labels": [
+        "ICTAsset"
+      ],
+      "legal_reference": "Art 3(7)",
+      "name": "Hardware",
+      "category": "Hardware",
+      "properties": "Includes equipment on remote sites [cite: 650,817]"
+    },
+    {
+      "mainLabel": "ICTAsset",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:165",
+      "labels": [
+        "ICTAsset"
+      ],
+      "legal_reference": "Art 6(2)",
+      "name": "Servers",
+      "category": "Infrastructure",
+      "properties": "Must be adequately protected from unauthorized access [cite: 768]"
+    },
+    {
+      "mainLabel": "JointExaminationTeam",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:166",
+      "labels": [
+        "JointExaminationTeam"
+      ],
+      "legal_reference": "Art 40",
+      "composition": "Staff from ESAs and relevant Competent Authorities [cite: 1634]",
+      "name": "JET",
+      "tasks": "Prepare and execute oversight activities and follow-ups "
+    },
+    {
+      "mainLabel": "Jurisdiction",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:167",
+      "labels": [
+        "Jurisdiction"
+      ],
+      "legal_reference": "Art 1",
+      "scope": "All Member States; Directly applicable",
+      "name": "European Union",
+      "authority_level": "Union-wide"
+    },
+    {
+      "mainLabel": "Jurisdiction",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:168",
+      "labels": [
+        "Jurisdiction"
+      ],
+      "legal_reference": "Art 2(4)",
+      "scope": "Designation of national competent authorities; Potential national exemptions",
+      "name": "Member State",
+      "authority_level": "National"
+    },
+    {
+      "mainLabel": "LeadOverseer",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:169",
+      "labels": [
+        "LeadOverseer"
+      ],
+      "legal_reference": "Art 33",
+      "name": "Oversight Authority",
+      "oversight_tools": "Individual oversight plans, investigations, onsite inspections [cite: 490, 1462]",
+      "assigned_esa": "EBA, ESMA, or EIOPA [cite: 148, 1370]"
+    },
+    {
+      "mainLabel": "LegacyICTSystems",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:170",
+      "labels": [
+        "LegacyICTSystems"
+      ],
+      "requirements": "Mandatory annual specific risk assessment (Art 8(7))",
+      "risk_attributes": "Technological/Commercial obsolescence; High vulnerability risk",
+      "legal_reference": "Art 3(3)",
+      "name": "Legacy ICT System",
+      "status": "End-of-life / No longer supported"
+    },
+    {
+      "mainLabel": "MajorIncident",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:171",
+      "labels": [
+        "MajorIncident"
+      ],
+      "classification_criteria": "Number of clients affected; Duration; Geographic spread; Data loss; Criticality of services",
+      "legal_reference": "Art 3(10)",
+      "reporting_obligation": "Mandatory: Initial, Intermediate, and Final reports to Competent Authority",
+      "name": "Major ICT-Related Incident",
+      "properties": "Status: Actualized; Impact: High; Sector: Financial"
+    },
+    {
+      "mainLabel": "MajorIncident",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:172",
+      "labels": [
+        "MajorIncident"
+      ],
+      "classification_criteria": "System downtime exceeding recovery time objectives (RTO)",
+      "legal_reference": "Art 17",
+      "reporting_obligation": "Required if critical function is impacted",
+      "name": "Operational Disruption",
+      "properties": "Status: Actualized; Impact: Operational"
+    },
+    {
+      "mainLabel": "MajorIncident",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:173",
+      "labels": [
+        "MajorIncident"
+      ],
+      "classification_criteria": "Unauthorized access to or loss of confidential information",
+      "legal_reference": "Art 18",
+      "reporting_obligation": "Mandatory; Cross-reference with GDPR requirements",
+      "name": "Data Breach",
+      "properties": "Status: Actualized; Impact: Data Integrity"
+    },
+    {
+      "mainLabel": "ManagementBody",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:174",
+      "labels": [
+        "ManagementBody"
+      ],
+      "responsibility_type": "Ultimate Responsibility",
+      "primary_duties": "Define, approve, and oversee ICT risk framework",
+      "legal_reference": "Art 5(2)",
+      "required_skills": "Understanding of ICT risk impact",
+      "name": "Board / Senior Mgmt"
+    },
+    {
+      "mainLabel": "ManagementBody",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:175",
+      "labels": [
+        "ManagementBody"
+      ],
+      "responsibility_type": "Oversight",
+      "primary_duties": "Monitor arrangements with ICT third-party providers",
+      "legal_reference": "Art 5(3)",
+      "required_skills": "ICT risk management expertise",
+      "name": "ICT Risk Overseer"
+    },
+    {
+      "mainLabel": "ManagementBody",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:176",
+      "labels": [
+        "ManagementBody"
+      ],
+      "responsibility_type": "Skill Maintenance",
+      "primary_duties": "Follow regular specific training on ICT risk",
+      "legal_reference": "Art 5(4)",
+      "required_skills": "Ability to assess ICT risk impact",
+      "name": "Training Compliance"
+    },
+    {
+      "mainLabel": "ManagementBody",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:177",
+      "labels": [
+        "ManagementBody"
+      ],
+      "responsibility_type": "Financial Oversight",
+      "primary_duties": "Allocate budget for digital resilience and training",
+      "legal_reference": "Art 5(2)(g)",
+      "required_skills": "Resource management",
+      "name": "Budget Authority"
+    },
+    {
+      "mainLabel": "ManagementBody",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:178",
+      "labels": [
+        "ManagementBody"
+      ],
+      "responsibility_type": "Policy Governance",
+      "primary_duties": "Approve ICT business continuity and recovery plans",
+      "legal_reference": "Art 5(2)(e)",
+      "required_skills": "Risk tolerance determination",
+      "name": "Policy Approver"
+    },
+    {
+      "mainLabel": "ManagementBody",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:179",
+      "labels": [
+        "ManagementBody"
+      ],
+      "responsibility_type": "Compliance Oversight",
+      "primary_duties": "Review ICT internal audit plans and modifications",
+      "legal_reference": "Art 5(2)(f)",
+      "required_skills": "Audit process knowledge",
+      "name": "Audit Overseer"
+    },
+    {
+      "mainLabel": "OversightForum",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:180",
+      "labels": [
+        "OversightForum"
+      ],
+      "primary_tasks": "Coordinate cross-sectoral oversight and prepare joint positions",
+      "legal_reference": "Art 32(1)",
+      "composition": "Chairpersons of EBA, ESMA, and EIOPA",
+      "governance_role": "Sub-committee of the Joint Committee",
+      "name": "Oversight Forum"
+    },
+    {
+      "mainLabel": "OversightForum",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:181",
+      "labels": [
+        "OversightForum"
+      ],
+      "primary_tasks": "Provide sector-specific expertise for critical provider assessment",
+      "legal_reference": "Art 32(2)",
+      "composition": "Designated staff from National Competent Authorities",
+      "governance_role": "Advisory and technical support",
+      "name": "National Authority Reps"
+    },
+    {
+      "mainLabel": "OversightForum",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:182",
+      "labels": [
+        "OversightForum"
+      ],
+      "primary_tasks": "Provide prudential supervision perspective",
+      "legal_reference": "Art 32(2)(c)",
+      "composition": "Staff from the European Central Bank",
+      "governance_role": "Observer and technical contributor",
+      "name": "ECB Representative"
+    },
+    {
+      "mainLabel": "OversightForum",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:183",
+      "labels": [
+        "OversightForum"
+      ],
+      "primary_tasks": "Assess macro-prudential and systemic risk",
+      "legal_reference": "Art 32(2)(d)",
+      "composition": "Staff from the European Systemic Risk Board",
+      "governance_role": "Advisory on financial stability",
+      "name": "ESRB Representative"
+    },
+    {
+      "mainLabel": "OversightForum",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:184",
+      "labels": [
+        "OversightForum"
+      ],
+      "primary_tasks": "Directing findings of the Oversight Forum to specific providers",
+      "legal_reference": "Art 31(1)",
+      "composition": "The ESA leading a specific oversight mission",
+      "governance_role": "Executive implementation",
+      "name": "Lead Overseer Coordinator"
+    },
+    {
+      "mainLabel": "Penalty",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:185",
+      "labels": [
+        "Penalty"
+      ],
+      "condition": "Compelling compliance with Lead Overseer recommendations",
+      "legal_reference": "Art 35(6)",
+      "name": "Periodic Payment",
+      "max_penalty": "1% daily worldwide turnover"
+    },
+    {
+      "mainLabel": "Penalty",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:186",
+      "labels": [
+        "Penalty"
+      ],
+      "condition": "Failure to report incidents or maintain risk framework",
+      "legal_reference": "Art 50",
+      "name": "Administrative Fine",
+      "max_penalty": "National law dependent"
+    },
+    {
+      "mainLabel": "ProcessingLocation",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:187",
+      "labels": [
+        "ProcessingLocation"
+      ],
+      "legal_reference": "Art 30(2)(b)",
+      "contractual_requirement": "Contract must specify regions or countries of storage and processing",
+      "name": "Data Processing Location",
+      "data_types": "Personal and Non-personal data"
+    },
+    {
+      "mainLabel": "RemediationPlan",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:188",
+      "labels": [
+        "RemediationPlan"
+      ],
+      "legal_reference": "Art 24(5)",
+      "name": "Remediation Plan",
+      "reporting_requirement": "Summary of findings and remediation plans must be provided to the competent authority following a TLPT.",
+      "trigger": "Completion of resilience tests or TLPT",
+      "objective": "Address and fully resolve all identified weaknesses, deficiencies, or gaps revealed during testing"
+    },
+    {
+      "mainLabel": "Requirements",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:189",
+      "labels": [
+        "Requirements"
+      ],
+      "article_id": "ART_05",
+      "requirement_text": "Management body bears ultimate responsibility for ICT risk [cite: 745]"
+    },
+    {
+      "mainLabel": "Requirements",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:190",
+      "labels": [
+        "Requirements"
+      ],
+      "article_id": "ART_06",
+      "requirement_text": "Assign responsibility for managing ICT risk to a control function [cite: 772]"
+    },
+    {
+      "mainLabel": "Requirements",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:191",
+      "labels": [
+        "Requirements"
+      ],
+      "article_id": "ART_12",
+      "requirement_text": "Develop and document backup policies and restoration procedures [cite: 895,896]"
+    },
+    {
+      "mainLabel": "Requirements",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:192",
+      "labels": [
+        "Requirements"
+      ],
+      "article_id": "ART_26",
+      "requirement_text": "Carry out advanced testing (TLPT) at least every 3 years [cite: 1171]"
+    },
+    {
+      "mainLabel": "Requirements",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:193",
+      "labels": [
+        "Requirements"
+      ],
+      "article_id": "ART_30",
+      "requirement_text": "Contractual arrangements must include clear descriptions of all functions [cite: 1324]"
+    },
+    {
+      "mainLabel": "ICTThirdPartyServiceProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:194",
+      "labels": [
+        "ICTThirdPartyServiceProvider"
+      ],
+      "provider_type": "Cloud, Software, Data, Analytics",
+      "mandatory_clauses": "Art 30: Written contract, description of services, data locations",
+      "legal_reference": "Art 3(19)",
+      "name": "Standard ICT Provider",
+      "description": "Undertakings providing ICT services to financial entities [cite: 43, 666]"
+    },
+    {
+      "mainLabel": "ICTThirdPartyServiceProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:195",
+      "labels": [
+        "ICTThirdPartyServiceProvider"
+      ],
+      "provider_type": "Group-internal ICT",
+      "mandatory_clauses": "Art 28: Subject to same regulatory framework as external [cite: 252, 667]",
+      "legal_reference": "Art 3(20)",
+      "name": "Intra-group Provider",
+      "description": "Providers within the same financial group [cite: 667]"
+    },
+    {
+      "mainLabel": "ICTThirdPartyServiceProvider",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:196",
+      "labels": [
+        "ICTThirdPartyServiceProvider"
+      ],
+      "provider_type": "Non-EU established",
+      "mandatory_clauses": "Art 31(12): Requirement for EU subsidiary if designated critical [cite: 464, 671]",
+      "legal_reference": "Art 3(24)",
+      "name": "Third-country Provider",
+      "description": "Providers established in a non-EU country [cite: 671]"
+    },
+    {
+      "mainLabel": "Subsidiary",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:197",
+      "labels": [
+        "Subsidiary"
+      ],
+      "legal_reference": "Art 31(12)",
+      "name": "EU Subsidiary",
+      "compliance_period": "Within 12 months following designation as critical",
+      "establishment_rule": "Must be established in the Union for third-country critical providers"
+    },
+    {
+      "mainLabel": "ThreatLedPenetrationTest",
+      "id": "4:5ad33362-7a76-4561-94af-1b68b08b0d51:198",
+      "labels": [
+        "ThreatLedPenetrationTest"
+      ],
+      "tester_requirements": "Must use external testers at least every third test; internal testers require supervisory approval; threat intelligence provider must always be external",
+      "legal_reference": "Art 26",
+      "scope": "Several or all critical or important functions; performed on live production systems",
+      "name": "Threat-Led Pen Test",
+      "frequency": "At least every 3 years (frequency may be adjusted by CA)",
+      "authority_role": "Scope must be validated by competent authorities; authorities provide an attestation of completion for mutual recognition."
+    }
+  ],
+  "rels": []
+}
