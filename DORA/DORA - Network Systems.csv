@@ -1,4 +1,4 @@
 id,label,name,legal_reference,security_objectives
-NS_001,NetworkSystem,"Internal Corporate Network",Art 3(2),Integrity and Availability [cite: 642, 827]
-NS_002,NetworkSystem,"Inter-Entity Connections",Art 8(2),Manage risk exposure from other entities [cite: 814]
-NS_003,NetworkSystem,"Cloud Infrastructure",Art 32(1),Subject to Oversight Forum coordination [cite: 200, 1422]
+NS_001,NetworkSystem,"Internal Corporate Network",Art 3(2),"Integrity and Availability"
+NS_002,NetworkSystem,"Inter-Entity Connections",Art 8(2),"Manage risk exposure from other entities"
+NS_003,NetworkSystem,"Cloud Infrastructure",Art 32(1),"Subject to Oversight Forum coordination"

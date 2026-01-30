@@ -1,0 +1,4 @@
+id,label,name,legal_reference,impact_criteria
+CF_001,CriticalFunction,Payment Processing,Art 3(22),Disruption impairs financial performance
+CF_002,CriticalFunction,Securities Settlement,Art 3(22),Failure impairs soundness of services
+CF_003,CriticalFunction,Risk Management,Art 3(22),Failure impairs regulatory compliance

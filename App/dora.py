@@ -47,7 +47,6 @@ critical_functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (cf:CriticalFunction {id: row.id})
 ON CREATE SET   
-    cf.label = row.label,
     cf.name = row.name,
     cf.legal_reference = row.legal_reference,
     cf.impact_criteria = row.impact_criteria;
@@ -578,7 +577,7 @@ time.sleep(2)
 client.query(competent_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Competent%20Authority.csv"))
 time.sleep(2)
 
-client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20Funtions.csv"))
+client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20Functions.csv"))
 time.sleep(2)
 
 client.query(critical_ict_proider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20ICT%20Provider.csv"))
