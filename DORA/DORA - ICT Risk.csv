@@ -1,0 +1,3 @@
+id,label,name,legal_reference,source,impact_area,description
+IR_001,ICTRisk,ICT Risk,Art 3(5),"Internal/External","Confidentiality, Integrity, Availability","Any circumstance producing an adverse effect on network systems"
+IR_002,ICTRisk,Concentration Risk,Art 29,"External Vendor","Supply Chain Continuity","Risk arising from reliance on a single/dominant ICT third-party"

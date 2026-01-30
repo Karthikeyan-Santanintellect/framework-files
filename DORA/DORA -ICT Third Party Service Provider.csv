@@ -1,0 +1,4 @@
+id,label,name,legal_reference,provider_type,mandatory_clauses,description
+TPSP_001,ICTThirdPartyServiceProvider,Standard ICT Provider,Art 3(19),"Cloud, Software, Data, Analytics","Art 30: Written contract, description of services, data locations","Undertakings providing ICT services to financial entities [cite: 43, 666]"
+TPSP_002,ICTThirdPartyServiceProvider,Intra-group Provider,Art 3(20),"Group-internal ICT","Art 28: Subject to same regulatory framework as external [cite: 252, 667]","Providers within the same financial group [cite: 667]"
+TPSP_003,ICTThirdPartyServiceProvider,Third-country Provider,Art 3(24),"Non-EU established","Art 31(12): Requirement for EU subsidiary if designated critical [cite: 464, 671]","Providers established in a non-EU country [cite: 671]"

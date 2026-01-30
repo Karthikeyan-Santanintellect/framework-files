@@ -1,0 +1,2 @@
+id,label,name,legal_reference,trigger,objective,reporting_requirement
+REM_001,RemediationPlan,"Remediation Plan",Art 24(5),"Completion of resilience tests or TLPT","Address and fully resolve all identified weaknesses, deficiencies, or gaps revealed during testing","Summary of findings and remediation plans must be provided to the competent authority following a TLPT."

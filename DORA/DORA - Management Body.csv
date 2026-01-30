@@ -1,0 +1,7 @@
+id,label,name,legal_reference,responsibility_type,primary_duties,required_skills
+MB_001,ManagementBody,Board / Senior Mgmt,Art 5(2),Ultimate Responsibility,"Define, approve, and oversee ICT risk framework",Understanding of ICT risk impact
+MB_002,ManagementBody,ICT Risk Overseer,Art 5(3),Oversight,"Monitor arrangements with ICT third-party providers",ICT risk management expertise
+MB_003,ManagementBody,Training Compliance,Art 5(4),Skill Maintenance,"Follow regular specific training on ICT risk",Ability to assess ICT risk impact
+MB_004,ManagementBody,Budget Authority,Art 5(2)(g),Financial Oversight,"Allocate budget for digital resilience and training",Resource management
+MB_005,ManagementBody,Policy Approver,Art 5(2)(e),Policy Governance,"Approve ICT business continuity and recovery plans",Risk tolerance determination
+MB_006,ManagementBody,Audit Overseer,Art 5(2)(f),Compliance Oversight,"Review ICT internal audit plans and modifications",Audit process knowledge

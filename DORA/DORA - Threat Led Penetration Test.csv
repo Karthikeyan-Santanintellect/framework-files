@@ -1,0 +1,2 @@
+id,label,name,legal_reference,frequency,scope,tester_requirements,authority_role
+TLPT_001,TLPT,"Threat-Led Pen Test",Art 26,"At least every 3 years (frequency may be adjusted by CA)","Several or all critical or important functions; performed on live production systems","Must use external testers at least every third test; internal testers require supervisory approval; threat intelligence provider must always be external","Scope must be validated by competent authorities; authorities provide an attestation of completion for mutual recognition."

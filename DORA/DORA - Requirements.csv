@@ -1,0 +1,6 @@
+id,label,article_id,requirement_text
+REQ_05_2,Requirement,ART_05,Management body bears ultimate responsibility for ICT risk [cite: 745]
+REQ_06_4,Requirement,ART_06,Assign responsibility for managing ICT risk to a control function [cite: 772]
+REQ_12_1,Requirement,ART_12,"Develop and document backup policies and restoration procedures [cite: 895,896]"
+REQ_26_1,Requirement,ART_26,Carry out advanced testing (TLPT) at least every 3 years [cite: 1171]
+REQ_30_2,Requirement,ART_30,Contractual arrangements must include clear descriptions of all functions [cite: 1324]

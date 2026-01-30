@@ -1,0 +1,11 @@
+id,label,article_number,name,parent_chapter
+ART_01,Article,1,Subject matter,"CH_01 [cite: 569,570]"
+ART_02,Article,2,Scope,"CH_01 [cite: 590,591]"
+ART_03,Article,3,Definitions,"CH_01 [cite: 638,639]"
+ART_05,Article,5,Governance and organisation,"CH_02 [cite: 740,741]"
+ART_06,Article,6,ICT risk management framework,"CH_02 [cite: 764,766]"
+ART_08,Article,8,Identification,"CH_02 [cite: 810,811]"
+ART_12,Article,12,Backup policies and procedures,"CH_02 [cite: 893,894]"
+ART_17,Article,17,ICT-related incident management process,"CH_03 [cite: 1010,1011]"
+ART_24,Article,24,Performance of digital operational resilience testing,"CH_04 [cite: 1142,1144]"
+ART_30,Article,30,Key contractual provisions,"CH_05 [cite: 1317,1319]"

@@ -605,6 +605,39 @@ MERGE (mgr)-[:MANAGEMENT_INTERACTS_WITH_EXTERNAL_ACTOR {
     frequency: row.frequency
 }]->(ea);
 """
+# Regulation -> Board commitee
+regulation_board_committee = """
+MATCH (orphan:BoardCommitteeType)WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_BOARD_COMMITTEE]->(orphan);
+"""
+# Regulated Entity -> Filling Event
+entity_filing_event = """
+MATCH (orphan:FilingEvent)WHERE NOT EXISTS ((orphan)--())
+MATCH (re:RegulatedEntity {regional_standard_regulation_id: 'SEC-2023'})
+MERGE (re)-[:REGULATED_ENTITY_SUBMITS_FILING]->(orphan);
+"""
+
+# Regulation -> Regulated Entity
+regulation_regulated_entity = """
+MATCH (orphan:RegulatedEntity)WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_REGULATED_ENTITY]->(orphan);
+"""
+# Regulated Entity -> Management Roles
+entity_management_roles = """
+MATCH (orphan:ManagementRole)WHERE NOT EXISTS ((orphan)--())
+MATCH (re:RegulatedEntity {regional_standard_regulation_id: 'SEC-2023'})
+MERGE (re)-[:REGULATED_ENTITY_KEY_APPOINTS_MANAGEMENT_ROLE]->(orphan);
+"""
+# Regulated Entity -> Risk Management
+entity_risk_management = """
+MATCH (orphan:RiskManagementProcess)WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'SEC-2023'})
+MERGE (reg)-[:REGIONAL_REGULATION_HAS_RISK_MANAGEMENT_PROCESS]->(orphan);
+"""
+
+
 
 
 import os
@@ -795,7 +828,7 @@ client.query(risk_process_control.replace('$file_path', "https://github.com/Kart
 time.sleep(2)
 
 
-client.query(governance_body_oversight.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20Governance%20Oversight.csv"))
+client.query(governance_body_oversight.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20GovernanceBody%20BoardOversightProcess%20Relationship.csv"))
 time.sleep(2)
 
 
@@ -847,13 +880,11 @@ time.sleep(2)
 client.query(filing_event_form.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20FilingEvent%20RegulatoryForm.csv"))
 time.sleep(2)
 
-
 client.query(regulated_entity_governace.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20GovernanceStructure.csv"))
 time.sleep(2)
 
-client.query(regulated_entity_management_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity_ManagementRole.csv"))
+client.query(regulated_entity_management_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20ManagementRole.csv"))
 time.sleep(2)
-
 
 client.query(regulated_entity_assessment_teams.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20RegulatedEntity%20AssessmentTeam.csv"))
 time.sleep(2)
@@ -872,8 +903,23 @@ time.sleep(2)
 client.query(management_role_external_actor.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SEC/SEC%20-%20ManagementRole%20ExternalActor.csv"))
 time.sleep(2)
 
+client.query(regulation_regulated_entity)
+time.sleep(2)
 
+client.query(regulation_board_committee)
+time.sleep(2)
 
+client.query(entity_filing_event)
+time.sleep(2)
+
+client.query(entity_management_roles)
+time.sleep(2)
+
+client.query(regulation_regulated_entity)
+time.sleep(2)
+
+client.query(entity_risk_management)
+time.sleep(2)
 
 
 logger.info("Graph structure loaded successfully.")

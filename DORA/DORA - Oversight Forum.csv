@@ -1,0 +1,6 @@
+id,label,name,legal_reference,composition,primary_tasks,governance_role
+OF_001,OversightForum,Oversight Forum,Art 32(1),"Chairpersons of EBA, ESMA, and EIOPA","Coordinate cross-sectoral oversight and prepare joint positions","Sub-committee of the Joint Committee"
+OF_002,OversightForum,National Authority Reps,Art 32(2),"Designated staff from National Competent Authorities","Provide sector-specific expertise for critical provider assessment","Advisory and technical support"
+OF_003,OversightForum,ECB Representative,Art 32(2)(c),"Staff from the European Central Bank","Provide prudential supervision perspective","Observer and technical contributor"
+OF_004,OversightForum,ESRB Representative,Art 32(2)(d),"Staff from the European Systemic Risk Board","Assess macro-prudential and systemic risk","Advisory on financial stability"
+OF_005,OversightForum,Lead Overseer Coordinator,Art 31(1),"The ESA leading a specific oversight mission","Directing findings of the Oversight Forum to specific providers","Executive implementation"

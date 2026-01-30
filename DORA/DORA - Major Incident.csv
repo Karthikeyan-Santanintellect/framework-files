@@ -1,0 +1,4 @@
+id,label,name,legal_reference,classification_criteria,reporting_obligation,properties
+MI_001,MajorIncident,Major ICT-Related Incident,Art 3(10),"Number of clients affected; Duration; Geographic spread; Data loss; Criticality of services","Mandatory: Initial, Intermediate, and Final reports to Competent Authority","Status: Actualized; Impact: High; Sector: Financial"
+MI_002,MajorIncident,Operational Disruption,Art 17,"System downtime exceeding recovery time objectives (RTO)","Required if critical function is impacted","Status: Actualized; Impact: Operational"
+MI_003,MajorIncident,Data Breach,Art 18,"Unauthorized access to or loss of confidential information","Mandatory; Cross-reference with GDPR requirements","Status: Actualized; Impact: Data Integrity"

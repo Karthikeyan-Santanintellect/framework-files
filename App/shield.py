@@ -484,19 +484,7 @@ MATCH (spg:SecurityProgram {program_id: row.source_program_id, regional_standard
 MATCH (et:EmployeeTraining {training_id: row.target_training_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MERGE (spg)-[:SECURITY_PROGRAM_PROVIDES_TRAINING_TO_EMPLOYEE]->(et);
 """
-#data_breach_government_agency
-data_breach_government_agency ="""
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (br:DataBreach {breach_id: row.source_breach_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
-MERGE (agency:GovernmentAgency {agency_name: row.agency_name, regional_standard_regulation_id: 'NY SHIELD 1.0'})
-CREATE (breach)-[r:DATA_BREACH_REPORTS_TO_GOVERNMENT_AGENCY {
-    report_date: row.report_date,
-    report_method: row.report_method,
-    report_number: row.report_number,
-    confirmation_received: row.confirmation_received,
-    confirmation_date: row.confirmation_date
-}]->(agency);
-"""
+
 #datacontroller_compilance_assessment
 datacontroller_compliance_assessment ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -610,6 +598,13 @@ MATCH (orphan:NYResident) WHERE NOT EXISTS ((orphan)--())
 MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MERGE (dc)-[:DATA_CONTROLLER_HOLDS_PERSONAL_DATA_OF_NY_RESIDENT]->(orphan);
 """
+# Data Controller -> Data Element Combination
+datacontroller_data_element = """
+MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (dec:DataElementCombination {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (dc)-[:DATA_CONTROLLER_OWNS_LICENSES_DATA_ELEMENT]->(dec);
+"""
+
 
 import sys
 import os
@@ -630,6 +625,8 @@ if health is not True:
     sys.exit(1)
 
 logger.info("Loading graph structure...")
+
+
 
 client.query(regional_standard_and_regulation)
 time.sleep(2)
@@ -752,9 +749,6 @@ time.sleep(2)
 client.query(security_program_training_employee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_PROVIDES_TRAINING_TO_relationships.csv"))
 time.sleep(2)
 
-client.query(data_breach_government_agency.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_REPORTS_TO_GOVERNMENT_relationships.csv"))
-time.sleep(2)
-
 client.query(datacontroller_compliance_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_UNDERGOES_COMPLIANCE_ASSESSMENT_relationships.csv"))
 time.sleep(2)
 
@@ -809,12 +803,33 @@ time.sleep(2)
 client.query(orphan_ny_resident)
 time.sleep(2)
 
+client.query(datacontroller_data_element)
+time.sleep(2)
+
+
 
 
 logger.info("Graph structure loaded successfully.")
 
+cleanup_query = """
+MATCH (n)
+WHERE size(labels(n)) = 0
+DETACH DELETE n
+"""
+cleanup_query = """
+MATCH (n)
+WHERE elementId(n) = '4:5ad33362-7a76-4561-94af-1b68b08b0d51:9321'
+DETACH DELETE n
+"""
+client.query(cleanup_query)
+
+logger.info("Cleaning up ghost nodes (nodes with no labels)...")
+client.query(cleanup_query)
+logger.info("✓ Ghost nodes removed from database.")
+
 query = """
 MATCH (n)
+WHERE size(labels(n)) > 0
 OPTIONAL MATCH (n)-[r]-()
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
 RETURN {

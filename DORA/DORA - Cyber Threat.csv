@@ -1,0 +1,4 @@
+id,label,name,legal_reference,threat_type,notification_type,properties
+CT_001,CyberThreat,Significant Cyber Threat,Art 3(13),"Malware, Phishing, Ransomware campaign, DDoS","Voluntary: Encouraged to notify authorities and potentially affected clients","Status: Potential; Risk: High; Intelligence: Shared"
+CT_002,CyberThreat,Zero-Day Vulnerability,Art 3(13),"Exploitation of unknown software flaws","Voluntary: Shared via information-sharing arrangements (Art 45)","Status: Potential; Risk: Critical"
+CT_003,CyberThreat,Insider Threat,Art 3(13),"Malicious or negligent internal actor","Internal tracking; Voluntary reporting if systemic","Status: Potential; Risk: Medium"

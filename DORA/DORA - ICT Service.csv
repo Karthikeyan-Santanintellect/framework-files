@@ -1,0 +1,2 @@
+id,label,name,legal_reference,service_type,scope_exclusions,mandatory_attributes
+ICTS_001,ICTService,"ICT Service",Art 3(21),"Digital and data services","Excludes traditional analogue telephone services (PSTN/POTS)","Ongoing basis; Provision of technical support; Software/Firmware updates"

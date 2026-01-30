@@ -1,0 +1,25 @@
+id,label,name,entity_type,legal_reference,size_attribute,compliance_regime
+FE_001,FinancialEntity,Credit Institution,Credit Institution,Art 2(1)(a),Large/Significant,Full DORA
+FE_002,FinancialEntity,Payment Institution,Payment Institution,Art 2(1)(b),Standard,Full DORA
+FE_003,FinancialEntity,Exempt Payment Institution,Payment Institution,Art 2(1)(b),Small/Exempt,Simplified (Art 16)
+FE_004,FinancialEntity,Account Information Provider,AISP,Art 2(1)(c),Standard,Full DORA
+FE_005,FinancialEntity,Electronic Money Institution,E-Money,Art 2(1)(d),Standard,Full DORA
+FE_006,FinancialEntity,Investment Firm,Investment Firm,Art 2(1)(e),Large/Interconnected,Full DORA
+FE_007,FinancialEntity,Small Investment Firm,Investment Firm,Art 2(1)(e),Small/Non-interconnected,Simplified (Art 16)
+FE_008,FinancialEntity,Crypto-Asset Provider,CASP,Art 2(1)(f),Standard,Full DORA
+FE_009,FinancialEntity,Central Securities Depository,CSD,Art 2(1)(g),Systemic,Full DORA + Advanced Testing
+FE_010,FinancialEntity,Central Counterparty,CCP,Art 2(1)(h),Systemic,Full DORA + Advanced Testing
+FE_011,FinancialEntity,Trading Venue,Trading Venue,Art 2(1)(i),Systemic,Full DORA + Advanced Testing
+FE_012,FinancialEntity,Trade Repository,Trade Repository,Art 2(1)(j),Standard,Full DORA
+FE_013,FinancialEntity,AIFM,Manager of Alternative Investment Funds,Art 2(1)(k),Standard,Full DORA
+FE_014,FinancialEntity,Management Company,UCITS Management Company,Art 2(1)(l),Standard,Full DORA
+FE_015,FinancialEntity,Data Reporting Provider,DRSP,Art 2(1)(m),Standard,Full DORA
+FE_016,FinancialEntity,Insurance Undertaking,Insurance/Reinsurance,Art 2(1)(n),Large,Full DORA
+FE_017,FinancialEntity,Insurance Intermediary,Intermediary,Art 2(1)(o),SME/Micro,Exempt (Art 2(3)(e))
+FE_018,FinancialEntity,IORP,Occupational Retirement Provision,Art 2(1)(p),Large,Full DORA
+FE_019,FinancialEntity,Small IORP,Occupational Retirement Provision,Art 2(1)(p),Small (<100 members),Simplified (Art 16)
+FE_020,FinancialEntity,Credit Rating Agency,CRA,Art 2(1)(q),Standard,Full DORA
+FE_021,FinancialEntity,Benchmark Administrator,Critical Benchmarks,Art 2(1)(r),Standard,Full DORA
+FE_022,FinancialEntity,Crowdfunding Provider,Crowdfunding,Art 2(1)(s),Standard,Full DORA
+FE_023,FinancialEntity,Securitisation Repository,Securitisation,Art 2(1)(t),Standard,Full DORA
+FE_024,FinancialEntity,Microenterprise,General Microenterprise,Art 3(60),<10 persons/€2m turnover,Exempt from TLPT/Audits

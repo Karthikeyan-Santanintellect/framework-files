@@ -1,0 +1,5 @@
+id,label,name,legal_reference,control_type,methods
+CTRL_001,Control,Access Rights,Art 9(4)(c),"Preventive","Identity Management, MFA, Least Privilege"
+CTRL_002,Control,Encryption,Art 9(2),"Protective","Data-at-rest encryption, Data-in-transit encryption"
+CTRL_003,Control,Patch Management,Art 9(4)(a),"Corrective","Vulnerability remediation, Software updates"
+CTRL_004,Control,Detection Systems,Art 10,"Detective","IDS/IPS, SIEM, Network Monitoring"

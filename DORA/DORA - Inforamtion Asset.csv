@@ -1,0 +1,4 @@
+id,label,name,legal_reference,classification
+IA_001,InformationAsset,Client Data,Art 3(6),"Confidentiality, Integrity, Availability [cite: 648,839]"
+IA_002,InformationAsset,Financial Records,Art 3(6),"High Integrity [cite: 648,831]"
+IA_003,InformationAsset,Proprietary Algorithms,Art 3(6),Intellectual Property
