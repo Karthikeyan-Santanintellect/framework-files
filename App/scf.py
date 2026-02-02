@@ -114,7 +114,7 @@ MERGE (sc)-[:CONTROL_MAPS_NIST_AI_RMF]->(airmf);
 control_glba = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (glba:GLBA {control_id: trim(row.glba_section_id), IS_frameworks_standard_id: 'GLBA 1999'})
+MATCH (glba:GLBA {control_id: trim(row.glba_section_id), industry_standard_regulation_id: 'GLBA 1999'})
 MERGE (sc)-[:CONTROL_MAPS_GLBA]->(glba);
 """
 
@@ -122,7 +122,7 @@ MERGE (sc)-[:CONTROL_MAPS_GLBA]->(glba);
 control_hipaa = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (hipaa:HIPAA {standard_id: trim(row.hipaa_standard_id), IS_frameworks_standard_id: 'HIPAA 1996'})
+MATCH (hipaa:HIPAA {standard_id: trim(row.hipaa_standard_id), industry_standard_regulation_id: 'HIPAA 1996'})
 MERGE (sc)-[:CONTROL_MAPS_HIPAA]->(hipaa);
 """
 
@@ -130,7 +130,7 @@ MERGE (sc)-[:CONTROL_MAPS_HIPAA]->(hipaa);
 control_nerc_cip = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (nerc:NERCCIP {requirement_id: trim(row.nerc_cip_requirement_id), IS_frameworks_standard_id: 'NERC_CIP'})
+MATCH (nerc:NERCCIP {requirement_id: trim(row.nerc_cip_requirement_id), industry_standard_regulation_id: 'NERC_CIP'})
 MERGE (sc)-[:CONTROL_MAPS_NERC_CIP]->(nerc);
 """
 
@@ -138,60 +138,72 @@ MERGE (sc)-[:CONTROL_MAPS_NERC_CIP]->(nerc);
 control_pci_dss = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (pci:PCIDSS{control_id: trim(row.pci_dss_node_id), IS_frameworks_standard_id: 'PCI-DSS 4.0'})
+MATCH (pci:PCIDSS{control_id: trim(row.pci_dss_node_id), industry_standard_regulation_id: 'PCI-DSS 4.0'})
 MERGE (sc)-[:CONTROL_MAPS_PCI_DSS]->(pci);
 """
 #control->TISAX
 control_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (tisax:TISAX {control_id: trim(row.tisax_reference_id), IS_frameworks_standard_id: 'TISAX 6.0'})
+MATCH (tisax:TISAX {control_id: trim(row.tisax_reference_id), industry_standard_regulation_id: 'TISAX 6.0'})
 MERGE (sc)-[:CONTROL_MAPS_TISAX]->(tisax);
 """
-#16a.control->cpra_sections
-control_cpra_sections = """
+#16a.control-> CPRA
+control_cpra = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.CPRA_Section IS NOT NULL AND trim(row.CPRA_Section) <> ''
-MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (section:Section {
-    section_id: trim(row.CPRA_Section),
-    regional_standard_regulation_id: 'CPRA 2.0'
-})
-MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(section)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (cpra:CPRA {control_id: trim(row.civil_code_id), industry_standard_regulation_id: 'CPRA 2.0'})
+MERGE (sc)-[:CONTROL_MAPS_CPRA]->(cpra);
 """
-#17a.control->dpdpa_sections
-control_dpdpa_sections = """
+#17a.control->CPA
+control_cpa = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.dpdpa_section_id IS NOT NULL AND trim(row.dpdpa_section_id) <> ''
-MATCH (scf:SCFControl {control_id: trim(row.scf_control_code)})
-MATCH (sec:Section {
-    section_id: trim(row.dpdpa_section_id),
-    regional_standard_regulation_id: 'DPDPA 1.0'
-})
-MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(sec)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (cpa:CPA {control_id: trim(row.cpa_section_id), industry_standard_regulation_id: 'CPA 1.0'})
+MERGE (sc)-[:CONTROL_MAPS_CPA]->(cpa);
 """
-#18a.control->gdpr_articles
-control_gdpr_articles = """
+#18a.control->DORA
+control_dora = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (scf:SCFControl {control_id: row.scf_control_code})
-MATCH (art:Article {
-    Node_ID: row.gdpr_article_id,
-    regional_standard_regulation_id: 'GDPR 2016/679'
-})
-MERGE (scf)-[:HAS_EXTERNAL_CONTROLS]->(art);
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (dora:DORA {control_id: trim(row.dora_article_id), industry_standard_regulation_id: 'DORA 2022/2554'})
+MERGE (sc)-[:CONTROL_MAPS_DORA]->(dora);
 """
-
-
-
-
-
-
-
-
+# control -> DPDPA
+control_dpdpa = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (dpdpa:DPDPA {control_id: trim(row.dpdpa_section_id), industry_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (sc)-[:CONTROL_MAPS_DPDPA]->(dpdpa);
+"""
+# control -> VCDPA
+control_vcdpa = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (vcdpa:VCDPA {control_id: trim(row.vcdpa_section_id), industry_standard_regulation_id: 'VCDPA 2023'})
+MERGE (sc)-[:CONTROL_MAPS_VCDPA]->(vcdpa);
+"""
+# control -> GDPR
+control_gdpr = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (gdpr:GDPR {control_id: trim(row.gdpr_article_id), industry_standard_regulation_id: 'GDPR 2016/679'})
+MERGE (sc)-[:CONTROL_MAPS_GDPR]->(gdpr);
+"""
+# Control -> NY SHIELD
+control_ny_shield = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (ny:NYShield {control_id: trim(row.section_id), industry_standard_regulation_id: 'NY_SHIELD 1.0'})
+MERGE (sc)-[:CONTROL_MAPS_NY_SHIELD]->(ny);
+"""
+# Control -> NIS 2
+control_nis2 = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (nis2:NIS2Directive {control_id: trim(row.nis2_article_id), industry_standard_regulation_id: 'NIS2-EU-2022-2555'})
+MERGE (sc)-[:CONTROL_MAPS_NIS2]->(nis2);
+"""
 
 
 import os
