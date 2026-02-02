@@ -23,7 +23,7 @@ ON CREATE SET
 # Load Controls
 SCF_controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {id: row.control_id})
+MERGE (c:SCFControl {id: row.control_id})
 ON CREATE SET 
     c.name = row.control_name,
     c.description = row.control_text,
@@ -52,309 +52,101 @@ MATCH (c:Control {id: row.control_id})
 MERGE (d)-[:DOMAIN_CONTAINS_CONTROL]->(c);
 """
 
-
-#1a.control -> CSF Function
-control_CSF_function ="""
+#1a.control -> CSF 
+control_CSF ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (fn:Function {function_id: trim(row.NIST_CSF_Function), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(fn);
-"""
-#1b.control -> CSF Categories
-control_CSF_category = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cat:Category {category_id: trim(row.NIST_CSF_Category), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
-"""
-#1c.control -> CSF Subcategories
-control_CSF_subcategory = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_CSF_Subcategory), IS_frameworks_standard_id: 'NIST_CSF_2.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (csf:NISTCSF {function_id: row.nist_csf_2_0_id, IS_frameworks_standard_id: 'NIST_CSF_2.0'})
+MERGE (sc)-[:CONTROL_MAPS_CSF]->(csf);
 """
 
-#2a.control->cis_controls_number
-control_cis_controls_id = """
+# Control -> CIS 
+control_cis = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.CIS_Control_Id IS NOT NULL 
-  AND trim(row.CIS_Control_Id) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cis:Control {control_id: trim(row.CIS_Control_Id)})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cis)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (cis:CISControl {control_id: trim(row.cis_control_id), IS_frameworks_standard_id: 'CIS CONTROLS 8.1'})
+MERGE (sc)-[:CONTROL_MAPS_CIS]->(cis);
 """
-#2b.control->cis_controls_title
-control_cis_controls_name = """
+#3a.control->iso_27001
+control_iso27001= """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.CIS_Control_Name IS NOT NULL 
-  AND trim(row.CIS_Control_Name) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cis:Control {name: trim(row.CIS_Control_Name)})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cis)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (iso1:ISO27001 {control_id: trim(row.iso_control_id), IS_frameworks_standard_id: 'ISO27001_2022'})
+MERGE (sc)-[:CONTROL_MAPS_ISO27001]->(iso1);
 """
 
-#3a.control->iso_27001_controls
-control_iso_27001 = """
+#4a.control->iso
+control_iso27002 = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.ISO27001_Control IS NOT NULL 
-  AND trim(row.ISO27001_Control) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (iso:Control {control_id: trim(row.ISO27001_Control), IS_frameworks_standard_id: 'ISO27001_2022'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(iso)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (iso2:ISO27002 {control_id: trim(row.iso_control_id), IS_frameworks_standard_id: 'ISO27002_2022'})
+MERGE (sc)-[:CONTROL_MAPS_ISO27002]->(iso2);
 """
-#3b.control->iso_27001_clause
-control_iso_27001_clause = """
+#5a.control->pmf_1
+control_nist_pmf_1_0 = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.ISO27001_Clause IS NOT NULL 
-  AND trim(row.ISO27001_Clause) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (isoc:Clause {clause_id: trim(row.ISO27001_Clause), IS_frameworks_standard_id: 'ISO27001_2022'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(isoc)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (pmf1:NISTPMF {control_id: trim(row.nist_pmf_1_0_id), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
+MERGE (sc)-[:CONTROL_MAPS_NIST_PMF_1_0]->(pmf1);
 """
-#4a.control->iso_27002_controls
-control_iso_27002 = """
+#6a.control->pmf_1.1
+control_nist_pmf_1_1 = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.ISO27002_Control IS NOT NULL 
-  AND trim(row.ISO27002_Control) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (iso2:Control {control_id: trim(row.ISO27002_Control), IS_frameworks_standard_id: 'ISO27002_2022'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(iso2)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (pmf11:NISTPMF {control_id: trim(row.nist_pmf_id), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
+MERGE (sc)-[:CONTROL_MAPS_NIST_PMF_1_1]->(pmf11);
 """
-#4b.control->iso_27002_clause
-control_iso_27002_clause = """
+#7a.control->NIST_RMF
+control_nist_rmf = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.ISO27002_Clause IS NOT NULL 
-  AND trim(row.ISO27002_Clause) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (iso2c:Clause {clause_id: trim(row.ISO27002_Clause), IS_frameworks_standard_id: 'ISO27002_2022'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(iso2c)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (rmf:NISTRMF {control_id: trim(row.nist_rmf_control_id), IS_frameworks_standard_id: 'NIST_RMF_5.2'})
+MERGE (sc)-[:CONTROL_MAPS_NIST_RMF]->(rmf);
 """
-#5a.control->pmf_1_functions
-control_pmf_1 = """
+#8c.control->nist_ai_rmf
+control_nist_ai_rmf = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_PMF_Function IS NOT NULL 
-  AND trim(row.NIST_PMF_Function) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (f:Function {function_id: trim(row.NIST_PMF_Function), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f);
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (airmf:NISTAIRMF {control_id: trim(row.nist_ai_rmf_id), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
+MERGE (sc)-[:CONTROL_MAPS_NIST_AI_RMF]->(airmf);
 """
-#5b.control->pmf_1_categories
-control_pmf_1_categories = """
+#9a.controls->GLBA
+control_glba = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_PMF_Category IS NOT NULL 
-  AND trim(row.NIST_PMF_Category) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cat:Category {category_id: trim(row.NIST_PMF_Category), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
-"""
-#5c.control->pmf_1_subcategories
-control_pmf_1_subcategories = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_PMF_Subcategory IS NOT NULL 
-  AND trim(row.NIST_PMF_Subcategory) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_PMF_Subcategory), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
-"""
-#6a.control->pmf_1.1_functions
-control_pmf_1_1_functions= """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_PMF_1_1_Function IS NOT NULL 
-  AND trim(row.NIST_PMF_1_1_Function) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (f:Function {function_id: trim(row.NIST_PMF_1_1_Function), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f);
-"""
-#6b.control->pmf_1.1_categories
-control_pmf_1_1_categories = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_PMF_1_1_Category IS NOT NULL 
-  AND trim(row.NIST_PMF_1_1_Category) <> '' 
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control)})
-MATCH (cat:Category {category_id: trim(row.NIST_PMF_1_1_Category), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat);
-"""
-#6c.control->pmf_1.1_subcategories
-control_pmf_1_1_subcategories = """ 
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_PMF_1_1_Subcategory IS NOT NULL 
-  AND trim(row.NIST_PMF_1_1_Subcategory) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control)})
-MATCH (sub:Subcategory {subcategory_id: trim(row.NIST_PMF_1_1_Subcategory), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sub);
-"""
-#7a.control->NIST_RMF_controls
-control_nist_rmf_step = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row 
-WHERE row.NIST_RMF_Step_ID IS NOT NULL 
-  AND trim(row.NIST_RMF_Step_ID) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (step:Step {step_id: trim(row.NIST_RMF_Step_ID), IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(step)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (glba:GLBA {control_id: trim(row.glba_section_id), IS_frameworks_standard_id: 'GLBA 1999'})
+MERGE (sc)-[:CONTROL_MAPS_GLBA]->(glba);
 """
 
-#8a.control->nist_ai_rmf_functions
-control_nist_ai_rmf_functions = """
+#10a.control->Hippa
+control_hipaa = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_AI_RMF_Function IS NOT NULL 
-  AND trim(row.NIST_AI_RMF_Function) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (f:Function {function_id: trim(row.NIST_AI_RMF_Function), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(f)
-RETURN count(*) AS relationships_created;
-"""
-#8b.control->nist_ai_rmf_categories
-control_nist_ai_rmf_categories = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_AI_RMF_Category IS NOT NULL 
-  AND trim(row.NIST_AI_RMF_Category) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cat:Category {category_id: trim(row.NIST_AI_RMF_Category), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cat)
-RETURN count(*) AS relationships_created;
-"""
-#8c.control->nist_ai_rmf_subcategories
-control_nist_ai_rmf_subcategories = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.NIST_AI_RMF_SubCategory IS NOT NULL 
-  AND trim(row.NIST_AI_RMF_SubCategory) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (subc:Subcategory {subcategory_id: trim(row.NIST_AI_RMF_SubCategory), IS_frameworks_standard_id: 'NIST_AI_RMF_1.0'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(subc)
-RETURN count(*) AS relationships_created;
-"""
-#9a.controls->GLBA_sections
-control_glba_sections = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.GLBA_Section IS NOT NULL  
-  AND trim(row.GLBA_Section) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (sec:Section {section_id: trim(row.GLBA_Section), industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sec)
-RETURN count(*) AS relationships_created;
-"""
-#9b.controls->GLBA_requirements
-control_glba_requirements = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.GLBA_Requirement_ID IS NOT NULL  
-  AND trim(row.GLBA_Requirement_ID) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (req:Requirement {requirement_id: trim(row.GLBA_Requirement_ID), industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (hipaa:HIPAA {standard_id: trim(row.hipaa_standard_id), IS_frameworks_standard_id: 'HIPAA 1996'})
+MERGE (sc)-[:CONTROL_MAPS_HIPAA]->(hipaa);
 """
 
-#10a.control->hippa_rules
-control_hipaa_rules = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WHERE row.HIPAA_Rule IS NOT NULL AND trim(row.HIPAA_Rule) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (std:Standard {section: trim(row.HIPAA_Rule), industry_standard_regulation_id: 'HIPAA 1996'})
-MERGE (sc)-[:STANDARD_MAPS_TO_MAPPING]->(std)
-RETURN count(*) AS rules_linked;
-"""
-#10b.control->hipaa_safeguards
-control_hipaa_safeguards = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WHERE row.HIPAA_Requirement_ID IS NOT NULL AND trim(row.HIPAA_Requirement_ID) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (std:Standard {id: trim(row.HIPAA_Requirement_ID), industry_standard_regulation_id: 'HIPAA 1996'})
-MERGE (sc)-[:STANDARD_MAPS_TO_MAPPING]->(std)
-RETURN count(*) AS safeguards_linked;
-"""
-
-#11a.control->hitech_requirements
-control_hitech_requirements = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.HITECH_Requirement_ID IS NOT NULL AND trim(row.HITECH_Requirement_ID) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (req:Requirement {requirement_id: trim(row.HITECH_Requirement_ID), industry_standard_regulation_id: 'HITECH_ACT_2009'})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
-RETURN count(*) AS hitech_requirements_linked;
-"""
-#12a.control->hitrust
-control_hitrust = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.HITECH_Requirement_ID IS NOT NULL AND trim(row.HITECH_Requirement_ID) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (req:Requirement {
-    requirement_id: trim(row.HITECH_Requirement_ID),
-    industry_standard_regulation_id: 'HITECH_ACT_2009'
-})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(req)
-RETURN count(*) AS hitech_requirements_linked;
-"""
-
-#13a.control->pcidss_requirements
-control_pcidss_requirements = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.PCI_DSS_Requirement IS NOT NULL AND trim(row.PCI_DSS_Requirement) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (r:Requirement {req_id: toInteger(trim(row.PCI_DSS_Requirement))})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(r)
-RETURN count(*) as SCF_Requirement_Links_Created;
-"""
-
-#13b.control->pcidss_sub_requirements = """
-control_pcidss_sub_requirements = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.PCI_DSS_Sub_Requirement IS NOT NULL AND trim(row.PCI_DSS_Sub_Requirement) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (sr:SubRequirement {req_id: trim(row.PCI_DSS_Sub_Requirement)})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(sr)
-RETURN count(*) as SCF_SubRequirement_Links_Created;
-"""
-#14a.control->NERC_CIP
+#11a.control-> Nerc_CIP
 control_nerc_cip = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row
-WHERE row.CIP_Standard_ID IS NOT NULL AND trim(row.CIP_Standard_ID) <> ''
-MATCH (sc:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (cip:CIPStandard {standard_id: trim(row.CIP_Standard_ID)})
-MERGE (sc)-[:HAS_EXTERNAL_CONTROLS]->(cip)
-RETURN count(*) AS scf_to_cip_relationships;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (nerc:NERCCIP {requirement_id: trim(row.nerc_cip_requirement_id), IS_frameworks_standard_id: 'NERC_CIP'})
+MERGE (sc)-[:CONTROL_MAPS_NERC_CIP]->(nerc);
 """
-#15a.control->TISAX
+
+#13a.control-> PCIDSS
+control_pci_dss = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (pci:PCIDSS{control_id: trim(row.pci_dss_node_id), IS_frameworks_standard_id: 'PCI-DSS 4.0'})
+MERGE (sc)-[:CONTROL_MAPS_PCI_DSS]->(pci);
+"""
+#control->TISAX
 control_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.TISAX_FDE IS NOT NULL
-MATCH (scf:SCFControl {control_id: trim(row.SCF_Control_Code)})
-MATCH (ao:AssessmentObjective {
-  industry_standard_regulation_id: 'TISAX 6.0', 
-  ref: trim(row.TISAX_FDE)
-})
-MERGE (scf)-[rel:HAS_EXTERNAL_CONTROLS]->(ao)
-RETURN count(*) AS relationships_created;
+MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
+MATCH (tisax:TISAX {control_id: trim(row.tisax_reference_id), IS_frameworks_standard_id: 'TISAX 6.0'})
+MERGE (sc)-[:CONTROL_MAPS_TISAX]->(tisax);
 """
 #16a.control->cpra_sections
 control_cpra_sections = """
@@ -429,19 +221,17 @@ client.query(IS_framework_and_standard)
 time.sleep(2)
 
 
-client.query(domain.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/neo4j_domains_simplified.csv"))
+client.query(domain.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Domains.csv"))
 time.sleep(2)
 
-client.query(SCF_controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/neo4j_controls_simplified.csv"))
+client.query(SCF_controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls.csv"))
 time.sleep(2)
 
-
-client.query(framework_domain_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/neo4j_framework_domain_relationships.csv"))
+client.query(framework_domain_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Framework%20Domain.csv"))
 time.sleep(2)
 
-client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/neo4j_domain_control_relationships.csv"))
+client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Domain%20Control.csv"))
 time.sleep(2)
-
 
 client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
 time.sleep(2)
