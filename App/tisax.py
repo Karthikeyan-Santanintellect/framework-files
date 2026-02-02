@@ -44,6 +44,14 @@ ON CREATE SET
   ass.on_site_required       = row.on_site_required,
   ass.documentation_reviewed = row.documentation_reviewed;
 """
+# Requirements 
+requirements = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (req:Requirement {industry_standard_regulation_id: 'TISAX 6.0', requirement_id: row.tisax_requirement_id})
+ON CREATE SET
+  req.name = row.control_name;
+"""
+  
 #assessment_level
 assessment_level = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -580,6 +588,13 @@ MATCH (orphan:Role) WHERE NOT EXISTS ((orphan)--())
 MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
 MERGE (reg)-[:TISAX_DEFINES_ROLE]->(orphan);
 """
+
+# Regulation_requirements
+regulation_requirements = """
+MATCH (reg:IndustryStandardAndRegulation {industry_standard_regulation_id: 'TISAX 6.0'})
+MATCH (req:Requirement {industry_standard_regulation_id: 'TISAX 6.0'})
+MERGE (reg)-[:REGULATION_REQUIRES_REQUIREMENTS]->(req);
+"""
 import os
 import time
 import logging
@@ -610,6 +625,9 @@ client.query(assessment.replace('$file_path', 'https://github.com/Karthikeyan-Sa
 time.sleep(2)
 
 client.query(assessment_level.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_AssessmentLevel_nodes.csv'))
+time.sleep(2)
+
+client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX%20-%20Requirements.csv"))
 time.sleep(2)
 
 client.query(assessment_objective.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/TISAX/TISAX_AssessmentObjective_nodes.csv'))
@@ -724,6 +742,10 @@ time.sleep(2)
 
 client.query(orphan_role)
 time.sleep(2)
+
+client.query(regulation_requirements)
+time.sleep(2)
+
  
 logger.info("Graph structure loaded successfully.")
 

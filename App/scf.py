@@ -1,13 +1,12 @@
 # Load Framework
 IS_framework_and_standard = """
-MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.2.2"})
+MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.4"})
 ON CREATE SET
     f.name = "Secure Controls Framework",
     f.full_name = "Secure Controls Framework",
-    f.version = "2025.2.2",
-    f.publication_date = date("2025-01-01"),
+    f.version = "2025.4",
+    f.publication_date = date("2025-12-29"),
     f.status = "Active",
-    f.total_controls = 1342,
     f.url = "https://securecontrolsframework.com/",
     f.description = "A comprehensive cybersecurity and data privacy control framework organized into multiple domains."
 RETURN f;
@@ -19,60 +18,38 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (d:Domain {identifier: row.identifier})
 ON CREATE SET 
     d.name = row.name,
-    d.description = row.description,
-    d.created_at = datetime();
+    d.description = row.description;
 """
-
-# Load Controls
 # Load Controls
 SCF_controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.control_id IS NOT NULL AND trim(row.control_id) <> ''
-CALL {
-    WITH row
-    MERGE (sc:SCFControl {control_id: trim(row.control_id)})
-    ON CREATE SET 
-        sc.control_name = row.control_name,
-        sc.control_text = row.control_text,
-        sc.domain_identifier = trim(row.domain_identifier),
-        sc.pptdf_scope = row.pptdf_scope,
-        sc.control_question = row.control_question,
-        sc.relative_weighting = row.relative_weighting,
-        sc.nist_csf_function = row.nist_csf_function,
-        sc.is_new_control = row.is_new_control,
-        sc.is_mcr = row.is_mcr,
-        sc.is_dsr = row.is_dsr,
-        sc.control_type = row.control_type,
-} IN TRANSACTIONS OF 500 ROWS;
+MERGE (c:Control {id: row.control_id})
+ON CREATE SET 
+    c.name = row.control_name,
+    c.description = row.control_text,
+    c.question = row.control_question,
+    c.scope = row.pptdf_scope,
+    c.weighting = row.relative_weighting,
+    c.nist_function = row.nist_csf_function,
+    c.type = row.control_type;
 """
-
-
 
 # Create Framework→Domain Relationships
 framework_domain_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.domain_identifier IS NOT NULL
-CALL {
-    WITH row
-    MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.2.2"})
-    MATCH (d:Domain {identifier: trim(row.domain_identifier)})
-    MERGE (f)-[r:IS_FRAMEWORKS_AND_STANDARD_CONTAINS_DOMAIN]->(d)
-    ON CREATE SET r.created_at = datetime()
-} IN TRANSACTIONS OF 500 ROWS;
+MERGE (f:Framework {name: row.framework_name, version: row.framework_version})
+WITH f, row
+MATCH (d:Domain {id: row.domain_identifier})
+MERGE (f)-[:SCF_HAS_DOMAIN]->(d);
 """
 
 
 # Create Domain → Controls Relationships
 domain_controls_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-WITH row WHERE row.domain_identifier IS NOT NULL AND row.control_id IS NOT NULL
-CALL {
-    WITH row
-    MATCH (d:Domain {identifier: trim(row.domain_identifier)})
-    MATCH (sc:SCFControl {control_id: trim(row.control_id)})
-    MERGE (d)-[r:DOMAIN_CONTAINS_CONTROL]->(sc)
-    ON CREATE SET r.created_at = datetime()
-} IN TRANSACTIONS OF 500 ROWS;
+MATCH (d:Domain {id: row.domain_identifier})
+MATCH (c:Control {id: row.control_id})
+MERGE (d)-[:DOMAIN_CONTAINS_CONTROL]->(c);
 """
 
 
