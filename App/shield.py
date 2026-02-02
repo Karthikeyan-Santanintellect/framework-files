@@ -415,6 +415,12 @@ MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY S
 MATCH (dc:DataController {regional_standard_regulation_id: 'NY SHIELD 1.0'})
 MERGE (reg)-[:REGULATION_GOVERNS_DATA_CONTROLLER]->(dc);
 """
+# regulation to section
+regulation_section = """
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MATCH (sec:Section {regional_standard_regulation_id: 'NY SHIELD 1.0'})
+MERGE (reg)-[:REGULATION_GOVERNS_SECTION]->(sec);
+"""
 #data_controller_data_breach
 data_controller_data_breach = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -641,6 +647,10 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_and_regulation)
 time.sleep(2)
 
+client.query(sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD%20-%20Sections.csv"))
+time.sleep(2)
+
+
 client.query(administrative_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SHIELD/SHIELD_AdministrativeSafeguard_nodes.csv"))
 time.sleep(2)
 
@@ -816,8 +826,8 @@ time.sleep(2)
 client.query(datacontroller_data_element)
 time.sleep(2)
 
-
-
+client.query(regulation_section)
+time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
