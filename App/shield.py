@@ -13,6 +13,16 @@ ON CREATE SET
     reg.description = "The SHIELD Act is New York's data security and breach notification law that amends the state's Information Security Breach and Notification Act, expands the scope of 'private information', and requires any person or business that owns or licenses private information of New York residents to implement reasonable administrative, technical, and physical safeguards, enforced by the New York Attorney General.",
     reg.jurisdiction = "New York (State)";
 """
+
+# Sections 
+sections = """
+Load CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (sec:Section {section_id: row.section_id, regional_standard_regulation_id: 'NY SHIELD 1.0'})
+ON CREATE SET 
+    sec.citation = row.official_citation,
+    sec.heading = row.heading,
+    sec.text = row.text;
+"""
 #Administrative Safeguards
 administrative_safeguards = """
 Load CSV WITH HEADERS FROM '$file_path' AS row

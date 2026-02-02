@@ -743,12 +743,12 @@ MATCH (cm:Complaint {regional_standard_regulation_id: 'DPDPA 1.0'})
 MATCH (df:DataFiduciary {regional_standard_regulation_id: 'DPDPA 1.0'})
 MERGE (cm)-[:COMPLAINT_INITIALLY_LODGED_WITH_FIDUCIARY]->(df);
 """
-# regulation_event_type = """
-# MATCH (orphan:EventType) 
-# WHERE NOT EXISTS ((orphan)--())
-# MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0'})
-# MERGE (reg)-[:REGULATION_DEFINES_EVENT_TYPE]->(orphan);
-# """
+regulation_event_type = """
+MATCH (orphan:EventType) 
+WHERE NOT EXISTS ((orphan)--())
+MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDPA 1.0'})
+MERGE (reg)-[:REGULATION_DEFINES_EVENT_TYPE]->(orphan);
+"""
 
 import sys
 import os
@@ -1053,8 +1053,8 @@ time.sleep(2)
 client.query(complaint_fiduciary)
 time.sleep(2)
 
-# client.query(regulation_event_type)
-# time.sleep(2)
+client.query(regulation_event_type)
+time.sleep(2)
 
 
 

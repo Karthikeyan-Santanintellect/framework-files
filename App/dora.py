@@ -1,7 +1,4 @@
 # Regulation 
-import re
-
-
 regional_standard_regulation ="""
 MERGE (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET
@@ -369,7 +366,6 @@ MERGE (fe)-[:FINANCIAL_ENTITY_MANAGES_ICT_RISK]->(ir);
 """
 
 # ICT Control Mitigates to ICT Risk
-# (Fixed the '2022/2022' typo in your original variable name)
 ict_control_mitigates_ict_risk = """
 MATCH (ic:ICTControl)
 MATCH (ir:ICTRisk)
@@ -436,7 +432,6 @@ MERGE (fe)-[:FINANCIAL_ENTITY_CONTRACTS_THIRD_PARTY_SERVICE_PROVIDER]->(its);
 """
 
 # Third Party ICT Service
-# (Fixed the double 'MATCH (its:MATCH' error)
 third_party_ict_service = """
 MATCH (its:ICTThirdPartyServiceProvider)
 MATCH (is:ICTService)
@@ -542,12 +537,13 @@ MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA
 MATCH (pe:Penalty)
 MERGE (reg)-[:REGULATION_DEFINES_PENALTY]->(pe);
 """
-# Regulation to Requirements
-reg_to_requirements = """
-MATCH (orphan:Requirement) WHERE NOT EXISTS ((orphan)--())
-MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
-MERGE (reg)-[:REGULATION_CONTAINS_REQUIREMENT]->(orphan);
+# Critical Function to Critical ITC Provider
+critical_functions_critical_ict_providers = """
+MATCH (ctp:CriticalICTProvider) 
+MATCH (cf:CriticalFunction)
+MERGE (cf)-[:CRITICAL_FUNCTION_SUPPORTS_CRITICAL_ICT_PROVIDER]->(ctp);
 """
+
 
 
 import sys
@@ -570,197 +566,198 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-# client.query(regional_standard_regulation)
-# time.sleep(2)
+client.query(regional_standard_regulation)
+time.sleep(2)
 
-# client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Chapter.csv"))
-# time.sleep(2)
+client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Chapter.csv"))
+time.sleep(2)
 
-# client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Article.csv"))
-# time.sleep(2)
+client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Article.csv"))
+time.sleep(2)
 
-# client.query(competent_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Competent%20Authority.csv"))
-# time.sleep(2)
+client.query(competent_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Competent%20Authority.csv"))
+time.sleep(2)
 
-# client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20Functions.csv"))
-# time.sleep(2)
+client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20Functions.csv"))
+time.sleep(2)
 
-# client.query(critical_ict_proider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20ICT%20Provider.csv"))
-# time.sleep(2)
+client.query(critical_ict_proider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20ICT%20Provider.csv"))
+time.sleep(2)
 
-# client.query(cyber_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Cyber%20Threat.csv"))
-# time.sleep(2)
+client.query(cyber_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Cyber%20Threat.csv"))
+time.sleep(2)
 
-# client.query(facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Facility.csv"))
-# time.sleep(2)
+client.query(facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Facility.csv"))
+time.sleep(2)
 
-# client.query(ict_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Risk.csv"))
-# time.sleep(2)
+client.query(ict_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Risk.csv"))
+time.sleep(2)
 
-# client.query(financial_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Financial%20Entity.csv"))
-# time.sleep(2)
-
-
-# client.query(ict_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Control.csv"))
-# time.sleep(2)
-
-# client.query(ict_service.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Service.csv"))
-# time.sleep(2)
+client.query(financial_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Financial%20Entity.csv"))
+time.sleep(2)
 
 
-# client.query(information_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Inforamtion%20Asset.csv"))
-# time.sleep(2)
+client.query(ict_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Control.csv"))
+time.sleep(2)
 
-# client.query(ict_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Asset.csv")) 
-# time.sleep(2) 
+client.query(ict_service.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Service.csv"))
+time.sleep(2)
 
-# client.query(joint_examination_term.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Joint%20Examination%20Team.csv"))
-# time.sleep(2)
 
-# client.query(jurisdiction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Jurisdiction.csv"))
-# time.sleep(2)
+client.query(information_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Inforamtion%20Asset.csv"))
+time.sleep(2)
 
-# client.query(lead_overeseer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Lead%20Overseer.csv"))
-# time.sleep(2)
+client.query(ict_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Asset.csv")) 
+time.sleep(2) 
 
-# client.query(legacy_ict_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Legacy%20ICT%20System.csv"))
-# time.sleep(2)
+client.query(joint_examination_term.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Joint%20Examination%20Team.csv"))
+time.sleep(2)
 
-# client.query(major_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Major%20Incident.csv"))
-# time.sleep(2)
+client.query(jurisdiction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Jurisdiction.csv"))
+time.sleep(2)
 
-# client.query(management_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Management%20Body.csv"))
-# time.sleep(2)
+client.query(lead_overeseer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Lead%20Overseer.csv"))
+time.sleep(2)
 
-# client.query(network_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Network%20Systems.csv"))
-# time.sleep(2)
+client.query(legacy_ict_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Legacy%20ICT%20System.csv"))
+time.sleep(2)
 
-# client.query(oversight_forum.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Oversight%20Forum.csv"))
-# time.sleep(2)
+client.query(major_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Major%20Incident.csv"))
+time.sleep(2)
 
-# client.query(penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Penalty.csv"))
-# time.sleep(2)
+client.query(management_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Management%20Body.csv"))
+time.sleep(2)
 
-# client.query(processing_location.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Processing%20Location.csv"))
-# time.sleep(2)
+client.query(network_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Network%20Systems.csv"))
+time.sleep(2)
 
-# client.query(remediation_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Remediation%20Plan.csv"))
-# time.sleep(2)
+client.query(oversight_forum.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Oversight%20Forum.csv"))
+time.sleep(2)
 
-# client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Requirements.csv"))
-# time.sleep(2)
+client.query(penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Penalty.csv"))
+time.sleep(2)
+
+client.query(processing_location.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Processing%20Location.csv"))
+time.sleep(2)
+
+client.query(remediation_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Remediation%20Plan.csv"))
+time.sleep(2)
+
+client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Requirements.csv"))
+time.sleep(2)
               
-# client.query(third_party_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-ICT%20Third%20Party%20Service%20Provider.csv"))
-# time.sleep(2)
+client.query(third_party_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-ICT%20Third%20Party%20Service%20Provider.csv"))
+time.sleep(2)
 
-# client.query(subsidiary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Subsidiary.csv"))
-# time.sleep(2)
+client.query(subsidiary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Subsidiary.csv"))
+time.sleep(2)
 
-# client.query(threat_led_penetration_test.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Threat%20Led%20Penetration%20Test.csv"))
-# time.sleep(2)
+client.query(threat_led_penetration_test.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Threat%20Led%20Penetration%20Test.csv"))
+time.sleep(2)
 
 # Relationships
-# client.query(reg_to_chapters)
-# time.sleep(2)
-
-# client.query(chapters_to_articles)
-# time.sleep(2)
-
-# client.query(articles_to_requirements)
-# time.sleep(2)
-
-# client.query(competent_authority_financial_entity)
-# time.sleep(2)
-
-# client.query(lead_overseer_critical_ict_providers)
-# time.sleep(2)
-
-# client.query(management_body_financial_entity)
-# time.sleep(2)
-
-# client.query(joint_examination_team_lead_overseer)
-# time.sleep(2)
-
-# client.query(oversight_forum_lead_overseer)
-# time.sleep(2)
-
-# client.query(financial_entity_ict_risk)
-# time.sleep(2)
-
-# client.query(ict_control_mitigates_ict_risk)
-# time.sleep(2)
-
-# client.query(financial_entity_owns_assets)
-# time.sleep(2)
-
-# client.query(ict_service_assets)
-# time.sleep(2)
-
-# client.query(network_systems_ict_services)
-# time.sleep(2)
-
-# client.query(financial_entity_reports_major_incident)
-# time.sleep(2)
-
-# client.query(major_incident_competent_authority)
-# time.sleep(2)
-
-# client.query(financial_entity__tlpt)
-# time.sleep(2)
-
-# client.query(remediation_plan_tlpt)
-# time.sleep(2)
-
-# client.query(financial_entity_third_party)
-# time.sleep(2)
-
-# client.query(third_party_ict_service)
-# time.sleep(2)
-
-# client.query(third_party_subsidiary)
-# time.sleep(2)
-
-# client.query(third_party_processing_location)
-# time.sleep(2)
-
-# client.query(reg_jurisdiction)
-# time.sleep(2)
-
-# client.query(competent_authority_jurisdiction)
-# time.sleep(2)
-
-# client.query(financial_entity_critical_functions)
-# time.sleep(2)
-
-# client.query(ict_services_critical_functions)
-# time.sleep(2)
-
-# client.query(cyber_threat_ict_risk)
-# time.sleep(2)
-
-# client.query(cyber_threat_major_incident)
-# time.sleep(2)
-
-# client.query(financial_entity_facility)
-# time.sleep(2)
-
-# client.query(facility_ict_asset)
-# time.sleep(2)
-
-# client.query(financial_entity_legacy_ict_systems)
-# time.sleep(2)
-
-# client.query(legacy_system_ict_risk)
-# time.sleep(2)
-
-# client.query(competent_authority_penalty)
-# time.sleep(2)
-
-# client.query(reg_defines_penalty)
-# time.sleep(2)
-
-client.query(reg_to_requirements)
+client.query(reg_to_chapters)
 time.sleep(2)
+
+client.query(chapters_to_articles)
+time.sleep(2)
+
+client.query(articles_to_requirements)
+time.sleep(2)
+
+client.query(competent_authority_financial_entity)
+time.sleep(2)
+
+client.query(lead_overseer_critical_ict_providers)
+time.sleep(2)
+
+client.query(management_body_financial_entity)
+time.sleep(2)
+
+client.query(joint_examination_team_lead_overseer)
+time.sleep(2)
+
+client.query(oversight_forum_lead_overseer)
+time.sleep(2)
+
+client.query(financial_entity_ict_risk)
+time.sleep(2)
+
+client.query(ict_control_mitigates_ict_risk)
+time.sleep(2)
+
+client.query(financial_entity_owns_assets)
+time.sleep(2)
+
+client.query(ict_service_assets)
+time.sleep(2)
+
+client.query(network_systems_ict_services)
+time.sleep(2)
+
+client.query(financial_entity_reports_major_incident)
+time.sleep(2)
+
+client.query(major_incident_competent_authority)
+time.sleep(2)
+
+client.query(financial_entity__tlpt)
+time.sleep(2)
+
+client.query(remediation_plan_tlpt)
+time.sleep(2)
+
+client.query(financial_entity_third_party)
+time.sleep(2)
+
+client.query(third_party_ict_service)
+time.sleep(2)
+
+client.query(third_party_subsidiary)
+time.sleep(2)
+
+client.query(third_party_processing_location)
+time.sleep(2)
+
+client.query(reg_jurisdiction)
+time.sleep(2)
+
+client.query(competent_authority_jurisdiction)
+time.sleep(2)
+
+client.query(financial_entity_critical_functions)
+time.sleep(2)
+
+client.query(ict_services_critical_functions)
+time.sleep(2)
+
+client.query(cyber_threat_ict_risk)
+time.sleep(2)
+
+client.query(cyber_threat_major_incident)
+time.sleep(2)
+
+client.query(financial_entity_facility)
+time.sleep(2)
+
+client.query(facility_ict_asset)
+time.sleep(2)
+
+client.query(financial_entity_legacy_ict_systems)
+time.sleep(2)
+
+client.query(legacy_system_ict_risk)
+time.sleep(2)
+
+client.query(competent_authority_penalty)
+time.sleep(2)
+
+client.query(reg_defines_penalty)
+time.sleep(2)
+
+client.query(critical_functions_critical_ict_providers)
+time.sleep(2)
+
 
 logger.info("Graph structure loaded successfully.")
 

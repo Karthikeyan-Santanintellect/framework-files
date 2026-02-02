@@ -1,0 +1,21 @@
+section_id,official_citation,heading,text
+4(2)(a),N.Y. GBL § 899-bb(2)(a),General Security Requirement,Any person or business that owns or licenses computerized data which includes private information of a resident of New York shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of the private information including, but not limited to, disposal of data.
+4(2)(b)(i),N.Y. GBL § 899-bb(2)(b)(i),Compliant Regulated Entity Deemed Compliant,A person or business shall be deemed to be in compliance with paragraph (a) of this subdivision if it is a compliant regulated entity as defined in subdivision one of this section.
+4(2)(b)(ii)(A),N.Y. GBL § 899-bb(2)(b)(ii)(A),Administrative Safeguards,Reasonable administrative safeguards such as the following...
+4(2)(b)(ii)(A)(1),N.Y. GBL § 899-bb(2)(b)(ii)(A)(1),Designate Employee,Designates one or more employees to coordinate the security program.
+4(2)(b)(ii)(A)(2),N.Y. GBL § 899-bb(2)(b)(ii)(A)(2),Identify Risks,Identifies reasonably foreseeable internal and external risks.
+4(2)(b)(ii)(A)(3),N.Y. GBL § 899-bb(2)(b)(ii)(A)(3),Assess Safeguards,Assesses the sufficiency of safeguards in place to control the identified risks.
+4(2)(b)(ii)(A)(4),N.Y. GBL § 899-bb(2)(b)(ii)(A)(4),Train Employees,Trains and manages employees in the security program practices and procedures.
+4(2)(b)(ii)(A)(5),N.Y. GBL § 899-bb(2)(b)(ii)(A)(5),Service Providers,Selects service providers capable of maintaining appropriate safeguards, and requires those safeguards by contract.
+4(2)(b)(ii)(A)(6),N.Y. GBL § 899-bb(2)(b)(ii)(A)(6),Adjust Program,Adjusts the security program in light of business changes or new circumstances.
+4(2)(b)(ii)(B),N.Y. GBL § 899-bb(2)(b)(ii)(B),Technical Safeguards,Reasonable technical safeguards such as the following...
+4(2)(b)(ii)(B)(1),N.Y. GBL § 899-bb(2)(b)(ii)(B)(1),Assess Network/Software Design,Assesses risks in network and software design.
+4(2)(b)(ii)(B)(2),N.Y. GBL § 899-bb(2)(b)(ii)(B)(2),Assess Processing/Storage Risks,Assesses risks in information processing, transmission and storage.
+4(2)(b)(ii)(B)(3),N.Y. GBL § 899-bb(2)(b)(ii)(B)(3),Detect/Prevent Attacks,Detects, prevents and responds to attacks or system failures.
+4(2)(b)(ii)(B)(4),N.Y. GBL § 899-bb(2)(b)(ii)(B)(4),Test and Monitor,Regularly tests and monitors the effectiveness of key controls, systems and procedures.
+4(2)(b)(ii)(C),N.Y. GBL § 899-bb(2)(b)(ii)(C),Physical Safeguards,Reasonable physical safeguards such as the following...
+4(2)(b)(ii)(C)(1),N.Y. GBL § 899-bb(2)(b)(ii)(C)(1),Assess Storage/Disposal Risks,Assesses risks of information storage and disposal.
+4(2)(b)(ii)(C)(2),N.Y. GBL § 899-bb(2)(b)(ii)(C)(2),Detect/Prevent Intrusions,Detects, prevents and responds to intrusions.
+4(2)(b)(ii)(C)(3),N.Y. GBL § 899-bb(2)(b)(ii)(C)(3),Protect Unauthorized Access,Protects against unauthorized access to or use of private information during or after the collection, transportation and destruction or disposal of the information.
+4(2)(b)(ii)(C)(4),N.Y. GBL § 899-bb(2)(b)(ii)(C)(4),Data Disposal,Disposes of private information within a reasonable amount of time after it is no longer needed for business purposes by erasing electronic media so that the information cannot be read or reconstructed.
+4(2)(c),N.Y. GBL § 899-bb(2)(c),Small Business Compliance,A small business complies... if the security program contains reasonable administrative, technical and physical safeguards that are appropriate for the size and complexity of the small business.

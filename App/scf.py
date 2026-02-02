@@ -1,4 +1,3 @@
-
 # Load Framework
 IS_framework_and_standard = """
 MERGE (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.2.2"})
@@ -25,6 +24,7 @@ ON CREATE SET
 """
 
 # Load Controls
+# Load Controls
 SCF_controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 WITH row WHERE row.control_id IS NOT NULL AND trim(row.control_id) <> ''
@@ -37,13 +37,12 @@ CALL {
         sc.domain_identifier = trim(row.domain_identifier),
         sc.pptdf_scope = row.pptdf_scope,
         sc.control_question = row.control_question,
-        sc.relative_weighting = toInteger(row.relative_weighting),
+        sc.relative_weighting = row.relative_weighting,
         sc.nist_csf_function = row.nist_csf_function,
-        sc.is_new_control = toBoolean(row.is_new_control),
-        sc.is_mcr = toBoolean(row.is_mcr),
-        sc.is_dsr = toBoolean(row.is_dsr),
+        sc.is_new_control = row.is_new_control,
+        sc.is_mcr = row.is_mcr,
+        sc.is_dsr = row.is_dsr,
         sc.control_type = row.control_type,
-        sc.created_at = datetime()
 } IN TRANSACTIONS OF 500 ROWS;
 """
 
