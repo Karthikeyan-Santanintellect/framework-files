@@ -38,7 +38,7 @@ ON CREATE SET
 # Part
 part ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (p:Part {node_id: row.part_id, regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (p:Part {node_id: row.node_id, regional_standard_regulation_id: 'CPA 1.0'})
 ON CREATE SET   
     p.number = row.part_number,
     p.name = row.part_name,
