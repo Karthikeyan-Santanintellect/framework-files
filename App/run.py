@@ -115,7 +115,7 @@ run_script('shield.py')
 run_script('tdpsa.py')
 run_script('dora.py')
 run_script('vcdpa.py')
-run_script('nis2.py')
+run_script('nis_2.py')
 
 
 
