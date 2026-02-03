@@ -88,34 +88,34 @@ def run_script(script_path, group=None, sleep=2):
         time.sleep(sleep)
 
 
-# IS Frameworks
-run_script('cis_controls.py', 'IS_Frameworks_Standard')
-run_script('iso27001.py')
-run_script('iso27002.py')
-run_script('nist_ai_rmf.py')
-run_script('nist_csf.py')
-run_script('nist_pmf_1_1.py')
-run_script('nist_pmf_1.py')
-run_script('nist_rmf.py')
+# # IS Frameworks
+# run_script('cis_controls.py', 'IS_Frameworks_Standard')
+# run_script('iso27001.py')
+# run_script('iso27002.py')
+# run_script('nist_ai_rmf.py')
+# run_script('nist_csf.py')
+# run_script('nist_pmf_1_1.py')
+# run_script('nist_pmf_1.py')
+# run_script('nist_rmf.py')
 
-# Industry Standards
-run_script('glba.py', 'Industry_Standard_Regulation')
-run_script('hipaa.py')
+# # Industry Standards
+# run_script('glba.py', 'Industry_Standard_Regulation')
+# run_script('hipaa.py')
 run_script('hitech.py')
-run_script('hitrust.py')
-run_script('nerc_cip.py')
-run_script('pcidss.py')
-run_script('tisax.py')
+# run_script('hitrust.py')
+# run_script('nerc_cip.py')
+# run_script('pcidss.py')
+# run_script('tisax.py')
 
-# Regional Regulations
-run_script('cpra.py', 'Regional_standard_regulation')
-run_script('dpdpa.py')
-run_script('gdpr.py')
-run_script('shield.py')
-run_script('tdpsa.py')
-run_script('dora.py')
-run_script('vcdpa.py')
-run_script('nis_2.py')
+# # Regional Regulations
+# run_script('cpra.py', 'Regional_standard_regulation')
+# run_script('dpdpa.py')
+# run_script('gdpr.py')
+# run_script('shield.py')
+# run_script('tdpsa.py')
+# run_script('dora.py')
+# run_script('vcdpa.py')
+# run_script('nis_2.py')
 
 
 

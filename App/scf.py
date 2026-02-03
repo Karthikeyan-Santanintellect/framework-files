@@ -89,20 +89,7 @@ MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (pmf1:NISTPMF {control_id: trim(row.nist_pmf_1_0_id), IS_frameworks_standard_id: 'NIST_PMF_1.0'})
 MERGE (sc)-[:CONTROL_MAPS_NIST_PMF_1_0]->(pmf1);
 """
-#6a.control->pmf_1.1
-control_nist_pmf_1_1 = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (pmf11:NISTPMF {control_id: trim(row.nist_pmf_id), IS_frameworks_standard_id: 'NIST_PMF_1.1'})
-MERGE (sc)-[:CONTROL_MAPS_NIST_PMF_1_1]->(pmf11);
-"""
-#7a.control->NIST_RMF
-control_nist_rmf = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (rmf:NISTRMF {control_id: trim(row.nist_rmf_control_id), IS_frameworks_standard_id: 'NIST_RMF_5.2'})
-MERGE (sc)-[:CONTROL_MAPS_NIST_RMF]->(rmf);
-"""
+
 #8c.control->nist_ai_rmf
 control_nist_ai_rmf = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -116,14 +103,6 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (glba:GLBA {control_id: trim(row.glba_section_id), industry_standard_regulation_id: 'GLBA 1999'})
 MERGE (sc)-[:CONTROL_MAPS_GLBA]->(glba);
-"""
-
-#10a.control->Hippa
-control_hipaa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (hipaa:HIPAA {standard_id: trim(row.hipaa_standard_id), industry_standard_regulation_id: 'HIPAA 1996'})
-MERGE (sc)-[:CONTROL_MAPS_HIPAA]->(hipaa);
 """
 
 #11a.control-> Nerc_CIP
@@ -168,13 +147,6 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (dpdpa:DPDPA {control_id: trim(row.dpdpa_section_id), industry_standard_regulation_id: 'DPDPA 1.0'})
 MERGE (sc)-[:CONTROL_MAPS_DPDPA]->(dpdpa);
-"""
-# control -> VCDPA
-control_vcdpa = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (vcdpa:VCDPA {control_id: trim(row.vcdpa_section_id), industry_standard_regulation_id: 'VCDPA 2023'})
-MERGE (sc)-[:CONTROL_MAPS_VCDPA]->(vcdpa);
 """
 # control -> GDPR
 control_gdpr = """
@@ -254,13 +226,6 @@ client.query(control_nist_pmf_1_0.replace('$file_path',"https://github.com/Karth
 time.sleep(2)
 
 
-client.query(control_nist_pmf_1_1.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PMF%201.1.csv"))
-time.sleep(2)
-
-
-client.query(control_nist_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIST%20RMF.csv"))
-time.sleep(2)
-
 client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIST%20AI%20RMF.csv"))
 time.sleep(2)
 
@@ -268,8 +233,6 @@ time.sleep(2)
 client.query(control_glba.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20GLBA.csv"))
 time.sleep(2)
 
-client.query(control_hipaa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20HIPAA.csv"))
-time.sleep(2)
 
 client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NERC_CIP.csv"))
 time.sleep(2)
@@ -290,9 +253,6 @@ time.sleep(2)
 client.query(control_dpdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20DPDPA.csv"))
 time.sleep(2)
 
-client.query(control_vcdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20VCDPA.csv"))
-time.sleep(2)
-
 client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20GDPR.csv"))
 time.sleep(2)
 
@@ -306,65 +266,38 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""
-    MATCH (n)
-    WITH collect(DISTINCT n) AS allNodes
-    MATCH ()-[r]-()
-    WITH allNodes, collect(DISTINCT r) AS allRels
-    RETURN {
-      nodes: [node IN allNodes | node {
-        .*,
-        id: elementId(node),
-        labels: labels(node),
-        mainLabel: head(labels(node))
-      }],
-      rels: [rel IN allRels | rel {
-        .*,
-        id: elementId(rel),
-        type: type(rel),
-        from: elementId(startNode(rel)),
-        to: elementId(endNode(rel))
-      }]
-    } AS graph_data
-""")
+query = """
+MATCH (n)
+WHERE size(labels(n)) > 0
+OPTIONAL MATCH (n)-[r]-()
+WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
+RETURN {
+  nodes: [n IN uniqueNodes | n {
+    .*,
+    id: elementId(n),
+    labels: labels(n),
+    mainLabel: head(labels(n))
+  }],
+  rels: [r IN uniqueRels | r {
+    .*,
+    id: elementId(r),
+    type: type(r),
+    from: elementId(startNode(r)),
+    to: elementId(endNode(r))
+  }]
+} AS graph_data
+"""
 
-import json
+results = client.query(query)
 
-graph = None
-
-try:
-    # CASE 1: res is a list of dictionaries (Standard)
-    if isinstance(res, list) and len(res) > 0 and isinstance(res[0], dict):
-        graph = res[0].get("graph_data")
-
-    # CASE 2: res is a list of strings (Needs JSON parsing)
-    elif isinstance(res, list) and len(res) > 0 and isinstance(res[0], str):
-        print("Detected string result, attempting to parse JSON...")
-        try:
-            parsed = json.loads(res[0])
-            if isinstance(parsed, dict):
-                graph = parsed.get("graph_data", parsed) 
-        except json.JSONDecodeError:
-            print("Error: Could not parse res[0] as JSON.")
-
-    # CASE 3: res is a single dictionary
-    elif isinstance(res, dict):
-         graph = res.get("graph_data")
-
-    if graph:
-        with open("scf.json", "w", encoding="utf-8") as f:
-            f.write(json.dumps(graph, default=str, indent=2))
-        logger.info("✓ Exported graph data to scf.json")
-        
-        # Print statistics
-        if isinstance(graph, dict):
-            num_nodes = len(graph.get("nodes", []))
-            num_rels = len(graph.get("rels", []))
-            logger.info(f"Graph exported: {num_nodes} nodes, {num_rels} relationships")
-    else:
-        logger.error("Failed to extract 'graph_data' from response.")
-
-except Exception as e:
-    logger.error(f"An error occurred during export: {e}")
+if results and len(results) > 0:
+    graph_data = results[0]['graph_data']
+    
+    import json
+    with open('scf.json', 'w', encoding='utf-8') as f:
+        f.write(json.dumps(graph_data, default=str, indent=2))
+    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to scf.json")
+else:
+    logger.error("No data returned from the query.")
 
 client.close()
