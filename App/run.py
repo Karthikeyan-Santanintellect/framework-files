@@ -1,3 +1,4 @@
+from pdb import run
 import time
 import logging
 import subprocess
@@ -87,39 +88,38 @@ def run_script(script_path, group=None, sleep=2):
         time.sleep(sleep)
 
 
-# # IS Frameworks
-# run_script('IS_Frameworks_Standard/cis_controls.py', 'IS_Frameworks_Standard')
-# run_script('IS_Frameworks_Standard/iso27001.py')
-# run_script('IS_Frameworks_Standard/iso27002.py')
-# run_script('IS_Frameworks_Standard/nist_ai-rmf.py')
-# run_script('IS_Frameworks_Standard/nist_csf.py')
-# run_script('IS_Frameworks_Standard/nist_pmf_1_1.py')
-# run_script('IS_Frameworks_Standard/nist_pmf_1.py')
-# run_script('IS_Frameworks_Standard/nist_rmf.py')
+# IS Frameworks
+run_script('cis_controls.py', 'IS_Frameworks_Standard')
+run_script('iso27001.py')
+run_script('iso27002.py')
+run_script('nist_ai-rmf.py')
+run_script('nist_csf.py')
+run_script('nist_pmf_1_1.py')
+run_script('nist_pmf_1.py')
+run_script('nist_rmf.py')
 
-# # Industry Standards
-# run_script('Industry_Standard_Regulation/glba.py', 'Industry_Standard_Regulation')
-# run_script('Industry_Standard_Regulation/hipaa.py')
-# run_script('Industry_Standard_Regulation/hitech.py')
-# run_script('Industry_Standard_Regulation/hitrust.py')
-# run_script('Industry_Standard_Regulation/nerc_cip.py')
-# run_script('Industry_Standard_Regulation/pcidss.py')
-# run_script('Industry_Standard_Regulation/tisax.py')
+# Industry Standards
+run_script('glba.py', 'Industry_Standard_Regulation')
+run_script('hipaa.py')
+run_script('hitech.py')
+run_script('hitrust.py')
+run_script('nerc_cip.py')
+run_script('pcidss.py')
+run_script('tisax.py')
 
-# # Regional Regulations
-# run_script('Regional_standard_regulation/cpra.py', 'Regional_standard_regulation')
-# run_script('Regional_standard_regulation/dpdpa.py')
-# run_script('Regional_standard_regulation/gdpr.py')
-# run_script('Regional_standard_regulation/shield.py')
-# run_script('Regional_standard_regulation/tdpsa.py')
-# run_script('Regional_standard_regulation/vcdpa.py')
+# Regional Regulations
+run_script('cpra.py', 'Regional_standard_regulation')
+run_script('dpdpa.py')
+run_script('gdpr.py')
+run_script('shield.py')
+run_script('tdpsa.py')
+run_script('dora.py')
+run_script('vcdpa.py')
+run_script('nis2.py')
 
 
-# run_script('cpra.py', 'Outside Regional_standard_regulation')
-# run_script('dpdpa.py')
-# run_script('gdpr.py')
-# run_script('tdpsa.py')
-# run_script('vcdpa.py')
+
+
 
 
 logger.info('Loaded all frameworks')

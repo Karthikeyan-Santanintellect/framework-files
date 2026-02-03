@@ -61,14 +61,14 @@ MERGE (sc)-[:CONTROL_MAPS_CSF]->(csf);
 """
 
 # Control -> CIS 
-control_cis = """
+control_CIS = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (cis:CISControl {control_id: trim(row.cis_control_id), IS_frameworks_standard_id: 'CIS CONTROLS 8.1'})
 MERGE (sc)-[:CONTROL_MAPS_CIS]->(cis);
 """
 #3a.control->iso_27001
-control_iso27001= """
+control_ISO27001= """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (iso1:ISO27001 {control_id: trim(row.iso_control_id), IS_frameworks_standard_id: 'ISO27001_2022'})
@@ -76,7 +76,7 @@ MERGE (sc)-[:CONTROL_MAPS_ISO27001]->(iso1);
 """
 
 #4a.control->iso
-control_iso27002 = """
+control_ISO27002 = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (iso2:ISO27002 {control_id: trim(row.iso_control_id), IS_frameworks_standard_id: 'ISO27002_2022'})
@@ -148,13 +148,6 @@ MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (tisax:TISAX {control_id: trim(row.tisax_reference_id), industry_standard_regulation_id: 'TISAX 6.0'})
 MERGE (sc)-[:CONTROL_MAPS_TISAX]->(tisax);
 """
-#16a.control-> CPRA
-control_cpra = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
-MATCH (cpra:CPRA {control_id: trim(row.civil_code_id), industry_standard_regulation_id: 'CPRA 2.0'})
-MERGE (sc)-[:CONTROL_MAPS_CPRA]->(cpra);
-"""
 #17a.control->CPA
 control_cpa = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -191,7 +184,7 @@ MATCH (gdpr:GDPR {control_id: trim(row.gdpr_article_id), industry_standard_regul
 MERGE (sc)-[:CONTROL_MAPS_GDPR]->(gdpr);
 """
 # Control -> NY SHIELD
-control_ny_shield = """
+control_ny_shield= """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (sc:SCFControl {control_id: trim(row.scf_control_id)})
 MATCH (ny:NYShield {control_id: trim(row.section_id), industry_standard_regulation_id: 'NY_SHIELD 1.0'})
@@ -232,7 +225,6 @@ logger.info("Loading graph structure...")
 client.query(IS_framework_and_standard)
 time.sleep(2)
 
-
 client.query(domain.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Domains.csv"))
 time.sleep(2)
 
@@ -245,106 +237,70 @@ time.sleep(2)
 client.query(domain_controls_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Domain%20Control.csv"))
 time.sleep(2)
 
-client.query(control_CSF_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+client.query(control_CSF.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls%20NIST%20CSF.csv"))
 time.sleep(2)
 
-client.query(control_CSF_category.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+client.query(control_CIS.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls%20CIS%20Controls.csv"))
 time.sleep(2)
 
-client.query(control_CSF_subcategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF_NIST_CSF_Actual_From_Excel.csv"))
+client.query(control_ISO27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls%20ISO27001.csv"))
 time.sleep(2)
 
-client.query(control_cis_controls_id.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CIS-Controls-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_cis_controls_name.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CIS-Controls-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_iso_27001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27001-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_iso_27001_clause.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27001-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27002-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_iso_27002_clause.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-ISO27002-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pmf_1.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pmf_1_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pmf_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pmf_1_1_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pmf_1_1_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pmf_1_1_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_PMF_1_1-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_nist_rmf_step.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST_RMF-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_nist_ai_rmf_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_nist_ai_rmf_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_nist_ai_rmf_subcategories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NIST-AI-RMF-Mapping.csv"))
+client.query(control_ISO27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls%20ISO27002.csv"))
 time.sleep(2)
 
 
-client.query(control_glba_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GLBA-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_glba_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GLBA-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_hipaa_rules.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_hipaa_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HIPAA-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_hitech_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITECH-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_hitrust.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-HITRUST-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_pcidss_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
+client.query(control_nist_pmf_1_0.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PMF%201.0.csv"))
 time.sleep(2)
 
 
-client.query(control_pcidss_sub_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-PCI-DSS-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-NERC-CIP-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-TISAX-Mapping.csv"))
+client.query(control_nist_pmf_1_1.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PMF%201.1.csv"))
 time.sleep(2)
 
 
-client.query(control_cpra_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-CPRA-Mapping.csv"))
+client.query(control_nist_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIST%20RMF.csv"))
 time.sleep(2)
 
-client.query(control_dpdpa_sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-DPDPA-Mapping.csv"))
-time.sleep(2)
-
-client.query(control_gdpr_articles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF-GDPR-Mapping-Complete.csv"))
+client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIST%20AI%20RMF.csv"))
 time.sleep(2)
 
 
+client.query(control_glba.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20GLBA.csv"))
+time.sleep(2)
+
+client.query(control_hipaa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20HIPAA.csv"))
+time.sleep(2)
+
+client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NERC_CIP.csv"))
+time.sleep(2)
+
+client.query(control_pci_dss.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PCIDSS.csv"))
+time.sleep(2)
+
+client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20TISAX.csv"))
+time.sleep(2)
+
+
+client.query(control_cpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20CPA.csv"))
+time.sleep(2)
+
+client.query(control_dora.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20DORA.csv"))
+time.sleep(2)
+
+client.query(control_dpdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20DPDPA.csv"))
+time.sleep(2)
+
+client.query(control_vcdpa.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20VCDPA.csv"))
+time.sleep(2)
+
+client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20GDPR.csv"))
+time.sleep(2)
+
+client.query(control_ny_shield.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NY%20SHEILD.csv"))
+time.sleep(2)
+
+client.query(control_nis2.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIS%202.csv"))
+time.sleep(2)
 
 
 
