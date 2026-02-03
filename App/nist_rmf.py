@@ -162,7 +162,7 @@ client.query(control_families.replace('$file_path',"https://github.com/Karthikey
 time.sleep(2)
 logger.info('Control Families')
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Security%20Controls.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Controls.csv"))
 time.sleep(2)
 logger.info('Controls')
 
@@ -171,7 +171,7 @@ time.sleep(2)
 logger.info('Roles')
 
 
-client.query(systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20systems.csv"))
+client.query(systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Systems.csv"))
 time.sleep(2)
 logger.info('Systems')
 

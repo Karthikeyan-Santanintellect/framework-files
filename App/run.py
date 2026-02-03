@@ -92,7 +92,7 @@ def run_script(script_path, group=None, sleep=2):
 run_script('cis_controls.py', 'IS_Frameworks_Standard')
 run_script('iso27001.py')
 run_script('iso27002.py')
-run_script('nist_ai-rmf.py')
+run_script('nist_ai_rmf.py')
 run_script('nist_csf.py')
 run_script('nist_pmf_1_1.py')
 run_script('nist_pmf_1.py')
