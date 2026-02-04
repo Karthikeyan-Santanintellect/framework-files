@@ -14,7 +14,7 @@ ON CREATE SET
 # Chapters
 chapter = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Chapter {id: row.id})
+MERGE (c:Chapter {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     c.label = row.label,
     c.chapter_number = row.chapter_number,
@@ -24,7 +24,7 @@ ON CREATE SET
 # Article 
 article = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Article {id: row.id})
+MERGE (a:Article {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     a.label = row.label,
     a.article_number = row.article_number,
@@ -34,7 +34,7 @@ ON CREATE SET
 # Competent Authority
 competent_authority = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ca:CompetentAuthority {id: row.id})
+MERGE (ca:CompetentAuthority {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ca.label = row.label,
     ca.name = row.name,
@@ -45,7 +45,7 @@ ON CREATE SET
 # Critical Functions
 critical_functions = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cf:CriticalFunction {id: row.id})
+MERGE (cf:CriticalFunction {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET   
     cf.name = row.name,
     cf.legal_reference = row.legal_reference,
@@ -54,7 +54,7 @@ ON CREATE SET
 # Critical ICT Provider
 critical_ict_proider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ctp:CriticalICTProvider {id: row.id})
+MERGE (ctp:CriticalICTProvider {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ctp.name = row.name,
     ctp.legal_reference = row.legal_reference,
@@ -64,7 +64,7 @@ ON CREATE SET
 # Cyber Threat
 cyber_threat = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ct:CyberThreat {id: row.id})
+MERGE (ct:CyberThreat {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ct.name = row.name,
     ct.legal_reference = row.legal_reference,
@@ -75,7 +75,7 @@ ON CREATE SET
 # Facility
 facility = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (f:Facility {id: row.id})
+MERGE (f:Facility {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     f.name = row.name,
     f.legal_reference = row.legal_reference,
@@ -85,7 +85,7 @@ ON CREATE SET
 # ICT Risk
 ict_risk = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ir:ICTRisk {id: row.id})
+MERGE (ir:ICTRisk {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ir.name = row.name,
     ir.legal_reference = row.legal_reference,
@@ -96,7 +96,7 @@ ON CREATE SET
 # Fiancial Entity
 financial_entity = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (fe:FinancialEntity {id: row.id})
+MERGE (fe:FinancialEntity {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     fe.name = row.name,
     fe.entity_type = row.entity_type,
@@ -107,7 +107,7 @@ ON CREATE SET
 # ICT Control
 ict_control = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ic:ICTControl {id: row.id})
+MERGE (ic:ICTControl {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET
     ic.name = row.name,
     ic.legal_reference = row.legal_reference,
@@ -118,7 +118,7 @@ ON CREATE SET
 # ICT Service
 ict_service = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (is:ICTService {id: row.id})
+MERGE (is:ICTService {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     is.name = row.name,
     is.legal_reference = row.legal_reference,
@@ -129,7 +129,7 @@ ON CREATE SET
 # Information Asset
 information_asset = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ia:InformationAsset {id: row.id})
+MERGE (ia:InformationAsset {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ia.name = row.name,
     ia.legal_reference = row.legal_reference,
@@ -138,7 +138,7 @@ ON CREATE SET
 # ICT Asset
 ict_asset = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ica:ICTAsset {id: row.id})
+MERGE (ica:ICTAsset {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ica.name = row.name,
     ica.legal_reference = row.legal_reference,
@@ -148,7 +148,7 @@ ON CREATE SET
 # Joint Examination Term
 joint_examination_term = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (je:JointExaminationTeam {id: row.id})
+MERGE (je:JointExaminationTeam {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     je.name = row.name,
     je.legal_reference = row.legal_reference,
@@ -158,7 +158,7 @@ ON CREATE SET
 # Juridsction
 jurisdiction = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ju:Jurisdiction {id: row.id})
+MERGE (ju:Jurisdiction {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ju.name = row.name,
     ju.legal_reference = row.legal_reference,
@@ -168,7 +168,7 @@ ON CREATE SET
 # Lead Overseer
 lead_overeseer ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (lo:LeadOverseer {id: row.id})
+MERGE (lo:LeadOverseer {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     lo.name = row.name,
     lo.legal_reference = row.legal_reference,
@@ -178,7 +178,7 @@ ON CREATE SET
 # Legacy ICT Systems
 legacy_ict_systems = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (lis:LegacyICTSystems {id: row.id})
+MERGE (lis:LegacyICTSystems {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     lis.name = row.name,
     lis.legal_reference = row.legal_reference,
@@ -189,7 +189,7 @@ ON CREATE SET
 # Major Incident
 major_incident = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (mi:MajorIncident {id: row.id})
+MERGE (mi:MajorIncident {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     mi.name = row.name,
     mi.legal_reference = row.legal_reference,
@@ -200,7 +200,7 @@ ON CREATE SET
 # Management Body
 management_body ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (mb:ManagementBody {id: row.id})
+MERGE (mb:ManagementBody {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET  
     mb.name = row.name,
     mb.legal_reference = row.legal_reference,
@@ -211,7 +211,7 @@ ON CREATE SET
 # Network Systems
 network_systems ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (ns:NetworkSystems {id: row.id})
+MERGE (ns:NetworkSystems {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     ns.name = row.name,
     ns.legal_reference = row.legal_reference,
@@ -220,7 +220,7 @@ ON CREATE SET
 # Oversight Forum
 oversight_forum = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (of:OversightForum {id: row.id})
+MERGE (of:OversightForum {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     of.name = row.name,
     of.legal_reference = row.legal_reference,
@@ -231,7 +231,7 @@ ON CREATE SET
 # Penalty
 penalty = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pe:Penalty {id: row.id})
+MERGE (pe:Penalty {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     pe.name = row.name,
     pe.legal_reference = row.legal_reference,
@@ -241,7 +241,7 @@ ON CREATE SET
 # Processing Location
 processing_location = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (pl:ProcessingLocation {id: row.id})
+MERGE (pl:ProcessingLocation {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     pl.name = row.name,
     pl.legal_reference = row.legal_reference,
@@ -251,7 +251,7 @@ ON CREATE SET
 # Remediation Plan
 remediation_plan = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (rp:RemediationPlan {id: row.id})
+MERGE (rp:RemediationPlan {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     rp.name = row.name,
     rp.legal_reference = row.legal_reference,
@@ -262,7 +262,7 @@ ON CREATE SET
 # Requirements
 requirements = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (re:Requirements {id: row.id})
+MERGE (re:Requirements {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     re.article_id = row.article_id,
     re.requirement_text = row.requirement_text;
@@ -270,7 +270,7 @@ ON CREATE SET
 # ICT Third Party Service Provider
 third_party_service_provider = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (its:ICTThirdPartyServiceProvider {id: row.id})
+MERGE (its:ICTThirdPartyServiceProvider {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET 
     its.name = row.name,
     its.legal_reference = row.legal_reference,
@@ -281,7 +281,7 @@ ON CREATE SET
 # Subsidiary
 subsidiary = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (su:Subsidiary {id: row.id})
+MERGE (su:Subsidiary {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET
     su.name = row.name,
     su.legal_reference = row.legal_reference,
@@ -291,7 +291,7 @@ ON CREATE SET
 # Threat Led Penetration Test
 threat_led_penetration_test = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (tlp:ThreatLedPenetrationTest {id: row.id})
+MERGE (tlp:ThreatLedPenetrationTest {id: row.id,regional_standard_regulation_id: 'DORA 2022/2554'})
 ON CREATE SET
     tlp.name = row.name,
     tlp.legal_reference = row.legal_reference,
@@ -311,72 +311,72 @@ MERGE (reg)-[:REGULATION_CONTAINS_CHAPTER]->(c);
 
 # Chapters to Articles
 chapters_to_articles = """
-MATCH (c:Chapter)
-MATCH (a:Article)
+MATCH (c:Chapter{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (a:Article{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (c)-[:CHAPTER_CONTAINS_ARTICLE]->(a);
 """
 
 # Articles to Requirements
 articles_to_requirements = """
-MATCH (a:Article)
-MATCH (re:Requirements)
+MATCH (a:Article{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (re:Requirements{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (a)-[:ARTICLE_CONTAINS_REQUIREMENT]->(re);
 """
 
 # Competent Authority to Financial Entity
 competent_authority_financial_entity = """
-MATCH (ca:CompetentAuthority)
-MATCH (fe:FinancialEntity)
+MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (ca)-[:COMPETENT_AUTHORITY_SUPERVISES_FINANCIAL_ENTITY]->(fe);
 """
 
 # Lead Overseer to Critical ICT Providers
 lead_overseer_critical_ict_providers = """
-MATCH (lo:LeadOverseer)
-MATCH (ctp:CriticalICTProvider)
+MATCH (lo:LeadOverseer{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ctp:CriticalICTProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (lo)-[:LEAD_OVERSEER_OVERSEES_CRITICAL_ICT_PROVIDER]->(ctp);
 """
 
 # Management Body to Financial Entity
 management_body_financial_entity = """
-MATCH (mb:ManagementBody)
-MATCH (fe:FinancialEntity)
+MATCH (mb:ManagementBody{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (mb)-[:MANAGEMENT_BODY_GOVERNS_FINANCIAL_ENTITY]->(fe);
 """
 
 # Joint Examination Team to Lead Overseer
 joint_examination_team_lead_overseer = """
-MATCH (je:JointExaminationTeam)
-MATCH (lo:LeadOverseer)
+MATCH (je:JointExaminationTeam{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (lo:LeadOverseer{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (je)-[:JOINT_EXAMINATION_TEAM_ASSISTED_BY_LEAD_OVERSEER]->(lo);
 """
 
 # Oversight Forum to Lead Overseer
 oversight_forum_lead_overseer = """
-MATCH (of:OversightForum)
-MATCH (lo:LeadOverseer)
+MATCH (of:OversightForum{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (lo:LeadOverseer{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (of)-[:OVERSIGHT_FORUM_COORDINATES_LEAD_OVERSEER]->(lo);
 """
 
 # Financial Entity to ICT Risk
 financial_entity_ict_risk = """
-MATCH (fe:FinancialEntity)
-MATCH (ir:ICTRisk)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_MANAGES_ICT_RISK]->(ir);
 """
 
 # ICT Control Mitigates to ICT Risk
 ict_control_mitigates_ict_risk = """
-MATCH (ic:ICTControl)
+MATCH (ic:ICTControl{regional_standard_regulation_id: 'DORA 2022/2554'})
 MATCH (ir:ICTRisk)
 MERGE (ic)-[:ICT_CONTROL_MITIGATES_ICT_RISK]->(ir);
 """
 
 # Financial Entity to Assets
 financial_entity_owns_assets = """
-MATCH (fe:FinancialEntity)
-MATCH (ia:InformationAsset)
-MATCH (ica:ICTAsset)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ia:InformationAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ica:ICTAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_OWNS_INFORMATION_ASSET]->(ia)
 MERGE (fe)-[:FINANCIAL_ENTITY_OWNS_ASSETS]->(ica);
 """
@@ -384,163 +384,163 @@ MERGE (fe)-[:FINANCIAL_ENTITY_OWNS_ASSETS]->(ica);
 # ICT Service to Assets
 # (Fixed typo: REPLIES -> RELIES)
 ict_service_assets = """
-MATCH (is:ICTService)
-MATCH (ica:ICTAsset)
+MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ica:ICTAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (is)-[:ICT_SERVICE_RELIES_ON_ICT_ASSET]->(ica);
 """
 
 # Network Systems to ICT Services
 network_systems_ict_services = """
-MATCH (ns:NetworkSystems)
-MATCH (is:ICTService)
+MATCH (ns:NetworkSystems{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (ns)-[:NETWORK_SYSTEMS_SUPPORT_ICT_SERVICE]->(is);
 """
 
 # Financial Entity to Major Incident
 financial_entity_reports_major_incident = """
-MATCH (fe:FinancialEntity)
-MATCH (mi:MajorIncident)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (mi:MajorIncident{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_REPORTS_MAJOR_INCIDENT]->(mi);
 """
 
 # Major Incident Reported to Competent Authority
 major_incident_competent_authority = """
-MATCH (mi:MajorIncident)
-MATCH (ca:CompetentAuthority)
+MATCH (mi:MajorIncident{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (mi)-[:MAJOR_INCIDENT_REPORTED_TO_COMPETENT_AUTHORITY]->(ca);
 """
 
 # Financial Entity to TLPT
 financial_entity__tlpt = """
-MATCH (fe:FinancialEntity)
-MATCH (tlp:ThreatLedPenetrationTest) 
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (tlp:ThreatLedPenetrationTest{regional_standard_regulation_id: 'DORA 2022/2554'}) 
 MERGE (fe)-[:FINANCIAL_ENTITY_CONDUCTS_THREAT_LED_PENETRATION_TEST]->(tlp); 
 """
 
 # Remediation Plan to TLPT
 remediation_plan_tlpt = """
-MATCH (rp:RemediationPlan)
-MATCH (tlp:ThreatLedPenetrationTest)
+MATCH (rp:RemediationPlan{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (tlp:ThreatLedPenetrationTest{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (rp)-[:REMEDIATION_PLAN_TRIGGERED_BY_THREAT_LED_PENETRATION_TEST]->(tlp);
 """
 
 # Financial Entity Third Party
 financial_entity_third_party = """
-MATCH (fe:FinancialEntity)
-MATCH (its:ICTThirdPartyServiceProvider)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_CONTRACTS_THIRD_PARTY_SERVICE_PROVIDER]->(its);
 """
 
 # Third Party ICT Service
 third_party_ict_service = """
-MATCH (its:ICTThirdPartyServiceProvider)
-MATCH (is:ICTService)
+MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (its)-[:THIRD_PARTY_PROVIDES_ICT_SERVICE]->(is);
 """
 
 # Third Party Subsidiary
 third_party_subsidiary = """
-MATCH (its:ICTThirdPartyServiceProvider)
-MATCH (su:Subsidiary)
+MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (su:Subsidiary{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (its)-[:THIRD_PARTY_HAS_SUBSIDIARY]->(su);
 """
 
 # Third Party to Processing Location
 third_party_processing_location = """
-MATCH (its:ICTThirdPartyServiceProvider)
-MATCH (pl:ProcessingLocation)
+MATCH (its:ICTThirdPartyServiceProvider{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (pl:ProcessingLocation{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (its)-[:THIRD_PARTY_OPERATES_IN_PROCESSING_LOCATION]->(pl);
 """
 
 # Regulation to Jurisdiction
 reg_jurisdiction = """
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (ju:Jurisdiction)
+MATCH (ju:Jurisdiction{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (reg)-[:REGULATION_CONTAINS_JURISDICTION]->(ju);
 """
 
 # Competent Authority to Jurisdiction
 competent_authority_jurisdiction = """
-MATCH (ca:CompetentAuthority)
-MATCH (ju:Jurisdiction)
+MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ju:Jurisdiction{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (ca)-[:COMPETENT_AUTHORITY_SUPERVISES_JURISDICTION]->(ju);
 """
 
 # Financial Entity to Critical Functions
 financial_entity_critical_functions = """
-MATCH (fe:FinancialEntity)
-MATCH (cf:CriticalFunction)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (cf:CriticalFunction{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_CRITICAL_FUNCTION]->(cf);
 """
 
 # ICT Services to Critical Functions
 ict_services_critical_functions = """
-MATCH (is:ICTService)
-MATCH (cf:CriticalFunction)
+MATCH (is:ICTService{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (cf:CriticalFunction{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (is)-[:ICT_SERVICE_SUPPORTS_CRITICAL_FUNCTION]->(cf);
 """
 
 # Cyber Threat to ICT Risk
 cyber_threat_ict_risk = """
-MATCH (ct:CyberThreat)
-MATCH (ir:ICTRisk)
+MATCH (ct:CyberThreat{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (ct)-[:CYBER_THREAT_INCREASES_ICT_RISK]->(ir);
 """
 
 # Cyber Threat to Major Incidents
 cyber_threat_major_incident = """
-MATCH (ct:CyberThreat)
-MATCH (mi:MajorIncident)
+MATCH (ct:CyberThreat{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (mi:MajorIncident{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (ct)-[:CYBER_THREAT_CAN_CAUSE_MAJOR_INCIDENT]->(mi);
 """
 
 # Financial Entity to Facility
 financial_entity_facility = """
-MATCH (fe:FinancialEntity)
-MATCH (f:Facility)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (f:Facility{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_OPERATES_AT_FACILITY]->(f);   
 """
 
 # Facility houses ICT Assets
 # (Fixed the 'ia' vs 'ica' variable mismatch)
 facility_ict_asset = """
-MATCH (f:Facility)
-MATCH (ica:ICTAsset)
+MATCH (f:Facility{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ica:ICTAsset{regional_standard_regulation_id: 'DORA 2022/2554'})
 WHERE ica.category IN ['Hardware', 'Infrastructure', 'Servers']
 MERGE (f)-[:FACILITY_HOUSES_ICT_ASSET]->(ica);
 """
 
 # Financial Entity to Legacy ICT Systems
 financial_entity_legacy_ict_systems = """
-MATCH (fe:FinancialEntity)
-MATCH (lis:LegacyICTSystems)
+MATCH (fe:FinancialEntity{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (lis:LegacyICTSystems{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (fe)-[:FINANCIAL_ENTITY_USES_LEGACY_ICT_SYSTEMS]->(lis);
 """
 
 # Legacy System to ICT Risk
 legacy_system_ict_risk = """
-MATCH (lis:LegacyICTSystems)
-MATCH (ir:ICTRisk)
+MATCH (lis:LegacyICTSystems{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (ir:ICTRisk{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (lis)-[:LEGACY_SYSTEM_POSES_ICT_RISK]->(ir);
 """
 
 # Competent Authority to Penalty
 competent_authority_penalty = """
-MATCH (ca:CompetentAuthority)
-MATCH (pe:Penalty)
+MATCH (ca:CompetentAuthority{regional_standard_regulation_id: 'DORA 2022/2554'})
+MATCH (pe:Penalty{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (ca)-[:COMPETENT_AUTHORITY_ENFORCES_PENALTY]->(pe);
 """
 
 # Regulation to Penalty
 reg_defines_penalty = """
 MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DORA 2022/2554'})
-MATCH (pe:Penalty)
+MATCH (pe:Penalty{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (reg)-[:REGULATION_DEFINES_PENALTY]->(pe);
 """
 # Critical Function to Critical ITC Provider
 critical_functions_critical_ict_providers = """
-MATCH (ctp:CriticalICTProvider) 
-MATCH (cf:CriticalFunction)
+MATCH (ctp:CriticalICTProvider{regional_standard_regulation_id: 'DORA 2022/2554'}) 
+MATCH (cf:CriticalFunction{regional_standard_regulation_id: 'DORA 2022/2554'})
 MERGE (cf)-[:CRITICAL_FUNCTION_SUPPORTS_CRITICAL_ICT_PROVIDER]->(ctp);
 """
 
