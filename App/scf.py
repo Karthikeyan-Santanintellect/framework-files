@@ -34,7 +34,7 @@ ON CREATE SET
     sc.type = row.control_type;
 """
 
-# 4. Framework -> Domain Relationship #
+# 4. Framework -> Domain Relationship 
 framework_domain_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: "SCF-2025.4"})
@@ -42,18 +42,13 @@ MATCH (scd:SCFDomain {identifier: row.domain_identifier, IS_frameworks_standard_
 MERGE (f)-[:IS_FRAMEWORKS_STANDARD_CONTAINS_DOMAIN]->(scd);
 """
 
-# 5. Domain -> Control Relationship #
+# 5. Domain -> Control Relationship 
 domain_controls_rel = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MATCH (scd:SCFDomain {identifier: row.domain_identifier, IS_frameworks_standard_id: "SCF-2025.4"})
 MATCH (sc:SCFControl {id: row.control_id, IS_frameworks_standard_id: "SCF-2025.4"})
 MERGE (scd)-[:SCF_DOMAIN_CONTAINS_CONTROL]->(sc);
 """
-
-# ==========================================
-# BATCH 1: IS Frameworks & Standards
-# Optimized with: IN TRANSACTIONS OF 500 ROWS
-# ==========================================
 
 # Control -> NIST CSF 
 control_nist_csf = """
@@ -118,104 +113,137 @@ CALL {
     } IN TRANSACTIONS OF 500 ROWS;
 """
 
-# 8a. Control -> NIST AI RMF
+# 8a. Control -> NIST AI RMF #
 control_nist_ai_rmf = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 CALL {
     WITH row
-        MATCH (sc:SCFControl {id: row.scf_control_id})
-        MATCH (rmf)
-        WHERE rmf.id = row.nist_ai_rmf_id
-          AND rmf.IS_frameworks_standard_id = 'NIST_AI_RMF_1.0'
-          AND (rmf:Subcategory OR rmf:Category)
-        MERGE (sc)-[:SCF_CONTROL_MAPS_NIST_AI_RMF]->(rmf)
-    } IN TRANSACTIONS OF 500 ROWS;
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (airmf)
+    WHERE airmf.IS_frameworks_standard_id = 'NIST_AI_RMF_1.0'
+      AND airmf:Function OR airmf:Category OR airmf:Subcategory
+    MERGE (sc)-[:SCF_CONTROL_MAPS_NIST_AI_RMF]->(airmf)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-# 9a. Control -> GLBA
+
+
+# 9a. Control -> GLBA 
 control_glba = """
-MATCH (sc:SCFControl {IS_frameworks_standard_id: "SCF 2025.4"})
-MATCH (sec:Section {industry_standard_regulation_id: 'GLBA 1999'})
-MERGE (sc)-[:SCF_CONTROL_MAPS_GLBA]->(sec);
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (glba:Section {section_id: row.glba_section_id})
+    WHERE glba.industry_standard_regulation_id = 'GLBA 1999'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_GLBA]->(glba)
+} IN TRANSACTIONS OF 500 ROWS;
 """
-
-# 11a. Control -> NERC CIP #
+# 11a. Control -> NERC CIP 
 control_nerc_cip = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (req:Requirement {id: row.nerc_cip_requirement_id})
-WHERE req.industry_standard_regulation_id = 'NERC_CIP'
-MERGE (sc)-[:SCF_CONTROL_MAPS_NERC_CIP]->(req);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (nerc:Requirement {requirement_id: row.nerc_cip_requirement_id})
+    WHERE nerc.industry_standard_regulation_id = 'NERC_CIP'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_NERC_CIP]->(nerc)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
 # 13a. Control -> PCI DSS 
 control_pci_dss = """
-MATCH (sc:SCFControl {IS_frameworks_standard_id: "SCF 2025.4"})
-MATCH (r:Requirement {industry_standard_regulation_id: 'PCI-DSS 4.0'})
-MERGE (sc)-[:SCF_CONTROL_MAPS_PCIDSS]->(r);
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (pci:Requirement {node_id: row.pci_dss_node_id})
+    WHERE pci.industry_standard_regulation_id = 'PCI-DSS 4.0'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_PCI_DSS]->(pci)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-# Control -> TISAX #
+# Control -> TISAX 
 control_tisax = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (req:Requirement {id: row.tisax_reference_id})
-WHERE req.industry_standard_regulation_id = "TISAX 6.0"
-MERGE (sc)-[:SCF_CONTROL_MAPS_TISAX]->(req);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (tisax:Requirement {requirement_id: row.tisax_reference_id})
+    WHERE tisax.industry_standard_regulation_id = 'TISAX 6.0'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_TISAX]->(tisax)
+} IN TRANSACTIONS OF 500 ROWS;
 """
-
-# 17a. Control -> CPA #
+# 17a. Control -> CPA 
 control_cpa = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (s:Section {id: row.cpa_section_id})
-WHERE s.regional_standard_regulation_id = "CPA 1.0"
-MERGE (sc)-[:SCF_CONTROL_MAPS_CPA]->(s);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (cpa:Section {section_id: row.cpa_section_id})
+    WHERE cpa.regional_standard_regulation_id = 'CPA 1.0'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_CPA]->(cpa)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-# 18a. Control -> DORA #
+# 18a. Control -> DORA 
 control_dora = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (a:Article {id: row.dora_article_id})
-WHERE a.regional_standard_regulation_id = 'DORA 2022/2554'
-MERGE (sc)-[:SCF_CONTROL_MAPS_DORA]->(a);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (dora:Article {id: row.dora_article_id})
+    WHERE dora.regional_standard_regulation_id = 'DORA 2022/2554'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_DORA]->(dora)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-# Control -> DPDPA #
+# Control -> DPDPA 
 control_dpdpa = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (sec:Section {id: row.dpdpa_section_id})
-WHERE sec.industry_standard_regulation_id = 'DPDPA 1.0'
-MERGE (sc)-[:SCF_CONTROL_MAPS_DPDPA]->(sec);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (dpdpa:Section {section_id: row.dpdpa_section_id})
+    WHERE dpdpa.regional_standard_regulation_id = 'DPDPA 1.0' 
+    MERGE (sc)-[:SCF_CONTROL_MAPS_DPDPA]->(dpdpa)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-# Control -> GDPR #
+# Control -> GDPR 
 control_gdpr = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (a:Article {id: row.gdpr_article_id})
-WHERE a.regional_standard_regulation_id = 'GDPR 2016/679'
-MERGE (sc)-[:SCF_CONTROL_MAPS_GDPR]->(a);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (gdpr:Article {Node_ID: row.gdpr_article_id})
+    WHERE gdpr.regional_standard_regulation_id = 'GDPR 2016/679'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_GDPR]->(gdpr)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
-# Control -> NY SHIELD #
+# Control -> NY SHIELD 
 control_ny_shield = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (sec:Section {id: row.section_id})
-WHERE sec.regional_standard_regulation_id = 'NY_SHIELD 1.0'
-MERGE (sc)-[:SCF_CONTROL_MAPS_NY_SHIELD]->(sec);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (nys:Section {section_id: row.section_id})
+    WHERE nys.regional_standard_regulation_id = 'NY SHIELD 1.0'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_NY_SHIELD]->(nys)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
 # Control -> NIS 2 #
 control_nis2 = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MATCH (sc:SCFControl {id: row.scf_control_id})
-MATCH (a:Article {id: row.nis2_article_id})
-WHERE a.regional_standard_regulation_id = 'NIS2-EU-2022-2555'
-MERGE (sc)-[:SCF_CONTROL_MAPS_NIS2]->(a);
+CALL {
+    WITH row
+    MATCH (sc:SCFControl {id: row.scf_control_id})
+    MATCH (nis2:Article {id: row.nis2_article_id})
+    WHERE nis2.regional_standard_regulation_id = 'NIS2-EU-2022-2555'
+    MERGE (sc)-[:SCF_CONTROL_MAPS_NIS2]->(nis2)
+} IN TRANSACTIONS OF 500 ROWS;
 """
 
 # Control -> HIPAA #
@@ -285,19 +313,16 @@ time.sleep(2)
 # client.query(control_nist_pmf_1_0.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PMF%201.0.csv"))
 # time.sleep(2)
 
-
-client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIST%20AI%20RMF.csv"))
-time.sleep(2)
-
-
-# client.query(control_glba)
+# client.query(control_nist_ai_rmf.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIST%20AI%20RMF.csv"))
 # time.sleep(2)
 
+# client.query(control_glba.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20GLBA.csv"))
+# time.sleep(2)
 
 # client.query(control_nerc_cip.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NERC_CIP.csv"))
 # time.sleep(2)
 
-# client.query(control_pci_dss)
+# client.query(control_pci_dss.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PCIDSS.csv"))
 # time.sleep(2)
 
 # client.query(control_tisax.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20TISAX.csv"))
@@ -316,8 +341,8 @@ time.sleep(2)
 # client.query(control_gdpr.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20GDPR.csv"))
 # time.sleep(2)
 
-# client.query(control_ny_shield.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NY%20SHEILD.csv"))
-# time.sleep(2)
+client.query(control_ny_shield.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NY%20SHEILD.csv"))
+time.sleep(2)
 
 # client.query(control_nis2.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20NIS%202.csv"))
 # time.sleep(2)
