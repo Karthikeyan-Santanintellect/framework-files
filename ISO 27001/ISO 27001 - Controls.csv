@@ -1,94 +1,131 @@
-control_id,control_name,category_id
-5.1,Policies for information security,5
-5.2,Information security roles and responsibilities,5
-5.3,Segregation of duties,5
-5.4,Management responsibilities,5
-5.5,Contact with authorities,5
-5.6,Contact with special interest groups,5
-5.7,Threat intelligence,5
-5.8,Information security in project management,5
-5.9,Inventory of information and other associated assets,5
-5.10,Acceptable use of information and other associated assets,5
-5.11,Return of assets,5
-5.12,Classification of information,5
-5.13,Labelling of information,5
-5.14,Information transfer,5
-5.15,Access control,5
-5.16,Identity management,5
-5.17,Authentication information,5
-5.18,Access rights,5
-5.19,Information security in supplier relationships,5
-5.20,Addressing information security within supplier agreements,5
-5.21,Managing information security in the ICT supply chain,5
-5.22,Monitoring, review and change management of supplier services,5
-5.23,Information security for cloud services,5
-5.24,Information security incident management planning and preparation,5
-5.25,Assessment and decision on information security events,5
-5.26,Response to information security incidents,5
-5.27,Learning from information security incidents,5
-5.28,Collection of evidence,5
-5.29,Information security during disruption,5
-5.30,ICT readiness for business continuity,5
-5.31,Legal, statutory, regulatory and contractual requirements,5
-5.32,Intellectual property rights,5
-5.33,Protection of records,5
-5.34,Privacy and protection of PII,5
-5.35,Independent review of information security,5
-5.36,Compliance with policies, rules and standards for information security,5
-5.37,Documented operating procedures,5
-6.1,Screening,6
-6.2,Terms and conditions of employment,6
-6.3,Information security awareness, education and training,6
-6.4,Disciplinary process,6
-6.5,Responsibilities after termination or change of employment,6
-6.6,Confidentiality or non-disclosure agreements,6
-6.7,Remote working,6
-6.8,Information security event reporting,6
-7.1,Physical security perimeters,7
-7.2,Physical entry,7
-7.3,Securing offices, rooms and facilities,7
-7.4,Physical security monitoring,7
-7.5,Protecting against physical and environmental threats,7
-7.6,Working in secure areas,7
-7.7,Clear desk and clear screen,7
-7.8,Equipment siting and protection,7
-7.9,Security of assets off-premises,7
-7.10,Storage media,7
-7.11,Supporting utilities,7
-7.12,Cabling security,7
-7.13,Equipment maintenance,7
-7.14,Secure disposal or re-use of equipment,7
-8.1,User endpoint devices,8
-8.2,Privileged access rights,8
-8.3,Information access restriction,8
-8.4,Access to source code,8
-8.5,Secure authentication,8
-8.6,Capacity management,8
-8.7,Protection against malware,8
-8.8,Management of technical vulnerabilities,8
-8.9,Configuration management,8
-8.10,Information deletion,8
-8.11,Data masking,8
-8.12,Data leakage prevention,8
-8.13,Information backup,8
-8.14,Redundancy of information processing facilities,8
-8.15,Logging,8
-8.16,Monitoring activities,8
-8.17,Clock synchronization,8
-8.18,Use of privileged utility programs,8
-8.19,Installation of software on operational systems,8
-8.20,Networks security,8
-8.21,Security of network services,8
-8.22,Segregation of networks,8
-8.23,Web filtering,8
-8.24,Use of cryptography,8
-8.25,Secure development life cycle,8
-8.26,Application security requirements,8
-8.27,Secure system architecture and engineering principles,8
-8.28,Secure coding,8
-8.29,Security testing in development and acceptance,8
-8.30,Outsourced development,8
-8.31,Separation of development, test and production environments,8
-8.32,Change management,8
-8.33,Test information,8
-8.34,Protection of information systems during audit testing,8
+"control_id","control_name","category_id"
+"4","Context of the Organization","4"
+"4.1","Understanding the organization and its context","4"
+"4.2","Understanding the needs and expectations of interested parties","4"
+"4.2(a)","Requirement a","4"
+"4.2(b)","Requirement b","4"
+"4.2(c)","Requirement c","4"
+"4.3","Determining the scope of the information security management system","4"
+"4.3(a)","Requirement a","4"
+"4.3(b)","Requirement b","4"
+"4.3(c)","Requirement c","4"
+"4.4","Information security management system","4"
+"5","Leadership","5"
+"5.1","Leadership and commitment","5"
+"5.1(a)","Requirement a","5"
+"5.1(b)","Requirement b","5"
+"5.1(c)","Requirement c","5"
+"5.1(d)","Requirement d","5"
+"5.1(e)","Requirement e","5"
+"5.1(f)","Requirement f","5"
+"5.1(g)","Requirement g","5"
+"5.1(h)","Requirement h","5"
+"5.2","Policy","5"
+"5.2(a)","Requirement a","5"
+"5.2(b)","Requirement b","5"
+"5.2(c)","Requirement c","5"
+"5.2(d)","Requirement d","5"
+"5.2(e)","Requirement e","5"
+"5.2(f)","Requirement f","5"
+"5.3","Organizational roles, responsibilities and authorities","5"
+"5.3(a)","Requirement a","5"
+"5.3(b)","Requirement b","5"
+"6","Planning","6"
+"6.1","Actions to address risks and opportunities","6"
+"6.1.1","General","6"
+"6.1.1(a)","Requirement a","6"
+"6.1.1(b)","Requirement b","6"
+"6.1.1(c)","Requirement c","6"
+"6.1.2","Information security risk assessment","6"
+"6.1.2(a)","Requirement a","6"
+"6.1.2(b)","Requirement b","6"
+"6.1.2(c)","Requirement c","6"
+"6.1.2(d)","Requirement d","6"
+"6.1.2(e)","Requirement e","6"
+"6.1.3","Information security risk treatment","6"
+"6.1.3(a)","Requirement a","6"
+"6.1.3(b)","Requirement b","6"
+"6.1.3(c)","Requirement c","6"
+"6.1.3(d)","Requirement d","6"
+"6.1.3(e)","Requirement e","6"
+"6.1.3(f)","Requirement f","6"
+"6.2","Information security objectives and planning to achieve them","6"
+"6.2(a)","Requirement a","6"
+"6.2(b)","Requirement b","6"
+"6.2(c)","Requirement c","6"
+"6.2(d)","Requirement d","6"
+"6.2(e)","Requirement e","6"
+"6.2(f)","Requirement f","6"
+"6.2(g)","Requirement g","6"
+"6.3","Planning of changes","6"
+"7","Support","7"
+"7.1","Resources","7"
+"7.2","Competence","7"
+"7.2(a)","Requirement a","7"
+"7.2(b)","Requirement b","7"
+"7.2(c)","Requirement c","7"
+"7.2(d)","Requirement d","7"
+"7.3","Awareness","7"
+"7.3(a)","Requirement a","7"
+"7.3(b)","Requirement b","7"
+"7.3(c)","Requirement c","7"
+"7.4","Communication","7"
+"7.4(a)","Requirement a","7"
+"7.4(b)","Requirement b","7"
+"7.4(c)","Requirement c","7"
+"7.4(d)","Requirement d","7"
+"7.5","Documented information","7"
+"7.5.1","General","7"
+"7.5.1(a)","Requirement a","7"
+"7.5.1(b)","Requirement b","7"
+"7.5.2","Creating and updating","7"
+"7.5.2(a)","Requirement a","7"
+"7.5.2(b)","Requirement b","7"
+"7.5.2(c)","Requirement c","7"
+"7.5.3","Control of documented information","7"
+"7.5.3(a)","Requirement a","7"
+"7.5.3(b)","Requirement b","7"
+"8","Operation","8"
+"8.1","Operational planning and control","8"
+"8.1(a)","Requirement a","8"
+"8.1(b)","Requirement b","8"
+"8.2","Information security risk assessment","8"
+"8.3","Information security risk treatment","8"
+"9","Performance Evaluation","9"
+"9.1","Monitoring, measurement, analysis and evaluation","9"
+"9.1(a)","Requirement a","9"
+"9.1(b)","Requirement b","9"
+"9.1(c)","Requirement c","9"
+"9.1(d)","Requirement d","9"
+"9.1(e)","Requirement e","9"
+"9.1(f)","Requirement f","9"
+"9.2","Internal audit","9"
+"9.2.1","General","9"
+"9.2.1(a)","Requirement a","9"
+"9.2.1(b)","Requirement b","9"
+"9.2.2","Internal audit programme","9"
+"9.2.2(a)","Requirement a","9"
+"9.2.2(b)","Requirement b","9"
+"9.2.2(c)","Requirement c","9"
+"9.2.2(d)","Requirement d","9"
+"9.3","Management review","9"
+"9.3.1","General","9"
+"9.3.2","Management review inputs","9"
+"9.3.2(a)","Requirement a","9"
+"9.3.2(b)","Requirement b","9"
+"9.3.2(c)","Requirement c","9"
+"9.3.2(d)","Requirement d","9"
+"9.3.2(e)","Requirement e","9"
+"9.3.2(f)","Requirement f","9"
+"9.3.2(g)","Requirement g","9"
+"9.3.3","Management review results","9"
+"9.3.3(a)","Requirement a","9"
+"9.3.3(b)","Requirement b","9"
+"10","Improvement","10"
+"10.1","Continual improvement","10"
+"10.2","Nonconformity and corrective action","10"
+"10.2(a)","Requirement a","10"
+"10.2(b)","Requirement b","10"
+"10.2(c)","Requirement c","10"
+"10.2(d)","Requirement d","10"
+"10.2(e)","Requirement e","10"
