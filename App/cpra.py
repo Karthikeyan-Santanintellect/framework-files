@@ -8,6 +8,7 @@ ON CREATE SET
     reg.codification = "California Civil Code Title 1.81.5",
     reg.effective_date = date("2023-01-01"),
     reg.status = "Active",
+    reg.jurisdiction = "California, USA",
     reg.description = "The CPRA is a ballot initiative that amends the CCPA, creating new consumer rights, establishing the CPPA, and strengthening enforcement.";
 """
 

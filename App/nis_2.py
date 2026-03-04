@@ -438,7 +438,7 @@ time.sleep(2)
 client.query(vulnerability.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/vulnerabilities.csv"))
 time.sleep(2)
 
-client.query(service_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/service-types.csv"))
+client.query(service_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/service_types.csv"))
 time.sleep(2)
 
 #Relationships
@@ -523,16 +523,16 @@ RETURN {
 } AS graph_data
 """
 
-results = client.query(query)
+# results = client.query(query)
 
-if results and len(results) > 0:
-    graph_data = results[0]['graph_data']
+# if results and len(results) > 0:
+#     graph_data = results[0]['graph_data']
     
-    import json
-    with open('nis_2.json', 'w', encoding='utf-8') as f:
-        f.write(json.dumps(graph_data, default=str, indent=2))
-    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to nis_2.json")
-else:
-    logger.error("No data returned from the query.")
+#     import json
+#     with open('nis_2.json', 'w', encoding='utf-8') as f:
+#         f.write(json.dumps(graph_data, default=str, indent=2))
+#     logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to nis_2.json")
+# else:
+#     logger.error("No data returned from the query.")
 
 client.close()
