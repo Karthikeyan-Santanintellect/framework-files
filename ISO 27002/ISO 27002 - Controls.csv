@@ -2,97 +2,93 @@ control_id,control_name,purpose,category_code,legacy_mapping,is_new
 5.1,Policies for information security,"To ensure continuing suitability, adequacy, effectiveness of management direction and support for information security in accordance with business, legal, statutory, regulatory and contractual requirements.",5,"5.1.1, 5.1.2",No
 5.2,Information security roles and responsibilities,"To establish a defined, approved and understood structure for the implementation, operation and management of information security within the organization.",5,6.1.1,No
 5.3,Segregation of duties,"To reduce the risk of fraud, error and bypassing of information security controls.",5,6.1.2,No
-5.3,Segregation of duties,To ensure the availability of the organization’s information and other associated assets during disruption.,5,New,Yes
 5.4,Management responsibilities,To ensure management understand their role in information security and undertake actions aiming to ensure all personnel are aware of and fulfil their information security responsibilities.,5,7.2.1,No
-5.5,Contact with authorities,,5,,
-5.6,Contact with special interest groups,,5,,
+5.5,Contact with authorities,To ensure appropriate flow of information and communication with relevant authorities concerning information security.,5,6.1.3,No
+5.6,Contact with special interest groups,To ensure appropriate flow of information and communication with special interest groups or other specialist security forums and professional associations.,5,6.1.4,No
 5.7,Threat intelligence,To provide awareness of the organization’s threat environment so that the appropriate mitigation actions can be taken.,5,New,Yes
-5.8,Information security in project management,,5,,
-5.9,Inventory of information and other associated assets,,5,,
-5.1,Acceptable use of information and other associated assets,"To ensure continuing suitability, adequacy, effectiveness of management direction and support for information security in accordance with business, legal, statutory, regulatory and contractual requirements.",5,"5.1.1, 5.1.2",No
-5.11,Return of assets,,5,,
-5.12,Classification of information,,5,,
-5.13,Labelling of information,,5,,
-5.14,Information transfer,,5,,
-5.15,Access control,,5,,
-5.16,Identity management,,5,,
-5.17,Authentication information,,5,,
-5.18,Access rights,,5,,
-5.19,Information security in supplier relationships,,5,,
-5.2,Addressing information security in supplier agreements,"To establish a defined, approved and understood structure for the implementation, operation and management of information security within the organization.",5,6.1.1,No
-5.21,Managing information security in the ICT supply chain,,5,,
-5.22,"Monitoring, review and change management of supplier services",,5,,
+5.8,Information security in project management,To ensure information security risks related to projects and deliverables are effectively addressed in project management throughout the project lifecycle.,5,6.1.5,No
+5.9,Inventory of information and other associated assets,To identify the organization’s information and other associated assets in order to preserve their information security and assign appropriate ownership.,5,"8.1.1, 8.1.2",No
+5.10,Acceptable use of information and other associated assets,"To ensure information and other associated assets are appropriately protected, used and handled.",5,"8.1.3, 8.2.3",No
+5.11,Return of assets,"To protect the organization’s assets as part of the process of changing or terminating employment, contract or agreement.",5,8.1.4,No
+5.12,Classification of information,To ensure identification and understanding of protection needs of information in accordance with its importance to the organization.,5,8.2.1,No
+5.13,Labelling of information,To facilitate the communication of classification of information and support automation of information processing and management.,5,8.2.2,No
+5.14,Information transfer,To maintain the security of information transferred within an organization and with any external interested party.,5,"13.2.1, 13.2.2, 13.2.3",No
+5.15,Access control,"To ensure users, processes and systems are provided with appropriate access to information and other associated assets.",5,"9.1.1, 9.1.2",No
+5.16,Identity management,"To ensure the unique identification of individuals, systems and services, and their appropriate lifecycle management.",5,9.2.1,No
+5.17,Authentication information,To ensure proper handling of authentication information to verify the identity of a subject or user.,5,"9.2.4, 9.3.1, 9.4.3",No
+5.18,Access rights,To manage access rights of subjects dynamically according to business and security requirements.,5,"9.2.2, 9.2.5, 9.2.6",No
+5.19,Information security in supplier relationships,To maintain an agreed level of information security and service delivery in line with supplier agreements.,5,15.1.1,No
+5.20,Addressing information security in supplier agreements,To ensure agreed information security requirements are established and documented with suppliers.,5,15.1.2,No
+5.21,Managing information security in the ICT supply chain,To maintain an agreed level of information security and service delivery in line with supplier agreements throughout the ICT supply chain.,5,15.1.3,No
+5.22,"Monitoring, review and change management of supplier services","To maintain the agreed level of information security and service delivery by monitoring, reviewing and managing changes in supplier services.",5,"15.2.1, 15.2.2",No
 5.23,Information security for use of cloud services,To specify and manage information security for the use of cloud services.,5,New,Yes
-5.24,Information security incident management planning and preparation,,5,,
-5.25,Assessment and decision on information security events,,5,,
-5.26,Response to information security incidents,,5,,
-5.27,Learning from information security incidents,,5,,
-5.28,Collection of evidence,,5,,
-5.29,Information security during disruption,,5,,
-5.3,ICT readiness for business continuity,"To reduce the risk of fraud, error and bypassing of information security controls.",5,6.1.2,No
-5.3,ICT readiness for business continuity,To ensure the availability of the organization’s information and other associated assets during disruption.,5,New,Yes
-5.31,"Legal, statutory, regulatory and contractual requirements",,5,,
-5.32,Intellectual property rights,,5,,
-5.33,Protection of records,,5,,
-5.34,Privacy and protection of PII (Personally Identifiable Information),,5,,
-5.35,Independent review of information security,,5,,
-5.36,"Compliance with policies, rules and standards for information security",,5,,
-5.37,Documented operating procedures,,5,,
-6.1,Screening,,6,,
-6.2,Terms and conditions of employment,,6,,
-6.3,"Information security awareness, education and training",,6,,
-6.4,Disciplinary process,,6,,
-6.5,Responsibilities after termination or change of employment,,6,,
-6.6,Confidentiality or non-disclosure agreements,,6,,
-6.7,Remote working,,6,,
-6.8,Information security event reporting,,6,,
-7.1,Physical security perimeters,,7,,
-7.2,Physical entry,,7,,
-7.3,"Securing offices, rooms and facilities",,7,,
-7.4,Physical security monitoring,,7,,
-7.5,Protecting against physical and environmental threats,,7,,
-7.6,Working in secure areas,,7,,
-7.7,Clear desk and clear screen,,7,,
-7.8,Equipment siting and protection,,7,,
-7.9,Security of assets off-premises,,7,,
-7.1,Storage media,,7,,
-7.11,Supporting utilities,,7,,
-7.12,Cabling security,,7,,
-7.13,Equipment maintenance,,7,,
-7.14,Secure disposal or re-use of equipment,,7,,
+5.24,Information security incident management planning and preparation,"To ensure a quick, effective, and orderly response to information security incidents, including communication.",5,16.1.1,No
+5.25,Assessment and decision on information security events,To ensure information security events are assessed and decisions are made on whether they are to be classified as information security incidents.,5,16.1.4,No
+5.26,Response to information security incidents,"To ensure information security incidents are responded to effectively and efficiently, according to the planned response.",5,16.1.5,No
+5.27,Learning from information security incidents,To reduce the likelihood or impact of future incidents by learning from past information security incidents.,5,16.1.6,No
+5.28,Collection of evidence,"To ensure a consistent and legally sound approach to the identification, collection, acquisition, and preservation of digital evidence.",5,16.1.7,No
+5.29,Information security during disruption,"To protect information and other associated assets during a period of disruption, mitigating impacts on information security.",5,"17.1.1, 17.1.2, 17.1.3",No
+5.30,ICT readiness for business continuity,To ensure the availability of the organization’s information and other associated assets during disruption.,5,New,Yes
+5.31,"Legal, statutory, regulatory and contractual requirements","To avoid breaches of legal, statutory, regulatory or contractual obligations related to information security and of any security requirements.",5,18.1.1,No
+5.32,Intellectual property rights,"To ensure compliance with legislative, regulatory and contractual requirements regarding intellectual property rights and use of proprietary software products.",5,18.1.2,No
+5.33,Protection of records,"To ensure compliance with legislative, regulatory, contractual and business requirements for the protection and availability of records.",5,18.1.3,No
+5.34,Privacy and protection of PII,"To ensure compliance with legal, statutory, regulatory and contractual requirements regarding privacy and protection of personally identifiable information (PII).",5,18.1.4,No
+5.35,Independent review of information security,To ensure the organization’s approach to managing information security and its implementation are reviewed independently at planned intervals.,5,18.2.1,No
+5.36,"Compliance with policies, rules and standards for information security","To ensure compliance with the organization’s information security policies, rules, and standards.",5,"18.2.2, 18.2.3",No
+5.37,Documented operating procedures,To ensure the correct and secure operation of information processing facilities by documenting and making available operating procedures.,5,12.1.1,No
+6.1,Screening,To ensure that all personnel are eligible and suitable for the roles for which they are considered and remain eligible and suitable during their employment.,6,7.1.1,No
+6.2,Terms and conditions of employment,To ensure personnel understand their information security responsibilities and obligations.,6,7.1.2,No
+6.3,"Information security awareness, education and training",To ensure personnel and relevant interested parties are aware of and fulfil their information security responsibilities.,6,7.2.2,No
+6.4,Disciplinary process,To ensure there is a formal disciplinary process in place to handle information security breaches by personnel.,6,7.2.3,No
+6.5,Responsibilities after termination or change of employment,To protect the organization’s interests as part of the process of changing or terminating employment.,6,7.3.1,No
+6.6,Confidentiality or non-disclosure agreements,"To ensure confidentiality and non-disclosure agreements are in place, documented and regularly reviewed to protect information.",6,13.2.4,No
+6.7,Remote working,"To ensure the security of information accessed, processed or stored outside the organization’s premises.",6,6.2.2,No
+6.8,Information security event reporting,To ensure information security events are reported through appropriate management channels as quickly as possible.,6,"16.1.2, 16.1.3",No
+7.1,Physical security perimeters,"To prevent unauthorized physical access, damage and interference to the organization’s information and other associated assets.",7,11.1.1,No
+7.2,Physical entry,To ensure only authorized personnel have access to secure areas containing information and other associated assets.,7,11.1.2,No
+7.3,"Securing offices, rooms and facilities","To ensure physical security for offices, rooms and facilities.",7,11.1.3,No
+7.4,Physical security monitoring,"To monitor for and detect unauthorized physical access, and to ensure appropriate responses to unauthorized access.",7,New,Yes
+7.5,Protecting against physical and environmental threats,"To prevent loss, damage, theft or compromise of assets and interruption to the organization’s operations from physical and environmental threats.",7,11.1.4,No
+7.6,Working in secure areas,To ensure information security is designed and implemented when working in secure areas.,7,11.1.5,No
+7.7,Clear desk and clear screen,"To reduce the risk of unauthorized access, loss of and damage to information during and outside normal working hours.",7,11.2.9,No
+7.8,Equipment siting and protection,"To reduce the risks from environmental threats and hazards, and opportunities for unauthorized access.",7,11.2.1,No
+7.9,Security of assets off-premises,"To prevent loss, damage, theft or compromise of off-premises assets and interruption to the organization’s operations.",7,11.2.6,No
+7.10,Storage media,"To manage storage media through their lifecycle, including acquisition, use, transportation, and disposal, in accordance with the organization's classification scheme and handling requirements.",7,"8.3.1, 8.3.2, 8.3.3",No
+7.11,Supporting utilities,To protect equipment from power failures and other disruptions caused by failures in supporting utilities.,7,11.2.2,No
+7.12,Cabling security,"To protect power and telecommunications cabling carrying data or supporting information services from interception, interference or damage.",7,11.2.3,No
+7.13,Equipment maintenance,To ensure equipment is correctly maintained to ensure its continued availability and integrity.,7,11.2.4,No
+7.14,Secure disposal or re-use of equipment,To ensure equipment is securely disposed of or re-used to prevent leakage of sensitive information.,7,11.2.7,No
 8.1,User endpoint devices,To protect information against the risks introduced by using user endpoint devices.,8,"6.2.1, 11.2.8",No
-8.1,User endpoint devices,"To prevent unnecessary exposure of sensitive information and to comply with legal, statutory, regulatory and contractual requirements for information deletion.",8,New,Yes
 8.2,Privileged access rights,"To ensure only authorized users, software components and services are provided with privileged access rights.",8,9.2.3,No
 8.3,Information access restriction,To ensure only authorized access and to prevent unauthorized access to information and other associated assets.,8,9.4.1,No
-8.4,Access to source code,,8,,
-8.5,Secure authentication,,8,,
-8.6,Capacity management,,8,,
-8.7,Protection against malware,,8,,
-8.8,Management of technical vulnerabilities,,8,,
+8.4,Access to source code,"To prevent unauthorized access to source code and associated tools, preventing their compromise.",8,9.4.5,No
+8.5,Secure authentication,To ensure secure authentication technologies and procedures are implemented to authenticate identities based on information security requirements.,8,9.4.2,No
+8.6,Capacity management,To ensure required capacity of information processing facilities is available to meet business needs.,8,12.1.3,No
+8.7,Protection against malware,To ensure information and other associated assets are protected against malware.,8,12.2.1,No
+8.8,Management of technical vulnerabilities,To prevent exploitation of technical vulnerabilities of information systems.,8,12.6.1,No
 8.9,Configuration management,"To ensure hardware, software, services and networks function correctly with required security settings, and configuration is not altered by unauthorized or incorrect changes.",8,New,Yes
-8.1,Information deletion,To protect information against the risks introduced by using user endpoint devices.,8,"6.2.1, 11.2.8",No
-8.1,Information deletion,"To prevent unnecessary exposure of sensitive information and to comply with legal, statutory, regulatory and contractual requirements for information deletion.",8,New,Yes
+8.10,Information deletion,"To prevent unnecessary exposure of sensitive information and to comply with legal, statutory, regulatory and contractual requirements for information deletion.",8,New,Yes
 8.11,Data masking,"To limit the exposure of sensitive data including PII, and to comply with legal, statutory, regulatory and contractual requirements.",8,New,Yes
 8.12,Data leakage prevention,To detect and prevent the unauthorized disclosure and extraction of information by individuals or systems.,8,New,Yes
-8.13,Information backup,,8,,
-8.14,Redundancy of information processing facilities,,8,,
-8.15,Logging,,8,,
+8.13,Information backup,"To ensure data, information and systems can be recovered following an incident or disruption.",8,12.3.1,No
+8.14,Redundancy of information processing facilities,To ensure availability of information processing facilities according to organizational requirements.,8,17.2.1,No
+8.15,Logging,"To record events, generate evidence, ensure the integrity of log information, prevent unauthorized access, and identify potential information security incidents.",8,"12.4.1, 12.4.2, 12.4.3",No
 8.16,Monitoring activities,To detect anomalous behaviour and potential information security incidents.,8,New,Yes
-8.17,Clock synchronization,,8,,
-8.18,Use of privileged utility programs,,8,,
-8.19,Installation of software on operational systems,,8,,
-8.2,Networks security,"To ensure only authorized users, software components and services are provided with privileged access rights.",8,9.2.3,No
-8.21,Security of network services,,8,,
-8.22,Segregation of networks,,8,,
-8.23,Web filtering,,8,,
-8.24,Use of cryptography,,8,,
-8.25,Secure development life cycle,,8,,
-8.26,Application security requirements,,8,,
-8.27,Secure system architecture and engineering principles,,8,,
-8.28,Secure coding,,8,,
-8.29,Security testing in development and acceptance,,8,,
-8.3,Outsourced development,To ensure only authorized access and to prevent unauthorized access to information and other associated assets.,8,9.4.1,No
-8.31,"Separation of development, test and production environments",,8,,
-8.32,Change management,,8,,
-8.33,Test information,,8,,
-8.34,Protection of information systems during audit testing,,8,,
+8.17,Clock synchronization,To enable the correlation and analysis of security-related events and other recorded data across systems.,8,12.4.4,No
+8.18,Use of privileged utility programs,To ensure the use of utility programs that might be capable of overriding system and application controls is restricted and tightly controlled.,8,9.4.4,No
+8.19,Installation of software on operational systems,To ensure the integrity of operational systems and prevent the installation of unauthorized software.,8,"12.5.1, 12.6.2",No
+8.20,Networks security,To protect information in networks and its supporting information processing facilities.,8,13.1.1,No
+8.21,Security of network services,To ensure security of network services and protect information passing over the network.,8,13.1.2,No
+8.22,Segregation of networks,"To separate groups of information services, users and information systems to manage access and protect information.",8,13.1.3,No
+8.23,Web filtering,To protect systems from malware and prevent access to unauthorized web resources.,8,New,Yes
+8.24,Use of cryptography,"To ensure proper and effective use of cryptography to protect the confidentiality, authenticity and integrity of information.",8,"10.1.1, 10.1.2",No
+8.25,Secure development life cycle,To ensure information security is designed and implemented within the secure development lifecycle of software and systems.,8,14.2.1,No
+8.26,Application security requirements,To ensure all information security requirements are identified and included when developing or acquiring applications.,8,14.1.1,No
+8.27,Secure system architecture and engineering principles,To ensure information security is designed and implemented using secure architecture and engineering principles.,8,14.2.5,No
+8.28,Secure coding,"To ensure software is written securely, reducing the number of potential vulnerabilities.",8,New,Yes
+8.29,Security testing in development and acceptance,To ensure security requirements are met by validating and testing in the development lifecycle and acceptance phase.,8,"14.2.8, 14.2.9",No
+8.30,Outsourced development,To ensure information security is incorporated into outsourced system development.,8,14.2.7,No
+8.31,"Separation of development, test and production environments",To protect the production environment and data from compromise by development and test activities.,8,12.1.4,No
+8.32,Change management,To ensure changes to information processing facilities and systems do not compromise information security.,8,"12.1.2, 14.2.2, 14.2.3, 14.2.4",No
+8.33,Test information,To ensure relevance of testing while protecting operational data used for testing.,8,14.3.1,No
+8.34,Protection of information systems during audit testing,To minimize the impact of audit activities on operational systems and to ensure unauthorized access is prevented.,8,12.7.1,No
