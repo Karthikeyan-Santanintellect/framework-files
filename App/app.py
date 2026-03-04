@@ -7,10 +7,12 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # URL = 'neo4j+ssc://06a4e5ca.databases.neo4j.io' - Vishwa
-URL = 'neo4j+ssc://20ec6dbd.databases.neo4j.io'
+# URL = 'neo4j+ssc://20ec6dbd.databases.neo4j.io' - Knowledge vault
+URL = 'neo4j+ssc://06a4e5ca.databases.neo4j.io'
 USER = 'neo4j'
-PASSWORD = "N3uwyddew5teuQ8ybSQSYOfNamD0LItwavzsJ2gmg34"
+PASSWORD = "02nTJ1LdUkeZsp24mwimXlZjZA9omoOifRTcQQnT84g"
 # PASSWORD = "02nTJ1LdUkeZsp24mwimXlZjZA9omoOifRTcQQnT84g" - Vishwa 
+# PASSWORD = "N3uwyddew5teuQ8ybSQSYOfNamD0LItwavzsJ2gmg34" - Knowledge vault
 
 
 class Neo4jConnect:
