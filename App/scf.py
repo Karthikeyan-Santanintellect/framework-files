@@ -79,7 +79,7 @@ control_iso_27001 ="""
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 CALL (row) {
     MATCH (sc:Control {id: row.scf_control_id})
-    MATCH (iso:Control {control_id: row.iso_control_id})
+    MATCH (iso:Clause {clause_id: row.iso_clause_id})
     WHERE iso.IS_frameworks_standard_id = 'ISO27001_2022'
     MERGE (sc)-[:SCF_CONTROL_HAS_EXTERNAL_CONTROLS]->(iso)
 }

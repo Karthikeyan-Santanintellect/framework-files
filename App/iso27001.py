@@ -140,7 +140,7 @@ time.sleep(2)
 # client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
 # time.sleep(2)
 
-client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Controls.csv"))
+client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
 time.sleep(2)
 
 client.query(attributes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Attributes.csv"))
@@ -160,8 +160,8 @@ time.sleep(2)
 client.query(control_categories_clauses)
 time.sleep(2)
 
-# client.query(clause_requirements)
-# time.sleep(2)
+client.query(clause_requirements)
+time.sleep(2)
 
 client.query(framework_attributes_rel)
 time.sleep(2)
