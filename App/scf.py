@@ -148,8 +148,10 @@ control_pci_dss = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 CALL (row) {
     MATCH (sc:Control {id: row.scf_control_id})
-    MATCH (pci:Requirement {node_id: row.pci_dss_node_id})
-    WHERE pci.industry_standard_regulation_id = 'PCI-DSS 4.0'
+    MATCH (pci)
+    WHERE pci.node_id = row.pcidss_req_id
+      AND pci.industry_standard_regulation_id = 'PCI-DSS 4.0'
+      AND (pci:Requirement OR pci:SubRequirement)
     MERGE (sc)-[:SCF_CONTROL_HAS_EXTERNAL_CONTROLS]->(pci)
 } IN TRANSACTIONS OF 500 ROWS;
 """
