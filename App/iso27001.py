@@ -38,21 +38,21 @@ ON CREATE SET
     cc.description = row.description;
 """
 
+# # UPDATED: Added framework_id and switched to MERGE.
+# clauses = """
+# LOAD CSV WITH HEADERS FROM '$file_path' AS row
+# MERGE (cl:Clause {clause_id: row.clause_id, IS_frameworks_standard_id: 'ISO27001_2022'})
+# ON CREATE SET
+#     cl.title = row.title,
+#     cl.type = row.category,
+#     cl.parent_clause = row.parent_clause;
+# """
 # UPDATED: Added framework_id and switched to MERGE.
 clauses = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (cl:Clause {clause_id: row.clause_id, IS_frameworks_standard_id: 'ISO27001_2022'})
+MERGE (c:Clause {clause_id: row.clause_id, IS_frameworks_standard_id: 'ISO27001_2022'})
 ON CREATE SET
-    cl.title = row.title,
-    cl.type = row.category,
-    cl.parent_clause = row.parent_clause;
-"""
-# UPDATED: Added framework_id and switched to MERGE.
-controls = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO27001_2022'})
-ON CREATE SET
-    c.name = row.control_name,
+    c.name = row.clause_name,
     c.category_id = row.category_id;
 """
 
@@ -92,10 +92,10 @@ MERGE (f)-[:FRAMEWORK_CONTAINS_CONTROL_CATEGORY]->(cat);
 """
 
 # UPDATED: Scoped MATCH to framework_id. Note the spelling fix for 'control'.
-control_categories_control = """
+control_categories_clauses = """
 MATCH (cat:ControlCategory {IS_frameworks_standard_id: 'ISO27001_2022'})
-MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27001_2022'})
-MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROL]->(ctrl);
+MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
+MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CLAUSES]->(c);
 """
 
 # UPDATED: Scoped MATCH to framework_id.
@@ -137,10 +137,10 @@ time.sleep(2)
 client.query(control_categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Control%20Categories.csv"))
 time.sleep(2)
 
-client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
-time.sleep(2)
+# client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
+# time.sleep(2)
 
-client.query(controls.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Controls.csv"))
+client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Controls.csv"))
 time.sleep(2)
 
 client.query(attributes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Attributes.csv"))
@@ -157,11 +157,11 @@ time.sleep(2)
 client.query(framework_standard_control_category)
 time.sleep(2)
 
-client.query(control_categories_control)
+client.query(control_categories_clauses)
 time.sleep(2)
 
-client.query(clause_requirements)
-time.sleep(2)
+# client.query(clause_requirements)
+# time.sleep(2)
 
 client.query(framework_attributes_rel)
 time.sleep(2)
