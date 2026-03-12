@@ -1,0 +1,5 @@
+id,label,name,description
+AST-REC,Record,Substance Use Disorder Patient Record,Records maintained in connection with the performance of any part 2 program
+AST-PII,PatientIdentifyingInformation,Patient Identifying Information,Data that identifies someone as an SUD patient which must be protected from disclosure
+AST-NOTES,SudCounselingNotes,SUD Counseling Notes,Information excluded from standard records which require separate consent mechanics
+AST-BREACH,UnsecuredRecord,Breached Record,A record subject to notification requirements under Section 2.16

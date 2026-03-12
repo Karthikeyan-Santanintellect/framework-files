@@ -97,10 +97,19 @@ MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROL]->(ctrl);
 clause_requirements = """
 MATCH (c:Clause {IS_frameworks_standard_id: 'ISO42001_2023'})
 MATCH (r:Requirement {IS_frameworks_standard_id: 'ISO42001_2023'})
-WHERE c.clause_id = r.clause_id
 MERGE (c)-[:CLAUSE_REQUIRES_REQUIREMENT]->(r);
 """
+clause_controls = """
+MATCH (c:Clause {IS_frameworks_standard_id: 'ISO42001_2023'})
+MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO42001_2023'})
+MERGE (c)-[:CLAUSE_REQUIRES_CONTROL]->(ctrl);
+"""
 
+control_attributes = """
+MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO42001_2023'})
+MATCH (a:Attribute {IS_frameworks_standard_id: 'ISO42001_2023'})
+MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE]->(a);
+"""
 
 
 import os
@@ -122,22 +131,22 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework_standard.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_framework.csv'))
+client.query(framework_standard)
 time.sleep(2)
 
-client.query(control_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Categories.csv"))
+client.query(control_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/control_categories.csv"))
 time.sleep(2)
 
-client.query(clauses.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Controls.csv"))
+client.query(clauses.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/clauses.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Attributes.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/controls.csv"))
 time.sleep(2)
 
-client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Guidelines.csv"))
+client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/attributes.csv"))
 time.sleep(2)
 
-client.query(requirements.replace())
+client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/requirements.csv"))
 time.sleep(2)
 
 
@@ -156,6 +165,12 @@ client.query(control_categories_control)
 time.sleep(2)
 
 client.query(clause_requirements)
+time.sleep(2)
+
+client.query(clause_controls)
+time.sleep(2)
+
+client.query(control_attributes)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")

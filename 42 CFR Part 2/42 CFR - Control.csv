@@ -1,0 +1,10 @@
+id,label,name,description
+CTRL-CONSENT,WrittenConsent,Written Consent,Authorizes disclosure and must include an expiration date.
+CTRL-ORDER,CourtOrder,Court Order,A specialized node that forces disclosure and overrides confidentiality restrictions.
+CTRL-SEC,SecurityPolicy,Security Policy,A policy that a Part 2 Program must implement and protect records with.
+CTRL-NOPP,NoticeOfPrivacyPractices,Notice of Privacy Practices,A required operational privacy notice control.
+CTRL-MEDEXC,MedicalEmergencyException,Medical Emergency Exception,Permits disclosure to medical personnel.
+CTRL-SCIEXC,ScientificResearchException,Scientific Research Exception,An exception node that applies to permit lawful disclosure.
+CTRL-RESTRICT,ConfidentialityRestriction,Confidentiality Restriction,Strict restrictions upon the use and disclosure of records that operate on a default deny logic.
+CTRL-COMP,Complaint,Complaint of Noncompliance,Process allowing patients to file a complaint to the Secretary for violations of the regulation.
+CTRL-TPO,Purpose,Treatment Payment and Operations,A specific description of purpose when a patient provides consent for these broader operational uses.

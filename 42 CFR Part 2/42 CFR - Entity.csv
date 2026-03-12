@@ -1,0 +1,14 @@
+id,label,name,description
+ENT-SEC,FederalAuthority,Secretary of HHS,The authority prescribing regulations to carry out the purposes of section 290dd-2
+ENT-PAT,Patient,Patient,Individual receiving SUD treatment who retains rights under 45 CFR 164.522
+ENT-P2P,Part2Program,Part 2 Program,"A federally assisted program or entity providing SUD diagnosis, treatment, or referral"
+ENT-CE,CoveredEntity,Covered Entity,"A HIPAA-aligned entity that may receive records for treatment, payment, or operations"
+ENT-BA,BusinessAssociate,Business Associate,An entity working with a covered entity that may receive records
+ENT-QSO,QualifiedServiceOrganization,Qualified Service Organization,A person providing services to a Part 2 program under a written agreement
+ENT-INT,Intermediary,Intermediary,Entity that receives records under a general designation to disclose to member participants
+ENT-LH,LawfulHolder,Lawful Holder,An entity that legally receives protected information downstream
+ENT-TPP,ThirdPartyPayer,Third-Party Payer,An entity funding health plans that may be designated as a recipient
+ENT-IA,InvestigativeAgency,Investigative Agency,"Agency seeking records via specialized court order for legal or criminal investigations"
+ENT-MED,MedicalPersonnel,Medical Personnel,Personnel permitted to receive disclosures during a medical emergency
+ENT-TP,TreatingProvider,Treating Provider,Medical professional providing care
+ENT-CR,CentralRegistry,Central Registry,Registry that tracks specific patient treatment data
