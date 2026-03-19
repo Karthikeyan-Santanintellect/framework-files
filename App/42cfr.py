@@ -1,5 +1,5 @@
 regulation = """
-MERGE (r:Regulation {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MERGE (r:Regulation {regional_standard_regulation_id: '42_CFR_PART_2'})
 ON CREATE SET
     r.name = '42 CFR Part 2',
     r.version = '2026 Edition',
@@ -12,7 +12,7 @@ ON CREATE SET
 # Replaces 'control_categories' from ISO27001.
 subparts = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sub:Subpart {IS_frameworks_standard_id: '42_CFR_PART_2', subpart_id: row.id})
+MERGE (sub:Subpart {regional_standard_regulation_id: '42_CFR_PART_2', subpart_id: row.id})
 ON CREATE SET
     sub.name = row.name,
     sub.description = row.description;
@@ -22,7 +22,7 @@ ON CREATE SET
 # Replaces 'clauses' from ISO27001.
 sections = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sec:Section {IS_frameworks_standard_id: '42_CFR_PART_2', section_id: row.id})
+MERGE (sec:Section {regional_standard_regulation_id: '42_CFR_PART_2', section_id: row.id})
 ON CREATE SET
     sec.name = row.name,
     sec.description = row.description,
@@ -33,7 +33,7 @@ ON CREATE SET
 # Handing the Actors/Entities from the 42 CFR Graph.
 entities = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (e:Entity {IS_frameworks_standard_id: '42_CFR_PART_2', entity_id: row.id})
+MERGE (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2', entity_id: row.id})
 ON CREATE SET
     e.label = row.label,
     e.name = row.name,
@@ -44,7 +44,7 @@ ON CREATE SET
 # Handling the Data/Records from the 42 CFR Graph.
 assets = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Asset {IS_frameworks_standard_id: '42_CFR_PART_2', asset_id: row.id})
+MERGE (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2', asset_id: row.id})
 ON CREATE SET
     a.label = row.label,
     a.name = row.name,
@@ -54,7 +54,7 @@ ON CREATE SET
 # UPDATED: Added framework_id and switched to MERGE. 
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {IS_frameworks_standard_id: '42_CFR_PART_2', control_id: row.id})
+MERGE (c:Control {regional_standard_regulation_id: '42_CFR_PART_2', control_id: row.id})
 ON CREATE SET
     c.label = row.label,
     c.name = row.name,
@@ -63,12 +63,12 @@ ON CREATE SET
 # Relationships 
 regulation_has_subparts = """
 MATCH (reg:Regulation {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (sub:Subpart {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MATCH (sub:Subpart {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (reg)-[:REGULATION_HAS_SUBPART]->(sub);
 """
 subpart_contains_sections = """
-MATCH (sub:Subpart {IS_frameworks_standard_id: '42_CFR_PART_2'})
-MATCH (sec:Section {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MATCH (sub:Subpart {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (sec:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (sub)-[:SUBPART_CONTAINS_SECTION]->(sec);
 """
 entity_entity = """
@@ -77,24 +77,40 @@ MATCH (pat:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (p2p)-[:ENTITY_DIAGNOSES_PATIENT]->(pat);
 """
 entity_control = """
-MATCH (e:Entity {IS_frameworks_standard_id: '42_CFR_PART_2'})
-MATCH (c:Control {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MATCH (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (c:Control {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (e)-[:ENTITY_PROVIDES_CONTROL]->(c);
 """
 entity_asset = """
-MATCH (e:Entity {IS_frameworks_standard_id: '42_CFR_PART_2'})
-MATCH (a:Asset {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MATCH (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (e)-[:ENTITY_HAS_ASSET]->(a); 
 """
 asset_asset = """
-MATCH (a1:Asset {IS_frameworks_standard_id: '42_CFR_PART_2'})
-MATCH (a2:Asset {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MATCH (a1:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (a2:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (a1)-[:ASSET_RELATES_TO_ASSET]->(a2);
 """
 control_asset = """
-MATCH (c:Control {IS_frameworks_standard_id: '42_CFR_PART_2'})
-MATCH (a:Asset {IS_frameworks_standard_id: '42_CFR_PART_2'})
+MATCH (c:Control {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
 MERGE (c)-[:CONTROL_MITIGATES_ASSET]->(a);
+"""
+section_control = """
+MATCH (s:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (c:Control {regional_standard_regulation_id: '42_CFR_PART_2'})
+MERGE (s)-[:SECTION_REQUIRES_CONTROL]->(c);
+"""
+section_entity = """
+MATCH (s:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
+MERGE (s)-[:SECTION_APPLIES_TO_ENTITY]->(e);
+"""
+
+section_asset = """
+MATCH (s:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
+MATCH (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
+MERGE (s)-[:SECTION_APPLIES_TO_ASSET]->(a); 
 """
 
 import sys
@@ -120,19 +136,19 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(subparts.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Title.csv"))
+client.query(subparts.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Subpart.csv"))
 time.sleep(2)
 
-client.query(sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Subdivision.csv"))
+client.query(sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Sections.csv"))
 time.sleep(2)
 
-client.query(entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Paragraph.csv"))
+client.query(entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Entity.csv"))
 time.sleep(2)
 
-client.query(assets.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Consumer.csv"))
+client.query(assets.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Asset%20.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPRA/Business.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Control.csv"))
 time.sleep(2)
 
                                  
@@ -157,6 +173,17 @@ time.sleep(2)
 
 client.query(control_asset)
 time.sleep(2)
+
+client.query(section_control)
+time.sleep(2)
+
+client.query(section_entity)
+time.sleep(2)
+
+client.query(section_asset)
+time.sleep(2)
+
+
 
 
 

@@ -1,36 +1,152 @@
 clause_id,clause_name,description,category,parent_clause
-4,Context of the organization,"Understanding the organization and its context",main_clause,
-4.1,Understanding the organization and its context,"Determining external and internal issues that are relevant to its purpose",subclause,4
-4.2,Understanding the needs and expectations of interested parties,"Determining the interested parties that are relevant to the AI management system",subclause,4
-4.3,Determining the scope of the AI management system,"Determining the boundaries and applicability of the AI management system to establish its scope",subclause,4
-4.4,AI management system,"Establishing, implementing, maintaining and continually improving an AI management system",subclause,4
-5,Leadership,"Leadership and commitment",main_clause,
-5.1,Leadership and commitment,"Top management demonstrating leadership and commitment with respect to the AI management system",subclause,5
-5.2,AI policy,"Top management establishing an AI policy",subclause,5
-5.3,Roles responsibilities and authorities,"Assigning the responsibility and authority for relevant roles",subclause,5
-6,Planning,"Actions to address risks and opportunities",main_clause,
-6.1,Actions to address risks and opportunities,"Determining the risks and opportunities that need to be addressed",subclause,6
-6.1.1,General,"Establishing and maintaining AI risk criteria",subclause,6.1
-6.1.2,AI risk assessment,"Defining and establishing an AI risk assessment process",subclause,6.1
-6.1.3,AI risk treatment,"Defining an AI risk treatment process to select appropriate AI risk treatment options",subclause,6.1
+4,Context of the organization,Understanding the organization and its context,main_clause,
+4.1,Understanding the organization and its context,Determining external and internal issues that are relevant to its purpose,subclause,4.0
+4.2,Understanding the needs and expectations of interested parties,Determining the interested parties that are relevant to the AI management system,subclause,4.0
+4.3,Determining the scope of the AI management system,Determining the boundaries and applicability of the AI management system to establish its scope,subclause,4.0
+4.4,AI management system,"Establishing, implementing, maintaining and continually improving an AI management system",subclause,4.0
+5,Leadership,Leadership and commitment,main_clause,
+5.1,Leadership and commitment,Top management demonstrating leadership and commitment with respect to the AI management system,subclause,5.0
+5.2,AI policy,Top management establishing an AI policy,subclause,5.0
+5.3,Roles responsibilities and authorities,Assigning the responsibility and authority for relevant roles,subclause,5.0
+6,Planning,Actions to address risks and opportunities,main_clause,
+6.1,Actions to address risks and opportunities,Determining the risks and opportunities that need to be addressed,subclause,6.0
+6.1.1,General,Establishing and maintaining AI risk criteria,subclause,6.1
+6.1.2,AI risk assessment,Defining and establishing an AI risk assessment process,subclause,6.1
+6.1.3,AI risk treatment,Defining an AI risk treatment process to select appropriate AI risk treatment options,subclause,6.1
 6.1.4,AI system impact assessment,"Assessing the potential consequences for individuals or groups of individuals, or both, and societies",subclause,6.1
-6.2,AI objectives and planning to achieve them,"Establishing AI objectives at relevant functions and levels",subclause,6
-6.3,Planning of changes,"Carrying out changes to the AI management system in a planned manner",subclause,6
-7,Support,"Resources and competence",main_clause,
-7.1,Resources,"Determining and providing the resources needed for the establishment, implementation, maintenance and continual improvement",subclause,7
-7.2,Competence,"Determining the necessary competence of person(s) doing work under its control",subclause,7
-7.3,Awareness,"Ensuring persons doing work under the organization's control are aware of the AI policy",subclause,7
-7.4,Communication,"Determining the internal and external communications relevant to the AI management system",subclause,7
-7.5,Documented information,"Managing documented information required by the AI management system",subclause,7
-8,Operation,"Operational planning and control",main_clause,
-8.1,Operational planning and control,"Planning, implementing and controlling the processes needed to meet requirements",subclause,8
-8.2,AI risk assessment,"Performing AI risk assessments in accordance with 6.1.2 at planned intervals",subclause,8
-8.3,AI risk treatment,"Implementing the AI risk treatment plan according to 6.1.3 and verifying its effectiveness",subclause,8
-8.4,AI system impact assessment,"Performing AI system impact assessments according to 6.1.4 at planned intervals",subclause,8
+6.2,AI objectives and planning to achieve them,Establishing AI objectives at relevant functions and levels,subclause,6.0
+6.3,Planning of changes,Carrying out changes to the AI management system in a planned manner,subclause,6.0
+7,Support,Resources and competence,main_clause,
+7.1,Resources,"Determining and providing the resources needed for the establishment, implementation, maintenance and continual improvement",subclause,7.0
+7.2,Competence,Determining the necessary competence of person(s) doing work under its control,subclause,7.0
+7.3,Awareness,Ensuring persons doing work under the organization's control are aware of the AI policy,subclause,7.0
+7.4,Communication,Determining the internal and external communications relevant to the AI management system,subclause,7.0
+7.5,Documented information,Managing documented information required by the AI management system,subclause,7.0
+8,Operation,Operational planning and control,main_clause,
+8.1,Operational planning and control,"Planning, implementing and controlling the processes needed to meet requirements",subclause,8.0
+8.2,AI risk assessment,Performing AI risk assessments in accordance with 6.1.2 at planned intervals,subclause,8.0
+8.3,AI risk treatment,Implementing the AI risk treatment plan according to 6.1.3 and verifying its effectiveness,subclause,8.0
+8.4,AI system impact assessment,Performing AI system impact assessments according to 6.1.4 at planned intervals,subclause,8.0
 9,Performance evaluation,"Monitoring, measurement, analysis and evaluation",main_clause,
-9.1,Monitoring measurement analysis and evaluation,"Determining what needs to be monitored and measured",subclause,9
-9.2,Internal audit,"Conducting internal audits at planned intervals",subclause,9
-9.3,Management review,"Top management reviewing the organization's AI management system at planned intervals",subclause,9
-10,Improvement,"Continual improvement",main_clause,
-10.1,Continual improvement,"Continually improving the suitability, adequacy and effectiveness of the AI management system",subclause,10
-10.2,Nonconformity and corrective action,"Reacting to nonconformity and taking action to control and correct it",subclause,10
+9.1,Monitoring measurement analysis and evaluation,Determining what needs to be monitored and measured,subclause,9.0
+9.2,Internal audit,Conducting internal audits at planned intervals,subclause,9.0
+9.3,Management review,Top management reviewing the organization's AI management system at planned intervals,subclause,9.0
+10,Improvement,Continual improvement,main_clause,
+10.1,Continual improvement,"Continually improving the suitability, adequacy and effectiveness of the AI management system",subclause,10.0
+10.2,Nonconformity and corrective action,Reacting to nonconformity and taking action to control and correct it,subclause,10.0
+10.2(a),Nonconformity and corrective action - React to the nonconformity and as applicable,react to the nonconformity and as applicable:,subclause,10.2
+10.2(a)(1),Nonconformity and corrective action - Take action to control and correct it,take action to control and correct it;,subclause,10.2(a)
+10.2(a)(2),Nonconformity and corrective action - Deal with the consequences,deal with the consequences;,subclause,10.2(a)
+10.2(b),"Nonconformity and corrective action - Evaluate the need for action to eliminate the cause(s) of the nonconformity,","evaluate the need for action to eliminate the cause(s) of the nonconformity, so that it does not recur or occur elsewhere, by:",subclause,10.2
+10.2(b)(1),Nonconformity and corrective action - Reviewing the nonconformity,reviewing the nonconformity;,subclause,10.2(b)
+10.2(b)(2),Nonconformity and corrective action - Determining the causes of the nonconformity,determining the causes of the nonconformity;,subclause,10.2(b)
+10.2(b)(3),Nonconformity and corrective action - Determining if similar nonconformities exist or can potentially occur,determining if similar nonconformities exist or can potentially occur;,subclause,10.2(b)
+10.2(c),Nonconformity and corrective action - Implement any action needed,implement any action needed;,subclause,10.2
+10.2(d),Nonconformity and corrective action - Review the effectiveness of any corrective action taken,review the effectiveness of any corrective action taken;,subclause,10.2
+10.2(e),"Nonconformity and corrective action - Make changes to the AI management system, if necessary","make changes to the AI management system, if necessary.",subclause,10.2
+3.0,AI System,Derived subclause from SCF mapping,subclause,3
+5.2(a),AI policy - Is appropriate to the purpose of the organization,is appropriate to the purpose of the organization;,subclause,5.2
+5.2(b),AI policy - Provides a framework for setting AI objectives (see 6,provides a framework for setting AI objectives (see 6.2);,subclause,5.2
+5.2(c),AI policy - Includes a commitment to meet applicable requirements,includes a commitment to meet applicable requirements;,subclause,5.2
+5.2(d),AI policy - Includes a commitment to continual improvement of the AI management system,includes a commitment to continual improvement of the AI management system.,subclause,5.2
+5.3(a),Roles responsibilities and authorities - Ensuring that the AI management system conforms to the requirements of this,ensuring that the AI management system conforms to the requirements of this document;,subclause,5.3
+5.3(b),Roles responsibilities and authorities - Reporting on the performance of the AI management system to top management,reporting on the performance of the AI management system to top management.,subclause,5.3
+6.1.2(a),AI risk assessment - Is informed by and aligned with the AI policy (see 5,is informed by and aligned with the AI policy (see 5.2) and AI objectives (see 6.2);,subclause,6.1.2
+6.1.2(b),"AI risk assessment - Is designed such that repeated AI risk assessments can produce consistent, valid","is designed such that repeated AI risk assessments can produce consistent, valid and comparable results;",subclause,6.1.2
+6.1.2(c),AI risk assessment - Identifies risks that aid or prevent achieving its AI objectives,identifies risks that aid or prevent achieving its AI objectives;,subclause,6.1.2
+6.1.2(d),AI risk assessment - Analyses the AI risks to,analyses the AI risks to:,subclause,6.1.2
+6.1.2(d)(1),"AI risk assessment - Assess the potential consequences to the organization, individuals and societies that would","assess the potential consequences to the organization, individuals and societies that would result if the identified risks were to materialize;",subclause,6.1.2(d)
+6.1.2(d)(2),"AI risk assessment - Assess, where applicable, the realistic likelihood of the identified risks","assess, where applicable, the realistic likelihood of the identified risks;",subclause,6.1.2(d)
+6.1.2(d)(3),AI risk assessment - Determine the levels of risk,determine the levels of risk;,subclause,6.1.2(d)
+6.1.2(e),AI risk assessment - Evaluates the AI risks to,evaluates the AI risks to:,subclause,6.1.2
+6.1.2(e)(1),AI risk assessment - Compare the results of the risk analysis with the risk criteria (see,compare the results of the risk analysis with the risk criteria (see 6.1.1);,subclause,6.1.2(e)
+6.1.2(e)(2),AI risk assessment - Prioritize the assessed risks for risk treatment,prioritize the assessed risks for risk treatment.,subclause,6.1.2(e)
+6.1.3(a),AI risk treatment - Select appropriate AI risk treatment options,select appropriate AI risk treatment options;,subclause,6.1.3
+6.1.3(b),AI risk treatment - Determine all controls that are necessary to implement the AI risk treatment,determine all controls that are necessary to implement the AI risk treatment options chosen and compare the controls with those in Annex A to verify that no necessary controls have been omitted;,subclause,6.1.3
+6.1.3(c),AI risk treatment - Consider the controls from Annex A that are relevant for the implementation,consider the controls from Annex A that are relevant for the implementation of the AI risk treatment options;,subclause,6.1.3
+6.1.3(d),AI risk treatment - Identify if additional controls are necessary beyond those in Annex A in,identify if additional controls are necessary beyond those in Annex A in order to implement all risk treatment options;,subclause,6.1.3
+6.1.3(e),AI risk treatment - Consider the guidance in Annex B for the implementation of controls determined,consider the guidance in Annex B for the implementation of controls determined in b) and c);,subclause,6.1.3
+6.1.3(f),"AI risk treatment - Produce a statement of applicability that contains the necessary controls [see b),","produce a statement of applicability that contains the necessary controls [see b), c) and d)] and provide justification for inclusion and exclusion of controls. Justification for exclusion can include where the controls are not deemed necessary by the risk assessment and where they are not required by (or are subject to exceptions under) applicable external requirements.",subclause,6.1.3
+6.1.3(g),AI risk treatment - Formulate an AI risk treatment plan,formulate an AI risk treatment plan.,subclause,6.1.3
+6.2(a),AI objectives and planning to achieve them - Be consistent with the AI policy (see 5,be consistent with the AI policy (see 5.2);,subclause,6.2
+6.2(b),AI objectives and planning to achieve them - Be measurable (if practicable),be measurable (if practicable);,subclause,6.2
+6.2(c),AI objectives and planning to achieve them - Take into account applicable requirements,take into account applicable requirements;,subclause,6.2
+6.2(d),AI objectives and planning to achieve them - Be monitored,be monitored;,subclause,6.2
+6.2(e),AI objectives and planning to achieve them - Be communicated,be communicated;,subclause,6.2
+6.2(f),AI objectives and planning to achieve them - Be updated as appropriate,be updated as appropriate;,subclause,6.2
+6.2(g),AI objectives and planning to achieve them - Be available as documented information,be available as documented information.,subclause,6.2
+7.5.1,Documented information - Subclause 7.5.1,Derived subclause from SCF mapping,subclause,7.5
+7.5.1(a),Documented information - Documented information required by this document,documented information required by this document;,subclause,7.5.1
+7.5.1(b),Documented information - Documented information determined by the organization as being necessary for the effectiveness,documented information determined by the organization as being necessary for the effectiveness of the AI management system.,subclause,7.5.1
+7.5.2,Documented information - Subclause 7.5.2,Derived subclause from SCF mapping,subclause,7.5
+7.5.3,Documented information - Subclause 7.5.3,Derived subclause from SCF mapping,subclause,7.5
+7.5.3(a),"Documented information - It is available and suitable for use, where and when it is","it is available and suitable for use, where and when it is needed;",subclause,7.5.3
+7.5.3(b),Documented information - It is adequately protected (e,"it is adequately protected (e.g. from loss of confidentiality, improper use or loss of integrity).",subclause,7.5.3
+9.2.1,Internal audit - Subclause 9.2.1,Derived subclause from SCF mapping,subclause,9.2
+9.2.1(a),Internal audit - Conforms to,conforms to:,subclause,9.2.1
+9.2.1(a)(1),Internal audit - The organization’s own requirements for its AI management system,the organization’s own requirements for its AI management system;,subclause,9.2.1(a)
+9.2.1(a)(2),Internal audit - The requirements of this document,the requirements of this document;,subclause,9.2.1(a)
+9.2.1(b),Internal audit - Is effectively implemented and maintained,is effectively implemented and maintained.,subclause,9.2.1
+9.2.2,Internal audit - Subclause 9.2.2,Derived subclause from SCF mapping,subclause,9.2
+9.2.2(a),"Internal audit - Define the audit objectives, criteria and scope for each audit","define the audit objectives, criteria and scope for each audit;",subclause,9.2.2
+9.2.2(b),Internal audit - Select auditors and conduct audits to ensure objectivity and the impartiality of,select auditors and conduct audits to ensure objectivity and the impartiality of the audit process;,subclause,9.2.2
+9.2.2(c),Internal audit - Ensure that the results of audits are reported to relevant managers,ensure that the results of audits are reported to relevant managers.,subclause,9.2.2
+9.3.1,Management review - Subclause 9.3.1,Derived subclause from SCF mapping,subclause,9.3
+9.3.2,Management review - Subclause 9.3.2,Derived subclause from SCF mapping,subclause,9.3
+9.3.2(a),Management review - The status of actions from previous management reviews,the status of actions from previous management reviews;,subclause,9.3.2
+9.3.2(b),Management review - Changes in external and internal issues that are relevant to the AI,changes in external and internal issues that are relevant to the AI management system;,subclause,9.3.2
+9.3.2(c),Management review - Changes in needs and expectations of interested parties that are relevant to,changes in needs and expectations of interested parties that are relevant to the AI management system;,subclause,9.3.2
+9.3.2(d),"Management review - Information on the AI management system performance, including trends in","information on the AI management system performance, including trends in:",subclause,9.3.2
+9.3.2(d)(1),Management review - Nonconformities and corrective actions,nonconformities and corrective actions;,subclause,9.3.2(d)
+9.3.2(d)(2),Management review - Monitoring and measurement results,monitoring and measurement results;,subclause,9.3.2(d)
+9.3.2(d)(3),Management review - Audit results,audit results;,subclause,9.3.2(d)
+9.3.2(e),Management review - Opportunities for continual improvement,opportunities for continual improvement.,subclause,9.3.2
+9.3.3,Management review - Subclause 9.3.3,Derived subclause from SCF mapping,subclause,9.3
+A.10,Third-party and customer relationships,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A
+A.10.2,Allocating responsibilities,"The organization shall ensure that responsibilities within their AI system life cycle are allocated between the organi- zation, its partners, suppliers, customers and third parties.",subclause,A.10
+A.10.3,Suppliers,"The organization shall establish a process to ensure that its usage of services, products or materials provided by suppliers aligns with the organization’s approach to the responsible development and use of AI systems.",subclause,A.10
+A.10.4,Customers,The organization shall ensure that its responsible ap- proach to the development and use of AI systems considers their customer expectations and needs. 20  ,subclause,A.10
+A.2,Policies related to AI,The organization shall establish and maintain AI risk criteria that support: — distinguishing acceptable from non-acceptable risks; — performing AI risk assessments; — conducting AI risk treatment; — assessing AI risk impacts. NOTE 1 Considerations to determine the amount and type of risk that an organization is willing to pursue or retain are provided in ISO/IEC 38507 and ISO/IEC 23894.,subclause,A
+A.2.2,AI policy,The organization shall document a policy for the develop- ment or use of AI systems.,subclause,A.2
+A.2.3,Alignment with other organizational policies,"The organization shall determine where other policies can tional policies be affected by or apply to, the organization’s objectives with respect to AI systems.",subclause,A.2
+A.2.4,Review of the AI policy,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A.2
+A.3,Internal organization,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A
+A.3.2,AI roles and responsibilities,The organization shall establish and maintain AI risk criteria that support: — distinguishing acceptable from non-acceptable risks; — performing AI risk assessments; — conducting AI risk treatment; — assessing AI risk impacts. NOTE 1 Considerations to determine the amount and type of risk that an organization is willing to pursue or retain are provided in ISO/IEC 38507 and ISO/IEC 23894.,subclause,A.3
+A.3.3,Reporting of concerns,The organization shall define and put in place a process to report concerns about the organization’s role with respect to an AI system throughout its life cycle. A.4 Resources for AI systems Objective: To ensure that the organization accounts for the resources (including AI system components and assets) of the AI system in order to fully understand and address risks and impacts. Topic Control,subclause,A.3
+A.4,Resources for AI systems,The organization shall determine the internal and external communications relevant to the AI management system including: — what it will communicate; — when to communicate; — with whom to communicate; — how to communicate. 7.5 Documented information 7.5.1 General,subclause,A
+A.4.2,Resource documentation,The organization shall identify and document relevant resources required for the activities at given AI system life cycle stages and other AI-related activities relevant for the organization.,subclause,A.4
+A.4.3,Data resources,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A.4
+A.4.4,Tooling resources,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A.4
+A.4.5,System and computing resources,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A.4
+A.4.6,Human resources,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A.4
+A.5,Assessing impacts of AI systems,"The organization shall establish AI objectives at relevant functions and levels. The AI objectives shall: a) be consistent with the AI policy (see 5.2); b) be measurable (if practicable); c) take into account applicable requirements; d) be monitored; e) be communicated; f) be updated as appropriate; g) be available as documented information. When planning how to achieve its AI objectives, the organization shall determine: — what will be done; — what resources will be required; — who will be responsible; — when it will be completed; — how the results will be evaluated. NOTE A non-exclusive list of AI objectives relating to risk management is provided in Annex C. Control objectives and controls for identifying objectives for responsible development and use of AI systems and measures to achieve them are provided in A.6.1 and A.9.3 in Table A.1.",subclause,A
+A.5.2,AI system impact assessment process,"The organization shall establish a process to assess the process potential consequences for individuals or groups of indi- viduals, or both, and societies that can result from the AI system throughout its life cycle.",subclause,A.5
+A.5.3,Documentation of AI system impact assessments,The organization shall document the results of AI system pact assessments impact assessments and retain results for a defined peri- od.,subclause,A.5
+A.5.4,Assessing AI system impact on individuals or groups of individuals,The organization shall assess and document the potential dividuals or groups of individuals impacts of AI systems to individuals or groups of individu- als throughout the system’s life cycle.,subclause,A.5
+A.5.5,Assessing societal impacts of AI systems,The organization shall assess and document the potential systems societal impacts of their AI systems throughout their life cycle. A.6 AI system life cycle,subclause,A.5
+A.6.1,Annex A Control A.6.1,"The organization shall determine and provide the resources needed for the establishment, implementation, maintenance and continual improvement of the AI management system. NOTE Control objectives and controls for AI resources are provided in A.4 in Table A.1.",subclause,A.6
+A.6.1.2,Objectives for responsible development of AI system,"The organization shall identify and document objectives ment of AI system to guide the responsible development AI systems, and take those objectives into account and integrate measures to achieve them in the development life cycle.",subclause,A.6.1
+A.6.1.3,Processes for responsible design and development of AI systems,The organization shall define and document the specific tem design and development processes for the responsible design and development of the AI system.,subclause,A.6.1
+A.6.2,Annex A Control A.6.2,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A.6
+A.6.2.2,Deployment of AI systems,The organization shall specify and document require- ification ments for new AI systems or material enhancements to existing systems.,subclause,A.6.2
+A.6.2.3,AI system operation and monitoring,"The organization shall document the AI system design and and development development based on organizational objectives, docu- mented requirements and specification criteria.",subclause,A.6.2
+A.6.2.4,AI system verification and valida-,The organization shall define and document verification tion and validation measures for the AI system and specify criteria for their use.,subclause,A.6.2
+A.6.2.5,AI system deployment,The organization shall document a deployment plan and ensure that appropriate requirements are met prior to deployment. 18   Table A.1 (continued),subclause,A.6.2
+A.6.2.6,AI system operation and monitor-,"The organization shall define and document the necessary ing elements for the ongoing operation of the AI system. At the minimum, this should include system and performance monitoring, repairs, updates and support.",subclause,A.6.2
+A.6.2.7,AI system technical documentation,"The organization shall determine what AI system techni- cal documentation is needed for each relevant category of interested parties, such as users, partners, supervisory authorities, and provide the technical documentation to them in the appropriate form.",subclause,A.6.2
+A.6.2.8,AI system recording of event logs,"The organization shall determine at which phases of the AI system life cycle, record keeping of event logs should be enabled, but at the minimum when the AI system is in use. A.7 Data for AI systems Objective: To ensure that the organization understands the role and impacts of data in AI systems in the appli- cation and development, provision or use of AI systems throughout their life cycles. Topic Control",subclause,A.6.2
+A.7,Data for AI systems,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A
+A.7.2,Data quality,"The organization shall define, document and implement ment of AI system data management processes related to the development of AI systems.",subclause,A.7
+A.7.3,Data provenance,The organization shall determine and document details about the acquisition and selection of the data used in AI systems.,subclause,A.7
+A.7.4,Data preparation,The organization shall define and document requirements for data quality and ensure that data used to develop and operate the AI system meet those requirements.,subclause,A.7
+A.7.5,Data provenance,The organization shall define and document a process for recording the provenance of data used in its AI systems over the life cycles of the data and the AI system.,subclause,A.7
+A.7.6,Data preparation,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used. A.8 Information for interested parties of AI systems Objective: To ensure that relevant interested parties have the necessary information to understand and assess the risks and their impacts (both positive and negative). Topic Control,subclause,A.7
+A.8,Information for interested parties,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A
+A.8.2,Documentation for users,The organization shall determine and provide the neces- mation for users sary information to users of the AI system.,subclause,A.8
+A.8.3,Information for external interested parties,The organization shall provide capabilities for interested parties to report adverse impacts of the AI system.,subclause,A.8
+A.8.4,Communication of incidents,The organization shall determine and document a plan for communicating incidents to users of the AI system.,subclause,A.8
+A.8.5,Information for interested parties,The organization shall determine and document their obligations to reporting information about the AI system to interested parties. A.9 Use of AI systems Objective: To ensure that the organization uses AI systems responsibly and per organizational policies. Topic Control,subclause,A.8
+A.9,Use of AI systems,The organization shall define and document its criteria for selecting data preparations and the data preparation methods to be used.,subclause,A
+A.9.2,Processes for responsible use of AI systems,The organization shall define and document the processes systems for the responsible use of AI systems.,subclause,A.9
+A.9.3,Objectives for responsible use of AI system,The organization shall identify and document objectives to system guide the responsible use of AI systems. Table A.1 (continued),subclause,A.9
+A.9.4,Intended use of the AI system,"The organization shall ensure that the AI system is used according to the intended uses of the AI system and its accompanying documentation. A.10 Third-party and customer relationships Objective: To ensure that the organization understands its responsibilities and remains accountable, and risks are appropriately apportioned when third parties are involved at any stage of the AI system life cycle. Topic Control",subclause,A.9

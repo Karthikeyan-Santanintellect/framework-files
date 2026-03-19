@@ -56,7 +56,7 @@ LOAD CSV WITH HEADERS FROM '$file_path' AS row
 CALL (row) {
     MATCH (sc:Control {id: row.scf_control_id})
     MATCH (nist)
-    WHERE nist.id = row.nist_csf_id
+    WHERE (nist.function_id = row.nist_csf_id OR nist.category_id = row.nist_csf_id OR nist.subcategory_id = row.nist_csf_id)
       AND nist.IS_frameworks_standard_id = 'NIST_CSF_2.0'
       AND (nist:Function OR nist:Category OR nist:Subcategory)
     MERGE (sc)-[:SCF_CONTROL_HAS_EXTERNAL_CONTROLS]->(nist)
