@@ -119,8 +119,19 @@ CALL (row) {
     MERGE (sc)-[:SCF_CONTROL_HAS_EXTERNAL_CONTROLS]->(airmf)
 } IN TRANSACTIONS OF 500 ROWS;
 """
-
-
+# Control -> ISO 42001:2023
+control_iso_42001 = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+CALL (row) {
+    MATCH (sc:Control {id: row.scf_control_id})
+    MATCH (iso)
+    WHERE (iso.clause_id = row.iso_clause_id OR iso.control_id = row.iso_clause_id)
+      AND iso.IS_frameworks_standard_id = 'ISO42001_2023'
+      AND (iso:Clause OR iso:Control)
+    MERGE (sc)-[:SCF_CONTROL_HAS_EXTERNAL_CONTROLS]->(iso)
+}
+IN TRANSACTIONS OF 500 ROWS;
+"""
 
 # 9a. Control -> GLBA 
 control_glba = """
