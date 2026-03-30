@@ -1,0 +1,2 @@
+node_id,node_label,approved_methods,password_security,access_blocking
+AUTH-001,User Authentication,"Passwords, or use of unique identifier technologies, such as biometrics or token devices.","Control of data security passwords to ensure they are kept in a location and/or format that does not compromise the security of the data they protect.","Blocking access to user identification after multiple unsuccessful attempts to gain access or the limitation placed on access for the particular system."

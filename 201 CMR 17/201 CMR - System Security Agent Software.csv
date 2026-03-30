@@ -1,0 +1,2 @@
+node_id,node_label,mandatory_components,update_standards
+SEC-001,System Security Agent Software,"Must include malware protection and virus definitions.","Reasonably up-to-date versions... or a version of such software that can still be supported with up-to-date patches and virus definitions, and is set to receive the most current security updates on a regular basis."

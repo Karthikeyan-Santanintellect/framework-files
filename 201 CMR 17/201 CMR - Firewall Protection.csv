@@ -1,0 +1,2 @@
+node_id,node_label,system_applicability,maintenance_standards
+FW-001,Firewall Protection,"For files containing personal information on a system that is connected to the Internet.","Must be reasonably up-to-date firewall protection and operating system security patches, reasonably designed to maintain the integrity of the personal information."

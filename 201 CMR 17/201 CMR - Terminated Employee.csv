@@ -1,0 +1,2 @@
+node_id,node_label,mandatory_action,security_program_requirement
+TEMP-001,Terminated Employee,"Immediate access revocation","The comprehensive information security program must include preventing terminated employees from accessing records containing personal information."

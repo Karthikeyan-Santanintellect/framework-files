@@ -1,0 +1,2 @@
+node_id,node_label,network_types,encryption_mandate
+NET-001,Public Networks,"Public networks and the Internet.","Encryption of all transmitted records and files containing personal information that will travel across public networks."

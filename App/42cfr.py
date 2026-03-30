@@ -1,5 +1,5 @@
 regulation = """
-MERGE (r:Regulation {regional_standard_regulation_id: '42_CFR_PART_2'})
+MERGE (r:RegionalStandardAndRegulation {regional_standard_regulation_id: '42_CFR_PART_2'})
 ON CREATE SET
     r.name = '42 CFR Part 2',
     r.version = '2026 Edition',
@@ -29,7 +29,6 @@ ON CREATE SET
     sec.subpart_id = row.subpart_id; 
 """
 
-# UPDATED: Added framework_id and switched to MERGE. 
 # Handing the Actors/Entities from the 42 CFR Graph.
 entities = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -39,8 +38,6 @@ ON CREATE SET
     e.name = row.name,
     e.description = row.description;
 """
-
-# UPDATED: Added framework_id and switched to MERGE. 
 # Handling the Data/Records from the 42 CFR Graph.
 assets = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -213,15 +210,15 @@ RETURN {
 
 results = client.query(query)
 
-if results and len(results) > 0:
-    graph_data = results[0]['graph_data']
+# if results and len(results) > 0:
+#     graph_data = results[0]['graph_data']
     
-    import json
-    with open('42cfr.json', 'w', encoding='utf-8') as f:
-        f.write(json.dumps(graph_data, default=str, indent=2))
-    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to 42cfr.json")
-else:
-    logger.error("No data returned from the query.")
+#     import json
+#     with open('42cfr.json', 'w', encoding='utf-8') as f:
+#         f.write(json.dumps(graph_data, default=str, indent=2))
+#     logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to 42cfr.json")
+# else:
+#     logger.error("No data returned from the query.")
 
 client.close()
 

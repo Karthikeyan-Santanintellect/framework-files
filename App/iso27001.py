@@ -46,7 +46,7 @@ ON CREATE SET
 #     cl.title = row.title,
 #     cl.type = row.category,
 #     cl.parent_clause = row.parent_clause;
-# """
+# # """
 # UPDATED: Added framework_id and switched to MERGE.
 clauses = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row

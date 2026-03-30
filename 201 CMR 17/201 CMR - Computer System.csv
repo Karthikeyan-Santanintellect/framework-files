@@ -1,0 +1,2 @@
+node_id,node_label,scope,access_control_measures,monitoring_requirements
+SYS-001,Computer System,"Includes any wireless system, to the extent technically feasible.","Restrict access to those who need it for job duties; assign unique identifications plus passwords (not vendor supplied defaults) to each person with computer access.","Reasonable monitoring of systems, for unauthorized use of or access to personal information."

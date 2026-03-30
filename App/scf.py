@@ -312,6 +312,8 @@ time.sleep(2)
 client.query(control_iso_27002.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls%20ISO27002.csv"))
 time.sleep(2)
 
+client.query(control_iso_42001.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Controls%20ISO42001.csv"))
+time.sleep(2)
 
 client.query(control_nist_pmf_1_0.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/SCF/SCF%20Control%20PMF%201.0.csv"))
 time.sleep(2)
@@ -379,14 +381,14 @@ RETURN {
 
 results = client.query(query)
 
-if results and len(results) > 0:
-    graph_data = results[0]['graph_data']
+# if results and len(results) > 0:
+#     graph_data = results[0]['graph_data']
     
-    import json
-    with open('scf.json', 'w', encoding='utf-8') as f:
-        f.write(json.dumps(graph_data, default=str, indent=2))
-    logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to scf.json")
-else:
-    logger.error("No data returned from the query.")
+#     import json
+#     with open('scf.json', 'w', encoding='utf-8') as f:
+#         f.write(json.dumps(graph_data, default=str, indent=2))
+#     logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to scf.json")
+# else:
+#     logger.error("No data returned from the query.")
 
 client.close()
