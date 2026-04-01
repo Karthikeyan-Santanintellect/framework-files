@@ -1,0 +1,10 @@
+objective_id,title,description
+OBJ-A.1.2,Conditions for collection and processing,"To demonstrate that processing is lawful, with legal basis as per applicable jurisdictions, with clearly defined and legitimate purposes."
+OBJ-A.1.3,Obligations to PII principals,"To ensure that PII principals are provided with appropriate information about the processing of their PII, and to meet any other applicable obligations to PII principals related to the processing of their PII."
+OBJ-A.1.4,Privacy by design and privacy by default,"To ensure that processes and systems are designed such that the collection and processing of PII (including use, disclosure, retention, transmission and disposal) are limited to what is necessary for the identified purpose."
+OBJ-A.1.5,"PII sharing, transfer and disclosure","To determine whether, and document when, PII is shared, transferred to other jurisdictions or third parties or disclosed in accordance with applicable obligations."
+OBJ-A.2.2,Conditions for collection and processing,"To demonstrate that processing is lawful, with legal basis as per applicable jurisdictions, and with clearly defined and legitimate purposes."
+OBJ-A.2.3,Obligations to PII principals,"To ensure that PII principals are provided with the appropriate information about the processing of their PII, and to meet any other applicable obligations to PII principals related to the processing of their PII."
+OBJ-A.2.4,Privacy by design and privacy by default,"To ensure that processes and systems are designed such that the collection and processing of PII (including use, disclosure, retention, transmission and disposal) are limited to what is necessary for the identified purpose."
+OBJ-A.2.5,"PII sharing, transfer and disclosure","To determine whether, and document when, PII is shared, transferred to other jurisdictions or third parties, or disclosed according to applicable obligations."
+OBJ-A.3.3,Security considerations for PII controllers and processors,To ensure the security of PII processing.

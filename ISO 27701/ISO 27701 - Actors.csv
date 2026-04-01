@@ -1,0 +1,10 @@
+node_id,node_label,name,description
+ACT-01,Organization,Organization,The primary business or entity implementing the privacy management framework.
+ACT-02,TopManagement,Top Management,The highest level of executive leadership accountable for the success and resourcing of the management system.
+ACT-03,InterestedParty,Interested Party,Any internal or external individual or group affected by the organization's privacy practices and decisions.
+ACT-04,PiiController,PII Controller,An entity that determines the core purpose and the means (the 'why' and 'how') of processing personal data.
+ACT-05,JointPiiController,Joint PII Controller,An entity that shares the determination of data processing purposes and means with one or more other controllers.
+ACT-06,PiiProcessor,PII Processor,A service provider or entity that processes personal data strictly on behalf of a controller.
+ACT-07,Subcontractor,Subcontractor,A third-party vendor engaged by a processor to assist in data processing activities.
+ACT-08,Customer,Customer,The business or entity receiving products or services, which may define contractual obligations for data processing.
+ACT-09,PiiPrincipal,PII Principal,The individual human being to whom the personal data relates.

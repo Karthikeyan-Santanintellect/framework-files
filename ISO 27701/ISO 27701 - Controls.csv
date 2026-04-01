@@ -1,0 +1,79 @@
+control_id,objective_id,title,control_text
+A.1.2.2,OBJ-A.1.2,Identify and document purpose,The organization shall identify and document the specific purposes for which the PII will be processed.
+A.1.2.3,OBJ-A.1.2,Identify lawful basis,The organization shall determine, document and be able to demonstrate compliance with the relevant lawful basis for the processing of PII for the identified purposes.
+A.1.2.4,OBJ-A.1.2,Determine when and how consent is to be obtained,The organization shall determine and document a process by which it can demonstrate if, when and how consent for the processing of PII was obtained from PII principals.
+A.1.2.5,OBJ-A.1.2,Obtain and record consent,The organization shall obtain and record consent from PII principals according to the documented processes.
+A.1.2.6,OBJ-A.1.2,Privacy impact assessment,"The organization shall assess the need for, and implement where appropriate, a privacy impact assessment whenever new processing of PII or changes to existing processing of PII is planned."
+A.1.2.7,OBJ-A.1.2,Contracts with PII processors,"The organization shall have a written contract with any PII processor that it uses, and shall ensure that their contracts with PII processors address the implementation of the appropriate controls in Annex A."
+A.1.2.8,OBJ-A.1.2,Joint PII controller,The organization shall determine respective roles and responsibilities for the processing of PII (including PII protection and security requirements) with any joint PII controller.
+A.1.2.9,OBJ-A.1.2,Records related to processing PII,The organization shall determine and securely maintain the necessary records in support of its obligations for the processing of PII.
+A.1.3.2,OBJ-A.1.3,Determining and fulfilling obligations to PII principals,"The organization shall determine and document its legal, regulatory and business obligations to PII principals related to the processing of their PII and provide the means to meet these obligations."
+A.1.3.3,OBJ-A.1.3,Determining information for PII principals,The organization shall determine and document the information to be provided to PII principals regarding the processing of their PII and the timing of such a provision.
+A.1.3.4,OBJ-A.1.3,Providing information to PII principals,The organization shall provide PII principals with clear and easily accessible information identifying the PII controller and describing the processing of their PII.
+A.1.3.5,OBJ-A.1.3,Providing mechanism to modify or withdraw consent,The organization shall provide a mechanism for PII principals to modify or withdraw their consent.
+A.1.3.6,OBJ-A.1.3,Providing mechanism to object to PII processing,The organization shall provide a mechanism for PII principals to object to the processing of their PII.
+A.1.3.7,OBJ-A.1.3,"Access, correction or erasure","The organization shall implement policies, procedures or mechanisms to meet its obligations to PII principals to access, correct or erase their PII."
+A.1.3.8,OBJ-A.1.3,PII controllers' obligations to inform third parties,"The organization shall inform third parties with whom PII has been shared of any modification, withdrawal or objections pertaining to the shared PII, and implement appropriate policies, procedures or mechanisms to do so."
+A.1.3.9,OBJ-A.1.3,Providing copy of PII processed,"The organization shall be able to provide a copy of the PII that is processed, when requested by the PII principal."
+A.1.3.10,OBJ-A.1.3,Handling requests,The organization shall define and document policies and procedures for handling and responding to legitimate requests from PII principals.
+A.1.3.11,OBJ-A.1.3,Automated decision making,"The organization shall identify obligations, including legal obligations, to the PII principals resulting from decisions made by the organization which are related to the PII principal based solely on automated processing of PII."
+A.1.4.2,OBJ-A.1.4,Limit collection,"The organization shall limit the collection of PII to the minimum that is relevant, proportional and necessary for the identified purposes."
+A.1.4.3,OBJ-A.1.4,Limit processing,"The organization shall limit the processing of PII to that which is adequate, relevant and necessary for the identified purposes."
+A.1.4.4,OBJ-A.1.4,Accuracy and quality,"The organization shall ensure and document that PII is as accurate, complete and up to date as necessary for the purposes for which it is processed, throughout the life cycle of the PII."
+A.1.4.5,OBJ-A.1.4,PII minimization objectives,"The organization shall define and document data minimization objectives and what mechanisms (such as de-identification) are used to meet those objectives."
+A.1.4.6,OBJ-A.1.4,PII de-identification and deletion at the end of processing,"The organization shall either delete PII or render it in a form which does not permit identification or re-identification of PII principals, as soon as the original PII is no longer necessary."
+A.1.4.7,OBJ-A.1.4,Temporary files,The organization shall ensure that temporary files created as a result of the processing of PII are disposed of following documented procedures within a specified period.
+A.1.4.8,OBJ-A.1.4,Retention,The organization shall not retain PII for longer than is necessary for the purposes for which the PII is processed.
+A.1.4.9,OBJ-A.1.4,Disposal,"The organization shall have documented policies, procedures or mechanisms for the disposal of PII."
+A.1.4.10,OBJ-A.1.4,PII transmission controls,"The organization shall subject PII transmitted over a data-transmission network to appropriate controls designed to ensure that the data reaches its intended destination."
+A.1.5.2,OBJ-A.1.5,Identify basis for PII transfer between jurisdictions,The organization shall identify and document the relevant basis for transfers of PII between jurisdictions.
+A.1.5.3,OBJ-A.1.5,Countries and international organizations to which PII can be transferred,The organization shall specify and document the countries and international organizations to which PII can possibly be transferred.
+A.1.5.4,OBJ-A.1.5,Records of transfer of PII,The organization shall record transfers of PII to or from third parties and ensure cooperation with those parties to support future requests.
+A.1.5.5,OBJ-A.1.5,Records of PII disclosures to third parties,"The organization shall record disclosures of PII to third parties, including which PII has been disclosed, to whom and at what time."
+A.2.2.2,OBJ-A.2.2,Customer agreement,The organization shall ensure that the contract to process PII addresses the organization's role in providing assistance with the customer's obligations.
+A.2.2.3,OBJ-A.2.2,Organization's purposes,The organization shall ensure that PII processed on behalf of a customer are only processed for the purposes expressed in the documented instructions of the customer.
+A.2.2.4,OBJ-A.2.2,Marketing and advertising use,The organization shall not use PII processed under a contract for the purposes of marketing and advertising without establishing that prior consent was obtained.
+A.2.2.5,OBJ-A.2.2,Infringing instruction,"The organization shall inform the customer if, in its opinion, a processing instruction infringes applicable legal requirements."
+A.2.2.6,OBJ-A.2.2,Customer obligations,The organization shall provide the customer with the appropriate information such that the customer can demonstrate compliance with their obligations.
+A.2.2.7,OBJ-A.2.2,Records related to processing PII,"The organization shall determine and maintain the necessary records in support of demonstrating compliance with its obligations for the processing of PII carried out on behalf of a customer."
+A.2.3.2,OBJ-A.2.3,Comply with obligations to PII principals,The organization shall provide the customer with the means to comply with its obligations related to PII principals.
+A.2.4.2,OBJ-A.2.4,Temporary files,The organization shall ensure that temporary files created as a result of the processing of PII are disposed of following documented procedures within a specified period.
+A.2.4.3,OBJ-A.2.4,"Return, transfer or disposal of PII","The organization shall be able to return, transfer or dispose of PII in a secure manner. It shall also make its policy available to the customer."
+A.2.4.4,OBJ-A.2.4,PII transmission controls,The organization shall subject PII transmitted over a data-transmission network to appropriate controls.
+A.2.5.2,OBJ-A.2.5,Basis for PII transfer between jurisdictions,The organization shall inform the customer in a timely manner of the basis for PII transfers between jurisdictions and of any intended changes.
+A.2.5.3,OBJ-A.2.5,Countries and international organizations to which PII can be transferred,The organization shall specify and document the countries and international organizations to which PII can possibly be transferred.
+A.2.5.4,OBJ-A.2.5,Records of PII disclosures to third parties,"The organization shall record disclosures of PII to third parties, including which PII has been disclosed, to whom and when."
+A.2.5.5,OBJ-A.2.5,Notification of PII disclosure requests,The organization shall notify the customer of any legally binding requests for disclosure of PII.
+A.2.5.6,OBJ-A.2.5,Legally binding PII disclosures,"The organization shall reject any requests for PII disclosures that are not legally binding, consult the corresponding customer, and accept contractually agreed requests."
+A.2.5.7,OBJ-A.2.5,Disclosure of subcontractors used to process PII,"Before use, the organization shall disclose whether any subcontractors are used to process PII to the customer."
+A.2.5.8,OBJ-A.2.5,Engagement of a subcontractor to process PII,The organization shall only engage a subcontractor to process PII according to the customer contract.
+A.2.5.9,OBJ-A.2.5,Change of subcontractor to process PII,"The organization shall inform the customer of any intended changes concerning the addition or replacement of subcontractors to process PII, giving the customer opportunity to object."
+A.3.3,OBJ-A.3.3,Policies for information security,"Information security policies related to PII processing shall be defined, approved by management, published, communicated, and reviewed."
+A.3.4,OBJ-A.3.3,Information security roles and responsibilities,Information security roles and responsibilities related to PII processing shall be defined and allocated according to the organizational needs.
+A.3.5,OBJ-A.3.3,Classification of information,"Information shall be classified according to the information security needs of the organization, taking into consideration PII."
+A.3.6,OBJ-A.3.3,Labelling of information,"An appropriate set of procedures for information labelling that considers PII shall be developed and implemented."
+A.3.7,OBJ-A.3.3,Information transfer,"Information transfer rules, procedures, or agreements related to processing PII shall be in place."
+A.3.8,OBJ-A.3.3,Identity management,The full life cycle of identities related to PII processing shall be managed.
+A.3.9,OBJ-A.3.3,Access rights,"Access rights to PII and other associated assets shall be provisioned, reviewed, modified and removed in accordance with the organization's policy."
+A.3.10,OBJ-A.3.3,Addressing information security within supplier agreements,Relevant information security requirements related to PII processing shall be established and agreed with each supplier.
+A.3.11,OBJ-A.3.3,Information security incident management planning and preparation,"The organization shall plan and prepare for managing information security incidents related to PII processing."
+A.3.12,OBJ-A.3.3,Response to information security incidents,Responses to information security incidents related to PII processing shall be according to the documented procedures.
+A.3.13,OBJ-A.3.3,"Legal, statutory, regulatory and contractual requirements","Legal, statutory, regulatory and contractual requirements relevant to information security related to PII processing shall be documented."
+A.3.14,OBJ-A.3.3,Protection of records,"Records related to PII processing shall be protected from loss, destruction, falsification, unauthorized access and unauthorized release."
+A.3.15,OBJ-A.3.3,Independent review of information security,"The organization's approach to managing information security related to PII processing shall be reviewed independently at planned intervals."
+A.3.16,OBJ-A.3.3,"Compliance with policies, rules and standards for information security","Compliance with the organization's information security policy, rules and standards related to PII processing shall be regularly reviewed."
+A.3.17,OBJ-A.3.3,"Information security awareness, education and training",Personnel of the organization and relevant interested parties shall receive appropriate information security awareness education and training.
+A.3.18,OBJ-A.3.3,Confidentiality or non-disclosure agreements,"Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of PII shall be identified, documented, and signed."
+A.3.19,OBJ-A.3.3,Clear desk and clear screen,"Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities shall be defined and enforced."
+A.3.20,OBJ-A.3.3,Storage media,Storage media with PII shall be managed through its life cycle of acquisition in accordance with the organization's handling requirements.
+A.3.21,OBJ-A.3.3,Secure disposal or re-use of equipment,Items of equipment containing storage media with PII shall be verified to ensure that any sensitive data has been removed or securely overwritten.
+A.3.22,OBJ-A.3.3,User endpoint devices,"PII stored on, processed by or accessible via user endpoint devices shall be protected."
+A.3.23,OBJ-A.3.3,Secure authentication,Secure authentication technologies and procedures related to PII processing shall be implemented based on information access restrictions.
+A.3.24,OBJ-A.3.3,Information backup,"Backup copies of PII, and software and systems related to PII processing shall be maintained and regularly tested."
+A.3.25,OBJ-A.3.3,Logging,"Logs that record activities, exceptions, faults and other relevant events related to PII processing shall be produced, stored, protected and analysed."
+A.3.26,OBJ-A.3.3,Use of cryptography,"Rules for the effective use of cryptography related to PII processing, including cryptographic key management, shall be defined and implemented."
+A.3.27,OBJ-A.3.3,Secure development life cycle,Rules for the secure development of software and systems related to PII processing shall be established and applied.
+A.3.28,OBJ-A.3.3,Application security requirements,"Information security requirements related to PII processing shall be identified, specified and approved when developing or acquiring applications."
+A.3.29,OBJ-A.3.3,Secure system architecture and engineering principles,"Principles for engineering secure systems related to processing PII shall be established, documented, maintained and applied."
+A.3.30,OBJ-A.3.3,Outsourced development,"The organization shall direct, monitor and review the activities related to outsourced PII processing system development."
+A.3.31,OBJ-A.3.3,Test information,"Test information related to PII processing shall be appropriately selected, protected and managed."

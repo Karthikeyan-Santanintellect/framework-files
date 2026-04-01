@@ -1,0 +1,8 @@
+node_id,node_label,name,description
+LGC-01,PrivacyInformationManagementSystem,Privacy Information Management System (PIMS),The overarching structural and operational system used to manage privacy and security compliance.
+LGC-02,PrivacyRiskAssessment,Privacy Risk Assessment,The formal analytical process used to identify, analyze, and evaluate privacy-related risks.
+LGC-03,PrivacyRiskTreatmentPlan,Privacy Risk Treatment Plan,The strategic roadmap and action plan for mitigating identified privacy risks using specific controls.
+LGC-04,StatementOfApplicability,Statement of Applicability,The definitive record indicating which specific security and privacy controls the organization has implemented or excluded.
+LGC-05,PrivacyPolicy,Privacy Policy,The governing document outlining the organization's commitment to protecting privacy and handling data.
+LGC-06,InformationSecurityIncident,Information Security Incident,An event indicating a potential or actual breach, loss, or unauthorized access to systems or data.
+LGC-07,PrivacyImpactAssessment,Privacy Impact Assessment,An evaluation of how new systems, vendors, or processing activities will affect individual privacy rights before they are implemented.
