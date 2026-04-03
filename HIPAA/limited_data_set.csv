@@ -1,4 +1,0 @@
-node_id,name,description,permitted_uses,excluded_identifiers,requires_data_use_agreement,cfr_citation,framework_version,old_node_id,status
-LDS-001-v2,Limited Data Set Definition,PHI with limited identifiers remaining,Research/Public Health,16 Direct Identifiers,True,45 CFR 164.514(e),HIPAA_2026_v2,LDS-001,Active
-LDS-002-v2,Permitted Uses for LDS,Specific uses of limited data sets,Research and Health Care Operations,All Direct Identifiers,True,45 CFR 164.514(e)(3),HIPAA_2026_v2,LDS-002,Active
-LDS-003-v2,LDS Recipients,Organizations receiving limited data sets,Research and Operations,All Direct Identifiers,True,45 CFR 164.514(e),HIPAA_2026_v2,LDS-003,Active

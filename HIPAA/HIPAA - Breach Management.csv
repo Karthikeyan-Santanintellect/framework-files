@@ -1,0 +1,10 @@
+breach_id,node_type,description,trigger,timeline
+BRCH-00,BreachManagementRoot,Root node for breach assessment and notification,N/A,N/A
+B01,SecurityBreach,"Unauthorized acquisition, access, use, or disclosure of PHI",SecurityIncident,Discovery Date
+B02,BreachRiskAssessment,4-factor assessment to determine if PHI was actually compromised,SecurityBreach,Immediate upon discovery
+B03,AffectedIndividual,Person whose PHI was involved in the breach,BreachRiskAssessment,N/A
+B04,IndividualNotification,Written notice to affected patients,BreachDetermination,Without unreasonable delay (Max 60 days)
+B05,HHSNotification,Notice provided to the Secretary of HHS via portal,BreachDetermination,"< 500: Annually; >= 500: Max 60 days"
+B06,MediaNotification,Notice to prominent media outlets,Breach affecting >= 500 in a state/jurisdiction,Without unreasonable delay (Max 60 days)
+B07,NotificationContent,"Required details (description, data types, mitigation steps, contact info)",NotificationProcess,N/A
+B08,MitigationActivities,"Actions to reduce harm (e.g. credit monitoring, security patches)",SecurityBreach,Post-discovery

@@ -1,0 +1,8 @@
+rule_id,rule_name,cfr_reference,description,applicable_entities,rule_type
+FRAME-00,RegulatoryComplianceFramework,HIPAA,The foundational federal privacy and security framework,All,Framework
+R01,PrivacyRule,45 CFR 164.500-534,"Protects PHI and defines rights (incl. 2024 Reproductive Health updates)",CoveredEntity;BusinessAssociate,Privacy
+R02,SecurityRule,45 CFR 164.302-318,Defines administrative physical and technical safeguards for ePHI,CoveredEntity;BusinessAssociate,Security
+R03,BreachNotificationRule,45 CFR 164.400-414,Defines breach assessment and reporting requirements,CoveredEntity;BusinessAssociate,Breach
+R04,EnforcementRule,45 CFR Part 160 Subparts C-E,"Establishes investigations penalties and compliance procedures",CoveredEntity;BusinessAssociate,Enforcement
+STD-00,RegulatoryStandard,"A specific standard within a HIPAA Rule (e.g. Access Control)",CoveredEntity;BusinessAssociate,Standard
+SPEC-00,ImplementationSpecification,Detailed required or addressable instruction for a Standard,CoveredEntity;BusinessAssociate,Specification

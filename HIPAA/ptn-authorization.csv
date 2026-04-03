@@ -1,7 +1,0 @@
-relationship_id,ptn_id,authorization_id,description,created_date,framework_version,status
-REL-PTN-AUTH-001,PTN-001,AUTH-PSY-001,Psychotherapy notes access requires special authorization,2026-04-02,HIPAA_2026_v2,Active
-REL-PTN-AUTH-002,PTN-002,AUTH-PSY-002,Psychotherapy notes disclosure requires explicit patient authorization,2026-04-02,HIPAA_2026_v2,Active
-REL-PTN-AUTH-003,PTN-003,AUTH-PSY-003,Psychotherapy notes research use requires specific authorization,2026-04-02,HIPAA_2026_v2,Active
-REL-PTN-AUTH-004,PTN-004,AUTH-PSY-004,Psychotherapy notes to third party requires written authorization,2026-04-02,HIPAA_2026_v2,Active
-REL-PTN-AUTH-005,PTN-005,AUTH-PSY-005,Psychotherapy notes for insurance requires authorization,2026-04-02,HIPAA_2026_v2,Active
-REL-PTN-AUTH-006,PTN-006,AUTH-PS

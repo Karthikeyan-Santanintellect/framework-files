@@ -1,6 +1,0 @@
-authorization_id,name,description,remuneration_disclosure_required,exceptions,cfr_citation,framework_version,old_authorization_id,status
-MA-001-v2,General Marketing Authorization,Authorization for marketing communications,If remuneration involved,Direct communication exempt,45 CFR 164.514(e)(2),HIPAA_2026_v2,MA-001,Active
-MA-002-v2,Face-to-Face Marketing,Marketing in direct patient encounter,Not required,No authorization needed,45 CFR 164.514(e)(2)(i)(A),HIPAA_2026_v2,MA-002,Active
-MA-003-v2,Nominal Value Marketing,Marketing of nominal value items,Not required,No authorization needed,45 CFR 164.514(e)(2)(i)(B),HIPAA_2026_v2,MA-003,Active
-MA-004-v2,Healthcare Services Marketing,Marketing of covered entity services,If remuneration involved,No authorization needed,45 CFR 164.514(e)(2)(i)(C),HIPAA_2026_v2,MA-004,Active
-MA-005-v2,Pharmacy Marketing,Marketing for pharmacy services,Always disclose,Requires authorization,45 CFR 164.508(b)(3),HIPAA_2026_v2,MA-005,Active

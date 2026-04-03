@@ -1,0 +1,11 @@
+security_id,node_type,description,related_to,priority
+SR-00,SecurityRiskManagement,Root node for Security Risk and Incident Management,SecurityRule,High
+SR01,RiskAssessment,Identify vulnerabilities and threats to ePHI,ePHI,High
+SR05,SecurityVulnerability,System procedural or physical weakness,RiskAssessment,High
+SR06,SecurityRisk,Potential impact of a threat exploiting a vulnerability,SecurityVulnerability,High
+SR04,SecurityMeasure,Implemented control to mitigate identified risk,SecurityRisk,High
+SR02,SecurityIncident,"Attempted or successful unauthorized access, use, or disclosure",PHI,High
+SR03,IncidentResponse,Formal response and reporting procedures,SecurityIncident,High
+SR07,ContainmentProcedure,Steps to isolate and halt an active security incident,IncidentResponse,High
+SR08,InvestigationProcedure,Forensic and impact analysis of an incident,IncidentResponse,High
+SR09,NotificationProcedure,Internal security alerting protocols (pre-breach),IncidentResponse,High

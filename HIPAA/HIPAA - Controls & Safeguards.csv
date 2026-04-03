@@ -1,0 +1,18 @@
+control_id,control_type,control_name,description,category,implementation_type
+SAFE-00,SecurityMeasure,Root Node for all compliance safeguards,All safeguards,Compliance,N/A
+C01,AdministrativeSafeguard,Security Management Process,Risk analysis and management,Security,Required
+C02,AdministrativeSafeguard,Workforce Training,Security awareness training,Security,Required
+C03,PhysicalSafeguard,Facility Access Control,Restrict physical access,Security,Required
+C04,PhysicalSafeguard,Device Security,Control hardware and media access,Security,Required
+C05,TechnicalSafeguard,Access Control,Unique user identification and authentication,Security,Required
+C06,TechnicalSafeguard,Audit Controls,Logging and monitoring of system activity,Security,Required
+C07,TechnicalSafeguard,Encryption,Protect data in transit and at rest,Security,Addressable (Effectively Mandatory)
+C08,TechnicalSafeguard,MFA,Multi-factor authentication,Security,Addressable (Enforced standard)
+P01,PrivacySafeguard,Minimum Necessary Verification,Role-based limitations on PHI access,Privacy,Required
+P02,PrivacySafeguard,Reproductive Health Attestation (2024),Mandatory signed verification before disclosing reproductive PHI for legal/oversight purposes,Privacy,Required
+P03,PrivacySafeguard,Notice of Privacy Practices (NPP),"Maintaining and distributing updated NPP (incl. 2026 updates)",Privacy,Required
+B01,BreachProtection,Incident Response Plan,"Procedures for detecting, containing, and reporting breaches",Breach,Required
+BA01,BAASafeguards,Third-Party Risk Management,Managing Business Associate Agreements and vendor compliance,Governance,Required
+LGC01,LawfulBasis,"The legal justification for sharing PHI without authorization (e.g. TPO)",Data Sharing logic,Required
+LGC02,DisclosureRequest,"An inbound request for PHI (e.g. Subpoena or Patient Access)",Operational Workflow,Required
+LGC03,TreatmentPaymentOperations,Permitted uses (TPO) requiring no explicit consent,Data Sharing logic,Required

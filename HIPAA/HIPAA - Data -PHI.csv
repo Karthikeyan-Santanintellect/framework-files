@@ -1,0 +1,19 @@
+data_id,data_type,description,format,classification,example_elements
+DATA-00,ProtectedHealthInformation,Root node for identifiable health data,All,HighlySensitive,Name;SSN;Medical Record Number
+EPHI01,ElectronicPHI,PHI stored or transmitted electronically,Electronic,HighlySensitive,EHR;Digital records
+PHICAT01,MedicalRecords,Clinical information,All,PHI_Category,Diagnosis;Treatment
+PHICAT02,BillingInformation,Payment data,All,PHI_Category,Insurance;Claims
+PHICAT03,ReproductiveHealth,Reproductive health care data (2024 Rule),All,PHI_Category,Status;Treatments;Procedures
+PHICAT04,SubstanceUseDisorderRecord,SUD data governed by 42 CFR Part 2 and 2026 HIPAA alignment,All,PHI_Category,Addiction treatment records
+PHIFORM01,Paper,Printed PHI,Physical,PHI_Format,Forms;Reports
+PHIFORM02,Electronic,Digital PHI,Digital,PHI_Format,Databases;Emails
+PHIFORM03,Verbal,Spoken PHI,Oral,PHI_Format,Conversations;Voicemails
+PHILOC01,PHILocation,Where PHI is physically or digitally maintained,All,Location,Servers;File Cabinets;Cloud
+SENS01,SensitiveDataElement,Specific highly sensitive identifiers,All,Identifier,SSN;Biometrics;Account Numbers
+ASSET01,SignedAttestation,Mandatory legal document verifying reproductive health data requests,Physical/Digital,LegalAsset,Signed attestation form
+LIFE-00,PHILifecycle,Root node for stages of PHI handling,N/A,Lifecycle,N/A
+PHILIFE01,CreationStage,Data generation stage,N/A,Lifecycle_Stage,N/A
+PHILIFE02,StorageStage,Data storage stage,N/A,Lifecycle_Stage,N/A
+PHILIFE03,TransmissionStage,Data transfer stage,N/A,Lifecycle_Stage,N/A
+PHILIFE04,DestructionStage,Data disposal stage,N/A,Lifecycle_Stage,N/A
+PRIN01,MinimumNecessary,Principle limiting data usage to what is needed,N/A,Principle,N/A

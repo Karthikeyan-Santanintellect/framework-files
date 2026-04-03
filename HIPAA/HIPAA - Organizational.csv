@@ -1,0 +1,12 @@
+context_id,node_type,description,example,impact
+CTX-00,OperationalContextRoot,Root node for organizational environment and scope,N/A,N/A
+ORG01,HealthcareOrganization,HIPAA-covered org or BA context,"Hospital; Cloud Vendor",High
+ORG07,OrganizationalSize,Size and complexity determining Security Rule flexibility,"Small Practice; Enterprise",Medium
+ORG08,GeographicScope,Physical and digital boundaries of operation,"Multi-state; Regional telehealth",Medium
+ORG09,RegulatoryEnvironment,"Overlapping legal frameworks (incl. state privacy & reproductive laws)","CCPA; State laws; 42 CFR Part 2",High
+ORG02,TechnologyEnvironment,IT systems and infrastructure handling ePHI,"EHR; Cloud; Mobile apps",High
+ORG03,HealthcareProcess,Operational workflows generating or using PHI,"Patient Intake; Billing",High
+ORG04,PatientPopulation,Demographics and types of patients served,"General; Minors; Behavioral Health",Medium
+ORG05,RiskProfile,Overall exposure level based on assessments,"High-risk; Low-risk",High
+ORG06,ComplianceMaturity,Effectiveness of the compliance program (NIST scaling),"Foundational; Optimized",Medium
+ORG10,BusinessAssociateAgreement,Legally binding contract between CE and BA transferring liability,Governance/Legal,High

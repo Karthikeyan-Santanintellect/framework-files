@@ -1,0 +1,12 @@
+actor_id,actor_type,description,applies_to,role_category
+CE01,CoveredEntity,Healthcare provider handling PHI,HIPAA,Primary
+CE02,HealthPlan,Insurance provider,HIPAA,Primary
+CE03,HealthcareClearinghouse,Processes health data,HIPAA,Primary
+BA01,BusinessAssociate,Handles PHI on behalf of CE,HIPAA,ThirdParty
+SC01,Subcontractor,Works under BA,HIPAA,ThirdParty
+WF01,WorkforceMember,Employee or contractor,HIPAA,Internal
+PO01,PrivacyOfficer,Responsible for privacy compliance,HIPAA,Governance
+SO01,SecurityOfficer,Responsible for security compliance,HIPAA,Governance
+CO01,ComplianceOfficer,Responsible for overall compliance,HIPAA,Governance
+RG01,Regulator,HHS OCR enforcement authority,HIPAA,External
+DS01,DataSubject,Individual/patient,HIPAA,External

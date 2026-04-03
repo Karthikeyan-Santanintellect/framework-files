@@ -1,0 +1,15 @@
+enf_id,node_type,description,severity,penalty_range
+ENF-00,EnforcementRoot,Root node for compliance enforcement and penalties,N/A,N/A
+E01,ComplianceViolation,General failure to comply with HIPAA requirements,High,N/A
+E02,PrivacyViolation,"Improper use or disclosure of PHI (incl. reproductive health)",High,Varies by tier
+E03,SecurityViolation,Failure to implement required safeguards,High,Varies by tier
+E04,BreachNotificationViolation,"Failure to properly notify individuals, media, or HHS",High,Varies by tier
+E05,ViolationTier1_Unknowing,Covered entity did not know and reasonably should not have known of the violation,Medium,"$100 to $50,000 base (Adjusted annually)"
+E06,ViolationTier2_ReasonableCause,Violation due to reasonable cause and not willful neglect,High,"$1,000 to $50,000 base (Adjusted annually)"
+E07,ViolationTier3_WillfulNeglectCorrected,Willful neglect but corrected within 30 days of discovery,Critical,"$10,000 to $50,000 base (Adjusted annually)"
+E08,ViolationTier4_WillfulNeglectUncorrected,Willful neglect and NOT corrected within 30 days,Critical,"$50,000 minimum per violation"
+E09,OCRInvestigation,Regulatory investigation initiated by HHS OCR,High,N/A
+E10,EnforcementAction,"Official action taken by OCR (e.g. warning letter)",High,N/A
+E11,CorrectionPlan,Mandatory Corrective Action Plan (CAP) imposed by OCR,High,N/A
+E12,CivilPenalty,Financial penalty imposed by OCR for non-compliance,High,Calculated per violation count
+E13,CriminalPenalty,Criminal charges pursued by the Department of Justice (DOJ),Critical,"Up to $250,000 and 10 years imprisonment"
