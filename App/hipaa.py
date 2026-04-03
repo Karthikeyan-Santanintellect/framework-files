@@ -106,10 +106,9 @@ ON CREATE SET
 
 # Framework to Rules
 framework_to_rules = """
-MATCH (f:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA 2026'})
 MATCH (r:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026'})
-WHERE r.rule_id IN ['R01', 'R02', 'R03', 'R04']
-MERGE (f)-[:FRAMEWORK_CONTAINS_RULE]->(r);
+MERGE (i)-[:INDUSTRY_STANDARD_REGULATION_CONTAINS_RULE]->(r);
 """
 
 # Rules to Standards
@@ -190,29 +189,68 @@ MATCH (sud:PHIData {industry_standard_regulation_id: 'HIPAA 2026', data_id: 'PHI
 MERGE (npp)-[:SAFEGUARD_GOVERNS_LAWFUL_DISCLOSURE_OF_PHI]->(sud);
 """
 
-# Security Incidents Trigger Breach Assessment
+# Security Incidents Trigger Breach Assessment ##
 security_risk_breach = """
-MATCH (inc:SecurityRisk {industry_standard_regulation_id: 'HIPAA 2026', security_id: 'SR02'})
-MATCH (brk:BreachManagement {industry_standard_regulation_id: 'HIPAA 2026', breach_id: 'B02'})
-MERGE (inc)-[:INCIDENT_TRIGGERS_ASSESSMENT]->(brk);
+MATCH (S:SecurityRisk {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (b:BreachManagement {industry_standard_regulation_id: 'HIPAA 2026'})
+MERGE (S)-[:INCIDENT_TRIGGERS_ASSESSMENT]->(b);
 """
 
-# Breach Requires Notifications
-breach_management_notifications = """
-MATCH (brc:BreachManagement {industry_standard_regulation_id: 'HIPAA 2026', breach_id: 'B01'})
-MATCH (req:BreachManagement {industry_standard_regulation_id: 'HIPAA 2026'})
-WHERE req.breach_id IN ['B04', 'B05', 'B06']
-MERGE (brc)-[:BREACH_REQUIRES_NOTIFICATION]->(req);
-"""
 
 # Rules Enforced by Penalties
 rule_enforcement = """
-MATCH (r:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: 'R04'})
+MATCH (r:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026'})
 MATCH (e:Enforcement {industry_standard_regulation_id: 'HIPAA 2026'})
-WHERE e.enf_id IN ['E05', 'E06', 'E07', 'E08']
 MERGE (r)-[:RULE_ENFORCED_BY_TIER]->(e);
 """
 
+# framework to actors/entities ##
+framework_actors = """
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (a:Actor {industry_standard_regulation_id: 'HIPAA 2026'})
+MERGE (i)-[:INDUSTRY_STANDARD_REGULATION_CONTAINS_ACTORS]->(a);
+"""
+# framework to organizational context ##
+framework_organizational = """
+MATCH (i:IndustryStandardAndRegulation {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (o:OrganizationalContext {industry_standard_regulation_id: 'HIPAA 2026'})
+MERGE (i)-[:INDUSTRY_STANDARD_REGULATION_CONTAINS_ORGANIZATIONAL_CONTEXT]->(o);
+"""
+# Actor to PHI Data ##
+actor_phi = """
+MATCH (a:Actor {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (d:PHIData {industry_standard_regulation_id: 'HIPAA 2026'})
+MERGE (a)-[:ACTOR_HANDLES_DATA]->(d);
+"""
+# PHI Data to Safeguard
+phi_safeguard = """
+MATCH (d:PHIData {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (c:Safeguard {industry_standard_regulation_id: 'HIPAA 2026'})
+MERGE (d)-[:DATA_PROTECTED_BY_SAFEGUARD]->(c);
+"""
+# Safeguard to Security Risk
+safeguard_risk = """
+MATCH (c:Safeguard {industry_standard_regulation_id: 'HIPAA 2026'})
+MATCH (s:SecurityRisk {industry_standard_regulation_id: 'HIPAA 2026'})
+MERGE (c)-[:SAFEGUARD_MITIGATES_RISK]->(s);
+"""
+# NIST CSF 2.0 - Mapping to HIPAA 2026 (Example of cross-framework relationships)
+# Cross-mapping NIST CSF 2.0 Subcategories to HIPAA 2026 Safeguards
+nist_to_hipaa_mapping = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.relationship = 'MAPPED_TO_HIPAA_SAFEGUARD'
+MATCH (sc:Subcategory {
+    subcategory_id: row.source_id, 
+    IS_frameworks_standard_id: 'NIST_CSF_2.0'
+})
+MATCH (sg:Safeguard {
+    control_id: row.target_id, 
+    industry_standard_regulation_id: 'HIPAA 2026'
+})
+
+// 3. Create the cross-framework relationship
+MERGE (sc)-[:NIST_CSF_MAPPED_TO_HIPAA_SAFEGUARD]->(sg);
+"""
 
 
 
@@ -239,7 +277,7 @@ time.sleep(2)
 client.query(actors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Actors.csv"))
 time.sleep(2)
 
-client.query(data_PHI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Data%20-PHI.csv"))
+client.query(data_PHI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Data_PHI.csv"))
 time.sleep(2)
 
 client.query(rules_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Rules%20&%20Requirements.csv"))
@@ -297,11 +335,25 @@ time.sleep(2)
 client.query(security_risk_breach)
 time.sleep(2)
 
-client.query(breach_management_notifications)
-time.sleep(2)
-
 client.query(rule_enforcement)
 time.sleep(2)
+
+client.query(framework_actors)
+time.sleep(2)
+
+client.query(framework_organizational)
+time.sleep(2)
+
+client.query(actor_phi)
+time.sleep(2)
+
+
+client.query(phi_safeguard)
+time.sleep(2)
+
+client.query(safeguard_risk)
+time.sleep(2)   
+
 
 
 
