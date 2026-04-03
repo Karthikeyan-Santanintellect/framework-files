@@ -245,13 +245,13 @@ time.sleep(2)
 client.query(rules_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Rules%20&%20Requirements.csv"))
 time.sleep(2)
 
-client.query(controls_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
+client.query(controls_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Controls%20&%20Safeguards.csv"))
 time.sleep(2)
 
 client.query(security_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
 time.sleep(2)
 
-client.query(breach_management.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
+client.query(breach_management.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Breach%20Management.csv"))
 time.sleep(2)
 
 client.query(organizational.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Organizational.csv"))
