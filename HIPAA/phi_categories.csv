@@ -1,9 +1,9 @@
-category_id,name,description,examples,sensitivity_level,cfr_citation
-PHI-CAT-001,Personal Identifiers,Names and direct identifiers,Patient name,High,45 CFR 164.514(b)(2)(i)(A-B)
-PHI-CAT-002,Contact Information,Phone numbers and addresses,Home phone number,High,45 CFR 164.514(b)(2)(i)(C-E)
-PHI-CAT-003,Dates and Ages,Birth dates and age information,Date of birth,High,45 CFR 164.514(b)(2)(i)(C)
-PHI-CAT-004,Medical Identifiers,MRN and health plan numbers,Medical record number,High,45 CFR 164.514(b)(2)(i)(G-I)
-PHI-CAT-005,Financial Information,Account numbers and insurance details,Insurance account number,High,45 CFR 164.514(b)(2)(i)(J)
-PHI-CAT-006,Biometric Information,Fingerprints and voice prints,Fingerprint records,Critical,45 CFR 164.514(b)(2)(i)(O)
-PHI-CAT-007,Photographs,Face photos and images,Patient photograph,High,45 CFR 164.514(b)(2)(i)(P)
-PHI-CAT-008,Clinical Information,Diagnosis and treatment details,Diagnosis codes,Medium,45 CFR 164.512
+category_id,name,description,examples,sensitivity_level,cfr_citation,framework_version,old_category_id,status
+PHI-CAT-001-v2,Personal Identifiers,Names and direct identifiers,Patient name,High,45 CFR 164.514(b)(2)(i)(A-B),HIPAA_2026_v2,PHI-CAT-001,Active
+PHI-CAT-002-v2,Contact Information,Phone numbers and addresses,Home phone number,High,45 CFR 164.514(b)(2)(i)(C-E),HIPAA_2026_v2,PHI-CAT-002,Active
+PHI-CAT-003-v2,Dates and Ages,Birth dates and age information,Date of birth,High,45 CFR 164.514(b)(2)(i)(C),HIPAA_2026_v2,PHI-CAT-003,Active
+PHI-CAT-004-v2,Medical Identifiers,MRN and health plan numbers,Medical record number,High,45 CFR 164.514(b)(2)(i)(G-I),HIPAA_2026_v2,PHI-CAT-004,Active
+PHI-CAT-005-v2,Financial Information,Account numbers and insurance details,Insurance account number,High,45 CFR 164.514(b)(2)(i)(J),HIPAA_2026_v2,PHI-CAT-005,Active
+PHI-CAT-006-v2,Biometric Information,Fingerprints and voice prints,Fingerprint records,Critical,45 CFR 164.514(b)(2)(i)(O),HIPAA_2026_v2,PHI-CAT-006,Active
+PHI-CAT-007-v2,Photographs,Face photos and images,Patient photograph,High,45 CFR 164.514(b)(2)(i)(P),HIPAA_2026_v2,PHI-CAT-007,Active
+PHI-CAT-008-v2,Clinical Information,Diagnosis and treatment details,Diagnosis codes,Medium,45 CFR 164.512,HIPAA_2026_v2,PHI-CAT-008,Active

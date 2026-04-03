@@ -1,9 +1,9 @@
-response_id,name,description,procedures,timeline,cfr_citation
-IR-001,Incident Detection,Detecting security incidents,Monitoring and alerting,Continuous,45 CFR 164.308(a)(6)(i)
-IR-002,Incident Reporting,Reporting incident discovery,Internal notification,Immediately,45 CFR 164.308(a)(6)(ii)
-IR-003,Incident Investigation,Investigating incident scope,Analysis and assessment,24-48 hours,45 CFR 164.308(a)(6)
-IR-004,Incident Containment,Containing incident impact,Isolation and remediation,Immediately,45 CFR 164.308(a)(1)(ii)(B)
-IR-005,Incident Recovery,Recovering from incident,System restoration,As needed,45 CFR 164.308(a)(7)
-IR-006,Incident Documentation,Documenting incident details,Record keeping,Concurrent,45 CFR 164.308(a)(6)(ii)
-IR-007,Incident Communication,Communicating about incident,Notification procedures,As required,45 CFR 164.400
-IR-008,Incident Lessons Learned,Learning from incidents,Process improvement,Post-incident,45 CFR 164.308(a)(1)(ii)(B)
+response_id,name,description,procedures,timeline,cfr_citation,version,status,effective_date,supersedes_id
+IR-001_2026-v1,Incident Detection,Detecting security incidents,Monitoring and alerting,Continuous,45 CFR 164.308(a)(6)(i),2026-v1,Active,2026-04-02,IR-001
+IR-002_2026-v1,Incident Reporting,Reporting incident discovery,Internal notification,Immediately,45 CFR 164.308(a)(6)(ii),2026-v1,Active,2026-04-02,IR-002
+IR-003_2026-v1,Incident Investigation,Investigating incident scope,Analysis and assessment,24-48 hours,45 CFR 164.308(a)(6),2026-v1,Active,2026-04-02,IR-003
+IR-004_2026-v1,Incident Containment,Containing incident impact,Isolation and remediation,Immediately,45 CFR 164.308(a)(1)(ii)(B),2026-v1,Active,2026-04-02,IR-004
+IR-005_2026-v1,Incident Recovery,Recovering from incident,System restoration,As needed,45 CFR 164.308(a)(7),2026-v1,Active,2026-04-02,IR-005
+IR-006_2026-v1,Incident Documentation,Documenting incident details,Record keeping,Concurrent,45 CFR 164.308(a)(6)(ii),2026-v1,Active,2026-04-02,IR-006
+IR-007_2026-v1,Incident Communication,Communicating about incident,Notification procedures,As required,45 CFR 164.400,2026-v1,Active,2026-04-02,IR-007
+IR-008_2026-v1,Incident Lessons Learned,Learning from incidents,Process improvement,Post-incident,45 CFR 164.308(a)(1)(ii)(B),2026-v1,Active,2026-04-02,IR-008

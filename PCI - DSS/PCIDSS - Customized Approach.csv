@@ -1,0 +1,3 @@
+node_id,name,description,targeted_risk_analysis_required
+CUST-APP-001,Customized Password Architecture,Replaces strict 90-day password rotation (Req 8.3.6) with dynamically risk-based authentication combined with zero-trust MFA and continuous behavioral monitoring.,Yes
+CUST-APP-002,Alternative Data Discovery,"Replaces traditional quarterly scanning with continuous, real-time AI-based data flow monitoring and anomaly detection across all microservices.",Yes

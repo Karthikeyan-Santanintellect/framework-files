@@ -1,11 +1,21 @@
-element_id,name,description,data_type,identifier_type,protected,cfr_citation
-SDE-001,Social Security Number,Individual's SSN,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(F)
-SDE-002,Patient Name,Individual's full name,Text,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(A)
-SDE-003,Medical Record Number,Patient's medical record identifier,Alphanumeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(G)
-SDE-004,Date of Birth,Patient's birth date,Date,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(C)
-SDE-005,Telephone Number,Patient's phone number,Numeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(D)
-SDE-006,Email Address,Patient's email address,Text,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(E)
-SDE-007,Street Address,Patient's street address,Text,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(B)
-SDE-008,Health Plan ID,Health insurance plan number,Alphanumeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(H)
-SDE-009,Diagnosis Code,Medical diagnosis code,Alphanumeric,Clinical Identifier,True,45 CFR 164.512
-SDE-010,Medication Name,Prescribed medication,Text,Clinical Identifier,True,45 CFR 164.512
+element_id,name,description,data_type,identifier_type,protected,cfr_citation,framework_version,status
+SDE-001,Social Security Number,Individual's SSN,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(F),HIPAA_2026_v2,Active
+SDE-002,Patient Name,Individual's full name,Text,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(A),HIPAA_2026_v2,Active
+SDE-003,Medical Record Number,Patient's medical record identifier,Alphanumeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(G),HIPAA_2026_v2,Active
+SDE-004,Date of Birth,Patient's birth date,Date,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(C),HIPAA_2026_v2,Active
+SDE-005,Telephone Number,Patient's phone number,Numeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(D),HIPAA_2026_v2,Active
+SDE-006,Email Address,Patient's email address,Text,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(E),HIPAA_2026_v2,Active
+SDE-007,Street Address,Patient's street address,Text,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(B),HIPAA_2026_v2,Active
+SDE-008,Health Plan ID,Health insurance plan number,Alphanumeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(H),HIPAA_2026_v2,Active
+SDE-009,Diagnosis Code,Medical diagnosis code,Alphanumeric,Clinical Identifier,True,45 CFR 164.512,HIPAA_2026_v2,Active
+SDE-010,Medication Name,Prescribed medication,Text,Clinical Identifier,True,45 CFR 164.512,HIPAA_2026_v2,Active
+SDE-011,Fax Number,Patient's fax number,Numeric,Quasi-Identifier,True,45 CFR 164.514(b)(2)(i)(D),HIPAA_2026_v2,Active
+SDE-012,Account Number,Patient's financial or account number,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(I),HIPAA_2026_v2,Active
+SDE-013,Certificate/License Number,Patient's license or certificate,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(J),HIPAA_2026_v2,Active
+SDE-014,Vehicle Identifier,VIN or license plate number,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(K),HIPAA_2026_v2,Active
+SDE-015,Device Identifier,Device serial number,Alphanumeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(L),HIPAA_2026_v2,Active
+SDE-016,Web URL,Patient's website or URL,Text,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(M),HIPAA_2026_v2,Active
+SDE-017,IP Address,Patient's IP address,Numeric,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(N),HIPAA_2026_v2,Active
+SDE-018,Biometric Identifier,Fingerprints or voiceprints,Binary,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(O),HIPAA_2026_v2,Active
+SDE-019,Photographic Image,Full face photographic image,Binary,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(P),HIPAA_2026_v2,Active
+SDE-020,Other Unique Identifier,Any other unique identifying characteristic,Text,Direct Identifier,True,45 CFR 164.514(b)(2)(i)(R),HIPAA_2026_v2,Active
