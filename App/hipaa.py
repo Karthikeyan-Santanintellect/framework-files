@@ -236,71 +236,71 @@ logger.info("Loading graph structure...")
 client.query(industry_standard_and_regulation)
 time.sleep(2)
 
-client.query(actors.replace('$file_path',""))
+client.query(actors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Actors.csv"))
 time.sleep(2)
 
-client.query(data_PHI.replace('$file_path',""))
+client.query(data_PHI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Data%20-PHI.csv"))
 time.sleep(2)
 
-client.query(rules_requirements.replace('$file_path',""))
+client.query(rules_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Rules%20&%20Requirements.csv"))
 time.sleep(2)
 
-client.query(controls_safeguards.replace('$file_path',""))
+client.query(controls_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
 time.sleep(2)
 
-client.query(security_risk.replace('$file_path',""))
+client.query(security_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
 time.sleep(2)
 
-client.query(breach_management.replace('$file_path',""))
+client.query(breach_management.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
 time.sleep(2)
 
-client.query(organizational.replace('$file_path',""))
+client.query(organizational.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Organizational.csv"))
 time.sleep(2)
 
-client.query(enforcement.replace('$file_path',""))
+client.query(enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Enforcement.csv"))
 time.sleep(2)
 
 # Relationships
-client.query(framework_to_rules.replace('$file_path',""))
+client.query(framework_to_rules)
 time.sleep(2)
 
-client.query(rules_to_standards.replace('$file_path',""))
+client.query(rules_to_standards)
 time.sleep(2)
 
-client.query(standards_to_specifications.replace('$file_path',""))
+client.query(standards_to_specifications)
 time.sleep(2)
 
-client.query(ce_engages_ba.replace('$file_path',""))
+client.query(ce_engages_ba)
 time.sleep(2)
 
-client.query(ba_engages_sc.replace('$file_path',""))
+client.query(ba_engages_sc)
 time.sleep(2)
 
-client.query(actors_sign_baa.replace('$file_path',""))
+client.query(actors_sign_baa)
 time.sleep(2)
 
-client.query(actors_maintain_phi.replace('$file_path',""))
+client.query(actors_maintain_phi)
 time.sleep(2)
 
-client.query(regulator_audits_actors.replace('$file_path',""))
+client.query(regulator_audits_actors)
 time.sleep(2)
 
-client.query(safeguards_protect_phi.replace('$file_path',""))
+client.query(safeguards_protect_phi)
 time.sleep(2)
 
-client.query(attestation_governs_rh.replace('$file_path',""))
+client.query(attestation_governs_rh)
 time.sleep(2)
 
-client.query(safeguards_phi.replace('$file_path',""))
+client.query(safeguards_phi)
 time.sleep(2)
 
-client.query(security_risk_breach.replace('$file_path',""))
+client.query(security_risk_breach)
 time.sleep(2)
 
-client.query(breach_management_notifications.replace('$file_path',""))
+client.query(breach_management_notifications)
 time.sleep(2)
 
-client.query(rule_enforcement.replace('$file_path',""))
+client.query(rule_enforcement)
 time.sleep(2)
 
 

@@ -1,0 +1,1183 @@
+{
+  "nodes": [
+    {
+      "mainLabel": "IndustryStandardAndRegulation",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:978",
+      "labels": [
+        "IndustryStandardAndRegulation"
+      ],
+      "latest_update_published": "2024-04-26",
+      "full_name": "Health Insurance Portability and Accountability Act",
+      "original_published_date": "1996-08-21",
+      "name": "HIPAA",
+      "description": "The federal framework setting standards for protecting sensitive patient health information. This modernized version includes the HITECH Act, 2013 Omnibus Rule, 2024 Reproductive Health Care Privacy Rule, and 2026 42 CFR Part 2 (SUD) alignments.",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "type": "Regulation",
+      "version": "Modernized 2026 Edition (Includes 2024 Final Rules)",
+      "url": "https://www.hhs.gov/hipaa/index.html"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:979",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "CoveredEntity",
+      "description": "Healthcare provider handling PHI",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "CE01",
+      "role_category": "Primary"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:980",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "HealthPlan",
+      "description": "Insurance provider",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "CE02",
+      "role_category": "Primary"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:981",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "HealthcareClearinghouse",
+      "description": "Processes health data",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "CE03",
+      "role_category": "Primary"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "BusinessAssociate",
+      "description": "Handles PHI on behalf of CE",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "BA01",
+      "role_category": "ThirdParty"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:983",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "Subcontractor",
+      "description": "Works under BA",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "SC01",
+      "role_category": "ThirdParty"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:984",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "WorkforceMember",
+      "description": "Employee or contractor",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "WF01",
+      "role_category": "Internal"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:985",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "PrivacyOfficer",
+      "description": "Responsible for privacy compliance",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "PO01",
+      "role_category": "Governance"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:986",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "SecurityOfficer",
+      "description": "Responsible for security compliance",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "SO01",
+      "role_category": "Governance"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:987",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "ComplianceOfficer",
+      "description": "Responsible for overall compliance",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "CO01",
+      "role_category": "Governance"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:988",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "Regulator",
+      "description": "HHS OCR enforcement authority",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "RG01",
+      "role_category": "External"
+    },
+    {
+      "mainLabel": "Actor",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:989",
+      "labels": [
+        "Actor"
+      ],
+      "framework": "HIPAA 2026",
+      "applies_to": "HIPAA",
+      "actor_type": "DataSubject",
+      "description": "Individual/patient",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "actor_id": "DS01",
+      "role_category": "External"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:990",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Name;SSN;Medical Record Number",
+      "framework": "HIPAA 2026",
+      "data_id": "DATA-00",
+      "data_type": "ProtectedHealthInformation",
+      "format": "All",
+      "description": "Root node for identifiable health data",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "HighlySensitive"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:991",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "EHR;Digital records",
+      "framework": "HIPAA 2026",
+      "data_id": "EPHI01",
+      "data_type": "ElectronicPHI",
+      "format": "Electronic",
+      "description": "PHI stored or transmitted electronically",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "HighlySensitive"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:992",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Diagnosis;Treatment",
+      "framework": "HIPAA 2026",
+      "data_id": "PHICAT01",
+      "data_type": "MedicalRecords",
+      "format": "All",
+      "description": "Clinical information",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Category"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:993",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Insurance;Claims",
+      "framework": "HIPAA 2026",
+      "data_id": "PHICAT02",
+      "data_type": "BillingInformation",
+      "format": "All",
+      "description": "Payment data",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Category"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:994",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Status;Treatments;Procedures",
+      "framework": "HIPAA 2026",
+      "data_id": "PHICAT03",
+      "data_type": "ReproductiveHealth",
+      "format": "All",
+      "description": "Reproductive health care data (2024 Rule)",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Category"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:995",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Addiction treatment records",
+      "framework": "HIPAA 2026",
+      "data_id": "PHICAT04",
+      "data_type": "SubstanceUseDisorderRecord",
+      "format": "All",
+      "description": "SUD data governed by 42 CFR Part 2 and 2026 HIPAA alignment",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Category"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:996",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Forms;Reports",
+      "framework": "HIPAA 2026",
+      "data_id": "PHIFORM01",
+      "data_type": "Paper",
+      "format": "Physical",
+      "description": "Printed PHI",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Format"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:997",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Databases;Emails",
+      "framework": "HIPAA 2026",
+      "data_id": "PHIFORM02",
+      "data_type": "Electronic",
+      "format": "Digital",
+      "description": "Digital PHI",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Format"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:998",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Conversations;Voicemails",
+      "framework": "HIPAA 2026",
+      "data_id": "PHIFORM03",
+      "data_type": "Verbal",
+      "format": "Oral",
+      "description": "Spoken PHI",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "PHI_Format"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:999",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Servers;File Cabinets;Cloud",
+      "framework": "HIPAA 2026",
+      "data_id": "PHILOC01",
+      "data_type": "PHILocation",
+      "format": "All",
+      "description": "Where PHI is physically or digitally maintained",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Location"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1000",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "SSN;Biometrics;Account Numbers",
+      "framework": "HIPAA 2026",
+      "data_id": "SENS01",
+      "data_type": "SensitiveDataElement",
+      "format": "All",
+      "description": "Specific highly sensitive identifiers",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Identifier"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1001",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "Signed attestation form",
+      "framework": "HIPAA 2026",
+      "data_id": "ASSET01",
+      "data_type": "SignedAttestation",
+      "format": "Physical/Digital",
+      "description": "Mandatory legal document verifying reproductive health data requests",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "LegalAsset"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1002",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "N/A",
+      "framework": "HIPAA 2026",
+      "data_id": "LIFE-00",
+      "data_type": "PHILifecycle",
+      "format": "N/A",
+      "description": "Root node for stages of PHI handling",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Lifecycle"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1003",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "N/A",
+      "framework": "HIPAA 2026",
+      "data_id": "PHILIFE01",
+      "data_type": "CreationStage",
+      "format": "N/A",
+      "description": "Data generation stage",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Lifecycle_Stage"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1004",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "N/A",
+      "framework": "HIPAA 2026",
+      "data_id": "PHILIFE02",
+      "data_type": "StorageStage",
+      "format": "N/A",
+      "description": "Data storage stage",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Lifecycle_Stage"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1005",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "N/A",
+      "framework": "HIPAA 2026",
+      "data_id": "PHILIFE03",
+      "data_type": "TransmissionStage",
+      "format": "N/A",
+      "description": "Data transfer stage",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Lifecycle_Stage"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1006",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "N/A",
+      "framework": "HIPAA 2026",
+      "data_id": "PHILIFE04",
+      "data_type": "DestructionStage",
+      "format": "N/A",
+      "description": "Data disposal stage",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Lifecycle_Stage"
+    },
+    {
+      "mainLabel": "PHIData",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1007",
+      "labels": [
+        "PHIData"
+      ],
+      "example_elements": "N/A",
+      "framework": "HIPAA 2026",
+      "data_id": "PRIN01",
+      "data_type": "MinimumNecessary",
+      "format": "N/A",
+      "description": "Principle limiting data usage to what is needed",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "classification": "Principle"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1008",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "FRAME-00",
+      "framework": "HIPAA 2026",
+      "rule_type": "Framework",
+      "applicable_entities": "All",
+      "rule_name": "RegulatoryComplianceFramework",
+      "description": "The foundational federal privacy and security framework",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "HIPAA"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1009",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "R01",
+      "framework": "HIPAA 2026",
+      "rule_type": "Privacy",
+      "applicable_entities": "CoveredEntity;BusinessAssociate",
+      "rule_name": "PrivacyRule",
+      "description": "Protects PHI and defines rights (incl. 2024 Reproductive Health updates)",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "45 CFR 164.500-534"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1010",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "R02",
+      "framework": "HIPAA 2026",
+      "rule_type": "Security",
+      "applicable_entities": "CoveredEntity;BusinessAssociate",
+      "rule_name": "SecurityRule",
+      "description": "Defines administrative physical and technical safeguards for ePHI",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "45 CFR 164.302-318"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1011",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "R03",
+      "framework": "HIPAA 2026",
+      "rule_type": "Breach",
+      "applicable_entities": "CoveredEntity;BusinessAssociate",
+      "rule_name": "BreachNotificationRule",
+      "description": "Defines breach assessment and reporting requirements",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "45 CFR 164.400-414"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1012",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "R04",
+      "framework": "HIPAA 2026",
+      "rule_type": "Enforcement",
+      "applicable_entities": "CoveredEntity;BusinessAssociate",
+      "rule_name": "EnforcementRule",
+      "description": "Establishes investigations penalties and compliance procedures",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "45 CFR Part 160 Subparts C-E"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1013",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "STD-00",
+      "framework": "HIPAA 2026",
+      "applicable_entities": "Standard",
+      "rule_name": "RegulatoryStandard",
+      "description": "CoveredEntity;BusinessAssociate",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "A specific standard within a HIPAA Rule (e.g. Access Control)"
+    },
+    {
+      "mainLabel": "HIPAARule",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1014",
+      "labels": [
+        "HIPAARule"
+      ],
+      "rule_id": "SPEC-00",
+      "framework": "HIPAA 2026",
+      "applicable_entities": "Specification",
+      "rule_name": "ImplementationSpecification",
+      "description": "CoveredEntity;BusinessAssociate",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "cfr_reference": "Detailed required or addressable instruction for a Standard"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1016",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "SecurityRule",
+      "framework": "HIPAA 2026",
+      "node_type": "SecurityRiskManagement",
+      "description": "Root node for Security Risk and Incident Management",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR-00"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1017",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "ePHI",
+      "framework": "HIPAA 2026",
+      "node_type": "RiskAssessment",
+      "description": "Identify vulnerabilities and threats to ePHI",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR01"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1018",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "RiskAssessment",
+      "framework": "HIPAA 2026",
+      "node_type": "SecurityVulnerability",
+      "description": "System procedural or physical weakness",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR05"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1019",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "SecurityVulnerability",
+      "framework": "HIPAA 2026",
+      "node_type": "SecurityRisk",
+      "description": "Potential impact of a threat exploiting a vulnerability",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR06"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1020",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "SecurityRisk",
+      "framework": "HIPAA 2026",
+      "node_type": "SecurityMeasure",
+      "description": "Implemented control to mitigate identified risk",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR04"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1021",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "PHI",
+      "framework": "HIPAA 2026",
+      "node_type": "SecurityIncident",
+      "description": "Attempted or successful unauthorized access, use, or disclosure",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR02"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1022",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "SecurityIncident",
+      "framework": "HIPAA 2026",
+      "node_type": "IncidentResponse",
+      "description": "Formal response and reporting procedures",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR03"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1023",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "IncidentResponse",
+      "framework": "HIPAA 2026",
+      "node_type": "ContainmentProcedure",
+      "description": "Steps to isolate and halt an active security incident",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR07"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1024",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "IncidentResponse",
+      "framework": "HIPAA 2026",
+      "node_type": "InvestigationProcedure",
+      "description": "Forensic and impact analysis of an incident",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR08"
+    },
+    {
+      "mainLabel": "SecurityRisk",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1025",
+      "labels": [
+        "SecurityRisk"
+      ],
+      "related_to": "IncidentResponse",
+      "framework": "HIPAA 2026",
+      "node_type": "NotificationProcedure",
+      "description": "Internal security alerting protocols (pre-breach)",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "priority": "High",
+      "security_id": "SR09"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1027",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "OperationalContextRoot",
+      "impact": "N/A",
+      "description": "Root node for organizational environment and scope",
+      "context_id": "CTX-00",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "N/A"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1028",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "HealthcareOrganization",
+      "impact": "High",
+      "description": "HIPAA-covered org or BA context",
+      "context_id": "ORG01",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "Hospital; Cloud Vendor"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1029",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "OrganizationalSize",
+      "impact": "Medium",
+      "description": "Size and complexity determining Security Rule flexibility",
+      "context_id": "ORG07",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "Small Practice; Enterprise"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1030",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "GeographicScope",
+      "impact": "Medium",
+      "description": "Physical and digital boundaries of operation",
+      "context_id": "ORG08",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "Multi-state; Regional telehealth"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1031",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "RegulatoryEnvironment",
+      "impact": "High",
+      "description": "Overlapping legal frameworks (incl. state privacy & reproductive laws)",
+      "context_id": "ORG09",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "CCPA; State laws; 42 CFR Part 2"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1032",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "TechnologyEnvironment",
+      "impact": "High",
+      "description": "IT systems and infrastructure handling ePHI",
+      "context_id": "ORG02",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "EHR; Cloud; Mobile apps"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1033",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "HealthcareProcess",
+      "impact": "High",
+      "description": "Operational workflows generating or using PHI",
+      "context_id": "ORG03",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "Patient Intake; Billing"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1034",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "PatientPopulation",
+      "impact": "Medium",
+      "description": "Demographics and types of patients served",
+      "context_id": "ORG04",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "General; Minors; Behavioral Health"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1035",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "RiskProfile",
+      "impact": "High",
+      "description": "Overall exposure level based on assessments",
+      "context_id": "ORG05",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "High-risk; Low-risk"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1036",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "ComplianceMaturity",
+      "impact": "Medium",
+      "description": "Effectiveness of the compliance program (NIST scaling)",
+      "context_id": "ORG06",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "Foundational; Optimized"
+    },
+    {
+      "mainLabel": "OrganizationalContext",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1037",
+      "labels": [
+        "OrganizationalContext"
+      ],
+      "framework": "HIPAA 2026",
+      "node_type": "BusinessAssociateAgreement",
+      "impact": "High",
+      "description": "Legally binding contract between CE and BA transferring liability",
+      "context_id": "ORG10",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "example": "Governance/Legal"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1038",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "N/A",
+      "framework": "HIPAA 2026",
+      "node_type": "EnforcementRoot",
+      "description": "Root node for compliance enforcement and penalties",
+      "enf_id": "ENF-00",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "N/A"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1039",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "ComplianceViolation",
+      "description": "General failure to comply with HIPAA requirements",
+      "enf_id": "E01",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "N/A"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1040",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "PrivacyViolation",
+      "description": "Improper use or disclosure of PHI (incl. reproductive health)",
+      "enf_id": "E02",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "Varies by tier"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1041",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "SecurityViolation",
+      "description": "Failure to implement required safeguards",
+      "enf_id": "E03",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "Varies by tier"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1042",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "BreachNotificationViolation",
+      "description": "Failure to properly notify individuals, media, or HHS",
+      "enf_id": "E04",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "Varies by tier"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1043",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "Medium",
+      "framework": "HIPAA 2026",
+      "node_type": "ViolationTier1_Unknowing",
+      "description": "Covered entity did not know and reasonably should not have known of the violation",
+      "enf_id": "E05",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "$100 to $50,000 base (Adjusted annually)"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1044",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "ViolationTier2_ReasonableCause",
+      "description": "Violation due to reasonable cause and not willful neglect",
+      "enf_id": "E06",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "$1,000 to $50,000 base (Adjusted annually)"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1045",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "Critical",
+      "framework": "HIPAA 2026",
+      "node_type": "ViolationTier3_WillfulNeglectCorrected",
+      "description": "Willful neglect but corrected within 30 days of discovery",
+      "enf_id": "E07",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "$10,000 to $50,000 base (Adjusted annually)"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1046",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "Critical",
+      "framework": "HIPAA 2026",
+      "node_type": "ViolationTier4_WillfulNeglectUncorrected",
+      "description": "Willful neglect and NOT corrected within 30 days",
+      "enf_id": "E08",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "$50,000 minimum per violation"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1047",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "OCRInvestigation",
+      "description": "Regulatory investigation initiated by HHS OCR",
+      "enf_id": "E09",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "N/A"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1048",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "EnforcementAction",
+      "description": "Official action taken by OCR (e.g. warning letter)",
+      "enf_id": "E10",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "N/A"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1049",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "CorrectionPlan",
+      "description": "Mandatory Corrective Action Plan (CAP) imposed by OCR",
+      "enf_id": "E11",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "N/A"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1050",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "High",
+      "framework": "HIPAA 2026",
+      "node_type": "CivilPenalty",
+      "description": "Financial penalty imposed by OCR for non-compliance",
+      "enf_id": "E12",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "Calculated per violation count"
+    },
+    {
+      "mainLabel": "Enforcement",
+      "id": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1051",
+      "labels": [
+        "Enforcement"
+      ],
+      "severity": "Critical",
+      "framework": "HIPAA 2026",
+      "node_type": "CriminalPenalty",
+      "description": "Criminal charges pursued by the Department of Justice (DOJ)",
+      "enf_id": "E13",
+      "industry_standard_regulation_id": "HIPAA 2026",
+      "penalty_range": "Up to $250,000 and 10 years imprisonment"
+    }
+  ],
+  "rels": [
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:978",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154158455188095954",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1009",
+      "type": "FRAMEWORK_CONTAINS_RULE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:978",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1156410255001781202",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1010",
+      "type": "FRAMEWORK_CONTAINS_RULE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:978",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1158662054815466450",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1011",
+      "type": "FRAMEWORK_CONTAINS_RULE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:978",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1160913854629151698",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1012",
+      "type": "FRAMEWORK_CONTAINS_RULE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:979",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154161753722979283",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "type": "ACTOR_ENGAGES_BUSINESS_ASSOCIATE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:979",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154163952746234835",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1037",
+      "type": "ACTOR_SIGNS_AGREEMENT"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:979",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154165052257862611",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:990",
+      "type": "ACTOR_MAINTAINS_PHI"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:979",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1156416852071547859",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:991",
+      "type": "ACTOR_MAINTAINS_PHI"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:988",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154166151769490396",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:979",
+      "type": "REGULATOR_AUDITS_ACTOR"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:980",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154161753722979284",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "type": "ACTOR_ENGAGES_BUSINESS_ASSOCIATE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:981",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154161753722979285",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "type": "ACTOR_ENGAGES_BUSINESS_ASSOCIATE"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154162853234607062",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:983",
+      "type": "BUSINESS_ASSOCIATE_ENGAGES_SUBCONTRACTOR"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154163952746234838",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1037",
+      "type": "ACTOR_SIGNS_AGREEMENT"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154165052257862614",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:990",
+      "type": "ACTOR_MAINTAINS_PHI"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1156416852071547862",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:991",
+      "type": "ACTOR_MAINTAINS_PHI"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:988",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1156417951583175644",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:982",
+      "type": "REGULATOR_AUDITS_ACTOR"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1009",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154159554699723761",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1013",
+      "type": "RULE_HAS_STANDARD"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1010",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154159554699723762",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1013",
+      "type": "RULE_HAS_STANDARD"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1011",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154159554699723763",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1013",
+      "type": "RULE_HAS_STANDARD"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1012",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154167251281118196",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1043",
+      "type": "RULE_ENFORCED_BY_TIER"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1012",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1156419051094803444",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1044",
+      "type": "RULE_ENFORCED_BY_TIER"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1012",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1158670850908488692",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1045",
+      "type": "RULE_ENFORCED_BY_TIER"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1012",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1160922650722173940",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1046",
+      "type": "RULE_ENFORCED_BY_TIER"
+    },
+    {
+      "from": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1013",
+      "id": "5:654d0c81-dbac-446d-9e93-76bb070b6bde:1154160654211351541",
+      "to": "4:654d0c81-dbac-446d-9e93-76bb070b6bde:1014",
+      "type": "STANDARD_INCLUDES_SPECIFICATION"
+    }
+  ]
+}
