@@ -1,2 +1,5 @@
 provisionId,reason,maxDelayDays,approver
-DELAY-NAT-SEC,National Security Risk,30,US Attorney General
+DELAY-NAT-SEC,Substantial risk to national security or public safety (initial delay),30,US Attorney General
+DELAY-NAT-SEC-EXT,Disclosure continues to pose a substantial risk to national security or public safety (additional delay),30,US Attorney General
+DELAY-NAT-SEC-EXT2,Extraordinary circumstances - disclosure continues to pose a substantial risk to national security (final additional delay),60,US Attorney General
+DELAY-COMM-ORDER,Beyond the final 60-day delay - further delay granted through Commission exemptive order,0,SEC Commission

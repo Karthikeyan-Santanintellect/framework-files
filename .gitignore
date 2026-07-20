@@ -1,3 +1,6 @@
+#myenv
+myenv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -214,3 +217,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Local throwaway venv + macOS junk
+.venv_push/
+.DS_Store
+
+# Generated graph exports from loaders
+App_new/*.json

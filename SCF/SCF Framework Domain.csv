@@ -1,12 +1,15 @@
 framework_name,framework_version,domain_identifier
+Secure Controls Framework,2025.4,AAT
 Secure Controls Framework,2025.4,AST
 Secure Controls Framework,2025.4,BCD
+Secure Controls Framework,2025.4,CAP
 Secure Controls Framework,2025.4,CFG
 Secure Controls Framework,2025.4,CHG
 Secure Controls Framework,2025.4,CLD
 Secure Controls Framework,2025.4,CPL
 Secure Controls Framework,2025.4,CRY
 Secure Controls Framework,2025.4,DCH
+Secure Controls Framework,2025.4,EMB
 Secure Controls Framework,2025.4,END
 Secure Controls Framework,2025.4,GOV
 Secure Controls Framework,2025.4,HRS
@@ -14,6 +17,7 @@ Secure Controls Framework,2025.4,IAC
 Secure Controls Framework,2025.4,IAO
 Secure Controls Framework,2025.4,IRO
 Secure Controls Framework,2025.4,MNT
+Secure Controls Framework,2025.4,MDM
 Secure Controls Framework,2025.4,MON
 Secure Controls Framework,2025.4,NET
 Secure Controls Framework,2025.4,OPS
