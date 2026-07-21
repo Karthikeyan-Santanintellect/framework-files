@@ -109,6 +109,39 @@ The loaders use Cypher `LOAD CSV`, which executes **server-side on the Neo4j ins
 CSVs are therefore fetched over HTTPS from this repository's raw GitHub URLs, which means CSV
 changes must be committed and pushed before a loader will pick them up.
 
+## Graph explorer (index.html)
+
+An interactive D3 visualisation of the whole database — framework map, per-framework
+drill-down, cross-framework link explorer, node inspector and a Cypher console.
+
+```bash
+python make_viz.py --open     # generates ./index.html and opens it
+```
+
+[make_viz.py](make_viz.py) reads `.env` and injects the Neo4j credentials into
+[viz/index.template.html](viz/index.template.html). The page then talks to Aura directly from
+the browser over Bolt-on-WebSocket, so there is no server to run — just open the file.
+
+> **The generated `index.html` contains the Neo4j password in plaintext.** It is listed in
+> `.gitignore` and must never be committed: this repository is public (the loaders fetch CSVs
+> from its raw URLs without authentication). Commit the template, not the output. If the file
+> is ever pushed, rotate the Aura password immediately.
+
+Everything is vendored into [viz/vendor/](viz/vendor/) (d3 v7, neo4j-driver-lite), so the page
+works offline and cannot break because of a CDN change.
+
+| Area | What it does |
+|---|---|
+| Overview | 26 framework bubbles sized by node count, joined by cross-framework edges weighted by mapping volume. Click one to open it. |
+| Framework view | Loads that framework's nodes and relationships. Double-click any node to pull in its neighbours. |
+| Cross-framework links | Every framework pair that shares edges, ranked by weight; click to see only those two and the edges bridging them. |
+| Node inspector | Full property list for the selected node — long fields (verbatim requirement text, VSL tiers) render in full, not truncated. |
+| Cypher console | Free-text queries plus a saved-query library. Returning nodes/relationships draws them; any other shape opens the results table. |
+| Filters | Live show/hide by any of the 285 node labels and 568 relationship types, with counts. |
+
+Canvas rendering with collision-aware labelling, so a dense framework stays readable; `Fit`,
+`Pause`, and `PNG` export sit top-right, and <kbd>⌘↵</kbd> runs the query box.
+
 ## Querying by framework
 
 ```cypher

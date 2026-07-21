@@ -223,3 +223,6 @@ __marimo__/
 
 # Generated graph exports from loaders
 App_new/*.json
+
+# Generated graph explorer — contains plaintext Neo4j credentials, never commit
+index.html
