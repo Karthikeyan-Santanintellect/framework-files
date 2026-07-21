@@ -1,6 +1,6 @@
 # Compliance Framework Knowledge Graph
 
-This repository holds the node and relationship CSVs for 25 compliance, security and privacy
+This repository holds the node and relationship CSVs for 26 compliance, security and privacy
 frameworks, together with the loader scripts in [App_new/](App_new/) that build them into a
 Neo4j graph.
 
@@ -10,7 +10,7 @@ the Neo4j Aura instance (database `d7883150`).
 
 ## Graph contents
 
-**25 frameworks · 7,153 nodes · 65,247 relationships · 283 node labels · 558 relationship types**
+**26 frameworks · 7,399 nodes · 65,731 relationships · 285 node labels · 568 relationship types**
 
 Every node carries a framework identifier, so any framework can be selected in isolation. The
 property name depends on the framework's classification:
@@ -42,20 +42,21 @@ Each such edge is counted once for each of the two frameworks it connects.
 | 10 | HITRUST | `HITRUST 11.6.0` | 1,197 | 1,862 | 60 |
 | 11 | ISO 27001 | `ISO27001_2022` | 269 | 2,207 | 323 |
 | 12 | ISO 27002 | `ISO27002_2022` | 221 | 11,815 | 503 |
-| 13 | NIS 2 | `NIS2-EU-2022-2555` | 228 | 2,998 | 266 |
-| 14 | NIST AI RMF | `NIST_AI_RMF_1.0` | 96 | 1,448 | 247 |
-| 15 | NIST CSF 2.0 | `NIST_CSF_2.0` | 135 | 134 | 1,213 |
-| 16 | NIST PMF 1.0 | `NIST_PMF_1.0` | 169 | 168 | 361 |
-| 17 | NIST PMF 1.1 | `NIST_PMF_1.1` | 137 | 144 | 0 |
-| 18 | NIST RMF | `NIST_RMF_5.2` | 114 | 137 | 38 |
-| 19 | PCI DSS | `PCI-DSS 4.0` | 233 | 5,167 | 0 |
-| 20 | SCF | `SCF-2025.4` | 1,485 | 1,484 | 3,599 |
-| 21 | SEC Cyber Rule | `SEC-2023` | 72 | 85 | 0 |
-| 22 | SHIELD | `NY SHIELD 1.0` | 85 | 109 | 108 |
-| 23 | TDPSA | `TDPSA 2023` | 160 | 175 | 26 |
-| 24 | TISAX | `TISAX 2.8` | 60 | 39 | 9 |
-| 25 | VCDPA | `VCDPA 2023` | 294 | 1,505 | 54 |
-| | **Total** | | **7,153** | **61,498** | **7,498** |
+| 13 | NERC CIP | `NERC_CIP` | 246 | 484 | 0 |
+| 14 | NIS 2 | `NIS2-EU-2022-2555` | 228 | 2,998 | 266 |
+| 15 | NIST AI RMF | `NIST_AI_RMF_1.0` | 96 | 1,448 | 247 |
+| 16 | NIST CSF 2.0 | `NIST_CSF_2.0` | 135 | 134 | 1,213 |
+| 17 | NIST PMF 1.0 | `NIST_PMF_1.0` | 169 | 168 | 361 |
+| 18 | NIST PMF 1.1 | `NIST_PMF_1.1` | 137 | 144 | 0 |
+| 19 | NIST RMF | `NIST_RMF_5.2` | 114 | 137 | 38 |
+| 20 | PCI DSS | `PCI-DSS 4.0` | 233 | 5,167 | 0 |
+| 21 | SCF | `SCF-2025.4` | 1,485 | 1,484 | 3,599 |
+| 22 | SEC Cyber Rule | `SEC-2023` | 72 | 85 | 0 |
+| 23 | SHIELD | `NY SHIELD 1.0` | 85 | 109 | 108 |
+| 24 | TDPSA | `TDPSA 2023` | 160 | 175 | 26 |
+| 25 | TISAX | `TISAX 2.8` | 60 | 39 | 9 |
+| 26 | VCDPA | `VCDPA 2023` | 294 | 1,505 | 54 |
+| | **Total** | | **7,399** | **61,982** | **7,498** |
 
 The cross-framework column sums to 7,498 because each mapping edge is counted once for each of
 the two frameworks it connects; there are **3,749 distinct** such edges. The relationship total

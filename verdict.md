@@ -597,13 +597,12 @@ NERC CIP Standards or the finalized NIST PMF 1.0. Both have since been obtained.
 
 ## Loaded into Neo4j (Aura instance, database `d7883150`)
 
-**25 of 26 frameworks are loaded**, all reflecting the remediated CSVs on the **`gautham`**
-branch. NERC is the only framework not yet in the instance: it was withheld while unverifiable,
-and as of pass 4 it is verified and its loader is realigned, but **it has not been run** — the
-rebuilt CSVs must be committed and pushed to `gautham` first, because `LOAD CSV` fetches them
-over HTTP from the branch.
+**All 26 frameworks are loaded**, reflecting the remediated CSVs on the **`gautham`** branch.
+NERC was added on 2026-07-21 after the pass-4 rebuild: **246 nodes / 484 relationships**
+(13 Standards, 46 Requirements, 138 RequirementParts, 16 Domains, 15 Artifacts, 9 Regulators,
+8 Roles), **0 orphan nodes** and no residual nodes from the deleted synthetic layer.
 
-**Total in instance:** **7,153 nodes / 80,010 relationships** (was 3,619 / 52,546 after pass 2).
+**Total in instance:** **7,399 nodes / 65,731 relationships** (7,153 / 65,247 before NERC).
 
 ### Loaded in pass 3 (the 7 newly verified frameworks)
 
@@ -616,6 +615,12 @@ over HTTP from the branch.
 | NIST PMF 1.0 | `NIST_PMF_1.0` | 169 | `CT.DM-P5` = "Data are destroyed according to policy." (corrected text) |
 | SHIELD | `NY SHIELD 1.0` | 85 | 14 verbatim safeguards, 9 statutory definitions, 23 DEFINED_IN_SECTION edges |
 | TISAX | `TISAX 2.8` | 60 | 12 assessment objectives + 7 SUPERSET_OF label-hierarchy edges |
+
+### Loaded in pass 4
+
+| Framework | Neo4j id | Nodes | Verified in-DB |
+|-----------|----------|-------|----------------|
+| NERC | `NERC_CIP` | 246 | 13 Standards / 46 Requirements / 138 RequirementParts; 484 intra-framework edges; 0 orphans; no CIP-001/CIP-015 and no nodes from the deleted synthetic layer |
 
 ### Previously loaded (passes 1–2, unchanged)
 
@@ -631,8 +636,7 @@ over HTTP from the branch.
 | GDPR | `GDPR 2016/679` | | TDPSA | `TDPSA 2023` |
 | CPRA | `CPRA 2.0` | | DORA | `DORA 2022/2554` |
 
-**NOT loaded (1):** **NERC** — ✅ verified as of pass 4 and ready to load; the run is pending a
-push of the rebuilt CSVs to `gautham`.
+**NOT loaded:** none — NERC, the last holdout, was loaded on 2026-07-21.
 
 ### Notes
 - All loaders in `App_new/` now point at the **`gautham`** branch (`nerc_cip.py` was the last one
