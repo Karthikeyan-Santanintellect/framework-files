@@ -116,6 +116,7 @@ CALL (row) {
     MATCH (airmf)
     WHERE airmf.IS_frameworks_standard_id = 'NIST_AI_RMF_1.0'
     AND (airmf:Function OR airmf:Category OR airmf:Subcategory)
+    AND coalesce(airmf.subcategory_id, airmf.category_id, airmf.function_id) = row.nist_ai_rmf_id
     MERGE (sc)-[:SCF_CONTROL_HAS_EXTERNAL_CONTROLS]->(airmf)
 } IN TRANSACTIONS OF 500 ROWS;
 """
