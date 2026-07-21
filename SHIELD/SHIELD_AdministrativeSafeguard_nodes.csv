@@ -1,6 +1,7 @@
-safeguard_id,safeguard_name,safeguard_category,description,implementation_status,implementation_date,responsible_person,frequency_of_review,last_review_date,effectiveness_score,compliance_with_shield
-ADMIN-001,Annual Risk Assessment,RiskAssessment,Formal annual risk assessment of data security,Implemented,2020-01-01,Dr. Sarah Chen,Annual,2024-08-15,92.0,True
-ADMIN-002,Data Classification Scheme,PolicyAndProcedures,Classification of data by sensitivity level,Implemented,2020-06-15,Jennifer Adams,Quarterly,2024-09-20,88.0,True
-ADMIN-003,Employee Security Training,StaffTraining,Annual mandatory security awareness training,Implemented,2021-03-01,Michael Rodriguez,Annual,2024-09-01,85.0,True
-ADMIN-004,Vendor Management Program,ServiceProviderManagement,Vendor security assessment and monitoring,InProgress,2023-01-15,Robert Williams,Quarterly,2024-08-10,78.0,False
-ADMIN-005,Incident Response Plan,IncidentResponse,Documented procedures for breach response,Implemented,2020-12-01,Thomas Kelly,Biennial,2024-07-15,90.0,True
+safeguard_id,safeguard_category,official_citation,section_id,statutory_text,regional_standard_regulation_id
+ADMIN-001,Administrative,N.Y. GBL § 899-bb(2)(b)(ii)(A)(1),4(2)(b)(ii)(A)(1),designates one or more employees to coordinate the security program,NY SHIELD 1.0
+ADMIN-002,Administrative,N.Y. GBL § 899-bb(2)(b)(ii)(A)(2),4(2)(b)(ii)(A)(2),identifies reasonably foreseeable internal and external risks,NY SHIELD 1.0
+ADMIN-003,Administrative,N.Y. GBL § 899-bb(2)(b)(ii)(A)(3),4(2)(b)(ii)(A)(3),assesses the sufficiency of safeguards in place to control the identified risks,NY SHIELD 1.0
+ADMIN-004,Administrative,N.Y. GBL § 899-bb(2)(b)(ii)(A)(4),4(2)(b)(ii)(A)(4),trains and manages employees in the security program practices and procedures,NY SHIELD 1.0
+ADMIN-005,Administrative,N.Y. GBL § 899-bb(2)(b)(ii)(A)(5),4(2)(b)(ii)(A)(5),"selects service providers capable of maintaining appropriate safeguards, and requires those safeguards by contract",NY SHIELD 1.0
+ADMIN-006,Administrative,N.Y. GBL § 899-bb(2)(b)(ii)(A)(6),4(2)(b)(ii)(A)(6),adjusts the security program in light of business changes or new circumstances,NY SHIELD 1.0

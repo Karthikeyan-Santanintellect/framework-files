@@ -16,7 +16,7 @@ hitrust_category = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (c:Category {industry_standard_regulation_id: 'HITRUST 11.6.0', category_id: row.id})
 ON CREATE SET
-    c.number = toInteger(row.number),
+    c.number = toInteger(row.category_number),
     c.name = row.name,
     c.description = row.description;
 """
@@ -110,7 +110,7 @@ ON CREATE SET rl.primary_responsibility = row.responsibility;
 hitrust_regulation_nodes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (reg:Regulation {industry_standard_regulation_id: 'HITRUST 11.6.0', name: row.rule_name})
-ON CREATE SET reg.cfr_reference = row.cfr;
+ON CREATE SET reg.cfr_reference = row.cfr_reference;
 """
 
 #Load Ecosystem
@@ -161,13 +161,9 @@ MERGE (s)-[:INDUSTRY_STANDARD_REGULATION_DEFINES_ASSURANCE_LEVEL]->(al);
 """
 # Link Controls to Implementation Requirements
 hitrust_rel_control_has_requirement = """
-UNWIND [
-  {ctrl_id: "HITRUST-05.a", req_id: "IMP-05.a-L1"},
-  {ctrl_id: "HITRUST-05.a", req_id: "IMP-05.a-L2"},
-  {ctrl_id: "HITRUST-05.a", req_id: "IMP-05.a-L3"}
-] AS data
-MATCH (ctrl:Control {control_id: data.ctrl_id})
-MATCH (req:ImplementationRequirement {requirement_id: data.req_id})
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ctrl:Control {industry_standard_regulation_id: 'HITRUST 11.6.0', control_id: 'HITRUST-' + row.control_id})
+MATCH (req:ImplementationRequirement {industry_standard_regulation_id: 'HITRUST 11.6.0', requirement_id: row.requirement_id})
 MERGE (ctrl)-[:CONTROL_HAS_REQUIREMENT]->(req);
 """
 
@@ -290,47 +286,47 @@ time.sleep(2)
 
 
 client.query(hitrust_category.replace('$file_path',
-                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Category.csv"))
+                                      "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST_Category.csv"))
 time.sleep(2)
 
 client.query(hitrust_control.replace('$file_path',
-                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_Control.csv"))
+                                     "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST_Control.csv"))
 time.sleep(2)
 
 client.query(hitrust_control_objective.replace('$file_path',
-                                               "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlObjective.csv"))
+                                               "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST_ControlObjective.csv"))
 time.sleep(2)
 
 client.query(hitrust_control_specification.replace('$file_path',
-                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST_ControlSpecification.csv"))
+                                                   "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST_ControlSpecification.csv"))
 time.sleep(2)
 
-client.query(hitrust_assurance_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_assurance_levels.csv"))
+client.query(hitrust_assurance_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_assurance_levels.csv"))
 time.sleep(2)
 
-client.query(hitrust_requirement_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_implementation_requirements.csv"))
+client.query(hitrust_requirement_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_implementation_requirements.csv"))
 time.sleep(2)
 
-client.query(hitrust_organization_node.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20Organization.csv"))
+client.query(hitrust_organization_node.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST%20-%20Organization.csv"))
 time.sleep(2)
 
 
-client.query(hitrust_procedure_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_assessment_procedures.csv"))
+client.query(hitrust_procedure_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_assessment_procedures.csv"))
 time.sleep(2)
 
-client.query(hitrust_data_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_data_categories.csv"))
+client.query(hitrust_data_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_data_categories.csv"))
 time.sleep(2)
 
-client.query(hitrust_risk_threat_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_risks_threats.csv"))
+client.query(hitrust_risk_threat_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_risks_threats.csv"))
 time.sleep(2)
 
-client.query(hitrust_role_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_roles.csv"))
+client.query(hitrust_role_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_roles.csv"))
 time.sleep(2)
 
-client.query(hitrust_regulation_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_regulations.csv"))
+client.query(hitrust_regulation_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_regulations.csv"))
 time.sleep(2)
 
-client.query(hitrust_ecosystem_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/hitrust_ecosystem.csv"))
+client.query(hitrust_ecosystem_nodes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/hitrust_ecosystem.csv"))
 time.sleep(2)
 
 
@@ -339,45 +335,45 @@ time.sleep(2)
 client.query(hitrust_standard_category_rel)
 time.sleep(2)
 
-client.query(hitrust_category_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_CONTROL.csv"))
+client.query(hitrust_category_control.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HAS_CONTROL.csv"))
 time.sleep(2)
 
-client.query(hitrust_control_ControlObjective.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_OBJECTIVE.csv"))
+client.query(hitrust_control_ControlObjective.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HAS_OBJECTIVE.csv"))
 time.sleep(2)
 
-client.query(hitrust_ControlObjective_specification.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HAS_SPECIFICATION.csv"))
+client.query(hitrust_ControlObjective_specification.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HAS_SPECIFICATION.csv"))
 time.sleep(2)
 
-client.query(hitrust_controls_nist_CSF_subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20CSF%20Subcategory%20Mapping.csv"))
+client.query(hitrust_controls_nist_CSF_subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST%20-%20CSF%20Subcategory%20Mapping.csv"))
 time.sleep(2)
 
-client.query(hitrust_framework_assurance_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_framework_assurance.csv"))
+client.query(hitrust_framework_assurance_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_framework_assurance.csv"))
 time.sleep(2)
 
-client.query(hitrust_rel_control_has_requirement)
-time.sleep(2)
-
-
-client.query(hitrust_rel_requirement_assurance_level.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20Requirment%20Assurance%20Level.csv"))
+client.query(hitrust_rel_control_has_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_control_requirement.csv"))
 time.sleep(2)
 
 
-client.query(hitrust_requirement_procedure_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/HITRUST%20-%20Requirements%20Procedure.csv"))
+client.query(hitrust_rel_requirement_assurance_level.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST%20-%20Requirment%20Assurance%20Level.csv"))
 time.sleep(2)
 
-client.query(hitrust_framework_data_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_framework_data.csv"))
+
+client.query(hitrust_requirement_procedure_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/HITRUST%20-%20Requirements%20Procedure.csv"))
 time.sleep(2)
 
-client.query(hitrust_rel_threat_target.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_threat_target.csv"))
+client.query(hitrust_framework_data_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_framework_data.csv"))
 time.sleep(2)
 
-client.query(hitrust_org_structure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_org_roles.csv"))
+client.query(hitrust_rel_threat_target.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_threat_target.csv"))
 time.sleep(2)
 
-client.query(hitrust_framework_regulation_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_framework_reg.csv"))
+client.query(hitrust_org_structure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_org_roles.csv"))
 time.sleep(2)
 
-client.query(hitrust_org_ecosystem_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HITRUST/rel_org_ecosystem.csv"))
+client.query(hitrust_framework_regulation_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_framework_reg.csv"))
+time.sleep(2)
+
+client.query(hitrust_org_ecosystem_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HITRUST/rel_org_ecosystem.csv"))
 time.sleep(2)
 
 client.query(hitrust_framework_assessment_procedure_rel)

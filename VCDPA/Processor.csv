@@ -1,3 +1,2 @@
 processor_id,name,description,services
-PROC-CLOUD,Cloud Processor,"Processor providing cloud hosting and data storage services under controller instructions.","Cloud hosting and storage"
-PROC-ANALYTICS,Analytics Processor,"Processor performing analytics and reporting on personal data on behalf of controllers.","Analytics and reporting"
+PROC-GENERIC,Processor,"A natural or legal entity that processes personal data on behalf of a controller, adhering to the controller's instructions and assisting the controller in meeting its obligations under § 59.1-579(A).",Processing performed on behalf of a controller under a contract meeting § 59.1-579(B)

@@ -1,4 +1,5 @@
-entity_id,regulation_type,deemed_compliant_status,validation_date,regional_standard_regulation_id
-SH-HIPAA,HIPAA,true,2023-01-01,NY SHIELD 1.0
-SH-GLBA,GLBA,true,2023-01-01,NY SHIELD 1.0
-SH-NYDFS,NY DFS 500,true,2023-01-01,NY SHIELD 1.0
+entity_id,regulation_type,deemed_compliant_status,official_citation,regional_standard_regulation_id
+SH-GLBA,Title V of the federal Gramm-Leach-Bliley Act (15 U.S.C. 6801 to 6809),true,N.Y. GBL § 899-bb(1)(a)(i),NY SHIELD 1.0
+SH-HIPAA,HIPAA (45 C.F.R. parts 160 and 164) and the HITECH Act,true,N.Y. GBL § 899-bb(1)(a)(ii),NY SHIELD 1.0
+SH-NYDFS,Part 500 of Title 23 of the NYCRR,true,N.Y. GBL § 899-bb(1)(a)(iii),NY SHIELD 1.0
+SH-OTHER,Any other data security rules and regulations of any official department/division/commission/agency of the federal or New York state government,true,N.Y. GBL § 899-bb(1)(a)(iv),NY SHIELD 1.0

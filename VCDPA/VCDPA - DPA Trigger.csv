@@ -1,5 +1,7 @@
 trigger_id,condition
-TRIG_001,Targeted Advertising
-TRIG_002,Sale of Personal Data
-TRIG_003,Profiling (High Risk)
-TRIG_004,Sensitive Data Processing
+TRIG_001,Processing of personal data for purposes of targeted advertising (§ 59.1-580(A)(1))
+TRIG_002,The sale of personal data (§ 59.1-580(A)(2))
+TRIG_003,Processing for purposes of profiling that presents a reasonably foreseeable risk of harm to consumers (§ 59.1-580(A)(3))
+TRIG_004,The processing of sensitive data (§ 59.1-580(A)(4))
+TRIG_005,Any processing activities involving personal data that present a heightened risk of harm to consumers (§ 59.1-580(A)(5))
+TRIG_006,"Offering an online service, product, or feature directed to consumers the controller has actual knowledge are children (§ 59.1-580(B))"

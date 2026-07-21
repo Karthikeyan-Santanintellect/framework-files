@@ -1,4 +1,6 @@
 reason_id,description,legal_basis
-DR_001,"Controller could not authenticate consumer identity using commercially reasonable methods","§ 59.1-577(C)"
-DR_002,"Data processed is subject to HIPAA/GLBA exemption","§ 59.1-576"
-DR_003,"Request is manifestly unfounded, excessive, or repetitive","§ 59.1-577(B)(3)"
+DR_001,The controller is unable to authenticate the request using commercially reasonable efforts; the controller may request that the consumer provide additional information reasonably necessary to authenticate the consumer and the request.,§ 59.1-577(B)(4)
+DR_002,"The request is manifestly unfounded, excessive, or repetitive; the controller may charge a reasonable fee to cover administrative costs or decline to act, and bears the burden of demonstrating that nature.",§ 59.1-577(B)(3)
+DR_003,The data or the entity is exempt from the chapter under the entity-level or data-level exemptions.,"§ 59.1-576(B), (C)"
+DR_004,"The controller is not reasonably capable of associating the request with the personal data or it would be unreasonably burdensome to do so, the controller does not use the data to recognize or respond to the specific consumer, and the controller does not sell or voluntarily disclose the data to a third party other than a processor.",§ 59.1-581(C)
+DR_005,The request concerns pseudonymous data where the controller demonstrates that information necessary to identify the consumer is kept separately and subject to effective technical and organizational controls (rights in § 59.1-577(A)(1) through (4)).,§ 59.1-581(D)

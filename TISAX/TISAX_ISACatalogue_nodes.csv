@@ -1,4 +1,4 @@
 catalogue_id,number,name,description
-ISA-001,1,Information Security,Criteria catalogue with the control questions and requirements for information security; requirements are structured into columns must / should / additional requirements for high protection needs / additional requirements for very high protection needs
-ISA-002,2,Prototype Protection,Criteria catalogue with the control questions and requirements for prototype protection; chapters cover physical and environmental security, organizational requirements, handling of vehicles/components/parts, requirements for trial vehicles, and requirements for events and shootings
-ISA-003,3,Data Protection,Criteria catalogue with the control questions and requirements for data protection (processing according to Article 28 of the GDPR)
+ISA-001,1,Information Security,"Criteria catalogue with the control questions and requirements for information security; requirements are structured into columns must / should / additional requirements for high protection needs / additional requirements for very high protection needs"
+ISA-002,2,Prototype Protection,"Criteria catalogue with the control questions and requirements for prototype protection; chapters cover physical and environmental security, organizational requirements, handling of vehicles/components/parts, requirements for trial vehicles, and requirements for events and shootings"
+ISA-003,3,Data Protection,"Criteria catalogue with the control questions and requirements for data protection (processing according to Article 28 of the GDPR)"

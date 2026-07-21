@@ -1,5 +1,7 @@
-source_info_id,relationship_type,target_info_id,combination_date,combination_justification,breach_trigger_if_combined,protection_level_required,common_combination
-PI-001,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,SSN + Name + Address = High risk,True,Maximum,True
-PI-002,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,DL + Name + Address = High risk,True,Maximum,True
-PI-003,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,Financial + Name + SSN = Critical risk,True,Maximum,True
-PI-004,COMBINES_WITH_DATA_ELEMENT,PI-006,2020-01-01,Biometric + Name = Identification,True,Maximum,True
+source_info_id,relationship_type,target_definition_id,official_citation,statutory_basis
+PI-001,COMBINES_WITH_PERSONAL_INFORMATION,DEF-001,N.Y. GBL § 899-aa(1)(b)(i),Personal information in combination with this data element constitutes private information when unencrypted.
+PI-002,COMBINES_WITH_PERSONAL_INFORMATION,DEF-001,N.Y. GBL § 899-aa(1)(b)(i),Personal information in combination with this data element constitutes private information when unencrypted.
+PI-003,COMBINES_WITH_PERSONAL_INFORMATION,DEF-001,N.Y. GBL § 899-aa(1)(b)(i),Personal information in combination with this data element constitutes private information when unencrypted.
+PI-004,COMBINES_WITH_PERSONAL_INFORMATION,DEF-001,N.Y. GBL § 899-aa(1)(b)(i),Personal information in combination with this data element constitutes private information when unencrypted.
+PI-005,COMBINES_WITH_PERSONAL_INFORMATION,DEF-001,N.Y. GBL § 899-aa(1)(b)(i),Personal information in combination with this data element constitutes private information when unencrypted.
+PI-006,CONSTITUTES_PRIVATE_INFORMATION_ALONE,DEF-002,N.Y. GBL § 899-aa(1)(b)(ii),A user name or e-mail address with a password or security question and answer is private information without personal information.

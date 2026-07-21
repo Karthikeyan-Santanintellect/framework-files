@@ -1,108 +1,165 @@
-TISAX Neo4j Graph Data Model - CSV Files Summary
+TISAX Knowledge-Graph CSV Set
 ==================================================
 
-Trusted Information Security Assessment Exchange (TISAX)
-Automotive Industry Security Assessment Model
+Framework : TISAX (Trusted Information Security Assessment Exchange)
+Owner     : ENX Association (governs TISAX; the VDA publishes the ISA)
+Source    : "TISAX Participant Handbook", version 2.8, dated 2025-03-13,
+            ENX doc ID 602, classification Public.
+Criteria  : ISA (Information Security Assessment) - the handbook links the
+            catalogue download portal.enx.com/isa5-en.xlsx, i.e. ISA 5.
+            The audit provider uses the ISA version that is valid when the
+            initial assessment is ordered (Handbook 7.11).
 
-NODE CSV FILES (10 files):
----------------------------
-1. TISAX_Organization_nodes.csv - Automotive suppliers, OEMs, service providers (5 nodes)
-2. TISAX_AssessmentLevel_nodes.csv - Maturity levels AL1, AL2, AL3 (3 nodes)
-3. TISAX_Assessment_nodes.csv - Assessment process instances (6 nodes)
-4. TISAX_AssessmentObjective_nodes.csv - The 12 canonical TISAX assessment objectives / labels (12 nodes)
-5. TISAX_AuditProvider_nodes.csv - TISAX-accredited audit firms (4 nodes)
-6. TISAX_ISACatalogue_nodes.csv - Assessment criteria catalogues (3 nodes)
-7. TISAX_ControlQuestion_nodes.csv - Specific security control questions (8 nodes)
-8. TISAX_ProtectionObject_nodes.csv - Assets requiring protection (5 nodes)
-9. TISAX_Participant_nodes.csv - Organizations exchanging results (4 nodes)
-10. TISAX_AssessmentResult_nodes.csv - Assessment outcomes and certifications (3 nodes)
+SCOPE OF THIS DATA SET
+----------------------
+This set models the TISAX FRAMEWORK ONLY - the process, the actors, the
+assessment levels, the assessment objectives / TISAX labels, the ISA criteria
+catalogues, the finding types and the overall assessment results, all as
+defined in the handbook. It contains NO organisations, auditors, assessments,
+scores, budgets or dates: those would be instance data and are not defined by
+the source document. All previously present fictional instance rows have been
+removed.
 
-Total Nodes: 46
+FILES THAT SHIP (17)
+--------------------
+Node files
+1.  TISAX_AssessmentObjective_nodes.csv (12 rows)
+    The 12 current TISAX assessment objectives / TISAX labels
+    (Handbook Table 3, p.33), with the applicable ISA criteria catalogue(s)
+    (Table 7, p.58-59) and the implied assessment level (Table 5, p.39).
+2.  TISAX_AssessmentLevel_nodes.csv (3 rows)
+    AL 1 / AL 2 / AL 3 and the assessment methods per level
+    (Handbook 4.3.3.5, Table 6, p.40-42). Label validity 3 years
+    (5.4.14.2); AL 1 results are not used in TISAX, hence "n/a".
+3.  TISAX_ISACatalogue_nodes.csv (3 rows)
+    The three ISA criteria catalogues: Information Security, Prototype
+    Protection, Data Protection (Handbook 5.2.2.1, p.58).
+4.  TISAX_ProtectionObject_nodes.csv (8 rows)
+    The protection objects named by the 12 assessment objectives
+    (information with high / very high protection needs, prototype parts and
+    components, prototype vehicles, test vehicles, prototypes at events and
+    shootings, personal data, special categories of personal data).
+5.  TISAX_AuditProvider_nodes.csv (1 row)
+    The CONCEPT of a TISAX audit provider as defined by the handbook
+    (contracted by ENX Association, impartial, may assess registered
+    participants only). No individual firms - the handbook does not list any;
+    contact details are only issued in the registration confirmation email.
+6.  TISAX_AssessmentResult_nodes.csv (3 rows)
+    The three possible overall assessment results: conform, minor
+    non-conform, major non-conform (Handbook 5.4.5, p.87), with the label
+    consequence of each. Instance columns (dates, auditor, URLs, percentages)
+    are retained for schema stability but are intentionally empty.
+7.  TISAX_Exchange_nodes.csv (1 row)
+    The ENX portal exchange platform and its publishing/sharing mechanics
+    (Handbook 6, p.101-106).
+8.  TISAX_ControlQuestion_nodes.csv (HEADER ONLY - 0 rows)
+    The ISA control questions live in a separate VDA document (the ISA Excel
+    workbook) which is NOT part of this source. Nothing is fabricated here.
+9.  findings.csv (4 rows)
+    The four TISAX finding types: major non-conformity, minor
+    non-conformity, observation, room for improvement (Handbook Table 11,
+    p.85-86), with their definitions and required reactions.
+10. roles.csv (9 rows)
+    The actors defined by the handbook: ENX Association, TISAX participant,
+    active participant, passive participant, TISAX audit provider, auditor,
+    participant main contact, assessment scope contact, person in charge of
+    information security.
+11. assessment_phases.csv (10 rows)
+    The real TISAX process: the 3 steps (registration, assessment, exchange)
+    expanded into the handbook's sub-steps and assessment types (kick-off
+    meeting, assessment phase 1, initial assessment, corrective action plan
+    preparation and assessment, follow-up assessment).
+    typical_duration_weeks is empty on purpose - the handbook explicitly
+    declines to forecast durations.
+12. control_categories.csv (5 rows)
+    Only the ISA chapters the handbook actually enumerates: 8.1 - 8.5 of the
+    Prototype Protection criteria catalogue (Handbook Table 8, p.61-62).
 
-RELATIONSHIP CSV FILES (11 files):
-----------------------------------
-1. TISAX_REGISTERS_IN_TISAX_relationships.csv - Organization registration (5 relationships)
-2. TISAX_UNDERGOES_ASSESSMENT_relationships.csv - Assessment instances (6 relationships)
-3. TISAX_SELECTS_ASSESSMENT_LEVEL_relationships.csv - Level selection (5 relationships)
-4. TISAX_CHOOSES_AUDIT_PROVIDER_relationships.csv - Provider selection (5 relationships)
-5. TISAX_SUBJECT_TO_ISA_CATALOGUE_relationships.csv - Catalogue applicability (6 relationships)
-6. TISAX_CONTAINS_ASSESSMENT_OBJECTIVE_relationships.csv - Objectives in assessments (6 relationships)
-7. TISAX_PROTECTS_OBJECT_relationships.csv - Asset protection mapping (5 relationships)
-8. TISAX_ANSWERS_CONTROL_QUESTION_relationships.csv - Control question responses (5 relationships)
-9. TISAX_MEETS_CRITERIA_relationships.csv - Criteria verification (3 relationships)
-10. TISAX_PARTICIPATES_IN_EXCHANGE_relationships.csv - Exchange participation (4 relationships)
-11. TISAX_SHARES_RESULTS_WITH_relationships.csv - Result sharing between orgs (4 relationships)
+Relationship files
+13. TISAX_LABEL_HIERARCHY_relationships.csv (7 rows)
+    The TISAX label superset hierarchy (Handbook 5.4.14.1, p.98).
+14. TISAX - ISA Catalogue Control Category.csv (5 rows)
+    ISA-002 (Prototype Protection) HAS_CATEGORY CAT-01..CAT-05.
+15. TISAX - Assement Result Findings.csv (4 rows)
+    Overall assessment result CONTAINS_FINDING finding type, encoding the
+    handbook's rule that a minor non-conformity yields "minor non-conform"
+    (temporary labels) and a major non-conformity yields "major non-conform"
+    (no labels).
+16. TISAX_ISA_CONTAINS_QUESTIONS.csv (HEADER ONLY - 0 rows)
+    Empty because TISAX_ControlQuestion_nodes.csv is header-only.
 
-Total Relationships: 54
+Other
+17. TISAX_README.txt (this file)
 
-═══════════════════════════════════════════════════════════════════════
+FILES REMOVED IN THIS PASS (23)
+-------------------------------
+All of the following contained only invented instance data (fictional
+companies, auditors, assessments, results, budgets, URLs, dates) and had no
+counterpart in the handbook:
+  TISAX_Organization_nodes.csv, TISAX_Participant_nodes.csv,
+  TISAX_Assessment_nodes.csv, TISAX - Requirements.csv,
+  TISAX_REGISTERS_IN_TISAX_relationships.csv,
+  TISAX_PARTICIPANT_REGISTERS_IN_TISAX_relationships.csv,
+  TISAX_PARTICIPATES_IN_EXCHANGE_relationships.csv,
+  TISAX_SHARES_RESULTS_WITH_relationships.csv,
+  TISAX_SELECTS_ASSESSMENT_LEVEL_relationships.csv,
+  TISAX_UNDERGOES_ASSESSMENT_relationships.csv,
+  TISAX_Organisation_Chooses_AuditProvider_relationships.csv,
+  TISAX_CONTAINS_ASSESSMENT_OBJECTIVE_relationships.csv,
+  TISAX_ISA_CATALOGUE_relationships.csv,
+  TISAX_MEETS_CRITERIA_relationships.csv,
+  TISAX_PROTECTS_OBJECT_relationships.csv,
+  TISAX_RESULT_OF_ASSESSMENT_relationships.csv,
+  TISAX_ANSWERS_FULLY_UNIQUE_relationships.csv,
+  TISAX - Assesment Assesment Phase.csv,
+  security_policies.csv, rel_org_establishes_policy.csv,
+  data_categories.csv, rel_object_classified_as.csv,
+  rel_org_assigns_role.csv
 
-KEY CONCEPTS
-═══════════════════════════════════════════════════════════════════════
+KEY FACTS ENCODED (all from Handbook 2.8)
+-----------------------------------------
+- 3-step process: Registration -> Assessment -> Exchange.
+- Assessment sub-steps: preparation (ISA self-assessment), audit provider
+  selection, the assessment(s), assessment result.
+- Assessment types: initial, corrective action plan, follow-up.
+- Assessment elements: formal opening meeting, assessment procedure, formal
+  closing meeting.
+- Assessment levels AL 1 / AL 2 / AL 3 and their methods; AL 2.5 exists as an
+  alternate method for AL 2 but is formally evaluated as AL 2.
+- Protection needs: normal, high, very high; protection goals C / I / A.
+- 12 assessment objectives; TISAX labels are the corresponding output.
+- Label validity: 3 years from the end of the assessment process. Temporary
+  labels: up to 9 months after the closing meeting of the initial assessment,
+  bounded by the longest corrective-action implementation period.
+- Nine-month maximum to resolve non-conformities after the initial
+  assessment's closing meeting.
+- Corrective action plan content: finding, root cause, corrective actions,
+  implementation date, compensating measures, justified implementation
+  periods (>3 months justification, >6 months justification + evidence,
+  never >9 months).
+- Report sections A-E map 1:1 to the exchange platform sharing levels.
+- Maturity levels 0-5 (Incomplete, Performed, Managed, Established,
+  Predictable, Optimizing) - defined in the ISA, described in Handbook
+  Table 10.
 
-Assessment Levels:
-- AL1: Basic security assessment (self-assessment allowed)
-- AL2: Moderate security assessment (third-party audit required)
-- AL3: Advanced security assessment (full external audit required)
+RESIDUAL GAPS / KNOWN LIMITATIONS
+---------------------------------
+- ISA control questions and requirements are NOT included. They are published
+  by the VDA in a separate ISA workbook, not in the handbook.
+- Only the Prototype Protection chapters (8.1-8.5) are modelled in
+  control_categories.csv; the handbook names Information Security and Data
+  Protection chapters only by example ("2 Human Resources", "9 Access
+  Control"), so they are not enumerated here.
+- The handbook also defines participant status (Incomplete, Awaiting
+  approval, Preliminary, Registered, Expired), assessment scope status
+  (Incomplete, Awaiting your order, Awaiting ENX approval, Awaiting your
+  payment, Registered, Active, Expired) and assessment status (Initial
+  assessment ordered, Initial assessment ongoing, Waiting for corrective
+  action plan assessment, Waiting for follow-up, Finished). These state
+  machines have no corresponding CSV in this set.
+- TISAX_ProtectionObject_nodes.csv has no relationship file linking it to the
+  assessment objectives; the previous PROTECTS_OBJECT file was
+  assessment-instance based and was deleted.
 
-ISA Catalogues (the ISA has three criteria catalogues by topic, per Handbook 5.2.2.1):
-- ISA-001: Information Security
-- ISA-002: Prototype Protection
-- ISA-003: Data Protection
-
-Protection Levels:
-- Basic: Minimal protection measures
-- Standard: Industry-standard protections
-- High: Enhanced security controls
-- Maximum: Complete protection with encryption
-
-Assessment Scope:
-- StandardScope: Predefined assessment criteria
-- CustomScope: Tailored assessment requirements
-
-═══════════════════════════════════════════════════════════════════════
-
-TOTAL: 21 CSV files (10 node files + 11 relationship files)
-
-All CSV files are properly formatted and ready for import into Neo4j
-using LOAD CSV commands.
-
-Assessment Validity: Typically 3 years from certification date
-Audit Provider Accreditation: Required for AL2 and AL3 assessments
-Compliance Coverage: ISO 27001, ISO 27002, BSI IT-Grundschutz alignment
-
-Document Version: 1.1
-Status: Ready for Neo4j Implementation
-
-═══════════════════════════════════════════════════════════════════════
-DATA PROVENANCE / CORRECTIONS (grounded in TISAX Participant Handbook 2.8,
-ENX doc ID 602)
-═══════════════════════════════════════════════════════════════════════
-
-Framework-layer (authoritative, sourced from the handbook):
-- TISAX_AssessmentObjective_nodes.csv: the 12 canonical assessment
-  objectives / TISAX labels (Handbook Table 3, p.33). Attributes
-  isa_criteria_catalogues from Table 7 (p.58-59), assessment_level from
-  Table 5 (p.39), catalogue_group from the color coding.
-- TISAX_LABEL_HIERARCHY_relationships.csv (NEW): the label superset
-  hierarchy from Handbook 5.4.14.1, p.98 (e.g. "Info high" superset of
-  "Confidential"/"High availability"; "Very high availability" superset of
-  "High availability"; "Special data" superset of "Data").
-- TISAX_ISACatalogue_nodes.csv: the three ISA criteria catalogues by topic
-  (Information Security, Prototype Protection, Data Protection), Handbook
-  5.2.2.1, p.58. Fabricated versions/URLs/question-counts removed.
-- TISAX_AssessmentLevel_nodes.csv: AL1/AL2/AL3 attributes from Handbook
-  4.3.3.5 / Table 6 (p.40-42). 3-year label validity retained (5.4.14.2).
-  Note: the VDA ISA control catalog is a separate document and is
-  intentionally NOT modeled here.
-
-SYNTHETIC / FICTIONAL instance data (NOT from the handbook - illustrative
-only, flagged for review):
-- Organizations, audit providers, participants, assessments, results,
-  findings, and all instance-level relationship rows (ASS-xxx, ORG-xxx,
-  PO-xxx, CQ-xxx, etc.) contain invented organisation/auditor names,
-  dates, and metrics.
-- Instance relationship rows that reference OBJ-xxx and ISA-xxx IDs
-  (e.g. TISAX_CONTAINS_ASSESSMENT_OBJECTIVE, TISAX_ISA_CATALOGUE,
-  TISAX_ISA_CONTAINS_QUESTIONS) still resolve to valid node IDs but their
-  pairings, counts, weights and dates are synthetic and were not corrected.
+Foreign-key integrity: verified, zero dangling references.
+Status: framework-grounded, ready for graph load.

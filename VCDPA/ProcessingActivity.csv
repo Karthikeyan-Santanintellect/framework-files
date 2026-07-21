@@ -1,6 +1,7 @@
 processing_id,name,type,description
-PA-TARGET-ADS,Targeted Advertising,TargetedAdvertising,"Displaying advertisements to a consumer where the advertisement is selected based on personal data obtained from that consumer's activities over time and across nonaffiliated websites or applications to predict preferences or interests."
-PA-SALE,Sale of Personal Data,SaleOfPersonalData,"Exchange of personal data for monetary consideration by the controller to a third party."
-PA-PROFILING,Profiling,Profiling,"Automated processing of personal data to evaluate or predict aspects relating to a consumer, where such profiling produces legal or similarly significant effects."
-PA-SENSITIVE,Sensitive Data Processing,SensitiveDataProcessing,"Processing of sensitive data, including health, biometric, child, and precise geolocation data."
-PA-GENERAL,General Processing,Processing,"General collection, use, storage, disclosure, analysis, or deletion of personal data by the controller.",
+PA-TARGET-ADS,Targeted Advertising,TargetedAdvertising,Displaying advertisements to a consumer where the advertisement is selected based on personal data obtained from that consumer's activities over time and across nonaffiliated websites or online applications to predict such consumer's preferences or interests (§ 59.1-575).
+PA-SALE,Sale of Personal Data,SaleOfPersonalData,The exchange of personal data for monetary consideration by the controller to a third party (§ 59.1-575).
+PA-PROFILING,Profiling,Profiling,"Any form of automated processing performed on personal data to evaluate, analyze, or predict personal aspects related to an identified or identifiable natural person's economic situation, health, personal preferences, interests, reliability, behavior, location, or movements (§ 59.1-575)."
+PA-SENSITIVE,Sensitive Data Processing,SensitiveDataProcessing,"The processing of sensitive data as defined in § 59.1-575, which requires the consumer's consent under § 59.1-578(A)(5) and a data protection assessment under § 59.1-580(A)(4)."
+PA-HEIGHTENED-RISK,Heightened Risk Processing,HeightenedRiskProcessing,"Any processing activities involving personal data that present a heightened risk of harm to consumers, requiring a data protection assessment (§ 59.1-580(A)(5))."
+PA-GENERAL,Processing,Processing,"Any operation or set of operations performed, whether by manual or automated means, on personal data or on sets of personal data, such as the collection, use, storage, disclosure, analysis, deletion, or modification of personal data (§ 59.1-575)."

@@ -1,11 +1,13 @@
 data_id,category_type,name,description,definition_section,requires_consent
-PERSONAL_DATA,Personal Data,Personal Data,Information linked to identified or identifiable natural person,59.1-575,false
-SENSITIVE_DATA_RACE_ETHNICITY,Sensitive Data,Racial or Ethnic Origin,Personal data revealing racial or ethnic origin,59.1-575,true
-SENSITIVE_DATA_RELIGIOUS_BELIEFS,Sensitive Data,Religious Beliefs,Personal data revealing religious beliefs,59.1-575,true
-SENSITIVE_DATA_HEALTH,Sensitive Data,Health Diagnosis,Personal data revealing mental or physical health diagnosis,59.1-575,true
-SENSITIVE_DATA_SEXUAL_ORIENTATION,Sensitive Data,Sexual Orientation,Personal data revealing sexual orientation,59.1-575,true
-SENSITIVE_DATA_CITIZENSHIP,Sensitive Data,Citizenship Status,Personal data revealing citizenship or immigration status,59.1-575,true
-SENSITIVE_DATA_GENETIC_BIOMETRIC,Sensitive Data,Genetic or Biometric ID,Processing genetic or biometric data for unique identification,59.1-575,true
-SENSITIVE_DATA_CHILD,Sensitive Data,Child Data,Personal data collected from known child under 13,59.1-575,true
-SENSITIVE_DATA_GEOLOCATION,Sensitive Data,Precise Geolocation,Precise geolocation within 1750 feet radius,59.1-575,true
-DEIDENTIFIED_DATA,Other,De-identified Data,Data cannot reasonably be linked to identified person,59.1-575,false
+PERSONAL_DATA,Personal Data,Personal Data,Any information that is linked or reasonably linkable to an identified or identifiable natural person; does not include de-identified data or publicly available information.,59.1-575,false
+SENSITIVE_DATA_RACE_ETHNICITY,Sensitive Data,Racial or Ethnic Origin,Personal data revealing racial or ethnic origin.,59.1-575,true
+SENSITIVE_DATA_RELIGIOUS_BELIEFS,Sensitive Data,Religious Beliefs,Personal data revealing religious beliefs.,59.1-575,true
+SENSITIVE_DATA_HEALTH,Sensitive Data,Mental or Physical Health Diagnosis,Personal data revealing mental or physical health diagnosis.,59.1-575,true
+SENSITIVE_DATA_SEXUAL_ORIENTATION,Sensitive Data,Sexual Orientation,Personal data revealing sexual orientation.,59.1-575,true
+SENSITIVE_DATA_CITIZENSHIP,Sensitive Data,Citizenship or Immigration Status,Personal data revealing citizenship or immigration status.,59.1-575,true
+SENSITIVE_DATA_GENETIC_BIOMETRIC,Sensitive Data,Genetic or Biometric Data for Unique Identification,The processing of genetic or biometric data for the purpose of uniquely identifying a natural person.,59.1-575,true
+SENSITIVE_DATA_CHILD,Sensitive Data,Personal Data Collected from a Known Child,"The personal data collected from a known child, meaning any natural person younger than 13 years of age.",59.1-575,true
+SENSITIVE_DATA_GEOLOCATION,Sensitive Data,Precise Geolocation Data,"Information that directly identifies the specific location of a natural person with precision and accuracy within a radius of 1,750 feet.",59.1-575,true
+DEIDENTIFIED_DATA,Other,De-identified Data,"Data that cannot reasonably be linked to an identified or identifiable natural person, or a device linked to such person; excluded from personal data.",59.1-575,false
+PSEUDONYMOUS_DATA,Other,Pseudonymous Data,Personal data that cannot be attributed to a specific natural person without the use of additional information kept separately and subject to appropriate technical and organizational measures.,59.1-575,false
+PUBLICLY_AVAILABLE_INFORMATION,Other,Publicly Available Information,Information lawfully made available through government records or that a business has a reasonable basis to believe is lawfully made available to the general public; excluded from personal data.,59.1-575,false

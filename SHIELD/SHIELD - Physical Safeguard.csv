@@ -1,5 +1,5 @@
-safeguard_id,safeguard_name,description,implementation_status,last_inspection_date,secure_disposal_method,compliance_with_shield,regional_standard_regulation_id
-PHYS-001,Data Storage Risk Assessment,Assess risks to information storage and disposal,Implemented,2023-10-15,N/A,true,NY SHIELD 1.0
-PHYS-002,Intrusion Detection,Detect prevent and respond to intrusions,Implemented,2023-11-01,N/A,true,NY SHIELD 1.0
-PHYS-003,Unauthorized Access Prevention,Protect against unauthorized access/use during data lifecycle,In Progress,2023-09-20,Role-Based Access,true,NY SHIELD 1.0
-PHYS-004,Secure Disposal,Dispose of private information within reasonable time,Implemented,2023-12-05,Shredding/Wiping,true,NY SHIELD 1.0
+safeguard_id,safeguard_category,official_citation,section_id,statutory_text,regional_standard_regulation_id
+PHYS-001,Physical,N.Y. GBL § 899-bb(2)(b)(ii)(C)(1),4(2)(b)(ii)(C)(1),assesses risks of information storage and disposal,NY SHIELD 1.0
+PHYS-002,Physical,N.Y. GBL § 899-bb(2)(b)(ii)(C)(2),4(2)(b)(ii)(C)(2),"detects, prevents and responds to intrusions",NY SHIELD 1.0
+PHYS-003,Physical,N.Y. GBL § 899-bb(2)(b)(ii)(C)(3),4(2)(b)(ii)(C)(3),"protects against unauthorized access to or use of private information during or after the collection, transportation and destruction or disposal of the information",NY SHIELD 1.0
+PHYS-004,Physical,N.Y. GBL § 899-bb(2)(b)(ii)(C)(4),4(2)(b)(ii)(C)(4),disposes of private information within a reasonable amount of time after it is no longer needed for business purposes by erasing electronic media so that the information cannot be read or reconstructed,NY SHIELD 1.0

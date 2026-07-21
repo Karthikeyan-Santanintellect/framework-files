@@ -1,4 +1,19 @@
 level,description
-Level 1 (Validated),Level 1 Implementation Requirements - baseline requirements applicable to all in-scope systems; additional requirements are layered on by Organizational, System, and Regulatory risk factors
-Level 2 (Validated),Level 2 Implementation Requirements - additional requirements triggered when Level 2 Organizational, System, or Regulatory risk factors apply (e.g., larger bed/record/transaction volumes or specific regulatory factors)
-Level 3 (Certified),Level 3 Implementation Requirements - most stringent requirements triggered when Level 3 Organizational, System, or Regulatory risk factors apply
+Level 1 (Validated),"Level 1 Implementation Requirements - baseline requirements applicable to all in-scope systems; additional requirements are layered on by Organizational, System, and Regulatory risk factors"
+Level 2 (Validated),"Level 2 Implementation Requirements - additional requirements triggered when Level 2 Organizational, System, or Regulatory risk factors apply (e.g., larger bed/record/transaction volumes or specific regulatory factors)"
+Level 3 (Certified),"Level 3 Implementation Requirements - most stringent requirements triggered when Level 3 Organizational, System, or Regulatory risk factors apply"
+Level CMS,"Level CMS Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level CMS Implementation Requirements"" heading"
+Level HIX,"Level HIX Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level HIX Implementation Requirements"" heading"
+Level PCI,"Level PCI Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level PCI Implementation Requirements"" heading"
+Level NYDOH,"Level NYDOH Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level NYDOH Implementation Requirements"" heading"
+Level DGF,"Level DGF Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level DGF Implementation Requirements"" heading"
+Level HICP,"Level HICP Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level HICP Implementation Requirements"" heading"
+Level NIS2,"Level NIS2 Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level NIS2 Implementation Requirements"" heading"
+Level CIS,"Level CIS Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level CIS Implementation Requirements"" heading"
+Level HIE,"Level HIE Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level HIE Implementation Requirements"" heading"
+Level Federal,"Level Federal Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level Federal Implementation Requirements"" heading"
+Level HIPAA,"Level HIPAA Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level HIPAA Implementation Requirements"" heading"
+Level PHIPA,"Level PHIPA Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level PHIPA Implementation Requirements"" heading"
+Level GDPR,"Level GDPR Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level GDPR Implementation Requirements"" heading"
+Level CCPA,"Level CCPA Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level CCPA Implementation Requirements"" heading"
+Level GLBA,"Level GLBA Implementation Requirements - regulatory/segment-specific implementation requirements presented in the HITRUST CSF v11.6.0 under the ""Level GLBA Implementation Requirements"" heading"

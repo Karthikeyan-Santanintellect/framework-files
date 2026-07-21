@@ -1,2 +1,2 @@
 deid_id,description
-DEID-1,"Data that cannot reasonably be linked to an identified or identifiable natural person, taking into account reasonable measures to ensure de-identification and public commitments not to re-identify.",
+DEID-1,"Data that cannot reasonably be linked to an identified or identifiable natural person, or a device linked to such person (§ 59.1-575). A controller in possession of de-identified data shall take reasonable measures to ensure that the data cannot be associated with a natural person, publicly commit to maintaining and using de-identified data without attempting to re-identify it, and contractually obligate any recipients to comply with all provisions of this chapter (§ 59.1-581(A))."

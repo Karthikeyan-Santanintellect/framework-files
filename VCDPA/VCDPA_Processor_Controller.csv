@@ -1,4 +1,2 @@
 processor_role_id,controller_role_id,relationship_type,contractual_basis,description
-PROCESSOR,CONTROLLER,processes_on_behalf_of,Data Processing Agreement,Processor processes personal data on behalf of and under instructions of Controller
-PROCESSOR,CONTROLLER,processes_on_behalf_of,Service Agreement,Processor acts as service provider to Controller for data processing activities
-PROCESSOR,CONTROLLER,processes_on_behalf_of,Vendor Contract,Processor provides services requiring access to personal data controlled by Controller
+PROCESSOR,CONTROLLER,processes_on_behalf_of,Contract required by § 59.1-579(B),A processor processes personal data on behalf of a controller and shall adhere to the instructions of the controller and assist the controller in meeting its obligations under this chapter (§ 59.1-575; § 59.1-579(A)). Determining whether a person is acting as a controller or processor is a fact-based determination depending on the context in which personal data is to be processed (§ 59.1-579(D)).

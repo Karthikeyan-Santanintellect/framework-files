@@ -1,179 +1,91 @@
-New York SHIELD Act Neo4j Graph Data Model - CSV Files Summary
-====================================================================
+NY SHIELD ACT KNOWLEDGE-GRAPH CSV SET
+=====================================
+Framework : Stop Hacks and Improve Electronic Data Security Act ("SHIELD Act")
+Statute   : N.Y. Gen. Bus. Law §§ 899-aa (breach notification) and 899-bb (data security protections)
+Enacted   : S.5575-B / Ch. 117, Laws of 2019
+Version   : NY SHIELD 1.0
 
-New York Stop Hacks and Improve Electronic Data Security (SHIELD) Act
-Security & Breach Notification Compliance Model
+SCOPE OF THIS DATA SET
+----------------------
+This is a purely STATUTORY / DEFINITIONAL graph. Every row is derived from the
+text of §§ 899-aa and 899-bb. There are NO instance-level records: no companies,
+no named persons, no auditors, no breach incidents, no dates of implementation,
+no compliance scores. Anything of that kind that previously shipped here was
+synthetic and has been removed.
 
-Effective Date: November 1, 2023
-Amendment Effective: December 2024 (30-day notification)
-Implementation Deadline: March 21, 2025
+Every node carries an `official_citation` (or `section_id`) tying it back to the
+statute, and safeguard / definition text is reproduced verbatim from the statute.
 
-NODE CSV FILES (13 files):
-----------------------------
-1. SHIELD_DataController_nodes.csv - Organizations holding NY resident data (6 nodes)
-2. SHIELD_NYResident_nodes.csv - New York residents (7 nodes)
-3. SHIELD_PrivateInformation_nodes.csv - Sensitive data types (6 nodes)
-4. SHIELD_DataBreach_nodes.csv - Breach incidents (3 nodes)
-5. SHIELD_SecurityProgram_nodes.csv - Data security programs (4 nodes)
-6. SHIELD_AdministrativeSafeguard_nodes.csv - Admin controls (5 nodes)
-7. SHIELD_TechnicalSafeguard_nodes.csv - Technical security (5 nodes)
-8. SHIELD_ServiceProvider_nodes.csv - Third-party vendors (4 nodes)
-9. SHIELD_NotificationProcess_nodes.csv - Breach notifications (3 nodes)
-10. SHIELD_SecurityPolicy_nodes.csv - Security policies (4 nodes)
-11. SHIELD_EmployeeTraining_nodes.csv - Staff training programs (3 nodes)
-12. SHIELD_IncidentResponse_nodes.csv - Breach response activities (5 nodes)
-13. SHIELD_ComplianceAssessment_nodes.csv - Compliance audits (3 nodes)
+FILES
+-----
+Node files
+  SHIELD - Sections.csv
+      35 statutory provisions: §899-aa definitions (1)(a)-(d), notification
+      duties (2),(3), methods of notice (5), enforcement and penalties (6)(a),
+      statute of limitations (6)(c), agency and CRA notice (8)(a),(b); and
+      §899-bb compliant-regulated-entity and small-business definitions,
+      the reasonable security requirement (2)(a)-(c), enforcement (2)(d) and
+      the no-private-right-of-action clause (2)(e). Column `text` is verbatim.
 
-Total Nodes: 58
+  SHIELD_StatutoryDefinition_nodes.csv
+      9 defined terms: personal information, private information, breach of the
+      security of the system, consumer reporting agency, the person/business
+      duty-bearer, service provider, compliant regulated entity, small business,
+      and the no-private-right-of-action rule.
 
-RELATIONSHIP CSV FILES (13 files):
------------------------------------
-1. SHIELD_OWNS_LICENSES_PRIVATE_INFORMATION_relationships.csv - Data ownership (6)
-2. SHIELD_HOLDS_PERSONAL_DATA_OF_relationships.csv - Data holding (6)
-3. SHIELD_IMPLEMENTS_SECURITY_PROGRAM_relationships.csv - Program implementation (4)
-4. SHIELD_DETECTS_DATA_BREACH_relationships.csv - Breach detection (3)
-5. SHIELD_NOTIFIES_AFFECTED_INDIVIDUAL_relationships.csv - Individual notification (3)
-6. SHIELD_MANAGES_THIRD_PARTY_relationships.csv - Vendor management (4)
-7. SHIELD_APPLIES_SAFEGUARDS_TO_relationships.csv - Safeguard application (6)
-8. SHIELD_CONDUCTS_RISK_ASSESSMENT_relationships.csv - Risk assessments (4)
-9. SHIELD_PROVIDES_TRAINING_TO_relationships.csv - Training delivery (6)
-10. SHIELD_REPORTS_TO_GOVERNMENT_relationships.csv - Government reporting (2)
-11. SHIELD_ENFORCES_POLICY_relationships.csv - Policy enforcement (4)
-12. SHIELD_UNDERGOES_COMPLIANCE_ASSESSMENT_relationships.csv - Compliance reviews (3)
-13. SHIELD_COMBINES_WITH_DATA_ELEMENT_relationships.csv - Data combinations (4)
+  SHIELD_PrivateInformation_nodes.csv
+      The 6 data elements enumerated in §899-aa(1)(b)(i)(1)-(5) and (1)(b)(ii),
+      plus the publicly-available-information exclusion.
 
-Total Relationships: 46
+  SHIELD_AdministrativeSafeguard_nodes.csv   6 rows, §899-bb(2)(b)(ii)(A)(1)-(6)
+  SHIELD_TechnicalSafeguard_nodes.csv        4 rows, §899-bb(2)(b)(ii)(B)(1)-(4)
+  SHIELD - Physical Safeguard.csv            4 rows, §899-bb(2)(b)(ii)(C)(1)-(4)
+      Exactly the safeguards the statute enumerates, verbatim, and nothing else.
 
-═══════════════════════════════════════════════════════════════════════
+  SHIELD - Data Definitions.csv
+      Data-element combination patterns that constitute private information.
 
-KEY CONCEPTS
-═══════════════════════════════════════════════════════════════════════
+  SHIELD - Legal Entities.csv
+      Bodies with a role under the Act: NY Attorney General, NY Department of
+      State, NY State Police, consumer reporting agencies, and the small-business
+      classification.
 
-Applicability:
-- ANY person or business in NY or operating in NY
-- Collects, maintains, or licenses private information
-- No size thresholds or exemptions for location
-- Applies even if entity is not based in NY
+  SHIELD - Legal Rules.csv
+      Penalty amounts and caps (§899-aa(6)(a), §899-bb(2)(d)), the three/six-year
+      limitations periods (§899-aa(6)(c)), the good-faith / inadvertent-disclosure
+      exception, and the "unauthorized access" construction rule.
 
-Scope Expansion (December 2024 - Effective March 21, 2025):
-- Expands definition of "private information"
-- Adds new data elements requiring protection
-- Strengthens security requirements
+  SHIELD - Safe Harbor.csv
+      The four compliant-regulated-entity safe harbours of §899-bb(1)(a)(i)-(iv):
+      GLBA Title V, HIPAA/HITECH, 23 NYCRR Part 500, and the catch-all.
 
-Private Information Definition:
-- COMBINATION of Personal Information WITH any:
-  * Social Security Number
-  * Driver's License or State ID Number
-  * Financial Account Number + Access Credentials
-  * Biometric Information for ID
-  * Email/Username + Password/Security Answer
+Relationship files
+  SHIELD_DEFINED_IN_SECTION_relationships.csv
+      23 edges. Each safeguard node and each statutory definition node points at
+      the section of "SHIELD - Sections.csv" that establishes it.
 
-Personal Information Includes:
-- First and last name
-- Address
-- Telephone number
-- Email address
+  SHIELD_COMBINES_WITH_DATA_ELEMENT_relationships.csv
+      6 edges. Data elements PI-001..PI-005 combine with personal information
+      (DEF-001) to form private information under §899-aa(1)(b)(i); PI-006
+      constitutes private information on its own under §899-aa(1)(b)(ii).
 
-Key Amendments (December 2024):
-1. 30-Day Breach Notification Requirement (was "without unreasonable delay")
-2. NYSDFS Reporting Obligations for regulated entities
-3. Expanded definition of private information (effective March 21, 2025)
-4. Greater emphasis on reasonable safeguards
-5. Enhanced government notification requirements
+ID CONVENTIONS
+--------------
+  ADMIN-nnn / TECH-nnn / PHYS-nnn  enumerated safeguards
+  DEF-nnn                          statutory definitions
+  PI-nnn / PI-EXCL-nnn             private-information data elements, exclusions
+  SH-*                             safe-harbour regimes
+  DEC-* / PAI-* / PI-PARENT-*      data-element combination patterns
+  NY_* / CRA_* / SB_DEF_*          legal entities and classifications
+  CP-* / SOL-* / EXC-* / DEF-*     legal rules
+  section_id                       bill-section notation, e.g. 4(2)(b)(ii)(A)(1)
 
-Required Security Safeguards:
-- Administrative: Risk assessment, policies, training, vendor mgmt
-- Technical: Encryption, MFA, monitoring, access controls
-- Physical: Access controls, secure storage, destruction procedures
+INTEGRITY
+---------
+Zero dangling foreign keys: every source and target id in a relationship file
+resolves to a row in a node file.
 
-Administrative Safeguards:
-- Annual risk assessment (minimum)
-- Data security policies and procedures
-- Employee security training program
-- Third-party service provider management
-- Incident response plan with 30-day notification timeline
-
-Technical Safeguards:
-- Encryption for data at rest and in transit
-- Multi-factor authentication for admin access
-- Network monitoring and intrusion detection
-- Access controls and least privilege
-- Regular vulnerability assessments
-
-Physical Safeguards:
-- Facility access controls
-- Secure data storage and disposal
-- Visitor management policies
-- Environmental controls (fire, climate)
-- Chain of custody maintenance
-
-Service Provider Requirements:
-- Written security agreement required
-- Must address data security obligations
-- Audit rights reserved
-- Must comply with SHIELD requirements
-- Regular security assessments required
-
-Breach Notification Timeline:
-- DISCOVERY: When breach is identified
-- NOTIFICATION DEADLINE: Within 30 days of discovery
-- INVESTIGATION: Must determine scope
-- GOVERNMENT NOTIFICATION: NYSAG + NYSDFS (if regulated)
-- RESIDENT NOTIFICATION: Required if breach involves private info
-
-Notification Requirements:
-- Email, mail, phone, or public notice
-- Information about breach type
-- Data elements involved
-- Steps affected residents should take
-- Contact information for more details
-- Credit monitoring information (if financial data)
-- Available to NY Attorney General
-
-Enforcement Authority:
-- New York Attorney General (NYSAG)
-- New York Department of Financial Services (NYSDFS)
-- Exclusive government enforcement
-- No private right of action for residents
-
-Penalties:
-- $20 per failed notification (up from $10)
-- Maximum: $250,000 per violation
-- Actual damages for negligent violations
-- $5,000 per failure to implement safeguards
-- 3-year statute of limitations (6 years if concealed)
-
-Equivalent Compliance:
-- If complying with GLBA, HIPAA, or NYDFS requirements
-- SHIELD compliance may be deemed satisfied
-- Otherwise must follow SHIELD-specific requirements
-
-Data Retention:
-- Keep only as long as necessary
-- Regular review and deletion
-- Secure destruction procedures
-- Documentation of destruction
-
-Reporting Requirements:
-- All breaches to NY Attorney General (no threshold)
-- Breaches affecting 5000+ residents: Consumer reporting agencies
-- NYSDFS regulated entities: Additional NYSDFS reporting
-- Investigation completion: Final report to NYSAG
-
-═══════════════════════════════════════════════════════════════════════
-
-TOTAL: 26 CSV files (13 node files + 13 relationship files)
-
-All CSV files are properly formatted and ready for import into Neo4j
-using LOAD CSV commands.
-
-Compliance Framework: New York General Business Law § 899-aa & 899-bb
-Jurisdiction: New York, USA (applies to any entity serving NY residents)
-Status: Effective November 1, 2023
-Amendment Status: December 2024 (30-day notification mandate)
-Implementation: March 21, 2025 (expanded definition)
-Enforcement: Attorney General only (no private action)
-Notification Deadline: 30 days from discovery
-
-Document Version: 1.0
-Status: Ready for Neo4j Implementation
+SOURCES
+-------
+  NY Senate Bill S.5575-B (2019-2020 Regular Sessions), statute text as enacted.
+  N.Y. Gen. Bus. Law §§ 899-aa, 899-bb.

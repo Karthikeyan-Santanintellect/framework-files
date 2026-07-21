@@ -1,4 +1,14 @@
 purpose_id,description
-EP_SEC,"Detecting security incidents; protecting against malicious, deceptive, fraudulent, or illegal activity"
-EP_PROD,"Providing a product or service specifically requested by a consumer"
-EP_LEGAL,"Complying with federal, state, or local laws and regulations"
+EP_LAW,"Comply with federal, state, or local laws, rules, or regulations (§ 59.1-582(A)(1))"
+EP_INQUIRY,"Comply with a civil, criminal, or regulatory inquiry, investigation, subpoena, or summons by federal, state, local, or other governmental authorities (§ 59.1-582(A)(2))"
+EP_LAW_ENFORCEMENT,"Cooperate with law-enforcement agencies concerning conduct or activity that the controller or processor reasonably and in good faith believes may violate federal, state, or local laws, rules, or regulations (§ 59.1-582(A)(3))"
+EP_LEGAL_CLAIMS,"Investigate, establish, exercise, prepare for, or defend legal claims (§ 59.1-582(A)(4))"
+EP_PROD,"Provide a product or service specifically requested by a consumer, perform a contract to which the consumer is a party, including fulfilling the terms of a written warranty, or take steps at the request of the consumer prior to entering into a contract (§ 59.1-582(A)(5))"
+EP_SAFETY,"Take immediate steps to protect an interest that is essential for the life or physical safety of the consumer or of another natural person, and where the processing cannot be manifestly based on another legal basis (§ 59.1-582(A)(6))"
+EP_SEC,"Prevent, detect, protect against, or respond to security incidents, identity theft, fraud, harassment, malicious or deceptive activities, or any illegal activity; preserve the integrity or security of systems; or investigate, report, or prosecute those responsible (§ 59.1-582(A)(7))"
+EP_RESEARCH,"Engage in public or peer-reviewed scientific or statistical research in the public interest that adheres to applicable ethics and privacy laws and is approved, monitored, and governed by an institutional review board or similar independent oversight entity (§ 59.1-582(A)(8))"
+EP_ASSIST,"Assist another controller, processor, or third party with any of the obligations under § 59.1-582(A) (§ 59.1-582(A)(9))"
+EP_INTERNAL_RESEARCH,"Conduct internal research to develop, improve, or repair products, services, or technology (§ 59.1-582(B)(1))"
+EP_RECALL,Effectuate a product recall (§ 59.1-582(B)(2))
+EP_TECH_ERRORS,Identify and repair technical errors that impair existing or intended functionality (§ 59.1-582(B)(3))
+EP_INTERNAL_OPS,"Perform internal operations that are reasonably aligned with the expectations of the consumer or reasonably anticipated based on the consumer's existing relationship with the controller, or that are otherwise compatible with processing in furtherance of a requested product or service or performance of a contract (§ 59.1-582(B)(4))"

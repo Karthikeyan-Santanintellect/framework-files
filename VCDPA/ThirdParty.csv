@@ -1,3 +1,2 @@
 third_party_id,name,description
-TP-AD-NETWORK,Ad Network,"Third party receiving personal data for advertising and measurement purposes.",
-TP-DATA-BROKER,Data Broker,"Third party purchasing personal data from controllers for resale or enrichment.",
+TP-GENERIC,Third Party,"A natural or legal person, public authority, agency, or body other than the consumer, controller, processor, or an affiliate of the processor or the controller (§ 59.1-575)."

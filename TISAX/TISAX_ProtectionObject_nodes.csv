@@ -1,6 +1,9 @@
 object_id,name,type,classification,protection_level,is_sensitive,data_categories_contained,owner_department,criticality_to_business,location,last_assessment_date,protection_controls_implemented,remaining_risk
-PO-001,Production Database,Data,Confidential,High,True,Product specifications; Manufacturing parameters,Operations,Critical,Frankfurt Data Center,2024-06-15,Encryption; Access controls; Backup,Low
-PO-002,CAD Design Files,Document,Secret,Maximum,True,Design drawings; Technical specifications; Patents,Engineering,Critical,Stuttgart Server Room,2024-08-20,Encryption; Digital signatures; Version control,Low
-PO-003,Customer Database,Data,Confidential,High,True,Customer names; Contact info; Orders; Payment data,Sales,High,Munich Data Center,2024-07-01,Encryption; Access controls; Audit logs; DLP,Low
-PO-004,Manufacturing ERP,System,Confidential,High,True,Production schedules; Inventory; Financial data,IT,Critical,Frankfurt Data Center,2024-06-15,Encryption; MFA; Firewall; Monitoring,Low
-PO-005,R&D Documentation,Document,Secret,Maximum,True,Research results; Technical innovations; Lab notes,Research & Development,Critical,Munich Server Room,2024-09-01,Encryption; Access controls; Audit trails; Classification,Medium
+PO-001,Information,Information,,High protection needs,True,"Information handled on behalf of a partner (assessment objectives Info high, Confidential, High availability)",,,,,,
+PO-002,Information,Information,,Very high protection needs,True,"Information handled on behalf of a partner (assessment objectives Info very high, Strictly confidential, Very high availability)",,,,,,
+PO-003,Prototype parts and components,Physical prototype,,Prototype protection,True,Assessment objective Proto parts,,,,,,
+PO-004,Prototype vehicles,Physical prototype,,Prototype protection,True,Assessment objective Proto vehicles,,,,,,
+PO-005,Test vehicles,Physical prototype,,Prototype protection,True,Assessment objective Test vehicles,,,,,,
+PO-006,Prototypes during events and film or photo shoots,Physical prototype,,Prototype protection,True,Assessment objective Proto events,,,,,,
+PO-007,Personal data,Personal data,,Data protection,True,"Personal data processed according to Article 28 (Processor) of the GDPR (assessment objective Data)",,,,,,
+PO-008,Special categories of personal data,Personal data,,Data protection,True,"Special categories of personal data as specified in Article 9 of the GDPR (assessment objective Special data)",,,,,,

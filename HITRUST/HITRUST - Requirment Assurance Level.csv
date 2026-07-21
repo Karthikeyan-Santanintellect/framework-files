@@ -1,4 +1,669 @@
 requirement_id,assurance_level
+IMP-00.a-L1,Level 1 (Validated)
+IMP-00.a-L2,Level 2 (Validated)
+IMP-00.a-L3,Level 3 (Certified)
+IMP-00.a-CMS,Level CMS
+IMP-00.a-HIX,Level HIX
+IMP-00.a-PCI,Level PCI
+IMP-00.a-NYDOH,Level NYDOH
+IMP-00.a-DGF,Level DGF
+IMP-00.a-HICP,Level HICP
+IMP-01.a-L1,Level 1 (Validated)
+IMP-01.a-L2,Level 2 (Validated)
+IMP-01.a-L3,Level 3 (Certified)
+IMP-01.a-CMS,Level CMS
+IMP-01.a-NYDOH,Level NYDOH
+IMP-01.a-HICP,Level HICP
+IMP-01.a-NIS2,Level NIS2
+IMP-01.b-L1,Level 1 (Validated)
+IMP-01.b-L2,Level 2 (Validated)
+IMP-01.b-L3,Level 3 (Certified)
+IMP-01.b-CIS,Level CIS
+IMP-01.b-CMS,Level CMS
+IMP-01.b-NYDOH,Level NYDOH
+IMP-01.c-L1,Level 1 (Validated)
+IMP-01.c-L2,Level 2 (Validated)
+IMP-01.c-L3,Level 3 (Certified)
+IMP-01.c-CIS,Level CIS
+IMP-01.c-CMS,Level CMS
+IMP-01.c-HIE,Level HIE
+IMP-01.c-HIX,Level HIX
+IMP-01.c-NYDOH,Level NYDOH
+IMP-01.d-L1,Level 1 (Validated)
+IMP-01.d-L2,Level 2 (Validated)
+IMP-01.d-L3,Level 3 (Certified)
+IMP-01.d-CIS,Level CIS
+IMP-01.d-CMS,Level CMS
+IMP-01.d-PCI,Level PCI
+IMP-01.d-NYDOH,Level NYDOH
+IMP-01.e-L1,Level 1 (Validated)
+IMP-01.e-L2,Level 2 (Validated)
+IMP-01.e-HIE,Level HIE
+IMP-01.e-HIX,Level HIX
+IMP-01.e-NYDOH,Level NYDOH
+IMP-01.f-L1,Level 1 (Validated)
+IMP-01.f-L2,Level 2 (Validated)
+IMP-01.g-L1,Level 1 (Validated)
+IMP-01.g-L2,Level 2 (Validated)
+IMP-01.h-L1,Level 1 (Validated)
+IMP-01.h-L2,Level 2 (Validated)
+IMP-01.i-L1,Level 1 (Validated)
+IMP-01.i-L2,Level 2 (Validated)
+IMP-01.i-CMS,Level CMS
+IMP-01.j-L1,Level 1 (Validated)
+IMP-01.j-L2,Level 2 (Validated)
+IMP-01.j-L3,Level 3 (Certified)
+IMP-01.j-CIS,Level CIS
+IMP-01.j-CMS,Level CMS
+IMP-01.j-HIX,Level HIX
+IMP-01.j-PCI,Level PCI
+IMP-01.j-NYDOH,Level NYDOH
+IMP-01.j-HICP,Level HICP
+IMP-01.k-L1,Level 1 (Validated)
+IMP-01.k-L2,Level 2 (Validated)
+IMP-01.l-L1,Level 1 (Validated)
+IMP-01.l-L2,Level 2 (Validated)
+IMP-01.l-L3,Level 3 (Certified)
+IMP-01.l-CMS,Level CMS
+IMP-01.l-HICP,Level HICP
+IMP-01.m-L1,Level 1 (Validated)
+IMP-01.m-L2,Level 2 (Validated)
+IMP-01.m-CIS,Level CIS
+IMP-01.m-CMS,Level CMS
+IMP-01.m-NYDOH,Level NYDOH
+IMP-01.m-HICP,Level HICP
+IMP-01.n-L1,Level 1 (Validated)
+IMP-01.n-L2,Level 2 (Validated)
+IMP-01.n-CMS,Level CMS
+IMP-01.n-NYDOH,Level NYDOH
+IMP-01.o-L1,Level 1 (Validated)
+IMP-01.o-CMS,Level CMS
+IMP-01.o-HICP,Level HICP
+IMP-01.p-L1,Level 1 (Validated)
+IMP-01.p-L2,Level 2 (Validated)
+IMP-01.p-L3,Level 3 (Certified)
+IMP-01.p-CIS,Level CIS
+IMP-01.p-CMS,Level CMS
+IMP-01.q-L1,Level 1 (Validated)
+IMP-01.q-L2,Level 2 (Validated)
+IMP-01.q-L3,Level 3 (Certified)
+IMP-01.q-CIS,Level CIS
+IMP-01.q-CMS,Level CMS
+IMP-01.q-HIX,Level HIX
+IMP-01.q-PCI,Level PCI
+IMP-01.q-NYDOH,Level NYDOH
+IMP-01.q-HICP,Level HICP
+IMP-01.r-L1,Level 1 (Validated)
+IMP-01.r-L2,Level 2 (Validated)
+IMP-01.s-L1,Level 1 (Validated)
+IMP-01.s-L2,Level 2 (Validated)
+IMP-01.t-L1,Level 1 (Validated)
+IMP-01.t-L2,Level 2 (Validated)
+IMP-01.t-CIS,Level CIS
+IMP-01.t-CMS,Level CMS
+IMP-01.t-HIX,Level HIX
+IMP-01.t-NYDOH,Level NYDOH
+IMP-01.u-L1,Level 1 (Validated)
+IMP-01.v-L1,Level 1 (Validated)
+IMP-01.v-L2,Level 2 (Validated)
+IMP-01.v-L3,Level 3 (Certified)
+IMP-01.v-CMS,Level CMS
+IMP-01.v-PCI,Level PCI
+IMP-01.v-NYDOH,Level NYDOH
+IMP-01.w-L1,Level 1 (Validated)
+IMP-01.w-L2,Level 2 (Validated)
+IMP-01.w-L3,Level 3 (Certified)
+IMP-01.w-CMS,Level CMS
+IMP-01.x-L1,Level 1 (Validated)
+IMP-01.x-L2,Level 2 (Validated)
+IMP-01.x-CIS,Level CIS
+IMP-01.x-CMS,Level CMS
+IMP-01.x-HIX,Level HIX
+IMP-01.x-NYDOH,Level NYDOH
+IMP-01.y-L1,Level 1 (Validated)
+IMP-01.y-L2,Level 2 (Validated)
+IMP-01.y-L3,Level 3 (Certified)
+IMP-02.a-L1,Level 1 (Validated)
+IMP-02.a-L2,Level 2 (Validated)
+IMP-02.a-DGF,Level DGF
+IMP-02.b-L1,Level 1 (Validated)
+IMP-02.b-L2,Level 2 (Validated)
+IMP-02.b-L3,Level 3 (Certified)
+IMP-02.b-CMS,Level CMS
+IMP-02.b-NYDOH,Level NYDOH
+IMP-02.c-L1,Level 1 (Validated)
+IMP-02.c-L2,Level 2 (Validated)
+IMP-02.c-CMS,Level CMS
+IMP-02.c-NIS2,Level NIS2
+IMP-02.d-L1,Level 1 (Validated)
+IMP-02.d-L2,Level 2 (Validated)
+IMP-02.d-CMS,Level CMS
+IMP-02.d-DGF,Level DGF
+IMP-02.e-L1,Level 1 (Validated)
+IMP-02.e-L2,Level 2 (Validated)
+IMP-02.e-L3,Level 3 (Certified)
+IMP-02.e-CIS,Level CIS
+IMP-02.e-CMS,Level CMS
+IMP-02.e-Federal,Level Federal
+IMP-02.e-PCI,Level PCI
+IMP-02.e-NYDOH,Level NYDOH
+IMP-02.e-DGF,Level DGF
+IMP-02.f-L1,Level 1 (Validated)
+IMP-02.f-L2,Level 2 (Validated)
+IMP-02.f-HIPAA,Level HIPAA
+IMP-02.f-NIS2,Level NIS2
+IMP-02.g-L1,Level 1 (Validated)
+IMP-02.g-L2,Level 2 (Validated)
+IMP-02.g-L3,Level 3 (Certified)
+IMP-02.g-CMS,Level CMS
+IMP-02.h-L1,Level 1 (Validated)
+IMP-02.i-L1,Level 1 (Validated)
+IMP-02.i-L2,Level 2 (Validated)
+IMP-02.i-L3,Level 3 (Certified)
+IMP-02.i-CMS,Level CMS
+IMP-02.i-PHIPA,Level PHIPA
+IMP-03.a-L1,Level 1 (Validated)
+IMP-03.a-L2,Level 2 (Validated)
+IMP-03.a-L3,Level 3 (Certified)
+IMP-03.a-CMS,Level CMS
+IMP-03.a-NYDOH,Level NYDOH
+IMP-03.b-L1,Level 1 (Validated)
+IMP-03.b-L2,Level 2 (Validated)
+IMP-03.b-CMS,Level CMS
+IMP-03.b-GDPR,Level GDPR
+IMP-03.b-HIX,Level HIX
+IMP-03.b-PCI,Level PCI
+IMP-03.b-HIPAA,Level HIPAA
+IMP-03.b-NYDOH,Level NYDOH
+IMP-03.b-DGF,Level DGF
+IMP-03.c-L1,Level 1 (Validated)
+IMP-03.c-L2,Level 2 (Validated)
+IMP-03.c-CMS,Level CMS
+IMP-03.c-HIX,Level HIX
+IMP-03.d-L1,Level 1 (Validated)
+IMP-03.d-L2,Level 2 (Validated)
+IMP-04.a-L1,Level 1 (Validated)
+IMP-04.a-L2,Level 2 (Validated)
+IMP-04.a-CMS,Level CMS
+IMP-04.a-PCI,Level PCI
+IMP-04.a-NYDOH,Level NYDOH
+IMP-04.a-DGF,Level DGF
+IMP-04.b-L1,Level 1 (Validated)
+IMP-04.b-L2,Level 2 (Validated)
+IMP-04.b-L3,Level 3 (Certified)
+IMP-04.b-CMS,Level CMS
+IMP-04.b-DGF,Level DGF
 IMP-05.a-L1,Level 1 (Validated)
 IMP-05.a-L2,Level 2 (Validated)
 IMP-05.a-L3,Level 3 (Certified)
+IMP-05.a-PCI,Level PCI
+IMP-05.a-DGF,Level DGF
+IMP-05.b-L1,Level 1 (Validated)
+IMP-05.b-L2,Level 2 (Validated)
+IMP-05.b-L3,Level 3 (Certified)
+IMP-05.b-CMS,Level CMS
+IMP-05.b-NYDOH,Level NYDOH
+IMP-05.b-DGF,Level DGF
+IMP-05.c-L1,Level 1 (Validated)
+IMP-05.c-L2,Level 2 (Validated)
+IMP-05.c-L3,Level 3 (Certified)
+IMP-05.c-DGF,Level DGF
+IMP-05.d-L1,Level 1 (Validated)
+IMP-05.d-L2,Level 2 (Validated)
+IMP-05.d-L3,Level 3 (Certified)
+IMP-05.d-CMS,Level CMS
+IMP-05.d-HIX,Level HIX
+IMP-05.d-NYDOH,Level NYDOH
+IMP-05.e-L1,Level 1 (Validated)
+IMP-05.e-L2,Level 2 (Validated)
+IMP-05.e-HIE,Level HIE
+IMP-05.f-L1,Level 1 (Validated)
+IMP-05.f-L2,Level 2 (Validated)
+IMP-05.f-L3,Level 3 (Certified)
+IMP-05.g-L1,Level 1 (Validated)
+IMP-05.g-L2,Level 2 (Validated)
+IMP-05.g-CMS,Level CMS
+IMP-05.g-HIX,Level HIX
+IMP-05.h-L1,Level 1 (Validated)
+IMP-05.h-L2,Level 2 (Validated)
+IMP-05.h-NYDOH,Level NYDOH
+IMP-05.i-L1,Level 1 (Validated)
+IMP-05.i-L2,Level 2 (Validated)
+IMP-05.i-L3,Level 3 (Certified)
+IMP-05.i-NYDOH,Level NYDOH
+IMP-05.j-L1,Level 1 (Validated)
+IMP-05.j-L2,Level 2 (Validated)
+IMP-05.j-CMS,Level CMS
+IMP-05.k-L1,Level 1 (Validated)
+IMP-05.k-L2,Level 2 (Validated)
+IMP-05.k-GDPR,Level GDPR
+IMP-05.k-HIE,Level HIE
+IMP-05.k-PCI,Level PCI
+IMP-05.k-NIS2,Level NIS2
+IMP-06.a-L1,Level 1 (Validated)
+IMP-06.a-L2,Level 2 (Validated)
+IMP-06.b-L1,Level 1 (Validated)
+IMP-06.b-L2,Level 2 (Validated)
+IMP-06.b-L3,Level 3 (Certified)
+IMP-06.c-L1,Level 1 (Validated)
+IMP-06.c-L2,Level 2 (Validated)
+IMP-06.c-CMS,Level CMS
+IMP-06.c-HIPAA,Level HIPAA
+IMP-06.c-NYDOH,Level NYDOH
+IMP-06.d-L1,Level 1 (Validated)
+IMP-06.d-L2,Level 2 (Validated)
+IMP-06.d-CIS,Level CIS
+IMP-06.d-CMS,Level CMS
+IMP-06.d-GDPR,Level GDPR
+IMP-06.d-PCI,Level PCI
+IMP-06.d-HIPAA,Level HIPAA
+IMP-06.d-NYDOH,Level NYDOH
+IMP-06.e-L1,Level 1 (Validated)
+IMP-06.e-L2,Level 2 (Validated)
+IMP-06.e-CMS,Level CMS
+IMP-06.e-NYDOH,Level NYDOH
+IMP-06.f-L1,Level 1 (Validated)
+IMP-06.f-L2,Level 2 (Validated)
+IMP-06.f-CMS,Level CMS
+IMP-06.f-NYDOH,Level NYDOH
+IMP-06.g-L1,Level 1 (Validated)
+IMP-06.g-L2,Level 2 (Validated)
+IMP-06.g-CMS,Level CMS
+IMP-06.g-PCI,Level PCI
+IMP-06.g-NYDOH,Level NYDOH
+IMP-06.h-L1,Level 1 (Validated)
+IMP-06.h-L2,Level 2 (Validated)
+IMP-06.h-CIS,Level CIS
+IMP-06.h-CMS,Level CMS
+IMP-06.h-NYDOH,Level NYDOH
+IMP-06.h-DGF,Level DGF
+IMP-06.i-L1,Level 1 (Validated)
+IMP-06.i-L2,Level 2 (Validated)
+IMP-06.i-CMS,Level CMS
+IMP-06.i-NYDOH,Level NYDOH
+IMP-06.j-L1,Level 1 (Validated)
+IMP-06.j-L2,Level 2 (Validated)
+IMP-06.j-NYDOH,Level NYDOH
+IMP-07.a-L1,Level 1 (Validated)
+IMP-07.a-L2,Level 2 (Validated)
+IMP-07.a-L3,Level 3 (Certified)
+IMP-07.a-CIS,Level CIS
+IMP-07.a-CMS,Level CMS
+IMP-07.a-PCI,Level PCI
+IMP-07.a-NYDOH,Level NYDOH
+IMP-07.a-HICP,Level HICP
+IMP-07.b-L1,Level 1 (Validated)
+IMP-07.b-L2,Level 2 (Validated)
+IMP-07.c-L1,Level 1 (Validated)
+IMP-07.c-CMS,Level CMS
+IMP-07.d-L1,Level 1 (Validated)
+IMP-07.d-L2,Level 2 (Validated)
+IMP-07.d-CMS,Level CMS
+IMP-07.e-L1,Level 1 (Validated)
+IMP-07.e-L2,Level 2 (Validated)
+IMP-07.e-L3,Level 3 (Certified)
+IMP-07.e-NYDOH,Level NYDOH
+IMP-08.a-L1,Level 1 (Validated)
+IMP-08.a-L2,Level 2 (Validated)
+IMP-08.a-L3,Level 3 (Certified)
+IMP-08.b-L1,Level 1 (Validated)
+IMP-08.b-L2,Level 2 (Validated)
+IMP-08.b-L3,Level 3 (Certified)
+IMP-08.b-CMS,Level CMS
+IMP-08.b-HIX,Level HIX
+IMP-08.b-PCI,Level PCI
+IMP-08.b-NYDOH,Level NYDOH
+IMP-08.c-L1,Level 1 (Validated)
+IMP-08.c-L2,Level 2 (Validated)
+IMP-08.d-L1,Level 1 (Validated)
+IMP-08.d-L2,Level 2 (Validated)
+IMP-08.d-L3,Level 3 (Certified)
+IMP-08.d-CMS,Level CMS
+IMP-08.d-HIX,Level HIX
+IMP-08.e-L1,Level 1 (Validated)
+IMP-08.e-L2,Level 2 (Validated)
+IMP-08.f-L1,Level 1 (Validated)
+IMP-08.f-L2,Level 2 (Validated)
+IMP-08.g-L1,Level 1 (Validated)
+IMP-08.g-L2,Level 2 (Validated)
+IMP-08.g-PCI,Level PCI
+IMP-08.h-L1,Level 1 (Validated)
+IMP-08.h-L2,Level 2 (Validated)
+IMP-08.h-L3,Level 3 (Certified)
+IMP-08.h-CMS,Level CMS
+IMP-08.i-L1,Level 1 (Validated)
+IMP-08.i-L2,Level 2 (Validated)
+IMP-08.i-L3,Level 3 (Certified)
+IMP-08.j-L1,Level 1 (Validated)
+IMP-08.j-L2,Level 2 (Validated)
+IMP-08.j-L3,Level 3 (Certified)
+IMP-08.j-CMS,Level CMS
+IMP-08.j-HIX,Level HIX
+IMP-08.j-NYDOH,Level NYDOH
+IMP-08.k-L1,Level 1 (Validated)
+IMP-08.k-L2,Level 2 (Validated)
+IMP-08.l-L1,Level 1 (Validated)
+IMP-08.l-L2,Level 2 (Validated)
+IMP-08.l-NYDOH,Level NYDOH
+IMP-08.m-L1,Level 1 (Validated)
+IMP-08.m-L2,Level 2 (Validated)
+IMP-09.a-L1,Level 1 (Validated)
+IMP-09.a-L2,Level 2 (Validated)
+IMP-09.a-PCI,Level PCI
+IMP-09.b-L1,Level 1 (Validated)
+IMP-09.b-L2,Level 2 (Validated)
+IMP-09.b-NYDOH,Level NYDOH
+IMP-09.b-DGF,Level DGF
+IMP-09.b-NIS2,Level NIS2
+IMP-09.c-L1,Level 1 (Validated)
+IMP-09.c-L2,Level 2 (Validated)
+IMP-09.c-L3,Level 3 (Certified)
+IMP-09.d-L1,Level 1 (Validated)
+IMP-09.d-L2,Level 2 (Validated)
+IMP-09.d-CMS,Level CMS
+IMP-09.e-L1,Level 1 (Validated)
+IMP-09.e-L2,Level 2 (Validated)
+IMP-09.e-CMS,Level CMS
+IMP-09.e-NYDOH,Level NYDOH
+IMP-09.f-L1,Level 1 (Validated)
+IMP-09.f-L2,Level 2 (Validated)
+IMP-09.f-L3,Level 3 (Certified)
+IMP-09.f-CMS,Level CMS
+IMP-09.g-L1,Level 1 (Validated)
+IMP-09.g-L2,Level 2 (Validated)
+IMP-09.h-L1,Level 1 (Validated)
+IMP-09.h-L2,Level 2 (Validated)
+IMP-09.h-CIS,Level CIS
+IMP-09.h-CMS,Level CMS
+IMP-09.i-L1,Level 1 (Validated)
+IMP-09.i-L2,Level 2 (Validated)
+IMP-09.i-CMS,Level CMS
+IMP-09.i-HIX,Level HIX
+IMP-09.j-L1,Level 1 (Validated)
+IMP-09.j-L2,Level 2 (Validated)
+IMP-09.j-CIS,Level CIS
+IMP-09.j-CMS,Level CMS
+IMP-09.j-NYDOH,Level NYDOH
+IMP-09.j-HICP,Level HICP
+IMP-09.k-L1,Level 1 (Validated)
+IMP-09.k-L2,Level 2 (Validated)
+IMP-09.k-NYDOH,Level NYDOH
+IMP-09.l-L1,Level 1 (Validated)
+IMP-09.l-L2,Level 2 (Validated)
+IMP-09.l-L3,Level 3 (Certified)
+IMP-09.l-CMS,Level CMS
+IMP-09.l-HIX,Level HIX
+IMP-09.l-PCI,Level PCI
+IMP-09.l-NYDOH,Level NYDOH
+IMP-09.m-L1,Level 1 (Validated)
+IMP-09.m-L2,Level 2 (Validated)
+IMP-09.m-L3,Level 3 (Certified)
+IMP-09.m-CIS,Level CIS
+IMP-09.m-CMS,Level CMS
+IMP-09.m-PCI,Level PCI
+IMP-09.m-NYDOH,Level NYDOH
+IMP-09.m-HICP,Level HICP
+IMP-09.n-L1,Level 1 (Validated)
+IMP-09.n-L2,Level 2 (Validated)
+IMP-09.n-CMS,Level CMS
+IMP-09.o-L1,Level 1 (Validated)
+IMP-09.o-L2,Level 2 (Validated)
+IMP-09.o-CMS,Level CMS
+IMP-09.o-NYDOH,Level NYDOH
+IMP-09.p-L1,Level 1 (Validated)
+IMP-09.p-L2,Level 2 (Validated)
+IMP-09.p-CMS,Level CMS
+IMP-09.p-NYDOH,Level NYDOH
+IMP-09.q-L1,Level 1 (Validated)
+IMP-09.q-L2,Level 2 (Validated)
+IMP-09.q-L3,Level 3 (Certified)
+IMP-09.q-CMS,Level CMS
+IMP-09.q-HIX,Level HIX
+IMP-09.q-PCI,Level PCI
+IMP-09.q-NYDOH,Level NYDOH
+IMP-09.r-L1,Level 1 (Validated)
+IMP-09.r-L2,Level 2 (Validated)
+IMP-09.s-L1,Level 1 (Validated)
+IMP-09.s-L2,Level 2 (Validated)
+IMP-09.s-CMS,Level CMS
+IMP-09.s-GDPR,Level GDPR
+IMP-09.s-HIX,Level HIX
+IMP-09.s-NYDOH,Level NYDOH
+IMP-09.t-L1,Level 1 (Validated)
+IMP-09.t-NYDOH,Level NYDOH
+IMP-09.u-L1,Level 1 (Validated)
+IMP-09.u-L2,Level 2 (Validated)
+IMP-09.v-L1,Level 1 (Validated)
+IMP-09.v-L2,Level 2 (Validated)
+IMP-09.v-HICP,Level HICP
+IMP-09.w-L1,Level 1 (Validated)
+IMP-09.w-L2,Level 2 (Validated)
+IMP-09.x-L1,Level 1 (Validated)
+IMP-09.x-L2,Level 2 (Validated)
+IMP-09.x-CMS,Level CMS
+IMP-09.y-L1,Level 1 (Validated)
+IMP-09.y-L2,Level 2 (Validated)
+IMP-09.y-L3,Level 3 (Certified)
+IMP-09.z-L1,Level 1 (Validated)
+IMP-09.z-L2,Level 2 (Validated)
+IMP-09.z-L3,Level 3 (Certified)
+IMP-09.aa-L1,Level 1 (Validated)
+IMP-09.aa-L2,Level 2 (Validated)
+IMP-09.aa-L3,Level 3 (Certified)
+IMP-09.aa-CIS,Level CIS
+IMP-09.aa-CMS,Level CMS
+IMP-09.aa-HIX,Level HIX
+IMP-09.aa-NYDOH,Level NYDOH
+IMP-09.aa-PHIPA,Level PHIPA
+IMP-09.ab-L1,Level 1 (Validated)
+IMP-09.ab-L2,Level 2 (Validated)
+IMP-09.ab-L3,Level 3 (Certified)
+IMP-09.ab-CMS,Level CMS
+IMP-09.ab-HIX,Level HIX
+IMP-09.ab-PCI,Level PCI
+IMP-09.ab-NYDOH,Level NYDOH
+IMP-09.ab-HICP,Level HICP
+IMP-09.ac-L1,Level 1 (Validated)
+IMP-09.ac-L2,Level 2 (Validated)
+IMP-09.ac-L3,Level 3 (Certified)
+IMP-09.ac-CMS,Level CMS
+IMP-09.ac-NYDOH,Level NYDOH
+IMP-09.ad-L1,Level 1 (Validated)
+IMP-09.ad-L2,Level 2 (Validated)
+IMP-09.ae-L1,Level 1 (Validated)
+IMP-09.ae-L2,Level 2 (Validated)
+IMP-09.af-L1,Level 1 (Validated)
+IMP-09.af-L2,Level 2 (Validated)
+IMP-09.af-CMS,Level CMS
+IMP-10.a-L1,Level 1 (Validated)
+IMP-10.a-L2,Level 2 (Validated)
+IMP-10.a-L3,Level 3 (Certified)
+IMP-10.a-CMS,Level CMS
+IMP-10.a-NYDOH,Level NYDOH
+IMP-10.a-HICP,Level HICP
+IMP-10.b-L1,Level 1 (Validated)
+IMP-10.b-L2,Level 2 (Validated)
+IMP-10.b-L3,Level 3 (Certified)
+IMP-10.c-L1,Level 1 (Validated)
+IMP-10.c-L2,Level 2 (Validated)
+IMP-10.c-CMS,Level CMS
+IMP-10.c-HICP,Level HICP
+IMP-10.d-L1,Level 1 (Validated)
+IMP-10.d-L2,Level 2 (Validated)
+IMP-10.d-HICP,Level HICP
+IMP-10.e-L1,Level 1 (Validated)
+IMP-10.f-L1,Level 1 (Validated)
+IMP-10.f-L2,Level 2 (Validated)
+IMP-10.f-PCI,Level PCI
+IMP-10.f-NYDOH,Level NYDOH
+IMP-10.g-L1,Level 1 (Validated)
+IMP-10.g-L2,Level 2 (Validated)
+IMP-10.g-CMS,Level CMS
+IMP-10.g-PCI,Level PCI
+IMP-10.g-NIS2,Level NIS2
+IMP-10.h-L1,Level 1 (Validated)
+IMP-10.h-L2,Level 2 (Validated)
+IMP-10.h-L3,Level 3 (Certified)
+IMP-10.h-CIS,Level CIS
+IMP-10.h-CMS,Level CMS
+IMP-10.h-NYDOH,Level NYDOH
+IMP-10.i-L1,Level 1 (Validated)
+IMP-10.i-L2,Level 2 (Validated)
+IMP-10.i-PCI,Level PCI
+IMP-10.i-NYDOH,Level NYDOH
+IMP-10.j-L1,Level 1 (Validated)
+IMP-10.j-L2,Level 2 (Validated)
+IMP-10.k-L1,Level 1 (Validated)
+IMP-10.k-L2,Level 2 (Validated)
+IMP-10.k-L3,Level 3 (Certified)
+IMP-10.k-CMS,Level CMS
+IMP-10.k-HIX,Level HIX
+IMP-10.k-PCI,Level PCI
+IMP-10.k-NYDOH,Level NYDOH
+IMP-10.l-L1,Level 1 (Validated)
+IMP-10.l-L2,Level 2 (Validated)
+IMP-10.l-CMS,Level CMS
+IMP-10.m-L1,Level 1 (Validated)
+IMP-10.m-L2,Level 2 (Validated)
+IMP-10.m-L3,Level 3 (Certified)
+IMP-10.m-CIS,Level CIS
+IMP-10.m-CMS,Level CMS
+IMP-10.m-HIX,Level HIX
+IMP-10.m-PCI,Level PCI
+IMP-10.m-NYDOH,Level NYDOH
+IMP-10.m-HICP,Level HICP
+IMP-10.m-NIS2,Level NIS2
+IMP-11.a-L1,Level 1 (Validated)
+IMP-11.a-L2,Level 2 (Validated)
+IMP-11.a-L3,Level 3 (Certified)
+IMP-11.a-CMS,Level CMS
+IMP-11.a-GDPR,Level GDPR
+IMP-11.a-HIX,Level HIX
+IMP-11.a-PCI,Level PCI
+IMP-11.a-HIPAA,Level HIPAA
+IMP-11.a-CCPA,Level CCPA
+IMP-11.a-NYDOH,Level NYDOH
+IMP-11.a-PHIPA,Level PHIPA
+IMP-11.b-L1,Level 1 (Validated)
+IMP-11.c-L1,Level 1 (Validated)
+IMP-11.c-L2,Level 2 (Validated)
+IMP-11.c-L3,Level 3 (Certified)
+IMP-11.c-CIS,Level CIS
+IMP-11.c-CMS,Level CMS
+IMP-11.c-PCI,Level PCI
+IMP-11.c-HIPAA,Level HIPAA
+IMP-11.c-NYDOH,Level NYDOH
+IMP-11.c-HICP,Level HICP
+IMP-11.d-L1,Level 1 (Validated)
+IMP-11.d-L2,Level 2 (Validated)
+IMP-11.d-CMS,Level CMS
+IMP-11.d-NIS2,Level NIS2
+IMP-11.e-L1,Level 1 (Validated)
+IMP-11.e-L2,Level 2 (Validated)
+IMP-11.e-NYDOH,Level NYDOH
+IMP-12.a-L1,Level 1 (Validated)
+IMP-12.a-L2,Level 2 (Validated)
+IMP-12.a-HIPAA,Level HIPAA
+IMP-12.b-L1,Level 1 (Validated)
+IMP-12.b-L2,Level 2 (Validated)
+IMP-12.c-L1,Level 1 (Validated)
+IMP-12.c-L2,Level 2 (Validated)
+IMP-12.c-L3,Level 3 (Certified)
+IMP-12.c-CMS,Level CMS
+IMP-12.c-HIX,Level HIX
+IMP-12.c-NYDOH,Level NYDOH
+IMP-12.d-L1,Level 1 (Validated)
+IMP-12.d-L2,Level 2 (Validated)
+IMP-12.d-L3,Level 3 (Certified)
+IMP-12.e-L1,Level 1 (Validated)
+IMP-12.e-L2,Level 2 (Validated)
+IMP-12.e-L3,Level 3 (Certified)
+IMP-12.e-CMS,Level CMS
+IMP-12.e-NYDOH,Level NYDOH
+IMP-13.a-L1,Level 1 (Validated)
+IMP-13.a-L2,Level 2 (Validated)
+IMP-13.a-CMS,Level CMS
+IMP-13.a-GDPR,Level GDPR
+IMP-13.a-HIPAA,Level HIPAA
+IMP-13.a-PHIPA,Level PHIPA
+IMP-13.b-L1,Level 1 (Validated)
+IMP-13.b-L2,Level 2 (Validated)
+IMP-13.b-GDPR,Level GDPR
+IMP-13.b-HIPAA,Level HIPAA
+IMP-13.b-CCPA,Level CCPA
+IMP-13.b-PHIPA,Level PHIPA
+IMP-13.c-L1,Level 1 (Validated)
+IMP-13.c-CMS,Level CMS
+IMP-13.c-HIPAA,Level HIPAA
+IMP-13.d-L1,Level 1 (Validated)
+IMP-13.d-L2,Level 2 (Validated)
+IMP-13.d-GDPR,Level GDPR
+IMP-13.d-HIPAA,Level HIPAA
+IMP-13.d-CCPA,Level CCPA
+IMP-13.d-NYDOH,Level NYDOH
+IMP-13.d-PHIPA,Level PHIPA
+IMP-13.e-L1,Level 1 (Validated)
+IMP-13.e-GDPR,Level GDPR
+IMP-13.e-HIPAA,Level HIPAA
+IMP-13.e-CCPA,Level CCPA
+IMP-13.e-NYDOH,Level NYDOH
+IMP-13.e-PHIPA,Level PHIPA
+IMP-13.f-L1,Level 1 (Validated)
+IMP-13.f-GDPR,Level GDPR
+IMP-13.f-HIPAA,Level HIPAA
+IMP-13.f-CCPA,Level CCPA
+IMP-13.f-PHIPA,Level PHIPA
+IMP-13.g-L1,Level 1 (Validated)
+IMP-13.g-GDPR,Level GDPR
+IMP-13.h-L1,Level 1 (Validated)
+IMP-13.h-CMS,Level CMS
+IMP-13.i-L1,Level 1 (Validated)
+IMP-13.i-GDPR,Level GDPR
+IMP-13.i-PHIPA,Level PHIPA
+IMP-13.j-L1,Level 1 (Validated)
+IMP-13.j-L2,Level 2 (Validated)
+IMP-13.j-GDPR,Level GDPR
+IMP-13.j-HIPAA,Level HIPAA
+IMP-13.j-PHIPA,Level PHIPA
+IMP-13.k-L1,Level 1 (Validated)
+IMP-13.k-L2,Level 2 (Validated)
+IMP-13.k-L3,Level 3 (Certified)
+IMP-13.k-Federal,Level Federal
+IMP-13.k-GDPR,Level GDPR
+IMP-13.k-HIPAA,Level HIPAA
+IMP-13.k-PHIPA,Level PHIPA
+IMP-13.l-L1,Level 1 (Validated)
+IMP-13.l-L3,Level 3 (Certified)
+IMP-13.l-CMS,Level CMS
+IMP-13.l-GLBA,Level GLBA
+IMP-13.m-L1,Level 1 (Validated)
+IMP-13.m-L2,Level 2 (Validated)
+IMP-13.m-CMS,Level CMS
+IMP-13.m-PHIPA,Level PHIPA
+IMP-13.n-L1,Level 1 (Validated)
+IMP-13.n-GDPR,Level GDPR
+IMP-13.o-L1,Level 1 (Validated)
+IMP-13.o-L2,Level 2 (Validated)
+IMP-13.o-CMS,Level CMS
+IMP-13.o-HIPAA,Level HIPAA
+IMP-13.o-NYDOH,Level NYDOH
+IMP-13.o-PHIPA,Level PHIPA
+IMP-13.p-L1,Level 1 (Validated)
+IMP-13.p-CMS,Level CMS
+IMP-13.p-GDPR,Level GDPR
+IMP-13.p-PHIPA,Level PHIPA
+IMP-13.q-L1,Level 1 (Validated)
+IMP-13.q-CMS,Level CMS
+IMP-13.q-GDPR,Level GDPR
+IMP-13.r-L1,Level 1 (Validated)
+IMP-13.r-GDPR,Level GDPR
+IMP-13.r-HIPAA,Level HIPAA
+IMP-13.r-NYDOH,Level NYDOH
+IMP-13.s-L1,Level 1 (Validated)
+IMP-13.t-L1,Level 1 (Validated)
+IMP-13.t-CMS,Level CMS
+IMP-13.t-CCPA,Level CCPA
+IMP-13.t-NYDOH,Level NYDOH
+IMP-13.u-L1,Level 1 (Validated)
+IMP-13.u-L2,Level 2 (Validated)
+IMP-13.u-PHIPA,Level PHIPA

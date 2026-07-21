@@ -274,28 +274,28 @@ logger.info("Loading graph structure...")
 client.query(industry_standard_and_regulation)
 time.sleep(2)
 
-client.query(actors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Actors.csv"))
+client.query(actors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Actors.csv"))
 time.sleep(2)
 
-client.query(data_PHI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Data_PHI.csv"))
+client.query(data_PHI.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Data_PHI.csv"))
 time.sleep(2)
 
-client.query(rules_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Rules%20&%20Requirements.csv"))
+client.query(rules_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Rules%20&%20Requirements.csv"))
 time.sleep(2)
 
-client.query(controls_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Controls%20&%20Safeguards.csv"))
+client.query(controls_safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Controls%20&%20Safeguards.csv"))
 time.sleep(2)
 
-client.query(security_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
+client.query(security_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Security%20&%20Risk.csv"))
 time.sleep(2)
 
-client.query(breach_management.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Breach%20Management.csv"))
+client.query(breach_management.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Breach%20Management.csv"))
 time.sleep(2)
 
-client.query(organizational.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Organizational.csv"))
+client.query(organizational.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Organizational.csv"))
 time.sleep(2)
 
-client.query(enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/HIPAA/HIPAA%20-%20Enforcement.csv"))
+client.query(enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/HIPAA/HIPAA%20-%20Enforcement.csv"))
 time.sleep(2)
 
 # Relationships

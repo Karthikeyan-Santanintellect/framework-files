@@ -1,4 +1,4 @@
 auth_id,type
-AUTH_EMAIL,Email Verification Link
-AUTH_2FA,"Two-Factor Authentication (SMS/App)"
-AUTH_LOGIN,Existing Account Login
+AUTH_REASONABLE_MEANS,"Verification through reasonable means that the consumer entitled to exercise consumer rights is the same consumer exercising them with respect to the personal data at issue (§ 59.1-575, ""authenticate"")"
+AUTH_COMMERCIALLY_REASONABLE,Commercially reasonable authentication efforts; where unsuccessful the controller need not comply and may request additional information reasonably necessary to authenticate (§ 59.1-577(B)(4))
+AUTH_EXISTING_ACCOUNT,Use of an existing account; a controller shall not require a consumer to create a new account to exercise consumer rights but may require use of an existing account (§ 59.1-578(E))

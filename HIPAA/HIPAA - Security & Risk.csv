@@ -1,11 +1,15 @@
 security_id,node_type,description,related_to,priority
 SR-00,SecurityRiskManagement,Root node for Security Risk and Incident Management,SecurityRule,High
-SR01,RiskAssessment,Identify vulnerabilities and threats to ePHI,ePHI,High
+SR01,RiskAssessment,"Conduct an accurate and thorough assessment of the potential risks and vulnerabilities to the confidentiality, integrity, and availability of ePHI held by the covered entity or business associate (45 CFR 164.308(a)(1)(ii)(A), Required)",ePHI,High
 SR05,SecurityVulnerability,System procedural or physical weakness,RiskAssessment,High
 SR06,SecurityRisk,Potential impact of a threat exploiting a vulnerability,SecurityVulnerability,High
-SR04,SecurityMeasure,Implemented control to mitigate identified risk,SecurityRisk,High
-SR02,SecurityIncident,"Attempted or successful unauthorized access, use, or disclosure",PHI,High
-SR03,IncidentResponse,Formal response and reporting procedures,SecurityIncident,High
+SR04,SecurityMeasure,"Security measures sufficient to reduce risks and vulnerabilities to a reasonable and appropriate level to comply with 45 CFR 164.306(a) (risk management, 45 CFR 164.308(a)(1)(ii)(B), Required)",SecurityRisk,High
+SR02,SecurityIncident,"The attempted or successful unauthorized access, use, disclosure, modification, or destruction of information or interference with system operations in an information system (definition at 45 CFR 164.304)",ePHI,High
+SR03,IncidentResponse,"Identify and respond to suspected or known security incidents, mitigate to the extent practicable their harmful effects, and document incidents and their outcomes (45 CFR 164.308(a)(6)(ii), Required)",SecurityIncident,High
 SR07,ContainmentProcedure,Steps to isolate and halt an active security incident,IncidentResponse,High
 SR08,InvestigationProcedure,Forensic and impact analysis of an incident,IncidentResponse,High
 SR09,NotificationProcedure,Internal security alerting protocols (pre-breach),IncidentResponse,High
+SR10,InformationSystemActivityReview,"Regularly review records of information system activity such as audit logs, access reports, and security incident tracking reports (45 CFR 164.308(a)(1)(ii)(D), Required)",RiskAssessment,High
+SR11,SanctionPolicy,"Apply appropriate sanctions against workforce members who fail to comply with the security policies and procedures of the covered entity or business associate (45 CFR 164.308(a)(1)(ii)(C), Required)",SecurityRule,High
+SR12,PeriodicEvaluation,"Periodic technical and nontechnical evaluation, initially based on the standards implemented and thereafter in response to environmental or operational changes, establishing the extent to which policies and procedures meet the Security Rule requirements (45 CFR 164.308(a)(8))",SecurityRule,High
+SR13,ContingencyPlanning,"Policies and procedures for responding to an emergency or other occurrence that damages systems containing ePHI, including data backup, disaster recovery, and emergency mode operation plans (45 CFR 164.308(a)(7))",SecurityRule,High

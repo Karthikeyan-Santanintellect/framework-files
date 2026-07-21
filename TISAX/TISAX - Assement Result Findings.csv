@@ -1,4 +1,5 @@
 source_result_id,target_finding_id,relationship_type,impact_on_label,verification_method
-RES-001,FND-001,CONTAINS_FINDING,Label Withheld,On-Site Re-Check
-RES-001,FND-002,CONTAINS_FINDING,Temporary Label,Document Review
-RES-001,FND-003,CONTAINS_FINDING,None,Interview
+RES-003,FND-001,CONTAINS_FINDING,No TISAX labels until the non-conformity is resolved,Follow-up assessment
+RES-002,FND-002,CONTAINS_FINDING,Temporary TISAX labels (validity determined by the longest implementation period of the corrective actions; max nine months after the closing meeting of the initial assessment),Corrective action plan assessment and follow-up assessment
+RES-001,FND-003,CONTAINS_FINDING,None,
+RES-001,FND-004,CONTAINS_FINDING,None,

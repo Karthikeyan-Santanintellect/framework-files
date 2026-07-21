@@ -1,11 +1,11 @@
 event_type_id,name,description,deadline,extendable,extension_period,cost
-ACCESS_REQUEST,Access Request,Consumer requests to confirm and access personal data,45 days,true,45 additional days,Free up to twice annually
-CORRECTION_REQUEST,Correction Request,Consumer requests correction of inaccuracies,45 days,true,45 additional days,Free up to twice annually
-DELETION_REQUEST,Deletion Request,Consumer requests deletion of personal data,45 days,true,45 additional days,Free up to twice annually
-PORTABILITY_REQUEST,Data Portability Request,Consumer requests portable copy in usable format,45 days,true,45 additional days,Free up to twice annually
-OPT_OUT_TARGETED_AD,Opt-Out Targeted Advertising,Consumer opts out of targeted advertising,Immediate,false,,Free
-OPT_OUT_SALE,Opt-Out Sale,Consumer opts out of sale of personal data,Immediate,false,,Free
-OPT_OUT_PROFILING,Opt-Out Profiling,Consumer opts out of profiling with legal effects,Immediate,false,,Free
-CONSENT,Consent for Sensitive Data,Controller obtains consent for sensitive data processing,Prior to processing,false,,N/A
-APPEAL,Consumer Appeal,Consumer appeals controller refusal to act,60 days from receipt,false,,Free
-DPA_REQUIRED,DPA Required,Event triggering data protection assessment,Prior to activity,false,,N/A
+ACCESS_REQUEST,Access Request,Consumer request to confirm whether a controller is processing the consumer's personal data and to access such data (§ 59.1-577(A)(1)).,45 days,true,45 additional days,Free up to twice annually
+CORRECTION_REQUEST,Correction Request,Consumer request to correct inaccuracies in the consumer's personal data (§ 59.1-577(A)(2)).,45 days,true,45 additional days,Free up to twice annually
+DELETION_REQUEST,Deletion Request,Consumer request to delete personal data provided by or obtained about the consumer (§ 59.1-577(A)(3)).,45 days,true,45 additional days,Free up to twice annually
+PORTABILITY_REQUEST,Data Portability Request,"Consumer request to obtain a copy of personal data previously provided to the controller in a portable and, to the extent technically feasible, readily usable format (§ 59.1-577(A)(4)).",45 days,true,45 additional days,Free up to twice annually
+OPT_OUT_TARGETED_AD,Opt-Out of Targeted Advertising,Consumer request to opt out of processing of personal data for purposes of targeted advertising (§ 59.1-577(A)(5)(i)).,45 days,true,45 additional days,Free up to twice annually
+OPT_OUT_SALE,Opt-Out of Sale,Consumer request to opt out of the sale of personal data (§ 59.1-577(A)(5)(ii)).,45 days,true,45 additional days,Free up to twice annually
+OPT_OUT_PROFILING,Opt-Out of Profiling,Consumer request to opt out of profiling in furtherance of decisions that produce legal or similarly significant effects concerning the consumer (§ 59.1-577(A)(5)(iii)).,45 days,true,45 additional days,Free up to twice annually
+CONSENT,Consent for Sensitive Data,Controller obtains the consumer's consent before processing sensitive data (§ 59.1-578(A)(5)).,Prior to processing,false,,N/A
+APPEAL,Consumer Appeal,Consumer appeals a controller's refusal to take action on a request (§ 59.1-577(C)).,60 days from receipt of the appeal,false,,Free
+DPA_REQUIRED,Data Protection Assessment Required,A processing activity listed in § 59.1-580(A) or (B) that triggers the obligation to conduct and document a data protection assessment.,Prior to activity,false,,N/A

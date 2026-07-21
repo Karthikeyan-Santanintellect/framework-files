@@ -1,3 +1,7 @@
 requirement_id,dpa_id,trigger
-VCDPA-59.1-580-R1,DPA-SALE,sale
-VCDPA-59.1-580-R2,DPA-SENSITIVE_DATA,sensitive_data
+VCDPA-59.1-580-R1,DPA-TARGETED_ADVERTISING,targeted_advertising
+VCDPA-59.1-580-R2,DPA-SALE,sale
+VCDPA-59.1-580-R3,DPA-PROFILING,profiling
+VCDPA-59.1-580-R4,DPA-SENSITIVE_DATA,sensitive_data
+VCDPA-59.1-580-R5,DPA-HEIGHTENED_RISK,heightened_risk
+VCDPA-59.1-580-R6,DPA-KNOWN_CHILD_SERVICE,known_child_online_service

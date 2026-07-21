@@ -1,3 +1,2 @@
 controller_id,name,description,industry
-CTRL-GENERIC,Generic Controller,"Entity that determines the purpose and means of processing personal data under VCDPA.","General"
-CTRL-ONLINE-RETAIL,Online Retailer,"Controller offering products or services to Virginia residents via online channels.","Retail"
+CTRL-GENERIC,Controller,"The natural or legal person that, alone or jointly with others, determines the purpose and means of processing personal data, and that conducts business in the Commonwealth or produces products or services targeted to residents of the Commonwealth while meeting a threshold in § 59.1-576(A).",Any
