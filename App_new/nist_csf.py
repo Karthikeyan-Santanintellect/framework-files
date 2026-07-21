@@ -99,15 +99,15 @@ client.query(IS_framework_and_standards)
 time.sleep(2)
 logger.info('ISFrameworksAndStandard')
 
-client.query(functions.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20CSF%202.0/functions.csv'))
+client.query(functions.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20CSF%202.0/functions.csv'))
 time.sleep(2)
 logger.info('Function')
 
-client.query(categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20CSF%202.0/categories.csv'))
+client.query(categories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20CSF%202.0/categories.csv'))
 time.sleep(2)
 logger.info('Category')
 
-client.query(subcategories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20CSF%202.0/subcategories.csv'))
+client.query(subcategories.replace('$file_path', 'https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20CSF%202.0/subcategories.csv'))
 time.sleep(2)
 logger.info('Subcategory')
 

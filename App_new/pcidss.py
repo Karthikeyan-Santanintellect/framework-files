@@ -979,82 +979,82 @@ logger.info("Loading graph structure...")
 client.query(industry_standard_regulation)
 time.sleep(2)
 
-client.query(standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/standard.csv"))
+client.query(standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/standard.csv"))
 time.sleep(2)
 
-client.query(strategic_objective.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Strategic-Objective-Nodes.csv"))
+client.query(strategic_objective.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Strategic-Objective-Nodes.csv"))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/requirement.csv"))
+client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/requirement.csv"))
 time.sleep(2)
 
-client.query(responsible_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Responsible_entity.csv"))
+client.query(responsible_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Responsible_entity.csv"))
 time.sleep(2)
 
-client.query(card_holder_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Card_holder_data.csv"))
+client.query(card_holder_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Card_holder_data.csv"))
 time.sleep(2)
 
-client.query(cde_environment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/CDE_environment.csv"))
+client.query(cde_environment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/CDE_environment.csv"))
 time.sleep(2)
 
-client.query(security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Security_controls.csv"))
+client.query(security_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Security_controls.csv"))
 time.sleep(2)
 
-client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/System-Components-Data.csv"))
+client.query(system_component.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/System-Components-Data.csv"))
 time.sleep(2)
 
-client.query(internal_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Internal-Roles-DATA.csv"))
+client.query(internal_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Internal-Roles-DATA.csv"))
 time.sleep(2)
 
-client.query(artifact.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Artifacts-DATA.csv"))
+client.query(artifact.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Artifacts-DATA.csv"))
 time.sleep(2)
 
-client.query(payment_brand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Payment_brand.csv"))
+client.query(payment_brand.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Payment_brand.csv"))
 time.sleep(2)
 
-client.query(acquiring_bank.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Acquiring_bank.csv"))
+client.query(acquiring_bank.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Acquiring_bank.csv"))
 time.sleep(2)
 
-client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Service_provider.csv"))
+client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Service_provider.csv"))
 time.sleep(2)
 
-client.query(approved_scanning_vendor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/ASV.csv"))
+client.query(approved_scanning_vendor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/ASV.csv"))
 time.sleep(2)
 
-client.query(qualified_security_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/QSA.csv"))
+client.query(qualified_security_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/QSA.csv"))
 time.sleep(2)
 
-client.query(threat_intelligence.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Threat_intelligence.csv"))
+client.query(threat_intelligence.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Threat_intelligence.csv"))
 time.sleep(2)
 
-client.query(law_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/law_enforcement_agencies.csv"))
+client.query(law_enforcement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/law_enforcement_agencies.csv"))
 time.sleep(2)
 
-client.query(regulatory_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/regulatory_bodies.csv"))
+client.query(regulatory_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/regulatory_bodies.csv"))
 time.sleep(2)
 
-client.query(third_party_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/Third_party_asseror.csv"))
+client.query(third_party_assessor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/Third_party_asseror.csv"))
 time.sleep(2)
 
-client.query(sub_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements.csv"))
+client.query(sub_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements.csv"))
 time.sleep(2)
 
-client.query(testing_procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Testing%20Procedure.csv"))
+client.query(testing_procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Testing%20Procedure.csv"))
 time.sleep(2)
 
-client.query(merchant_level.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Merchant%20Level.csv"))
+client.query(merchant_level.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Merchant%20Level.csv"))
 time.sleep(2)
 
-client.query(assessment_instrument.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Assessment%20Instruments.csv"))
+client.query(assessment_instrument.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Assessment%20Instruments.csv"))
 time.sleep(2)
 
-client.query(data_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Data%20State.csv"))
+client.query(data_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Data%20State.csv"))
 time.sleep(2)
 
-client.query(authentication_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Autentication%20Factor.csv"))
+client.query(authentication_factor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Autentication%20Factor.csv"))
 time.sleep(2)
 
-client.query(compensating_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Compenstating%20Control.csv"))
+client.query(compensating_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Compenstating%20Control.csv"))
 time.sleep(2)
 
 
@@ -1212,31 +1212,31 @@ time.sleep(2)
 client.query(third_party_assessor_requirement)
 time.sleep(2)
 
-client.query(requirement_sub_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Requirements%20Sub%20Requirements.csv"))
+client.query(requirement_sub_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Requirements%20Sub%20Requirements.csv"))
 time.sleep(2)
 
-client.query(sub_requirement_procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements%20Testing%20Procedure.csv"))
+client.query(sub_requirement_procedure.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements%20Testing%20Procedure.csv"))
 time.sleep(2)
 
-client.query(merchant_assessment_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Merchant%20Level%20Assement%20Instrument.csv"))
+client.query(merchant_assessment_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Merchant%20Level%20Assement%20Instrument.csv"))
 time.sleep(2)
 
-client.query(compensating_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements%20Compensating%20Control.csv"))
+client.query(compensating_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirements%20Compensating%20Control.csv"))
 time.sleep(2)
 
-client.query(control_subreq_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Security%20Control%20Sub%20Requirements.csv"))
+client.query(control_subreq_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Security%20Control%20Sub%20Requirements.csv"))
 time.sleep(2)
 
-client.query(cardholder_data_exists_in_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20CardHolder%20Data%20State.csv"))
+client.query(cardholder_data_exists_in_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20CardHolder%20Data%20State.csv"))
 time.sleep(2)
 
-client.query(security_control_data_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Security%20Control%20Data%20State.csv"))
+client.query(security_control_data_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Security%20Control%20Data%20State.csv"))
 time.sleep(2)
 
-client.query(auth_factor_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirement%20Authentication%20Factor.csv"))
+client.query(auth_factor_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Sub%20Requirement%20Authentication%20Factor.csv"))
 time.sleep(2)
 
-client.query(entity_level_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/PCI%20-%20DSS/PCIDSS%20-%20Responsible%20Entity%20Merchant%20Level.csv"))
+client.query(entity_level_relationships.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/PCI%20-%20DSS/PCIDSS%20-%20Responsible%20Entity%20Merchant%20Level.csv"))
 time.sleep(2)
 
 client.query(sub_req_orphan)

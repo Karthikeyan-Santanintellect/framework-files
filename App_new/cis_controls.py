@@ -116,22 +116,22 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework_and_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/nodes_framework.csv"))
+client.query(framework_and_standard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/nodes_framework.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Controls.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Controls%20-%20Controls.csv"))
 time.sleep(2)
 
-client.query(safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Safeguard.csv"))
+client.query(safeguards.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Controls%20-%20Safeguard.csv"))
 time.sleep(2)
 
-client.query(asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Asset%20Class.csv"))
+client.query(asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Controls%20-%20Asset%20Class.csv"))
 time.sleep(2)
 
-client.query(security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Security%20Functions.csv"))
+client.query(security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Controls%20-%20Security%20Functions.csv"))
 time.sleep(2)
 
-client.query(implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Implementation%20Group.csv"))
+client.query(implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Controls%20-%20Implementation%20Group.csv"))
 time.sleep(2)
 
 
@@ -140,16 +140,16 @@ time.sleep(2)
 client.query(framework_and_standard_control)
 time.sleep(2)
 
-client.query(control_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Control%20-%20Control%20Safeguard.csv"))
+client.query(control_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Control%20-%20Control%20Safeguard.csv"))
 time.sleep(2)
 
-client.query(safeguard_implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Controls%20-%20Safeguard%20Implementation.csv"))
+client.query(safeguard_implementation_group.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Controls%20-%20Safeguard%20Implementation.csv"))
 time.sleep(2)
 
-client.query(safeguard_asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Control%20-%20Safeguard%20Asset.csv"))
+client.query(safeguard_asset_class.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Control%20-%20Safeguard%20Asset.csv"))
 time.sleep(2)
 
-client.query(safeguard_security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CIS%20Controls/CIS%20Control%20-%20Safeguard%20Security%20Function.csv"))
+client.query(safeguard_security_function.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CIS%20Controls/CIS%20Control%20-%20Safeguard%20Security%20Function.csv"))
 time.sleep(2)
 
 client.query(framework_assets_rel)

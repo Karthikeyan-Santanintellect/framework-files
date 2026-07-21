@@ -467,3 +467,39 @@ documents to the KB.
 5. **Missing explicit relationship CSVs:** DORA, NIST RMF, NIST AI RMF, and several NIST frameworks encode relationships only as inline foreign keys rather than dedicated edge files — acceptable for some pipelines but a structural gap for a graph model.
 
 6. **Cleanest extractions:** **GDPR** and **NIST CSF 2.0** are fully verified — complete node coverage and valid relationships. **ISO 27002** and **NIST PMF 1.0** are close behind (correct core, bounded gaps).
+
+---
+
+## Loaded into Neo4j (Aura instance, database `d7883150`)
+
+The verified frameworks have been pushed into the Neo4j instance. **18 of 26 frameworks are loaded** (all currently ✅ Verified), and **all 18 now reflect the remediated (`gautham`) CSVs** — the graph is consistent.
+
+**Total in instance:** ~3,619 nodes / ~52,546 relationships.
+
+| Framework | Neo4j id | Data state |
+|-----------|----------|-----------|
+| CIS Controls | `CIS CONTROLS 8.1` | ✅ fixed (153 safeguards incl. 13.11) |
+| ISO 27002 | `ISO27002_2022` | ✅ fixed (93 guidelines, 0 boilerplate) |
+| NIST CSF 2.0 | `NIST_CSF_2.0` | ✅ current |
+| GLBA | `GLBA 1999` | ✅ fixed |
+| PCI DSS | `PCI-DSS 4.0` | ✅ fixed (v4.0.1 titles) |
+| SEC | `SEC-2023` | ✅ fixed (FORM-6K, tiered delay) |
+| GDPR | `GDPR 2016/679` | ✅ current |
+| CPRA | `CPRA 2.0` | ✅ fixed ($25M threshold) |
+| TDPSA | `TDPSA 2023` | ✅ fixed (28 sections / 33 definitions) |
+| DORA | `DORA 2022/2554` | ✅ fixed (65 Article 3 definitions) |
+| NIS_2 | `NIS2-EU-2022-2555` | ✅ fixed |
+| NIST AI RMF | `NIST_AI_RMF_1.0` | ✅ fixed (4 functions / 19 categories / 72 subcategories) |
+| NIST PMF 1.1 | `NIST_PMF_1.1` | ✅ fixed (20 categories / 104 subcategories) |
+| ISO 27001 | `ISO27001_2022` | ✅ fixed (93 Annex A controls) |
+| NIST RMF | `NIST_RMF_5.2` | ✅ fixed (47 tasks, 19 roles) |
+| CPA | `CPA 1.0` | ✅ fixed (57 rules / 10 parts) |
+| DPDPA | `DPDPA 1.0` | ✅ fixed (28 definitions) |
+| HITECH | `HITECH_ACT_2009` | ✅ fixed (14 sections) |
+
+**NOT loaded (8):** HIPAA, HITRUST, SHIELD, TISAX, SCF, NIST PMF 1.0, VCDPA (all ⚠️), and NERC (❌ — source absent).
+
+### Notes
+- All loaders in `App_new/` point at the **`gautham`** branch (where the remediated CSVs live). Loaders use `MERGE ... ON CREATE SET`, which fills in new nodes but does **not** overwrite changed property values on existing nodes — so the 8 pass-1 frameworks that had value edits (ISO 27002, GLBA, PCI DSS, SEC, CPRA, TDPSA, and the additive CIS/DORA) were **deleted and reloaded fresh** to apply all corrections. Verified in-DB: CPRA `$25,000,000`, PCI Req 3 "Protect Stored Account Data", ISO 27002 0 boilerplate guidelines, DORA 65 definitions.
+- PCI DSS logs 2 non-fatal `null node_id` skips (`:AssessmentInstrument`, `:AuthenticationFactor`) — pre-existing null rows in the PCI CSVs, unrelated to remediation.
+- Minor: 1 stray DPDPA node exists under a lowercase `dpdpa 1.0` id (vs the rest under `DPDPA 1.0`) — a pre-existing id-casing inconsistency in the DPDPA data.

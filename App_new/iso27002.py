@@ -123,19 +123,19 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(framework_standard.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/iso27002_framework.csv'))
+client.query(framework_standard.replace('$file_path','https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027002/iso27002_framework.csv'))
 time.sleep(2)
 
-client.query(categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Categories.csv"))
+client.query(categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027002/ISO%2027002%20-%20Categories.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Controls.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027002/ISO%2027002%20-%20Controls.csv"))
 time.sleep(2)
 
-client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Attributes.csv"))
+client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027002/ISO%2027002%20-%20Attributes.csv"))
 time.sleep(2)
 
-client.query(guidelines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027002/ISO%2027002%20-%20Guidelines.csv"))
+client.query(guidelines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027002/ISO%2027002%20-%20Guidelines.csv"))
 time.sleep(2)
 
 client.query(framework_standard_category_rel)

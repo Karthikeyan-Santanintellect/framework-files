@@ -592,93 +592,93 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_regulation)
 time.sleep(2)
 
-client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Chapter.csv"))
+client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Chapter.csv"))
 time.sleep(2)
 
-client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Article.csv"))
+client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Article.csv"))
 time.sleep(2)
 
-client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Definitions.csv"))
+client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Definitions.csv"))
 time.sleep(2)
 
-client.query(competent_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Competent%20Authority.csv"))
+client.query(competent_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Competent%20Authority.csv"))
 time.sleep(2)
 
-client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20Functions.csv"))
+client.query(critical_functions.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Critical%20Functions.csv"))
 time.sleep(2)
 
-client.query(critical_ict_proider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Critical%20ICT%20Provider.csv"))
+client.query(critical_ict_proider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Critical%20ICT%20Provider.csv"))
 time.sleep(2)
 
-client.query(cyber_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Cyber%20Threat.csv"))
+client.query(cyber_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Cyber%20Threat.csv"))
 time.sleep(2)
 
-client.query(facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Facility.csv"))
+client.query(facility.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Facility.csv"))
 time.sleep(2)
 
-client.query(ict_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Risk.csv"))
+client.query(ict_risk.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20ICT%20Risk.csv"))
 time.sleep(2)
 
-client.query(financial_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Financial%20Entity.csv"))
-time.sleep(2)
-
-
-client.query(ict_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Control.csv"))
-time.sleep(2)
-
-client.query(ict_service.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Service.csv"))
+client.query(financial_entity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Financial%20Entity.csv"))
 time.sleep(2)
 
 
-client.query(information_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Inforamtion%20Asset.csv"))
+client.query(ict_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20ICT%20Control.csv"))
 time.sleep(2)
 
-client.query(ict_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20ICT%20Asset.csv")) 
+client.query(ict_service.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20ICT%20Service.csv"))
+time.sleep(2)
+
+
+client.query(information_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Inforamtion%20Asset.csv"))
+time.sleep(2)
+
+client.query(ict_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20ICT%20Asset.csv")) 
 time.sleep(2) 
 
-client.query(joint_examination_term.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Joint%20Examination%20Team.csv"))
+client.query(joint_examination_term.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Joint%20Examination%20Team.csv"))
 time.sleep(2)
 
-client.query(jurisdiction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Jurisdiction.csv"))
+client.query(jurisdiction.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Jurisdiction.csv"))
 time.sleep(2)
 
-client.query(lead_overeseer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Lead%20Overseer.csv"))
+client.query(lead_overeseer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Lead%20Overseer.csv"))
 time.sleep(2)
 
-client.query(legacy_ict_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Legacy%20ICT%20System.csv"))
+client.query(legacy_ict_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Legacy%20ICT%20System.csv"))
 time.sleep(2)
 
-client.query(major_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Major%20Incident.csv"))
+client.query(major_incident.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Major%20Incident.csv"))
 time.sleep(2)
 
-client.query(management_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Management%20Body.csv"))
+client.query(management_body.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Management%20Body.csv"))
 time.sleep(2)
 
-client.query(network_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Network%20Systems.csv"))
+client.query(network_systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Network%20Systems.csv"))
 time.sleep(2)
 
-client.query(oversight_forum.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Oversight%20Forum.csv"))
+client.query(oversight_forum.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Oversight%20Forum.csv"))
 time.sleep(2)
 
-client.query(penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Penalty.csv"))
+client.query(penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Penalty.csv"))
 time.sleep(2)
 
-client.query(processing_location.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Processing%20Location.csv"))
+client.query(processing_location.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Processing%20Location.csv"))
 time.sleep(2)
 
-client.query(remediation_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Remediation%20Plan.csv"))
+client.query(remediation_plan.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Remediation%20Plan.csv"))
 time.sleep(2)
 
-client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Requirements.csv"))
+client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Requirements.csv"))
 time.sleep(2)
               
-client.query(third_party_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-ICT%20Third%20Party%20Service%20Provider.csv"))
+client.query(third_party_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-ICT%20Third%20Party%20Service%20Provider.csv"))
 time.sleep(2)
 
-client.query(subsidiary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Subsidiary.csv"))
+client.query(subsidiary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Subsidiary.csv"))
 time.sleep(2)
 
-client.query(threat_led_penetration_test.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DORA/DORA%20-%20Threat%20Led%20Penetration%20Test.csv"))
+client.query(threat_led_penetration_test.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DORA/DORA%20-%20Threat%20Led%20Penetration%20Test.csv"))
 time.sleep(2)
 
 # Relationships

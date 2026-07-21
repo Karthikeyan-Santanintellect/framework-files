@@ -461,85 +461,85 @@ logger.info("Loading graph structure...")
 client.query(regulation)
 time.sleep(2)
 
-client.query(rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Rule.csv"))
+client.query(rule.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Rule.csv"))
 time.sleep(2)
 
-client.query(section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Section.csv"))
-time.sleep(2)
-
-
-client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement.csv"))
+client.query(section.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Section.csv"))
 time.sleep(2)
 
 
-client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Role.csv"))
+client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Requirement.csv"))
 time.sleep(2)
 
 
-client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Data%20Category.csv"))
+client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Role.csv"))
 time.sleep(2)
 
 
-client.query(eventype.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Event%20types.csv"))
-time.sleep(2)
-
-client.query(safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Safeguard.csv"))
+client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Data%20Category.csv"))
 time.sleep(2)
 
 
-client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Enforcement%20Action.csv"))
+client.query(eventype.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Event%20types.csv"))
+time.sleep(2)
+
+client.query(safeguard.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Safeguard.csv"))
 time.sleep(2)
 
 
-client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Policy.csv"))
+client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Enforcement%20Action.csv"))
 time.sleep(2)
 
 
-client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Control.csv"))
+client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Policy.csv"))
 time.sleep(2)
 
 
-client.query(system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20System.csv"))
+client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Control.csv"))
 time.sleep(2)
 
 
-client.query(process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Process.csv"))
+client.query(system.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20System.csv"))
+time.sleep(2)
+
+
+client.query(process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Process.csv"))
 time.sleep(2)
 
 
 
-client.query(qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/QualifiedIndividual.csv"))
+client.query(qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/QualifiedIndividual.csv"))
 time.sleep(2)
 
 
-client.query(board_of_directors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/BoardOfDirectors.csv"))
+client.query(board_of_directors.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/BoardOfDirectors.csv"))
 time.sleep(2)
 
-client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/ServiceProvider.csv"))
+client.query(service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/ServiceProvider.csv"))
 time.sleep(2)
 
-client.query(risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/RiskAssessment.csv"))
+client.query(risk_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/RiskAssessment.csv"))
 time.sleep(2)
 
-client.query(threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Threat.csv"))
+client.query(threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/Threat.csv"))
 time.sleep(2)
 
-client.query(asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Asset.csv"))
+client.query(asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/Asset.csv"))
 time.sleep(2)
 
-client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/PrivacyNotice.csv"))
+client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/PrivacyNotice.csv"))
 time.sleep(2)
 
-client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/OptOutMechanism.csv"))
+client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/OptOutMechanism.csv"))
 time.sleep(2)
 
-client.query(non_affiliated_third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/NonAffiliatedThirdParty.csv"))
+client.query(non_affiliated_third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/NonAffiliatedThirdParty.csv"))
 time.sleep(2)
 
-client.query(security_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/SecurityBreach.csv"))
+client.query(security_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/SecurityBreach.csv"))
 time.sleep(2)
 
-client.query(social_engineering_tactic.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/SocialEngineeringTactic.csv"))
+client.query(social_engineering_tactic.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/SocialEngineeringTactic.csv"))
 time.sleep(2)
 
 
@@ -584,37 +584,37 @@ time.sleep(2)
 client.query(requirement_enforcement_action)
 time.sleep(2)
 
-client.query(requirement_qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Requirement_QualifiedIndividual_rel.csv"))
+client.query(requirement_qualified_individual.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/Requirement_QualifiedIndividual_rel.csv"))
 time.sleep(2)
 
-client.query(qualified_individual_board.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/QualifiedIndividual_BoardOfDirectors_rel.csv"))
+client.query(qualified_individual_board.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/QualifiedIndividual_BoardOfDirectors_rel.csv"))
 time.sleep(2)
 
-client.query(risk_assessment_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/RiskAssessment_Asset_rel.csv"))
+client.query(risk_assessment_asset.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/RiskAssessment_Asset_rel.csv"))
 time.sleep(2)
 
-client.query(risk_assessment_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/RiskAssessment_Threat_rel.csv"))
+client.query(risk_assessment_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/RiskAssessment_Threat_rel.csv"))
 time.sleep(2)
 
-client.query(safeguard_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Safeguard_Threat_rel.csv"))
+client.query(safeguard_threat.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/Safeguard_Threat_rel.csv"))
 time.sleep(2)
 
-client.query(requirement_privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/Requirement_PrivacyNotice_rel.csv"))
+client.query(requirement_privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/Requirement_PrivacyNotice_rel.csv"))
 time.sleep(2)
 
-client.query(privacy_notice_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/PrivacyNotice_OptOutMechanism_rel.csv"))
+client.query(privacy_notice_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/PrivacyNotice_OptOutMechanism_rel.csv"))
 time.sleep(2)
 
-client.query(opt_out_third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/OptOutMechanism_NonAffiliatedThirdParty_rel.csv"))
+client.query(opt_out_third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/OptOutMechanism_NonAffiliatedThirdParty_rel.csv"))
 time.sleep(2)
 
-client.query(breach_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/SecurityBreach_Requirement_rel.csv"))
+client.query(breach_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/SecurityBreach_Requirement_rel.csv"))
 time.sleep(2)
 
-client.query(requirement_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement%20Service%20Provider.csv"))
+client.query(requirement_service_provider.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Requirement%20Service%20Provider.csv"))
 time.sleep(2)
 
-client.query(requirement_social_engineering.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/GLBA/GLBA%20-%20Requirement%20Social%20EngineeringTactic.csv"))
+client.query(requirement_social_engineering.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/GLBA/GLBA%20-%20Requirement%20Social%20EngineeringTactic.csv"))
 time.sleep(2)
 
 client.query(orphan_privacy_notice)
