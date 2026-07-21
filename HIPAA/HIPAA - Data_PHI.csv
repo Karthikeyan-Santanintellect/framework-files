@@ -17,3 +17,6 @@ PHILIFE02,StorageStage,Data storage stage,N/A,Lifecycle_Stage,N/A
 PHILIFE03,TransmissionStage,Data transfer stage,N/A,Lifecycle_Stage,N/A
 PHILIFE04,DestructionStage,Data disposal stage,N/A,Lifecycle_Stage,N/A
 PRIN01,MinimumNecessary,Principle limiting data usage to what is needed,N/A,Principle,N/A
+PHICAT05,PsychotherapyNotes,"Mental health professional's notes documenting/analyzing a counseling session, kept separate from the record; most uses/disclosures require individual authorization with limited exceptions (45 CFR 164.508)",All,PHI_Category,Session notes
+DEID01,DeIdentifiedInformation,"Health information that neither identifies nor provides a reasonable basis to identify an individual; not restricted by the Privacy Rule; achieved via expert determination or removal of specified identifiers (Safe Harbor)",All,NonPHI,De-identified data set
+LDS01,LimitedDataSet,"PHI with specified direct identifiers of the individual, relatives, household members, and employers removed; usable for research, health care operations, and public health under a data use agreement",All,LimitedIdentifiers,Dates;City;State;ZIP;Age

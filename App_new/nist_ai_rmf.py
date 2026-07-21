@@ -110,13 +110,13 @@ logger.info("Loading graph structure...")
 client.query(framework_and_standards)
 time.sleep(2)
 
-client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Functions.csv"))
+client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Functions.csv"))
 time.sleep(2)
     
-client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Categories.csv"))
+client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20Categories.csv"))
 time.sleep(2)
 
-client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20SubCategories.csv"))
+client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20AI%20RMF/NIST%20AI%20RMF%20-%20SubCategories.csv"))
 time.sleep(2)
 
 # Relationships

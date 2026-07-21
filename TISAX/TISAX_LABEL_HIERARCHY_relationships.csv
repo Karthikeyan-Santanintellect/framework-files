@@ -1,0 +1,8 @@
+source_objective_id,relationship_type,target_objective_id,source_label,target_label
+OBJ-001,SUPERSET_OF,OBJ-003,Info high,Confidential
+OBJ-001,SUPERSET_OF,OBJ-005,Info high,High availability
+OBJ-002,SUPERSET_OF,OBJ-004,Info very high,Strictly confidential
+OBJ-002,SUPERSET_OF,OBJ-006,Info very high,Very high availability
+OBJ-004,SUPERSET_OF,OBJ-003,Strictly confidential,Confidential
+OBJ-006,SUPERSET_OF,OBJ-005,Very high availability,High availability
+OBJ-012,SUPERSET_OF,OBJ-011,Special data,Data

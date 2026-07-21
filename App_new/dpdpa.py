@@ -347,6 +347,20 @@ ON CREATE SET
   d.penalty_for_breach = "₹10,000";
 """
 
+# Definition (Section 2 defined terms)
+definition = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (def:Definition {
+  regional_standard_regulation_id: 'DPDPA 1.0',
+  definition_id: row.definition_id
+})
+ON CREATE SET
+  def.term = row.term,
+  def.section_id = row.section_id,
+  def.clause = row.clause,
+  def.definition_text = row.definition_text;
+"""
+
 
 
 #Relationships
@@ -750,6 +764,13 @@ MATCH (reg:RegionalStandardAndRegulation {regional_standard_regulation_id: 'DPDP
 MERGE (reg)-[:REGULATION_DEFINES_EVENT_TYPE]->(orphan);
 """
 
+section_definition = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (sec:Section {regional_standard_regulation_id: 'DPDPA 1.0', section_id: row.section_id})
+MATCH (def:Definition {regional_standard_regulation_id: 'DPDPA 1.0', definition_id: row.definition_id})
+MERGE (sec)-[:SECTION_DEFINES_TERM]->(def);
+"""
+
 import sys
 import os
 import time
@@ -770,143 +791,146 @@ if health is not True:
 
 logger.info("Loading graph structure...")
 
-client.query(regulation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Node.csv"))
+client.query(regulation.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Regulation_Node.csv"))
 time.sleep(2)
 
-client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Chapters.csv"))
+client.query(chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Chapters.csv"))
 time.sleep(2)
 
-client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Sections.csv"))
+client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Sections.csv"))
 time.sleep(2)
 
-client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirements.csv"))
+client.query(requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirements.csv"))
 time.sleep(2)
 
-client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Roles.csv"))
+client.query(role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Roles.csv"))
 time.sleep(2)
 
-client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_DataCategories.csv"))
+client.query(datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_DataCategories.csv"))
 time.sleep(2)
 
-client.query(safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Safeguards.csv"))
+client.query(safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Safeguards.csv"))
 time.sleep(2)
 
-client.query(event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Event%20Types.csv"))
+client.query(event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Event%20Types.csv"))
 time.sleep(2)
 
-client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Policies.csv"))
+client.query(policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Policies.csv"))
 time.sleep(2)
 
-client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Controls.csv"))
+client.query(control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Controls.csv"))
 time.sleep(2)
 
-client.query(system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Systems.csv"))
+client.query(system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Systems.csv"))
 time.sleep(2)
 
-client.query(process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Processes.csv"))
+client.query(process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Processes.csv"))
 time.sleep(2)
 
-client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction.csv"))
+client.query(enforcement_action.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_EnforcementAction.csv"))
 time.sleep(2)
 
-client.query(data_principal.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataPrincipal.csv"))
+client.query(data_principal.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DataPrincipal.csv"))
 time.sleep(2)
 
-client.query(data_fiduciary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataFiduciary.csv"))
+client.query(data_fiduciary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DataFiduciary.csv"))
 time.sleep(2)
 
-client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataProcessor.csv"))
+client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DataProcessor.csv"))
 time.sleep(2)
 
-client.query(data_protection_board.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DataProtectionBoard.csv"))
+client.query(data_protection_board.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DataProtectionBoard.csv"))
 time.sleep(2)
 
-client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Right.csv"))
+client.query(right.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/Right.csv"))
 time.sleep(2)
 
-client.query(legal_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/LegalBasis.csv"))
+client.query(legal_basis.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/LegalBasis.csv"))
 time.sleep(2) 
 
-client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/ProcessingActivity.csv"))
+client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/ProcessingActivity.csv"))
 time.sleep(2)
 
-client.query(consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Consent.csv"))
+client.query(consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/Consent.csv"))
 time.sleep(2)
 
-client.query(exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Exemption.csv"))
+client.query(exemption.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/Exemption.csv"))
 time.sleep(2)
 
-client.query(complaint.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/Complaint.csv"))
+client.query(complaint.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/Complaint.csv"))
 time.sleep(2)
 
-client.query(significant_data_fiduciary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Significant%20Data%20Fiduciary.csv"))
+client.query(significant_data_fiduciary.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Significant%20Data%20Fiduciary.csv"))
 time.sleep(2)
 
-client.query(consent_manager.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Consent%20Manager.csv"))
+client.query(consent_manager.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Consent%20Manager.csv"))
 time.sleep(2)
 
-client.query(nominee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Nominee.csv"))
+client.query(nominee.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Nominee.csv"))
 time.sleep(2)
 
-client.query(independent_auditor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Independent%20Auditor.csv"))
+client.query(independent_auditor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Independent%20Auditor.csv"))
 time.sleep(2)
 
-client.query(notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Notice.csv"))
+client.query(notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Notice.csv"))
 time.sleep(2)
 
-client.query(breach_notification.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Breach%20Notification.csv"))
+client.query(breach_notification.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Breach%20Notification.csv"))
 time.sleep(2)
 
-client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Duty.csv"))
+client.query(duty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Duty.csv"))
+time.sleep(2)
+
+client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Definitions.csv"))
 time.sleep(2)
 
 
 #Relationship
-client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Regulation_Chapter_Relationship_FIXED.csv"))
+client.query(regulation_chapter.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Regulation_Chapter_Relationship_FIXED.csv"))
 time.sleep(2)
 
-client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA-Chap-Sec-Rel.csv"))
+client.query(chapter_section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA-Chap-Sec-Rel.csv"))
 time.sleep(2)
 
 client.query(section_right)
 time.sleep(2)
 
-client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA-Sec-Req-Rel.csv"))
+client.query(section_requirement.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA-Sec-Req-Rel.csv"))
 time.sleep(2)
 
                                         
-client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Roles.csv"))
+client.query(requirement_roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirement_Roles.csv"))
 time.sleep(2)
 
-client.query(requirement_datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Data.csv"))
+client.query(requirement_datacategory.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirement_Data.csv"))
 time.sleep(2)
 
-client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Safeguards.csv"))
+client.query(requirement_safeguard.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirement_Safeguards.csv"))
 time.sleep(2)
 
-client.query(requirement_event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA%20-%20Requirements%20Event%20Type.csv"))
+client.query(requirement_event_type.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA%20-%20Requirements%20Event%20Type.csv"))
 time.sleep(2)
 
-client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Controls.csv"))
+client.query(requirement_control.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirement_Controls.csv"))
 time.sleep(2)
 
 
-client.query(requirement_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Policies.csv"))
+client.query(requirement_policy.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirement_Policies.csv"))
 time.sleep(2)
 
-client.query(control_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Control_Systems.csv"))
+client.query(control_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Control_Systems.csv"))
 time.sleep(2)
 
-client.query(requirement_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Requirement_Processes.csv"))
+client.query(requirement_process.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Requirement_Processes.csv"))
 time.sleep(2)
 
-client.query(process_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_Process_Systems.csv"))
+client.query(process_system.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Process_Systems.csv"))
 time.sleep(2)
 
-client.query(enforcement_action_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Requirement_Relationship.csv"))
+client.query(enforcement_action_requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_EnforcementAction_Requirement_Relationship.csv"))
 time.sleep(2)
 
-client.query(enforcement_action_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/DPDPA/DPDPA_EnforcementAction_Role_Relationship.csv"))
+client.query(enforcement_action_role.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_EnforcementAction_Role_Relationship.csv"))
 time.sleep(2)
 
 client.query(requirement_right)
@@ -1054,6 +1078,9 @@ client.query(complaint_fiduciary)
 time.sleep(2)
 
 client.query(regulation_event_type)
+time.sleep(2)
+
+client.query(section_definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/DPDPA/DPDPA_Definitions.csv"))
 time.sleep(2)
 
 

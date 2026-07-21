@@ -10,3 +10,6 @@ ORG04,PatientPopulation,Demographics and types of patients served,"General; Mino
 ORG05,RiskProfile,Overall exposure level based on assessments,"High-risk; Low-risk",High
 ORG06,ComplianceMaturity,Effectiveness of the compliance program (NIST scaling),"Foundational; Optimized",Medium
 ORG10,BusinessAssociateAgreement,Legally binding contract between CE and BA transferring liability,Governance/Legal,High
+ORG11,HybridEntity,"Single legal entity conducting both covered and non-covered functions that designates its health care components in writing so most Privacy Rule requirements apply only to those components (45 CFR 164.105)","Hybrid entity",Medium
+ORG12,AffiliatedCoveredEntity,"Legally separate covered entities under common ownership or control that designate themselves in writing as a single covered entity for Privacy Rule compliance","Health system affiliates",Medium
+ORG13,OrganizedHealthCareArrangement,"Clinically or operationally integrated arrangement (OHCA) in which participating covered entities share PHI to manage their common enterprise and may use a joint notice","Hospital and its medical staff",Medium

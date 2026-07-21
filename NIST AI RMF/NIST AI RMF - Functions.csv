@@ -1,5 +1,5 @@
 Function,Function_ID,Function_Description
-GOVERN,GV,"The organization's understanding of AI risks and ability to manage those risks is routinely informed by a diverse team of AI actors, including governance structures, processes, and mechanisms"
-MAP,MP,The context is established and risks and impacts of the AI system are mapped and documented
-MEASURE,MS,"Identified AI risks and benefits are analyzed, assessed, and prioritized"
-MANAGE,MG,AI risks are managed and monitored on an ongoing basis
+GOVERN,GV,GOVERN is a cross-cutting function that is infused throughout AI risk management and enables the other functions of the process.
+MAP,MP,The MAP function establishes the context to frame risks related to an AI system.
+MEASURE,MS,"The MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts."
+MANAGE,MG,The MANAGE function entails allocating risk resources to mapped and measured risks on a regular basis and as defined by the GOVERN function.

@@ -1,7 +1,7 @@
 right_id,name,section_id
-RIGHT-ACCESS,Right to Access Personal Data,SEC-4
-RIGHT-CORRECTION,Right to Correction and Updating,SEC-5
-RIGHT-ERASURE,Right to Erasure,SEC-6
-RIGHT-CONSENT-WITHDRAWAL,Right to Withdraw Consent,SEC-7
-RIGHT-GRIEVANCE,Right to Grievance Redressal,SEC-8
-RIGHT-NOMINATE,Right to Nominate,SEC-9
+RIGHT-ACCESS,Right to Access Information about Personal Data,SEC-11
+RIGHT-CORRECTION,Right to Correction of Personal Data,SEC-12
+RIGHT-ERASURE,Right to Erasure of Personal Data,SEC-12
+RIGHT-CONSENT-WITHDRAWAL,Right to Withdraw Consent,SEC-06
+RIGHT-GRIEVANCE,Right of Grievance Redressal,SEC-13
+RIGHT-NOMINATE,Right to Nominate,SEC-14

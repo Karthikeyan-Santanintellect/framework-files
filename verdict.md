@@ -34,7 +34,32 @@ re-counted on disk). Summary of what changed:
 
 \* "Verified*" = the core regulatory nodes/relationships are now correct and complete; these graphs still intentionally retain a synthetic/operational instance layer (sample companies, controls, policies) that is not derived from the source and was left in place by design.
 
-**Net after remediation:** ✅ Verified: 10 · ⚠️ Minor/Partial: 4 (HITECH, SCF, NIST PMF 1.0, VCDPA) · ❌ Significant gaps: 12.
+**Net after remediation pass 1:** ✅ Verified: 10 · ⚠️ Minor/Partial: 4 · ❌ Significant gaps: 12.
+
+## Remediation Pass 2 — Significant-Gaps Addressed
+
+A second pass tackled the ❌ Significant-gaps frameworks (and finished HITECH), each with a
+source-grounded fix-agent editing the CSVs in place (verified on disk).
+
+| Framework | Fix applied | New status |
+|-----------|-------------|-----------|
+| NIS_2 | Un-swapped Articles 3/6 (3=Essential/important entities, 6=Definitions/41 terms); corrected chapter structure (IV risk-mgmt, V jurisdiction, **VI Information Sharing restored**); relabeled Art 29/30; fixed downstream deadlines/obligations/agent-types. | ✅ Verified |
+| ISO 27001 | Added all **93 Annex A controls** (A.5.1–A.8.34) from Table A.1 + control→theme mapping. | ✅ Verified |
+| NIST AI RMF | Rebuilt to the real numbered taxonomy: 4 functions, **19 categories** (GOVERN 1–6/MAP 1–5/MEASURE 1–4/MANAGE 1–4), **72 subcategories** verbatim. | ✅ Verified |
+| NIST PMF 1.1 | Rebuilt to the actual 1.1 Core: **20 categories** (added GV.PO-P, CM.PO-P, PR.PO-P), **104 subcategories** re-authored to 1.1 text; removed fabricated AI columns; fixed counts. | ✅ Verified |
+| NIST RMF | Added **48 tasks** (P-1…M-7) with outcomes, a Relationships CSV (Step→Task, Control→Family), roles **6→19**; emptied fabricated Systems.csv. | ✅ Verified |
+| CPA | Added the full **57 Rules across 10 Parts** (was 4) + 10 Part nodes + 19 Rule 2.02 definitions; fixed citations. | ✅ Verified |
+| DPDPA | Corrected all 44 section titles, chapter membership (Ch IV §§16–17, Ch V §§18–26), FKs (CHAP-0x/SEC-0x), rights→§§11–14; added 28 §2 definitions; de-GDPR'd requirements. | ✅ Verified* |
+| HITECH | Removed 9 fabricated section rows (13412–13420), cleaned all dangling edges, rewrote descriptions/authorities to match corrected headings. | ✅ Verified* |
+| HIPAA | Added ~35 source-grounded Privacy Rule nodes (12 permitted disclosures, individual rights, NPP, de-identified/limited data set, hybrid/OHCA, etc.); documented the penalty basis. | ⚠️ Improved (Privacy Rule covered; Security/Breach beyond this source) |
+| HITRUST | Fixed `rel_threat_risk` + swept all relationship FKs clean; grounded/flagged auxiliary CSVs. | ⚠️ Improved (impl. requirements still 1/156) |
+| TISAX | Replaced 5 invented objectives with the canonical **12** assessment objectives/labels; added label hierarchy; corrected the 3 ISA catalogues and AL1/2/3. | ⚠️ Improved (framework layer correct; instance data still synthetic) |
+| SHIELD | Audited — 0 dangling refs, 6 statutory CSVs verified accurate; removed 1 ungrounded row (PAI-EXCL-002). | ⚠️ Improved (statutory layer verified; ~28 synthetic files remain — prune is a user decision) |
+| NERC | Internal-consistency only: corrected 8 `requirement_count` values; CIP-001 already flagged retired. | ❌ Unchanged — **correct source (CIP Reliability Standards) absent from KB**; cannot be verified. |
+
+\* DPDPA has a few residual pre-existing enforcement-relationship dangling FKs; HITECH's source PDF is only the narrow §13410(d) rule while the CSVs (now accurate) model the whole Act.
+
+**Net after remediation pass 2:** ✅ Verified: **18** · ⚠️ Minor/Partial: **7** (HIPAA, HITRUST, SHIELD, TISAX, SCF, NIST PMF 1.0, VCDPA) · ❌ Significant gaps: **1** (NERC — source absent).
 
 > **Result of the independent path search:** For all 26 frameworks, the file used is the
 > *only* matching source present in KB 2/KB 3 — no framework can be pointed at a better file.
@@ -79,34 +104,34 @@ documents to the KB.
 | # | Framework | Path | Source | Status |
 |---|-----------|------|--------|--------|
 | 1 | CIS Controls | framework-files/CIS Controls | KB 2/Europe/CIS_Controls_Guide_v8.1.2_0325_v2.pdf | ✅ Verified *(fixed)* |
-| 2 | CPA | framework-files/CPA | KB 2/USA/CPA.pdf | ❌ Significant gaps |
+| 2 | CPA | framework-files/CPA | KB 2/USA/CPA.pdf | ✅ Verified *(fixed p2)* |
 | 3 | CPRA | framework-files/CPRA | KB 3/CPRA - California Prop 24 (2020).pdf | ✅ Verified* *(fixed)* |
 | 4 | DORA | framework-files/DORA | KB 2/Europe/DORA.pdf | ✅ Verified *(fixed)* |
-| 5 | DPDPA | framework-files/DPDPA | KB 2/India/Digital Personal Data Protection Act (DPDPA).pdf | ❌ Significant gaps |
+| 5 | DPDPA | framework-files/DPDPA | KB 2/India/Digital Personal Data Protection Act (DPDPA).pdf | ✅ Verified* *(fixed p2)* |
 | 6 | GDPR | framework-files/GDPR | KB 2/Europe/GDPR.pdf | ✅ Verified |
 | 7 | GLBA | framework-files/GLBA | KB 2/USA/GLBA.pdf | ✅ Verified* *(fixed)* |
-| 8 | HIPAA | framework-files/HIPAA | KB 2/USA/HIPAA.pdf | ❌ Significant gaps |
-| 9 | HITECH | framework-files/HITECH | KB 2/USA/HITECH.pdf | ⚠️ Minor gaps *(improved)* |
-| 10 | HITRUST | framework-files/HITRUST | KB 2/USA/HITRUST CSF v11.6.0/CSF PDF v11.6.0.pdf | ❌ Significant gaps |
-| 11 | ISO 27001 | framework-files/ISO 27001 | KB 3/ISO IEC 27001-2022 (ISMS).pdf | ❌ Significant gaps |
+| 8 | HIPAA | framework-files/HIPAA | KB 2/USA/HIPAA.pdf | ⚠️ Improved *(p2; Privacy Rule covered)* |
+| 9 | HITECH | framework-files/HITECH | KB 2/USA/HITECH.pdf | ✅ Verified* *(fixed p2)* |
+| 10 | HITRUST | framework-files/HITRUST | KB 2/USA/HITRUST CSF v11.6.0/CSF PDF v11.6.0.pdf | ⚠️ Improved *(p2; impl. reqs 1/156)* |
+| 11 | ISO 27001 | framework-files/ISO 27001 | KB 3/ISO IEC 27001-2022 (ISMS).pdf | ✅ Verified *(fixed p2)* |
 | 12 | ISO 27002 | framework-files/ISO 27002 | KB 3/ISO IEC 27002-2022 (Information Security Controls).pdf | ✅ Verified *(fixed)* |
-| 13 | NERC | framework-files/NERC | KB 2/USA/NERC CIP.pdf *(= CIP Roadmap, not Standards)* | ❌ Significant gaps (source absent from KB) |
-| 14 | NIST AI RMF | framework-files/NIST AI RMF | KB 2/Europe/NIST AI Risk Management Framework.pdf | ❌ Significant gaps |
+| 13 | NERC | framework-files/NERC | KB 2/USA/NERC CIP.pdf *(= CIP Roadmap, not Standards)* | ❌ Source absent *(internal fixes p2)* |
+| 14 | NIST AI RMF | framework-files/NIST AI RMF | KB 2/Europe/NIST AI Risk Management Framework.pdf | ✅ Verified *(fixed p2)* |
 | 15 | NIST CSF 2.0 | framework-files/NIST CSF 2.0 | KB 2/Europe/NIST CSF 2.0.pdf | ✅ Verified |
 | 16 | NIST PMF 1.0 | framework-files/NIST PMF 1.0 | KB 2/Europe/NIST Privacy Framework.pdf *(= PMF 1.1 IPD; 1.0 absent from KB)* | ⚠️ Minor gaps |
-| 17 | NIST PMF 1.1 | framework-files/NIST PMF 1.1 | KB 3/NIST Privacy Framework 1.1 (CSWP 40 IPD).pdf | ❌ Significant gaps |
-| 18 | NIST RMF | framework-files/NIST RMF | KB 2/Europe/NIST RMF SP.800-37r2.pdf | ❌ Significant gaps |
-| 19 | NIS_2 | framework-files/NIS_2 | KB 2/Europe/NIS2 Directive.pdf | ❌ Significant gaps |
+| 17 | NIST PMF 1.1 | framework-files/NIST PMF 1.1 | KB 3/NIST Privacy Framework 1.1 (CSWP 40 IPD).pdf | ✅ Verified *(fixed p2)* |
+| 18 | NIST RMF | framework-files/NIST RMF | KB 2/Europe/NIST RMF SP.800-37r2.pdf | ✅ Verified *(fixed p2)* |
+| 19 | NIS_2 | framework-files/NIS_2 | KB 2/Europe/NIS2 Directive.pdf | ✅ Verified *(fixed p2)* |
 | 20 | PCI - DSS | framework-files/PCI - DSS | KB 3/PCI DSS v4.0.1 (June 2024).pdf | ✅ Verified* *(fixed)* |
 | 21 | SCF | framework-files/SCF | KB 3/SCF Recommended Practices.pdf | ⚠️ Partial *(internal fix done; catalog unverifiable)* |
 | 22 | SEC | framework-files/SEC | KB 3/SEC Cybersecurity Risk Management Disclosure Rule 2023.pdf | ✅ Verified* *(fixed)* |
-| 23 | SHIELD | framework-files/SHIELD | KB 2/USA/NY Shield Act.pdf | ❌ Significant gaps |
+| 23 | SHIELD | framework-files/SHIELD | KB 2/USA/NY Shield Act.pdf | ⚠️ Improved *(p2; statutory verified)* |
 | 24 | TDPSA | framework-files/TDPSA | KB 3/TDPSA - Texas HB4 (Ch541).pdf | ✅ Verified *(fixed)* |
-| 25 | TISAX | framework-files/TISAX | KB 2/Germany/TISAX Participant Handbook.pdf | ❌ Significant gaps |
+| 25 | TISAX | framework-files/TISAX | KB 2/Germany/TISAX Participant Handbook.pdf | ⚠️ Improved *(p2; framework layer fixed)* |
 | 26 | VCDPA | framework-files/VCDPA | KB 2/USA/VCDPA.pdf | ⚠️ Minor gaps |
 
-**Tally (after remediation):** ✅ Verified: 10 · ⚠️ Minor/Partial: 4 (HITECH, SCF, NIST PMF 1.0, VCDPA) · ❌ Significant gaps: 12
-*(Before remediation: ✅ 2 · ⚠️ 11 · ❌ 13.)*
+**Tally (after remediation pass 2):** ✅ Verified: **18** · ⚠️ Minor/Partial: **7** (HIPAA, HITRUST, SHIELD, TISAX, SCF, NIST PMF 1.0, VCDPA) · ❌ Significant gaps: **1** (NERC — source absent)
+*(Original: ✅ 2 · ⚠️ 11 · ❌ 13 → after pass 1: ✅ 10 · ⚠️ 4 · ❌ 12 → after pass 2: ✅ 18 · ⚠️ 7 · ❌ 1.)*
 
 ---
 
@@ -128,8 +153,9 @@ documents to the KB.
 ### 2. CPA
 - **Path:** framework-files/CPA
 - **Source:** KB 2/USA/CPA.pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ✅ Verified — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 38
+- **✅ Remediation (pass 2):** Added the full 57 Rules across all 10 Parts (was 4) + 10 Part nodes + 19 Rule 2.02 defined terms, all from the Rules PDF; fixed README/threshold citations. Additive — statute nodes and synthetic demo CSVs left intact.
 - **Findings:**
   - **Source mismatch:** the PDF is the **Colorado Privacy Act Rules (4 CCR 904-3)** with 10 Parts / ~50 Rules, but the CSVs model the underlying **statute** (C.R.S. §§ 6-1-1301…1313). The graph does not map the provided document.
   - Rule coverage near-absent: only **4 Rule nodes** vs ~50 in the source; entire Parts (UOOM, Duties of Controllers, Consent, DPAs, Profiling) unrepresented; cited rule numbers imprecise.
@@ -165,8 +191,9 @@ documents to the KB.
 ### 5. DPDPA
 - **Path:** framework-files/DPDPA
 - **Source:** KB 2/India/Digital Personal Data Protection Act (DPDPA).pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ✅ Verified* — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 45
+- **✅ Remediation (pass 2):** Corrected all 44 section titles to the Act's real titles; fixed chapter membership (Ch IV §§16–17, Ch V §§18–26); normalized broken FKs (CH→CHAP, SEC-0x); re-mapped Data Principal rights to §§11–14; added `DPDPA_Definitions.csv` (28 §2 terms); de-GDPR'd requirements and re-pointed to correct sections. *Residual:* a few pre-existing enforcement-relationship dangling FKs (REQ-S38/S42/S36-001) remain.
 - **Findings:**
   - **Section titles largely fabricated** — a GDPR-flavored invented schema replaces the Act's real titles (e.g. §4 "Grounds for processing", §6 "Consent", §7 "Certain legitimate uses").
   - **Chapter→section assignments wrong** (real Ch IV = §§16–17, Ch V = §§18–26); fabricated titles like "Sub-processing", "International transfers".
@@ -199,8 +226,9 @@ documents to the KB.
 ### 8. HIPAA
 - **Path:** framework-files/HIPAA
 - **Source:** KB 2/USA/HIPAA.pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ⚠️ Improved — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 9
+- **✅ Remediation (pass 2):** Added ~35 source-grounded Privacy Rule nodes (12 permitted disclosures, individual rights, NPP, de-identified/limited data set, psychotherapy notes, personal representatives, hybrid/affiliated/OHCA, minimum necessary, state preemption, marketing, authorization); documented the penalty basis via a note node. *Remaining:* the Security Rule / Breach Notification nodes are accurate to HIPAA generally but lie beyond this Privacy-Rule-only source.
 - **Findings:**
   - **Scope mismatch:** the PDF is only the *Summary of the HIPAA Privacy Rule*, yet the CSVs model the Security Rule, Breach Notification, HITECH tiered penalties, and 2024/2026 updates — none in this source (accurate to HIPAA generally, but fabricated relative to the cited PDF).
   - **Attribute conflict:** PDF states $100/violation capped at $25,000/yr; CSV encodes the post-2009 tiered scheme, contradicting the source.
@@ -210,9 +238,10 @@ documents to the KB.
 ### 9. HITECH
 - **Path:** framework-files/HITECH
 - **Source:** KB 2/USA/HITECH.pdf
-- **Status:** ⚠️ Minor gaps (improved) — *partially remediated 2026-07-20*
+- **Status:** ✅ Verified* — *remediated 2026-07-20 (pass 1 + 2)* (findings below were the pre-fix state)
 - **CSV count:** 23
-- **✅/⚠️ Remediation:** Corrected U.S.C. citations (13400→§17921; 13410→§1320d-5 "Improved Enforcement") and section headings; fixed `subtitle_id` to Subtitle D. **Still open:** rows 13412–13420 are synthetic (non-existent HITECH sections) and could not be grounded; corrected-row narrative descriptions still need re-authoring.
+- **✅ Remediation (pass 1):** Corrected U.S.C. citations (13400→§17921; 13410→§1320d-5 "Improved Enforcement") and section headings; fixed `subtitle_id` to Subtitle D.
+- **✅ Remediation (pass 2):** Removed the 9 fabricated section rows (13412–13420); cleaned all dangling edges across 6 CSVs (0 residual references); rewrote the corrected-row descriptions/authorities (FTC/OCR) to match the fixed headings. *(Note: the source PDF is only the narrow §13410(d) rule; the CSVs now accurately model the whole HITECH Act.)*
 - **Findings:**
   - **Scope mismatch:** PDF is the narrow §13410(d) enforcement interim final rule (74 FR 56123), but CSVs model the entire HITECH Act — most nodes have no basis in this document.
   - Strong grounding where overlapping: `violation_tier.csv` matches Table 1 exactly (4 tiers, $1.5M cap).
@@ -222,8 +251,9 @@ documents to the KB.
 ### 10. HITRUST
 - **Path:** framework-files/HITRUST
 - **Source:** KB 2/USA/HITRUST CSF v11.6.0/CSF PDF v11.6.0.pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ⚠️ Improved — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 29
+- **✅ Remediation (pass 2):** Fixed the `rel_threat_risk.csv` dangling names and swept all relationship files clean (0 dangling FKs); grounded auxiliary CSVs where the concept is in the PDF (assurance levels, data categories) and flagged the purely-synthetic ones (risks/roles/assessment-procedures). *Remaining big gap:* Implementation Requirements populated for only 1 of 156 controls (not fabricated — full extraction is a large separate effort).
 - **Findings:**
   - Core hierarchy complete: **14 Control Categories, 156 Control References / Objectives / Specifications** all present and wired (HAS_CONTROL/OBJECTIVE/SPECIFICATION, 156 edges each, no dangling refs).
   - Control text is **paraphrased**, not verbatim; objectives collapsed 49→156 (1:1 simplification).
@@ -234,8 +264,9 @@ documents to the KB.
 ### 11. ISO 27001
 - **Path:** framework-files/ISO 27001
 - **Source:** KB 3/ISO IEC 27001-2022 (Information Security Management Systems).pdf
-- **Status:** ❌ Significant gaps
-- **CSV count:** 4
+- **Status:** ✅ Verified — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
+- **CSV count:** 4 → 6 (Annex A controls + mapping added)
+- **✅ Remediation (pass 2):** Added all 93 Annex A controls (A.5.1–A.8.34) from Table A.1 as nodes + a control→theme mapping CSV. *(Attributes remain out-of-source — the per-control attribute mapping lives in ISO 27002, not this PDF; the `category_id` clause/theme overlap is flagged and avoided via the `A.` prefix.)*
 - **Findings:**
   - Management-system clauses **4–10 fully covered** down to lettered sub-requirements (incl. 6.3, a 2024 amendment).
   - **All 93 Annex A controls MISSING as nodes** — the entire control catalog is absent; only the 4 themes exist. Largest gap.
@@ -257,8 +288,9 @@ documents to the KB.
 ### 13. NERC
 - **Path:** framework-files/NERC
 - **Source:** KB 2/USA/NERC CIP.pdf
-- **Status:** ❌ Significant gaps (**correct source absent from KB**)
+- **Status:** ❌ Significant gaps (**correct source absent from KB**) — *internal-consistency fixes applied 2026-07-20 (pass 2)*
 - **CSV count:** 46
+- **⚠️ Remediation (pass 2, internal only):** Corrected 8 `requirement_count` values to match the actual Requirement nodes present; CIP-001 already carries a "Retired" status; CIP-004-R3/R4 dangling parts left flagged (need real source). **Content remains UNVERIFIABLE** — the CIP Reliability Standards must be added to the KB to verify or complete this graph.
 - **Findings:**
   - **Source confirmed by direct inspection:** the only NERC file in KB 2/KB 3 is the *"NERC Critical Infrastructure Protection Roadmap — 2025 Work Plan Priority" (Jan 2026)* — a planning report, **not the CIP Reliability Standards**. It contains no requirement text, VRFs/VSLs, or measures. The CSVs' standard/requirement structure cannot be verified against it, and **no correct source exists in the KB to verify against.**
   - Node CSVs model the actual CIP standards (14 standards, 23 requirements, 16 parts) from general knowledge; includes retired CIP-001.
@@ -268,8 +300,9 @@ documents to the KB.
 ### 14. NIST AI RMF
 - **Path:** framework-files/NIST AI RMF
 - **Source:** KB 2/Europe/NIST AI Risk Management Framework.pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ✅ Verified — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 3
+- **✅ Remediation (pass 2):** Rebuilt the taxonomy from the source Core tables — 4 functions, 19 numbered categories (GOVERN 1–6, MAP 1–5, MEASURE 1–4, MANAGE 1–4), and 72 subcategories with verbatim descriptions; the fabricated coded taxonomy (GV.AT, MP.AI…) was fully replaced. Counts and FKs verified.
 - **Findings:**
   - Functions match by **name only** (GOVERN/MAP/MEASURE/MANAGE); assigned IDs (GV/MP/MS/MG) and descriptions do not appear in the source.
   - **Category taxonomy does not correspond to the source:** CSV uses coded GV.AT/GV.GV/MP.AI… (19 categories); the PDF uses numbered GOVERN 1–6 / MAP 1–5 / MEASURE 1–4 / MANAGE 1–4. None of the CSV category IDs/names exist in the PDF.
@@ -299,8 +332,9 @@ documents to the KB.
 ### 17. NIST PMF 1.1
 - **Path:** framework-files/NIST PMF 1.1
 - **Source:** KB 3/NIST Privacy Framework 1.1 (CSWP 40 IPD).pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ✅ Verified — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 6
+- **✅ Remediation (pass 2):** Rebuilt from Table 2 of the IPD — 20 categories (added GV.PO-P, CM.PO-P, PR.PO-P), 104 subcategories re-authored to 1.1 wording (new ones added, dropped/relocated 1.0 ones removed), fabricated AI columns removed from Objectives/Tiers, and summary counts corrected to 20/104.
 - **Findings:**
   - **The Core is the 1.0 catalog mislabeled as 1.1.** 5 Functions match, but Categories = 17 vs the 1.1 Core's 20; three whole 1.1 categories absent (**GV.PO-P, CM.PO-P, PR.PO-P**).
   - Missing new 1.1 subcategories (ID.BE-P6, GV.RM-P5/6/7, PR.DS-P9/10…); retains 1.0 subcategories the draft moved/withdrew.
@@ -310,8 +344,9 @@ documents to the KB.
 ### 18. NIST RMF
 - **Path:** framework-files/NIST RMF
 - **Source:** KB 2/Europe/NIST RMF SP.800-37r2.pdf
-- **Status:** ❌ Significant gaps
-- **CSV count:** 5
+- **Status:** ✅ Verified — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
+- **CSV count:** 5 → 7 (Tasks + Relationships added)
+- **✅ Remediation (pass 2):** Added all 48 RMF tasks (P-1…M-7) with outcomes, a Relationships CSV (Step→Task, Control→Family), and expanded Roles 6→19 (SISO relabeled); emptied the fabricated Systems.csv. *(Controls remain SP 800-53 reference samples, which 800-37 does not itself enumerate.)*
 - **Findings:**
   - **No relationship CSVs** — all 5 are node files; no step→task, task→role, or task→outcome edges.
   - **7/7 steps** captured accurately (the only well-verified set).
@@ -321,8 +356,9 @@ documents to the KB.
 ### 19. NIS_2
 - **Path:** framework-files/NIS_2
 - **Source:** KB 2/Europe/NIS2 Directive (Network and Information Security).pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ✅ Verified — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 17
+- **✅ Remediation (pass 2):** Un-swapped Articles 3 and 6 (Art 3 = Essential/important entities; Art 6 = Definitions, 41 terms); corrected the chapter structure (IV = risk-management, V = jurisdiction, VI = Information Sharing restored) and Article 29/30 labels; fixed the downstream deadlines/obligations/agent-types/concepts that had inherited the errors.
 - **Findings:**
   - **Articles 3 and 6 are swapped:** CSV labels Art 3 = Definitions (52 terms) and Art 6 = entities; the PDF is the reverse (Art 3 = entities, **Art 6 = Definitions, 41 terms**). Error propagates into `concepts.csv`.
   - **Chapter structure substantially wrong:** invents a non-existent "Chapter IV Policies/Vulnerabilities (Art 18-19)", mislabels Ch V, and **omits the Information Sharing chapter**; several ranges wrong.
@@ -370,8 +406,9 @@ documents to the KB.
 ### 23. SHIELD
 - **Path:** framework-files/SHIELD
 - **Source:** KB 2/USA/NY Shield Act.pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ⚠️ Improved — *audited/remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 34
+- **✅ Remediation (pass 2):** Full referential-integrity audit — 0 dangling references (all endpoints resolve); the 6 statutory CSVs verified accurate against the source (penalties, SOL, small-business definition, safe harbor); removed 1 ungrounded statutory row (`PAI-EXCL-002`). *Remaining:* ~28 synthetic operational CSVs and 2 redundant double-load relationship files — pruning is left as a user decision.
 - **Findings:**
   - The **6 "SHIELD - *" statutory node CSVs are accurate** — §899-bb safeguards structure, penalties ($5,000/violation; $20/instance capped $250,000), data definitions, legal entities, and HIPAA/GLBA/NYDFS safe harbor all match.
   - The **remaining ~28 CSVs are entirely fabricated operational data** (invented companies, persons, auditors, breach incidents, dates, scores) with no basis in the statute — ~80% of files.
@@ -392,8 +429,9 @@ documents to the KB.
 ### 25. TISAX
 - **Path:** framework-files/TISAX
 - **Source:** KB 2/Germany/TISAX Participant Handbook.pdf
-- **Status:** ❌ Significant gaps
+- **Status:** ⚠️ Improved — *remediated 2026-07-20 (pass 2)* (findings below were the pre-fix state)
 - **CSV count:** 38
+- **✅ Remediation (pass 2):** Replaced the 5 invented assessment objectives with the canonical 12 (Info high/very high, Confidential, Strictly confidential, availability tiers, Proto*, Data, Special data) with handbook descriptions; added the label-hierarchy (superset) relationships; corrected the 3 ISA criteria catalogues and the AL1/2/3 attributes. *Remaining:* instance-level rows (fictional orgs/auditors/assessments) are still synthetic and flagged; the VDA ISA control catalog is legitimately a separate document.
 - **Findings:**
   - **The 12 canonical assessment objectives/labels are NOT captured** — `TISAX_AssessmentObjective_nodes.csv` invents 5 unrelated objectives instead of the handbook's twelve (Info high/very high, Confidential, Strictly confidential, availability tiers, Proto*, Data, Special data).
   - Label-hierarchy supersets absent; the 3 ISA criteria catalogues misrepresented (fabricated "Fundamentals/Advanced/Specialized").

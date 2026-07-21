@@ -558,6 +558,13 @@ MATCH (s:Section {section_id: pair.s, regional_standard_regulation_id: 'CPA 1.0'
 MATCH (r:Rule {rule_id: pair.ru, regional_standard_regulation_id: 'CPA 1.0'})
 MERGE (s)-[:SECTION_IMPLEMENTED_BY_RULE]->(r);
 """
+#Rule → Part
+rule_part ="""
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (ru:Rule {rule_id: row.rule_id, regional_standard_regulation_id: 'CPA 1.0'})
+MATCH (p:Part {node_id: row.parent_rule_part_id, regional_standard_regulation_id: 'CPA 1.0'})
+MERGE (ru)-[:RULE_IN_PART]->(p);
+"""
 # Section → Definitions
 section_definition ="""
 UNWIND [
@@ -834,88 +841,88 @@ logger.info("Loading graph structure...")
 client.query(regional_standard_and_regulation)
 time.sleep(2)
 
-client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Title_nodes.csv"))
+client.query(title.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Title_nodes.csv"))
 time.sleep(2)
 
-client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Article_nodes.csv"))
+client.query(article.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Article_nodes.csv"))
 time.sleep(2)
 
-client.query(part.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Part_nodes.csv"))
+client.query(part.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Part_nodes.csv"))
 time.sleep(2)
 
-client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Section_nodes.csv"))
+client.query(section.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Section_nodes.csv"))
 time.sleep(2)
 
-client.query(rule.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Rule_nodes.csv"))
+client.query(rule.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Rule_nodes.csv"))
 time.sleep(2)
 
-client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Definition_nodes.csv"))
+client.query(definition.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Definition_nodes.csv"))
 time.sleep(2)
 
-client.query(consumer_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ConsumerRight_CORRECTED.csv"))
+client.query(consumer_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_ConsumerRight_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(opt_out_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_OptOutRight_CORRECTED.csv"))
+client.query(opt_out_rights.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_OptOutRight_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(controller_duties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ControllerDuty_CORRECTED.csv"))
+client.query(controller_duties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_ControllerDuty_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(enforcement_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_EnforcementAuthority_nodes.csv"))
+client.query(enforcement_authority.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_EnforcementAuthority_nodes.csv"))
 time.sleep(2)
 
-client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_CivilPenalty_CORRECTED.csv"))
+client.query(civil_penalty.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_CivilPenalty_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(applicability_threshold.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ApplicabilityThreshold_CORRECTED.csv"))
+client.query(applicability_threshold.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_ApplicabilityThreshold_CORRECTED.csv"))
 time.sleep(2)
 
-client.query(data_processing_agreement_template.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProcessingAgreementTemplate_nodes.csv"))
+client.query(data_processing_agreement_template.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_DataProcessingAgreementTemplate_nodes.csv"))
 time.sleep(2)
 
-client.query(universal_opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_UniversalOptOutMechanism_nodes.csv"))
+client.query(universal_opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_UniversalOptOutMechanism_nodes.csv"))
 time.sleep(2)
 
-client.query(de_identified_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DeidentifiedData_nodes.csv"))
+client.query(de_identified_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_DeidentifiedData_nodes.csv"))
 time.sleep(2)
 
-client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ThirdParty_nodes.csv"))
-time.sleep(2)
-
-
-
-client.query(consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Consent_nodes.csv"))
-time.sleep(2)
-
-client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_Consumer_nodes.csv"))
-time.sleep(2)
-
-client.query(consumer_request.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ConsumerRequest_nodes.csv"))
-time.sleep(2)
-
-client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataBreach_nodes.csv"))
+client.query(third_party.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_ThirdParty_nodes.csv"))
 time.sleep(2)
 
 
-client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProcessor_nodes.csv"))
+
+client.query(consent.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Consent_nodes.csv"))
 time.sleep(2)
 
-client.query(data_protection_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_DataProtectionAssessment_nodes.csv"))
+client.query(consumer.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Consumer_nodes.csv"))
 time.sleep(2)
 
-client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_OptOutMechanism_nodes.csv"))
+client.query(consumer_request.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_ConsumerRequest_nodes.csv"))
 time.sleep(2)
 
-client.query(personal_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_PersonalData_nodes.csv"))
+client.query(data_breach.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_DataBreach_nodes.csv"))
 time.sleep(2)
 
-client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_PrivacyNotice_nodes.csv"))
+
+client.query(data_processor.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_DataProcessor_nodes.csv"))
 time.sleep(2)
 
-client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_ProcessingActivity_nodes.csv"))
+client.query(data_protection_assessment.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_DataProtectionAssessment_nodes.csv"))
 time.sleep(2)
 
-client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/CPA/CPA_SensitiveData_Complete.csv"))
+client.query(opt_out_mechanism.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_OptOutMechanism_nodes.csv"))
+time.sleep(2)
+
+client.query(personal_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_PersonalData_nodes.csv"))
+time.sleep(2)
+
+client.query(privacy_notice.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_PrivacyNotice_nodes.csv"))
+time.sleep(2)
+
+client.query(processing_activity.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_ProcessingActivity_nodes.csv"))
+time.sleep(2)
+
+client.query(sensitive_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_SensitiveData_Complete.csv"))
 time.sleep(2)
 
 
@@ -936,6 +943,9 @@ client.query(regulation_rule)
 time.sleep(2)
 
 client.query(section_rule)
+time.sleep(2)
+
+client.query(rule_part.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/CPA/CPA_Rule_nodes.csv"))
 time.sleep(2)
 
 client.query(section_definition)

@@ -154,24 +154,24 @@ client.query(IS_frameworks_standard)
 time.sleep(2)
 logger.info('ISFrameworksAndStandard')
 
-client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Functions.csv"))
+client.query(functions.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Functions.csv"))
 time.sleep(2)
 logger.info('Function')
 
-client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Categories.csv"))
+client.query(categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Categories.csv"))
 time.sleep(2)
 logger.info('Category')
 
-client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Subcategories.csv"))
+client.query(subcategories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Subcategories.csv"))
 time.sleep(2)
 logger.info('Subcategory')
 
-client.query(objectives.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Objectives.csv"))
+client.query(objectives.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Objectives.csv"))
 time.sleep(2)
 logger.info('Objective')
 
 
-client.query(implementation_tiers.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Tiers.csv"))
+client.query(implementation_tiers.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20PMF%201.1/NIST%20PMF%201.1%20-%20Tiers.csv"))
 time.sleep(2)
 logger.info('ImplementationTier')
 

@@ -1,20 +1,20 @@
 Category,Category_ID,Function_ID
-Organizational AI Risk Awareness and Training,GV.AT,GV
-AI Governance and Oversight,GV.GV,GV
-Management and Monitoring of AI Risks,GV.MT,GV
-AI Risk Management,GV.RM,GV
-AI Strategy,GV.ST,GV
-Multi-Stakeholder Engagement,GV.MS,GV
-AI System Context,MP.AI,MP
-AI System Categorization,MP.CT,MP
-Benefits and Costs,MP.BC,MP
-Impacts,MP.IM,MP
-AI Risks,MP.RK,MP
-Assessment and Assurance,MS.AA,MS
-Information Integrity,MS.IN,MS
-AI System Monitoring,MS.MN,MS
-Risk Tracking,MS.RT,MS
-Risk Mitigation,MG.RM,MG
-Incident Response,MG.IR,MG
-Oversight,MG.OV,MG
-Implementation,MG.IM,MG
+"Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",GOVERN 1,GV
+"Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",GOVERN 2,GV
+"Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",GOVERN 3,GV
+Organizational teams are committed to a culture that considers and communicates AI risk.,GOVERN 4,GV
+Processes are in place for robust engagement with relevant AI actors.,GOVERN 5,GV
+Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.,GOVERN 6,GV
+Context is established and understood.,MAP 1,MP
+Categorization of the AI system is performed.,MAP 2,MP
+"AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood.",MAP 3,MP
+Risks and benefits are mapped for all components of the AI system including third-party software and data.,MAP 4,MP
+"Impacts to individuals, groups, communities, organizations, and society are characterized.",MAP 5,MP
+Appropriate methods and metrics are identified and applied.,MEASURE 1,MS
+AI systems are evaluated for trustworthy characteristics.,MEASURE 2,MS
+Mechanisms for tracking identified AI risks over time are in place.,MEASURE 3,MS
+Feedback about efficacy of measurement is gathered and assessed.,MEASURE 4,MS
+"AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",MANAGE 1,MG
+"Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",MANAGE 2,MG
+AI risks and benefits from third-party entities are managed.,MANAGE 3,MG
+"Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly.",MANAGE 4,MG

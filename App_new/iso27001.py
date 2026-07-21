@@ -56,6 +56,16 @@ ON CREATE SET
     c.category_id = row.category_id;
 """
 
+# UPDATED: Added framework_id and switched to MERGE.
+annex_a_controls = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (ctrl:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO27001_2022'})
+ON CREATE SET
+    ctrl.control_name = row.control_name,
+    ctrl.category_id = row.category_id,
+    ctrl.description = row.description;
+"""
+
 # UPDATED: Added framework_id and switched to MERGE. Attribute combination is the key.
 attributes = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
@@ -104,7 +114,15 @@ MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
 MATCH (r:Requirement {IS_frameworks_standard_id: 'ISO27001_2022'})
 MERGE (c)-[:CLAUSE_REQUIRES_REQUIREMENT]->(r);
 """
-# Framework -> Attributes relationships 
+# UPDATED: Scoped MATCH to framework_id. Links Annex A controls to their Control Category.
+control_categories_controls = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MATCH (cat:ControlCategory {category_id: row.category_id, IS_frameworks_standard_id: 'ISO27001_2022'})
+MATCH (ctrl:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO27001_2022'})
+MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROLS]->(ctrl);
+"""
+
+# Framework -> Attributes relationships
 framework_attributes_rel = """
 MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO27001_2022'})
 MATCH (a:Attribute {IS_frameworks_standard_id: 'ISO27001_2022'})
@@ -134,19 +152,22 @@ logger.info("Loading graph structure...")
 client.query(framework_standard)
 time.sleep(2)
 
-client.query(control_categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Control%20Categories.csv"))
+client.query(control_categories.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Control%20Categories.csv"))
 time.sleep(2)
 
-# client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
+# client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
 # time.sleep(2)
 
-client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
+client.query(clauses.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Clauses.csv"))
 time.sleep(2)
 
-client.query(attributes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Attributes.csv"))
+client.query(attributes.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Attributes.csv"))
 time.sleep(2)
 
-client.query(requirements.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2027001/ISO%2027001%20-%20Requirements.csv"))
+client.query(requirements.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Requirements.csv"))
+time.sleep(2)
+
+client.query(annex_a_controls.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Annex%20A%20Controls.csv"))
 time.sleep(2)
 
 
@@ -161,6 +182,9 @@ client.query(control_categories_clauses)
 time.sleep(2)
 
 client.query(clause_requirements)
+time.sleep(2)
+
+client.query(control_categories_controls.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027001/ISO%2027001%20-%20Annex%20A%20Control%20Category%20Mapping.csv"))
 time.sleep(2)
 
 client.query(framework_attributes_rel)

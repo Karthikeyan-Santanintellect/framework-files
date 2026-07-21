@@ -1,4 +1,4 @@
 level,description
-Level 1 (Validated),Foundational implementation; policy/procedure documented; self-assessment allowed
-Level 2 (Validated),Mature implementation; consistent operation; regular testing; evidence of effectiveness
-Level 3 (Certified),Optimized implementation; continuous monitoring; third-party certification required
+Level 1 (Validated),Level 1 Implementation Requirements - baseline requirements applicable to all in-scope systems; additional requirements are layered on by Organizational, System, and Regulatory risk factors
+Level 2 (Validated),Level 2 Implementation Requirements - additional requirements triggered when Level 2 Organizational, System, or Regulatory risk factors apply (e.g., larger bed/record/transaction volumes or specific regulatory factors)
+Level 3 (Certified),Level 3 Implementation Requirements - most stringent requirements triggered when Level 3 Organizational, System, or Regulatory risk factors apply

@@ -1,2 +1,12 @@
 node_id,part_number,part_name,legal_citation,effective_date,parent_article_id,regional_standard_regulation_id
 PART-13,13,Colorado Privacy Act,C.R.S. §§ 6-1-1301 et seq.,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-1,1,General Applicability,4 CCR 904-3 Part 1,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-2,2,Definitions,4 CCR 904-3 Part 2,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-3,3,Consumer Disclosures,4 CCR 904-3 Part 3,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-4,4,Consumer Personal Data Rights,4 CCR 904-3 Part 4,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-5,5,Universal Opt-Out Mechanism,4 CCR 904-3 Part 5,01-07-2024,ARTICLE-1,CPA 1.0
+RULE-PART-6,6,Duties of Controllers,4 CCR 904-3 Part 6,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-7,7,Consent,4 CCR 904-3 Part 7,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-8,8,Data Protection Assessments,4 CCR 904-3 Part 8,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-9,9,Profiling,4 CCR 904-3 Part 9,01-07-2023,ARTICLE-1,CPA 1.0
+RULE-PART-10,10,Materials Incorporated by Reference,4 CCR 904-3 Part 10,01-07-2023,ARTICLE-1,CPA 1.0

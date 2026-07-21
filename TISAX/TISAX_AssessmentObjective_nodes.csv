@@ -1,6 +1,13 @@
-objective_id,name,category,description,isa_catalogue_ref,control_questions_count,criticality_level,risk_area,requirements_version,related_standards,evidence_types_required,typical_effort_hours
-OBJ-001,Information Security Management System,InformationSecurity,"Assessment of ISMS policies, processes and controls",ISA 1.1,45,High,Governance,TISAX 5.0,ISO 27001,Policies; Procedures; Training records,80
-OBJ-002,Data Protection and Privacy,DataProtection,Compliance with data protection regulations,ISA 1.2,38,Critical,Data Protection,TISAX 5.0,ISO 27001; ISO 9001,Data registers; DPAs; Audit logs,70
-OBJ-003,Prototype Protection,PrototypeProtection,Protection of sensitive product information,ISA 1.3,25,High,IP Protection,TISAX 5.0,ISO 27001,IP Policies; Contracts; Access logs,50
-OBJ-004,Access Control and Authentication,InformationSecurity,Access controls and identity management,ISA 2.1,32,Critical,Access,TISAX 5.0,ISO 27001,User lists; MFA configs; Access reviews,60
-OBJ-005,Risk and Vulnerability Management,InformationSecurity,Risk assessment and vulnerability management,ISA 2.2,40,High,Risk Management,TISAX 5.0,ISO 27005,Risk registers; Assessment reports,75
+objective_id,number,name,description,isa_criteria_catalogues,assessment_level,catalogue_group
+OBJ-001,1,Info high,Handling of information with high protection needs,Information Security,AL2,InformationSecurity
+OBJ-002,2,Info very high,Handling of information with very high protection needs,Information Security,AL3,InformationSecurity
+OBJ-003,3,Confidential,Handling of information with high protection needs in the context of confidentiality (access to confidential information),Information Security,AL2,InformationSecurity
+OBJ-004,4,Strictly confidential,Handling of information with very high protection needs in the context of confidentiality (access to strictly confidential information),Information Security,AL3,InformationSecurity
+OBJ-005,5,High availability,Handling of information with high protection needs in the context of availability (high availability of information),Information Security,AL2,InformationSecurity
+OBJ-006,6,Very high availability,Handling of information with very high protection needs in the context of availability (very high availability of information),Information Security,AL3,InformationSecurity
+OBJ-007,7,Proto parts,Protection of Prototype Parts and Components,Prototype Protection,AL3,PrototypeProtection
+OBJ-008,8,Proto vehicles,Protection of Prototype Vehicles,Prototype Protection,AL3,PrototypeProtection
+OBJ-009,9,Test vehicles,Handling of Test Vehicles,Prototype Protection,AL2,PrototypeProtection
+OBJ-010,10,Proto events,Protection of Prototypes during Events and Film or Photo Shoots,Prototype Protection,AL2,PrototypeProtection
+OBJ-011,11,Data,Data protection according to Article 28 (Processor) of the European General Data Protection Regulation (GDPR),Information Security; Data Protection,AL2,DataProtection
+OBJ-012,12,Special data,Data protection according to Article 28 (Processor) of the European General Data Protection Regulation (GDPR) with special categories of personal data as specified in Article 9 of the GDPR,Information Security; Data Protection,AL3,DataProtection

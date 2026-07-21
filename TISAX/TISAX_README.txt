@@ -9,7 +9,7 @@ NODE CSV FILES (10 files):
 1. TISAX_Organization_nodes.csv - Automotive suppliers, OEMs, service providers (5 nodes)
 2. TISAX_AssessmentLevel_nodes.csv - Maturity levels AL1, AL2, AL3 (3 nodes)
 3. TISAX_Assessment_nodes.csv - Assessment process instances (6 nodes)
-4. TISAX_AssessmentObjective_nodes.csv - Security objectives assessed (5 nodes)
+4. TISAX_AssessmentObjective_nodes.csv - The 12 canonical TISAX assessment objectives / labels (12 nodes)
 5. TISAX_AuditProvider_nodes.csv - TISAX-accredited audit firms (4 nodes)
 6. TISAX_ISACatalogue_nodes.csv - Assessment criteria catalogues (3 nodes)
 7. TISAX_ControlQuestion_nodes.csv - Specific security control questions (8 nodes)
@@ -45,10 +45,10 @@ Assessment Levels:
 - AL2: Moderate security assessment (third-party audit required)
 - AL3: Advanced security assessment (full external audit required)
 
-ISA Catalogues:
-- ISA 1: Information Security Fundamentals (180 questions)
-- ISA 2: Advanced Security (250 questions)
-- ISA 3: Prototype Protection (120 questions)
+ISA Catalogues (the ISA has three criteria catalogues by topic, per Handbook 5.2.2.1):
+- ISA-001: Information Security
+- ISA-002: Prototype Protection
+- ISA-003: Data Protection
 
 Protection Levels:
 - Basic: Minimal protection measures
@@ -71,5 +71,38 @@ Assessment Validity: Typically 3 years from certification date
 Audit Provider Accreditation: Required for AL2 and AL3 assessments
 Compliance Coverage: ISO 27001, ISO 27002, BSI IT-Grundschutz alignment
 
-Document Version: 1.0
+Document Version: 1.1
 Status: Ready for Neo4j Implementation
+
+═══════════════════════════════════════════════════════════════════════
+DATA PROVENANCE / CORRECTIONS (grounded in TISAX Participant Handbook 2.8,
+ENX doc ID 602)
+═══════════════════════════════════════════════════════════════════════
+
+Framework-layer (authoritative, sourced from the handbook):
+- TISAX_AssessmentObjective_nodes.csv: the 12 canonical assessment
+  objectives / TISAX labels (Handbook Table 3, p.33). Attributes
+  isa_criteria_catalogues from Table 7 (p.58-59), assessment_level from
+  Table 5 (p.39), catalogue_group from the color coding.
+- TISAX_LABEL_HIERARCHY_relationships.csv (NEW): the label superset
+  hierarchy from Handbook 5.4.14.1, p.98 (e.g. "Info high" superset of
+  "Confidential"/"High availability"; "Very high availability" superset of
+  "High availability"; "Special data" superset of "Data").
+- TISAX_ISACatalogue_nodes.csv: the three ISA criteria catalogues by topic
+  (Information Security, Prototype Protection, Data Protection), Handbook
+  5.2.2.1, p.58. Fabricated versions/URLs/question-counts removed.
+- TISAX_AssessmentLevel_nodes.csv: AL1/AL2/AL3 attributes from Handbook
+  4.3.3.5 / Table 6 (p.40-42). 3-year label validity retained (5.4.14.2).
+  Note: the VDA ISA control catalog is a separate document and is
+  intentionally NOT modeled here.
+
+SYNTHETIC / FICTIONAL instance data (NOT from the handbook - illustrative
+only, flagged for review):
+- Organizations, audit providers, participants, assessments, results,
+  findings, and all instance-level relationship rows (ASS-xxx, ORG-xxx,
+  PO-xxx, CQ-xxx, etc.) contain invented organisation/auditor names,
+  dates, and metrics.
+- Instance relationship rows that reference OBJ-xxx and ISA-xxx IDs
+  (e.g. TISAX_CONTAINS_ASSESSMENT_OBJECTIVE, TISAX_ISA_CATALOGUE,
+  TISAX_ISA_CONTAINS_QUESTIONS) still resolve to valid node IDs but their
+  pairings, counts, weights and dates are synthetic and were not corrected.

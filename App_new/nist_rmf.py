@@ -127,6 +127,34 @@ MATCH (r:Role {IS_frameworks_standard_id: 'NIST_RMF_5.2'})
 MERGE (f)-[:FRAMEWORK_DEFINES_ROLE]->(r)
 """
 
+# UPDATED: Using MERGE and adding framework_id.
+tasks = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+MERGE (t:Task {IS_frameworks_standard_id: 'NIST_RMF_5.2', task_id: row.task_id})
+ON CREATE SET
+    t.name = row.task_name,
+    t.step_id = row.step_id,
+    t.description = row.task_description;
+"""
+
+# Step -> Task via HAS_TASK rows in the Relationships CSV.
+step_task_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.relationship = 'HAS_TASK' AND row.source_type = 'Step' AND row.target_type = 'Task'
+MATCH (s:Step {IS_frameworks_standard_id: 'NIST_RMF_5.2', step_id: row.source_id})
+MATCH (t:Task {IS_frameworks_standard_id: 'NIST_RMF_5.2', task_id: row.target_id})
+MERGE (s)-[:STEP_HAS_TASK]->(t);
+"""
+
+# Control -> ControlFamily via BELONGS_TO rows in the Relationships CSV.
+control_family_belongs_rel = """
+LOAD CSV WITH HEADERS FROM '$file_path' AS row
+WITH row WHERE row.relationship = 'BELONGS_TO' AND row.source_type = 'Control' AND row.target_type = 'ControlFamily'
+MATCH (c:Control {IS_frameworks_standard_id: 'NIST_RMF_5.2', control_id: row.source_id})
+MATCH (cf:ControlFamily {IS_frameworks_standard_id: 'NIST_RMF_5.2', family_id: row.target_id})
+MERGE (c)-[:CONTROL_BELONGS_TO_CONTROL_FAMILY]->(cf);
+"""
+
 
 
 
@@ -154,26 +182,30 @@ client.query(framework_and_standard)
 time.sleep(2)
 logger.info('Framework')
 
-client.query(steps.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Steps.csv"))
+client.query(steps.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Steps.csv"))
 time.sleep(2)
 logger.info('Steps')
 
-client.query(control_families.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Control%20Families.csv"))
+client.query(control_families.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Control%20Families.csv"))
 time.sleep(2)
 logger.info('Control Families')
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Controls.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Controls.csv"))
 time.sleep(2)
 logger.info('Controls')
 
-client.query(roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Roles.csv"))
+client.query(roles.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Roles.csv"))
 time.sleep(2)
 logger.info('Roles')
 
 
-client.query(systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIST%20RMF/NIST%20RMF%20-%20Systems.csv"))
+client.query(systems.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Systems.csv"))
 time.sleep(2)
 logger.info('Systems')
+
+client.query(tasks.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Tasks.csv"))
+time.sleep(2)
+logger.info('Tasks')
 
 # Relationships
 logger.info("Creating relationships...")
@@ -193,6 +225,12 @@ client.query(control_system_rel)
 time.sleep(2)
 
 client.query(framework_roles_rel)
+time.sleep(2)
+
+client.query(step_task_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Relationships.csv"))
+time.sleep(2)
+
+client.query(control_family_belongs_rel.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIST%20RMF/NIST%20RMF%20-%20Relationships.csv"))
 time.sleep(2)
 
 

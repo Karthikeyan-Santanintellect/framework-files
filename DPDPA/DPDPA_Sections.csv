@@ -1,45 +1,45 @@
 section_id,section_number,chapter_id,title
-SEC-01,1,CH-01,"Short title, extent and commencement"
-SEC-02,2,CH-01,Definitions
-SEC-03,3,CH-01,Applicability
-SEC-04,4,CH-02,Data Fiduciary to provide notice
-SEC-05,5,CH-02,Consent to processing
-SEC-06,6,CH-02,Processing of personal data
-SEC-07,7,CH-02,Reasonable security practices
-SEC-08,8,CH-02,Personal data breach notification
-SEC-09,9,CH-02,Grievance redressal
-SEC-10,10,CH-02,Retention of personal data
-SEC-11,11,CH-03,Right to access personal data
-SEC-12,12,CH-03,Right to correction of personal data
-SEC-13,13,CH-03,Right to erasure of personal data
-SEC-14,14,CH-03,Right to grievance redressal
-SEC-15,15,CH-03,Data Principal duties
-SEC-16,16,CH-04,Significant Data Fiduciary
-SEC-17,17,CH-04,Obligations of Significant Data Fiduciaries
-SEC-18,18,CH-04,Consent Manager
-SEC-19,19,CH-04,Data Protection Impact Assessment
-SEC-20,20,CH-04,Audit of Significant Data Fiduciaries
-SEC-21,21,CH-05,Data Processor
-SEC-22,22,CH-05,Processor to be bound by contract
-SEC-23,23,CH-05,Sub-processing
-SEC-24,24,CH-05,Transfer of personal data
-SEC-25,25,CH-05,International transfers
-SEC-26,26,CH-06,Data Protection Impact Assessment
-SEC-27,27,CH-06,Board of Fiduciary
-SEC-28,28,CH-06,Data Protection Officer
-SEC-29,29,CH-07,Personal data of children
-SEC-30,30,CH-07,Parental consent for children
-SEC-31,31,CH-07,Personal data of other vulnerable persons
-SEC-32,32,CH-08,Exemptions
-SEC-33,33,CH-08,Processing for certain purposes
-SEC-34,34,CH-08,Restricted processing
-SEC-35,35,CH-09,Authority
-SEC-36,36,CH-09,Powers of Authority
-SEC-37,37,CH-09,Investigation and enforcement
-SEC-38,38,CH-09,Appeal
-SEC-39,39,CH-09,Penalties for failure to protect personal data
-SEC-40,40,CH-09,Penalties for unauthorized processing
-SEC-41,41,CH-09,Penalties for non-compliance
-SEC-42,42,CH-09,Offence and penalty for obstruction
-SEC-43,43,CH-09,Compensation
-SEC-44,44,CH-09,Rules and regulations
+SEC-01,1,CHAP-01,Short title and commencement
+SEC-02,2,CHAP-01,Definitions
+SEC-03,3,CHAP-01,Application of Act
+SEC-04,4,CHAP-02,Grounds for processing personal data
+SEC-05,5,CHAP-02,Notice
+SEC-06,6,CHAP-02,Consent
+SEC-07,7,CHAP-02,Certain legitimate uses
+SEC-08,8,CHAP-02,General obligations of Data Fiduciary
+SEC-09,9,CHAP-02,Processing of personal data of children
+SEC-10,10,CHAP-02,Additional obligations of Significant Data Fiduciary
+SEC-11,11,CHAP-03,Right to access information about personal data
+SEC-12,12,CHAP-03,Right to correction and erasure of personal data
+SEC-13,13,CHAP-03,Right of grievance redressal
+SEC-14,14,CHAP-03,Right to nominate
+SEC-15,15,CHAP-03,Duties of Data Principal
+SEC-16,16,CHAP-04,Processing of personal data outside India
+SEC-17,17,CHAP-04,Exemptions
+SEC-18,18,CHAP-05,Establishment of Board
+SEC-19,19,CHAP-05,Composition and qualifications for appointment of Chairperson and Members
+SEC-20,20,CHAP-05,"Salary, allowances payable to and term of office"
+SEC-21,21,CHAP-05,Disqualifications for appointment and continuation as Chairperson and Members of Board
+SEC-22,22,CHAP-05,Resignation by Members and filling of vacancy
+SEC-23,23,CHAP-05,Proceedings of Board
+SEC-24,24,CHAP-05,Officers and employees of Board
+SEC-25,25,CHAP-05,Members and officers to be public servants
+SEC-26,26,CHAP-05,Powers of Chairperson
+SEC-27,27,CHAP-06,Powers and functions of Board
+SEC-28,28,CHAP-06,Procedure to be followed by Board
+SEC-29,29,CHAP-07,Appeal to Appellate Tribunal
+SEC-30,30,CHAP-07,Orders passed by Appellate Tribunal to be executable as decree
+SEC-31,31,CHAP-07,Alternate dispute resolution
+SEC-32,32,CHAP-07,Voluntary undertaking
+SEC-33,33,CHAP-08,Penalties
+SEC-34,34,CHAP-08,Crediting sums realised by way of penalties to Consolidated Fund of India
+SEC-35,35,CHAP-09,Protection of action taken in good faith
+SEC-36,36,CHAP-09,Power to call for information
+SEC-37,37,CHAP-09,Power of Central Government to issue directions
+SEC-38,38,CHAP-09,Consistency with other laws
+SEC-39,39,CHAP-09,Bar of jurisdiction
+SEC-40,40,CHAP-09,Power to make rules
+SEC-41,41,CHAP-09,Laying of rules and notifications
+SEC-42,42,CHAP-09,Power to amend Schedule
+SEC-43,43,CHAP-09,Power to remove difficulties
+SEC-44,44,CHAP-09,Amendments to certain Acts

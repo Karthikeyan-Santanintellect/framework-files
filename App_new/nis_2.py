@@ -393,52 +393,52 @@ logger.info("Loading graph structure...")
 client.query(regional_regulation)
 time.sleep(2)
 
-client.query(chapters.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/chapters.csv"))
+client.query(chapters.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/chapters.csv"))
 time.sleep(2)
 
-client.query(articles.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/articles.csv"))
+client.query(articles.replace('$file_path', "https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/articles.csv"))
 time.sleep(2)
 
-client.query(certification_bodies.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/certification_body.csv"))
+client.query(certification_bodies.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/certification_body.csv"))
 time.sleep(2)
 
-client.query(agent_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/agent-types.csv"))
+client.query(agent_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/agent-types.csv"))
 time.sleep(2)
 
-client.query(concepts.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/concepts.csv"))
+client.query(concepts.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/concepts.csv"))
 time.sleep(2)
 
-client.query(incidents.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/incidents.csv"))
+client.query(incidents.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/incidents.csv"))
 time.sleep(2)
 
-client.query(deadlines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/deadlines.csv"))
+client.query(deadlines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/deadlines.csv"))
 time.sleep(2)
 
-client.query(control_frameworks.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/control-frameworks.csv"))
+client.query(control_frameworks.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/control-frameworks.csv"))
 time.sleep(2)
 
-client.query(obligations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/obligations.csv"))
+client.query(obligations.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/obligations.csv"))
 time.sleep(2)
 
-client.query(member_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/member_state.csv"))
+client.query(member_state.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/member_state.csv"))
 time.sleep(2)
 
-client.query(organizational_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/organizational_data.csv"))
+client.query(organizational_data.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/organizational_data.csv"))
 time.sleep(2)
 
-client.query(sector.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/sectors.csv"))
+client.query(sector.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/sectors.csv"))
 time.sleep(2)
 
-client.query(penalties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/penalties.csv"))
+client.query(penalties.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/penalties.csv"))
 time.sleep(2)
 
-client.query(recitals.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/recitals.csv"))
+client.query(recitals.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/recitals.csv"))
 time.sleep(2)
 
-client.query(vulnerability.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/vulnerabilities.csv"))
+client.query(vulnerability.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/vulnerabilities.csv"))
 time.sleep(2)
 
-client.query(service_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/NIS_2/service_types.csv"))
+client.query(service_types.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/NIS_2/service_types.csv"))
 time.sleep(2)
 
 #Relationships

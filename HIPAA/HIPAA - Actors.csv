@@ -10,3 +10,6 @@ SO01,SecurityOfficer,Responsible for security compliance,HIPAA,Governance
 CO01,ComplianceOfficer,Responsible for overall compliance,HIPAA,Governance
 RG01,Regulator,HHS OCR enforcement authority,HIPAA,External
 DS01,DataSubject,Individual/patient,HIPAA,External
+PR01,PersonalRepresentative,"Person legally authorized to make health care decisions for or act on behalf of an individual (or a deceased individual's estate); treated as the individual under the Rule (45 CFR 164.502(g))",HIPAA,External
+MN01,MinorAndParent,"Minor individual; a parent is generally the personal representative except where State/other law provides otherwise",HIPAA,External
+PS01,PlanSponsor,"Employer, union, or employee organization that sponsors a group health plan and may receive limited PHI subject to plan-document restrictions",HIPAA,ThirdParty

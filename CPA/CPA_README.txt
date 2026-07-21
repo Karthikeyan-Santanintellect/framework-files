@@ -45,7 +45,7 @@ Applicability Threshold:
 - Processes data of 100,000+ Colorado residents annually, OR
 - Derives revenue from sale of personal data of 25,000+ Colorado residents
 
-Consumer Rights (CPA § 6-1-1304):
+Consumer Rights (CPA § 6-1-1306):
 - Right to Know: Access personal data collected
 - Right to Delete: Request deletion of personal data
 - Right to Correct: Correct inaccurate data
