@@ -10,8 +10,70 @@ relationships are correctly and completely mapped from that source.
 **Verification date:** 2026-07-20 (source paths independently re-derived)
 **Remediation pass:** 2026-07-20 — the minor-gap frameworks were fixed in place (see Remediation section).
 **Frameworks checked:** 26
-**Final status:** ✅ Verified **25 / 26**. The single exception is **NERC**, whose authoritative
-source (the CIP Reliability Standards) is absent from the KB and could not be obtained.
+**Final status:** ✅ Verified **26 / 26** (2026-07-21). The last open case, **NERC**, was closed
+in pass 4 after the authoritative CIP Reliability Standards were added to KB 3.
+
+## Remediation Pass 4 — NERC Closed (2026-07-21)
+
+The user supplied the missing instrument:
+`source-verifier/KB 3/NERC CIP Reliability Standards (CIP-002 to CIP-014).pdf` — the actual
+Reliability Standards (13 standards, with their full requirement tables, VRFs, VSLs and
+measures), not the planning roadmap that was the only NERC file in KB 2.
+
+| Framework | Source used | Fix applied | New status |
+|-----------|-------------|-------------|-----------|
+| NERC | **KB 3/NERC CIP Reliability Standards (CIP-002 to CIP-014).pdf** | The three framework CSVs were rebuilt from the standards themselves: Standards **15 → 13** (the from-memory CIP-001 and CIP-015 rows were removed — neither is in this instrument), Requirements **24 → 46**, RequirementParts **17 → 138**, all text verbatim. Every requirement now carries its real **VRF, Time Horizon, Measure (M1…Mn) and the four VSL tiers**; every part carries its verbatim *Applicable Systems* and *Measures* columns. Ungrounded columns (`version_proposed`, `ferc_order`, `nerc_project`, invented `scope`) were dropped rather than left fabricated. 0 dangling references — the previously flagged CIP-004-R3/R4 dangling parts are resolved because R3–R6 now exist. | ✅ Verified |
+
+**Verification method:** every token of every `requirement_description`, `measure`,
+`part_description`, `applicable_systems` and VSL field was checked to occur in its own
+standard's text in the source PDF — **0 out-of-source tokens across all 46 requirements and
+138 parts**. Requirement/part counts and VRF roll-ups are recomputed from the rows themselves,
+so `requirement_count`/`part_count`/`vrf_levels` cannot drift again.
+
+**Synthetic layer pruned (same pass):** as was done for SHIELD, TISAX and VCDPA in pass 3, the
+fabricated operational layer was deleted outright — **46 → 7 files**. Removed: invented
+organizations and responsible entities (named utilities with made-up revenue, headcount and
+audit histories), BES Cyber Systems/Assets, ESPs, PSPs, vendors, threat-intel and law-enforcement
+entries, and the incident/person/visitor/vulnerability/facility/procedure/recovery-plan/drill/
+training/port/baseline/audit/violation/remediation/change tables, plus the 10 `rel_*` edge files
+that only joined them. The two remaining ungroundable reference tables (`nodes_AssetType.csv`,
+`nodes_EvidenceType.csv` — paraphrases presented as NERC definitions, and never loaded by any
+script) went with them.
+
+**Kept (7):** the three verified framework CSVs plus four enrichment tables that describe
+*types*, not invented instances — `nodes_Domain.csv` (thematic grouping), `nodes_Role.csv`,
+`nodes_Artifact.csv` (evidence-artifact types) and `nodes_Regulator.csv` (NERC/FERC/Regional
+Entities). Their `CIP-015` references were dropped (CIP-015 is not in this instrument) and
+`CIP-003-8` corrected to `CIP-003`; all standard/requirement foreign keys now resolve.
+
+**Per-standard result (all verbatim from the source):**
+
+| Standard | Version | Requirements | Parts | VRFs |
+|---|---|---:|---:|---|
+| CIP-002 BES Cyber System Categorization | 5.1a | 2 | 5 | High \| Lower |
+| CIP-003 Security Management Controls | 9 | 4 | 2 | Medium \| Lower |
+| CIP-004 Personnel & Training | 7 | 6 | 19 | Medium \| Lower |
+| CIP-005 Electronic Security Perimeter(s) | 7 | 3 | 12 | Medium |
+| CIP-006 Physical Security of BES Cyber Systems | 6 | 3 | 14 | Medium |
+| CIP-007 System Security Management | 6 | 5 | 20 | Medium |
+| CIP-008 Incident Reporting and Response Planning | 6 | 4 | 12 | Lower |
+| CIP-009 Recovery Plans for BES Cyber Systems | 6 | 3 | 10 | Medium \| Lower |
+| CIP-010 Configuration Change Mgmt & Vulnerability Assessments | 4 | 4 | 11 | Medium |
+| CIP-011 Information Protection | 3 | 2 | 4 | Medium \| Lower |
+| CIP-012 Communications between Control Centers | 1 | 1 | 3 | Medium |
+| CIP-013 Supply Chain Risk Management | 2 | 3 | 8 | Medium |
+| CIP-014 Physical Security | 3 | 6 | 18 | High \| Medium \| Lower |
+| **Total** | | **46** | **138** | |
+
+**Loader realignment:** `App_new/nerc_cip.py` was repointed from the `main` branch to
+**`gautham`** (36 CSV URLs — it was the last NERC loader still on `main`) and its Cypher was
+corrected against the new headers. This surfaced three **pre-existing** silent defects that
+would have written nulls: the Requirement load referenced `row.violation_severity_level`,
+`row.applicability_statement`, `row.compliance_measure` and `row.evidence_type` — none of which
+ever existed as columns — and the RequirementPart load referenced `row.description` /
+`row.evidence` where the CSV had `part_description` / `evidence_required`.
+
+**Net after remediation pass 4:** ✅ Verified: **26** · ⚠️ Minor/Partial: **0** · ❌ Significant gaps: **0**.
 
 ## Remediation Pass — Minor Gaps Fixed
 
@@ -101,7 +163,7 @@ filename. Key findings:
 
 | Framework | Confirmed source file | Correct instrument? |
 |-----------|----------------------|---------------------|
-| NERC | KB 2/USA/NERC CIP.pdf | ❌ **No** — this file is the *"NERC Critical Infrastructure Protection Roadmap — 2025 Work Plan Priority" (Jan 2026)*, a planning report. **The CIP Reliability Standards are absent from the entire KB.** No better file exists. |
+| NERC | KB 3/NERC CIP Reliability Standards (CIP-002 to CIP-014).pdf | ✅ Correct — *(as of 2026-07-21)*. The KB 2 file (`NERC CIP.pdf`) is the *"NERC CIP Roadmap — 2025 Work Plan Priority" (Jan 2026)*, a planning report, and was the only NERC file until the real Standards were added to KB 3. |
 | NIST PMF 1.0 | KB 2/Europe/NIST Privacy Framework.pdf | ❌ **No** — this file is actually **"NIST Privacy Framework 1.1 (CSWP 40 ipd), April 2025"** — a duplicate of the KB 3 PMF 1.1 file. **The finalized PMF 1.0 (Jan 2020) is absent from the KB.** |
 | CPA | KB 2/USA/CPA.pdf | ⚠️ Partial — confirmed to be the *Colorado Privacy Act **Rules** (4 CCR 904-3)*; the CSVs model the underlying **statute** (C.R.S. §6-1-1301…). No statute PDF exists in the KB. |
 | HIPAA | KB 2/USA/HIPAA.pdf | ⚠️ Partial — confirmed to be the OCR *"Summary of the HIPAA Privacy Rule"* only (no Security/Breach rules). No fuller HIPAA source exists in the KB. |
@@ -111,16 +173,16 @@ filename. Key findings:
 | NIST AI RMF | KB 2/Europe/NIST AI Risk Management Framework.pdf | ✅ Correct — confirmed *AI RMF 1.0 (NIST AI 100-1)*. (The separate `NIST.AI.600-1.pdf` is the GenAI Profile, not the source.) |
 | All other 18 | as listed in the table below | ✅ Correct — the mapped file is the correct and only matching instrument. |
 
-**Notable:** the KB contains no source at all for the true NERC CIP Standards and the
-finalized NIST PMF 1.0.
+**Notable:** at the time of the original survey the KB contained no source at all for the true
+NERC CIP Standards or the finalized NIST PMF 1.0. Both have since been obtained.
 
-> **Superseded by pass 3.** The ⚠️/❌ ratings in the table above describe the *KB* only, and
-> remain accurate about the KB's contents. They no longer describe the verdicts, because pass 3
-> stopped treating the KB as the limit: the authoritative instruments for **NIST PMF 1.0**
+> **Superseded by passes 3 and 4.** The ⚠️/❌ ratings in the table above describe the *KB as it
+> stood at the original survey*. They no longer describe the verdicts, because pass 3 stopped
+> treating the KB as the limit: the authoritative instruments for **NIST PMF 1.0**
 > (NIST CSWP 10), **SCF** (2025.4 workbook), **HIPAA** (45 CFR 164/160) and **VCDPA**
-> (Va. Code Ch. 53) were retrieved externally and used for verification. **NERC remains the sole
-> unresolved case** — the CIP Reliability Standards were not obtainable, so that graph is still
-> unverified and is deliberately not loaded into Neo4j.
+> (Va. Code Ch. 53) were retrieved externally and used for verification. **NERC**, the sole
+> remaining case, was closed in **pass 4** when the CIP Reliability Standards were added to
+> KB 3. No framework is now unverified.
 
 ## Status Legend
 
@@ -147,7 +209,7 @@ finalized NIST PMF 1.0.
 | 10 | HITRUST | framework-files/HITRUST | KB 2/USA/HITRUST CSF v11.6.0/CSF PDF v11.6.0.pdf | ✅ Verified* *(fixed p3; 156/156)* |
 | 11 | ISO 27001 | framework-files/ISO 27001 | KB 3/ISO IEC 27001-2022 (ISMS).pdf | ✅ Verified *(fixed p2)* |
 | 12 | ISO 27002 | framework-files/ISO 27002 | KB 3/ISO IEC 27002-2022 (Information Security Controls).pdf | ✅ Verified *(fixed)* |
-| 13 | NERC | framework-files/NERC | KB 2/USA/NERC CIP.pdf *(= CIP Roadmap, not Standards)* | ❌ Source absent *(internal fixes p2)* |
+| 13 | NERC | framework-files/NERC | KB 3/NERC CIP Reliability Standards (CIP-002 to CIP-014).pdf | ✅ Verified *(rebuilt p4)* |
 | 14 | NIST AI RMF | framework-files/NIST AI RMF | KB 2/Europe/NIST AI Risk Management Framework.pdf | ✅ Verified *(fixed p2)* |
 | 15 | NIST CSF 2.0 | framework-files/NIST CSF 2.0 | KB 2/Europe/NIST CSF 2.0.pdf | ✅ Verified |
 | 16 | NIST PMF 1.0 | framework-files/NIST PMF 1.0 | **NIST CSWP 10, PMF 1.0 (Jan 2020) — fetched externally** | ✅ Verified *(fixed p3)* |
@@ -162,8 +224,8 @@ finalized NIST PMF 1.0.
 | 25 | TISAX | framework-files/TISAX | KB 2/Germany/TISAX Participant Handbook.pdf | ✅ Verified *(fixed p3)* |
 | 26 | VCDPA | framework-files/VCDPA | KB 2/USA/VCDPA.pdf + **Va. Code §§59.1-575…585 (fetched)** | ✅ Verified *(fixed p3)* |
 
-**Tally (after remediation pass 3):** ✅ Verified: **25** · ⚠️ Minor/Partial: **0** · ❌ Significant gaps: **1** (NERC — source absent)
-*(Original: ✅ 2 · ⚠️ 11 · ❌ 13 → pass 1: ✅ 10 · ⚠️ 4 · ❌ 12 → pass 2: ✅ 18 · ⚠️ 7 · ❌ 1 → pass 3: ✅ 25 · ⚠️ 0 · ❌ 1.)*
+**Tally (after remediation pass 4):** ✅ Verified: **26** · ⚠️ Minor/Partial: **0** · ❌ Significant gaps: **0**
+*(Original: ✅ 2 · ⚠️ 11 · ❌ 13 → pass 1: ✅ 10 · ⚠️ 4 · ❌ 12 → pass 2: ✅ 18 · ⚠️ 7 · ❌ 1 → pass 3: ✅ 25 · ⚠️ 0 · ❌ 1 → pass 4: ✅ 26 · ⚠️ 0 · ❌ 0.)*
 
 ---
 
@@ -321,15 +383,16 @@ finalized NIST PMF 1.0.
 
 ### 13. NERC
 - **Path:** framework-files/NERC
-- **Source:** KB 2/USA/NERC CIP.pdf
-- **Status:** ❌ Significant gaps (**correct source absent from KB**) — *internal-consistency fixes applied 2026-07-20 (pass 2)*
-- **CSV count:** 46
-- **⚠️ Remediation (pass 2, internal only):** Corrected 8 `requirement_count` values to match the actual Requirement nodes present; CIP-001 already carries a "Retired" status; CIP-004-R3/R4 dangling parts left flagged (need real source). **Content remains UNVERIFIABLE** — the CIP Reliability Standards must be added to the KB to verify or complete this graph.
+- **Source:** KB 3/NERC CIP Reliability Standards (CIP-002 to CIP-014).pdf *(added 2026-07-21; supersedes the KB 2 roadmap file)*
+- **Status:** ✅ Verified — *rebuilt 2026-07-21 (pass 4)* (findings below were the pre-fix state)
+- **CSV count:** 46 → **7**
+- **✅ Remediation (pass 4):** The real Standards arrived in KB 3 and the framework layer was rebuilt from them rather than from general knowledge. **13 standards** (CIP-002-5.1a, 003-9, 004-7, 005-7, 006-6, 007-6, 008-6, 009-6, 010-4, 011-3, 012-1, 013-2, 014-3) with verbatim titles, purposes and applicability; **46 requirements** (was 24) each with verbatim text plus its real **VRF, Time Horizon, Measure and four VSL tiers** — none of which existed before; **138 requirement parts** (was 17) with verbatim *Applicable Systems* and *Measures* columns. CIP-001 and CIP-015 rows were removed (neither appears in this instrument). Ungrounded columns dropped. Counts and `vrf_levels` are now derived from the rows. **0 dangling references** — CIP-004-R3/R4 resolve because R3–R6 exist. Token-level check: **0 out-of-source tokens** across all requirement and part text. `App_new/nerc_cip.py` realigned and repointed to `gautham`.
+- **⚠️ Remediation (pass 2, internal only):** Corrected 8 `requirement_count` values to match the actual Requirement nodes present; CIP-001 already carries a "Retired" status; CIP-004-R3/R4 dangling parts left flagged (need real source).
 - **Findings:**
-  - **Source confirmed by direct inspection:** the only NERC file in KB 2/KB 3 is the *"NERC Critical Infrastructure Protection Roadmap — 2025 Work Plan Priority" (Jan 2026)* — a planning report, **not the CIP Reliability Standards**. It contains no requirement text, VRFs/VSLs, or measures. The CSVs' standard/requirement structure cannot be verified against it, and **no correct source exists in the KB to verify against.**
-  - Node CSVs model the actual CIP standards (14 standards, 23 requirements, 16 parts) from general knowledge; includes retired CIP-001.
-  - Internal inconsistencies: `requirement_count` mismatches actual Requirement nodes; dangling RequirementPart IDs (CIP-004-R3/R4).
-  - Many CSVs are fabricated operational data (incidents, visitors, CVEs, persons). **Correct source PDF (the CIP standards themselves) is needed.**
+  - **Source confirmed by direct inspection:** until 2026-07-21 the only NERC file in the KB was the *"NERC Critical Infrastructure Protection Roadmap — 2025 Work Plan Priority" (Jan 2026)* — a planning report, **not the CIP Reliability Standards**. It contains no requirement text, VRFs/VSLs, or measures, so the graph could not be verified against it.
+  - Node CSVs modelled the actual CIP standards (14 standards, 23 requirements, 16 parts) from general knowledge; included retired CIP-001.
+  - Internal inconsistencies: `requirement_count` mismatched actual Requirement nodes; dangling RequirementPart IDs (CIP-004-R3/R4).
+  - **Resolved in the same pass:** the ~36 CSVs of fabricated operational data (incidents, visitors, CVEs, persons, vendors, named utilities with invented financials) and their `rel_*` join files were deleted, along with two ungroundable reference tables. 46 → 7 files; the loader was cut back to match (20 queries, no orphaned node types).
 
 ### 14. NIST AI RMF
 - **Path:** framework-files/NIST AI RMF
@@ -502,7 +565,7 @@ finalized NIST PMF 1.0.
    - **VCDPA** — Va. Code Ch. 53 fetched from law.lis.virginia.gov. ✅ *Resolved — it exposed a repealed section and a fabricated dark-patterns file.*
    - **HITECH / SHIELD** — the narrow KB sources were sufficient once the CSVs were scoped to what the statute actually says. ✅ *Resolved.*
    - **CPA** — PDF is the Rules (4 CCR 904-3) while the CSVs model the statute; both layers are now present and correct. ✅ *Resolved.*
-   - **NERC** — ❌ **still open.** The only NERC file is a roadmap/work-plan; the CIP Reliability Standards are absent from the KB and were not obtainable. **This is the one remaining blocker.**
+   - **NERC** — ✅ *Resolved in pass 4.* The KB held only a roadmap/work-plan until the real CIP Reliability Standards were added to KB 3; the framework layer was then rebuilt from them (46 requirements / 138 parts, verbatim). **No blockers remain.**
 
 2. **Wrong taxonomy / version mislabeling:** NIST AI RMF and NIST PMF 1.1 (pass 2), NIST PMF 1.0
    and TISAX's invented "6.0" tag (pass 3) all encoded a different or invented version than their
@@ -517,7 +580,8 @@ finalized NIST PMF 1.0.
    outright; HITRUST's ungroundable auxiliary CSVs were reduced to header-only. A deliberate,
    documented synthetic layer remains only where it was retained by design (CPRA, GLBA, PCI DSS,
    SEC, HITECH, DPDPA, CPA, TDPSA, NIST RMF) — flagged with `Verified*` rather than silently mixed
-   in. **NERC's fabricated operational data remains, pending a real source.**
+   in. **NERC joined them in pass 4** — framework layer rebuilt from the real Standards and the
+   fabricated operational layer deleted (46→7 files).
 
 5. **Missing explicit relationship CSVs:** DORA, NIST RMF, NIST AI RMF and several NIST frameworks
    encode relationships as inline foreign keys rather than edge files. Acceptable for these
@@ -533,9 +597,11 @@ finalized NIST PMF 1.0.
 
 ## Loaded into Neo4j (Aura instance, database `d7883150`)
 
-All verified frameworks are in the Neo4j instance. **25 of 26 frameworks are loaded** — every
-framework except NERC, which is withheld because its content cannot be verified against any
-source. All 25 reflect the remediated CSVs on the **`gautham`** branch.
+**25 of 26 frameworks are loaded**, all reflecting the remediated CSVs on the **`gautham`**
+branch. NERC is the only framework not yet in the instance: it was withheld while unverifiable,
+and as of pass 4 it is verified and its loader is realigned, but **it has not been run** — the
+rebuilt CSVs must be committed and pushed to `gautham` first, because `LOAD CSV` fetches them
+over HTTP from the branch.
 
 **Total in instance:** **7,153 nodes / 80,010 relationships** (was 3,619 / 52,546 after pass 2).
 
@@ -565,11 +631,12 @@ source. All 25 reflect the remediated CSVs on the **`gautham`** branch.
 | GDPR | `GDPR 2016/679` | | TDPSA | `TDPSA 2023` |
 | CPRA | `CPRA 2.0` | | DORA | `DORA 2022/2554` |
 
-**NOT loaded (1):** **NERC** — ❌ source absent from the KB; loading unverifiable content was
-deliberately avoided.
+**NOT loaded (1):** **NERC** — ✅ verified as of pass 4 and ready to load; the run is pending a
+push of the rebuilt CSVs to `gautham`.
 
 ### Notes
-- All loaders in `App_new/` now point at the **`gautham`** branch. `LOAD CSV` executes server-side
+- All loaders in `App_new/` now point at the **`gautham`** branch (`nerc_cip.py` was the last one
+  still on `main`; repointed in pass 4). `LOAD CSV` executes server-side
   on Aura, so the CSVs must be committed and pushed before a loader runs — local paths would
   resolve on the Aura host, and Aura disables `file:///` imports.
 - The 7 pass-3 loaders were realigned to the rewritten CSVs: loads for deleted files removed,
