@@ -1,0 +1,16 @@
+source_id,target_id,rel_type,responsible_party
+CT-1,CSM-IAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-1,CSM-PAAS,IMPLEMENTED_BY,The cloud provider and sometimes also your organisation
+CT-1,CSM-SAAS,IMPLEMENTED_BY,The cloud provider
+CT-2,CSM-IAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-2,CSM-PAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-2,CSM-SAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-3,CSM-IAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-3,CSM-PAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-3,CSM-SAAS,IMPLEMENTED_BY,The cloud provider
+CT-4,CSM-IAAS,IMPLEMENTED_BY,Your organisation
+CT-4,CSM-PAAS,IMPLEMENTED_BY,Your organisation
+CT-4,CSM-SAAS,IMPLEMENTED_BY,Your organisation
+CT-5,CSM-IAAS,IMPLEMENTED_BY,Both your organisation and the cloud provider
+CT-5,CSM-PAAS,IMPLEMENTED_BY,The cloud provider and sometimes also your organisation
+CT-5,CSM-SAAS,IMPLEMENTED_BY,The cloud provider

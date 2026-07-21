@@ -1,0 +1,6 @@
+regulatedentitytype_id,description,defined_in,governing_act,source_document
+ENT-ADI,"authorised deposit-taking institutions (ADIs), including foreign ADIs, and non-operating holding companies authorised under the Banking Act (authorised banking NOHCs)",PARA-2(a),Banking Act,APRA Prudential Standard CPS 234 Information Security (July 2019)
+ENT-GI,"general insurers, including Category C insurers, non-operating holding companies authorised under the Insurance Act (authorised insurance NOHCs), and parent entities of Level 2 insurance groups",PARA-2(b),Insurance Act,APRA Prudential Standard CPS 234 Information Security (July 2019)
+ENT-LIFE,"life companies, including friendly societies, eligible foreign life insurance companies (EFLICs) and non-operating holding companies registered under the Life Insurance Act (registered life NOHCs)",PARA-2(c),Life Insurance Act,APRA Prudential Standard CPS 234 Information Security (July 2019)
+ENT-PHI,private health insurers registered under the PHIPS Act,PARA-2(d),PHIPS Act,APRA Prudential Standard CPS 234 Information Security (July 2019)
+ENT-RSE,RSE licensees under the SIS Act in respect of their business operations,PARA-2(e),SIS Act,APRA Prudential Standard CPS 234 Information Security (July 2019)

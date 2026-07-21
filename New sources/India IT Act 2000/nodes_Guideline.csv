@@ -1,0 +1,88 @@
+guideline_id,schedule_id,number,title,parent_guideline_id,act_section_refs,schedule_refs,para_refs,source_document
+S2-P1,SCH-II,1,Introduction,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P2,SCH-II,2,Implementation of an Information Security Programme,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P3,SCH-II,3,Information Classification,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P4,SCH-II,4,Physical and Operational Security,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P4.1,SCH-II,4.1,Site Design,S2-P4,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P4.2,SCH-II,4.2,Fire Protection,S2-P4,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P4.3,SCH-II,4.3,Environmental Protection,S2-P4,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P4.4,SCH-II,4.4,Physical Access,S2-P4,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P5,SCH-II,5,Information Management,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P5.1,SCH-II,5.1,System Administration,S2-P5,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P5.2,SCH-II,5.2,Sensitive Information Control,S2-P5,,,8.3,KB 2/India/Information Technology Act 2000.pdf
+S2-P5.3,SCH-II,5.3,Sensitive Information Security,S2-P5,,,3,KB 2/India/Information Technology Act 2000.pdf
+S2-P5.4,SCH-II,5.4,Third Party Access,S2-P5,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P5.5,SCH-II,5.5,Prevention of Computer Misuse,S2-P5,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6,SCH-II,6,System integrity and security measures,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6.1,SCH-II,6.1,Use of Security Systems or Facilities,S2-P6,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6.2,SCH-II,6.2,System Access Control,S2-P6,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6.3,SCH-II,6.3,Password Management,S2-P6,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6.4,SCH-II,6.4,Privileged User’s Management,S2-P6,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6.5,SCH-II,6.5,User’s Account Management,S2-P6,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P6.6,SCH-II,6.6,Data and Resource Protection,S2-P6,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P7,SCH-II,7,Sensitive Systems Protection,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P8,SCH-II,8,Data Centre Operations Security,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P8.1,SCH-II,8.1,Job Scheduling,S2-P8,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P8.2,SCH-II,8.2,System Operations Procedure,S2-P8,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P8.3,SCH-II,8.3,Media Management,S2-P8,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P8.4,SCH-II,8.4,Media Movement,S2-P8,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P9,SCH-II,9,Data Backup and Off-site Retention,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P10,SCH-II,10,Audit Trails and Verification,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P11,SCH-II,11,Measures to Handle Computer Virus,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P12,SCH-II,12,Relocation of Hardware and Software,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P13,SCH-II,13,Hardware and Software Maintenance,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P14,SCH-II,14,Purchase and Licensing of Hardware and Software,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P15,SCH-II,15,System Software,,,,21,KB 2/India/Information Technology Act 2000.pdf
+S2-P16,SCH-II,16,Documentation Security,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P17,SCH-II,17,Network Communication Security,,,,4.4;6.2,KB 2/India/Information Technology Act 2000.pdf
+S2-P18,SCH-II,18,Firewalls,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P19,SCH-II,19,Connectivity,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P20,SCH-II,20,Network Administrator,,,,6,KB 2/India/Information Technology Act 2000.pdf
+S2-P21,SCH-II,21,Change Management,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P21.1,SCH-II,21.1,Change Control,S2-P21,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P21.2,SCH-II,21.2,Testing Of Changes To Production System,S2-P21,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P21.3,SCH-II,21.3,Review Of Changes,S2-P21,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P22,SCH-II,22,Problem Management and Reporting,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P23,SCH-II,23,Emergency Preparedness,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P24,SCH-II,24,Contingency Recovery Equipment and Services,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P25,SCH-II,25,Security Incident Reporting and Response,,,,,KB 2/India/Information Technology Act 2000.pdf
+S2-P26,SCH-II,26,Disaster Recovery/Management,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P1,SCH-III,1,Introduction,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P2,SCH-III,2,Security Management,,,II;III,,KB 2/India/Information Technology Act 2000.pdf
+S3-P3,SCH-III,3,"Physical controls – site location, construction and physical access",,,II,15;4;4.1;4.2;4.4,KB 2/India/Information Technology Act 2000.pdf
+S3-P4,SCH-III,4,Media Storage,,,II,8.3;8.4,KB 2/India/Information Technology Act 2000.pdf
+S3-P5,SCH-III,5,Waste Disposal,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P6,SCH-III,6,Off-site Backup,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P7,SCH-III,7,Change and Configuration Management,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P8,SCH-III,8,Network and Communications Security,,,II,17;18;19;20,KB 2/India/Information Technology Act 2000.pdf
+S3-P9,SCH-III,9,System Security Audit Procedures,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P9.1,SCH-III,9.1,Types of event recorded,S3-P9,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P9.2,SCH-III,9.2,Frequency of Audit Log Monitoring,S3-P9,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P9.3,SCH-III,9.3,Retention Period for Audit Log,S3-P9,,II,10,KB 2/India/Information Technology Act 2000.pdf
+S3-P9.4,SCH-III,9.4,Protection of Audit Log,S3-P9,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P9.5,SCH-III,9.5,Audit Log Backup Procedures,S3-P9,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P9.6,SCH-III,9.6,Vulnerability Assessments,S3-P9,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P10,SCH-III,10,Records Archival,,,,9,KB 2/India/Information Technology Act 2000.pdf
+S3-P11,SCH-III,11,Compromise and Disaster Recovery,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P11.1,SCH-III,11.1,"Computing Resources, Software and/or Data are Corrupted",S3-P11,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P11.2,SCH-III,11.2,Secure facility after a natural or other type of disaster,S3-P11,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P11.3,SCH-III,11.3,Incident Management Plan,S3-P11,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P12,SCH-III,12,Number of Persons Required Per Task,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P13,SCH-III,13,Identification and Authentication for Each Role,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P14,SCH-III,14,Personnel Security Controls,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P15,SCH-III,15,Training Requirements,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P16,SCH-III,16,Retraining Frequency and Requirements,,,,15,KB 2/India/Information Technology Act 2000.pdf
+S3-P17,SCH-III,17,Documentation Supplied to Personnel,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P18,SCH-III,18,Key Management,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P18.1,SCH-III,18.1,Generation,S3-P18,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P18.1-2,SCH-III,18.1,Distribution of Keys,S3-P18,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P18.2,SCH-III,18.2,Storage,S3-P18,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P18.3,SCH-III,18.3,Usage,S3-P18,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P18.5,SCH-III,18.5,Certifying Authority’s Public Key Delivery to Users,S3-P18,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P19,SCH-III,19,Private Key Protection and Backup,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P20,SCH-III,20,Method of Destroying Private Key,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P21,SCH-III,21,Usage Periods for the Public and Private Keys,,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P21.1,SCH-III,21.1,Key Change,S3-P21,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P21.2,SCH-III,21.2,Destruction,S3-P21,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P21.3,SCH-III,21.3,Key Compromise,S3-P21,,,,KB 2/India/Information Technology Act 2000.pdf
+S3-P22,SCH-III,22,Confidentiality of Subscriber’s Information,,,,,KB 2/India/Information Technology Act 2000.pdf

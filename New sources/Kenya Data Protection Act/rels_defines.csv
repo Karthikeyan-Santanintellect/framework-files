@@ -1,0 +1,27 @@
+source_id,target_id,rel_type,note
+def_anonymisation,s2,DEFINED_IN,Interpretation
+def_biometric_data,s2,DEFINED_IN,Interpretation
+def_cabinet_secretary,s2,DEFINED_IN,Interpretation
+def_consent,s2,DEFINED_IN,Interpretation
+def_data,s2,DEFINED_IN,Interpretation
+def_data_commissioner,s2,DEFINED_IN,Interpretation
+def_data_controller,s2,DEFINED_IN,Interpretation
+def_data_processor,s2,DEFINED_IN,Interpretation
+def_data_subject,s2,DEFINED_IN,Interpretation
+def_encryption,s2,DEFINED_IN,Interpretation
+def_filing_system,s2,DEFINED_IN,Interpretation
+def_health_data,s2,DEFINED_IN,Interpretation
+def_identifiable_natural_person,s2,DEFINED_IN,Interpretation
+def_national_security_organs,s2,DEFINED_IN,Interpretation
+def_office,s2,DEFINED_IN,Interpretation
+def_person,s2,DEFINED_IN,Interpretation
+def_personal_data,s2,DEFINED_IN,Interpretation
+def_personal_data_breach,s2,DEFINED_IN,Interpretation
+def_processing,s2,DEFINED_IN,Interpretation
+def_profiling,s2,DEFINED_IN,Interpretation
+def_pseudonymisation,s2,DEFINED_IN,Interpretation
+def_register,s2,DEFINED_IN,Interpretation
+def_restriction_of_processing,s2,DEFINED_IN,Interpretation
+def_sensitive_personal_data,s2,DEFINED_IN,Interpretation
+def_third_party,s2,DEFINED_IN,Interpretation
+def_data_protection_impact_assessment,s31,DEFINED_IN,section 31(4)

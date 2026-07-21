@@ -1,0 +1,24 @@
+source_id,target_id,rel_type,periodicity,applicability
+CR-01,GV.OV.S4,APPLIES_TO_STANDARD,Half-yearly,MIIs
+CR-02,GV.OV.S4,APPLIES_TO_STANDARD,Annually,Qualified REs
+CR-03,GV.OV.S4,APPLIES_TO_STANDARD,Within 15 days of completion of CCI assessment (based on the applicability defined above in point 1 and 2),MIIs and Qualified REs
+CR-04,GV.PO.S2,APPLIES_TO_STANDARD,Annually,All REs
+CR-05,GV.PO.S4,APPLIES_TO_STANDARD,Annually,All REs
+CR-07,ID.RA.S2,APPLIES_TO_STANDARD,Half-yearly,MIIs
+CR-08,ID.RA.S2,APPLIES_TO_STANDARD,Annually,"Qualified, Mid-size REs"
+CR-09,PR.AA.S5,APPLIES_TO_STANDARD,Quarterly,MIIs and Qualified REs
+CR-10,PR.AA.S5,APPLIES_TO_STANDARD,Half-yearly,Other REs
+CR-11,PR.AA.S11,APPLIES_TO_STANDARD,Quarterly,MIIs and Qualified REs
+CR-12,PR.AA.S11,APPLIES_TO_STANDARD,Half-yearly,Other REs
+CR-13,PR.AT.S1,APPLIES_TO_STANDARD,Annually,All REs
+CR-14,GV.SC.S4,APPLIES_TO_STANDARD,Half-yearly,MIIs and Qualified REs
+CR-15,GV.SC.S4,APPLIES_TO_STANDARD,Annually,Other REs
+CR-16,DE.CM.S1,APPLIES_TO_STANDARD,Half-yearly,MIIs and Qualified REs
+CR-17,DE.CM.S1,APPLIES_TO_STANDARD,Annually,Other REs who are utilizing third-party managed SOC or Market SOC services
+CR-18,DE.DP.S4,APPLIES_TO_STANDARD,Half-yearly,MIIs and Qualified REs
+CR-19,DE.DP.S5,APPLIES_TO_STANDARD,Quarterly,MIIs and Qualified REs
+CR-20,RC.RP.S3,APPLIES_TO_STANDARD,Half-yearly,MIIs and Qualified REs
+CR-21,RC.RP.S3,APPLIES_TO_STANDARD,Annually,Other REs
+CR-22,RS.MA.S3,APPLIES_TO_STANDARD,Half-yearly,MIIs and Qualified REs
+CR-23,RS.MA.S3,APPLIES_TO_STANDARD,Annually,Mid-size and small-size REs
+CR-24,EV.ST.S5,APPLIES_TO_STANDARD,Annually,Mid-size and Small-size REs

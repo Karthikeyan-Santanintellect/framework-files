@@ -1,0 +1,16 @@
+source_id,target_id,rel_type
+P_2_1,TERM_personal_information,DEFINES
+P_2_2,TERM_personal_information_database,DEFINES
+P_2_3,TERM_business_operator,DEFINES
+P_2_4,TERM_personal_data,DEFINES
+P_2_5,TERM_retained_personal_data,DEFINES
+P_2_6,TERM_person,DEFINES
+P_7_1,TERM_basic_policy,DEFINES
+P_15_1,TERM_purpose_of_utilization,DEFINES
+P_29_1,TERM_request_for_disclosure,DEFINES
+P_36_1,TERM_minister_etc,DEFINES
+I_37_1_i,TERM_target_entities,DEFINES
+P_40_1,TERM_authorized_organization,DEFINES
+P_40_1,TERM_authorized_business,DEFINES
+P_43_1,TERM_pi_protection_guidelines,DEFINES
+P_50_2,TERM_news_report,DEFINES

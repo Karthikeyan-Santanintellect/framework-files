@@ -1,0 +1,11 @@
+source_id,target_id,rel_type,clause_id
+art15,right_withdraw_consent,GRANTS_RIGHT,art15_p1
+art24,right_explanation_automated,GRANTS_RIGHT,art24_p3
+art44,right_know_and_decide,GRANTS_RIGHT,art44_p1
+art45,right_consult_copy,GRANTS_RIGHT,art45_p1
+art45,right_portability,GRANTS_RIGHT,art45_p3
+art46,right_correct_supplement,GRANTS_RIGHT,art46_p1
+art47,right_delete,GRANTS_RIGHT,art47_p1
+art48,right_explanation_of_rules,GRANTS_RIGHT,art48_p1
+art49,right_near_relatives_deceased,GRANTS_RIGHT,art49_p1
+art50,right_lawsuit_on_refusal,GRANTS_RIGHT,art50_p2

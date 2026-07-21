@@ -1,0 +1,5 @@
+riskmanagementreportelement_id,requirement,stated_in,document_id,source_document
+RRE-01,Summarize the risk evaluation methods and processes;,V.A,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+RRE-02,Detail the residual risk conclusion from the security risk assessment;,V.A,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+RRE-03,Detail the risk mitigation activities undertaken as part of a manufacturer’s risk management processes; and,V.A,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+RRE-04,"Provide traceability between the threat model, cybersecurity risk assessment, SBOM, and testing documentation as discussed later in this guidance as well as other relevant cybersecurity risk management documentation.",V.A,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

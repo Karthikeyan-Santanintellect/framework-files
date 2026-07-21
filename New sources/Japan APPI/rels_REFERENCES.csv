@@ -1,0 +1,79 @@
+source_id,target_id,rel_type,citation
+I_2_3_iii,ART_2,REFERENCES,"paragraph 1 of Article 2 of the Act on the Protection of Personal Information Held by Incorporated Administrative Agencies, etc."
+I_7_2_vi,P_40_1,REFERENCES,authorized personal information protection organizations provided in paragraph 1 of Article 40
+P_16_1,ART_15,REFERENCES,the preceding article
+I_24_1_ii,P_18_4,REFERENCES,items 1 to 3 of paragraph 4 of Article 18
+I_24_1_iii,P_24_2,REFERENCES,the next paragraph
+I_24_1_iii,P_25_1,REFERENCES,paragraph 1 of the next article
+I_24_1_iii,P_26_1,REFERENCES,paragraph 1 of Article 26
+I_24_1_iii,P_27_1,REFERENCES,paragraph 1 or paragraph 2 of Article 27
+I_24_1_iii,P_30_2,REFERENCES,the amount of charges if set pursuant to the provision of paragraph 2 of Article 30
+I_24_2_ii,P_18_4,REFERENCES,items 1 to 3 of paragraph 4 of Article 18
+P_27_1,ART_16,REFERENCES,in violation of Article 16
+P_27_1,ART_17,REFERENCES,in violation of Article 17
+P_27_2,P_23_1,REFERENCES,in violation of paragraph 1 of Article 23
+ART_28,P_24_3,REFERENCES,paragraph 3 of Article 24
+ART_28,P_25_2,REFERENCES,paragraph 2 of Article 25
+ART_28,P_26_2,REFERENCES,paragraph 2 of Article 26
+ART_28,P_27_3,REFERENCES,paragraph 3 of the preceding article
+P_29_1,P_24_2,REFERENCES,paragraph 2 of Article 24
+P_29_1,P_25_1,REFERENCES,paragraph 1 of Article 25
+P_29_1,P_26_1,REFERENCES,paragraph 1 of Article 26
+P_29_1,P_27_1,REFERENCES,paragraph 1 or paragraph 2 of Article 27
+P_30_1,P_24_2,REFERENCES,paragraph 2 of Article 24
+P_30_1,P_25_1,REFERENCES,paragraph 1 of Article 25
+P_34_1,ART_16,REFERENCES,Article 16 to Article 18
+P_34_1,ART_17,REFERENCES,Article 16 to Article 18
+P_34_1,ART_18,REFERENCES,Article 16 to Article 18
+P_34_1,ART_20,REFERENCES,Article 20 to Article 27
+P_34_1,ART_21,REFERENCES,Article 20 to Article 27
+P_34_1,ART_22,REFERENCES,Article 20 to Article 27
+P_34_1,ART_23,REFERENCES,Article 20 to Article 27
+P_34_1,ART_24,REFERENCES,Article 20 to Article 27
+P_34_1,ART_25,REFERENCES,Article 20 to Article 27
+P_34_1,ART_26,REFERENCES,Article 20 to Article 27
+P_34_1,ART_27,REFERENCES,Article 20 to Article 27
+P_34_1,P_30_2,REFERENCES,paragraph 2 of Article 30
+P_34_3,ART_16,REFERENCES,Article 16
+P_34_3,ART_17,REFERENCES,Article 17
+P_34_3,ART_20,REFERENCES,Articles 20 to 22
+P_34_3,ART_21,REFERENCES,Articles 20 to 22
+P_34_3,ART_22,REFERENCES,Articles 20 to 22
+P_34_3,P_23_1,REFERENCES,paragraph 1 of Article 23
+P_35_1,ART_32,REFERENCES,the preceding three articles
+P_35_1,ART_33,REFERENCES,the preceding three articles
+P_35_1,ART_34,REFERENCES,the preceding three articles
+P_35_2,P_50_1,REFERENCES,each item of paragraph 1 of Article 50
+I_37_1_i,ART_42,REFERENCES,The processing under the provision of Article 42
+ART_38,P_37_1,REFERENCES,paragraph 1 of the preceding article
+I_38_ii,P_48_1,REFERENCES,paragraph 1 of Article 48
+SI_38_iii_b,P_48_1,REFERENCES,paragraph 1 of Article 48
+ART_39,P_37_1,REFERENCES,paragraph 1 of Article 37
+P_40_1,P_37_1,REFERENCES,authorized under paragraph 1 of Article 37
+I_48_1_i,I_38_i,REFERENCES,item 1 or 3 of Article 38
+I_48_1_i,I_38_iii,REFERENCES,item 1 or 3 of Article 38
+I_48_1_ii,ART_39,REFERENCES,any of the items of Article 39
+I_48_1_iii,ART_44,REFERENCES,the provisions of Article 44
+I_48_1_iv,ART_47,REFERENCES,orders in the preceding article
+I_48_1_v,P_37_1,REFERENCES,the authorization in paragraph 1 of Article 37
+P_49_1,P_37_1,REFERENCES,authorization under paragraph 1 of Article 37
+I_49_1_i,P_37_1,REFERENCES,paragraph 1 of Article 37
+P_50_1,CH_4,REFERENCES,the provisions of the preceding chapter shall not be applied
+ART_56,P_34_2,REFERENCES,orders issued under paragraph 2 or 3 of Article 34
+ART_56,P_34_3,REFERENCES,orders issued under paragraph 2 or 3 of Article 34
+ART_57,ART_32,REFERENCES,a report required by Article 32 or 46
+ART_57,ART_46,REFERENCES,a report required by Article 32 or 46
+P_58_1,ART_56,REFERENCES,the violations prescribed in the preceding two articles
+P_58_1,ART_57,REFERENCES,the violations prescribed in the preceding two articles
+I_59_i,P_40_1,REFERENCES,a notification required by paragraph 1 of Article 40
+I_59_ii,ART_45,REFERENCES,the provision of Article 45
+ART_SUPP_1,CH_4,REFERENCES,the provisions of Chapter 4 to Chapter 6
+ART_SUPP_1,CH_5,REFERENCES,the provisions of Chapter 4 to Chapter 6
+ART_SUPP_1,CH_6,REFERENCES,the provisions of Chapter 4 to Chapter 6
+ART_SUPP_2,P_15_1,REFERENCES,the Purpose of Utilization specified under paragraph 1 of Article 15
+ART_SUPP_2,P_16_1,REFERENCES,paragraph 1 or 2 of Article 16
+ART_SUPP_2,P_16_2,REFERENCES,paragraph 1 or 2 of Article 16
+ART_SUPP_3,P_23_1,REFERENCES,paragraph 1 of Article 23
+ART_SUPP_4,P_23_2,REFERENCES,paragraph 2 of Article 23
+ART_SUPP_5,I_23_4_iii,REFERENCES,item 3 of paragraph 4 of Article 23
+ART_SUPP_6,ART_45,REFERENCES,The provisions of Article 45

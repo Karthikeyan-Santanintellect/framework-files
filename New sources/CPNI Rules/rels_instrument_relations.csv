@@ -1,0 +1,11 @@
+source_id,target_id,rel_type,note
+FCC_01_247,XR_USC_222,IMPLEMENTS,The order interprets and implements Section 222 of the Communications Act.
+FCC_01_247,XR_CPNI_ORDER,CLARIFIES,Clarifies the status of the CPNI rules adopted in the CPNI Order after the Tenth Circuit’s opinion.
+FCC_01_247,XR_CPNI_RECON,CLARIFIES,
+FCC_01_247,XR_USWEST,RESPONDS_TO,"Responds to U S WEST, Inc. v. FCC, which vacated a portion of the CPNI Order."
+FCC_01_247,XR_ATT_FCC,RESPONDS_TO,Responds to the voluntary remand granted by the D.C. Circuit.
+XR_USWEST,XR_CFR_64_2007_c,VACATES,"we conclude that the court sought to eliminate only the specific section of our rules that was before it, and that its vacatur order applied only to Section 64.2007(c), the only provision inextricably tied to the opt-in mechanism."
+FCC_01_247,XR_USC_151,ADOPTED_PURSUANT_TO,
+FCC_01_247,XR_USC_154i,ADOPTED_PURSUANT_TO,
+FCC_01_247,XR_USC_303r,ADOPTED_PURSUANT_TO,
+FCC_01_247,XR_USC_222,ADOPTED_PURSUANT_TO,

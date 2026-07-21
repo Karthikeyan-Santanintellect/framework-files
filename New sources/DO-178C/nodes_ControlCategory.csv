@@ -1,0 +1,3 @@
+controlcategory_id,name,description_in_ebook,source_document
+CC1,Control Category 1 (CC1),"Items treated as Control Category 1 (CC1) must undergo full problem reporting processes, formal change review, and release processes.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+CC2,Control Category 2 (CC2),"CC2 items do not need to undergo these more formal processes, but they must still comply with configuration identification and traceability needs, be protected against unauthorized changes, and satisfy applicable data retention requirements.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

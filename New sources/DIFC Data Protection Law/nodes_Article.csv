@@ -1,0 +1,67 @@
+article_id,article_number,title,part_id,subpart_id,chapeau,source_document
+ART_1,1,Title and repeal,PART_1,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_2,2,Legislative authority,PART_1,,This Law is made by the Ruler.,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_3,3,Date of enactment,PART_1,,This Law is enacted on the date specified in the Enactment Notice in respect of this Law.,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_4,4,Commencement,PART_1,,This Law comes into force on 1 July 2020.,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_5,5,Purpose of this Law,PART_1,,The purpose of this Law is to:,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_6,6,Application of the Law,PART_1,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_7,7,Schedules,PART_1,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_8,8,Administration of the Law,PART_1,,This Law and any Regulations made under it are administered by the Commissioner.,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_9,9,General requirements,PART_2,SUBPART_2A,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_10,10,Lawfulness of Processing,PART_2,SUBPART_2A,Any one (1) or more of the following shall constitute a lawful basis for Processing Personal Data:,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_11,11,Processing of Special Categories of Personal Data,PART_2,SUBPART_2B,"In addition to general obligations set out in Article 9 and lawful Processing in accordance with a basis set out in Article 10, and regardless of the Controller's other Processing obligations, Special Categories of Personal Data shall not be Processed unless one (1) or more of the following applies:",KB 2/UAE/DIFC Data Protection Law.pdf
+ART_12,12,Consent,PART_2,SUBPART_2C,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_13,13,Legitimate interests,PART_2,SUBPART_2C,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_14,14,Accountability and notification,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_15,15,Records of Processing activities,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_16,16,Designation of the DPO,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_17,17,The DPO: competencies and status,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_18,18,Role and tasks of the DPO,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_19,19,DPO Controller assessment,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_20,20,Data protection impact assessment,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_21,21,Prior consultation,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_22,22,Cessation of Processing,PART_2,SUBPART_2D,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_23,23,Joint Controllers,PART_3,SUBPART_3A,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_24,24,Processors and Sub-processors,PART_3,SUBPART_3B,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_25,25,Confidentiality,PART_3,SUBPART_3B,"A Controller or Processor, and where applicable, a Joint Controller or a Sub-processor, shall take steps to ensure that any person acting under its respective authority that has access to Personal Data shall not Process it except on the instructions of the Controller, unless it is required to do so under Applicable Law.",KB 2/UAE/DIFC Data Protection Law.pdf
+ART_26,26,Transfers out of the DIFC: adequate level of protection,PART_4,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_27,27,Transfers out of the DIFC in the absence of an adequate level of protection,PART_4,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_28,28,Data sharing,PART_4,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_29,29,Providing information where Personal Data has been obtained from the Data Subject,PART_5,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_30,30,Providing Information where Personal Data has not been obtained from the Data Subject,PART_5,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_31,31,Nature of Processing information,PART_5,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_32,32,Right to withdraw consent,PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_33,33,"Rights to access, rectification and erasure of Personal Data",PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_34,34,Right to object to Processing,PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_35,35,Right to restriction of Processing,PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_36,36,Controller's obligation to notify,PART_6,,"The Controller shall communicate any rectification or erasure of Personal Data or Processing restriction carried out in accordance with Articles 33, 34 and 35 to each recipient to whom the Personal Data has been disclosed, unless this proves impossible or involves disproportionate effort. A Controller shall inform the Data Subject about those recipients if a Data Subject requests it.",KB 2/UAE/DIFC Data Protection Law.pdf
+ART_37,37,Right to data portability,PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_38,38,"Automated individual decision-making, including Profiling",PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_39,39,Non-discrimination,PART_6,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_40,40,Methods of exercising Data Subject rights,PART_6,,"A Controller shall make available a minimum of two (2) methods (which may include but shall not be limited to post, telephone, email or an online form), which shall not be onerous, by which a Data Subject can contact the Controller to request to exercise his rights under this Part. If a Controller maintains a website, at least one (1) method of contact shall be available without charge via the website, without the need to submit data to create an account of any sort. At least one of the methods should correspond to the contact details provided under Article 29 or 30 as applicable.",KB 2/UAE/DIFC Data Protection Law.pdf
+ART_41,41,Notification of Personal Data Breaches to the Commissioner,PART_7,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_42,42,Notification of Personal Data Breaches to a Data Subject,PART_7,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_43,43,Appointment of the Commissioner,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_44,44,Removal of the Commissioner,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_45,45,Resignation of the Commissioner,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_46,46,"Powers, functions and objectives of the Commissioner",PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_47,47,Delegation of powers and establishment of advisory committee,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_48,48,Codes of conduct,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_49,49,Monitoring of approved codes of conduct,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_50,50,Certification schemes,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_51,51,Certification and Accreditation,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_52,52,Production of information,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_53,53,Regulations,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_54,54,Funding,PART_8,,"In respect of each financial year of the Commissioner, the Government of Dubai shall ensure that there is provision of sufficient financial resources to enable the Commissioner to adequately perform his functions and exercise his powers in accordance with the Laws and the Regulations.",KB 2/UAE/DIFC Data Protection Law.pdf
+ART_55,55,Annual budget of the Commissioner,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_56,56,Accounts,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_57,57,Audit of Commissioner,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_58,58,Annual report,PART_8,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_59,59,Directions,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_60,60,Lodging complaints and mediation,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_61,61,General contravention,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_62,62,Imposition of fines,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_63,63,Application to the Court,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_64,64,Principles of Liability,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_64A,64A,Private Right of Action,PART_9,,,KB 2/UAE/DIFC Data Protection Law.pdf
+ART_65,65,General exemptions,PART_10,,,KB 2/UAE/DIFC Data Protection Law.pdf

@@ -1,0 +1,11 @@
+cio_metric_section_id,number,heading,instrument_id,source_document
+CIO-SEC-1,1,Enumerating the Environment,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-2,2,Multifactor Authentication and Encryption,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-3,3,Logging,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-4,4,Critical Software,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-5,5,Implementing IPv6,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-6,6,Workforce,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-7,7,Ground Truth Testing,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-8,8,Smart Patching,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-9,9,Vulnerability Disclosure,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+CIO-SEC-10,10,Resilience,CIO-FY25,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt

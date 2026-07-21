@@ -1,0 +1,31 @@
+source_id,target_id,rel_type,quote
+notice_I,actsec_113_5,REFERENCES_ACT_SECTION,"under section 113(5) of the Protection of Personal Information, 2013 (Act no. 4 of 2013)"
+inst_amendment_2025,actsec_113_3,REFERENCES_ACT_SECTION,"in accordance with section 113(3) of the Protection of Personal Information Act, 2013 (Act 4 of 2013)"
+prov_2_1,actsec_11_3_a,REFERENCES_ACT_SECTION,in terms of section 11(3)(a) of the Act
+prov_2_2,actsec_11_3_b,REFERENCES_ACT_SECTION,in terms of section 11(3)(b) of the Act
+prov_2_3,actsec_11_3_a,REFERENCES_ACT_SECTION,in terms of section 11(3)(a) of the Act
+prov_2_4,actsec_18_1_h_iv,REFERENCES_ACT_SECTION,in terms of Section 18(1)(h)(iv) of the Act
+prov_2_4,actsec_11_3,REFERENCES_ACT_SECTION,as referred to in Section 11(3) of the Act
+prov_3_1,actsec_24,REFERENCES_ACT_SECTION,in terms of section 24 of the Act
+prov_3_2,actsec_24_1_a,REFERENCES_ACT_SECTION,as provided for in section 24(1) (a) of the Act
+prov_3_3,actsec_24_1_b,REFERENCES_ACT_SECTION,in terms of section 24(1) (b) of the Act
+prov_3_3,actsec_14,REFERENCES_ACT_SECTION,no longer authorised to retain in terms of section 14 of the Act
+prov_6_1,actsec_69_2,REFERENCES_ACT_SECTION,must in terms of section 69(2) of the Act obtain written consent
+prov_6_4,actsec_69_2,REFERENCES_ACT_SECTION,opt-out shall not constitute consent as referred to in section 69 (2) of the Act
+prov_7_1_1,actsec_73,REFERENCES_ACT_SECTION,interfered with in terms of section 73 of the Act
+prov_7_1_2,actsec_73,REFERENCES_ACT_SECTION,as referred to in section 73 of the Act
+prov_7_1_3,actsec_73,REFERENCES_ACT_SECTION,referred to in section 73 of the Act
+prov_7_1_4,actsec_63_3,REFERENCES_ACT_SECTION,determination of an adjudicator in terms of section 63(3) of the Act
+prov_7_7,actsec_74_1,REFERENCES_ACT_SECTION,referred to in sections 74(1) and (2) of the Act
+prov_7_7,actsec_74_2,REFERENCES_ACT_SECTION,referred to in sections 74(1) and (2) of the Act
+prov_7_8,actsec_74_2,REFERENCES_ACT_SECTION,referred to in section 74(2) of the Act
+prov_9_1,actsec_109_1,REFERENCES_ACT_SECTION,"served with an infringement notice, in terms of section 109(1) of the Act"
+def_complaint,actsec_74_1,REFERENCES_ACT_SECTION,a matter reported to the Information Regulator in terms of section 74(1) and (2) of the Act
+def_complaint,actsec_74_2,REFERENCES_ACT_SECTION,a matter reported to the Information Regulator in terms of section 74(1) and (2) of the Act
+defp_complaint_b,actsec_76_1_e,REFERENCES_ACT_SECTION,a complaint referred to in section 76(1)(e) and 92(1) of the Act
+defp_complaint_b,actsec_92_1,REFERENCES_ACT_SECTION,a complaint referred to in section 76(1)(e) and 92(1) of the Act
+form_1,actsec_11_3,REFERENCES_ACT_SECTION,"IN TERMS OF SECTION 11(3) OF THE PROTECTION OF PERSONAL INFORMATION ACT, 2013"
+form_2,actsec_24_1,REFERENCES_ACT_SECTION,"IN TERMS OF SECTION 24(1) OF THE PROTECTION OF PERSONAL INFORMATION ACT, 2013"
+form_3,actsec_61_1_b,REFERENCES_ACT_SECTION,"IN TERMS OF SECTION 61(1)(b) OF THE PROTECTION OF PERSONAL INFORMATION ACT, 2013"
+form_4,actsec_69_2,REFERENCES_ACT_SECTION,IN TERMS OF SECTION 69 (2) OF THE ACT
+form_5,actsec_74,REFERENCES_ACT_SECTION,"IN TERMS OF SECTION 74 OF THE PROTECTION OF PERSONAL INFORMATION ACT, 2013"

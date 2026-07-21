@@ -1,0 +1,18 @@
+source_id,target_id,rel_type,duty_bearer
+ART27-P1,OBL-27-1,IMPOSES_OBLIGATION,Those conducting data handling activities
+ART27-P2,OBL-27-2,IMPOSES_OBLIGATION,Those handling important data
+ART28-P1,OBL-28-1,IMPOSES_OBLIGATION,Any data handling activity and research and development of new data technologies
+ART29-P1,OBL-29-1,IMPOSES_OBLIGATION,Those conducting data handling activities
+ART30-P1,OBL-30-1,IMPOSES_OBLIGATION,Those handling important data
+ART30-P2,OBL-30-2,IMPOSES_OBLIGATION,Those handling important data
+ART31-P1,OBL-31-1,IMPOSES_OBLIGATION,Operators of critical information infrastructure and other data handlers
+ART32-P1,OBL-32-1,IMPOSES_OBLIGATION,Any organization or individual collecting data
+ART32-P2,OBL-32-2,IMPOSES_OBLIGATION,Any organization or individual collecting or using data
+ART33-P1,OBL-33-1,IMPOSES_OBLIGATION,Institutions engaging in data transaction intermediary services
+ART34-P1,OBL-34-1,IMPOSES_OBLIGATION,Service providers of services related to data handling
+ART35-P1,OBL-35-1,IMPOSES_OBLIGATION,"Public security organs, national security organs, and relevant organizations and individuals"
+ART36-P1,OBL-36-1,IMPOSES_OBLIGATION,Any organization or individual within the territory of the People's Republic of China
+ART38-P1,OBL-38-1,IMPOSES_OBLIGATION,State organs
+ART39-P1,OBL-39-1,IMPOSES_OBLIGATION,State organs
+ART40-P1,OBL-40-1,IMPOSES_OBLIGATION,State organs and entrusted parties
+ART41-P1,OBL-41-1,IMPOSES_OBLIGATION,State organs

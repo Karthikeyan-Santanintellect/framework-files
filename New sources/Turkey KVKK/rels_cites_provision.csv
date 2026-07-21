@@ -1,0 +1,108 @@
+source_id,target_id,rel_type,detail
+PRIN-LAWFULNESS,GDPR-5(1)(a),CITES_PROVISION,GDPR basis
+PRIN-LAWFULNESS,KVKK-4(2)(a),CITES_PROVISION,KVKK basis
+PRIN-FAIRNESS,GDPR-5(1)(a),CITES_PROVISION,GDPR basis
+PRIN-FAIRNESS,KVKK-4(2)(a),CITES_PROVISION,KVKK basis
+PRIN-TRANSPARENCY,GDPR-5(1)(a),CITES_PROVISION,GDPR basis
+PRIN-ACCOUNTABILITY,GDPR-5(2),CITES_PROVISION,GDPR basis
+PRIN-PURPOSE-LIMITATION,GDPR-5(1)(b),CITES_PROVISION,GDPR basis
+PRIN-PURPOSE-LIMITATION,KVKK-4(2)(c),CITES_PROVISION,KVKK basis
+PRIN-DATA-MINIMIZATION,GDPR-5(1)(c),CITES_PROVISION,GDPR basis
+PRIN-DATA-MINIMIZATION,KVKK-4(2)(ç),CITES_PROVISION,KVKK basis
+PRIN-ACCURACY,GDPR-5(1)(d),CITES_PROVISION,GDPR basis
+PRIN-ACCURACY,KVKK-4(2)(f),CITES_PROVISION,KVKK basis
+PRIN-STORAGE-LIMITATION,GDPR-5(1)(e),CITES_PROVISION,GDPR basis
+PRIN-STORAGE-LIMITATION,KVKK-4(2)(d),CITES_PROVISION,KVKK basis
+PRIN-INTEGRITY-CONFIDENTIALITY,GDPR-5(1)(f),CITES_PROVISION,GDPR basis
+PRIN-INTEGRITY-CONFIDENTIALITY,KVKK-12,CITES_PROVISION,validated under the scope of Art. 12 of the KVKK
+PRIN-ACCOUNTABILITY,GDPR-37,CITES_PROVISION,accountability tool: data protection officer
+PRIN-ACCOUNTABILITY,GDPR-30,CITES_PROVISION,accountability tool: records of processing
+PRIN-ACCOUNTABILITY,GDPR-35,CITES_PROVISION,accountability tool: data protection impact assessment
+PRIN-ACCOUNTABILITY,GDPR-36,CITES_PROVISION,accountability tool: prior consultation
+PRIN-ACCOUNTABILITY,GDPR-40,CITES_PROVISION,accountability tool: codes of conducts
+PRIN-ACCOUNTABILITY,GDPR-42,CITES_PROVISION,accountability tool: certification
+PRIN-ACCOUNTABILITY,GDPR-28(3),CITES_PROVISION,accountability tool: the legal binding of processors
+PRIN-ACCOUNTABILITY,GDPR-31,CITES_PROVISION,accountability tool: co-operation with supervisory authorities
+PRIN-ACCOUNTABILITY,GDPR-33-34,CITES_PROVISION,accountability tool: personal data breach notification
+GROUND-CONSENT,GDPR-6(1)(a),CITES_PROVISION,GDPR basis
+GROUND-CONSENT,KVKK-5(1),CITES_PROVISION,KVKK basis
+GROUND-CONTRACT,GDPR-6(1)(b),CITES_PROVISION,GDPR basis
+GROUND-CONTRACT,KVKK-5(2)(c),CITES_PROVISION,KVKK basis
+GROUND-LEGAL-OBLIGATION,GDPR-6(1)(c),CITES_PROVISION,GDPR basis
+GROUND-LEGAL-OBLIGATION,KVKK-5(2)(ç),CITES_PROVISION,KVKK basis
+GROUND-VITAL-INTEREST,GDPR-6(1)(d),CITES_PROVISION,GDPR basis
+GROUND-VITAL-INTEREST,KVKK-5(2)(b),CITES_PROVISION,KVKK basis
+GROUND-LEGITIMATE-INTEREST,GDPR-6(1)(f),CITES_PROVISION,GDPR basis
+GROUND-LEGITIMATE-INTEREST,KVKK-5(2)(f),CITES_PROVISION,KVKK basis
+GROUND-PUBLIC-INTEREST,GDPR-6(1)(e),CITES_PROVISION,GDPR basis
+GROUND-EXPRESSLY-BY-LAW,KVKK-5(2)(a),CITES_PROVISION,KVKK basis
+GROUND-MADE-PUBLIC,KVKK-5(2)(d),CITES_PROVISION,KVKK basis
+GROUND-ESTABLISH-RIGHT,KVKK-5(1)(e),CITES_PROVISION,KVKK basis
+GROUND-CONSENT,KVKK-5(2),CITES_PROVISION,"if other legal bases, as outlined in Art. 5(2) of the KVKK, are available for a processing activity, obtaining consent is not mandatory"
+GROUND-CONSENT,GDPR-7,CITES_PROVISION,"while the GDPR has a separate provision, Art.7, regulating conditions for consent, the KVKK lacks additional provision for conditions"
+GROUND-CONSENT,GDPR-8,CITES_PROVISION,the GDPR ... addresses consent for children concerning information society services through Article 8
+GROUND-CONSENT,GDPR-17(1)(b),CITES_PROVISION,Right to erasure
+GROUND-CONSENT,GDPR-19,CITES_PROVISION,Notification obligation regarding erasure
+GROUND-CONSENT,GDPR-20,CITES_PROVISION,Right to data portability
+GROUND-CONSENT,GDPR-14(2)(d),CITES_PROVISION,Information about the right to withdraw consent at any time
+GROUND-CONSENT,KVKK-11(e),CITES_PROVISION,the right to erasure is recognized under Art. 11(e) of the KVKK
+GROUND-CONSENT,KVKK-7,CITES_PROVISION,granting data subjects the right to request erasure if the conditions outlined in Art. 7 are met
+GROUND-CONSENT,KVKK-11(f),CITES_PROVISION,Art. 11(f) allows data subjects to request notification to third parties about the erasure
+GROUND-LEGAL-OBLIGATION,GDPR-6(3),CITES_PROVISION,"According to Article 6(3) and Recital 43, ""a legal obligation"" should serve as a legal basis or legislative measure"
+GROUND-VITAL-INTEREST,GDPR-9(2)(c),CITES_PROVISION,The KVKK’s implementation on this aligns more with Article 9(2)(c) of the GDPR
+GROUND-LEGITIMATE-INTEREST,GDPR-13(1)(d),CITES_PROVISION,Obligation to inform data subjects what the legitimate interest relying on the process is
+GROUND-LEGITIMATE-INTEREST,GDPR-14(2)(b),CITES_PROVISION,Obligation to inform data subjects what the legitimate interest relying on the process is
+GROUND-LEGITIMATE-INTEREST,GDPR-21(1),CITES_PROVISION,Right to object if the legal ground the legitimate interest
+GROUND-LEGITIMATE-INTEREST,GDPR-17(1)(c),CITES_PROVISION,Right to erasure
+GROUND-LEGITIMATE-INTEREST,GDPR-18(1)(d),CITES_PROVISION,Right to rectification
+GROUND-LEGITIMATE-INTEREST,GDPR-19,CITES_PROVISION,Notification obligation regarding erasure
+GROUND-LEGITIMATE-INTEREST,GDPR-29,CITES_PROVISION,the absence of the concept of a data protection impact assessment (Art.29 of the GDPR) in the KVKK creates a notable gap
+GROUND-PUBLIC-INTEREST,GDPR-6(3),CITES_PROVISION,the purpose of processing for reasons of public interest/task should be established by law
+GROUND-PUBLIC-INTEREST,GDPR-6(3)(2),CITES_PROVISION,the GDPR emphasizes the quality of the law relied upon for processing for public interest
+GROUND-PUBLIC-INTEREST,GDPR-37(1)(a),CITES_PROVISION,the obligation to have a data protection officer in public authorities
+GROUND-PUBLIC-INTEREST,GDPR-21,CITES_PROVISION,the right to object
+GROUND-PUBLIC-INTEREST,GDPR-17(1)(c),CITES_PROVISION,the specific version of right to erasure
+GROUND-PUBLIC-INTEREST,GDPR-6,CITES_PROVISION,legitimate interest ... which is prohibited to be relying on by public authorities under the GDPR
+GROUND-MADE-PUBLIC,GDPR-9(2)(e),CITES_PROVISION,the GDPR treats the concept of personal data made public by the data subject as an exception to the prohibition of processing special categories of personal data
+GROUND-ESTABLISH-RIGHT,GDPR-9(2)(f),CITES_PROVISION,it serves as an exception to the prohibition of processing special categories of personal data
+GROUND-ESTABLISH-RIGHT,GDPR-17(3)(e),CITES_PROVISION,"it permits the continuation of processing activities even if data subjects exercise their rights to object, erasure, and restriction"
+GROUND-ESTABLISH-RIGHT,GDPR-18(2),CITES_PROVISION,"it permits the continuation of processing activities even if data subjects exercise their rights to object, erasure, and restriction"
+GROUND-ESTABLISH-RIGHT,GDPR-21(1),CITES_PROVISION,"it permits the continuation of processing activities even if data subjects exercise their rights to object, erasure, and restriction"
+RIGHT-INFORMATION,GDPR-12-14,CITES_PROVISION,GDPR basis
+RIGHT-INFORMATION,KVKK-10,CITES_PROVISION,KVKK basis
+RIGHT-INFORMATION-THIRD-PARTY,GDPR-14,CITES_PROVISION,GDPR basis
+RIGHT-ACCESS,GDPR-15,CITES_PROVISION,GDPR basis
+RIGHT-ACCESS,KVKK-11(a),CITES_PROVISION,KVKK basis
+RIGHT-ACCESS,KVKK-11(b),CITES_PROVISION,KVKK basis
+RIGHT-RECTIFICATION,GDPR-16,CITES_PROVISION,GDPR basis
+RIGHT-RECTIFICATION,KVKK-11(1)(d),CITES_PROVISION,KVKK basis
+RIGHT-ERASURE,GDPR-17,CITES_PROVISION,GDPR basis
+RIGHT-ERASURE,KVKK-11(1)(e),CITES_PROVISION,KVKK basis
+RIGHT-RESTRICTION,GDPR-18,CITES_PROVISION,GDPR basis
+RIGHT-NOTIFICATION,GDPR-19,CITES_PROVISION,GDPR basis
+RIGHT-NOTIFICATION,KVKK-11(1)(d),CITES_PROVISION,KVKK basis
+RIGHT-PORTABILITY,GDPR-20,CITES_PROVISION,GDPR basis
+RIGHT-OBJECT,GDPR-21,CITES_PROVISION,GDPR basis
+RIGHT-OBJECT,GDPR-21(1),CITES_PROVISION,GDPR basis
+RIGHT-OBJECT-DIRECT-MARKETING,GDPR-21(2),CITES_PROVISION,GDPR basis
+RIGHT-NO-AUTOMATED-DECISION,GDPR-22,CITES_PROVISION,GDPR basis
+RIGHT-NO-AUTOMATED-DECISION,GDPR-22(2),CITES_PROVISION,GDPR basis
+RIGHT-NO-AUTOMATED-DECISION,KVKK-11(1)(g),CITES_PROVISION,KVKK basis
+RIGHT-ACCESS,GDPR-15(3),CITES_PROVISION,Art.15(3) of the GDPR also allows to request a copy of the personal data undergoing processing
+RIGHT-ACCESS,GDPR-23,CITES_PROVISION,controllers may erroneously view protecting the rights of others as a restriction on data subjects' rights of access under Article 23 of the GDPR
+RIGHT-ACCESS,TRCONST-20,CITES_PROVISION,"the Turkish Constitution explicitly affirms, in Article 20, the right of every individual to access their personal data"
+RIGHT-ERASURE,GDPR-17(3)(e),CITES_PROVISION,Exceptions to the right to erasure are regulated under 17(3)(e) and 17(3)(b)
+RIGHT-ERASURE,GDPR-17(3)(b),CITES_PROVISION,Exceptions to the right to erasure are regulated under 17(3)(e) and 17(3)(b)
+RIGHT-INFORMATION,GDPR-13(3),CITES_PROVISION,the controller is obligated to inform data subjects about new purposes
+RIGHT-INFORMATION,COMM-5(1)(b),CITES_PROVISION,"the Authority's Communique ... as stated in Article 5(1)(b), explicitly grants this right to data subjects under the KVKK"
+RIGHT-INFORMATION,KVKK-11(1)(b),CITES_PROVISION,the right to learn about the processing and purposes
+RIGHT-INFORMATION,KVKK-11(1)(c),CITES_PROVISION,the right to learn about the processing and purposes
+RIGHT-INFORMATION,KVKK-10(1)(ç),CITES_PROVISION,"If an automated decision-making system will be used at any stage of processing, it should be disclosed to the data subject under the provision of Art.10(1)(ç)"
+RIGHT-INFORMATION-THIRD-PARTY,COMM-6(1)(a),CITES_PROVISION,Within a reasonable period after obtaining the personal data
+RIGHT-INFORMATION-THIRD-PARTY,COMM-6(1)(b),CITES_PROVISION,At the latest at the time of the first communication to that data subject
+SPC-CRIMINAL-CONVICTION,GDPR-10,CITES_PROVISION,separately regulated in Article 10 of the GDPR
+MEAS-KVKK-ART9,KVKK-9,CITES_PROVISION,
+MEAS-AUTHORITY-SET,KVKK-9,CITES_PROVISION,
+MEAS-GDPR-9-4,GDPR-9(4),CITES_PROVISION,
+FIND-18,DIR-95-46-EC,CITES_PROVISION,
+FIND-4,KVKK-5(1),CITES_PROVISION,

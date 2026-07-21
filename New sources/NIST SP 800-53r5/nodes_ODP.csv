@@ -1,0 +1,1199 @@
+odp_id,parent_id,parent_type,odp_text,source_document
+AC-1-a-ODP1,AC-1-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AC-1-a-1-ODP1,AC-1-a-1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+AC-1-b-ODP1,AC-1-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+AC-1-c-1-ODP1,AC-1-c-1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AC-1-c-1-ODP2,AC-1-c-1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AC-1-c-2-ODP1,AC-1-c-2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AC-1-c-2-ODP2,AC-1-c-2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AC-2-c-ODP1,AC-2-c,ControlItem,[Assignment: organization-defined prerequisites and criteria],NIST SP 800-53r5
+AC-2-d-3-ODP1,AC-2-d-3,ControlItem,[Assignment: organization-defined attributes (as required)],NIST SP 800-53r5
+AC-2-e-ODP1,AC-2-e,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AC-2-f-ODP1,AC-2-f,ControlItem,"[Assignment: organization-defined policy, procedures, prerequisites, and criteria]",NIST SP 800-53r5
+AC-2-h-ODP1,AC-2-h,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AC-2-h-1-ODP1,AC-2-h-1,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-2-h-2-ODP1,AC-2-h-2,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-2-h-3-ODP1,AC-2-h-3,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-2-i-3-ODP1,AC-2-i-3,ControlItem,[Assignment: organization-defined attributes (as required)],NIST SP 800-53r5
+AC-2-j-ODP1,AC-2-j,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AC-2(1)-ODP1,AC-2(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+AC-2(2)-ODP1,AC-2(2),ControlEnhancement,[Selection: remove; disable],NIST SP 800-53r5
+AC-2(2)-ODP2,AC-2(2),ControlEnhancement,[Assignment: organization-defined time period for each type of account],NIST SP 800-53r5
+AC-2(3)-ODP1,AC-2(3),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-2(3)-d-ODP1,AC-2(3)-d,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-2(5)-ODP1,AC-2(5),ControlEnhancement,[Assignment: organization-defined time period of expected inactivity or description of when to log out],NIST SP 800-53r5
+AC-2(6)-ODP1,AC-2(6),ControlEnhancement,[Assignment: organization-defined dynamic privilege management capabilities],NIST SP 800-53r5
+AC-2(7)-a-ODP1,AC-2(7)-a,ControlItem,[Selection: a role-based access scheme; an attribute-based access scheme],NIST SP 800-53r5
+AC-2(8)-ODP1,AC-2(8),ControlEnhancement,[Assignment: organization-defined system accounts],NIST SP 800-53r5
+AC-2(9)-ODP1,AC-2(9),ControlEnhancement,[Assignment: organization-defined conditions for establishing shared and group accounts],NIST SP 800-53r5
+AC-2(11)-ODP1,AC-2(11),ControlEnhancement,[Assignment: organization-defined circumstances and/or usage conditions],NIST SP 800-53r5
+AC-2(11)-ODP2,AC-2(11),ControlEnhancement,[Assignment: organization-defined system accounts],NIST SP 800-53r5
+AC-2(12)-a-ODP1,AC-2(12)-a,ControlItem,[Assignment: organization-defined atypical usage],NIST SP 800-53r5
+AC-2(12)-b-ODP1,AC-2(12)-b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AC-2(13)-ODP1,AC-2(13),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-2(13)-ODP2,AC-2(13),ControlEnhancement,[Assignment: organization-defined significant risks],NIST SP 800-53r5
+AC-3(2)-ODP1,AC-3(2),ControlEnhancement,[Assignment: organization-defined privileged commands and/or other organization-defined actions],NIST SP 800-53r5
+AC-3(3)-ODP1,AC-3(3),ControlEnhancement,[Assignment: organization-defined mandatory access control policy],NIST SP 800-53r5
+AC-3(3)-c-ODP1,AC-3(3)-c,ControlItem,[Assignment: organization-defined subjects],NIST SP 800-53r5
+AC-3(3)-c-ODP2,AC-3(3)-c,ControlItem,[Assignment: organization-defined privileges],NIST SP 800-53r5
+AC-3(4)-ODP1,AC-3(4),ControlEnhancement,[Assignment: organization-defined discretionary access control policy],NIST SP 800-53r5
+AC-3(5)-ODP1,AC-3(5),ControlEnhancement,[Assignment: organization-defined security-relevant information],NIST SP 800-53r5
+AC-3(7)-ODP1,AC-3(7),ControlEnhancement,[Assignment: organization-defined roles and users authorized to assume such roles],NIST SP 800-53r5
+AC-3(8)-ODP1,AC-3(8),ControlEnhancement,[Assignment: organization-defined rules governing the timing of revocations of access authorizations],NIST SP 800-53r5
+AC-3(9)-a-ODP1,AC-3(9)-a,ControlItem,[Assignment: organization-defined system or system component],NIST SP 800-53r5
+AC-3(9)-a-ODP2,AC-3(9)-a,ControlItem,[Assignment: organization-defined controls],NIST SP 800-53r5
+AC-3(9)-b-ODP1,AC-3(9)-b,ControlItem,[Assignment: organization-defined controls],NIST SP 800-53r5
+AC-3(10)-ODP1,AC-3(10),ControlEnhancement,[Assignment: organization-defined conditions],NIST SP 800-53r5
+AC-3(10)-ODP2,AC-3(10),ControlEnhancement,[Assignment: organization-defined roles],NIST SP 800-53r5
+AC-3(11)-ODP1,AC-3(11),ControlEnhancement,[Assignment: organization-defined information types],NIST SP 800-53r5
+AC-3(12)-a-ODP1,AC-3(12)-a,ControlItem,[Assignment: organization-defined system applications and functions],NIST SP 800-53r5
+AC-3(13)-ODP1,AC-3(13),ControlEnhancement,[Assignment: organization-defined attributes to assume access permissions],NIST SP 800-53r5
+AC-3(14)-ODP1,AC-3(14),ControlEnhancement,[Assignment: organization-defined mechanisms],NIST SP 800-53r5
+AC-3(14)-ODP2,AC-3(14),ControlEnhancement,[Assignment: organization-defined elements],NIST SP 800-53r5
+AC-3(15)-a-ODP1,AC-3(15)-a,ControlItem,[Assignment: organization-defined mandatory access control policy],NIST SP 800-53r5
+AC-3(15)-b-ODP1,AC-3(15)-b,ControlItem,[Assignment: organization-defined discretionary access control policy],NIST SP 800-53r5
+AC-4-ODP1,AC-4,Control,[Assignment: organization-defined information flow control policies],NIST SP 800-53r5
+AC-4(1)-ODP1,AC-4(1),ControlEnhancement,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+AC-4(1)-ODP2,AC-4(1),ControlEnhancement,"[Assignment: organization-defined information, source, and destination objects]",NIST SP 800-53r5
+AC-4(1)-ODP3,AC-4(1),ControlEnhancement,[Assignment: organization-defined information flow control policies],NIST SP 800-53r5
+AC-4(2)-ODP1,AC-4(2),ControlEnhancement,[Assignment: organization-defined information flow control policies],NIST SP 800-53r5
+AC-4(3)-ODP1,AC-4(3),ControlEnhancement,[Assignment: organization-defined information flow control policies],NIST SP 800-53r5
+AC-4(4)-ODP1,AC-4(4),ControlEnhancement,[Assignment: organization-defined information flow control mechanisms],NIST SP 800-53r5
+AC-4(4)-ODP2,AC-4(4),ControlEnhancement,[Assignment: organization-defined procedure or method],NIST SP 800-53r5
+AC-4(5)-ODP1,AC-4(5),ControlEnhancement,[Assignment: organization-defined limitations],NIST SP 800-53r5
+AC-4(6)-ODP1,AC-4(6),ControlEnhancement,[Assignment: organization-defined metadata],NIST SP 800-53r5
+AC-4(8)-a-ODP1,AC-4(8)-a,ControlItem,[Assignment: organization-defined security or privacy policy filters],NIST SP 800-53r5
+AC-4(8)-a-ODP2,AC-4(8)-a,ControlItem,[Assignment: organization-defined information flows],NIST SP 800-53r5
+AC-4(8)-b-ODP1,AC-4(8)-b,ControlItem,[Selection (one or more): Block; Strip; Modify; Quarantine],NIST SP 800-53r5
+AC-4(8)-b-ODP2,AC-4(8)-b,ControlItem,[Assignment: organization-defined security or privacy policy],NIST SP 800-53r5
+AC-4(9)-ODP1,AC-4(9),ControlEnhancement,[Assignment: organization-defined information flows],NIST SP 800-53r5
+AC-4(9)-ODP2,AC-4(9),ControlEnhancement,[Assignment: organization-defined conditions],NIST SP 800-53r5
+AC-4(10)-ODP1,AC-4(10),ControlEnhancement,[Assignment: organization-defined security or privacy policy filters],NIST SP 800-53r5
+AC-4(10)-ODP2,AC-4(10),ControlEnhancement,[Assignment: organization-defined conditions],NIST SP 800-53r5
+AC-4(11)-ODP1,AC-4(11),ControlEnhancement,[Assignment: organization-defined security or privacy policy filters],NIST SP 800-53r5
+AC-4(12)-ODP1,AC-4(12),ControlEnhancement,[Assignment: organization-defined data type identifiers],NIST SP 800-53r5
+AC-4(13)-ODP1,AC-4(13),ControlEnhancement,[Assignment: organization-defined policy-relevant subcomponents],NIST SP 800-53r5
+AC-4(14)-ODP1,AC-4(14),ControlEnhancement,[Assignment: organization-defined security or privacy policy filters],NIST SP 800-53r5
+AC-4(15)-ODP1,AC-4(15),ControlEnhancement,[Assignment: organization-defined unsanctioned information],NIST SP 800-53r5
+AC-4(15)-ODP2,AC-4(15),ControlEnhancement,[Assignment: organization-defined security or privacy policy],NIST SP 800-53r5
+AC-4(17)-ODP1,AC-4(17),ControlEnhancement,[Selection (one or more): organization; system; application; service; individual],NIST SP 800-53r5
+AC-4(19)-ODP1,AC-4(19),ControlEnhancement,[Assignment: organization-defined security or privacy policy filters],NIST SP 800-53r5
+AC-4(20)-ODP1,AC-4(20),ControlEnhancement,[Assignment: organization-defined solutions in approved configurations],NIST SP 800-53r5
+AC-4(20)-ODP2,AC-4(20),ControlEnhancement,[Assignment: organization-defined information],NIST SP 800-53r5
+AC-4(21)-ODP1,AC-4(21),ControlEnhancement,[Assignment: organization-defined mechanisms and/or techniques],NIST SP 800-53r5
+AC-4(21)-ODP2,AC-4(21),ControlEnhancement,[Assignment: organization-defined required separations by types of information],NIST SP 800-53r5
+AC-4(23)-ODP1,AC-4(23),ControlEnhancement,[Assignment: organization-defined modification action],NIST SP 800-53r5
+AC-4(25)-ODP1,AC-4(25),ControlEnhancement,"[Selection (one or more): delivery of malicious content, command and control of malicious code, malicious code augmentation, and steganography encoded data; spillage of sensitive information]",NIST SP 800-53r5
+AC-4(25)-ODP2,AC-4(25),ControlEnhancement,[Assignment: organization-defined policy],NIST SP 800-53r5
+AC-4(29)-b-ODP1,AC-4(29)-b,ControlItem,[Assignment: organization-defined policy],NIST SP 800-53r5
+AC-5-a-ODP1,AC-5-a,ControlItem,[Assignment: organization-defined duties of individuals requiring separation],NIST SP 800-53r5
+AC-6(1)-ODP1,AC-6(1),ControlEnhancement,[Assignment: organization-defined individuals or roles],NIST SP 800-53r5
+AC-6(1)-a-ODP1,AC-6(1)-a,ControlItem,"[Assignment: organization-defined security functions (deployed in hardware, software, and firmware)]",NIST SP 800-53r5
+AC-6(1)-b-ODP1,AC-6(1)-b,ControlItem,[Assignment: organization-defined security-relevant information],NIST SP 800-53r5
+AC-6(2)-ODP1,AC-6(2),ControlEnhancement,[Assignment: organization-defined security functions or security-relevant information],NIST SP 800-53r5
+AC-6(3)-ODP1,AC-6(3),ControlEnhancement,[Assignment: organization-defined privileged commands],NIST SP 800-53r5
+AC-6(3)-ODP2,AC-6(3),ControlEnhancement,[Assignment: organization-defined compelling operational needs],NIST SP 800-53r5
+AC-6(5)-ODP1,AC-6(5),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AC-6(7)-a-ODP1,AC-6(7)-a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AC-6(7)-a-ODP2,AC-6(7)-a,ControlItem,[Assignment: organization-defined roles or classes of users],NIST SP 800-53r5
+AC-6(8)-ODP1,AC-6(8),ControlEnhancement,[Assignment: organization-defined software],NIST SP 800-53r5
+AC-7-a-ODP1,AC-7-a,ControlItem,[Assignment: organization-defined number],NIST SP 800-53r5
+AC-7-a-ODP2,AC-7-a,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-7-b-ODP1,AC-7-b,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-7-b-ODP2,AC-7-b,ControlItem,[Assignment: organization-defined delay algorithm],NIST SP 800-53r5
+AC-7-b-ODP3,AC-7-b,ControlItem,[Assignment: organization-defined action],NIST SP 800-53r5
+AC-7(2)-ODP1,AC-7(2),ControlEnhancement,[Assignment: organization-defined mobile devices],NIST SP 800-53r5
+AC-7(2)-ODP2,AC-7(2),ControlEnhancement,[Assignment: organization-defined purging or wiping requirements and techniques],NIST SP 800-53r5
+AC-7(2)-ODP3,AC-7(2),ControlEnhancement,[Assignment: organization-defined number],NIST SP 800-53r5
+AC-7(3)-ODP1,AC-7(3),ControlEnhancement,[Assignment: organization-defined number],NIST SP 800-53r5
+AC-7(4)-a-ODP1,AC-7(4)-a,ControlItem,[Assignment: organization-defined authentication factors],NIST SP 800-53r5
+AC-7(4)-b-ODP1,AC-7(4)-b,ControlItem,[Assignment: organization-defined number],NIST SP 800-53r5
+AC-7(4)-b-ODP2,AC-7(4)-b,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-8-a-ODP1,AC-8-a,ControlItem,[Assignment: organization-defined system use notification message or banner],NIST SP 800-53r5
+AC-8-c-1-ODP1,AC-8-c-1,ControlItem,[Assignment: organization-defined conditions],NIST SP 800-53r5
+AC-9(2)-ODP1,AC-9(2),ControlEnhancement,[Selection: successful logons; unsuccessful logon attempts; both],NIST SP 800-53r5
+AC-9(2)-ODP2,AC-9(2),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-9(3)-ODP1,AC-9(3),ControlEnhancement,[Assignment: organization-defined security-related characteristics or parameters of the user’s account],NIST SP 800-53r5
+AC-9(3)-ODP2,AC-9(3),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-9(4)-ODP1,AC-9(4),ControlEnhancement,[Assignment: organization-defined additional information],NIST SP 800-53r5
+AC-10-ODP1,AC-10,Control,[Assignment: organization-defined account and/or account type],NIST SP 800-53r5
+AC-10-ODP2,AC-10,Control,[Assignment: organization-defined number],NIST SP 800-53r5
+AC-11-a-ODP1,AC-11-a,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-12-ODP1,AC-12,Control,[Assignment: organization-defined conditions or trigger events requiring session disconnect],NIST SP 800-53r5
+AC-12(1)-ODP1,AC-12(1),ControlEnhancement,[Assignment: organization-defined information resources],NIST SP 800-53r5
+AC-12(3)-ODP1,AC-12(3),ControlEnhancement,[Assignment: organization-defined time until end of session],NIST SP 800-53r5
+AC-14-a-ODP1,AC-14-a,ControlItem,[Assignment: organization-defined user actions],NIST SP 800-53r5
+AC-16-a-ODP1,AC-16-a,ControlItem,[Assignment: organization-defined types of security and privacy attributes],NIST SP 800-53r5
+AC-16-a-ODP2,AC-16-a,ControlItem,[Assignment: organization-defined security and privacy attribute values],NIST SP 800-53r5
+AC-16-c-ODP1,AC-16-c,ControlItem,[Assignment: organization-defined systems],NIST SP 800-53r5
+AC-16-c-ODP2,AC-16-c,ControlItem,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+AC-16-d-ODP1,AC-16-d,ControlItem,[Assignment: organization-defined attribute values or ranges for established attributes],NIST SP 800-53r5
+AC-16-f-ODP1,AC-16-f,ControlItem,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+AC-16-f-ODP2,AC-16-f,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AC-16(1)-ODP1,AC-16(1),ControlEnhancement,[Assignment: organization-defined subjects and objects],NIST SP 800-53r5
+AC-16(1)-ODP2,AC-16(1),ControlEnhancement,[Assignment: organization-defined security and privacy policies],NIST SP 800-53r5
+AC-16(3)-ODP1,AC-16(3),ControlEnhancement,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+AC-16(3)-ODP2,AC-16(3),ControlEnhancement,[Assignment: organization-defined subjects and objects],NIST SP 800-53r5
+AC-16(4)-ODP1,AC-16(4),ControlEnhancement,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+AC-16(4)-ODP2,AC-16(4),ControlEnhancement,[Assignment: organization-defined subjects and objects],NIST SP 800-53r5
+AC-16(5)-ODP1,AC-16(5),ControlEnhancement,"[Assignment: organization-defined special dissemination, handling, or distribution instructions]",NIST SP 800-53r5
+AC-16(5)-ODP2,AC-16(5),ControlEnhancement,"[Assignment: organization-defined human-readable, standard naming conventions]",NIST SP 800-53r5
+AC-16(6)-ODP1,AC-16(6),ControlEnhancement,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+AC-16(6)-ODP2,AC-16(6),ControlEnhancement,[Assignment: organization-defined subjects and objects],NIST SP 800-53r5
+AC-16(6)-ODP3,AC-16(6),ControlEnhancement,[Assignment: organization-defined security and privacy policies],NIST SP 800-53r5
+AC-16(8)-ODP1,AC-16(8),ControlEnhancement,[Assignment: organization-defined techniques and technologies],NIST SP 800-53r5
+AC-16(9)-ODP1,AC-16(9),ControlEnhancement,[Assignment: organization-defined techniques or procedures],NIST SP 800-53r5
+AC-17(4)-a-ODP1,AC-17(4)-a,ControlItem,[Assignment: organization-defined needs],NIST SP 800-53r5
+AC-17(9)-ODP1,AC-17(9),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+AC-17(10)-ODP1,AC-17(10),ControlEnhancement,[Assignment: organization-defined mechanisms],NIST SP 800-53r5
+AC-17(10)-ODP2,AC-17(10),ControlEnhancement,[Assignment: organization-defined remote commands],NIST SP 800-53r5
+AC-18(1)-ODP1,AC-18(1),ControlEnhancement,[Selection (one or more): users; devices],NIST SP 800-53r5
+AC-19(4)-b-4-ODP1,AC-19(4)-b-4,ControlItem,[Assignment: organization-defined security officials],NIST SP 800-53r5
+AC-19(4)-c-ODP1,AC-19(4)-c,ControlItem,[Assignment: organization-defined security policies],NIST SP 800-53r5
+AC-19(5)-ODP1,AC-19(5),ControlEnhancement,[Selection: full-device encryption; container-based encryption],NIST SP 800-53r5
+AC-19(5)-ODP2,AC-19(5),ControlEnhancement,[Assignment: organization-defined mobile devices],NIST SP 800-53r5
+AC-20-a-ODP1,AC-20-a,ControlItem,[Assignment: organization-defined terms and conditions],NIST SP 800-53r5
+AC-20-a-ODP2,AC-20-a,ControlItem,[Assignment: organization-defined controls asserted to be implemented on external systems],NIST SP 800-53r5
+AC-20-b-ODP1,AC-20-b,ControlItem,[Assignment: organizationally-defined types of external systems],NIST SP 800-53r5
+AC-20(2)-ODP1,AC-20(2),ControlEnhancement,[Assignment: organization-defined restrictions],NIST SP 800-53r5
+AC-20(3)-ODP1,AC-20(3),ControlEnhancement,[Assignment: organization-defined restrictions],NIST SP 800-53r5
+AC-20(4)-ODP1,AC-20(4),ControlEnhancement,[Assignment: organization-defined network accessible storage devices],NIST SP 800-53r5
+AC-21-a-ODP1,AC-21-a,ControlItem,[Assignment: organization-defined information sharing circumstances where user discretion is required],NIST SP 800-53r5
+AC-21-b-ODP1,AC-21-b,ControlItem,[Assignment: organization-defined automated mechanisms or manual processes],NIST SP 800-53r5
+AC-21(1)-ODP1,AC-21(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+AC-21(2)-ODP1,AC-21(2),ControlEnhancement,[Assignment: organization-defined information sharing restrictions],NIST SP 800-53r5
+AC-22-d-ODP1,AC-22-d,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AC-23-ODP1,AC-23,Control,[Assignment: organization-defined data mining prevention and detection techniques],NIST SP 800-53r5
+AC-23-ODP2,AC-23,Control,[Assignment: organization-defined data storage objects],NIST SP 800-53r5
+AC-24-ODP1,AC-24,Control,[Selection: Establish procedures; Implement mechanisms],NIST SP 800-53r5
+AC-24-ODP2,AC-24,Control,[Assignment: organization-defined access control decisions],NIST SP 800-53r5
+AC-24(1)-ODP1,AC-24(1),ControlEnhancement,[Assignment: organization-defined access authorization information],NIST SP 800-53r5
+AC-24(1)-ODP2,AC-24(1),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+AC-24(1)-ODP3,AC-24(1),ControlEnhancement,[Assignment: organization-defined systems],NIST SP 800-53r5
+AC-24(2)-ODP1,AC-24(2),ControlEnhancement,[Assignment: organization-defined security or privacy attributes],NIST SP 800-53r5
+AC-25-ODP1,AC-25,Control,[Assignment: organization-defined access control policies],NIST SP 800-53r5
+AT-1-a-ODP1,AT-1-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AT-1-a-1-ODP1,AT-1-a-1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+AT-1-b-ODP1,AT-1-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+AT-1-c-1-ODP1,AT-1-c-1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-1-c-1-ODP2,AT-1-c-1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AT-1-c-2-ODP1,AT-1-c-2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-1-c-2-ODP2,AT-1-c-2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AT-2-a-1-ODP1,AT-2-a-1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-2-a-2-ODP1,AT-2-a-2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AT-2-b-ODP1,AT-2-b,ControlItem,[Assignment: organization-defined awareness techniques],NIST SP 800-53r5
+AT-2-c-ODP1,AT-2-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-2-c-ODP2,AT-2-c,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AT-2(4)-ODP1,AT-2(4),ControlEnhancement,[Assignment: organization-defined indicators of malicious code],NIST SP 800-53r5
+AT-3-a-ODP1,AT-3-a,ControlItem,[Assignment: organization-defined roles and responsibilities],NIST SP 800-53r5
+AT-3-a-1-ODP1,AT-3-a-1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-3-b-ODP1,AT-3-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-3-b-ODP2,AT-3-b,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AT-3(1)-ODP1,AT-3(1),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AT-3(1)-ODP2,AT-3(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-3(2)-ODP1,AT-3(2),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AT-3(2)-ODP2,AT-3(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-3(5)-ODP1,AT-3(5),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AT-3(5)-ODP2,AT-3(5),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-4-b-ODP1,AT-4-b,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AT-6-ODP1,AT-6,Control,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AT-6-ODP2,AT-6,Control,[Assignment: organization-defined personnel],NIST SP 800-53r5
+AU-1-a-ODP1,AU-1-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AU-1-a-1-ODP1,AU-1-a-1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+AU-1-b-ODP1,AU-1-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+AU-1-c-1-ODP1,AU-1-c-1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-1-c-1-ODP2,AU-1-c-1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AU-1-c-2-ODP1,AU-1-c-2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-1-c-2-ODP2,AU-1-c-2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+AU-2-a-ODP1,AU-2-a,ControlItem,[Assignment: organization-defined event types that the system is capable of logging],NIST SP 800-53r5
+AU-2-c-ODP1,AU-2-c,ControlItem,[Assignment: organization-defined event types (subset of the event types defined in AU-2a.) along with the frequency of (or situation requiring) logging for each identified event type],NIST SP 800-53r5
+AU-2-e-ODP1,AU-2-e,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-3(1)-ODP1,AU-3(1),ControlEnhancement,[Assignment: organization-defined additional information],NIST SP 800-53r5
+AU-3(3)-ODP1,AU-3(3),ControlEnhancement,[Assignment: organization-defined elements],NIST SP 800-53r5
+AU-4-ODP1,AU-4,Control,[Assignment: organization-defined audit log retention requirements],NIST SP 800-53r5
+AU-4(1)-ODP1,AU-4(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-5-a-ODP1,AU-5-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AU-5-a-ODP2,AU-5-a,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+AU-5-b-ODP1,AU-5-b,ControlItem,[Assignment: organization-defined additional actions],NIST SP 800-53r5
+AU-5(1)-ODP1,AU-5(1),ControlEnhancement,"[Assignment: organization-defined personnel, roles, and/or locations]",NIST SP 800-53r5
+AU-5(1)-ODP2,AU-5(1),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+AU-5(1)-ODP3,AU-5(1),ControlEnhancement,[Assignment: organization-defined percentage],NIST SP 800-53r5
+AU-5(2)-ODP1,AU-5(2),ControlEnhancement,[Assignment: organization-defined real-time period],NIST SP 800-53r5
+AU-5(2)-ODP2,AU-5(2),ControlEnhancement,"[Assignment: organization-defined personnel, roles, and/or locations]",NIST SP 800-53r5
+AU-5(2)-ODP3,AU-5(2),ControlEnhancement,[Assignment: organization-defined audit logging failure events requiring real-time alerts],NIST SP 800-53r5
+AU-5(3)-ODP1,AU-5(3),ControlEnhancement,[Selection: reject; delay],NIST SP 800-53r5
+AU-5(4)-ODP1,AU-5(4),ControlEnhancement,[Selection: full system shutdown; partial system shutdown; degraded operational mode with limited mission or business functionality available],NIST SP 800-53r5
+AU-5(4)-ODP2,AU-5(4),ControlEnhancement,[Assignment: organization-defined audit logging failures],NIST SP 800-53r5
+AU-5(5)-ODP1,AU-5(5),ControlEnhancement,[Assignment: organization-defined alternate audit logging functionality],NIST SP 800-53r5
+AU-6-a-ODP1,AU-6-a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-6-a-ODP2,AU-6-a,ControlItem,[Assignment: organization-defined inappropriate or unusual activity],NIST SP 800-53r5
+AU-6-b-ODP1,AU-6-b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AU-6(1)-ODP1,AU-6(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+AU-6(5)-ODP1,AU-6(5),ControlEnhancement,[Assignment: organization-defined data/information collected from other sources],NIST SP 800-53r5
+AU-6(7)-ODP1,AU-6(7),ControlEnhancement,[Selection (one or more): system process; role; user],NIST SP 800-53r5
+AU-7(1)-ODP1,AU-7(1),ControlEnhancement,[Assignment: organization-defined fields within audit records],NIST SP 800-53r5
+AU-8-b-ODP1,AU-8-b,ControlItem,[Assignment: organization-defined granularity of time measurement],NIST SP 800-53r5
+AU-9-b-ODP1,AU-9-b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AU-9(2)-ODP1,AU-9(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-9(4)-ODP1,AU-9(4),ControlEnhancement,[Assignment: organization-defined subset of privileged users or roles],NIST SP 800-53r5
+AU-9(5)-ODP1,AU-9(5),ControlEnhancement,[Selection (one or more): movement; deletion],NIST SP 800-53r5
+AU-9(5)-ODP2,AU-9(5),ControlEnhancement,[Assignment: organization-defined audit information],NIST SP 800-53r5
+AU-9(6)-ODP1,AU-9(6),ControlEnhancement,[Assignment: organization-defined subset of privileged users or roles],NIST SP 800-53r5
+AU-10-ODP1,AU-10,Control,[Assignment: organization-defined actions to be covered by non-repudiation],NIST SP 800-53r5
+AU-10(1)-a-ODP1,AU-10(1)-a,ControlItem,[Assignment: organization-defined strength of binding],NIST SP 800-53r5
+AU-10(2)-a-ODP1,AU-10(2)-a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-10(2)-b-ODP1,AU-10(2)-b,ControlItem,[Assignment: organization-defined actions],NIST SP 800-53r5
+AU-10(4)-a-ODP1,AU-10(4)-a,ControlItem,[Assignment: organization-defined security domains],NIST SP 800-53r5
+AU-10(4)-b-ODP1,AU-10(4)-b,ControlItem,[Assignment: organization-defined actions],NIST SP 800-53r5
+AU-11-ODP1,AU-11,Control,[Assignment: organization-defined time period consistent with records retention policy],NIST SP 800-53r5
+AU-11(1)-ODP1,AU-11(1),ControlEnhancement,[Assignment: organization-defined measures],NIST SP 800-53r5
+AU-12-a-ODP1,AU-12-a,ControlItem,[Assignment: organization-defined system components],NIST SP 800-53r5
+AU-12-b-ODP1,AU-12-b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AU-12(1)-ODP1,AU-12(1),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+AU-12(1)-ODP2,AU-12(1),ControlEnhancement,[Assignment: organization-defined level of tolerance for the relationship between time stamps of individual records in the audit trail],NIST SP 800-53r5
+AU-12(3)-ODP1,AU-12(3),ControlEnhancement,[Assignment: organization-defined individuals or roles],NIST SP 800-53r5
+AU-12(3)-ODP2,AU-12(3),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+AU-12(3)-ODP3,AU-12(3),ControlEnhancement,[Assignment: organization-defined selectable event criteria],NIST SP 800-53r5
+AU-12(3)-ODP4,AU-12(3),ControlEnhancement,[Assignment: organization-defined time thresholds],NIST SP 800-53r5
+AU-13-a-ODP1,AU-13-a,ControlItem,[Assignment: organization-defined open-source information and/or information sites],NIST SP 800-53r5
+AU-13-a-ODP2,AU-13-a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-13-b-1-ODP1,AU-13-b-1,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+AU-13-b-2-ODP1,AU-13-b-2,ControlItem,[Assignment: organization-defined additional actions],NIST SP 800-53r5
+AU-13(1)-ODP1,AU-13(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+AU-13(2)-ODP1,AU-13(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+AU-14-a-ODP1,AU-14-a,ControlItem,[Assignment: organization-defined users or roles],NIST SP 800-53r5
+AU-14-a-ODP2,AU-14-a,ControlItem,[Selection (one or more): record; view; hear; log],NIST SP 800-53r5
+AU-14-a-ODP3,AU-14-a,ControlItem,[Assignment: organization-defined circumstances],NIST SP 800-53r5
+AU-16-ODP1,AU-16,Control,[Assignment: organization-defined methods],NIST SP 800-53r5
+AU-16-ODP2,AU-16,Control,[Assignment: organization-defined audit information],NIST SP 800-53r5
+AU-16(2)-ODP1,AU-16(2),ControlEnhancement,[Assignment: organization-defined organizations],NIST SP 800-53r5
+AU-16(2)-ODP2,AU-16(2),ControlEnhancement,[Assignment: organization-defined cross-organizational sharing agreements],NIST SP 800-53r5
+AU-16(3)-ODP1,AU-16(3),ControlEnhancement,[Assignment: organization-defined measures],NIST SP 800-53r5
+CA-1-a-ODP1,CA-1-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+CA-1-a-1-ODP1,CA-1-a-1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+CA-1-b-ODP1,CA-1-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+CA-1-c-1-ODP1,CA-1-c-1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-1-c-1-ODP2,CA-1-c-1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+CA-1-c-2-ODP1,CA-1-c-2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-1-c-2-ODP2,CA-1-c-2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+CA-2-d-ODP1,CA-2-d,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-2-f-ODP1,CA-2-f,ControlItem,[Assignment: organization-defined individuals or roles],NIST SP 800-53r5
+CA-2(2)-ODP1,CA-2(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-2(2)-ODP2,CA-2(2),ControlEnhancement,[Selection: announced; unannounced],NIST SP 800-53r5
+CA-2(2)-ODP3,CA-2(2),ControlEnhancement,[Assignment: organization-defined other forms of assessment],NIST SP 800-53r5
+CA-2(3)-ODP1,CA-2(3),ControlEnhancement,[Assignment: organization-defined external organization],NIST SP 800-53r5
+CA-2(3)-ODP2,CA-2(3),ControlEnhancement,[Assignment: organization-defined system],NIST SP 800-53r5
+CA-2(3)-ODP3,CA-2(3),ControlEnhancement,[Assignment: organization-defined requirements],NIST SP 800-53r5
+CA-3-a-ODP1,CA-3-a,ControlItem,[Assignment: organization-defined type of agreement],NIST SP 800-53r5
+CA-3-c-ODP1,CA-3-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-5-b-ODP1,CA-5-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-5(1)-ODP1,CA-5(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+CA-6-e-ODP1,CA-6-e,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-7-a-ODP1,CA-7-a,ControlItem,[Assignment: organization-defined system-level metrics],NIST SP 800-53r5
+CA-7-b-ODP1,CA-7-b,ControlItem,[Assignment: organization-defined frequencies],NIST SP 800-53r5
+CA-7-b-ODP2,CA-7-b,ControlItem,[Assignment: organization-defined frequencies],NIST SP 800-53r5
+CA-7-g-ODP1,CA-7-g,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+CA-7-g-ODP2,CA-7-g,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-7(5)-ODP1,CA-7(5),ControlEnhancement,[Assignment: organization-defined actions],NIST SP 800-53r5
+CA-7(6)-ODP1,CA-7(6),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+CA-8-ODP1,CA-8,Control,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-8-ODP2,CA-8,Control,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+CA-8(2)-ODP1,CA-8(2),ControlEnhancement,[Assignment: organization-defined red team exercises],NIST SP 800-53r5
+CA-8(3)-ODP1,CA-8(3),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CA-8(3)-ODP2,CA-8(3),ControlEnhancement,[Selection: announced; unannounced],NIST SP 800-53r5
+CA-9-a-ODP1,CA-9-a,ControlItem,[Assignment: organization-defined system components or classes of components],NIST SP 800-53r5
+CA-9-c-ODP1,CA-9-c,ControlItem,[Assignment: organization-defined conditions],NIST SP 800-53r5
+CA-9-d-ODP1,CA-9-d,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+CM-14::ODP1,CM-14,Control,[Assignment: organization-defined software and firmware components],NIST.SP.800-53r5.pdf
+CP-8::ODP1,CP-8,Control,[Assignment: organization-defined system operations],NIST.SP.800-53r5.pdf
+CP-8::ODP2,CP-8,Control,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+CP-10::ODP1,CP-10,Control,[Assignment: organization-defined time period consistent with recovery time and recovery point objectives],NIST.SP.800-53r5.pdf
+CP-11::ODP1,CP-11,Control,[Assignment: organization-defined alternative communications protocols],NIST.SP.800-53r5.pdf
+CP-12::ODP1,CP-12,Control,[Assignment: organization-defined conditions],NIST.SP.800-53r5.pdf
+CP-12::ODP2,CP-12,Control,[Assignment: organization-defined restrictions of safe mode of operation],NIST.SP.800-53r5.pdf
+CP-13::ODP1,CP-13,Control,[Assignment: organization-defined alternative or supplemental security mechanisms],NIST.SP.800-53r5.pdf
+CP-13::ODP2,CP-13,Control,[Assignment: organization-defined security functions],NIST.SP.800-53r5.pdf
+IA-3::ODP1,IA-3,Control,[Assignment: organization-defined devices and/or types of devices],NIST.SP.800-53r5.pdf
+IA-3::ODP2,IA-3,Control,[Selection (one or more): local; remote; network],NIST.SP.800-53r5.pdf
+IA-9::ODP1,IA-9,Control,[Assignment: organization-defined system services and applications],NIST.SP.800-53r5.pdf
+IA-10::ODP1,IA-10,Control,[Assignment: organization-defined supplemental authentication techniques or mechanisms],NIST.SP.800-53r5.pdf
+IA-10::ODP2,IA-10,Control,[Assignment: organization-defined circumstances or situations],NIST.SP.800-53r5.pdf
+IA-11::ODP1,IA-11,Control,[Assignment: organization-defined circumstances or situations requiring re-authentication],NIST.SP.800-53r5.pdf
+IR-3::ODP1,IR-3,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-3::ODP2,IR-3,Control,[Assignment: organization-defined tests],NIST.SP.800-53r5.pdf
+CM-2(2)::ODP1,CM-2(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-2(3)::ODP1,CM-2(3),ControlEnhancement,[Assignment: organization-defined number],NIST.SP.800-53r5.pdf
+CM-3(1)::ODP1,CM-3(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-3(3)::ODP1,CM-3(3),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-3(4)::ODP1,CM-3(4),ControlEnhancement,[Assignment: organization-defined security and privacy representatives],NIST.SP.800-53r5.pdf
+CM-3(4)::ODP2,CM-3(4),ControlEnhancement,[Assignment: organization-defined configuration change control element],NIST.SP.800-53r5.pdf
+CM-3(5)::ODP1,CM-3(5),ControlEnhancement,[Assignment: organization-defined security responses],NIST.SP.800-53r5.pdf
+CM-3(6)::ODP1,CM-3(6),ControlEnhancement,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+CM-3(7)::ODP1,CM-3(7),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-3(7)::ODP2,CM-3(7),ControlEnhancement,[Assignment: organization-defined circumstances],NIST.SP.800-53r5.pdf
+CM-3(8)::ODP1,CM-3(8),ControlEnhancement,[Assignment: organization-defined circumstances],NIST.SP.800-53r5.pdf
+CM-5(4)::ODP1,CM-5(4),ControlEnhancement,[Assignment: organization-defined system components and system-level information],NIST.SP.800-53r5.pdf
+CM-6(1)::ODP1,CM-6(1),ControlEnhancement,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+CM-6(1)::ODP2,CM-6(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-6(2)::ODP1,CM-6(2),ControlEnhancement,[Assignment: organization-defined configuration settings],NIST.SP.800-53r5.pdf
+CM-6(2)::ODP2,CM-6(2),ControlEnhancement,[Assignment: organization-defined actions],NIST.SP.800-53r5.pdf
+CM-7(2)::ODP1,CM-7(2),ControlEnhancement,"[Selection (one or more): [Assignment: organization-defined policies, rules of behavior, and/or access agreements regarding software program usage and restrictions]; rules authorizing the terms and conditions of software program usage]",NIST.SP.800-53r5.pdf
+CM-7(3)::ODP1,CM-7(3),ControlEnhancement,"[Assignment: organization-defined registration requirements for functions, ports, protocols, and services]",NIST.SP.800-53r5.pdf
+CM-7(6)::ODP1,CM-7(6),ControlEnhancement,[Assignment: organization-defined user-installed software],NIST.SP.800-53r5.pdf
+CM-7(7)::ODP1,CM-7(7),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+CM-8(2)::ODP1,CM-8(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-8(4)::ODP1,CM-8(4),ControlEnhancement,[Selection (one or more): name; position; role],NIST.SP.800-53r5.pdf
+CM-8(8)::ODP1,CM-8(8),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-10(1)::ODP1,CM-10(1),ControlEnhancement,[Assignment: organization-defined restrictions],NIST.SP.800-53r5.pdf
+CM-11(3)::ODP1,CM-11(3),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-12(1)::ODP1,CM-12(1),ControlEnhancement,[Assignment: organization-defined information by information type],NIST.SP.800-53r5.pdf
+CM-12(1)::ODP2,CM-12(1),ControlEnhancement,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+CP-2(3)::ODP1,CP-2(3),ControlEnhancement,[Selection: all; essential],NIST.SP.800-53r5.pdf
+CP-2(3)::ODP2,CP-2(3),ControlEnhancement,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+CP-2(5)::ODP1,CP-2(5),ControlEnhancement,[Selection: all; essential],NIST.SP.800-53r5.pdf
+CP-2(6)::ODP1,CP-2(6),ControlEnhancement,[Selection: all; essential],NIST.SP.800-53r5.pdf
+CP-2(8)::ODP1,CP-2(8),ControlEnhancement,[Selection: all; essential],NIST.SP.800-53r5.pdf
+CP-4(3)::ODP1,CP-4(3),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CP-4(5)::ODP1,CP-4(5),ControlEnhancement,[Assignment: organization-defined mechanisms],NIST.SP.800-53r5.pdf
+CP-4(5)::ODP2,CP-4(5),ControlEnhancement,[Assignment: organization-defined system or system component],NIST.SP.800-53r5.pdf
+CP-8(5)::ODP1,CP-8(5),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-9(1)::ODP1,CP-9(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-9(3)::ODP1,CP-9(3),ControlEnhancement,[Assignment: organization-defined critical system software and other security-related information],NIST.SP.800-53r5.pdf
+CP-9(5)::ODP1,CP-9(5),ControlEnhancement,[Assignment: organization-defined time period and transfer rate consistent with the recovery time and recovery point objectives],NIST.SP.800-53r5.pdf
+CP-9(7)::ODP1,CP-9(7),ControlEnhancement,[Assignment: organization-defined backup information],NIST.SP.800-53r5.pdf
+CP-9(8)::ODP1,CP-9(8),ControlEnhancement,[Assignment: organization-defined backup information],NIST.SP.800-53r5.pdf
+CP-10(4)::ODP1,CP-10(4),ControlEnhancement,[Assignment: organization-defined restoration time periods],NIST.SP.800-53r5.pdf
+IA-2(6)::ODP1,IA-2(6),ControlEnhancement,[Selection (one or more): local; network; remote],NIST.SP.800-53r5.pdf
+IA-2(6)::ODP2,IA-2(6),ControlEnhancement,[Selection (one or more): privileged accounts; non-privileged accounts],NIST.SP.800-53r5.pdf
+IA-2(8)::ODP1,IA-2(8),ControlEnhancement,[Selection (one or more): privileged accounts; non-privileged accounts],NIST.SP.800-53r5.pdf
+IA-2(10)::ODP1,IA-2(10),ControlEnhancement,[Assignment: organization-defined system accounts and services],NIST.SP.800-53r5.pdf
+IA-2(13)::ODP1,IA-2(13),ControlEnhancement,[Assignment: organization-defined conditions],NIST.SP.800-53r5.pdf
+IA-2(13)::ODP2,IA-2(13),ControlEnhancement,[Assignment: organization-defined out-of-band authentication],NIST.SP.800-53r5.pdf
+IA-3(1)::ODP1,IA-3(1),ControlEnhancement,[Assignment: organization-defined devices and/or types of devices],NIST.SP.800-53r5.pdf
+IA-3(1)::ODP2,IA-3(1),ControlEnhancement,[Selection (one or more): local; remote; network],NIST.SP.800-53r5.pdf
+IA-3(4)::ODP1,IA-3(4),ControlEnhancement,[Assignment: organization-defined configuration management process],NIST.SP.800-53r5.pdf
+IA-4(4)::ODP1,IA-4(4),ControlEnhancement,[Assignment: organization-defined characteristic identifying individual status],NIST.SP.800-53r5.pdf
+IA-4(5)::ODP1,IA-4(5),ControlEnhancement,[Assignment: organization-defined dynamic identifier policy],NIST.SP.800-53r5.pdf
+IA-4(6)::ODP1,IA-4(6),ControlEnhancement,[Assignment: organization-defined external organizations],NIST.SP.800-53r5.pdf
+IA-4(9)::ODP1,IA-4(9),ControlEnhancement,[Assignment: organization-defined protected central storage],NIST.SP.800-53r5.pdf
+IA-5(8)::ODP1,IA-5(8),ControlEnhancement,[Assignment: organization-defined security controls],NIST.SP.800-53r5.pdf
+IA-5(9)::ODP1,IA-5(9),ControlEnhancement,[Assignment: organization-defined external organizations],NIST.SP.800-53r5.pdf
+IA-5(10)::ODP1,IA-5(10),ControlEnhancement,[Assignment: organization-defined binding rules],NIST.SP.800-53r5.pdf
+IA-5(12)::ODP1,IA-5(12),ControlEnhancement,[Assignment: organization-defined biometric quality requirements],NIST.SP.800-53r5.pdf
+IA-5(13)::ODP1,IA-5(13),ControlEnhancement,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+IA-5(16)::ODP1,IA-5(16),ControlEnhancement,[Assignment: organization-defined types of and/or specific authenticators],NIST.SP.800-53r5.pdf
+IA-5(16)::ODP2,IA-5(16),ControlEnhancement,[Selection: in person; by a trusted external party],NIST.SP.800-53r5.pdf
+IA-5(16)::ODP3,IA-5(16),ControlEnhancement,[Assignment: organization-defined registration authority],NIST.SP.800-53r5.pdf
+IA-5(16)::ODP4,IA-5(16),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IA-8(4)::ODP1,IA-8(4),ControlEnhancement,[Assignment: organization-defined identity management profiles],NIST.SP.800-53r5.pdf
+IA-8(5)::ODP1,IA-8(5),ControlEnhancement,[Assignment: organization-defined policy],NIST.SP.800-53r5.pdf
+IA-8(6)::ODP1,IA-8(6),ControlEnhancement,[Assignment: organization-defined measures],NIST.SP.800-53r5.pdf
+IA-12(3)::ODP1,IA-12(3),ControlEnhancement,[Assignment: organizational defined methods of validation and verification],NIST.SP.800-53r5.pdf
+IA-12(5)::ODP1,IA-12(5),ControlEnhancement,[Selection: registration code; notice of proofing],NIST.SP.800-53r5.pdf
+IA-12(6)::ODP1,IA-12(6),ControlEnhancement,[Assignment: organization-defined identity assurance level],NIST.SP.800-53r5.pdf
+IR-2(2)::ODP1,IR-2(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+IR-3(1)::ODP1,IR-3(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+IR-4(1)::ODP1,IR-4(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+IR-4(2)::ODP1,IR-4(2),ControlEnhancement,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+IR-4(2)::ODP2,IR-4(2),ControlEnhancement,[Assignment: organization-defined types of dynamic reconfiguration],NIST.SP.800-53r5.pdf
+IR-4(3)::ODP1,IR-4(3),ControlEnhancement,[Assignment: organization-defined classes of incidents],NIST.SP.800-53r5.pdf
+IR-4(3)::ODP2,IR-4(3),ControlEnhancement,[Assignment: organization-defined actions to take in response to classes of incidents],NIST.SP.800-53r5.pdf
+IR-4(5)::ODP1,IR-4(5),ControlEnhancement,[Assignment: organization-defined security violations],NIST.SP.800-53r5.pdf
+IR-4(7)::ODP1,IR-4(7),ControlEnhancement,[Assignment: organization-defined entities],NIST.SP.800-53r5.pdf
+IR-4(8)::ODP1,IR-4(8),ControlEnhancement,[Assignment: organization-defined external organizations],NIST.SP.800-53r5.pdf
+IR-4(8)::ODP2,IR-4(8),ControlEnhancement,[Assignment: organization-defined incident information],NIST.SP.800-53r5.pdf
+IR-4(9)::ODP1,IR-4(9),ControlEnhancement,[Assignment: organization-defined dynamic response capabilities],NIST.SP.800-53r5.pdf
+IR-4(11)::ODP1,IR-4(11),ControlEnhancement,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+IR-4(13)::ODP1,IR-4(13),ControlEnhancement,[Assignment: organization-defined environments or resources],NIST.SP.800-53r5.pdf
+IR-5(1)::ODP1,IR-5(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+IR-6(1)::ODP1,IR-6(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+IR-6(2)::ODP1,IR-6(2),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IR-7(1)::ODP1,IR-7(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+IR-9(2)::ODP1,IR-9(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-9(3)::ODP1,IR-9(3),ControlEnhancement,[Assignment: organization-defined procedures],NIST.SP.800-53r5.pdf
+IR-9(4)::ODP1,IR-9(4),ControlEnhancement,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+CM-1::a.::ODP1,CM-1::a.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+CM-1::a.::1.::ODP1,CM-1::a.::1.,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+CM-1::b.::ODP1,CM-1::b.,ControlItem,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+CM-1::c.::1.::ODP1,CM-1::c.::1.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-1::c.::1.::ODP2,CM-1::c.::1.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+CM-1::c.::2.::ODP1,CM-1::c.::2.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-1::c.::2.::ODP2,CM-1::c.::2.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+CM-2::b.::1.::ODP1,CM-2::b.::1.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-2::b.::2.::ODP1,CM-2::b.::2.,ControlItem,[Assignment: organization-defined circumstances],NIST.SP.800-53r5.pdf
+CM-2(7)::(a)::ODP1,CM-2(7)::(a),ControlItem,[Assignment: organization-defined systems or system components],NIST.SP.800-53r5.pdf
+CM-2(7)::(a)::ODP2,CM-2(7)::(a),ControlItem,[Assignment: organization-defined configurations],NIST.SP.800-53r5.pdf
+CM-2(7)::(b)::ODP1,CM-2(7)::(b),ControlItem,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+CM-3::e.::ODP1,CM-3::e.,ControlItem,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+CM-3::g.::ODP1,CM-3::g.,ControlItem,[Assignment: organization-defined configuration change control element],NIST.SP.800-53r5.pdf
+CM-3::g.::ODP2,CM-3::g.,ControlItem,[Selection (one or more): [Assignment: organization-defined frequency]; when [Assignment: organization-defined configuration change conditions]],NIST.SP.800-53r5.pdf
+CM-3(1)::(b)::ODP1,CM-3(1)::(b),ControlItem,[Assignment: organization-defined approval authorities],NIST.SP.800-53r5.pdf
+CM-3(1)::(c)::ODP1,CM-3(1)::(c),ControlItem,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+CM-3(1)::(f)::ODP1,CM-3(1)::(f),ControlItem,[Assignment: organization-defined personnel],NIST.SP.800-53r5.pdf
+CM-5(1)::(a)::ODP1,CM-5(1)::(a),ControlItem,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-5(5)::(b)::ODP1,CM-5(5)::(b),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-6::a.::ODP1,CM-6::a.,ControlItem,[Assignment: organization-defined common secure configurations],NIST.SP.800-53r5.pdf
+CM-6::c.::ODP1,CM-6::c.,ControlItem,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+CM-6::c.::ODP2,CM-6::c.,ControlItem,[Assignment: organization-defined operational requirements],NIST.SP.800-53r5.pdf
+CM-7::a.::ODP1,CM-7::a.,ControlItem,[Assignment: organization-defined mission essential capabilities],NIST.SP.800-53r5.pdf
+CM-7::b.::ODP1,CM-7::b.,ControlItem,"[Assignment: organization-defined prohibited or restricted functions, system ports, protocols, software, and/or services]",NIST.SP.800-53r5.pdf
+CM-7(1)::(a)::ODP1,CM-7(1)::(a),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-7(1)::(b)::ODP1,CM-7(1)::(b),ControlItem,"[Assignment: organization-defined functions, ports, protocols, software, and services within the system deemed to be unnecessary and/or nonsecure]",NIST.SP.800-53r5.pdf
+CM-7(4)::(a)::ODP1,CM-7(4)::(a),ControlItem,[Assignment: organization-defined software programs not authorized to execute on the system],NIST.SP.800-53r5.pdf
+CM-7(4)::(c)::ODP1,CM-7(4)::(c),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-7(5)::(a)::ODP1,CM-7(5)::(a),ControlItem,[Assignment: organization-defined software programs authorized to execute on the system],NIST.SP.800-53r5.pdf
+CM-7(5)::(c)::ODP1,CM-7(5)::(c),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-7(9)::(a)::ODP1,CM-7(9)::(a),ControlItem,[Assignment: organization-defined hardware components authorized for system use],NIST.SP.800-53r5.pdf
+CM-7(9)::(c)::ODP1,CM-7(9)::(c),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-8::a.::5.::ODP1,CM-8::a.::5.,ControlItem,[Assignment: organization-defined information deemed necessary to achieve effective system component accountability],NIST.SP.800-53r5.pdf
+CM-8::b.::ODP1,CM-8::b.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-8(3)::(a)::ODP1,CM-8(3)::(a),ControlItem,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+CM-8(3)::(a)::ODP2,CM-8(3)::(a),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-8(3)::(b)::ODP1,CM-8(3)::(b),ControlItem,[Selection (one or more): disable network access by such components; isolate the components; notify [Assignment: organization-defined personnel or roles]],NIST.SP.800-53r5.pdf
+CM-8(9)::(b)::ODP1,CM-8(9)::(b),ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+CM-9::d.::ODP1,CM-9::d.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+CM-11::a.::ODP1,CM-11::a.,ControlItem,[Assignment: organization-defined policies],NIST.SP.800-53r5.pdf
+CM-11::b.::ODP1,CM-11::b.,ControlItem,[Assignment: organization-defined methods],NIST.SP.800-53r5.pdf
+CM-11::c.::ODP1,CM-11::c.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CM-12::a.::ODP1,CM-12::a.,ControlItem,[Assignment: organization-defined information],NIST.SP.800-53r5.pdf
+CP-1::a.::ODP1,CP-1::a.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+CP-1::a.::1.::ODP1,CP-1::a.::1.,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+CP-1::b.::ODP1,CP-1::b.,ControlItem,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+CP-1::c.::1.::ODP1,CP-1::c.::1.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-1::c.::1.::ODP2,CP-1::c.::1.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+CP-1::c.::2.::ODP1,CP-1::c.::2.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-1::c.::2.::ODP2,CP-1::c.::2.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+CP-2::a.::7.::ODP1,CP-2::a.::7.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+CP-2::b.::ODP1,CP-2::b.,ControlItem,[Assignment: organization-defined key contingency personnel (identified by name and/or by role) and organizational elements],NIST.SP.800-53r5.pdf
+CP-2::d.::ODP1,CP-2::d.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-2::f.::ODP1,CP-2::f.,ControlItem,[Assignment: organization-defined key contingency personnel (identified by name and/or by role) and organizational elements],NIST.SP.800-53r5.pdf
+CP-3::a.::1.::ODP1,CP-3::a.::1.,ControlItem,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+CP-3::a.::3.::ODP1,CP-3::a.::3.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-3::b.::ODP1,CP-3::b.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-3::b.::ODP2,CP-3::b.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+CP-4::a.::ODP1,CP-4::a.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-4::a.::ODP2,CP-4::a.,ControlItem,[Assignment: organization-defined tests],NIST.SP.800-53r5.pdf
+CP-7::a.::ODP1,CP-7::a.,ControlItem,[Assignment: organization-defined system operations],NIST.SP.800-53r5.pdf
+CP-7::a.::ODP2,CP-7::a.,ControlItem,[Assignment: organization-defined time period consistent with recovery time and recovery point objectives],NIST.SP.800-53r5.pdf
+CP-8(4)::(c)::ODP1,CP-8(4)::(c),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+CP-9::a.::ODP1,CP-9::a.,ControlItem,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+CP-9::a.::ODP2,CP-9::a.,ControlItem,[Assignment: organization-defined frequency consistent with recovery time and recovery point objectives],NIST.SP.800-53r5.pdf
+CP-9::b.::ODP1,CP-9::b.,ControlItem,[Assignment: organization-defined frequency consistent with recovery time and recovery point objectives],NIST.SP.800-53r5.pdf
+CP-9::c.::ODP1,CP-9::c.,ControlItem,[Assignment: organization-defined frequency consistent with recovery time and recovery point objectives],NIST.SP.800-53r5.pdf
+IA-1::a.::ODP1,IA-1::a.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IA-1::a.::1.::ODP1,IA-1::a.::1.,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+IA-1::b.::ODP1,IA-1::b.,ControlItem,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+IA-1::c.::1.::ODP1,IA-1::c.::1.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IA-1::c.::1.::ODP2,IA-1::c.::1.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+IA-1::c.::2.::ODP1,IA-1::c.::2.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IA-1::c.::2.::ODP2,IA-1::c.::2.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+IA-2(6)::(b)::ODP1,IA-2(6)::(b),ControlItem,[Assignment: organization-defined strength of mechanism requirements],NIST.SP.800-53r5.pdf
+IA-3(3)::(a)::ODP1,IA-3(3)::(a),ControlItem,[Assignment: organization-defined lease information and lease duration],NIST.SP.800-53r5.pdf
+IA-4::a.::ODP1,IA-4::a.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IA-4::d.::ODP1,IA-4::d.,ControlItem,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+IA-5::f.::ODP1,IA-5::f.,ControlItem,[Assignment: organization-defined time period by authenticator type],NIST.SP.800-53r5.pdf
+IA-5::f.::ODP2,IA-5::f.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+IA-5(1)::(a)::ODP1,IA-5(1)::(a),ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IA-5(1)::(h)::ODP1,IA-5(1)::(h),ControlItem,[Assignment: organization-defined composition and complexity rules],NIST.SP.800-53r5.pdf
+IA-5(18)::(a)::ODP1,IA-5(18)::(a),ControlItem,[Assignment: organization-defined password managers],NIST.SP.800-53r5.pdf
+IA-5(18)::(b)::ODP1,IA-5(18)::(b),ControlItem,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+IR-1::a.::ODP1,IR-1::a.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IR-1::a.::1.::ODP1,IR-1::a.::1.,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+IR-1::b.::ODP1,IR-1::b.,ControlItem,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+IR-1::c.::1.::ODP1,IR-1::c.::1.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-1::c.::1.::ODP2,IR-1::c.::1.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+IR-1::c.::2.::ODP1,IR-1::c.::2.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-1::c.::2.::ODP2,IR-1::c.::2.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+IR-2::a.::1.::ODP1,IR-2::a.::1.,ControlItem,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+IR-2::a.::3.::ODP1,IR-2::a.::3.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-2::b.::ODP1,IR-2::b.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-2::b.::ODP2,IR-2::b.,ControlItem,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+IR-6::a.::ODP1,IR-6::a.,ControlItem,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+IR-6::b.::ODP1,IR-6::b.,ControlItem,[Assignment: organization-defined authorities],NIST.SP.800-53r5.pdf
+IR-8::a.::9.::ODP1,IR-8::a.::9.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IR-8::a.::9.::ODP2,IR-8::a.::9.,ControlItem,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+IR-8::a.::10.::ODP1,IR-8::a.::10.,ControlItem,"[Assignment: organization-defined entities, personnel, or roles]",NIST.SP.800-53r5.pdf
+IR-8::b.::ODP1,IR-8::b.,ControlItem,[Assignment: organization-defined incident response personnel (identified by name and/or by role) and organizational elements],NIST.SP.800-53r5.pdf
+IR-8::d.::ODP1,IR-8::d.,ControlItem,[Assignment: organization-defined incident response personnel (identified by name and/or by role) and organizational elements],NIST.SP.800-53r5.pdf
+IR-9::a.::ODP1,IR-9::a.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IR-9::c.::ODP1,IR-9::c.,ControlItem,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+IR-9::g.::ODP1,IR-9::g.,ControlItem,[Assignment: organization-defined actions],NIST.SP.800-53r5.pdf
+MA-1-ODP1,MA-1,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MA-1-ODP2,MA-1,Control,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+MA-1-ODP3,MA-1,Control,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+MA-1-ODP4,MA-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+MA-1-ODP5,MA-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+MA-1-ODP6,MA-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+MA-1-ODP7,MA-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+MA-2-ODP1,MA-2,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MA-2-ODP2,MA-2,Control,[Assignment: organization-defined information],NIST.SP.800-53r5.pdf
+MA-2-ODP3,MA-2,Control,[Assignment: organization-defined information],NIST.SP.800-53r5.pdf
+MA-2(2)-ODP1,MA-2(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+MA-3-ODP1,MA-3,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+MA-3(3)-ODP1,MA-3(3),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MA-4(1)-ODP1,MA-4(1),ControlEnhancement,[Assignment: organization-defined audit events],NIST.SP.800-53r5.pdf
+MA-4(4)-ODP1,MA-4(4),ControlEnhancement,[Assignment: organization-defined authenticators that are replay resistant],NIST.SP.800-53r5.pdf
+MA-4(5)-ODP1,MA-4(5),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MA-4(5)-ODP2,MA-4(5),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MA-4(6)-ODP1,MA-4(6),ControlEnhancement,[Assignment: organization-defined cryptographic mechanisms],NIST.SP.800-53r5.pdf
+MA-5(1)-ODP1,MA-5(1),ControlEnhancement,[Assignment: organization-defined alternate controls],NIST.SP.800-53r5.pdf
+MA-6-ODP1,MA-6,Control,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+MA-6-ODP2,MA-6,Control,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+MA-6(1)-ODP1,MA-6(1),ControlEnhancement,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+MA-6(1)-ODP2,MA-6(1),ControlEnhancement,[Assignment: organization-defined time intervals],NIST.SP.800-53r5.pdf
+MA-6(2)-ODP1,MA-6(2),ControlEnhancement,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+MA-6(2)-ODP2,MA-6(2),ControlEnhancement,[Assignment: organization-defined time intervals],NIST.SP.800-53r5.pdf
+MA-6(3)-ODP1,MA-6(3),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+MA-7-ODP1,MA-7,Control,[Assignment: organization-defined systems or system components],NIST.SP.800-53r5.pdf
+MA-7-ODP2,MA-7,Control,[Assignment: organization-defined trusted maintenance facilities],NIST.SP.800-53r5.pdf
+MP-1-ODP1,MP-1,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MP-1-ODP2,MP-1,Control,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+MP-1-ODP3,MP-1,Control,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+MP-1-ODP4,MP-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+MP-1-ODP5,MP-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+MP-1-ODP6,MP-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+MP-1-ODP7,MP-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+MP-2-ODP1,MP-2,Control,[Assignment: organization-defined types of digital and/or non-digital media],NIST.SP.800-53r5.pdf
+MP-2-ODP2,MP-2,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+MP-3-ODP1,MP-3,Control,[Assignment: organization-defined types of system media],NIST.SP.800-53r5.pdf
+MP-3-ODP2,MP-3,Control,[Assignment: organization-defined controlled areas],NIST.SP.800-53r5.pdf
+MP-4-ODP1,MP-4,Control,[Assignment: organization-defined types of digital and/or non-digital media],NIST.SP.800-53r5.pdf
+MP-4-ODP2,MP-4,Control,[Assignment: organization-defined controlled areas],NIST.SP.800-53r5.pdf
+MP-4(2)-ODP1,MP-4(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+MP-5-ODP1,MP-5,Control,[Assignment: organization-defined types of system media],NIST.SP.800-53r5.pdf
+MP-5-ODP2,MP-5,Control,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+MP-6-ODP1,MP-6,Control,[Assignment: organization-defined system media],NIST.SP.800-53r5.pdf
+MP-6-ODP2,MP-6,Control,[Assignment: organization-defined sanitization techniques and procedures],NIST.SP.800-53r5.pdf
+MP-6(2)-ODP1,MP-6(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+MP-6(3)-ODP1,MP-6(3),ControlEnhancement,[Assignment: organization-defined circumstances requiring sanitization of portable storage devices],NIST.SP.800-53r5.pdf
+MP-6(7)-ODP1,MP-6(7),ControlEnhancement,[Assignment: organization-defined system media],NIST.SP.800-53r5.pdf
+MP-6(8)-ODP1,MP-6(8),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST.SP.800-53r5.pdf
+MP-6(8)-ODP2,MP-6(8),ControlEnhancement,[Selection: remotely; under the following conditions: [Assignment: organization-defined conditions],NIST.SP.800-53r5.pdf
+MP-7-ODP1,MP-7,Control,[Selection: Restrict; Prohibit],NIST.SP.800-53r5.pdf
+MP-7-ODP2,MP-7,Control,[Assignment: organization-defined types of system media],NIST.SP.800-53r5.pdf
+MP-7-ODP3,MP-7,Control,[Assignment: organization-defined systems or system components],NIST.SP.800-53r5.pdf
+MP-7-ODP4,MP-7,Control,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+MP-8-ODP1,MP-8,Control,[Assignment: organization-defined system media downgrading process],NIST.SP.800-53r5.pdf
+MP-8-ODP2,MP-8,Control,[Assignment: organization-defined system media requiring downgrading],NIST.SP.800-53r5.pdf
+MP-8(2)-ODP1,MP-8(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-1-ODP1,PE-1,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PE-1-ODP2,PE-1,Control,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+PE-1-ODP3,PE-1,Control,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+PE-1-ODP4,PE-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-1-ODP5,PE-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+PE-1-ODP6,PE-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-1-ODP7,PE-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+PE-2-ODP1,PE-2,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-2(2)-ODP1,PE-2(2),ControlEnhancement,[Assignment: organization-defined list of acceptable forms of identification],NIST.SP.800-53r5.pdf
+PE-2(3)-ODP1,PE-2(3),ControlEnhancement,[Selection (one or more): security clearances for all information contained within the system; formal access authorizations for all information contained within the system; need for access to all information contained within the system; [Assignment: organization-defined physical access authorizations],NIST.SP.800-53r5.pdf
+PE-3-ODP1,PE-3,Control,[Assignment: organization-defined entry and exit points to the facility where the system resides],NIST.SP.800-53r5.pdf
+PE-3-ODP2,PE-3,Control,[Selection (one or more): [Assignment: organization-defined physical access control systems or devices],NIST.SP.800-53r5.pdf
+PE-3-ODP3,PE-3,Control,[Assignment: organization-defined entry or exit points],NIST.SP.800-53r5.pdf
+PE-3-ODP4,PE-3,Control,[Assignment: organization-defined physical access controls],NIST.SP.800-53r5.pdf
+PE-3-ODP5,PE-3,Control,[Assignment: organization-defined circumstances requiring visitor escorts and control of visitor activity],NIST.SP.800-53r5.pdf
+PE-3-ODP6,PE-3,Control,[Assignment: organization-defined physical access devices],NIST.SP.800-53r5.pdf
+PE-3-ODP7,PE-3,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-3-ODP8,PE-3,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-3(1)-ODP1,PE-3(1),ControlEnhancement,[Assignment: organization-defined physical spaces containing one or more components of the system],NIST.SP.800-53r5.pdf
+PE-3(2)-ODP1,PE-3(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-3(3)-ODP1,PE-3(3),ControlEnhancement,[Assignment: organization-defined physical access points],NIST.SP.800-53r5.pdf
+PE-3(4)-ODP1,PE-3(4),ControlEnhancement,[Assignment: organization-defined system components],NIST.SP.800-53r5.pdf
+PE-3(5)-ODP1,PE-3(5),ControlEnhancement,[Assignment: organization-defined anti-tamper technologies],NIST.SP.800-53r5.pdf
+PE-3(5)-ODP2,PE-3(5),ControlEnhancement,[Selection (one or more): detect; prevent],NIST.SP.800-53r5.pdf
+PE-3(5)-ODP3,PE-3(5),ControlEnhancement,[Assignment: organization-defined hardware components],NIST.SP.800-53r5.pdf
+PE-3(8)-ODP1,PE-3(8),ControlEnhancement,[Assignment: organization-defined locations within the facility],NIST.SP.800-53r5.pdf
+PE-4-ODP1,PE-4,Control,[Assignment: organization-defined system distribution and transmission lines],NIST.SP.800-53r5.pdf
+PE-4-ODP2,PE-4,Control,[Assignment: organization-defined security controls],NIST.SP.800-53r5.pdf
+PE-5-ODP1,PE-5,Control,[Assignment: organization-defined output devices],NIST.SP.800-53r5.pdf
+PE-6-ODP1,PE-6,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-6-ODP2,PE-6,Control,[Assignment: organization-defined events or potential indications of events],NIST.SP.800-53r5.pdf
+PE-6(2)-ODP1,PE-6(2),ControlEnhancement,[Assignment: organization-defined classes or types of intrusions],NIST.SP.800-53r5.pdf
+PE-6(2)-ODP2,PE-6(2),ControlEnhancement,[Assignment: organization-defined response actions],NIST.SP.800-53r5.pdf
+PE-6(2)-ODP3,PE-6(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+PE-6(3)-ODP1,PE-6(3),ControlEnhancement,[Assignment: organization-defined operational areas],NIST.SP.800-53r5.pdf
+PE-6(3)-ODP2,PE-6(3),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-6(3)-ODP3,PE-6(3),ControlEnhancement,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+PE-6(4)-ODP1,PE-6(4),ControlEnhancement,[Assignment: organization-defined physical spaces containing one or more components of the system],NIST.SP.800-53r5.pdf
+PE-8-ODP1,PE-8,Control,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+PE-8-ODP2,PE-8,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-8-ODP3,PE-8,Control,[Assignment: organization-defined personnel],NIST.SP.800-53r5.pdf
+PE-8(1)-ODP1,PE-8(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+PE-8(3)-ODP1,PE-8(3),ControlEnhancement,[Assignment: organization-defined elements],NIST.SP.800-53r5.pdf
+PE-9(1)-ODP1,PE-9(1),ControlEnhancement,[Assignment: organization-defined distance],NIST.SP.800-53r5.pdf
+PE-9(2)-ODP1,PE-9(2),ControlEnhancement,[Assignment: organization-defined critical system components],NIST.SP.800-53r5.pdf
+PE-10-ODP1,PE-10,Control,[Assignment: organization-defined system or individual system components],NIST.SP.800-53r5.pdf
+PE-10-ODP2,PE-10,Control,[Assignment: organization-defined location by system or system component],NIST.SP.800-53r5.pdf
+PE-11-ODP1,PE-11,Control,[Selection (one or more): an orderly shutdown of the system; transition of the system to long-term alternate power],NIST.SP.800-53r5.pdf
+PE-11(1)-ODP1,PE-11(1),ControlEnhancement,[Selection: manually; automatically],NIST.SP.800-53r5.pdf
+PE-11(2)-ODP1,PE-11(2),ControlEnhancement,[Selection: manually; automatically],NIST.SP.800-53r5.pdf
+PE-11(2)-ODP2,PE-11(2),ControlEnhancement,[Selection: minimally required operational capability; full operational capability],NIST.SP.800-53r5.pdf
+PE-13(1)-ODP1,PE-13(1),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PE-13(1)-ODP2,PE-13(1),ControlEnhancement,[Assignment: organization-defined emergency responders],NIST.SP.800-53r5.pdf
+PE-13(2)-ODP1,PE-13(2),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PE-13(2)-ODP2,PE-13(2),ControlEnhancement,[Assignment: organization-defined emergency responders],NIST.SP.800-53r5.pdf
+PE-13(4)-ODP1,PE-13(4),ControlEnhancement,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-13(4)-ODP2,PE-13(4),ControlEnhancement,[Assignment: organization-defined time period],NIST.SP.800-53r5.pdf
+PE-14-ODP1,PE-14,Control,[Selection (one or more): temperature; humidity; pressure; radiation; [Assignment: organization-defined environmental control],NIST.SP.800-53r5.pdf
+PE-14-ODP2,PE-14,Control,[Assignment: organization-defined acceptable levels],NIST.SP.800-53r5.pdf
+PE-14-ODP3,PE-14,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PE-14(1)-ODP1,PE-14(1),ControlEnhancement,[Assignment: organization-defined automatic environmental controls],NIST.SP.800-53r5.pdf
+PE-14(2)-ODP1,PE-14(2),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PE-15(1)-ODP1,PE-15(1),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PE-15(1)-ODP2,PE-15(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST.SP.800-53r5.pdf
+PE-16-ODP1,PE-16,Control,[Assignment: organization-defined types of system components],NIST.SP.800-53r5.pdf
+PE-17-ODP1,PE-17,Control,[Assignment: organization-defined alternate work sites],NIST.SP.800-53r5.pdf
+PE-17-ODP2,PE-17,Control,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+PE-18-ODP1,PE-18,Control,[Assignment: organization-defined physical and environmental hazards],NIST.SP.800-53r5.pdf
+PE-20-ODP1,PE-20,Control,[Assignment: organization-defined asset location technologies],NIST.SP.800-53r5.pdf
+PE-20-ODP2,PE-20,Control,[Assignment: organization-defined assets],NIST.SP.800-53r5.pdf
+PE-20-ODP3,PE-20,Control,[Assignment: organization-defined controlled areas],NIST.SP.800-53r5.pdf
+PE-21-ODP1,PE-21,Control,[Assignment: organization-defined protective measures],NIST.SP.800-53r5.pdf
+PE-21-ODP2,PE-21,Control,[Assignment: organization-defined systems and system components],NIST.SP.800-53r5.pdf
+PE-22-ODP1,PE-22,Control,[Assignment: organization-defined system hardware components],NIST.SP.800-53r5.pdf
+PL-1-ODP1,PL-1,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PL-1-ODP2,PL-1,Control,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST.SP.800-53r5.pdf
+PL-1-ODP3,PL-1,Control,[Assignment: organization-defined official],NIST.SP.800-53r5.pdf
+PL-1-ODP4,PL-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-1-ODP5,PL-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+PL-1-ODP6,PL-1,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-1-ODP7,PL-1,Control,[Assignment: organization-defined events],NIST.SP.800-53r5.pdf
+PL-2-ODP1,PL-2,Control,[Assignment: organization-defined individuals or groups],NIST.SP.800-53r5.pdf
+PL-2-ODP2,PL-2,Control,[Assignment: organization-defined personnel or roles],NIST.SP.800-53r5.pdf
+PL-2-ODP3,PL-2,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-4-ODP1,PL-4,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-4-ODP2,PL-4,Control,[Selection (one or more): [Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-7-ODP1,PL-7,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-8-ODP1,PL-8,Control,[Assignment: organization-defined frequency],NIST.SP.800-53r5.pdf
+PL-8(1)-ODP1,PL-8(1),ControlEnhancement,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+PL-8(1)-ODP2,PL-8(1),ControlEnhancement,[Assignment: organization-defined locations and architectural layers],NIST.SP.800-53r5.pdf
+PL-8(2)-ODP1,PL-8(2),ControlEnhancement,[Assignment: organization-defined controls],NIST.SP.800-53r5.pdf
+PL-8(2)-ODP2,PL-8(2),ControlEnhancement,[Assignment: organization-defined locations and architectural layers],NIST.SP.800-53r5.pdf
+PL-9-ODP1,PL-9,Control,[Assignment: organization-defined controls and related processes],NIST.SP.800-53r5.pdf
+PM-1-ITEM-b-ODP-1,PM-1-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-1-ITEM-b-ODP-2,PM-1-ITEM-b,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-5-ODP-1,PM-5,Control,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-5(1)-ODP-1,PM-5(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-7(1)-ODP-1,PM-7(1),ControlEnhancement,[Assignment: organization-defined non-essential functions or services],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-9-ITEM-c-ODP-1,PM-9-ITEM-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-11-ITEM-c-ODP-1,PM-11-ITEM-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-17-ITEM-b-ODP-1,PM-17-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-18-ITEM-b-ODP-1,PM-18-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-23-ODP-1,PM-23,Control,[Assignment: organization-defined roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-23-ODP-2,PM-23,Control,[Assignment: organization-defined responsibilities],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-25-ITEM-d-ODP-1,PM-25-ITEM-d,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-26-ITEM-c-ODP-1,PM-26-ITEM-c,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-26-ITEM-d-ODP-1,PM-26-ITEM-d,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-26-ITEM-e-ODP-1,PM-26-ITEM-e,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-27-ITEM-a-ODP-1,PM-27-ITEM-a,ControlItem,[Assignment: organization-defined privacy reports],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-27-ITEM-a1-ODP-1,PM-27-ITEM-a1,ControlItem,[Assignment: organization-defined oversight bodies],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-27-ITEM-a2-ODP-1,PM-27-ITEM-a2,ControlItem,[Assignment: organization-defined officials],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-27-ITEM-b-ODP-1,PM-27-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-28-ITEM-b-ODP-1,PM-28-ITEM-b,ControlItem,[Assignment: organization-defined personnel],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-28-ITEM-c-ODP-1,PM-28-ITEM-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-30-ITEM-c-ODP-1,PM-30-ITEM-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-31-ITEM-a-ODP-1,PM-31-ITEM-a,ControlItem,[Assignment: organization-defined metrics],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-31-ITEM-b-ODP-1,PM-31-ITEM-b,ControlItem,[Assignment: organization-defined frequencies],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-31-ITEM-b-ODP-2,PM-31-ITEM-b,ControlItem,[Assignment: organization-defined frequencies],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-31-ITEM-f-ODP-1,PM-31-ITEM-f,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-31-ITEM-f-ODP-2,PM-31-ITEM-f,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PM-32-ODP-1,PM-32,Control,[Assignment: organization-defined systems or systems components],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-a-ODP-1,PS-1-ITEM-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-a1-ODP-1,PS-1-ITEM-a1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System- level],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-b-ODP-1,PS-1-ITEM-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-c1-ODP-1,PS-1-ITEM-c1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-c1-ODP-2,PS-1-ITEM-c1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-c2-ODP-1,PS-1-ITEM-c2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-1-ITEM-c2-ODP-2,PS-1-ITEM-c2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-2-ITEM-c-ODP-1,PS-2-ITEM-c,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-3-ITEM-b-ODP-1,PS-3-ITEM-b,ControlItem,"[Assignment: organization-defined conditions requiring rescreening and, where rescreening is so indicated, the frequency of rescreening]",NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-3(3)-ITEM-b-ODP-1,PS-3(3)-ITEM-b,ControlItem,[Assignment: organization-defined additional personnel screening criteria],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-3(4)-ODP-1,PS-3(4),ControlEnhancement,[Assignment: organization-defined information types],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-3(4)-ODP-2,PS-3(4),ControlEnhancement,[Assignment: organization-defined citizenship requirements],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-4-ITEM-a-ODP-1,PS-4-ITEM-a,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-4-ITEM-c-ODP-1,PS-4-ITEM-c,ControlItem,[Assignment: organization-defined information security topics],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-4(2)-ODP-1,PS-4(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-4(2)-ODP-2,PS-4(2),ControlEnhancement,[Selection (one or more): notify [Assignment: organization-defined personnel or roles] of individual termination actions; disable access to system resources],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-5-ITEM-b-ODP-1,PS-5-ITEM-b,ControlItem,[Assignment: organization-defined transfer or reassignment actions],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-5-ITEM-b-ODP-2,PS-5-ITEM-b,ControlItem,[Assignment: organization-defined time period following the formal transfer action],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-5-ITEM-d-ODP-1,PS-5-ITEM-d,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-5-ITEM-d-ODP-2,PS-5-ITEM-d,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-6-ITEM-b-ODP-1,PS-6-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-6-ITEM-c2-ODP-1,PS-6-ITEM-c2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-7-ITEM-d-ODP-1,PS-7-ITEM-d,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-7-ITEM-d-ODP-2,PS-7-ITEM-d,ControlItem,[Assignment: organization- defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-8-ITEM-b-ODP-1,PS-8-ITEM-b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PS-8-ITEM-b-ODP-2,PS-8-ITEM-b,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-a-ODP-1,PT-1-ITEM-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-a1-ODP-1,PT-1-ITEM-a1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System- level],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-b-ODP-1,PT-1-ITEM-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-c1-ODP-1,PT-1-ITEM-c1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-c1-ODP-2,PT-1-ITEM-c1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-c2-ODP-1,PT-1-ITEM-c2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-1-ITEM-c2-ODP-2,PT-1-ITEM-c2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-2-ITEM-a-ODP-1,PT-2-ITEM-a,ControlItem,[Assignment: organization-defined authority],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-2-ITEM-a-ODP-2,PT-2-ITEM-a,ControlItem,[Assignment: organization-defined processing],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-2-ITEM-b-ODP-1,PT-2-ITEM-b,ControlItem,[Assignment: organization-defined processing],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-2(1)-ODP-1,PT-2(1),ControlEnhancement,[Assignment: organization-defined authorized processing],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-2(1)-ODP-2,PT-2(1),ControlEnhancement,[Assignment: organization-defined elements of personally identifiable information],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-2(2)-ODP-1,PT-2(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3-ITEM-a-ODP-1,PT-3-ITEM-a,ControlItem,[Assignment: organization-defined purpose(s)],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3-ITEM-c-ODP-1,PT-3-ITEM-c,ControlItem,[Assignment: organization-defined processing],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3-ITEM-d-ODP-1,PT-3-ITEM-d,ControlItem,[Assignment: organization-defined mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3-ITEM-d-ODP-2,PT-3-ITEM-d,ControlItem,[Assignment: organization-defined requirements],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3(1)-ODP-1,PT-3(1),ControlEnhancement,[Assignment: organization-defined elements of personally identifiable information],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3(1)-ODP-2,PT-3(1),ControlEnhancement,[Assignment: organization-defined processing purposes],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-3(2)-ODP-1,PT-3(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-4-ODP-1,PT-4,Control,[Assignment: organization-defined tools or mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-4(1)-ODP-1,PT-4(1),ControlEnhancement,[Assignment: organization-defined mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-4(2)-ODP-1,PT-4(2),ControlEnhancement,[Assignment: organization-defined consent mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-4(2)-ODP-2,PT-4(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-4(2)-ODP-3,PT-4(2),ControlEnhancement,[Assignment: organization-defined personally identifiable information processing],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-4(3)-ODP-1,PT-4(3),ControlEnhancement,[Assignment: organization-defined tools or mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-5-ITEM-a-ODP-1,PT-5-ITEM-a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-5-ITEM-e-ODP-1,PT-5-ITEM-e,ControlItem,[Assignment: organization-defined information],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-5(1)-ODP-1,PT-5(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-6(1)-ODP-1,PT-6(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-6(2)-ODP-1,PT-6(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+PT-7-ODP-1,PT-7,Control,[Assignment: organization-defined processing conditions],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-a-ODP-1,RA-1-ITEM-a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-a1-ODP-1,RA-1-ITEM-a1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System- level],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-b-ODP-1,RA-1-ITEM-b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-c1-ODP-1,RA-1-ITEM-c1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-c1-ODP-2,RA-1-ITEM-c1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-c2-ODP-1,RA-1-ITEM-c2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-1-ITEM-c2-ODP-2,RA-1-ITEM-c2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3-ITEM-c-ODP-1,RA-3-ITEM-c,ControlItem,[Selection: security and privacy plans; risk assessment report; [Assignment: organization-defined document]],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3-ITEM-d-ODP-1,RA-3-ITEM-d,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3-ITEM-e-ODP-1,RA-3-ITEM-e,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3-ITEM-f-ODP-1,RA-3-ITEM-f,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3(1)-ITEM-a-ODP-1,RA-3(1)-ITEM-a,ControlItem,"[Assignment: organization-defined systems, system components, and system services]",NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3(1)-ITEM-b-ODP-1,RA-3(1)-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3(3)-ODP-1,RA-3(3),ControlEnhancement,[Assignment: organization-defined means],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3(4)-ODP-1,RA-3(4),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-3(4)-ODP-2,RA-3(4),ControlEnhancement,[Assignment: organization-defined advanced automation and analytics capabilities],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5-ITEM-a-ODP-1,RA-5-ITEM-a,ControlItem,[Assignment: organization-defined frequency and/or randomly in accordance with organization-defined process],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5-ITEM-d-ODP-1,RA-5-ITEM-d,ControlItem,[Assignment: organization-defined response times],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5-ITEM-e-ODP-1,RA-5-ITEM-e,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(2)-ODP-1,RA-5(2),ControlEnhancement,[Selection (one or more): [Assignment: organization-defined frequency]; prior to a new scan; when new vulnerabilities are identified and reported],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(4)-ODP-1,RA-5(4),ControlEnhancement,[Assignment: organization-defined corrective actions],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(5)-ODP-1,RA-5(5),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(5)-ODP-2,RA-5(5),ControlEnhancement,[Assignment: organization-defined vulnerability scanning activities],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(6)-ODP-1,RA-5(6),ControlEnhancement,[Assignment: organization- defined automated mechanisms],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(8)-ODP-1,RA-5(8),ControlEnhancement,[Assignment: organization-defined system],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-5(8)-ODP-2,RA-5(8),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-6-ODP-1,RA-6,Control,[Assignment: organization- defined locations],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-6-ODP-2,RA-6,Control,[Selection (one or more): [Assignment: organization-defined frequency]; when the following events or indicators occur: [Assignment: organization-defined events or indicators]],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-9-ODP-1,RA-9,Control,"[Assignment: organization-defined systems, system components, or system services]",NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-9-ODP-2,RA-9,Control,[Assignment: organization-defined decision points in the system development life cycle],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+RA-10-ITEM-b-ODP-1,RA-10-ITEM-b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5 (KB 2/USA/NIST.SP.800-53r5.pdf)
+SA-1::a::ODP1,SA-1::a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SA-1::a.1::ODP1,SA-1::a.1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+SA-1::b::ODP1,SA-1::b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+SA-1::c.1::ODP1,SA-1::c.1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SA-1::c.1::ODP2,SA-1::c.1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SA-1::c.2::ODP1,SA-1::c.2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SA-1::c.2::ODP2,SA-1::c.2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SA-3::a::ODP1,SA-3::a,ControlItem,[Assignment: organization-defined system development life cycle],NIST SP 800-53r5
+SA-4::ODP1,SA-4,Control,[Selection (one or more): standardized contract language; [Assignment: organization-defined contract language]],NIST SP 800-53r5
+SA-4(2)::ODP1,SA-4(2),ControlEnhancement,[Selection (one or more): security-relevant external system interfaces; high-level design; low-level design; source code or hardware schematics; [Assignment: organization-defined design and implementation information]],NIST SP 800-53r5
+SA-4(2)::ODP2,SA-4(2),ControlEnhancement,[Assignment: organization-defined level of detail],NIST SP 800-53r5
+SA-4(3)::a::ODP1,SA-4(3)::a,ControlItem,[Assignment: organization-defined systems engineering methods],NIST SP 800-53r5
+SA-4(3)::b::ODP1,SA-4(3)::b,ControlItem,[Assignment: organization-defined [Selection (one or more): systems security; privacy] engineering methods],NIST SP 800-53r5
+SA-4(3)::c::ODP1,SA-4(3)::c,ControlItem,"[Assignment: organization-defined software development methods; testing, evaluation, assessment, verification, and validation methods; and quality control processes]",NIST SP 800-53r5
+SA-4(5)::a::ODP1,SA-4(5)::a,ControlItem,[Assignment: organization-defined security configurations],NIST SP 800-53r5
+SA-4(11)::ODP1,SA-4(11),ControlEnhancement,[Assignment: organization-defined Privacy Act requirements],NIST SP 800-53r5
+SA-4(12)::b::ODP1,SA-4(12)::b,ControlItem,[Assignment: organization-defined time frame],NIST SP 800-53r5
+SA-5::c::ODP1,SA-5::c,ControlItem,[Assignment: organization-defined actions],NIST SP 800-53r5
+SA-5::d::ODP1,SA-5::d,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SA-8::ODP1,SA-8,Control,[Assignment: organization-defined systems security and privacy engineering principles],NIST SP 800-53r5
+SA-8(2)::ODP1,SA-8(2),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(3)::ODP1,SA-8(3),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(4)::ODP1,SA-8(4),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(5)::ODP1,SA-8(5),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(6)::ODP1,SA-8(6),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(7)::ODP1,SA-8(7),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(8)::ODP1,SA-8(8),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(9)::ODP1,SA-8(9),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(10)::ODP1,SA-8(10),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(11)::ODP1,SA-8(11),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(12)::ODP1,SA-8(12),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(13)::ODP1,SA-8(13),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(14)::ODP1,SA-8(14),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(15)::ODP1,SA-8(15),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(16)::ODP1,SA-8(16),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(17)::ODP1,SA-8(17),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(18)::ODP1,SA-8(18),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(19)::ODP1,SA-8(19),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(20)::ODP1,SA-8(20),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(21)::ODP1,SA-8(21),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(22)::ODP1,SA-8(22),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(23)::ODP1,SA-8(23),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(24)::ODP1,SA-8(24),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(25)::ODP1,SA-8(25),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(26)::ODP1,SA-8(26),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(27)::ODP1,SA-8(27),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(28)::ODP1,SA-8(28),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(29)::ODP1,SA-8(29),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(30)::ODP1,SA-8(30),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(31)::ODP1,SA-8(31),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(32)::ODP1,SA-8(32),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SA-8(33)::ODP1,SA-8(33),ControlEnhancement,[Assignment: organization-defined processes],NIST SP 800-53r5
+SA-9::a::ODP1,SA-9::a,ControlItem,[Assignment: organization-defined controls],NIST SP 800-53r5
+SA-9::c::ODP1,SA-9::c,ControlItem,"[Assignment: organization-defined processes, methods, and techniques]",NIST SP 800-53r5
+SA-9(1)::b::ODP1,SA-9(1)::b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SA-9(2)::ODP1,SA-9(2),ControlEnhancement,[Assignment: organization-defined external system services],NIST SP 800-53r5
+SA-9(3)::ODP1,SA-9(3),ControlEnhancement,"[Assignment: organization-defined security and privacy requirements, properties, factors, or conditions defining acceptable trust relationships]",NIST SP 800-53r5
+SA-9(4)::ODP1,SA-9(4),ControlEnhancement,[Assignment: organization-defined external service providers],NIST SP 800-53r5
+SA-9(4)::ODP2,SA-9(4),ControlEnhancement,[Assignment: organization-defined actions],NIST SP 800-53r5
+SA-9(5)::ODP1,SA-9(5),ControlEnhancement,[Selection (one or more): information processing; information or data; system services],NIST SP 800-53r5
+SA-9(5)::ODP2,SA-9(5),ControlEnhancement,[Assignment: organization-defined locations],NIST SP 800-53r5
+SA-9(5)::ODP3,SA-9(5),ControlEnhancement,[Assignment: organization-defined requirements or conditions],NIST SP 800-53r5
+SA-10::a::ODP1,SA-10::a,ControlItem,[Selection (one or more): design; development; implementation; operation; disposal],NIST SP 800-53r5
+SA-10::b::ODP1,SA-10::b,ControlItem,[Assignment: organization-defined configuration items under configuration management],NIST SP 800-53r5
+SA-10::e::ODP1,SA-10::e,ControlItem,[Assignment: organization-defined personnel],NIST SP 800-53r5
+SA-10(7)::ODP1,SA-10(7),ControlEnhancement,[Assignment: organization-defined security and privacy representatives],NIST SP 800-53r5
+SA-10(7)::ODP2,SA-10(7),ControlEnhancement,[Assignment: organization-defined configuration change management and control process],NIST SP 800-53r5
+SA-11::b::ODP1,SA-11::b,ControlItem,[Selection (one or more): unit; integration; system; regression],NIST SP 800-53r5
+SA-11::b::ODP2,SA-11::b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SA-11::b::ODP3,SA-11::b,ControlItem,[Assignment: organization-defined depth and coverage],NIST SP 800-53r5
+SA-11(2)::a::ODP1,SA-11(2)::a,ControlItem,"[Assignment: organization-defined information concerning impact, environment of operations, known or assumed threats, and acceptable risk levels]",NIST SP 800-53r5
+SA-11(2)::b::ODP1,SA-11(2)::b,ControlItem,[Assignment: organization-defined tools and methods],NIST SP 800-53r5
+SA-11(2)::c::ODP1,SA-11(2)::c,ControlItem,[Assignment: organization-defined breadth and depth of modeling and analyses],NIST SP 800-53r5
+SA-11(2)::d::ODP1,SA-11(2)::d,ControlItem,[Assignment: organization-defined acceptance criteria],NIST SP 800-53r5
+SA-11(3)::a::ODP1,SA-11(3)::a,ControlItem,[Assignment: organization-defined independence criteria],NIST SP 800-53r5
+SA-11(4)::ODP1,SA-11(4),ControlEnhancement,[Assignment: organization-defined specific code],NIST SP 800-53r5
+SA-11(4)::ODP2,SA-11(4),ControlEnhancement,"[Assignment: organization-defined processes, procedures, and/or techniques]",NIST SP 800-53r5
+SA-11(5)::a::ODP1,SA-11(5)::a,ControlItem,[Assignment: organization-defined breadth and depth of testing],NIST SP 800-53r5
+SA-11(5)::b::ODP1,SA-11(5)::b,ControlItem,[Assignment: organization-defined constraints],NIST SP 800-53r5
+SA-11(7)::ODP1,SA-11(7),ControlEnhancement,[Assignment: organization-defined breadth and depth of testing and evaluation],NIST SP 800-53r5
+SA-15::b::ODP1,SA-15::b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SA-15::b::ODP2,SA-15::b,ControlItem,[Assignment: organization-defined security and privacy requirements],NIST SP 800-53r5
+SA-15(1)::b::ODP1,SA-15(1)::b,ControlItem,[Selection (one or more): [Assignment: organization-defined frequency]; [Assignment: organization-defined program review milestones]; upon delivery],NIST SP 800-53r5
+SA-15(3)::a::ODP1,SA-15(3)::a,ControlItem,[Assignment: organization-defined decision points in the system development life cycle],NIST SP 800-53r5
+SA-15(3)::b::ODP1,SA-15(3)::b,ControlItem,[Assignment: organization-defined breadth and depth of criticality analysis],NIST SP 800-53r5
+SA-15(5)::ODP1,SA-15(5),ControlEnhancement,[Assignment: organization-defined thresholds],NIST SP 800-53r5
+SA-15(7)::ODP1,SA-15(7),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SA-15(7)::a::ODP1,SA-15(7)::a,ControlItem,[Assignment: organization-defined tools],NIST SP 800-53r5
+SA-15(7)::d::ODP1,SA-15(7)::d,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SA-16::ODP1,SA-16,Control,[Assignment: organization-defined training],NIST SP 800-53r5
+SA-17(1)::a::ODP1,SA-17(1)::a,ControlItem,[Assignment: organization-defined elements of organizational security and privacy policy],NIST SP 800-53r5
+SA-17(4)::b::ODP1,SA-17(4)::b,ControlItem,[Selection: informal demonstration; convincing argument with formal methods as feasible],NIST SP 800-53r5
+SA-17(8)::ODP1,SA-17(8),ControlEnhancement,[Assignment: organization-defined critical systems or system components],NIST SP 800-53r5
+SA-17(8)::ODP2,SA-17(8),ControlEnhancement,"[Assignment: organization-defined capabilities, by system or component]",NIST SP 800-53r5
+SA-17(9)::ODP1,SA-17(9),ControlEnhancement,[Assignment: organization-defined critical systems or system components],NIST SP 800-53r5
+SA-20::ODP1,SA-20,Control,[Assignment: organization-defined critical system components],NIST SP 800-53r5
+SA-21::ODP1,SA-21,Control,"[Assignment: organization-defined system, system component, or system service]",NIST SP 800-53r5
+SA-21::a::ODP1,SA-21::a,ControlItem,[Assignment: organization-defined official government duties],NIST SP 800-53r5
+SA-21::b::ODP1,SA-21::b,ControlItem,[Assignment: organization-defined additional personnel screening criteria],NIST SP 800-53r5
+SA-22::b::ODP1,SA-22::b,ControlItem,[Selection (one or more): in-house support; [Assignment: organization-defined support from external providers]],NIST SP 800-53r5
+SA-23::ODP1,SA-23,Control,[Selection (one or more): design; modification; augmentation; reconfiguration],NIST SP 800-53r5
+SA-23::ODP2,SA-23,Control,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SC-1::a::ODP1,SC-1::a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SC-1::a.1::ODP1,SC-1::a.1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+SC-1::b::ODP1,SC-1::b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+SC-1::c.1::ODP1,SC-1::c.1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SC-1::c.1::ODP2,SC-1::c.1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SC-1::c.2::ODP1,SC-1::c.2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SC-1::c.2::ODP2,SC-1::c.2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SC-4(2)::ODP1,SC-4(2),ControlEnhancement,[Assignment: organization-defined procedures],NIST SP 800-53r5
+SC-5::a::ODP1,SC-5::a,ControlItem,[Selection: Protect against; Limit],NIST SP 800-53r5
+SC-5::a::ODP2,SC-5::a,ControlItem,[Assignment: organization-defined types of denial-of-service events],NIST SP 800-53r5
+SC-5::b::ODP1,SC-5::b,ControlItem,[Assignment: organization-defined controls by type of denial-of-service event],NIST SP 800-53r5
+SC-5(1)::ODP1,SC-5(1),ControlEnhancement,[Assignment: organization-defined denial-of-service attacks],NIST SP 800-53r5
+SC-5(3)::a::ODP1,SC-5(3)::a,ControlItem,[Assignment: organization-defined monitoring tools],NIST SP 800-53r5
+SC-5(3)::b::ODP1,SC-5(3)::b,ControlItem,[Assignment: organization-defined system resources],NIST SP 800-53r5
+SC-6::ODP1,SC-6,Control,[Assignment: organization-defined resources],NIST SP 800-53r5
+SC-6::ODP2,SC-6,Control,[Selection (one or more): priority; quota; [Assignment: organization-defined controls]],NIST SP 800-53r5
+SC-7::b::ODP1,SC-7::b,ControlItem,[Selection: physically; logically],NIST SP 800-53r5
+SC-7(4)::e::ODP1,SC-7(4)::e,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SC-7(5)::ODP1,SC-7(5),ControlEnhancement,[Selection (one or more): at managed interfaces; for [Assignment: organization-defined systems]],NIST SP 800-53r5
+SC-7(7)::ODP1,SC-7(7),ControlEnhancement,[Assignment: organization-defined safeguards],NIST SP 800-53r5
+SC-7(8)::ODP1,SC-7(8),ControlEnhancement,[Assignment: organization-defined internal communications traffic],NIST SP 800-53r5
+SC-7(8)::ODP2,SC-7(8),ControlEnhancement,[Assignment: organization-defined external networks],NIST SP 800-53r5
+SC-7(10)::b::ODP1,SC-7(10)::b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SC-7(11)::ODP1,SC-7(11),ControlEnhancement,[Assignment: organization-defined authorized sources],NIST SP 800-53r5
+SC-7(11)::ODP2,SC-7(11),ControlEnhancement,[Assignment: organization-defined authorized destinations],NIST SP 800-53r5
+SC-7(12)::ODP1,SC-7(12),ControlEnhancement,[Assignment: organization-defined host-based boundary protection mechanisms],NIST SP 800-53r5
+SC-7(12)::ODP2,SC-7(12),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-7(13)::ODP1,SC-7(13),ControlEnhancement,"[Assignment: organization-defined information security tools, mechanisms, and support components]",NIST SP 800-53r5
+SC-7(14)::ODP1,SC-7(14),ControlEnhancement,[Assignment: organization-defined managed interfaces],NIST SP 800-53r5
+SC-7(19)::ODP1,SC-7(19),ControlEnhancement,[Assignment: organization-defined communication clients],NIST SP 800-53r5
+SC-7(20)::ODP1,SC-7(20),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-7(21)::ODP1,SC-7(21),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-7(21)::ODP2,SC-7(21),ControlEnhancement,[Assignment: organization-defined missions and/or business functions],NIST SP 800-53r5
+SC-7(24)::a::ODP1,SC-7(24)::a,ControlItem,[Assignment: organization-defined processing rules],NIST SP 800-53r5
+SC-7(25)::ODP1,SC-7(25),ControlEnhancement,[Assignment: organization-defined unclassified national security system],NIST SP 800-53r5
+SC-7(25)::ODP2,SC-7(25),ControlEnhancement,[Assignment: organization-defined boundary protection device],NIST SP 800-53r5
+SC-7(26)::ODP1,SC-7(26),ControlEnhancement,[Assignment: organization-defined boundary protection device],NIST SP 800-53r5
+SC-7(27)::ODP1,SC-7(27),ControlEnhancement,[Assignment: organization-defined unclassified non-national security system],NIST SP 800-53r5
+SC-7(27)::ODP2,SC-7(27),ControlEnhancement,[Assignment: organization-defined boundary protection device],NIST SP 800-53r5
+SC-7(28)::ODP1,SC-7(28),ControlEnhancement,[Assignment: organization-defined system],NIST SP 800-53r5
+SC-7(29)::ODP1,SC-7(29),ControlEnhancement,[Selection: physically; logically],NIST SP 800-53r5
+SC-7(29)::ODP2,SC-7(29),ControlEnhancement,[Assignment: organization-defined critical system components and functions],NIST SP 800-53r5
+SC-8::ODP1,SC-8,Control,[Selection (one or more): confidentiality; integrity],NIST SP 800-53r5
+SC-8(1)::ODP1,SC-8(1),ControlEnhancement,[Selection (one or more): prevent unauthorized disclosure of information; detect changes to information],NIST SP 800-53r5
+SC-8(2)::ODP1,SC-8(2),ControlEnhancement,[Selection (one or more): confidentiality; integrity],NIST SP 800-53r5
+SC-8(3)::ODP1,SC-8(3),ControlEnhancement,[Assignment: organization-defined alternative physical controls],NIST SP 800-53r5
+SC-8(4)::ODP1,SC-8(4),ControlEnhancement,[Assignment: organization-defined alternative physical controls],NIST SP 800-53r5
+SC-8(5)::ODP1,SC-8(5),ControlEnhancement,[Assignment: organization-defined protected distribution system],NIST SP 800-53r5
+SC-8(5)::ODP2,SC-8(5),ControlEnhancement,[Selection (one or more): prevent unauthorized disclosure of information; detect changes to information],NIST SP 800-53r5
+SC-10::ODP1,SC-10,Control,[Assignment: organization-defined time period],NIST SP 800-53r5
+SC-11::a::ODP1,SC-11::a,ControlItem,[Selection: physically; logically],NIST SP 800-53r5
+SC-11::b::ODP1,SC-11::b,ControlItem,[Assignment: organization-defined security functions],NIST SP 800-53r5
+SC-11(1)::b::ODP1,SC-11(1)::b,ControlItem,[Assignment: organization-defined security functions],NIST SP 800-53r5
+SC-12::ODP1,SC-12,Control,"[Assignment: organization-defined requirements for key generation, distribution, storage, access, and destruction]",NIST SP 800-53r5
+SC-12(2)::ODP1,SC-12(2),ControlEnhancement,[Selection: NIST FIPS-validated; NSA-approved],NIST SP 800-53r5
+SC-12(3)::ODP1,SC-12(3),ControlEnhancement,[Selection: NSA-approved key management technology and processes; prepositioned keying material; DoD-approved or DoD-issued Medium Assurance PKI certificates; DoD-approved or DoD-issued Medium Hardware Assurance PKI certificates and hardware security tokens that protect the user’s private key; certificates issued in accordance with organization-defined requirements],NIST SP 800-53r5
+SC-13::a::ODP1,SC-13::a,ControlItem,[Assignment: organization-defined cryptographic uses],NIST SP 800-53r5
+SC-13::b::ODP1,SC-13::b,ControlItem,[Assignment: organization-defined types of cryptography for each specified cryptographic use],NIST SP 800-53r5
+SC-15::a::ODP1,SC-15::a,ControlItem,[Assignment: organization-defined exceptions where remote activation is to be allowed],NIST SP 800-53r5
+SC-15(1)::ODP1,SC-15(1),ControlEnhancement,[Selection (one or more): physical; logical],NIST SP 800-53r5
+SC-15(3)::ODP1,SC-15(3),ControlEnhancement,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SC-15(3)::ODP2,SC-15(3),ControlEnhancement,[Assignment: organization-defined secure work areas],NIST SP 800-53r5
+SC-15(4)::ODP1,SC-15(4),ControlEnhancement,[Assignment: organization-defined online meetings and teleconferences],NIST SP 800-53r5
+SC-16::ODP1,SC-16,Control,[Assignment: organization-defined security and privacy attributes],NIST SP 800-53r5
+SC-16(3)::ODP1,SC-16(3),ControlEnhancement,[Assignment: organization-defined mechanisms or techniques],NIST SP 800-53r5
+SC-17::a::ODP1,SC-17::a,ControlItem,[Assignment: organization-defined certificate policy],NIST SP 800-53r5
+SC-18(1)::ODP1,SC-18(1),ControlEnhancement,[Assignment: organization-defined unacceptable mobile code],NIST SP 800-53r5
+SC-18(1)::ODP2,SC-18(1),ControlEnhancement,[Assignment: organization-defined corrective actions],NIST SP 800-53r5
+SC-18(2)::ODP1,SC-18(2),ControlEnhancement,[Assignment: organization-defined mobile code requirements],NIST SP 800-53r5
+SC-18(3)::ODP1,SC-18(3),ControlEnhancement,[Assignment: organization-defined unacceptable mobile code],NIST SP 800-53r5
+SC-18(4)::ODP1,SC-18(4),ControlEnhancement,[Assignment: organization-defined software applications],NIST SP 800-53r5
+SC-18(4)::ODP2,SC-18(4),ControlEnhancement,[Assignment: organization-defined actions],NIST SP 800-53r5
+SC-23(3)::ODP1,SC-23(3),ControlEnhancement,[Assignment: organization-defined randomness requirements],NIST SP 800-53r5
+SC-23(5)::ODP1,SC-23(5),ControlEnhancement,[Assignment: organization-defined certificate authorities],NIST SP 800-53r5
+SC-24::ODP1,SC-24,Control,[Assignment: organization-defined known system state],NIST SP 800-53r5
+SC-24::ODP2,SC-24,Control,[Assignment: organization-defined system state information],NIST SP 800-53r5
+SC-24::ODP3,SC-24,Control,[Assignment: list of organization-defined types of system failures on organization-defined system components],NIST SP 800-53r5
+SC-25::ODP1,SC-25,Control,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-27::ODP1,SC-27,Control,[Assignment: organization-defined platform-independent applications],NIST SP 800-53r5
+SC-28::ODP1,SC-28,Control,[Selection (one or more): confidentiality; integrity],NIST SP 800-53r5
+SC-28::ODP2,SC-28,Control,[Assignment: organization-defined information at rest],NIST SP 800-53r5
+SC-28(1)::ODP1,SC-28(1),ControlEnhancement,[Assignment: organization-defined system components or media],NIST SP 800-53r5
+SC-28(1)::ODP2,SC-28(1),ControlEnhancement,[Assignment: organization-defined information],NIST SP 800-53r5
+SC-28(2)::ODP1,SC-28(2),ControlEnhancement,[Assignment: organization-defined information],NIST SP 800-53r5
+SC-28(3)::ODP1,SC-28(3),ControlEnhancement,[Selection: [Assignment: organization-defined safeguards]; hardware-protected key store],NIST SP 800-53r5
+SC-29::ODP1,SC-29,Control,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-29(1)::ODP1,SC-29(1),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SC-30::ODP1,SC-30,Control,[Assignment: organization-defined systems],NIST SP 800-53r5
+SC-30::ODP2,SC-30,Control,[Assignment: organization-defined time periods],NIST SP 800-53r5
+SC-30::ODP3,SC-30,Control,[Assignment: organization-defined concealment and misdirection techniques],NIST SP 800-53r5
+SC-30(2)::ODP1,SC-30(2),ControlEnhancement,[Assignment: organization-defined techniques],NIST SP 800-53r5
+SC-30(3)::ODP1,SC-30(3),ControlEnhancement,[Assignment: organization-defined processing and/or storage],NIST SP 800-53r5
+SC-30(3)::ODP2,SC-30(3),ControlEnhancement,[Selection: [Assignment: organization-defined time frequency]; at random time intervals],NIST SP 800-53r5
+SC-30(4)::ODP1,SC-30(4),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-30(5)::ODP1,SC-30(5),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-30(5)::ODP2,SC-30(5),ControlEnhancement,[Assignment: organization-defined techniques],NIST SP 800-53r5
+SC-31::a::ODP1,SC-31::a,ControlItem,[Selection (one or more): storage; timing],NIST SP 800-53r5
+SC-31(2)::ODP1,SC-31(2),ControlEnhancement,[Selection (one or more): storage; timing],NIST SP 800-53r5
+SC-31(2)::ODP2,SC-31(2),ControlEnhancement,[Assignment: organization-defined values],NIST SP 800-53r5
+SC-31(3)::ODP1,SC-31(3),ControlEnhancement,[Assignment: organization-defined subset of identified covert channels],NIST SP 800-53r5
+SC-32::ODP1,SC-32,Control,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-32::ODP2,SC-32,Control,[Selection: physical; logical],NIST SP 800-53r5
+SC-32::ODP3,SC-32,Control,[Assignment: organization-defined circumstances for physical or logical separation of components],NIST SP 800-53r5
+SC-34::ODP1,SC-34,Control,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-34::b::ODP1,SC-34::b,ControlItem,[Assignment: organization-defined applications],NIST SP 800-53r5
+SC-34(1)::ODP1,SC-34(1),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-36::ODP1,SC-36,Control,[Selection: physical locations; logical domains],NIST SP 800-53r5
+SC-36::ODP2,SC-36,Control,[Assignment: organization-defined processing and storage components],NIST SP 800-53r5
+SC-36(1)::a::ODP1,SC-36(1)::a,ControlItem,[Assignment: organization-defined distributed processing and storage components],NIST SP 800-53r5
+SC-36(1)::b::ODP1,SC-36(1)::b,ControlItem,[Assignment: organization-defined actions],NIST SP 800-53r5
+SC-36(2)::ODP1,SC-36(2),ControlEnhancement,[Assignment: organization-defined duplicate systems or system components],NIST SP 800-53r5
+SC-37::ODP1,SC-37,Control,"[Assignment: organization-defined information, system components, or devices]",NIST SP 800-53r5
+SC-37::ODP2,SC-37,Control,[Assignment: organization-defined individuals or systems],NIST SP 800-53r5
+SC-37::ODP3,SC-37,Control,[Assignment: organization-defined out-of-band channels],NIST SP 800-53r5
+SC-37(1)::ODP1,SC-37(1),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+SC-37(1)::ODP2,SC-37(1),ControlEnhancement,[Assignment: organization-defined individuals or systems],NIST SP 800-53r5
+SC-37(1)::ODP3,SC-37(1),ControlEnhancement,"[Assignment: organization-defined information, system components, or devices]",NIST SP 800-53r5
+SC-38::ODP1,SC-38,Control,[Assignment: organization-defined operations security controls],NIST SP 800-53r5
+SC-39(2)::ODP1,SC-39(2),ControlEnhancement,[Assignment: organization-defined multi-threaded processing],NIST SP 800-53r5
+SC-40::ODP1,SC-40,Control,[Assignment: organization-defined wireless links],NIST SP 800-53r5
+SC-40::ODP2,SC-40,Control,[Assignment: organization-defined types of signal parameter attacks or references to sources for such attacks],NIST SP 800-53r5
+SC-40(1)::ODP1,SC-40(1),ControlEnhancement,[Assignment: organization-defined level of protection],NIST SP 800-53r5
+SC-40(2)::ODP1,SC-40(2),ControlEnhancement,[Assignment: organization-defined level of reduction],NIST SP 800-53r5
+SC-40(4)::ODP1,SC-40(4),ControlEnhancement,[Assignment: organization-defined wireless transmitters],NIST SP 800-53r5
+SC-41::ODP1,SC-41,Control,[Selection: Physically; Logically],NIST SP 800-53r5
+SC-41::ODP2,SC-41,Control,[Assignment: organization-defined connection ports or input/output devices],NIST SP 800-53r5
+SC-41::ODP3,SC-41,Control,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SC-42::a::ODP1,SC-42::a,ControlItem,"[Selection (one or more): the use of devices possessing [Assignment: organization-defined environmental sensing capabilities] in [Assignment: organization-defined facilities, areas, or systems]; the remote activation of environmental sensing capabilities on organizational systems or system components with the following exceptions: [Assignment: organization-defined exceptions where remote activation of sensors is allowed]]",NIST SP 800-53r5
+SC-42::b::ODP1,SC-42::b,ControlItem,[Assignment: organization-defined group of users],NIST SP 800-53r5
+SC-42(1)::ODP1,SC-42(1),ControlEnhancement,[Assignment: organization-defined sensors],NIST SP 800-53r5
+SC-42(2)::ODP1,SC-42(2),ControlEnhancement,[Assignment: organization-defined sensors],NIST SP 800-53r5
+SC-42(2)::ODP2,SC-42(2),ControlEnhancement,[Assignment: organization-defined measures],NIST SP 800-53r5
+SC-42(4)::ODP1,SC-42(4),ControlEnhancement,[Assignment: organization-defined sensors],NIST SP 800-53r5
+SC-42(4)::ODP2,SC-42(4),ControlEnhancement,[Assignment: organization-defined measures],NIST SP 800-53r5
+SC-42(5)::ODP1,SC-42(5),ControlEnhancement,[Assignment: organization-defined sensors],NIST SP 800-53r5
+SC-43::a::ODP1,SC-43::a,ControlItem,[Assignment: organization-defined system components],NIST SP 800-53r5
+SC-44::ODP1,SC-44,Control,"[Assignment: organization-defined system, system component, or location]",NIST SP 800-53r5
+SC-45(1)::a::ODP1,SC-45(1)::a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SC-45(1)::a::ODP2,SC-45(1)::a,ControlItem,[Assignment: organization-defined authoritative time source],NIST SP 800-53r5
+SC-45(1)::b::ODP1,SC-45(1)::b,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+SC-46::ODP1,SC-46,Control,[Selection: physically; logically],NIST SP 800-53r5
+SC-47::ODP1,SC-47,Control,[Assignment: organization-defined alternate communications paths],NIST SP 800-53r5
+SC-48::ODP1,SC-48,Control,[Assignment: organization-defined sensors and monitoring capabilities],NIST SP 800-53r5
+SC-48::ODP2,SC-48,Control,[Assignment: organization-defined locations],NIST SP 800-53r5
+SC-48::ODP3,SC-48,Control,[Assignment: organization-defined conditions or circumstances],NIST SP 800-53r5
+SC-48(1)::ODP1,SC-48(1),ControlEnhancement,[Assignment: organization-defined sensors and monitoring capabilities],NIST SP 800-53r5
+SC-48(1)::ODP2,SC-48(1),ControlEnhancement,[Assignment: organization-defined locations],NIST SP 800-53r5
+SC-48(1)::ODP3,SC-48(1),ControlEnhancement,[Assignment: organization-defined conditions or circumstances],NIST SP 800-53r5
+SC-49::ODP1,SC-49,Control,[Assignment: organization-defined security domains],NIST SP 800-53r5
+SC-50::ODP1,SC-50,Control,[Assignment: organization-defined security domains],NIST SP 800-53r5
+SC-51::a::ODP1,SC-51::a,ControlItem,[Assignment: organization-defined system firmware components],NIST SP 800-53r5
+SC-51::b::ODP1,SC-51::b,ControlItem,[Assignment: organization-defined authorized individuals],NIST SP 800-53r5
+SI-1::a::ODP1,SI-1::a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-1::a.1::ODP1,SI-1::a.1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+SI-1::b::ODP1,SI-1::b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+SI-1::c.1::ODP1,SI-1::c.1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-1::c.1::ODP2,SI-1::c.1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SI-1::c.2::ODP1,SI-1::c.2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-1::c.2::ODP2,SI-1::c.2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SI-2::c::ODP1,SI-2::c,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+SI-2(2)::ODP1,SI-2(2),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+SI-2(2)::ODP2,SI-2(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-2(3)::b::ODP1,SI-2(3)::b,ControlItem,[Assignment: organization-defined benchmarks],NIST SP 800-53r5
+SI-2(4)::ODP1,SI-2(4),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SI-2(5)::ODP1,SI-2(5),ControlEnhancement,[Assignment: organization-defined security-relevant software and firmware updates],NIST SP 800-53r5
+SI-2(5)::ODP2,SI-2(5),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SI-2(6)::ODP1,SI-2(6),ControlEnhancement,[Assignment: organization-defined software and firmware components],NIST SP 800-53r5
+SI-3::a::ODP1,SI-3::a,ControlItem,[Selection (one or more): signature based; non-signature based],NIST SP 800-53r5
+SI-3::c.1::ODP1,SI-3::c.1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-3::c.1::ODP2,SI-3::c.1,ControlItem,[Selection (one or more): endpoint; network entry and exit points],NIST SP 800-53r5
+SI-3::c.2::ODP1,SI-3::c.2,ControlItem,[Selection (one or more): block malicious code; quarantine malicious code; take [Assignment: organization-defined action]],NIST SP 800-53r5
+SI-3::c.2::ODP2,SI-3::c.2,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-3(6)::a::ODP1,SI-3(6)::a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-3(8)::a::ODP1,SI-3(8)::a,ControlItem,[Assignment: organization-defined system hardware components],NIST SP 800-53r5
+SI-3(8)::a::ODP2,SI-3(8)::a,ControlItem,[Assignment: organization-defined unauthorized operating system commands],NIST SP 800-53r5
+SI-3(8)::b::ODP1,SI-3(8)::b,ControlItem,[Selection (one or more): issue a warning; audit the command execution; prevent the execution of the command],NIST SP 800-53r5
+SI-3(10)::a::ODP1,SI-3(10)::a,ControlItem,[Assignment: organization-defined tools and techniques],NIST SP 800-53r5
+SI-4::a.1::ODP1,SI-4::a.1,ControlItem,[Assignment: organization-defined monitoring objectives],NIST SP 800-53r5
+SI-4::b::ODP1,SI-4::b,ControlItem,[Assignment: organization-defined techniques and methods],NIST SP 800-53r5
+SI-4::g::ODP1,SI-4::g,ControlItem,[Assignment: organization-defined system monitoring information],NIST SP 800-53r5
+SI-4::g::ODP2,SI-4::g,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-4::g::ODP3,SI-4::g,ControlItem,[Selection (one or more): as needed; [Assignment: organization-defined frequency]],NIST SP 800-53r5
+SI-4(4)::b::ODP1,SI-4(4)::b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-4(4)::b::ODP2,SI-4(4)::b,ControlItem,[Assignment: organization-defined unusual or unauthorized activities or conditions],NIST SP 800-53r5
+SI-4(5)::ODP1,SI-4(5),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-4(5)::ODP2,SI-4(5),ControlEnhancement,[Assignment: organization-defined compromise indicators],NIST SP 800-53r5
+SI-4(7)::a::ODP1,SI-4(7)::a,ControlItem,[Assignment: organization-defined incident response personnel (identified by name and/or by role)],NIST SP 800-53r5
+SI-4(7)::b::ODP1,SI-4(7)::b,ControlItem,[Assignment: organization-defined least-disruptive actions to terminate suspicious events],NIST SP 800-53r5
+SI-4(9)::ODP1,SI-4(9),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-4(10)::ODP1,SI-4(10),ControlEnhancement,[Assignment: organization-defined encrypted communications traffic],NIST SP 800-53r5
+SI-4(10)::ODP2,SI-4(10),ControlEnhancement,[Assignment: organization-defined system monitoring tools and mechanisms],NIST SP 800-53r5
+SI-4(11)::ODP1,SI-4(11),ControlEnhancement,[Assignment: organization-defined interior points within the system],NIST SP 800-53r5
+SI-4(12)::ODP1,SI-4(12),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-4(12)::ODP2,SI-4(12),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+SI-4(12)::ODP3,SI-4(12),ControlEnhancement,[Assignment: organization-defined activities that trigger alerts],NIST SP 800-53r5
+SI-4(18)::ODP1,SI-4(18),ControlEnhancement,[Assignment: organization-defined interior points within the system],NIST SP 800-53r5
+SI-4(19)::ODP1,SI-4(19),ControlEnhancement,[Assignment: organization-defined additional monitoring],NIST SP 800-53r5
+SI-4(19)::ODP2,SI-4(19),ControlEnhancement,[Assignment: organization-defined sources],NIST SP 800-53r5
+SI-4(20)::ODP1,SI-4(20),ControlEnhancement,[Assignment: organization-defined additional monitoring],NIST SP 800-53r5
+SI-4(21)::ODP1,SI-4(21),ControlEnhancement,[Assignment: organization-defined probationary period],NIST SP 800-53r5
+SI-4(21)::ODP2,SI-4(21),ControlEnhancement,[Assignment: organization-defined additional monitoring],NIST SP 800-53r5
+SI-4(22)::a::ODP1,SI-4(22)::a,ControlItem,[Assignment: organization-defined authorization or approval processes],NIST SP 800-53r5
+SI-4(22)::b::ODP1,SI-4(22)::b,ControlItem,[Selection (one or more): Audit; Alert [Assignment: organization-defined personnel or roles]],NIST SP 800-53r5
+SI-4(23)::ODP1,SI-4(23),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SI-4(23)::ODP2,SI-4(23),ControlEnhancement,[Assignment: organization-defined host-based monitoring mechanisms],NIST SP 800-53r5
+SI-4(24)::ODP1,SI-4(24),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-4(24)::ODP2,SI-4(24),ControlEnhancement,[Assignment: organization-defined sources],NIST SP 800-53r5
+SI-5::a::ODP1,SI-5::a,ControlItem,[Assignment: organization-defined external organizations],NIST SP 800-53r5
+SI-5::c::ODP1,SI-5::c,ControlItem,[Selection (one or more): [Assignment: organization-defined personnel or roles]; [Assignment: organization-defined elements within the organization]; [Assignment: organization-defined external organizations]],NIST SP 800-53r5
+SI-5(1)::ODP1,SI-5(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+SI-6::a::ODP1,SI-6::a,ControlItem,[Assignment: organization-defined security and privacy functions],NIST SP 800-53r5
+SI-6::b::ODP1,SI-6::b,ControlItem,[Selection (one or more): [Assignment: organization-defined system transitional states]; upon command by user with appropriate privilege; [Assignment: organization-defined frequency]],NIST SP 800-53r5
+SI-6::c::ODP1,SI-6::c,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-6::d::ODP1,SI-6::d,ControlItem,[Selection (one or more): Shut the system down; Restart the system; [Assignment: organization-defined alternative action(s)]],NIST SP 800-53r5
+SI-6(3)::ODP1,SI-6(3),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-7::a::ODP1,SI-7::a,ControlItem,"[Assignment: organization-defined software, firmware, and information]",NIST SP 800-53r5
+SI-7::b::ODP1,SI-7::b,ControlItem,[Assignment: organization-defined actions],NIST SP 800-53r5
+SI-7(1)::ODP1,SI-7(1),ControlEnhancement,"[Assignment: organization-defined software, firmware, and information]",NIST SP 800-53r5
+SI-7(1)::ODP2,SI-7(1),ControlEnhancement,[Selection (one or more): at startup; at [Assignment: organization-defined transitional states or security-relevant events]; [Assignment: organization-defined frequency]],NIST SP 800-53r5
+SI-7(2)::ODP1,SI-7(2),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-7(5)::ODP1,SI-7(5),ControlEnhancement,[Selection (one or more): shut the system down; restart the system; implement [Assignment: organization-defined controls]],NIST SP 800-53r5
+SI-7(7)::ODP1,SI-7(7),ControlEnhancement,[Assignment: organization-defined security-relevant changes to the system],NIST SP 800-53r5
+SI-7(8)::ODP1,SI-7(8),ControlEnhancement,[Selection (one or more): generate an audit record; alert current user; alert [Assignment: organization-defined personnel or roles]; [Assignment: organization-defined other actions]],NIST SP 800-53r5
+SI-7(9)::ODP1,SI-7(9),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SI-7(10)::ODP1,SI-7(10),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SI-7(10)::ODP2,SI-7(10),ControlEnhancement,[Assignment: organization-defined mechanisms],NIST SP 800-53r5
+SI-7(12)::ODP1,SI-7(12),ControlEnhancement,[Assignment: organization-defined user-installed software],NIST SP 800-53r5
+SI-7(15)::ODP1,SI-7(15),ControlEnhancement,[Assignment: organization-defined software or firmware components],NIST SP 800-53r5
+SI-7(16)::ODP1,SI-7(16),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+SI-7(17)::ODP1,SI-7(17),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+SI-8(2)::ODP1,SI-8(2),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-10::ODP1,SI-10,Control,[Assignment: organization-defined information inputs to the system],NIST SP 800-53r5
+SI-10(1)::a::ODP1,SI-10(1)::a,ControlItem,[Assignment: organization-defined inputs defined in the base control (SI-10)],NIST SP 800-53r5
+SI-10(1)::b::ODP1,SI-10(1)::b,ControlItem,[Assignment: organization-defined authorized individuals],NIST SP 800-53r5
+SI-10(2)::ODP1,SI-10(2),ControlEnhancement,[Assignment: organization-defined time period],NIST SP 800-53r5
+SI-10(5)::ODP1,SI-10(5),ControlEnhancement,[Assignment: organization-defined trusted sources],NIST SP 800-53r5
+SI-10(5)::ODP2,SI-10(5),ControlEnhancement,[Assignment: organization-defined formats],NIST SP 800-53r5
+SI-11::b::ODP1,SI-11::b,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SI-12(1)::ODP1,SI-12(1),ControlEnhancement,[Assignment: organization-defined elements of personally identifiable information],NIST SP 800-53r5
+SI-12(2)::ODP1,SI-12(2),ControlEnhancement,[Assignment: organization-defined techniques],NIST SP 800-53r5
+SI-12(3)::ODP1,SI-12(3),ControlEnhancement,[Assignment: organization-defined techniques],NIST SP 800-53r5
+SI-13::a::ODP1,SI-13::a,ControlItem,[Assignment: organization-defined system components],NIST SP 800-53r5
+SI-13::b::ODP1,SI-13::b,ControlItem,[Assignment: organization-defined MTTF substitution criteria],NIST SP 800-53r5
+SI-13(1)::ODP1,SI-13(1),ControlEnhancement,[Assignment: organization-defined fraction or percentage],NIST SP 800-53r5
+SI-13(3)::ODP1,SI-13(3),ControlEnhancement,[Assignment: organization-defined percentage],NIST SP 800-53r5
+SI-13(4)::a::ODP1,SI-13(4)::a,ControlItem,[Assignment: organization-defined time period],NIST SP 800-53r5
+SI-13(4)::b::ODP1,SI-13(4)::b,ControlItem,[Selection (one or more): Activate [Assignment: organization-defined alarm]; Automatically shut down the system; [Assignment: organization-defined action]],NIST SP 800-53r5
+SI-13(5)::ODP1,SI-13(5),ControlEnhancement,[Selection: real-time; near real-time],NIST SP 800-53r5
+SI-13(5)::ODP2,SI-13(5),ControlEnhancement,[Assignment: organization-defined failover capability],NIST SP 800-53r5
+SI-14::ODP1,SI-14,Control,[Assignment: organization-defined system components and services],NIST SP 800-53r5
+SI-14::ODP2,SI-14,Control,[Selection (one or more): upon end of session of use; periodically at [Assignment: organization-defined frequency]],NIST SP 800-53r5
+SI-14(1)::ODP1,SI-14(1),ControlEnhancement,[Assignment: organization-defined trusted sources],NIST SP 800-53r5
+SI-14(2)::a::ODP1,SI-14(2)::a,ControlItem,[Selection: Refresh [Assignment: organization-defined information] [Assignment: organization-defined frequency]; Generate [Assignment: organization-defined information] on demand],NIST SP 800-53r5
+SI-14(3)::ODP1,SI-14(3),ControlEnhancement,[Selection: completion of a request; a period of non-use],NIST SP 800-53r5
+SI-15::ODP1,SI-15,Control,[Assignment: organization-defined software programs and/or applications],NIST SP 800-53r5
+SI-16::ODP1,SI-16,Control,[Assignment: organization-defined controls],NIST SP 800-53r5
+SI-17::ODP1,SI-17,Control,[Assignment: organization-defined list of failure conditions and associated fail-safe procedures],NIST SP 800-53r5
+SI-18::a::ODP1,SI-18::a,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-18(1)::ODP1,SI-18(1),ControlEnhancement,[Assignment: organization-defined automated mechanisms],NIST SP 800-53r5
+SI-18(5)::ODP1,SI-18(5),ControlEnhancement,[Assignment: organization-defined recipients of personally identifiable information],NIST SP 800-53r5
+SI-19::a::ODP1,SI-19::a,ControlItem,[Assignment: organization-defined elements of personally identifiable information],NIST SP 800-53r5
+SI-19::b::ODP1,SI-19::b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SI-20::ODP1,SI-20,Control,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SI-21::ODP1,SI-21,Control,[Assignment: organization-defined information],NIST SP 800-53r5
+SI-21::ODP2,SI-21,Control,[Assignment: organization-defined frequencies],NIST SP 800-53r5
+SI-22::a::ODP1,SI-22::a,ControlItem,[Assignment: organization-defined essential functions and services],NIST SP 800-53r5
+SI-22::a::ODP2,SI-22::a,ControlItem,[Assignment: organization-defined alternative information sources],NIST SP 800-53r5
+SI-22::b::ODP1,SI-22::b,ControlItem,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SI-23::ODP1,SI-23,Control,[Assignment: organization-defined circumstances],NIST SP 800-53r5
+SI-23::a::ODP1,SI-23::a,ControlItem,[Assignment: organization-defined information],NIST SP 800-53r5
+SR-1::a::ODP1,SR-1::a,ControlItem,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SR-1::a.1::ODP1,SR-1::a.1,ControlItem,[Selection (one or more): Organization-level; Mission/business process-level; System-level],NIST SP 800-53r5
+SR-1::b::ODP1,SR-1::b,ControlItem,[Assignment: organization-defined official],NIST SP 800-53r5
+SR-1::c.1::ODP1,SR-1::c.1,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SR-1::c.1::ODP2,SR-1::c.1,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SR-1::c.2::ODP1,SR-1::c.2,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SR-1::c.2::ODP2,SR-1::c.2,ControlItem,[Assignment: organization-defined events],NIST SP 800-53r5
+SR-2::a::ODP1,SR-2::a,ControlItem,"[Assignment: organization-defined systems, system components, or system services]",NIST SP 800-53r5
+SR-2::b::ODP1,SR-2::b,ControlItem,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SR-2(1)::ODP1,SR-2(1),ControlEnhancement,"[Assignment: organization-defined personnel, roles, and responsibilities]",NIST SP 800-53r5
+SR-2(1)::ODP2,SR-2(1),ControlEnhancement,[Assignment: organization-defined supply chain risk management activities],NIST SP 800-53r5
+SR-3::a::ODP1,SR-3::a,ControlItem,[Assignment: organization-defined system or system component],NIST SP 800-53r5
+SR-3::a::ODP2,SR-3::a,ControlItem,[Assignment: organization-defined supply chain personnel],NIST SP 800-53r5
+SR-3::b::ODP1,SR-3::b,ControlItem,[Assignment: organization-defined supply chain controls],NIST SP 800-53r5
+SR-3::c::ODP1,SR-3::c,ControlItem,[Selection: security and privacy plans; supply chain risk management plan; [Assignment: organization-defined document]],NIST SP 800-53r5
+SR-3(1)::ODP1,SR-3(1),ControlEnhancement,[Assignment: organization-defined system components and services],NIST SP 800-53r5
+SR-3(2)::ODP1,SR-3(2),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+SR-4::ODP1,SR-4,Control,"[Assignment: organization-defined systems, system components, and associated data]",NIST SP 800-53r5
+SR-4(1)::ODP1,SR-4(1),ControlEnhancement,"[Assignment: organization-defined supply chain elements, processes, and personnel associated with organization-defined systems and critical system components]",NIST SP 800-53r5
+SR-4(2)::ODP1,SR-4(2),ControlEnhancement,[Assignment: organization-defined systems and critical system components],NIST SP 800-53r5
+SR-4(3)::ODP1,SR-4(3),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+SR-4(4)::ODP1,SR-4(4),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+SR-4(4)::ODP2,SR-4(4),ControlEnhancement,[Assignment: organization-defined analysis],NIST SP 800-53r5
+SR-5::ODP1,SR-5,Control,"[Assignment: organization-defined acquisition strategies, contract tools, and procurement methods]",NIST SP 800-53r5
+SR-5(1)::ODP1,SR-5(1),ControlEnhancement,[Assignment: organization-defined critical system components],NIST SP 800-53r5
+SR-5(1)::ODP2,SR-5(1),ControlEnhancement,[Assignment: organization-defined controls],NIST SP 800-53r5
+SR-6::ODP1,SR-6,Control,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SR-6(1)::ODP1,SR-6(1),ControlEnhancement,[Selection (one or more): organizational analysis; independent third-party analysis; organizational testing; independent third-party testing],NIST SP 800-53r5
+SR-6(1)::ODP2,SR-6(1),ControlEnhancement,"[Assignment: organization-defined supply chain elements, processes, and actors]",NIST SP 800-53r5
+SR-7::ODP1,SR-7,Control,[Assignment: organization-defined Operations Security (OPSEC) controls],NIST SP 800-53r5
+SR-8::ODP1,SR-8,Control,[Selection (one or more): notification of supply chain compromises; results of assessments or audits; [Assignment: organization-defined information]],NIST SP 800-53r5
+SR-10::ODP1,SR-10,Control,"[Selection (one or more): at random; at [Assignment: organization-defined frequency], upon [Assignment: organization-defined indications of need for inspection]]",NIST SP 800-53r5
+SR-10::ODP2,SR-10,Control,[Assignment: organization-defined systems or system components],NIST SP 800-53r5
+SR-11::b::ODP1,SR-11::b,ControlItem,[Selection (one or more): source of counterfeit component; [Assignment: organization-defined external reporting organizations]; [Assignment: organization-defined personnel or roles]],NIST SP 800-53r5
+SR-11(1)::ODP1,SR-11(1),ControlEnhancement,[Assignment: organization-defined personnel or roles],NIST SP 800-53r5
+SR-11(2)::ODP1,SR-11(2),ControlEnhancement,[Assignment: organization-defined system components],NIST SP 800-53r5
+SR-11(3)::ODP1,SR-11(3),ControlEnhancement,[Assignment: organization-defined frequency],NIST SP 800-53r5
+SR-12::ODP1,SR-12,Control,"[Assignment: organization-defined data, documentation, tools, or system components]",NIST SP 800-53r5
+SR-12::ODP2,SR-12,Control,[Assignment: organization-defined techniques and methods],NIST SP 800-53r5

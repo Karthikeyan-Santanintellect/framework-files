@@ -1,0 +1,10 @@
+source_id,target_id,rel_type,quote
+prov_2_3,form_1,PRESCRIBES_FORM,on a form substantially similar to Form 1
+prov_3_4,form_2,PRESCRIBES_FORM,on a form which is substantially similar to Form 2
+prov_5_2,form_3,PRESCRIBES_FORM,amending Form 3 of the Regulations.
+prov_6_1,form_4,PRESCRIBES_FORM,on a form substantially similar to Form 4
+prov_7_2_1,form_5,PRESCRIBES_FORM,an online complaint Form 5 available on the website of the Regulator
+prov_7_2_2,form_5,PRESCRIBES_FORM,"the complaint form, Form 5 which shall be made available at the offices of the Regulator"
+amd_12,form_17,DELETES_FORM,"Deletion of Form 17, 18 and 19"
+amd_12,form_18,DELETES_FORM,"Deletion of Form 17, 18 and 19"
+amd_12,form_19,DELETES_FORM,"Deletion of Form 17, 18 and 19"

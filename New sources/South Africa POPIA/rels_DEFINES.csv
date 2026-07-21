@@ -1,0 +1,7 @@
+source_id,target_id,rel_type
+prov_1_1,def_complainant,DEFINES
+prov_1_1,def_complaint,DEFINES
+prov_1_2,def_day,DEFINES
+prov_1_3,def_office_hours,DEFINES
+prov_1_3,def_relevant_body,DEFINES
+prov_1_4,def_writing,DEFINES

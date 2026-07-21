@@ -1,0 +1,5 @@
+implementationphase_id,name,text,start,source_document
+PHASE-1,Phase One,"Commences on the Effective Date. As applicable, DoD solicitations will require Level 1 or Level 2 self-assessments during this phase. DoD may also include Level 2 certification requirements at its discretion.","Effective Date (November 10, 2025)",COGR-CMMC-2.0-OVERVIEW-2025
+PHASE-2,Phase Two,"Begins 12 months after the start of Phase One (November 2026). In addition to Phase One requirements, solicitations will require Level 2 certification, as applicable.",November 2026,COGR-CMMC-2.0-OVERVIEW-2025
+PHASE-3,Phase Three,"Begins 24 months after the start of Phase One (November 2027). Level 3 certification will be added to solicitation requirements, as applicable.",November 2027,COGR-CMMC-2.0-OVERVIEW-2025
+PHASE-4,Phase Four,"Thirty-six months after the start of Phase One (November 2028), all solicitations and contracts will include appropriate CMMC Level requirements as a condition of contract award.",November 2028,COGR-CMMC-2.0-OVERVIEW-2025

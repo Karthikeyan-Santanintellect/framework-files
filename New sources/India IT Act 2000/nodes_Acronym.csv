@@ -1,0 +1,18 @@
+acronym_id,schedule_id,acronym,expansion,source_document
+ACR-ARL,SCH-V,ARL,Authority Revocation List,KB 2/India/Information Technology Act 2000.pdf
+ACR-CA,SCH-V,CA,Certification Authority,KB 2/India/Information Technology Act 2000.pdf
+ACR-CP,SCH-V,CP,Certificate Policy,KB 2/India/Information Technology Act 2000.pdf
+ACR-CPS,SCH-V,CPS,Certification Practice Statement,KB 2/India/Information Technology Act 2000.pdf
+ACR-CRL,SCH-V,CRL,Certificate Revocation List,KB 2/India/Information Technology Act 2000.pdf
+ACR-CSR,SCH-V,CSR,Certificate Signing Request,KB 2/India/Information Technology Act 2000.pdf
+ACR-DN,SCH-V,DN,Distinguished Name,KB 2/India/Information Technology Act 2000.pdf
+ACR-E-MAIL,SCH-V,e-mail,Electronic Mail,KB 2/India/Information Technology Act 2000.pdf
+ACR-FTP,SCH-V,FTP,File Transfer Protocol,KB 2/India/Information Technology Act 2000.pdf
+ACR-ISDN,SCH-V,ISDN,Integrated Service Digital Network,KB 2/India/Information Technology Act 2000.pdf
+ACR-ITU,SCH-V,ITU,International Telecommunications Union,KB 2/India/Information Technology Act 2000.pdf
+ACR-LAN,SCH-V,LAN,Local Area Network,KB 2/India/Information Technology Act 2000.pdf
+ACR-PIN,SCH-V,PIN,Personal Identification Number,KB 2/India/Information Technology Act 2000.pdf
+ACR-PKI,SCH-V,PKI,Public Key Infrastructure,KB 2/India/Information Technology Act 2000.pdf
+ACR-PKIX,SCH-V,PKIX,Public Key Infrastructure X.509,KB 2/India/Information Technology Act 2000.pdf
+ACR-URL,SCH-V,URL,Uniform Resource Locator,KB 2/India/Information Technology Act 2000.pdf
+ACR-WAN,SCH-V,WAN,Wide Area Network,KB 2/India/Information Technology Act 2000.pdf

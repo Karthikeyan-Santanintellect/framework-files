@@ -1,0 +1,11 @@
+ig_domain_id,name,ig_function_id,function,related_csf_2_0_categories,source_document
+IGDOM-01,Cybersecurity Governance,IGFUNC-GOVERN,Govern,"Organizational Context (GV.OC); Risk Management Strategy (GV.RM); Roles, Responsibilities, and Authorities (GV.RR); Policy (GV.PO); and Oversight (GV.OV)",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-02,Cybersecurity Supply Chain Risk Management,IGFUNC-GOVERN,Govern,Cybersecurity Supply Chain Risk Management (GV.SC),USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-03,Risk and Asset Management [RAM],IGFUNC-IDENTIFY,Identify,"Asset Management (ID.AM), Risk Assessment (ID.RA), and Risk Management Strategy (ID.RM)",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-04,Configuration Management,IGFUNC-PROTECT,Protect,Technology Infrastructure Resilience (PR.IR),USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-05,Identity and Access Management [IDAM],IGFUNC-PROTECT,Protect,"Identity Management, Authentication, and Access Control (PR.AA)",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-06,Data Protection and Privacy,IGFUNC-PROTECT,Protect,Data Security (PR.DS) and Platform Security (PR.PS),USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-07,Security Training,IGFUNC-PROTECT,Protect,Awareness and Training (PR.AT),USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-08,Information Security Continuous Monitoring,IGFUNC-DETECT,Detect,Continuous Monitoring (DE.CM) and Adverse Event Analysis (DE.AE),USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-09,Incident Response,IGFUNC-RESPOND,Respond,"Incident Management (RS.MA), Incident Analysis (RS.AN), Incident Response Reporting and Communication (RS.CO), and Incident Mitigation (RS.MI)",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+IGDOM-10,Contingency Planning,IGFUNC-RECOVER,Recover,Incident Recovery Plan Execution (RC.RP) and Incident Recovery Communication (RC.CO),USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt

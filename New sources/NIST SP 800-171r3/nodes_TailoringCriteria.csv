@@ -1,0 +1,6 @@
+tailoringcriteria_id,symbol,criteria,source_document
+tc_NCO,NCO,The control is not directly related to protecting the confidentiality of CUI.,"NIST SP 800-171r3, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (May 2024) — KB 2/USA/NIST.SP.800-171r3.pdf"
+tc_FED,FED,The control is primarily the responsibility of the Federal Government.,"NIST SP 800-171r3, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (May 2024) — KB 2/USA/NIST.SP.800-171r3.pdf"
+tc_ORC,ORC,The outcome of the control related to protecting the confidentiality of CUI is adequately covered by other related controls.,"NIST SP 800-171r3, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (May 2024) — KB 2/USA/NIST.SP.800-171r3.pdf"
+tc_NA,N/A,The control is not applicable.,"NIST SP 800-171r3, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (May 2024) — KB 2/USA/NIST.SP.800-171r3.pdf"
+tc_CUI,CUI,The control is directly related to protecting the confidentiality of CUI.,"NIST SP 800-171r3, Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (May 2024) — KB 2/USA/NIST.SP.800-171r3.pdf"

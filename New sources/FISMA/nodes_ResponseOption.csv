@@ -1,0 +1,246 @@
+response_option_id,instrument_id,parent_id,text,source_document
+OPT-CIO-001,CIO-FY25,CIO-1.5,[Source: FedRAMP] Bureau: the agency’s bureau / subcomponent that authorized,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-002,CIO-FY25,CIO-1.5,[Source: FedRAMP] FedRAMP Package ID: the ID assigned by the FedRAMP,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-003,CIO-FY25,CIO-1.5,[Source: FedRAMP] Cloud Services Provider: the name of the third-party company,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-004,CIO-FY25,CIO-1.5,[Source: FedRAMP] Cloud Services Offering: the specific offering of the cloud,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-005,CIO-FY25,CIO-1.5,[Source: FedRAMP] FedRAMP Status: the cloud service’s current authorization,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-006,CIO-FY25,CIO-1.5,ATO Date (Agency): the issuance date of the agency’s ATO for the cloud service.,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-007,CIO-FY25,CIO-1.5,ATO Expiration Date (Agency): the expiration date of the agency’s ATO for the,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-008,CIO-FY25,CIO-1.5,"[Source: FedRAMP] ATO Issuance Date (FedRAMP): the date the ATO was signed,",USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-009,CIO-FY25,CIO-1.5,"[Source: FedRAMP] ATO Expiration Date (FedRAMP): the date the ATO expires,",USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-010,CIO-FY25,CIO-1.5,[Source: FedRAMP] FedRAMP Authorization Date: the date when the cloud,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-011,CIO-FY25,CIO-1.5,[Source: FedRAMP] FedRAMP Annual Assessment Date: the date when the,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-012,CIO-FY25,CIO-1.5,[Source: FedRAMP] Service Type: (Categorical) the category at which the,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-013,CIO-FY25,CIO-1.5,[Source: FedRAMP] Service Model Type: (Categorical) Platform as a Service,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-014,CIO-FY25,CIO-1.5,[Source: FedRAMP] ATO on File: (Yes or No) whether the cloud service has an,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-015,CIO-FY25,CIO-1.5,Decommission?: (Yes or No) whether the pre-populated cloud service is no longer,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-016,CIO-FY25,CIO-3.1,Tier EL0 Not effective - Logging requirements focused on highest criticality are,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-017,CIO-FY25,CIO-3.1,Tier EL1 Basic - Logging requirements only focused on highest criticality,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-018,CIO-FY25,CIO-3.1,Tier EL2 Intermediate - Logging requirements focused on highest and,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-019,CIO-FY25,CIO-3.1,Tier EL3 Advanced - Logging requirements at all criticality levels are performed,USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-020,CIO-FY25,CIO-9.1,"Established, with all federal information systems in scope",USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-021,CIO-FY25,CIO-9.1,"Established, with all internet-accessible systems in scope",USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-022,CIO-FY25,CIO-9.1,"Established, with incomplete scope or other issues (provide clarification in text)",USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-023,CIO-FY25,CIO-9.1,"Not established, in progress (provide estimated date of establishment)",USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-CIO-024,CIO-FY25,CIO-9.1,No current plans to establish a VDP (provide a detailed rationale),USA_FISMA_FY25_FISMA_CIO_Metrics_v1_1.txt
+OPT-SAOP-001,SAOP-FY25,SAOP-1a,"Yes – for the duration of the reporting period, the agency had an SAOP designated by the head of the agency",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-002,SAOP-FY25,SAOP-1a,"No – during the reporting period, there was a period in which there was no SAOP designated by the head of the agency (if selected, please explain in the text box, including the amount of time without such an SAOP)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-003,SAOP-FY25,SAOP-1b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-004,SAOP-FY25,SAOP-1b,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-005,SAOP-FY25,SAOP-1b,Not applicable – there was no SAOP designated by the head of the agency,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-006,SAOP-FY25,SAOP-1c,Position,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-007,SAOP-FY25,SAOP-1c,Expertise,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-008,SAOP-FY25,SAOP-1c,Authority,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-009,SAOP-FY25,SAOP-1c,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-010,SAOP-FY25,SAOP-1c,Not applicable – there was no SAOP designated by the head of the agency,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-011,SAOP-FY25,SAOP-1d,Policy making,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-012,SAOP-FY25,SAOP-1d,Compliance,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-013,SAOP-FY25,SAOP-1d,Risk management,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-014,SAOP-FY25,SAOP-1d,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-015,SAOP-FY25,SAOP-1d,Not applicable – there was no SAOP designated by the head of the agency,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-016,SAOP-FY25,SAOP-1e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-017,SAOP-FY25,SAOP-1e,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-018,SAOP-FY25,SAOP-1f,Structure of the privacy program,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-019,SAOP-FY25,SAOP-1f,Resources dedicated to the privacy program,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-020,SAOP-FY25,SAOP-1f,Role of the SAOP and other privacy officials and staff,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-021,SAOP-FY25,SAOP-1f,Strategic goals and objectives of the privacy program,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-022,SAOP-FY25,SAOP-1f,Program management controls and common controls in place or planned for meeting applicable privacy requirements and managing privacy risks,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-023,SAOP-FY25,SAOP-1f,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-024,SAOP-FY25,SAOP-1f,Not applicable – the agency did not have a privacy program plan,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-025,SAOP-FY25,SAOP-2a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-026,SAOP-FY25,SAOP-2a,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-027,SAOP-FY25,SAOP-3a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-028,SAOP-FY25,SAOP-3a,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-029,SAOP-FY25,SAOP-3d,"A requirement for PIAs to be conducted and approved prior to the development, procurement, or use of an IT system that requires a PIA 23",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-030,SAOP-FY25,SAOP-3d,"A requirement that system owners, privacy officials, and IT experts participate in conducting PIAs 24",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-031,SAOP-FY25,SAOP-3d,"A requirement for PIAs to be updated whenever a change to an IT system, a change in agency practices, or another factor alters the privacy risks associated with the use of a particular IT system 25",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-032,SAOP-FY25,SAOP-3d,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-033,SAOP-FY25,SAOP-3d,Not applicable – the agency did not have a written policy for PIAs,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-034,SAOP-FY25,SAOP-3e,Assessing the quality and thoroughness of each PIA,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-035,SAOP-FY25,SAOP-3e,Performing reviews to ensure that appropriate standards for PIAs are maintained 26,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-036,SAOP-FY25,SAOP-3e,Monitoring the agency’s IT systems and practices to determine when and how PIAs should be updated 27,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-037,SAOP-FY25,SAOP-3e,"Ensuring that PIAs are updated whenever a change to an IT system, a change in agency practices, or another factor alters the privacy risks 28",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-038,SAOP-FY25,SAOP-3e,"None of the above (if selected, please explain in the text box) 6",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-039,SAOP-FY25,SAOP-4c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-040,SAOP-FY25,SAOP-4c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-041,SAOP-FY25,SAOP-4d,"Ensuring that information collections include a Privacy Act Statement, if required 32",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-042,SAOP-FY25,SAOP-4d,"Receiving, processing, and responding to individuals’ requests for access to and amendment of records in a system of records 33",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-043,SAOP-FY25,SAOP-4d,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-044,SAOP-FY25,SAOP-4e,Systems of records include only information about an individual that is relevant and necessary to accomplish a purpose required by statute or executive order 34,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-045,SAOP-FY25,SAOP-4e,"SORNs remain accurate, up-to-date, and appropriately scoped 35",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-046,SAOP-FY25,SAOP-4e,SORNs are published in the Federal Register 36,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-047,SAOP-FY25,SAOP-4e,"SORNs include the information, and are drafted in the format, required by OMB Circular No. A-108 37",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-048,SAOP-FY25,SAOP-4e,Significant changes to SORNs have been reported to OMB and Congress 38,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-049,SAOP-FY25,SAOP-4e,Routine uses remain appropriate and the recipient’s use of the records continues to be 7 compatible with the purpose for which the information was collected 39,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-050,SAOP-FY25,SAOP-4e,Each exemption claimed for a system of records pursuant to 5 U.S.C. § 552a(j) and (k) remains appropriate and necessary 40,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-051,SAOP-FY25,SAOP-4e,"The language of each contract that involves the creation, collection, use, processing, storage, maintenance, dissemination, disclosure, or disposal of information that identifies and is about individuals, is sufficient and the applicable requirements in the Privacy Act and OMB policies are enforceable on the contractor and its employees 41",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-052,SAOP-FY25,SAOP-4e,"The agency’s training practices are sufficient to allow agency personnel to understand the requirements of the Privacy Act, OMB guidance, the agency’s implementing regulations and policies, and any job-specific requirements 42",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-053,SAOP-FY25,SAOP-4e,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-054,SAOP-FY25,SAOP-4e,Not applicable – the agency did not maintain any Privacy Act systems of records during the reporting period,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-055,SAOP-FY25,SAOP-5a,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-056,SAOP-FY25,SAOP-5a,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-057,SAOP-FY25,SAOP-5a,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-058,SAOP-FY25,SAOP-5a,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-059,SAOP-FY25,SAOP-5b,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-060,SAOP-FY25,SAOP-5b,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-061,SAOP-FY25,SAOP-5b,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-062,SAOP-FY25,SAOP-5b,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current 8",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-063,SAOP-FY25,SAOP-6a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-064,SAOP-FY25,SAOP-6a,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-065,SAOP-FY25,SAOP-6a,"Not applicable – the agency has not collected, maintained, or used SSNs",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-066,SAOP-FY25,SAOP-6b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-067,SAOP-FY25,SAOP-6b,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-068,SAOP-FY25,SAOP-6b,"Not applicable – the agency has not done one or more of the following: (1) collected, maintained, or used SSNs; (2) maintained the inventory of its collection, maintenance, and use of SSNs referenced in question 6a; or (3) maintained the inventory of information systems referenced in question 2a",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-069,SAOP-FY25,SAOP-6c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-070,SAOP-FY25,SAOP-6c,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-071,SAOP-FY25,SAOP-6d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-072,SAOP-FY25,SAOP-6d,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-073,SAOP-FY25,SAOP-6d,Not applicable – the agency did not have the written policy referenced in question 6c,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-074,SAOP-FY25,SAOP-6e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-075,SAOP-FY25,SAOP-6e,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-076,SAOP-FY25,SAOP-6e,Not applicable – the agency did not have the written policy referenced in question 6c,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-077,SAOP-FY25,SAOP-6f,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-078,SAOP-FY25,SAOP-6f,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-079,SAOP-FY25,SAOP-6f,"Not applicable – (1) the agency did not collect, maintain, or use SSNs during the reporting period, and/or (2) the agency had already eliminated all unnecessary collection, maintenance, and use of SSNs by the agency before the reporting period 9",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-080,SAOP-FY25,SAOP-7a,The agency’s public websites,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-081,SAOP-FY25,SAOP-7a,"The agency’s public applications (e.g., mobile applications, web applications)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-082,SAOP-FY25,SAOP-7a,The agency’s public social media accounts,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-083,SAOP-FY25,SAOP-7a,Other public-facing digital services used by the agency,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-084,SAOP-FY25,SAOP-7a,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-085,SAOP-FY25,SAOP-7b,The agency’s public websites,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-086,SAOP-FY25,SAOP-7b,"The agency’s public applications (e.g., mobile applications, web applications)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-087,SAOP-FY25,SAOP-7b,The agency’s public social media pages and profiles,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-088,SAOP-FY25,SAOP-7b,Other public-facing digital services used by the agency,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-089,SAOP-FY25,SAOP-7b,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-090,SAOP-FY25,SAOP-7c,The agency’s public websites,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-091,SAOP-FY25,SAOP-7c,"The agency’s public applications (e.g., mobile applications, web applications)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-092,SAOP-FY25,SAOP-7c,Other public-facing digital services used by the agency,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-093,SAOP-FY25,SAOP-7c,"None of the above (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-094,SAOP-FY25,SAOP-7d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-095,SAOP-FY25,SAOP-7d,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-096,SAOP-FY25,SAOP-7d,Not applicable – the agency did not use social media,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-097,SAOP-FY25,SAOP-7e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-098,SAOP-FY25,SAOP-7e,No,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-099,SAOP-FY25,SAOP-7f,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-100,SAOP-FY25,SAOP-7f,"No (if selected, please explain in the text box) 10",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-101,SAOP-FY25,SAOP-7f,Not applicable – the agency did not use web measurement and customization technologies on any website or mobile application,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-102,SAOP-FY25,SAOP-8a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-103,SAOP-FY25,SAOP-8a,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-104,SAOP-FY25,SAOP-8b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-105,SAOP-FY25,SAOP-8b,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-106,SAOP-FY25,SAOP-8c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-107,SAOP-FY25,SAOP-8c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-108,SAOP-FY25,SAOP-8d,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-109,SAOP-FY25,SAOP-8d,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-110,SAOP-FY25,SAOP-8d,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-111,SAOP-FY25,SAOP-8d,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-112,SAOP-FY25,SAOP-8e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-113,SAOP-FY25,SAOP-8e,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-114,SAOP-FY25,SAOP-8f,"to create, collect, use, process, store, maintain, disseminate, disclose, or dispose of PII that",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-115,SAOP-FY25,SAOP-8f,were reported to the SAOP because they could not be appropriately protected or secured?,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-116,SAOP-FY25,SAOP-9a,"agreements involving the creation, collection, use, processing, storage, maintenance,",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-117,SAOP-FY25,SAOP-9a,"dissemination, disclosure, and disposal of Federal information incorporated privacy",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-118,SAOP-FY25,SAOP-9a,requirements and were sufficient to enable agencies to meet Federal and agency-specific,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-119,SAOP-FY25,SAOP-9a,requirements pertaining to the protection of Federal information? 55 (Select one of the,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-120,SAOP-FY25,SAOP-9a,following.),USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-121,SAOP-FY25,SAOP-9a,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-122,SAOP-FY25,SAOP-9a,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-123,SAOP-FY25,SAOP-9a,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-124,SAOP-FY25,SAOP-9a,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-125,SAOP-FY25,SAOP-9b,requirements of the Privacy Act applied to a Privacy Act system of records when a contractor,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-126,SAOP-FY25,SAOP-9b,operated the system of records on behalf of the agency to accomplish an agency function? 56,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-127,SAOP-FY25,SAOP-9b,(Select one of the following.),USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-128,SAOP-FY25,SAOP-9b,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-129,SAOP-FY25,SAOP-9b,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-130,SAOP-FY25,SAOP-9b,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-131,SAOP-FY25,SAOP-9b,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-132,SAOP-FY25,SAOP-9c,contractors and others with access to information systems containing Federal information? 57,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-133,SAOP-FY25,SAOP-9c,(Select one of the following.),USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-134,SAOP-FY25,SAOP-9c,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-135,SAOP-FY25,SAOP-9c,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-136,SAOP-FY25,SAOP-9c,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-137,SAOP-FY25,SAOP-9c,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current 12",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-138,SAOP-FY25,SAOP-9d,for all contractors? 58,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-139,SAOP-FY25,SAOP-9d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-140,SAOP-FY25,SAOP-9d,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-141,SAOP-FY25,SAOP-9e,"of behavior, for contractors that have access to Federal information or information systems,",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-142,SAOP-FY25,SAOP-9e,"including those that create, collect, use, process, store, maintain, disseminate, disclose, or",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-143,SAOP-FY25,SAOP-9e,dispose of PII? 59,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-144,SAOP-FY25,SAOP-9e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-145,SAOP-FY25,SAOP-9e,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-146,SAOP-FY25,SAOP-9f,referenced in question 9e prior to being granted access? 60,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-147,SAOP-FY25,SAOP-9f,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-148,SAOP-FY25,SAOP-9f,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-149,SAOP-FY25,SAOP-9f,Not applicable – the agency did not have such rules of behavior,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-150,SAOP-FY25,SAOP-10a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-151,SAOP-FY25,SAOP-10a,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-152,SAOP-FY25,SAOP-10b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-153,SAOP-FY25,SAOP-10b,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-154,SAOP-FY25,SAOP-10c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-155,SAOP-FY25,SAOP-10c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-156,SAOP-FY25,SAOP-10d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-157,SAOP-FY25,SAOP-10d,"No (if selected, please explain in the text box) 13",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-158,SAOP-FY25,SAOP-11a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-159,SAOP-FY25,SAOP-11a,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-160,SAOP-FY25,SAOP-11c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-161,SAOP-FY25,SAOP-11c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-162,SAOP-FY25,SAOP-11e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-163,SAOP-FY25,SAOP-11e,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-164,SAOP-FY25,SAOP-11f,with agency-wide privacy requirements and policies? 69 (Select one of the following.),USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-165,SAOP-FY25,SAOP-11f,"Processes did not exist (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-166,SAOP-FY25,SAOP-11f,"Processes existed; however, they were not fully documented and/or did not cover all relevant aspects",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-167,SAOP-FY25,SAOP-11f,Processes were fully documented and implemented and covered all relevant aspects,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-168,SAOP-FY25,SAOP-11f,"Processes were fully documented and implemented and covered all relevant aspects, and reviews were regularly conducted to assess the effectiveness of the processes and to ensure that documented policies remain current",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-169,SAOP-FY25,SAOP-11g,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-170,SAOP-FY25,SAOP-11g,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-171,SAOP-FY25,SAOP-11h,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-172,SAOP-FY25,SAOP-11h,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-173,SAOP-FY25,SAOP-11h,Not applicable – the agency did not have such rules of behavior,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-174,SAOP-FY25,SAOP-12a,explain in the text box),USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-175,SAOP-FY25,SAOP-12b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-176,SAOP-FY25,SAOP-12b,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-177,SAOP-FY25,SAOP-12b,Not applicable – the agency did not have a breach response plan,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-178,SAOP-FY25,SAOP-12c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-179,SAOP-FY25,SAOP-12c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-180,SAOP-FY25,SAOP-12d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-181,SAOP-FY25,SAOP-12d,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-182,SAOP-FY25,SAOP-12d,Not applicable – the agency did not have such a breach response team,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-183,SAOP-FY25,SAOP-12e,agency during the reporting period? 76,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-184,SAOP-FY25,SAOP-13a,"selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-185,SAOP-FY25,SAOP-13b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-186,SAOP-FY25,SAOP-13b,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-187,SAOP-FY25,SAOP-13c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-188,SAOP-FY25,SAOP-13c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-189,SAOP-FY25,SAOP-13d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-190,SAOP-FY25,SAOP-13d,"No (if selected, please explain in the text box) 16",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-191,SAOP-FY25,SAOP-14a,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-192,SAOP-FY25,SAOP-14a,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-193,SAOP-FY25,SAOP-14b,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-194,SAOP-FY25,SAOP-14b,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-195,SAOP-FY25,SAOP-14b,Not applicable – the agency did not maintain any Privacy Act systems of records,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-196,SAOP-FY25,SAOP-14c,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-197,SAOP-FY25,SAOP-14c,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-198,SAOP-FY25,SAOP-14c,"Not applicable – the agency did not maintain, operate, or use any IT systems that required a PIA",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-199,SAOP-FY25,SAOP-14d,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-200,SAOP-FY25,SAOP-14d,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-201,SAOP-FY25,SAOP-14d,Not applicable – the agency did not participate in any matching programs,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-202,SAOP-FY25,SAOP-14e,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-203,SAOP-FY25,SAOP-14e,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-204,SAOP-FY25,SAOP-14e,Not applicable – the agency did not claim any Privacy Act exemptions for their systems of records,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-205,SAOP-FY25,SAOP-14f,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-206,SAOP-FY25,SAOP-14f,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-207,SAOP-FY25,SAOP-14f,Not applicable – the agency did not maintain any Privacy Act systems of records,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-208,SAOP-FY25,SAOP-14g,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-209,SAOP-FY25,SAOP-14g,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-210,SAOP-FY25,SAOP-14g,Not applicable – the agency did not have any publicly available agency policies on privacy,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-211,SAOP-FY25,SAOP-14h,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-212,SAOP-FY25,SAOP-14h,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-213,SAOP-FY25,SAOP-14h,Not applicable – the agency did not have any publicly available agency reports on privacy,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-214,SAOP-FY25,SAOP-14i,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-215,SAOP-FY25,SAOP-14i,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-216,SAOP-FY25,SAOP-14i,Not applicable – the agency did not maintain any Privacy Act systems of records,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-217,SAOP-FY25,SAOP-14j,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-218,SAOP-FY25,SAOP-14j,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-219,SAOP-FY25,SAOP-14k,Yes,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-220,SAOP-FY25,SAOP-14k,"No (if selected, please explain in the text box)",USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt
+OPT-SAOP-221,SAOP-FY25,SAOP-14k,Not applicable – there was no SAOP designated by the head of the agency 18,USA_FISMA_FY25_SAOP_FISMA_Metrics_508.txt

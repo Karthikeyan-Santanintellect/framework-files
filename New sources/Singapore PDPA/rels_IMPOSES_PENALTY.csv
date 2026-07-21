@@ -1,0 +1,24 @@
+source_id,target_id,rel_type,penalty_type
+s_56,pen_001,IMPOSES_PENALTY,criminal penalty
+s_42(2),pen_002,IMPOSES_PENALTY,criminal penalty
+s_48D(1),pen_003,IMPOSES_PENALTY,criminal penalty
+s_48E(1),pen_004,IMPOSES_PENALTY,criminal penalty
+s_48F(1),pen_005,IMPOSES_PENALTY,criminal penalty
+s_48J(3)(a),pen_006,IMPOSES_PENALTY,financial penalty
+s_48J(3)(b),pen_007,IMPOSES_PENALTY,financial penalty
+s_48J(4)(a),pen_008,IMPOSES_PENALTY,financial penalty
+s_48J(4)(b),pen_009,IMPOSES_PENALTY,financial penalty
+s_48J(4A)(a),pen_010,IMPOSES_PENALTY,financial penalty
+s_48J(4A)(b),pen_011,IMPOSES_PENALTY,financial penalty
+s_48J(4A)(c),pen_012,IMPOSES_PENALTY,financial penalty
+s_51(2),pen_013,IMPOSES_PENALTY,criminal penalty
+s_51(4)(a),pen_014,IMPOSES_PENALTY,criminal penalty
+s_51(4)(b),pen_015,IMPOSES_PENALTY,criminal penalty
+s_51(5)(a),pen_016,IMPOSES_PENALTY,criminal penalty
+s_51(5)(b),pen_017,IMPOSES_PENALTY,criminal penalty
+s_51(6)(a),pen_018,IMPOSES_PENALTY,criminal penalty
+s_51(6)(b),pen_019,IMPOSES_PENALTY,criminal penalty
+s_55(1),pen_020,IMPOSES_PENALTY,composition sum
+s_55(2),pen_021,IMPOSES_PENALTY,composition sum
+s_61(2),pen_022,IMPOSES_PENALTY,criminal penalty
+sch_7_para4(4),pen_023,IMPOSES_PENALTY,criminal penalty

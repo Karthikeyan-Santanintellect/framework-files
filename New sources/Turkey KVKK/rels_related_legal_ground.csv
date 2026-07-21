@@ -1,0 +1,5 @@
+source_id,target_id,rel_type,detail
+RIGHT-PORTABILITY,GROUND-CONSENT,RELATED_LEGAL_GROUND,"Consent, Performance of a contract, not applicable for public interest"
+RIGHT-PORTABILITY,GROUND-CONTRACT,RELATED_LEGAL_GROUND,"Consent, Performance of a contract, not applicable for public interest"
+RIGHT-OBJECT,GROUND-PUBLIC-INTEREST,RELATED_LEGAL_GROUND,"Public interest, Legitimate interest"
+RIGHT-OBJECT,GROUND-LEGITIMATE-INTEREST,RELATED_LEGAL_GROUND,"Public interest, Legitimate interest"

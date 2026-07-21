@@ -1,0 +1,15 @@
+source_id,target_id,rel_type,term
+SEC-B,DEF-APPLICANT,DEFINES,Applicant
+SEC-B,DEF-CLOUD-SERVICE,DEFINES,Cloud service
+SEC-B,DEF-CORPORATE-VPN,DEFINES,Corporate VPN
+SEC-B,DEF-DEVICES,DEFINES,Devices
+SEC-B,DEF-LICENSED-SUPPORTED,DEFINES,Licensed and supported software
+SEC-B,DEF-MFA,DEFINES,Multi-Factor Authentication (MFA)
+SEC-B,DEF-ORG-DATA,DEFINES,Organisational data
+SEC-B,DEF-ORG-SERVICE,DEFINES,Organisational service
+SEC-B,DEF-PASSWORDLESS,DEFINES,Passwordless authentication
+SEC-B,DEF-SCOPE,DEFINES,Scope
+SEC-B,DEF-SERVERS,DEFINES,Servers
+SEC-B,DEF-SOFTWARE,DEFINES,Software
+SEC-B,DEF-SUBSET,DEFINES,Sub-set
+SEC-B,DEF-VULN-FIXES,DEFINES,Vulnerability fixes

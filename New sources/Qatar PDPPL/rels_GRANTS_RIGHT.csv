@@ -1,0 +1,11 @@
+source_id,target_id,rel_type,right_name
+ART-3,RIGHT-PROTECTION,GRANTS_RIGHT,Right to the protection of the Personal Data thereof
+ART-5-1,RIGHT-WITHDRAW-CONSENT,GRANTS_RIGHT,Withdraw the prior consent thereof for Personal Data Processing
+ART-5-2,RIGHT-OBJECT,GRANTS_RIGHT,Object to processing the Personal Data thereof
+ART-5-3,RIGHT-ERASURE,GRANTS_RIGHT,Request omission or erasure of the Personal Data thereof
+ART-5-4,RIGHT-CORRECTION,GRANTS_RIGHT,Request corrections to the Personal Data thereof
+ART-6,RIGHT-ACCESS,GRANTS_RIGHT,Access the Personal Data thereof and apply to review the same
+ART-6-1,RIGHT-NOTIFIED-PROCESSING,GRANTS_RIGHT,Be notified of processing the Personal Data thereof
+ART-6-2,RIGHT-NOTIFIED-INACCURATE,GRANTS_RIGHT,Be notified of any disclosure of inaccurate Personal Data
+ART-6-3,RIGHT-COPY,GRANTS_RIGHT,Obtain a copy of the Personal Data thereof
+ART-26-P1,RIGHT-COMPLAINT,GRANTS_RIGHT,File a complaint to the Competent Department

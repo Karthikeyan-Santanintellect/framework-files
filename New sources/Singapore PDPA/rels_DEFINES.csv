@@ -1,0 +1,109 @@
+source_id,target_id,rel_type,term
+s_2(1),def_s_2__advisory_committee,DEFINES,advisory committee
+s_2(1),def_s_2__appeal_committee,DEFINES,Appeal Committee
+s_2(1),def_s_2__appeal_panel,DEFINES,Appeal Panel
+s_2(1),def_s_2__authorised_officer,DEFINES,authorised officer
+s_2(1),def_s_2__authority,DEFINES,Authority
+s_2(1),def_s_2__benefit_plan,DEFINES,benefit plan
+s_2(1),def_s_2__business,DEFINES,business
+s_2(1),def_s_2__business_contact_information,DEFINES,business contact information
+s_2(1),def_s_2__chief_executive,DEFINES,Chief Executive
+s_2(1),def_s_2__commission,DEFINES,Commission
+s_2(1),def_s_2__commissioner,DEFINES,Commissioner
+s_2(1),def_s_2__credit_bureau,DEFINES,credit bureau
+s_2(1),def_s_2__credit_report,DEFINES,credit report
+s_2(1),def_s_2__data_intermediary,DEFINES,data intermediary
+s_2(1),def_s_2__derived_personal_data,DEFINES,derived personal data
+s_2(1),def_s_2__document,DEFINES,document
+s_2(1),def_s_2__domestic,DEFINES,domestic
+s_2(1),def_s_2__education_institution,DEFINES,education institution
+s_2(1),def_s_2__employee,DEFINES,employee
+s_2(1),def_s_2__employment,DEFINES,employment
+s_2(1),def_s_2__evaluative_purpose,DEFINES,evaluative purpose
+s_2(1),def_s_2__individual,DEFINES,individual
+s_2(1),def_s_2__inspector,DEFINES,inspector
+s_2(1),def_s_2__investigation,DEFINES,investigation
+s_2(1),def_s_2__national_interest,DEFINES,national interest
+s_2(1),def_s_2__organisation,DEFINES,organisation
+s_2(1),def_s_2__personal_data,DEFINES,personal data
+s_2(1),def_s_2__prescribed_healthcare_body,DEFINES,prescribed healthcare body
+s_2(1),def_s_2__prescribed_law_enforcement_agency,DEFINES,prescribed law enforcement agency
+s_2(1),def_s_2__private_trust,DEFINES,private trust
+s_2(1),def_s_2__proceedings,DEFINES,proceedings
+s_2(1),def_s_2__processing,DEFINES,processing
+s_2(1),def_s_2__public_agency,DEFINES,public agency
+s_2(1),def_s_2__publicly_available,DEFINES,publicly available
+s_2(1),def_s_2__relevant_body,DEFINES,relevant body
+s_2(1),def_s_2__tribunal,DEFINES,tribunal
+s_2(1),def_s_2__user_activity_data,DEFINES,user activity data
+s_2(1),def_s_2__user_provided_data,DEFINES,user‑provided data
+s_10(5),def_s_10__foreign_data_protection_body,DEFINES,foreign data protection body
+s_10(5),def_s_10__regulatory_authority,DEFINES,regulatory authority
+s_26A,def_s_26A__affected_individual,DEFINES,affected individual
+s_26A,def_s_26A__data_breach,DEFINES,data breach
+s_36(1),def_s_36__calling_line_identity,DEFINES,calling line identity
+s_36(1),def_s_36__checker,DEFINES,checker
+s_36(1),def_s_36__financial_services,DEFINES,financial services
+s_36(1),def_s_36__goods,DEFINES,goods
+s_36(1),def_s_36__message,DEFINES,message
+s_36(1),def_s_36__register,DEFINES,register
+s_36(1),def_s_36__send,DEFINES,send
+s_36(1),def_s_36__sender,DEFINES,sender
+s_36(1),def_s_36__services,DEFINES,services
+s_36(1),def_s_36__singapore_telephone_number,DEFINES,Singapore telephone number
+s_36(1),def_s_36__subscriber,DEFINES,subscriber
+s_36(1),def_s_36__time_share_accommodation,DEFINES,time share accommodation
+s_36(1),def_s_36__time_share_contract,DEFINES,time share contract
+s_36(1),def_s_36__voice_call,DEFINES,voice call
+s_48(5),def_s_48__corporation,DEFINES,corporation
+s_48(5),def_s_48__officer,DEFINES,officer
+s_48(5),def_s_48__partner,DEFINES,partner
+s_48A(1),def_s_48A__address_harvesting_software,DEFINES,address‑harvesting software
+s_48A(1),def_s_48A__applicable_message,DEFINES,applicable message
+s_48A(1),def_s_48A__applicable_telephone_number,DEFINES,applicable telephone number
+s_48A(1),def_s_48A__dictionary_attack,DEFINES,dictionary attack
+s_48A(1),def_s_48A__message,DEFINES,message
+s_48B(4),def_s_48B__corporation,DEFINES,corporation
+s_48B(4),def_s_48B__officer,DEFINES,officer
+s_48B(4),def_s_48B__partner,DEFINES,partner
+s_48C(1),def_s_48C__disclose,DEFINES,disclose
+s_48C(1),def_s_48C__gain,DEFINES,gain
+s_48C(1),def_s_48C__harm,DEFINES,harm
+s_48C(1),def_s_48C__loss,DEFINES,loss
+s_48C(1),def_s_48C__monetary_authority_of_singapore,DEFINES,Monetary Authority of Singapore
+s_48C(1),def_s_48C__relevant_public_official,DEFINES,relevant public official
+s_48C(1),def_s_48C__singapore_public_sector_agency,DEFINES,Singapore public sector agency
+s_48F(4),def_s_48F__applicable_contravention,DEFINES,applicable contravention
+s_48F(4),def_s_48F__specified_purpose,DEFINES,specified purpose
+s_52(7),def_s_52__corporation,DEFINES,corporation
+s_52(7),def_s_52__officer,DEFINES,officer
+s_52(7),def_s_52__state_of_mind,DEFINES,state of mind
+s_52A(7),def_s_52A__officer,DEFINES,officer
+s_52A(7),def_s_52A__partner,DEFINES,partner
+s_52A(7),def_s_52A__state_of_mind,DEFINES,state of mind
+sch_1_p2_para6,def_sch_1_p2_para6__broadcasting_service,DEFINES,broadcasting service
+sch_1_p2_para6,def_sch_1_p2_para6__news_activity,DEFINES,news activity
+sch_1_p2_para6,def_sch_1_p2_para6__news_organisation,DEFINES,news organisation
+sch_1_p2_para6,def_sch_1_p2_para6__newspaper,DEFINES,newspaper
+sch_1_p2_para6,def_sch_1_p2_para6__relevant_broadcasting_service,DEFINES,relevant broadcasting service
+sch_1_p4_para3,def_sch_1_p4_para3__applicable_individual,DEFINES,applicable individual
+sch_1_p4_para3,def_sch_1_p4_para3__business_asset_transaction,DEFINES,business asset transaction
+sch_1_p4_para3,def_sch_1_p4_para3__business_trust,DEFINES,business trust
+sch_1_p4_para3,def_sch_1_p4_para3__corporation,DEFINES,corporation
+sch_1_p4_para3,def_sch_1_p4_para3__interest,DEFINES,interest
+sch_1_p5_para2,def_sch_1_p5_para2__corporation,DEFINES,corporation
+sch_1_p5_para2,def_sch_1_p5_para2__existing_customer,DEFINES,existing customer
+sch_1_p5_para2,def_sch_1_p5_para2__prospective_customer_of_x,DEFINES,prospective customer of X
+sch_9_para3(13),def_sch_9_para3__named_officer,DEFINES,named officer
+sch_9_para3(13),def_sch_9_para3__occupier,DEFINES,occupier
+s_36(4),def_s_36_4__control,DEFINES,control
+s_37(6),def_s_37_6__applicable_purpose,DEFINES,applicable purpose
+s_42(3),def_s_42_3__terminated_singapore_telephone_number,DEFINES,terminated Singapore telephone number
+s_48A(6),def_s_48A_6__control,DEFINES,control
+s_48D(4),def_s_48D_4__applicable_contravention,DEFINES,applicable contravention
+s_48E(4),def_s_48E_4__applicable_contravention,DEFINES,applicable contravention
+s_59(7),def_s_59_7__specified_person,DEFINES,specified person
+s_67(9),def_s_67_9__former_commission,DEFINES,Former Commission
+s_68(2),def_s_68_2__former_commission,DEFINES,Former Commission
+sch_8_para1(2),def_sch_8_para1_2__ongoing_relationship,DEFINES,ongoing relationship
+sch_9_para1(5),def_sch_9_para1_5__specified,DEFINES,specified

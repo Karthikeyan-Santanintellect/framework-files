@@ -1,0 +1,17 @@
+source_id,target_id,rel_type,term
+SEC-3,DEF-3A,DEFINES,Authorized Individual
+SEC-3,DEF-3B,DEFINES,Commissioner
+SEC-3,DEF-3C,DEFINES,Consumer
+SEC-3,DEF-3D,DEFINES,Cybersecurity Event
+SEC-3,DEF-3E,DEFINES,Department
+SEC-3,DEF-3F,DEFINES,Encrypted
+SEC-3,DEF-3G,DEFINES,Information Security Program
+SEC-3,DEF-3H,DEFINES,Information System
+SEC-3,DEF-3I,DEFINES,Licensee
+SEC-3,DEF-3J,DEFINES,Multi-Factor Authentication
+SEC-3,DEF-3K,DEFINES,Nonpublic Information
+SEC-3,DEF-3L,DEFINES,Person
+SEC-3,DEF-3M,DEFINES,Publicly Available Information
+SEC-3,DEF-3N,DEFINES,Risk Assessment
+SEC-3,DEF-3O,DEFINES,State
+SEC-3,DEF-3P,DEFINES,Third-Party Service Provider

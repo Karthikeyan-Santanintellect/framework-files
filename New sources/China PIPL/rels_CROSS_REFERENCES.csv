@@ -1,0 +1,7 @@
+source_id,target_id,rel_type,from_clause_id,context
+art30,art17,CROSS_REFERENCES,art30_p1,"st, in addition to the matters prescribed in Paragraph 1 of Article 17 thereof, except tho"
+art35,art18,CROSS_REFERENCES,art35_p1,"Law, except for circumstances prescribed in Paragraph 1 of Article 18, or the notificatio"
+art45,art18,CROSS_REFERENCES,art45_p1,xcept for the circumstances as prescribed in Paragraph 1 of Article 18 and Article 35 here
+art45,art35,CROSS_REFERENCES,art45_p1,ircumstances as prescribed in Paragraph 1 of Article 18 and Article 35 herein.
+art53,art3,CROSS_REFERENCES,art53_p1,"he People's Republic of China as prescribed in Paragraph 2, Article 3 hereof shall establ"
+art38,art40,CROSS_REFERENCES,art38_p1_I,d by the State cyberspace administration in accordance with Article 40 hereof;

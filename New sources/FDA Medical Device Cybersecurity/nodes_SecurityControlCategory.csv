@@ -1,0 +1,9 @@
+securitycontrolcategory_id,category,appendix1_subsection_id,stated_in,document_id,source_document
+SCC-01,Authentication;,APP1.AUTHN,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-02,Authorization;,APP1.AUTHZ,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-03,Cryptography;,APP1.CRYPTO,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-04,"Code, Data, and Execution Integrity;",APP1.INTEG,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-05,Confidentiality;,APP1.CONF,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-06,Event Detection and Logging;,APP1.LOG,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-07,Resiliency and Recovery; and,APP1.RES,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SCC-08,Updatability and Patchability.,APP1.UPD,V.B.1,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

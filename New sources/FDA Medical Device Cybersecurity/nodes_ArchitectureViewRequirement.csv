@@ -1,0 +1,5 @@
+architectureviewrequirement_id,requirement,stated_in,document_id,source_document
+AVR-01,Identify security-relevant medical device system elements and their interfaces;,V.B.2,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+AVR-02,"Define security context, domains, boundaries, critical user roles, and external interfaces of the medical device system;",V.B.2,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+AVR-03,"Align the architecture with (a) the medical device system security objectives and requirements, (b) security design characteristics in order to address the identified threats; and",V.B.2,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+AVR-04,Establish traceability of architecture elements to user and medical device system security requirements. Such traceability should exist throughout the cybersecurity risk management documentation.,V.B.2,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

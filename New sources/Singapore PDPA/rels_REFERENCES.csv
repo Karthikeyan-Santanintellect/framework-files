@@ -1,0 +1,207 @@
+source_id,target_id,rel_type,ref_kind,ref_text
+s_44,s_48,REFERENCES,section,"section 48(2),"
+s_45,s_48,REFERENCES,section,"section 48(3),"
+s_66,s_48O,REFERENCES,section,section 48O and
+s_66,s_48R,REFERENCES,section,"section 48R,"
+s_4(1),part_3,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(1),part_4,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(1),part_5,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(1),part_6,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(1),part_6A,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(2),s_24,REFERENCES,section,sections 24 and 25
+s_4(2),s_25,REFERENCES,section,sections 24 and 25
+s_4(2),s_26C,REFERENCES,section,sections 26C(3)(a) and 26E
+s_4(2),s_26E,REFERENCES,section,sections 26C(3)(a) and 26E
+s_4(2),part_3,REFERENCES,part,"Parts 3, 4, 5, 6"
+s_4(2),part_4,REFERENCES,part,"Parts 3, 4, 5, 6"
+s_4(2),part_5,REFERENCES,part,"Parts 3, 4, 5, 6"
+s_4(2),part_6,REFERENCES,part,"Parts 3, 4, 5, 6"
+s_4(4)(b),s_24,REFERENCES,section,section 24
+s_4(5),part_3,REFERENCES,part,"Parts 3, 4, 5, 6 and 6A"
+s_4(5),part_4,REFERENCES,part,"Parts 3, 4, 5, 6 and 6A"
+s_4(5),part_5,REFERENCES,part,"Parts 3, 4, 5, 6 and 6A"
+s_4(5),part_6,REFERENCES,part,"Parts 3, 4, 5, 6 and 6A"
+s_4(5),part_6A,REFERENCES,part,"Parts 3, 4, 5, 6 and 6A"
+s_4(6)(a),part_3,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(a),part_4,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(a),part_5,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(a),part_6,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(a),part_6A,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(b),part_3,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(b),part_4,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(b),part_5,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(b),part_6,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_4(6)(b),part_6A,REFERENCES,part,"Parts 3, 4, 5, 6, 6A and 6B"
+s_8(2),s_38,REFERENCES,section,section 38
+s_9(1),s_8,REFERENCES,section,section 8(1) or
+s_10(1),s_59,REFERENCES,section,"section 59,"
+s_14(1)(a),s_20,REFERENCES,section,section 20
+s_15(1)(a),s_14,REFERENCES,section,"section 14,"
+s_16(4),s_25,REFERENCES,section,"section 25,"
+s_17(1)(a),part_1,REFERENCES,part,Part 1
+s_17(1)(a),sch_1,REFERENCES,schedule,First Schedule
+s_17(1)(a),sch_2,REFERENCES,schedule,Second Schedule
+s_17(1)(b),part_2,REFERENCES,part,Part 2
+s_17(1)(b),sch_1,REFERENCES,schedule,First Schedule
+s_17(1)(b),sch_2,REFERENCES,schedule,Second Schedule
+s_17(1)(c),part_3,REFERENCES,part,Part 3
+s_17(1)(c),sch_1,REFERENCES,schedule,First Schedule
+s_17(1)(c),sch_2,REFERENCES,schedule,Second Schedule
+s_17(2)(a)(ii),s_17,REFERENCES,section,section 17(3)
+s_17(2)(b)(ii),s_17,REFERENCES,section,section 17(1)
+s_18(b),s_20,REFERENCES,section,"section 20,"
+s_19(a),s_16,REFERENCES,section,section 16
+s_20(1),s_14,REFERENCES,section,"sections 14(1)(a) and 18(b),"
+s_20(1),s_18,REFERENCES,section,"sections 14(1)(a) and 18(b),"
+s_20(3)(a),s_15,REFERENCES,section,section 15 or 15A
+s_20(3)(a),s_15A,REFERENCES,section,section 15 or 15A
+s_20(3)(b),s_17,REFERENCES,section,section 17
+s_21(2),sch_5,REFERENCES,schedule,Fifth Schedule
+s_22(7),sch_6,REFERENCES,schedule,Sixth Schedule
+s_22A(1)(a),s_21,REFERENCES,section,section 21(1)(a) to
+s_26C(3),s_26E,REFERENCES,section,section 26E
+s_26D(1),s_26C,REFERENCES,section,"section 26C,"
+s_26D(2),s_26B,REFERENCES,section,section 26B(1)(a)
+s_37(5),sch_8,REFERENCES,schedule,Eighth Schedule
+s_37(6),sch_10,REFERENCES,schedule,Tenth Schedule
+s_43(1),s_48,REFERENCES,section,"section 48(2),"
+s_43(2)(a)(i),s_40,REFERENCES,section,section 40(2) to
+s_43(3),s_40,REFERENCES,section,"section 40(2),"
+s_43(5),s_43A,REFERENCES,section,section 43A
+s_43(5)(a),s_39,REFERENCES,section,"section 39,"
+s_43(5)(b),s_39,REFERENCES,section,section 39
+s_43A(1),s_43,REFERENCES,section,"section 43(1),"
+s_43A(3)(a),s_40,REFERENCES,section,section 40(2)
+s_43A(3)(b),s_43,REFERENCES,section,section 43(2)(b)(i)
+s_48C(2)(a),s_48D,REFERENCES,section,"section 48D(1), 48E(1) or 48F(1),"
+s_48C(2)(a),s_48E,REFERENCES,section,"section 48D(1), 48E(1) or 48F(1),"
+s_48C(2)(a),s_48F,REFERENCES,section,"section 48D(1), 48E(1) or 48F(1),"
+s_48D(4)(b),s_48F,REFERENCES,section,section 48F(1)
+s_48D(4)(c),s_7,REFERENCES,section,section 7(1) or 8(1)
+s_48D(4)(c),s_8,REFERENCES,section,section 7(1) or 8(1)
+s_48E(4)(a),s_48D,REFERENCES,section,section 48D(1) or 48F(1)
+s_48E(4)(a),s_48F,REFERENCES,section,section 48D(1) or 48F(1)
+s_48E(4)(b),s_7,REFERENCES,section,section 7(1) or 8(1)
+s_48E(4)(b),s_8,REFERENCES,section,section 7(1) or 8(1)
+s_48G(4),s_65,REFERENCES,section,section 65 to
+s_48H(1)(a),s_21,REFERENCES,section,"section 21,"
+s_48H(1)(b),s_22,REFERENCES,section,"section 22,"
+s_48H(1)(d),s_21,REFERENCES,section,section 21 or 22
+s_48H(1)(d),s_22,REFERENCES,section,section 21 or 22
+s_48I(1)(a),part_3,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48I(1)(a),part_4,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48I(1)(a),part_5,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48I(1)(a),part_6,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48I(1)(a),part_6A,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48I(1)(b),s_48B,REFERENCES,section,"section 48B(1),"
+s_48I(1)(b),part_9,REFERENCES,part,Part 9 or
+s_48I(2),part_3,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B,"
+s_48I(2),part_4,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B,"
+s_48I(2),part_5,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B,"
+s_48I(2),part_6,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B,"
+s_48I(2),part_6A,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B,"
+s_48I(2)(c),s_48H,REFERENCES,section,section 48H(2)
+s_48J(1)(a),part_3,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48J(1)(a),part_4,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48J(1)(a),part_5,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48J(1)(a),part_6,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48J(1)(a),part_6A,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48J(1)(b)(i),part_9,REFERENCES,part,Part 9
+s_48J(1)(b)(ii),s_48B,REFERENCES,section,"section 48B(1),"
+s_48J(3)(a),s_24,REFERENCES,section,section 24
+s_48J(4A)(b),s_24,REFERENCES,section,section 24
+s_48J(6)(g),s_48I,REFERENCES,section,section 48I or 48L(4)
+s_48J(6)(g),s_48L,REFERENCES,section,section 48I or 48L(4)
+s_48K(1),s_48I,REFERENCES,section,section 48I or
+s_48K(1),s_48J,REFERENCES,section,"section 48J(1),"
+s_48K(1)(a),s_48I,REFERENCES,section,"section 48I or 48J(1),"
+s_48K(1)(a),s_48J,REFERENCES,section,"section 48I or 48J(1),"
+s_48K(1)(b),s_48I,REFERENCES,section,"section 48I,"
+s_48K(2),s_48J,REFERENCES,section,section 48J(1)
+s_48K(4),s_48I,REFERENCES,section,section 48I or
+s_48K(4),s_48J,REFERENCES,section,"section 48J(1),"
+s_48K(6),s_48I,REFERENCES,section,section 48I or
+s_48K(6),s_48J,REFERENCES,section,section 48J(1)
+s_48K(7),s_48I,REFERENCES,section,section 48I or
+s_48K(7),s_48J,REFERENCES,section,section 48J(1)
+s_48K(8),s_48J,REFERENCES,section,section 48J(1)
+s_48K(9),s_48J,REFERENCES,section,section 48J(1)
+s_48K(10)(a),s_48J,REFERENCES,section,section 48J(1)
+s_48K(10)(b),s_48J,REFERENCES,section,"section 48J(1),"
+s_48L(1),s_48I,REFERENCES,section,"sections 48I, 48J(1) and 50(1),"
+s_48L(1),s_48J,REFERENCES,section,"sections 48I, 48J(1) and 50(1),"
+s_48L(1),s_50,REFERENCES,section,"sections 48I, 48J(1) and 50(1),"
+s_48L(1)(a),part_3,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48L(1)(a),part_4,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48L(1)(a),part_5,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48L(1)(a),part_6,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48L(1)(a),part_6A,REFERENCES,part,"Part 3, 4, 5, 6, 6A or 6B"
+s_48L(1)(b),s_48B,REFERENCES,section,"section 48B(1),"
+s_48L(1)(b),part_9,REFERENCES,part,Part 9 or
+s_48L(4)(b),s_48K,REFERENCES,section,"section 48K(1),"
+s_48L(4)(b),s_48I,REFERENCES,section,section 48I
+s_48M(2)(a),s_48H,REFERENCES,section,"section 48H(2), 48I or 48L(4)"
+s_48M(2)(a),s_48I,REFERENCES,section,"section 48H(2), 48I or 48L(4)"
+s_48M(2)(a),s_48L,REFERENCES,section,"section 48H(2), 48I or 48L(4)"
+s_48M(2)(b)(i),s_48J,REFERENCES,section,section 48J(1)
+s_48M(2)(b)(ii),s_48K,REFERENCES,section,section 48K(10)
+s_48N(1)(a),s_48G,REFERENCES,section,"section 48G(2), 48I(1) or"
+s_48N(1)(a),s_48I,REFERENCES,section,"section 48G(2), 48I(1) or"
+s_48N(1)(b),s_48H,REFERENCES,section,"section 48H(2),"
+s_48N(2),s_48J,REFERENCES,section,section 48J(1)
+s_48O(1)(a),part_4,REFERENCES,part,"Part 4, 5, 6, 6A or 6B"
+s_48O(1)(a),part_5,REFERENCES,part,"Part 4, 5, 6, 6A or 6B"
+s_48O(1)(a),part_6,REFERENCES,part,"Part 4, 5, 6, 6A or 6B"
+s_48O(1)(a),part_6A,REFERENCES,part,"Part 4, 5, 6, 6A or 6B"
+s_48O(1)(b),s_48B,REFERENCES,section,"section 48B(1),"
+s_48O(1)(b),part_9,REFERENCES,part,Part 9 or
+s_48P(4),s_48Q,REFERENCES,section,"section 48Q,"
+s_48P(5),sch_7,REFERENCES,schedule,Seventh Schedule
+s_48Q(1)(a),s_48G,REFERENCES,section,"section 48G(2), 48I(1) or"
+s_48Q(1)(a),s_48I,REFERENCES,section,"section 48G(2), 48I(1) or"
+s_48Q(1)(b),s_48H,REFERENCES,section,section 48H(2)
+s_48Q(1)(c),s_48N,REFERENCES,section,"section 48N(6)(b),"
+s_48Q(2),s_48J,REFERENCES,section,section 48J(1)
+s_48Q(3),s_48N,REFERENCES,section,"section 48N,"
+s_48Q(6),s_48N,REFERENCES,section,section 48N and
+s_50(1),s_48L,REFERENCES,section,section 48L(1)
+s_50(2),sch_9,REFERENCES,schedule,Ninth Schedule
+s_50(3)(a),s_48G,REFERENCES,section,section 48G(2)
+s_50(3)(ca),s_48L,REFERENCES,section,section 48L(1)
+s_50(3A),s_48L,REFERENCES,section,section 48L(1)
+s_51(1)(a),s_21,REFERENCES,section,section 21(1) to
+s_51(1)(b),s_22,REFERENCES,section,section 22(1) to
+s_51(3)(a),s_21,REFERENCES,section,"section 21 or 22,"
+s_51(3)(a),s_22,REFERENCES,section,"section 21 or 22,"
+s_55(1),part_9,REFERENCES,part,Part 9
+s_55(2),part_9,REFERENCES,part,Part 9
+s_57(1),s_8,REFERENCES,section,section 8(1)
+s_57(1)(b),s_20,REFERENCES,section,section 20
+s_59(1)(a),s_21,REFERENCES,section,section 21
+s_59(1)(b),s_21,REFERENCES,section,section 21
+s_59(5)(d),s_58,REFERENCES,section,"section 58(1)(a),"
+s_59(5)(e),s_10,REFERENCES,section,"section 10,"
+s_64(1),sch_9,REFERENCES,schedule,Ninth Schedule
+s_65(2)(b),s_21,REFERENCES,section,"section 21 or 22,"
+s_65(2)(b),s_22,REFERENCES,section,"section 21 or 22,"
+s_65(2)(e),s_48H,REFERENCES,section,section 48H
+s_65(2)(f),s_48N,REFERENCES,section,"section 48N,"
+s_65(2)(m),s_40,REFERENCES,section,section 40(2)
+s_67(5),part_8,REFERENCES,part,Part 8
+s_67(8),s_16,REFERENCES,section,section 16
+s_67(9),s_5,REFERENCES,section,section 5(1)
+s_68(2),s_67,REFERENCES,section,section 67(9)
+sch_1_p3_para1(4),s_37,REFERENCES,section,section 37(6)
+sch_1_p5_para1(6),s_37,REFERENCES,section,section 37(6)
+sch_2_p2_d2_para1(3),s_37,REFERENCES,section,section 37(6)
+sch_2_p2_d2_para1(4),s_4,REFERENCES,section,section 4(1)
+sch_5_para1(h),part_3,REFERENCES,part,Part 3
+sch_5_para1(h),sch_1,REFERENCES,schedule,First Schedule
+sch_7_para4(2)(c),s_65,REFERENCES,section,section 65
+sch_7_para7(a),s_34,REFERENCES,section,section 34
+sch_7_para7(b),s_48Q,REFERENCES,section,section 48Q
+sch_8_para1(1),part_9,REFERENCES,part,"Part 9,"
+sch_9_para1(1),s_50,REFERENCES,section,"section 50,"
+sch_9_para1A(1),s_50,REFERENCES,section,"section 50,"
+sch_9_para2(1),s_50,REFERENCES,section,"section 50,"
+sch_5_para1,s_21,REFERENCES,section,section 21(1)

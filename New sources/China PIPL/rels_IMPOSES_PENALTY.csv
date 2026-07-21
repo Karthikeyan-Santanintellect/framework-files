@@ -1,0 +1,11 @@
+source_id,target_id,rel_type,clause_id
+art66,pen_66_basic_org,IMPOSES_PENALTY,art66_p1
+art66,pen_66_refusal_org,IMPOSES_PENALTY,art66_p1
+art66,pen_66_refusal_person,IMPOSES_PENALTY,art66_p1
+art66,pen_66_serious_org,IMPOSES_PENALTY,art66_p2
+art66,pen_66_serious_person,IMPOSES_PENALTY,art66_p2
+art67,pen_67_credit_archives,IMPOSES_PENALTY,art67_p1
+art68,pen_68_state_organ,IMPOSES_PENALTY,art68_p1
+art68,pen_68_staff,IMPOSES_PENALTY,art68_p2
+art69,pen_69_tort_liability,IMPOSES_PENALTY,art69_p1
+art71,pen_71_public_security_criminal,IMPOSES_PENALTY,art71_p1

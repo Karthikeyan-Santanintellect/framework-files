@@ -1,0 +1,5 @@
+legalauthority_id,short_name,full_name,slide_id,text,source_document
+auth_fisma,FISMA,Federal Information Security Modernization Act,slide_04,Federal Information Security Modernization Act requires agencies to protect Federal Information. FISMA requires NIST to develop standards and guidelines,KB 2/USA/FedRAMP.pdf
+auth_omb_a130,OMB A-130,,slide_04,"OMB states that when agencies implement FISMA, they must use NIST standards and guidelines",KB 2/USA/FedRAMP.pdf
+auth_fedramp_policy,FedRAMP Policy,,slide_04,FedRAMP leverages NIST standards and guidelines to provide standardized security requirements for cloud services; a conformity assessment program; standardized authorization packages and contract language; a repository for authorization packages,KB 2/USA/FedRAMP.pdf
+auth_fedramp_act,FedRAMP Authorization Act,,slide_04,"FedRAMP Authorization Act establishes a Government-wide program that provides a standardized, reusable approach to security assessment and authorization for cloud computing products and services that process unclassified information used by agencies.",KB 2/USA/FedRAMP.pdf

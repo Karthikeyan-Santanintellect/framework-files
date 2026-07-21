@@ -1,0 +1,9 @@
+source_id,target_id,rel_type,part_number
+sch_1,sch_1_p1,SCHEDULE_HAS_PART,1
+sch_1,sch_1_p2,SCHEDULE_HAS_PART,2
+sch_1,sch_1_p3,SCHEDULE_HAS_PART,3
+sch_1,sch_1_p4,SCHEDULE_HAS_PART,4
+sch_1,sch_1_p5,SCHEDULE_HAS_PART,5
+sch_2,sch_2_p1,SCHEDULE_HAS_PART,1
+sch_2,sch_2_p2,SCHEDULE_HAS_PART,2
+sch_2,sch_2_p3,SCHEDULE_HAS_PART,3

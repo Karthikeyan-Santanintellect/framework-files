@@ -1,0 +1,31 @@
+component_id,name,name_as_printed,assessmentfactor_id,domain_id,source_document
+C001,Oversight,OVERSIGHT,D1_AF1,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C002,Strategy/Policies,STRATEGY/ POLICIES,D1_AF1,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C003,IT Asset Management,IT ASSET MANAGEMENT,D1_AF1,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C004,Risk Management Program,RISK MANAGEMENT PROGRAM,D1_AF2,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C005,Risk Assessment,RISK ASSESSMENT,D1_AF2,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C006,Audit,AUDIT,D1_AF2,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C007,Staffing,STAFFING,D1_AF3,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C008,Training,TRAINING,D1_AF4,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C009,Culture,CULTURE,D1_AF4,D1,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C010,Threat Intelligence and Information,THREAT INTELLIGENCE AND INFORMATION,D2_AF1,D2,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C011,Monitoring and Analyzing,MONITORING AND ANALYZING,D2_AF2,D2,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C012,Information Sharing,INFORMATION SHARING,D2_AF3,D2,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C013,Infrastructure Management,INFRASTRUCTURE MANAGEMENT,D3_AF1,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C014,Access and Data Management,ACCESS AND DATA MANAGEMENT,D3_AF1,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C015,Device/End-Point Security,DEVICE/END-POINT SECURITY,D3_AF1,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C016,Secure Coding,SECURE CODING,D3_AF1,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C017,Threat and Vulnerability Detection,THREAT AND VULNERABILITY DETECTION,D3_AF2,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C018,Anomalous Activity Detection,ANOMALOUS ACTIVITY DETECTION,D3_AF2,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C019,Event Detection,EVENT DETECTION,D3_AF2,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C020,Patch Management,PATCH MANAGEMENT,D3_AF3,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C021,Remediation,REMEDIATION,D3_AF3,D3,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C022,Connections,CONNECTIONS,D4_AF1,D4,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C023,Due Diligence,DUE DILIGENCE,D4_AF2,D4,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C024,Contracts,CONTRACTS,D4_AF2,D4,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C025,Ongoing Monitoring,ONGOING MONITORING,D4_AF2,D4,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C026,Planning,PLANNING,D5_AF1,D5,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C027,Testing,TESTING,D5_AF1,D5,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C028,Detection,DETECTION,D5_AF2,D5,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C029,Response and Mitigation,RESPONSE AND MITIGATION,D5_AF2,D5,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf
+C030,Escalation and Reporting,ESCALATION AND REPORTING,D5_AF3,D5,KB 2/USA/FFIEC Cybersecurity Assessment Tool.pdf

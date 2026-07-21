@@ -1,0 +1,27 @@
+productcategory_id,annex,product_class,item_number,name,source_document
+PC_III_ClassI_1,III,Class I,1,"Identity management systems and privileged access management software and hardware, including authentication and access control readers, including biometric readers",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_2,III,Class I,2,Standalone and embedded browsers,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_3,III,Class I,3,Password managers,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_4,III,Class I,4,"Software that searches for, removes, or quarantines malicious software",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_5,III,Class I,5,Products with digital elements with the function of virtual private network (VPN),KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_6,III,Class I,6,Network management systems,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_7,III,Class I,7,Security information and event management (SIEM) systems,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_8,III,Class I,8,Boot managers,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_9,III,Class I,9,Public key infrastructure and digital certificate issuance software,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_10,III,Class I,10,Physical and virtual network interfaces,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_11,III,Class I,11,Operating systems,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_12,III,Class I,12,"Routers, modems intended for the connection to the internet, and switches",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_13,III,Class I,13,Microprocessors with security-related functionalities,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_14,III,Class I,14,Microcontrollers with security-related functionalities,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_15,III,Class I,15,Application specific integrated circuits (ASIC) and field-programmable gate arrays (FPGA) with security-related functionalities,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_16,III,Class I,16,Smart home general purpose virtual assistants,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_17,III,Class I,17,"Smart home products with security functionalities, including smart door locks, security cameras, baby monitoring systems and alarm systems",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_18,III,Class I,18,Internet connected toys covered by Directive 2009/48/EC of the European Parliament and of the Council (1) that have social interactive features (e.g. speaking or filming) or that have location tracking features,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassI_19,III,Class I,19,"Personal wearable products to be worn or placed on a human body that have a health monitoring (such as tracking) purpose and to which Regulation (EU) 2017/745 or (EU) No 2017/746 do not apply, or personal wearable products that are intended for the use by and for children",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassII_1,III,Class II,1,Hypervisors and container runtime systems that support virtualised execution of operating systems and similar environments,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassII_2,III,Class II,2,"Firewalls, intrusion detection and prevention systems",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassII_3,III,Class II,3,Tamper-resistant microprocessors,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_III_ClassII_4,III,Class II,4,Tamper-resistant microcontrollers,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_IV_NA_1,IV,,1,Hardware Devices with Security Boxes,KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_IV_NA_2,IV,,2,"Smart meter gateways within smart metering systems as defined in Article 2, point (23) of Directive (EU) 2019/944 of the European Parliament and of the Council (1) and other devices for advanced security purposes, including for secure cryptoprocessing",KB 2/Europe/EU Cyber Resilience Act.pdf
+PC_IV_NA_3,IV,,3,"Smartcards or similar devices, including secure elements",KB 2/Europe/EU Cyber Resilience Act.pdf

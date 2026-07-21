@@ -1,0 +1,15 @@
+domain_id,abbreviation,name,aligns_with,source_document
+DOM-AC,AC,Access Control,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-AT,AT,Awareness & Training,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-AU,AU,Audit & Accountability,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-CM,CM,Configuration Management,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-IA,IA,Identification & Authentication,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-IR,IR,Incident Response,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-MA,MA,Maintenance,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-MP,MP,Media Protection,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-PS,PS,Personnel Security,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-PE,PE,Physical Protection,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-RA,RA,Risk Assessment,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-CA,CA,Security Assessment,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-SC,SC,System and Communications Protection,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13
+DOM-SI,SI,System and Information Integrity,The CMMC model consists of 14 domains that align with the families specified in NIST SP 800-171 Rev 2.,CMMC-MODEL-OVERVIEW-V2.13

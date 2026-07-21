@@ -1,0 +1,11 @@
+subsector_id,name,sector,column,source,source_document
+subsector_electricity,Electricity,Energy,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_oil,Oil,Energy,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_gas,Gas,Energy,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_air_transport,Air Transport,Transport,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_rail_transport,Rail Transport,Transport,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_water_transport,Water Transport,Transport,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_road_transport,Road Transport,Transport,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_health_care_settings_including_hospitals_private_clinics_and_online_settings,"Health care settings (including hospitals, private clinics and online settings)",Health Sector,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_drinking_water_supply_and_distribution,Drinking water supply and distribution,Drinking water supply and distribution,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf
+subsector_digital_infrastructure,Digital Infrastructure,Digital Infrastructure,Column 2,Schedule 1,KB 2/Europe/UK Network and Information Systems (NIS) Regulations 2018.pdf

@@ -1,0 +1,14 @@
+source_id,target_id,rel_type,term
+2.1,DEF-2.1,DEFINES,Vehicle type
+2.2,DEF-2.2,DEFINES,Cyber security
+2.3,DEF-2.3,DEFINES,Cyber Security Management System (CSMS)
+2.4,DEF-2.4,DEFINES,System
+2.5,DEF-2.5,DEFINES,Development phase
+2.6,DEF-2.6,DEFINES,Production phase
+2.7,DEF-2.7,DEFINES,Post-production phase
+2.8,DEF-2.8,DEFINES,Mitigation
+2.9,DEF-2.9,DEFINES,Risk
+2.10,DEF-2.10,DEFINES,Risk Assessment
+2.11,DEF-2.11,DEFINES,Risk Management
+2.12,DEF-2.12,DEFINES,Threat
+2.13,DEF-2.13,DEFINES,Vulnerability

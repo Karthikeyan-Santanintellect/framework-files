@@ -1,0 +1,9 @@
+source_id,target_id,rel_type,clause_id
+art4,def_personal_information,DEFINES,art4_p1
+art4,def_processing,DEFINES,art4_p2
+art28,def_sensitive_personal_information,DEFINES,art28_p1
+art60,def_departments,DEFINES,art60_p3
+art73,def_personal_information_processor,DEFINES,art73_p1_I
+art73,def_automatic_decision_making,DEFINES,art73_p1_II
+art73,def_de_identification,DEFINES,art73_p1_III
+art73,def_anonymization,DEFINES,art73_p1_IV

@@ -1,0 +1,15 @@
+source_id,target_id,rel_type,period_text
+s_56,dl_001,HAS_DEADLINE,for every day
+s_4(4)(a),dl_002,HAS_DEADLINE,for at least 100 years
+s_4(4)(b),dl_003,HAS_DEADLINE,for 10 years
+s_21(1)(b),dl_004,HAS_DEADLINE,within a year
+s_22(2)(b),dl_005,HAS_DEADLINE,within a year
+s_22(3),dl_006,HAS_DEADLINE,within a year
+s_26D(1),dl_007,HAS_DEADLINE,no later than 3 calendar days
+s_44(d),dl_008,HAS_DEADLINE,for at least 30 days
+s_48K(2),dl_009,HAS_DEADLINE,at least 14 days
+s_48K(8),dl_010,HAS_DEADLINE,not earlier than 28 days
+s_50(4),dl_011,HAS_DEADLINE,for one year
+sch_9_para2(2)(a),dl_012,HAS_DEADLINE,at least 2 working days
+sch_9_para3(6)(b),dl_013,HAS_DEADLINE,until the end of one month
+sch_9_para3(12),dl_014,HAS_DEADLINE,for a period of not more than 3 months

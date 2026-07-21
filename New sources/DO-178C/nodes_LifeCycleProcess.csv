@@ -1,0 +1,12 @@
+lifecycleprocess_id,name,category,description_in_ebook,parent_process_id,source_document
+P1,Software planning process,top,Defines and coordinates the activities of the software development and integral processes for a project.,,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P2,Software development processes,top,"Produce the software product. This process is comprised of processes for requirements, design, coding, and integration.",,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P3,Integral software processes,top,"Ensure the correctness, control, and confidence in the software life cycle processes and their outputs. These include verification, configuration management, quality assurance, and certification liaison.",,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P2a,Software requirements process,development,,P2,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P2b,Software design process,development,,P2,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P2c,Software coding process,development,,P2,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P2d,Integration process,development,,P2,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P3a,Verification,integral,,P3,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P3b,Configuration management,integral,,P3,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P3c,Quality assurance,integral,,P3,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+P3d,Certification liaison,integral,,P3,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

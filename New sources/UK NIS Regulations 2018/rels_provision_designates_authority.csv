@@ -1,0 +1,4 @@
+source_id,target_id,rel_type,designation_text
+reg3(2),authority_the_information_commissioner_reg3_2,DESIGNATES_AUTHORITY,The Information Commissioner is designated as the competent authority for the United Kingdom for RDSPs.
+reg4(1),authority_gchq_spoc,DESIGNATES_AUTHORITY,GCHQ is designated as the SPOC on the security of network and information systems for the United Kingdom.
+reg5(1),authority_gchq_csirt,DESIGNATES_AUTHORITY,GCHQ is designated as the CSIRT for the United Kingdom in respect of the relevant sectors and digital services.

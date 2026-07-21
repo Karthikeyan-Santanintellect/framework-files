@@ -1,0 +1,6 @@
+maturity_level_id,level_number,name,description,source_document
+ML-1,1,Ad Hoc,"Policies, procedures, and strategies are not formalized; activities are performed in an ad-hoc, reactive manner.",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+ML-2,2,Defined,"Policies, procedures, and strategies are formalized and documented but not consistently implemented.",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+ML-3,3,Consistently Implemented,"Policies, procedures, and strategies are consistently implemented, but quantitative and qualitative effectiveness measures are lacking.",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+ML-4,4,Managed and Measurable,"Quantitative and qualitative measures on the effectiveness of policies, procedures, and strategies are collected across the organization and used to assess them and make necessary changes.",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt
+ML-5,5,Optimized,"Policies, procedures, and strategies are fully institutionalized, repeatable, self-generating, and regularly updated based on a changing threat and technology landscape and business/mission needs.",USA_FISMA_Final_FY_2025_IG_FISMA_Reporting_Metrics_Ver_2_0_April_2025_508_0.txt

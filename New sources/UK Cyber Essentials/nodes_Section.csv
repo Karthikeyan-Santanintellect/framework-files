@@ -1,0 +1,18 @@
+section_id,section_type,title,parent_section_id,page,source_document
+SEC-WN,Section,What’s new in this version,,3,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-A,Section,A. Introducing the technical controls,,3,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-B,Section,B. Definitions,,4,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-C,Section,C. Backing up your data,,5,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D,Section,D. Scope,,6,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-OV,Subsection,Cyber Essentials scope overview,SEC-D,6,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-AM,Subsection,Asset management and Cyber Essentials,SEC-D,7,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-i,Subsection,(i) Bring your own device (BYOD),SEC-D-AM,8,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-ii,Subsection,(ii) Home and remote working,SEC-D-AM,9,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-iii,Subsection,(iii) Wireless devices,SEC-D-AM,9,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-iv,Subsection,(iv) Cloud services,SEC-D-AM,9,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-v,Subsection,(v) Accounts used by third parties and managed infrastructure,SEC-D-AM,11,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-vi,Subsection,(vi) Devices used by third parties,SEC-D-AM,11,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-D-vii,Subsection,(vii) Software development,SEC-D-AM,12,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-E,Section,E. Requirements by technical control theme,,13,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-F,Section,F. Further guidance,,24,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf
+SEC-F-ZT,Subsection,Zero trust and Cyber Essentials,SEC-F,24,KB 2/Europe/cyber-essentials-requirements-for-it-infrastructure-v3-3.pdf

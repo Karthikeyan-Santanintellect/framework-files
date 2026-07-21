@@ -1,0 +1,63 @@
+rule_id,ruleset_id,rule_number,title,chapeau,act_section_refs,rule_refs,schedule_refs,source_document
+CA-R1,RS-CA,1,Short title and commencement,,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R2,RS-CA,2,Definitions,"In these Rules, unless the context otherwise requires,–",17;35,,IV,KB 2/India/Information Technology Act 2000.pdf
+CA-R3,RS-CA,3,The manner in which information be authenticated by means of Digital Signature,"A Digital Signature shall,-",,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R4,RS-CA,4,Creation of Digital Signature,To sign an electronic record or any other item,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R5,RS-CA,5,Verification of Digital Signature,The verification of a Digital Signature shall,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R6,RS-CA,6,Standards,The Information Technology (IT) architecture for Certifying,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R7,RS-CA,7,Digital Signature Certificate Standard,All Digital Signature Certificates issued by,,6,,KB 2/India/Information Technology Act 2000.pdf
+CA-R8,RS-CA,8,Licensing of Certifying Authorities,,2;3;25,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R9,RS-CA,9,Location of the Facilities,The infrastructure associated with all functions of,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R10,RS-CA,10,Submission of Application,Every application for a licensed Certifying,,8;20,I,KB 2/India/Information Technology Act 2000.pdf
+CA-R11,RS-CA,11,Fee,,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R12,RS-CA,12,Cross Certification,,,20,,KB 2/India/Information Technology Act 2000.pdf
+CA-R13,RS-CA,13,Validity of licence,,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R14,RS-CA,14,Suspension of Licence,,25,8,,KB 2/India/Information Technology Act 2000.pdf
+CA-R15,RS-CA,15,Renewal of licence,,,8;13,,KB 2/India/Information Technology Act 2000.pdf
+CA-R16,RS-CA,16,Issuance of Licence,,,8,,KB 2/India/Information Technology Act 2000.pdf
+CA-R17,RS-CA,17,Refusal of Licence,The Controller may refuse to grant or renew a licence,,31,,KB 2/India/Information Technology Act 2000.pdf
+CA-R18,RS-CA,18,Governing Laws,The Certification Practice Statement of the,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R19,RS-CA,19,Security Guidelines for Certifying Authorities,,,,II;III,KB 2/India/Information Technology Act 2000.pdf
+CA-R20,RS-CA,20,Commencement of Operation by Licensed Certifying Authorities,The,,31,,KB 2/India/Information Technology Act 2000.pdf
+CA-R21,RS-CA,21,Requirements Prior to Cessation as Certifying Authority,Before ceasing to,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R22,RS-CA,22,Database of Certifying Authorities,The Controller shall maintain a,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R23,RS-CA,23,Digital Signature Certificate,"The Certifying Authority shall, for issuing the",35,,IV,KB 2/India/Information Technology Act 2000.pdf
+CA-R24,RS-CA,24,Generation of Digital Signature Certificate,The generation of the Digital,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R25,RS-CA,25,Issue of Digital Signature Certificate,Before the issue of the Digital,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R26,RS-CA,26,Certificate Lifetime,,37,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R27,RS-CA,27,Archival of Digital Signature Certificate,A Certifying Authority shall archive -,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R28,RS-CA,28,Compromise of Digital Signature Certificate,Digital Signature Certificates in,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R29,RS-CA,29,Revocation of Digital Signature Certificate,,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R30,RS-CA,30,Fees for issue of Digital Signature Certificate,,35,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R31,RS-CA,31,Audit,,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R32,RS-CA,32,Auditor’s relationship with Certifying Authority,,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R33,RS-CA,33,Confidential Information,The following information shall be confidential,,,,KB 2/India/Information Technology Act 2000.pdf
+CA-R34,RS-CA,34,Access to Confidential Information,,,33,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R1,RS-CRAT,1,Short title and commencement,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R2,RS-CRAT,2,Definitions,"In these rules, unless the context otherwise requires.—",29;48;57,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R3,RS-CRAT,3,Procedure for filing applications,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R4,RS-CRAT,4,Presentation and scrutiny of applications,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R5,RS-CRAT,5,Place of filing application,The applicant shall file application with the,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R6,RS-CRAT,6,Application fee,Every application filed with the Registrar shall be,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R7,RS-CRAT,7,Contents of application,,57,3,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R8,RS-CRAT,8,"Paper book, etc. to accompany the application",,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R9,RS-CRAT,9,Plural remedies,An application shall be based upon a single cause of,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R10,RS-CRAT,10,Service of notice of application on the respondents,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R11,RS-CRAT,11,Filing of reply and other documents by the respondent,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R12,RS-CRAT,12,Date and place of hearing to be notified,The Tribunal shall notify to,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R13,RS-CRAT,13,Sittings of the Tribunal,The Tribunal shall ordinarily hold its sittings at,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R14,RS-CRAT,14,Decision on applications,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R15,RS-CRAT,15,Action on application for applicant's default,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R16,RS-CRAT,16,Hearing on application ex-parte,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R17,RS-CRAT,17,Adjournment of application,The Tribunal may on such terms as it,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R18,RS-CRAT,18,Order to be signed and dated,Every order of the Tribunal shall be in,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R19,RS-CRAT,19,Publication of orders,Such of the orders of the Tribunal as are deemed,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R20,RS-CRAT,20,Communication of orders to parties,Every order passed on an,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R21,RS-CRAT,21,No fee for inspection of records,No fee shall be charged for,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R22,RS-CRAT,22,Orders and directions in certain cases,The Tribunal may make such,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R23,RS-CRAT,23,Registration of legal practitioners clerks,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R24,RS-CRAT,24,Working hoursof the Tribunal,"Except on Saturday, Sundays and other",,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R25,RS-CRAT,25,Sitting hours of the Tribunal,The sitting hours of the Tribunal shall,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R26,RS-CRAT,26,Powers and functions of the Registrar,,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R27,RS-CRAT,27,Additional powers and duties of Regstrar,In addition to the powers,,,,KB 2/India/Information Technology Act 2000.pdf
+CRAT-R28,RS-CRAT,28,Seal and emblem,The official seal and emblem of the Tribunal shall be such,,,,KB 2/India/Information Technology Act 2000.pdf

@@ -1,0 +1,13 @@
+source_id,target_id,rel_type
+slide_01,slide_02,NEXT_SLIDE
+slide_02,slide_03,NEXT_SLIDE
+slide_03,slide_04,NEXT_SLIDE
+slide_04,slide_05,NEXT_SLIDE
+slide_05,slide_06,NEXT_SLIDE
+slide_06,slide_07,NEXT_SLIDE
+slide_07,slide_08,NEXT_SLIDE
+slide_08,slide_09,NEXT_SLIDE
+slide_09,slide_10,NEXT_SLIDE
+slide_10,slide_11,NEXT_SLIDE
+slide_11,slide_12,NEXT_SLIDE
+slide_12,slide_13,NEXT_SLIDE

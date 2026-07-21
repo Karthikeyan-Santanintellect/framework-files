@@ -1,0 +1,13 @@
+source_id,target_id,rel_type,value
+THR-1,CL-3-R1d,STATED_IN,14 days
+THR-2,CL-3-R1d-ii,STATED_IN,CVSS v3 base score of 7 or above
+THR-3,CL-3-R5,STATED_IN,14 days
+THR-4,CL-2-R3a,STATED_IN,no more than 10 guesses in 5 minutes
+THR-5,CL-2-R3b,STATED_IN,no more than 10 unsuccessful attempts
+THR-6,CL-2-R5,STATED_IN,at least 6 characters
+THR-7,CL-4-MFA-2,STATED_IN,at least 8 characters
+THR-8,CL-4-PW-2a-ii,STATED_IN,no more than 10 guesses in 5 minutes
+THR-9,CL-4-PW-2a-iii,STATED_IN,no more than 10 unsuccessful attempts
+THR-10,CL-4-PW-2b-ii,STATED_IN,at least 12 characters
+THR-11,CL-4-PW-2b-iii,STATED_IN,at least 8 characters
+THR-12,CL-4-PW-2c-ii,STATED_IN,a minimum of three words

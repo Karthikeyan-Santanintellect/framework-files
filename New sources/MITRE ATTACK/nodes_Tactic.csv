@@ -1,0 +1,15 @@
+tactic_id,name,column_order,stated_technique_count_text,stated_technique_count,source_document
+TA01,RECONNAISSANCE,1,10 techniques,10,KB 2/USA/Mitre Att&ck.pdf
+TA02,RESOURCE DEVELOPMENT,2,8 techniques,8,KB 2/USA/Mitre Att&ck.pdf
+TA03,INITIAL ACCESS,3,10 techniques,10,KB 2/USA/Mitre Att&ck.pdf
+TA04,EXECUTION,4,14 techniques,14,KB 2/USA/Mitre Att&ck.pdf
+TA05,PERSISTENCE,5,20 techniques,20,KB 2/USA/Mitre Att&ck.pdf
+TA06,PRIVILEGE ESCALATION,6,14 techniques,14,KB 2/USA/Mitre Att&ck.pdf
+TA07,DEFENSE EVASION,7,43 techniques,43,KB 2/USA/Mitre Att&ck.pdf
+TA08,CREDENTIAL ACCESS,8,17 techniques,17,KB 2/USA/Mitre Att&ck.pdf
+TA09,DISCOVERY,9,32 techniques,32,KB 2/USA/Mitre Att&ck.pdf
+TA10,LATERAL MOVEMENT,10,9 techniques,9,KB 2/USA/Mitre Att&ck.pdf
+TA11,COLLECTION,11,17 techniques,17,KB 2/USA/Mitre Att&ck.pdf
+TA12,COMMAND AND CONTROL,12,18 techniques,18,KB 2/USA/Mitre Att&ck.pdf
+TA13,EXFILTRATION,13,9 techniques,9,KB 2/USA/Mitre Att&ck.pdf
+TA14,IMPACT,14,14 techniques,14,KB 2/USA/Mitre Att&ck.pdf

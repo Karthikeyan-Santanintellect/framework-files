@@ -1,0 +1,5 @@
+source_id,target_id,rel_type
+reg18(6)(a),penalty_tier_a,SETS_PENALTY_TIER
+reg18(6)(b),penalty_tier_b,SETS_PENALTY_TIER
+reg18(6)(c),penalty_tier_c,SETS_PENALTY_TIER
+reg18(6)(d),penalty_tier_d,SETS_PENALTY_TIER

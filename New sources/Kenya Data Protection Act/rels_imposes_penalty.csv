@@ -1,0 +1,13 @@
+source_id,target_id,rel_type,penalty_type
+s19(3),PEN_s19(3),IMPOSES_PENALTY,offence
+s19(7),PEN_s19(7),IMPOSES_PENALTY,offence
+s30(3),PEN_s30(3),IMPOSES_PENALTY,offence
+s57(3),PEN_s57(3),IMPOSES_PENALTY,offence
+s58(3),PEN_s58(3),IMPOSES_PENALTY,offence and conviction penalty
+s61,PEN_s61,IMPOSES_PENALTY,offence and conviction penalty
+s63,PEN_s63,IMPOSES_PENALTY,administrative fine
+s72(1),PEN_s72(1),IMPOSES_PENALTY,offence
+s72(2),PEN_s72(2),IMPOSES_PENALTY,offence
+s72(3),PEN_s72(3),IMPOSES_PENALTY,offence
+s72(5),PEN_s72(5),IMPOSES_PENALTY,offence
+s73(1),PEN_s73(1),IMPOSES_PENALTY,general penalty

@@ -1,0 +1,7 @@
+concept_id,term,text,slide_id,source_document
+con_fedramp,Federal Risk and Authorization Management Program (FedRAMP),The Federal Risk and Authorization Management Program (FedRAMP) promotes the adoption of secure cloud services across the US Government by providing a standardized approach to security and risk assessment.,slide_02,KB 2/USA/FedRAMP.pdf
+con_pato,Provisional Authority to Operate (P-ATO),"The JAB issues provisional authorizations (P-ATO); this is not a risk acceptance, but an assurance to Agencies that the risk posture of the system has been reviewed by DoD, DHS, and GSA, and approved.",slide_06,KB 2/USA/FedRAMP.pdf
+con_oscal,Open Security Control Automation Language (OSCAL),Digitizing FedRAMP security packages using Open Security Control Automation Language (OSCAL) to automate the authorization process,slide_08,KB 2/USA/FedRAMP.pdf
+con_fedramp_authorized,FedRAMP Authorized,,slide_06,KB 2/USA/FedRAMP.pdf
+con_agency_initial_ato,Agency Initial ATO,Initial Agency reviews CSP FedRAMP security package; Agency/CSP submits the security package and Agency ATO to the FedRAMP PMO. FedRAMP confirms package meets FedRAMP requirements and makes security package available for Agencies to reuse.,slide_06,KB 2/USA/FedRAMP.pdf
+con_agency_leveraged_ato,Agency Leveraged ATO,Agency reviews JAB or Initial Agency FedRAMP ATO security packages and issues Agency ATO. Agency sends a copy of ATO letter to FedRAMP PMO for record keeping.,slide_06,KB 2/USA/FedRAMP.pdf

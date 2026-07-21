@@ -1,0 +1,14 @@
+source_id,target_id,rel_type
+elem_1,ussg_b1,BASED_ON_PROVISION
+elem_2,ussg_b2A,BASED_ON_PROVISION
+elem_2,ussg_b2B,BASED_ON_PROVISION
+elem_2,ussg_b2C,BASED_ON_PROVISION
+elem_3,ussg_b3,BASED_ON_PROVISION
+elem_4,ussg_b4A,BASED_ON_PROVISION
+elem_4,ussg_b4B,BASED_ON_PROVISION
+elem_5,ussg_b5A,BASED_ON_PROVISION
+elem_5,ussg_b5B,BASED_ON_PROVISION
+elem_5,ussg_b5C,BASED_ON_PROVISION
+elem_6,ussg_b6,BASED_ON_PROVISION
+elem_7,ussg_b7,BASED_ON_PROVISION
+elem_8,ussg_c,BASED_ON_PROVISION

@@ -1,0 +1,25 @@
+typicalerror_id,revealed_by,text,source_document
+TE_U01,unit testing,Failure of an algorithm to satisfy a software requirement,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U02,unit testing,Incorrect loop operations,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U03,unit testing,Incorrect logic decisions,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U04,unit testing,Failure to process correctly legitimate combinations of input conditions,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U05,unit testing,Incorrect responses to missing or corrupted input data,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U06,unit testing,"Incorrect handling of exceptions, such as arithmetic faults or violations of array limits",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U07,unit testing,Incorrect computation sequence,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_U08,unit testing,"Inadequate algorithm precision, accuracy, or performance",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I01,integration testing,Incorrect interrupt handling.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I02,integration testing,Failure to satisfy execution time requirements.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I03,integration testing,"Incorrect software response to hardware transients or hardware failures, for example, start-up sequencing, transient input loads, and input power transients.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I04,integration testing,"Data bus and other resource contention problems, for example, memory mapping.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I05,integration testing,Inability of built-in test to detect failures.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I06,integration testing,Errors in hardware/software interfaces.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I07,integration testing,Incorrect behavior of control loops.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I08,integration testing,Incorrect control of memory management hardware or other hardware devices under software control.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I09,integration testing,Stack overflow.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I10,integration testing,Incorrect operation of mechanism(s) used to confirm the correctness and compatibility of field-loadable software.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I11,integration testing,Violations of software partitioning.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I12,integration testing,Incorrect initialization of variables and constants.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I13,integration testing,Parameter passing errors.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I14,integration testing,"Data corruption, especially global data.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I15,integration testing,Inadequate end-to-end numerical resolution.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TE_I16,integration testing,Incorrect sequencing of events and operations.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

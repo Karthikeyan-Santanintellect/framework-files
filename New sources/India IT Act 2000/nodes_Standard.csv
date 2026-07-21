@@ -1,0 +1,11 @@
+standard_id,product,standard,rule_id,source_document
+STD-1,Public Key Infrastructure,PKIX,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-2,Digital Signature Certificates and Digital Signature revocation list,X.509. version 3 certificates as specified in ITU RFC 1422,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-3,Directory (DAP and LDAP),X500 for publication of certificates and Certification Revocation Lists (CRLs),CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-4,Database Management Operations,Use of generic SQL,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-5,Public Key algorithm,DSA and RSA,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-6,Digital Hash Function,MD5 and SHA-1,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-7,RSA Public Key Technology,"PKCS#1 RSA Encryption Standard (512, 1024, 2048 bit) PKCS#5 Password Based Encryption Standard PKCS#7 Cryptographic Message Syntax standard PKCS#8 Private Key Information Syntax standard PKCS#9 Selected Attribute Types PKCS#10 RSA Certification Request PKCS#12 Portable format for storing/transporting a user’s private keys and certificates",CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-8,Distinguished name,X.520,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-9,Digital Encryption and Digital Signature,PKCS#7,CA-R6,KB 2/India/Information Technology Act 2000.pdf
+STD-10,Digital Signature Request Format,PKCS#10,CA-R6,KB 2/India/Information Technology Act 2000.pdf

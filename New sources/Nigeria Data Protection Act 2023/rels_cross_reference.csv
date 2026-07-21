@@ -1,0 +1,62 @@
+source_id,target_id,rel_type,quoted_text
+S3-2,P5,CROSS_REFERENCES,"the obligations under Part V, other than sections 24, 25, 32, and 40 of this Act"
+S3-2,S24,CROSS_REFERENCES,"other than sections 24, 25, 32, and 40 of this Act"
+S3-2,S25,CROSS_REFERENCES,"other than sections 24, 25, 32, and 40 of this Act"
+S3-2,S32,CROSS_REFERENCES,"other than sections 24, 25, 32, and 40 of this Act"
+S3-2,S40,CROSS_REFERENCES,"other than sections 24, 25, 32, and 40 of this Act"
+S3-4,S24,CROSS_REFERENCES,such processing violates or is likely to violate sections 24 and 25 of this Act
+S3-4,S25,CROSS_REFERENCES,such processing violates or is likely to violate sections 24 and 25 of this Act
+S9-2,S8,CROSS_REFERENCES,A member appointed to the Council under section 8 of this Act
+S9-2-b,S8-1-c,CROSS_REFERENCES,"government, under section 8(1)(c) of this Act"
+S11-1-f,S8-1-c,CROSS_REFERENCES,under section 8(1)(c) of this Act
+S17-2,S17-1,CROSS_REFERENCES,The staff regulations made under subsection (1)
+S18-2,S18-1,CROSS_REFERENCES,Without prejudice to the provisions of subsection (1)
+S19-2,S19-1,CROSS_REFERENCES,the Fund established under subsection (1)
+S22-3,S22-2,CROSS_REFERENCES,An auditor appointed under subsection (2)
+S23-2,S23-1,CROSS_REFERENCES,Notwithstanding the provisions of subsection (1)
+S24-4,S24-1-b,CROSS_REFERENCES,For the purposes of subsection (1) (b)
+S25-2,S25-1-b-v,CROSS_REFERENCES,shall not be legitimate for the purposes of subsection (1)(b)(v)
+S26-5,S26-4,CROSS_REFERENCES,The withdrawal of consent under subsection (4)
+S27-1-b,S25-1,CROSS_REFERENCES,specific lawful basis of processing under section 25(1) or 30(1) of this Act
+S27-1-b,S30-1,CROSS_REFERENCES,specific lawful basis of processing under section 25(1) or 30(1) of this Act
+S27-1-d,P6,CROSS_REFERENCES,existence of the rights of the data subject under Part VI
+S27-1-f,S46-1,CROSS_REFERENCES,right to lodge a complaint with the Commission in accordance with section 46 (1) of this Act
+S27-3,S27-1,CROSS_REFERENCES,The information referred to in subsection (1)
+S29-1-b,P6,CROSS_REFERENCES,the rights of a data subject under Part VI
+S29-1-c,P7,CROSS_REFERENCES,"to ensure the security, integrity, and confidentiality of personal data as required in Part VII"
+S29-2,S29-1,CROSS_REFERENCES,The measures under subsection (1)
+S30-3,S30-2,CROSS_REFERENCES,in making regulations or issuing directives under subsection (2)
+S31-3,S31-2,CROSS_REFERENCES,For the purposes of subsection (2)
+S31-4,S31-1,CROSS_REFERENCES,subsection (1) shall not apply
+S37-2,S37-1,CROSS_REFERENCES,Subsection (1) shall not apply
+S38-2-b,S38-2-a,CROSS_REFERENCES,transmit the personal data obtained under paragraph (a)
+S39-2,S39-1,CROSS_REFERENCES,Measures implemented under subsection (1)
+S40-4,S40-1,CROSS_REFERENCES,"The notifications and communications referred to in subsections (1), (2) and (3)"
+S40-4,S40-2,CROSS_REFERENCES,"The notifications and communications referred to in subsections (1), (2) and (3)"
+S40-4,S40-3,CROSS_REFERENCES,"The notifications and communications referred to in subsections (1), (2) and (3)"
+S40-5,S40-2,CROSS_REFERENCES,a personal data breach notified to it under subsection (2)
+S40-6,S40-3,CROSS_REFERENCES,to adequately inform data subjects of a personal data breach for purposes of subsection (3)
+S40-7,S40-3,CROSS_REFERENCES,likely to result in a risk to the rights and freedoms of a data subject under subsection (3)
+S41-1-b,S43,CROSS_REFERENCES,one of the conditions set out in section 43 of this Act applies
+S41-2,S42,CROSS_REFERENCES,the adequacy of protection under section 42 of this Act
+S41-3,S42,CROSS_REFERENCES,to explain their adequacy in terms of section 42 of this Act
+S42-2,S42-1,CROSS_REFERENCES,The adequacy of protection referred to in subsection (1)
+S42-3,S42-2,CROSS_REFERENCES,the factors set out under subsection (2)
+S42-4,S42-1,CROSS_REFERENCES,affords an adequate level of protection under subsection (1)
+S42-6,S42-4,CROSS_REFERENCES,The absence of a determination by the Commission under subsection (4) or (5)
+S42-6,S42-5,CROSS_REFERENCES,The absence of a determination by the Commission under subsection (4) or (5)
+S42-7,S42-4,CROSS_REFERENCES,The Commission may make a determination under subsection (4)
+S43-1,S42,CROSS_REFERENCES,In the absence of adequacy of protection under section 42 of this Act
+S44-2,S44-1,CROSS_REFERENCES,Registration under subsection (1)
+S44-3,S44-2,CROSS_REFERENCES,any significant change to the information submitted under subsection (2)
+S46-6,S46-5,CROSS_REFERENCES,For the purposes of subsection (5)
+S47-2,S47-1,CROSS_REFERENCES,The order made by the Commission under subsection (1)
+S47-3-d,S50,CROSS_REFERENCES,a right to judicial review under section 50 of this Act
+S48-1,S46,CROSS_REFERENCES,after completing an investigation under section 46 of this Act
+S48-2,S48-1,CROSS_REFERENCES,An enforcement order made or sanction imposed under subsection (1)
+S48-3,S48-2-d,CROSS_REFERENCES,A penalty or remedial fee under subsection (2)(d)
+S49-1,S47,CROSS_REFERENCES,who fails to comply with orders made under section 47 of this Act
+S54-3,S54-2,CROSS_REFERENCES,The notice referred to in subsection (2)
+S58-3,S58-2,CROSS_REFERENCES,A warrant issued under subsection (2)
+S61-2,S61-1,CROSS_REFERENCES,Without prejudice to subsection (1)
+S64-2,S64-1,CROSS_REFERENCES,For the purpose of subsection (1)

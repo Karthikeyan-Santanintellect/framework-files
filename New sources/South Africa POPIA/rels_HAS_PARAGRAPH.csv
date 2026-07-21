@@ -1,0 +1,6 @@
+source_id,target_id,rel_type
+def_complaint,defp_complaint_a,HAS_PARAGRAPH
+def_complaint,defp_complaint_b,HAS_PARAGRAPH
+def_complaint,defp_complaint_c,HAS_PARAGRAPH
+def_office_hours,defp_office_hours_a,HAS_PARAGRAPH
+def_office_hours,defp_office_hours_b,HAS_PARAGRAPH

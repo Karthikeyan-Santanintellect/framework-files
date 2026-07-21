@@ -1,0 +1,7 @@
+scalingfactor_id,factor,stated_in,document_id,source_document
+SF-01,"The device’s intended use, indications for use, and reasonably foreseeable misuse;",IV.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SF-02,The presence and functionality of its electronic data interfaces;,IV.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SF-03,Its intended and actual environment of use;20,IV.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SF-04,The risks presented by cybersecurity vulnerabilities;,IV.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SF-05,The exploitability of the vulnerabilities; and,IV.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+SF-06,The risk of patient harm due to vulnerability exploitation.,IV.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

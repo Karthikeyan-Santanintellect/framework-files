@@ -1,0 +1,6 @@
+source_id,target_id,rel_type,division_number
+sch_2_p2,sch_2_p2_d1,SCHEDULE_HAS_DIVISION,1
+sch_2_p2,sch_2_p2_d2,SCHEDULE_HAS_DIVISION,2
+sch_2_p2,sch_2_p2_d3,SCHEDULE_HAS_DIVISION,3
+sch_2_p3,sch_2_p3_d1,SCHEDULE_HAS_DIVISION,1
+sch_2_p3,sch_2_p3_d2,SCHEDULE_HAS_DIVISION,2

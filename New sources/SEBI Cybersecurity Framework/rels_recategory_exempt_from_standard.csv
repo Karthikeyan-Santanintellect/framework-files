@@ -1,0 +1,104 @@
+source_id,target_id,rel_type,standard_name
+CAT-selfcert,GV.OC.S1,EXEMPT_FROM,Governance: Organizational Context – Standard 1
+CAT-smallsize,GV.OC.S1,EXEMPT_FROM,Governance: Organizational Context – Standard 1
+CAT-selfcert,GV.OC.S3,EXEMPT_FROM,Governance: Organizational Context – Standard 3
+CAT-smallsize,GV.OC.S3,EXEMPT_FROM,Governance: Organizational Context – Standard 3
+CAT-selfcert,GV.RR.S1,EXEMPT_FROM,"Governance: Roles, Responsibilities and Authorities – Standard 1"
+CAT-smallsize,GV.RR.S1,EXEMPT_FROM,"Governance: Roles, Responsibilities and Authorities – Standard 1"
+CAT-selfcert,GV.RR.S4,EXEMPT_FROM,"Governance: Roles, Responsibilities and Authorities – Standard 4"
+CAT-smallsize,GV.RR.S4,EXEMPT_FROM,"Governance: Roles, Responsibilities and Authorities – Standard 4"
+CAT-selfcert,GV.RR.S5,EXEMPT_FROM,"Governance: Roles, Responsibilities and Authorities – Standard 5"
+CAT-smallsize,GV.RR.S5,EXEMPT_FROM,"Governance: Roles, Responsibilities and Authorities – Standard 5"
+CAT-selfcert,GV.OV.S1,EXEMPT_FROM,Governance: Oversight – Standard 1
+CAT-smallsize,GV.OV.S1,EXEMPT_FROM,Governance: Oversight – Standard 1
+CAT-selfcert,GV.OV.S2,EXEMPT_FROM,Governance: Oversight – Standard 2
+CAT-smallsize,GV.OV.S2,EXEMPT_FROM,Governance: Oversight – Standard 2
+CAT-selfcert,GV.OV.S3,EXEMPT_FROM,Governance: Oversight – Standard 3
+CAT-smallsize,GV.OV.S3,EXEMPT_FROM,Governance: Oversight – Standard 3
+CAT-selfcert,GV.OV.S4,EXEMPT_FROM,Governance: Oversight – Standard 4
+CAT-smallsize,GV.OV.S4,EXEMPT_FROM,Governance: Oversight – Standard 4
+CAT-selfcert,GV.RM.S1,EXEMPT_FROM,Governance: Risk Management– Standard 1
+CAT-smallsize,GV.RM.S1,EXEMPT_FROM,Governance: Risk Management– Standard 1
+CAT-selfcert,GV.RM.S2,EXEMPT_FROM,Governance: Risk Management– Standard 2
+CAT-smallsize,GV.RM.S2,EXEMPT_FROM,Governance: Risk Management– Standard 2
+CAT-selfcert,GV.RM.S3,EXEMPT_FROM,Governance: Risk Management– Standard 3
+CAT-smallsize,GV.RM.S3,EXEMPT_FROM,Governance: Risk Management– Standard 3
+CAT-selfcert,GV.RM.S4,EXEMPT_FROM,Governance: Risk Management– Standard 4
+CAT-smallsize,GV.RM.S4,EXEMPT_FROM,Governance: Risk Management– Standard 4
+CAT-selfcert,GV.SC.S1,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 1
+CAT-smallsize,GV.SC.S1,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 1
+CAT-selfcert,GV.SC.S2,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 2
+CAT-smallsize,GV.SC.S2,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 2
+CAT-selfcert,GV.SC.S3,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 3
+CAT-smallsize,GV.SC.S3,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 3
+CAT-selfcert,GV.SC.S6,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 6
+CAT-smallsize,GV.SC.S6,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 6
+CAT-selfcert,GV.SC.S7,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 7
+CAT-smallsize,GV.SC.S7,EXEMPT_FROM,Governance: Cybersecurity Supply Chain Risk Management – Standard 7
+CAT-selfcert,ID.AM.S2,EXEMPT_FROM,Identify: Asset Management – Standard 2
+CAT-smallsize,ID.AM.S2,EXEMPT_FROM,Identify: Asset Management – Standard 2
+CAT-selfcert,ID.AM.S6,EXEMPT_FROM,Identify: Asset Management – Standard 6
+CAT-smallsize,ID.AM.S6,EXEMPT_FROM,Identify: Asset Management – Standard 6
+CAT-selfcert,ID.RA.S1,EXEMPT_FROM,Identify: Risk Assessment– Standard 1
+CAT-smallsize,ID.RA.S1,EXEMPT_FROM,Identify: Risk Assessment– Standard 1
+CAT-selfcert,ID.RA.S2,EXEMPT_FROM,Identify: Risk Assessment– Standard 2
+CAT-smallsize,ID.RA.S2,EXEMPT_FROM,Identify: Risk Assessment– Standard 2
+CAT-selfcert,ID.RA.S3,EXEMPT_FROM,Identify: Risk Assessment– Standard 3
+CAT-smallsize,ID.RA.S3,EXEMPT_FROM,Identify: Risk Assessment– Standard 3
+CAT-selfcert,ID.RA.S5,EXEMPT_FROM,Identify: Risk Assessment – Standard 5
+CAT-smallsize,ID.RA.S5,EXEMPT_FROM,Identify: Risk Assessment – Standard 5
+CAT-selfcert,PR.AA.S4,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard4"
+CAT-smallsize,PR.AA.S4,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard4"
+CAT-selfcert,PR.AA.S15,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard15"
+CAT-smallsize,PR.AA.S15,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard15"
+CAT-selfcert,PR.AA.S16,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard16"
+CAT-smallsize,PR.AA.S16,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard16"
+CAT-selfcert,PR.AA.S17,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard17"
+CAT-smallsize,PR.AA.S17,EXEMPT_FROM,"Protect: Identity Management, Authentication, Access Control – Standard17"
+CAT-selfcert,PR.DS.S1,EXEMPT_FROM,Protect: Data Security – Standard 1
+CAT-smallsize,PR.DS.S1,EXEMPT_FROM,Protect: Data Security – Standard 1
+CAT-selfcert,PR.DS.S5,EXEMPT_FROM,Protect: Data Security – Standard 5
+CAT-smallsize,PR.DS.S5,EXEMPT_FROM,Protect: Data Security – Standard 5
+CAT-selfcert,PR.DS.S6,EXEMPT_FROM,Protect: Data Security – Standard 6
+CAT-smallsize,PR.DS.S6,EXEMPT_FROM,Protect: Data Security – Standard 6
+CAT-selfcert,PR.IP.S3,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 3
+CAT-smallsize,PR.IP.S3,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 3
+CAT-selfcert,PR.IP.S16,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 16
+CAT-smallsize,PR.IP.S16,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 16
+CAT-selfcert,PR.IP.S17,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 17
+CAT-smallsize,PR.IP.S17,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 17
+CAT-selfcert,PR.MA.S1,EXEMPT_FROM,Protect: Maintenance – Standard 1
+CAT-smallsize,PR.MA.S1,EXEMPT_FROM,Protect: Maintenance – Standard 1
+CAT-selfcert,PR.MA.S2,EXEMPT_FROM,Protect: Maintenance – Standard 2
+CAT-smallsize,PR.MA.S2,EXEMPT_FROM,Protect: Maintenance – Standard 2
+CAT-selfcert,DE.CM.S4,EXEMPT_FROM,Detect: Security Continuous Monitoring – Standard 4
+CAT-smallsize,DE.CM.S4,EXEMPT_FROM,Detect: Security Continuous Monitoring – Standard 4
+CAT-selfcert,DE.DP.S4,EXEMPT_FROM,Detect: Detection Process – Standard 4
+CAT-smallsize,DE.DP.S4,EXEMPT_FROM,Detect: Detection Process – Standard 4
+CAT-selfcert,DE.DP.S5,EXEMPT_FROM,Detect: Detection Process – Standard 5
+CAT-smallsize,DE.DP.S5,EXEMPT_FROM,Detect: Detection Process – Standard 5
+CAT-selfcert,RS.MA.S2,EXEMPT_FROM,Respond: Incident Management – Standard 2
+CAT-smallsize,RS.MA.S2,EXEMPT_FROM,Respond: Incident Management – Standard 2
+CAT-selfcert,RS.MA.S3,EXEMPT_FROM,Respond: Incident Management – Standard 3
+CAT-smallsize,RS.MA.S3,EXEMPT_FROM,Respond: Incident Management – Standard 3
+CAT-selfcert,RS.MA.S5,EXEMPT_FROM,Respond: Incident Management – Standard 5
+CAT-smallsize,RS.MA.S5,EXEMPT_FROM,Respond: Incident Management – Standard 5
+CAT-selfcert,EV.ST.S1,EXEMPT_FROM,Evolve: Strategies – Standard 1
+CAT-smallsize,EV.ST.S1,EXEMPT_FROM,Evolve: Strategies – Standard 1
+CAT-selfcert,EV.ST.S2,EXEMPT_FROM,Evolve: Strategies – Standard 2
+CAT-smallsize,EV.ST.S2,EXEMPT_FROM,Evolve: Strategies – Standard 2
+CAT-selfcert,EV.ST.S3,EXEMPT_FROM,Evolve: Strategies – Standard 3
+CAT-smallsize,EV.ST.S3,EXEMPT_FROM,Evolve: Strategies – Standard 3
+CAT-selfcert,EV.ST.S4,EXEMPT_FROM,"Evolve: Strategies – Standard 4 Along with Standards mentioned in Table 25, Self-certification REs shall be exempted from compliance to periodic cyber audit by CERT-In empanelled IS auditing organizations, i.e., Protect – Information Protection Processes and Procedures – Standard 14 (PR.IP.S14) and periodic evaluation of cybersecurity posture – Evolve – Strategies -Standard 5 (EV.ST.S5)."
+CAT-smallsize,EV.ST.S4,EXEMPT_FROM,"Evolve: Strategies – Standard 4 Along with Standards mentioned in Table 25, Self-certification REs shall be exempted from compliance to periodic cyber audit by CERT-In empanelled IS auditing organizations, i.e., Protect – Information Protection Processes and Procedures – Standard 14 (PR.IP.S14) and periodic evaluation of cybersecurity posture – Evolve – Strategies -Standard 5 (EV.ST.S5)."
+CAT-midsize,GV.OV.S4,EXEMPT_FROM,Governance: Oversight – Standard 4
+CAT-midsize,ID.RA.S3,EXEMPT_FROM,Identify: Risk Assessment – Standard 3
+CAT-midsize,PR.DS.S5,EXEMPT_FROM,Protect: Data Security – Standard 5
+CAT-midsize,PR.DS.S6,EXEMPT_FROM,Protect: Data Security – Standard 6
+CAT-midsize,PR.IP.S16,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 16
+CAT-midsize,PR.IP.S17,EXEMPT_FROM,Protect: Information Protection Processes and Procedures – Standard 17
+CAT-midsize,DE.DP.S4,EXEMPT_FROM,Detect: Detection Process – Standard 4
+CAT-midsize,DE.DP.S5,EXEMPT_FROM,Detect: Detection Process – Standard 5
+CAT-midsize,RS.MA.S5,EXEMPT_FROM,Respond: Incident Management – Standard 5
+CAT-selfcert,PR.IP.S14,EXEMPT_FROM,"Self-certification REs shall be exempted from compliance to periodic cyber audit by CERT-In empanelled IS auditing organizations, i.e., Protect – Information Protection Processes and Procedures – Standard 14 (PR.IP.S14)"
+CAT-selfcert,EV.ST.S5,EXEMPT_FROM,periodic evaluation of cybersecurity posture – Evolve – Strategies -Standard 5 (EV.ST.S5)

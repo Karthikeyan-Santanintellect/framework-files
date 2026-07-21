@@ -1,0 +1,5 @@
+definition_id,term,article_id,paragraph_id,definition_text,source_document
+DEF-DATA,data,ART3,ART3-P1,"For the purpose of this Law, data shall refer to any record of information in electronic or other form.",KB 2/China/Data Security Law of China.pdf
+DEF-DATA-HANDLING,data handling,ART3,ART3-P2,"Data handling shall refer to the collection, storage, use, processing, transmission, provision and disclosure of data.",KB 2/China/Data Security Law of China.pdf
+DEF-DATA-SECURITY,data security,ART3,ART3-P3,Data security shall refer to the ability to ensure that data are being effectively protected and lawfully used and to keep the secure state by adopting necessary measures.,KB 2/China/Data Security Law of China.pdf
+DEF-CORE-DATA,core data of the State,ART21,ART21-P2,"Data that have a bearing on national security, the lifelines of national economy, umportant aspects of people's livelihood and major public interests shall constitute the core data of the State and shall be subject to stricter management system.",KB 2/China/Data Security Law of China.pdf

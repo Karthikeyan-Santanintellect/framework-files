@@ -12,6 +12,15 @@ plus one `.zip` and one `.xlsx`
 **Rows are instruments, not files.** Where one instrument ships as several PDFs (Mexico's law
 LFPDPPP comes as 4, FISMA as 6, CMMC as 4) they are grouped into a single row and the file count noted.
 
+> ## ⚠️ Superseded in part — extraction pass, 2026-07-21
+>
+> All 64 missing instruments below have since been extracted into folders in this directory
+> (see [README.md](README.md)). Doing so forced every source file open, which revealed that
+> **eight documents are not the instrument their filename claims**. The affected rows below are
+> annotated inline with **[CORRECTED]**. The headline consequence: the **KVKK statute, POPIA Act,
+> India IT Act, Australian Privacy Act, DO-178C standard, COSO framework body and UN R156 are
+> absent from the knowledge base** — the files bearing those names contain something else.
+
 ## Summary
 
 | Status | Count | Meaning |
@@ -100,10 +109,10 @@ identified from the filename plus its jurisdiction folder.
 | NIST SP 800-207 — Zero Trust Architecture | 1 | |
 | CMMC 2.0 | 4 | ✔ content-verified — DoD Model Overview v2.13 (Sept 2024), v2.0 (2021), a CMMC 2.0 brief and a COGR October 2025 update |
 | FISMA | 6 | ✔ content-verified — the enacted Public Law 113-283 (2014) plus S.2902 (117th Congress) and four FY25 CIO/IG/SAOP metrics documents |
-| FedRAMP | 1 | ✔ content-verified |
+| FedRAMP | 1 | **[CORRECTED]** ✔ content-verified — **not a standard, baseline, playbook or CONOPS**. A 13-slide program-overview briefing deck (Aug 2023). No control baselines exist in it |
 | SOC 2 | 1 | ✔ content-verified — AICPA TSP Section 100, *2017 Trust Services Criteria* |
 | Sarbanes-Oxley Act | 1 | |
-| COSO ERM | 2 | ✔ content-verified — *Integrating with Strategy and Performance* (appendices) + *Compliance Risk Management* application paper |
+| COSO ERM | 2 | **[CORRECTED]** ✔ content-verified — the first file is **Appendices Volume II only**: no components, no principles, no glossary. The 5 components and 20 principles exist only in the second file (the Compliance Risk Management application paper) |
 | SOX/COSO adjacent: FFIEC Cybersecurity Assessment Tool | 1 | |
 | NAIC Insurance Data Security Model Law | 1 | |
 | COPPA — Children's Online Privacy Protection Act | 1 | |
@@ -113,8 +122,8 @@ identified from the filename plus its jurisdiction folder.
 | CPNI Rules | 1 | ✔ content-verified — FCC 01-247 order, not the codified 47 CFR 64.2001–2011 rules |
 | DFARS | 1 | ✔ content-verified — Volume III, Parts 201–253 |
 | ITAR | 1 | ✔ content-verified — amended through 2 Oct 2025 |
-| DO-178C — Airborne Systems Software | 1 | |
-| MITRE ATT&CK | 1 | ⛔ **image-only PDF — zero extractable text**; needs OCR or a different source |
+| DO-178C — Airborne Systems Software | 1 | **[CORRECTED]** ✔ content-verified — **not the standard**. A Parasoft marketing ebook; the Annex A objectives tables are page images with no text layer. The DO-178C standard is absent from the KB |
+| MITRE ATT&CK | 1 | ⛔ image-only PDF. **[EXTRACTED via OCR]** — 206 of the source's own stated 235 techniques recovered, each with an OCR confidence flag |
 | Massachusetts Boards of Health — Manual of Laws | 1 | ✔ content-verified — MAHB 2016 manual; a public-health law compendium, not a cyber/privacy framework |
 | Massachusetts fraud & abuse compliance manual | 1 | ✔ content-verified — Massachusetts Medical Society (2003); healthcare billing compliance, not cyber/privacy |
 | CCPA | 1 | ✔ content-verified — CCPA of 2018 as amended effective 01/01/2025. **Largely covered already**: the `CPRA` folder models Civil Code 1798.100–.199.40. Worth diffing for the 2025 SB 1223 / AB 1008 / AB 1824 amendments the 2020 text lacks |
@@ -146,7 +155,7 @@ identified from the filename plus its jurisdiction folder.
 
 | Instrument | Jurisdiction | Files | Notes |
 |---|---|---:|---|
-| Information Technology Act 2000 | India | 1 | Complements the completed DPDPA graph |
+| Information Technology Act 2000 | India | 1 | **[CORRECTED]** ✔ content-verified — **not the Act**. Four Gazette notifications of 17 Oct 2000 (commencement, Certifying Authorities Rules + Schedules I–V, Advisory Committee, Appellate Tribunal Procedure Rules). No sections, no s.2 definitions, no offence provisions. The IT Act is absent from the KB |
 | RBI Cybersecurity Framework for Banks | India | 1 | |
 | SEBI Cybersecurity & Cyber Resilience Framework | India | 1 | |
 | PIPL — Personal Information Protection Law | China | 1 | |
@@ -157,7 +166,7 @@ identified from the filename plus its jurisdiction folder.
 | MAS Technology Risk Management Guidelines | Singapore | 1 | |
 | PDP Law | Indonesia | 1 | |
 | PDPA | Thailand | 1 | |
-| Australian Privacy Act 1988 + Notifiable Data Breaches scheme | Australia | 4 | ✔ content-verified — the Act plus the NDB scheme guideline, an overview and the Jan–Jun 2024 statistics report |
+| Australian Privacy Act 1988 + NDB scheme | Australia | 4 | **[CORRECTED]** ✔ content-verified — **none of the four files contain the Act**. The main file is the OAIC *APP Guidelines* (expressly non-binding); the others are an AMSRO factsheet, a **Fortinet vendor white paper** and the OAIC statistics report. The Privacy Act 1988 is absent from the KB |
 | APRA Prudential Standard CPS 234 | Australia | 1 | |
 | ASD Essential Eight Maturity Model | Australia | 1 | |
 | Philippines Data Privacy Act 2012 — IRR | Philippines | 1 | ✔ content-verified — the final IRR only (a July 2016 draft is listed under supporting material). **The Act itself (RA 10173) is not in the KB** |
@@ -172,13 +181,13 @@ identified from the filename plus its jurisdiction folder.
 | Qatar Personal Data Privacy Protection Law | Qatar | 1 | |
 | Bahrain Personal Data Protection Law | Bahrain | 1 | |
 | NCA Essential Cybersecurity Controls (ECC-2:2024) | Saudi Arabia | 1 | ✔ content-verified — the current ECC-2:2024 controls |
-| Turkey KVKK | Turkey | 1 | |
+| Turkey KVKK | Turkey | 1 | **[CORRECTED]** ✔ content-verified — **not the statute**. A 26-page journal article (Evren 2023, *Kişisel Verileri Koruma Dergisi* 5(2)) comparing GDPR and KVKK; it never reproduces a Madde's operative text. Law 6698 is absent from the KB |
 | Switzerland revised FADP | Switzerland | 1 | |
 | Russia Federal Law 152-FZ | Russia | 2 | ✔ content-verified — one is an unofficial English translation |
 | Kenya Data Protection Act | Kenya | 1 | |
 | Nigeria Data Protection Act 2023 | Nigeria | 3 | ✔ content-verified — the 2023 Gazette text and the 2024 GAID implementation directive. **`Nigeria_DPA.pdf` is image-only with zero extractable text** |
-| South Africa POPIA | South Africa | 1 | |
-| UNECE WP.29 — UN Regulations 155 & 156 | International | 1 | ✔ content-verified — E/ECE/TRANS/505/Rev.3/Add.154 (2021); automotive cybersecurity, pairs with the completed TISAX graph |
+| South Africa POPIA | South Africa | 1 | **[CORRECTED]** ✔ content-verified — **not the Act**. The 2025 *Amendment of the Regulations* under s 113(3): no chapters, no s 1 definitions, no eight conditions, no offences. The POPIA Act is absent from the KB |
+| UNECE WP.29 — UN Regulation 155 | International | 1 | **[CORRECTED]** ✔ content-verified — Add.154 contains **R155 only**. R156 (Software Update Management) is a separate addendum (Add.155) and is **absent from the KB**, despite the filename naming both |
 
 ---
 

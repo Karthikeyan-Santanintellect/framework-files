@@ -1,0 +1,70 @@
+source_id,target_id,rel_type,term
+DEF:1798.140(a),1798.140(a),DEFINED_IN,Advertising and marketing
+DEF:1798.140(b),1798.140(b),DEFINED_IN,Aggregate consumer information
+DEF:1798.140(c),1798.140(c),DEFINED_IN,Biometric information
+DEF:1798.140(d),1798.140(d),DEFINED_IN,Business
+DEF:1798.140(e),1798.140(e),DEFINED_IN,Business purpose
+DEF:1798.140(f),1798.140(f),DEFINED_IN,Collects
+DEF:1798.140(g),1798.140(g),DEFINED_IN,Commercial purposes
+DEF:1798.140(h),1798.140(h),DEFINED_IN,Consent
+DEF:1798.140(i),1798.140(i),DEFINED_IN,Consumer
+DEF:1798.140(j)(1),1798.140(j)(1),DEFINED_IN,Contractor
+DEF:1798.140(k),1798.140(k),DEFINED_IN,Cross-context behavioral advertising
+DEF:1798.140(l),1798.140(l),DEFINED_IN,Dark pattern
+DEF:1798.140(m),1798.140(m),DEFINED_IN,Deidentified
+DEF:1798.140(n),1798.140(n),DEFINED_IN,Designated methods for submitting requests
+DEF:1798.140(o),1798.140(o),DEFINED_IN,Device
+DEF:1798.140(p),1798.140(p),DEFINED_IN,Homepage
+DEF:1798.140(q),1798.140(q),DEFINED_IN,Household
+DEF:1798.140(r),1798.140(r),DEFINED_IN,Infer
+DEF:1798.140(s),1798.140(s),DEFINED_IN,Intentionally interacts
+DEF:1798.140(t),1798.140(t),DEFINED_IN,Nonpersonalized advertising
+DEF:1798.140(u),1798.140(u),DEFINED_IN,Person
+DEF:1798.140(v)(1),1798.140(v)(1),DEFINED_IN,Personal information
+DEF:1798.140(v)(2)(B)(i),1798.140(v)(2)(B)(i),DEFINED_IN,publicly available
+DEF:1798.140(w),1798.140(w),DEFINED_IN,Precise geolocation
+DEF:1798.140(x),1798.140(x),DEFINED_IN,Probabilistic identifier
+DEF:1798.140(y),1798.140(y),DEFINED_IN,Processing
+DEF:1798.140(z),1798.140(z),DEFINED_IN,Profiling
+DEF:1798.140(aa),1798.140(aa),DEFINED_IN,Pseudonymize
+DEF:1798.140(ab),1798.140(ab),DEFINED_IN,Research
+DEF:1798.140(ac),1798.140(ac),DEFINED_IN,Security and integrity
+DEF:1798.140(ad)(1),1798.140(ad)(1),DEFINED_IN,Sell
+DEF:1798.140(ae),1798.140(ae),DEFINED_IN,Sensitive personal information
+DEF:1798.140(ae)(1)(G)(ii),1798.140(ae)(1)(G)(ii),DEFINED_IN,Neural data
+DEF:1798.140(af),1798.140(af),DEFINED_IN,Service
+DEF:1798.140(ag)(1),1798.140(ag)(1),DEFINED_IN,Service provider
+DEF:1798.140(ah)(1),1798.140(ah)(1),DEFINED_IN,Share
+DEF:1798.140(ai),1798.140(ai),DEFINED_IN,Third party
+DEF:1798.140(aj),1798.140(aj),DEFINED_IN,Unique identifier
+DEF:1798.140(ak),1798.140(ak),DEFINED_IN,Verifiable consumer request
+DEF:1798.145(g)(3)(A),1798.145(g)(3)(A),DEFINED_IN,Ownership information
+DEF:1798.145(g)(3)(B),1798.145(g)(3)(B),DEFINED_IN,Vehicle information
+DEF:1798.145(g)(3)(C),1798.145(g)(3)(C),DEFINED_IN,Vessel dealer
+DEF:1798.145(g)(3)(D),1798.145(g)(3)(D),DEFINED_IN,Vessel information
+DEF:1798.145(m)(2)(A),1798.145(m)(2)(A),DEFINED_IN,Independent contractor
+DEF:1798.145(m)(2)(B),1798.145(m)(2)(B),DEFINED_IN,Director
+DEF:1798.145(m)(2)(C),1798.145(m)(2)(C),DEFINED_IN,Medical staff member
+DEF:1798.145(m)(2)(D),1798.145(m)(2)(D),DEFINED_IN,Officer
+DEF:1798.145(m)(2)(E),1798.145(m)(2)(E),DEFINED_IN,Owner
+DEF:1798.145(n)(2)(A),1798.145(n)(2)(A),DEFINED_IN,Independent contractor
+DEF:1798.145(n)(2)(B),1798.145(n)(2)(B),DEFINED_IN,Director
+DEF:1798.145(n)(2)(C),1798.145(n)(2)(C),DEFINED_IN,Officer
+DEF:1798.145(n)(2)(D),1798.145(n)(2)(D),DEFINED_IN,Owner
+DEF:1798.145(o)(2)(A),1798.145(o)(2)(A),DEFINED_IN,Business controller information
+DEF:1798.145(o)(2)(B),1798.145(o)(2)(B),DEFINED_IN,Commercial credit reporting agency
+DEF:1798.145(o)(2)(C),1798.145(o)(2)(C),DEFINED_IN,Owner
+DEF:1798.145(o)(2)(D),1798.145(o)(2)(D),DEFINED_IN,Director
+DEF:1798.145(o)(2)(E),1798.145(o)(2)(E),DEFINED_IN,Officer
+DEF:1798.145(o)(2)(F),1798.145(o)(2)(F),DEFINED_IN,Management employee
+DEF:1798.145(q)(3)(A),1798.145(q)(3)(A),DEFINED_IN,Educational standardized assessment or educational assessment
+DEF:1798.145(q)(3)(B),1798.145(q)(3)(B),DEFINED_IN,Jeopardize the validity and reliability of that educational standardized assessment or educational assessment
+DEF:1798.146(b)(1),1798.146(b)(1),DEFINED_IN,Business associate
+DEF:1798.146(b)(2),1798.146(b)(2),DEFINED_IN,Covered entity
+DEF:1798.146(b)(3),1798.146(b)(3),DEFINED_IN,Identifiable private information
+DEF:1798.146(b)(4),1798.146(b)(4),DEFINED_IN,Individually identifiable health information
+DEF:1798.146(b)(5),1798.146(b)(5),DEFINED_IN,Medical information
+DEF:1798.146(b)(6),1798.146(b)(6),DEFINED_IN,Patient information
+DEF:1798.146(b)(7),1798.146(b)(7),DEFINED_IN,Protected health information
+DEF:1798.146(b)(8),1798.146(b)(8),DEFINED_IN,Provider of health care
+DEF:1798.148(d),1798.148(d),DEFINED_IN,reidentify

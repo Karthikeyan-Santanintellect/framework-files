@@ -1,0 +1,7 @@
+source_id,target_id,rel_type
+body_pmo,wl_pmo_ops,OPERATES_WORKLANE
+body_pmo,wl_agency_eng,OPERATES_WORKLANE
+body_pmo,wl_3pao_perf,OPERATES_WORKLANE
+body_pmo,wl_jab_auth,OPERATES_WORKLANE
+body_pmo,wl_priority,OPERATES_WORKLANE
+body_pmo,wl_training,OPERATES_WORKLANE

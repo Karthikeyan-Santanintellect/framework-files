@@ -1,0 +1,193 @@
+source_evidence_id,guide_metric_id,text,source_document
+EVID-001,GUIDE-1,Cybersecurity program policy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-002,GUIDE-1,"Cybersecurity Risk Management policies, procedures, strategies;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-003,GUIDE-1,Cybersecurity Framework profiles;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-004,GUIDE-1,Information Security Program Plan;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-005,GUIDE-1,Privacy Risk Assessments.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-006,GUIDE-1,"Risk management policies, procedures, and strategies, lessons learned;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-007,GUIDE-1,Enterprise Risk Profiles;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-008,GUIDE-1,"Cybersecurity Framework profiles; periodic reviews of risk tolerance levels, etc.; implementation documentation; continuous reviews of risk tolerance levels, etc.; risk management dashboards; profile (see NIST CSF, section 3.3); assessments/risk registers; artifacts.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-009,GUIDE-2,"Enterprise Risk Management policies, procedures, and strategies;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-010,GUIDE-2,"Cybersecurity Risk Management policies, procedures, strategies;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-011,GUIDE-3,Information security program policy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-012,GUIDE-3,"Organizational strategy, policies, and procedures;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-013,GUIDE-3,Organizational charts;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-014,GUIDE-3,Delegations of authority;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-015,GUIDE-3,Defined roles and responsibilities.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-016,GUIDE-3,"Evidence that individuals that are assigned the defined roles are carrying out their responsibilities at all levels (organization, business process, and information system);",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-017,GUIDE-3,Agency's IT security budget;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-018,GUIDE-3,Interviews with system security staff;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-019,GUIDE-5,"Organizational SCRM policies, procedures and strategies that addresses the SCRM role and responsibilities;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-020,GUIDE-5,"SCRM policies and procedures include the organization’s risk profile and persistent threats, and appropriate controls;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-021,GUIDE-5,"SCRM processes and monitoring strategies; baseline for assessing SCRM risks to IT assets, including threats to the IT system and assets and the supply chain.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-022,GUIDE-5,SCRM Risk analysis and evaluation documents;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-023,GUIDE-5,Evidence of SCRM threat analysis/evaluation/scenario;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-024,GUIDE-5,Evidence of SCRM vulnerability assessment and testing;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-025,GUIDE-5,"Evidence of SCRM internal and external communication with stakeholders, such as cybersecurity, IT, operations, legal, HR and Engineering teams;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-026,GUIDE-5,Log showing lessons learned used to update the SCRM strategy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-027,GUIDE-5,Evidence of communication regarding issues and challenges in reducing the risk of a compromise to products in their supply chain;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-028,GUIDE-5,Security control mapping of SCRM security characteristics to cybersecurity standards and best practices solutions;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-029,GUIDE-5,"Where applicable, evidence of SCRM suppliers and third-party partners routine assessment and audits.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-030,GUIDE-5,Evidence of SCRM qualitative and quantitative metrics were collected;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-031,GUIDE-5,"Templates to support SCRM data is obtained accurately, consistently, and in a reproduceable format;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-032,GUIDE-5,Change logs showing the data was used to make program improvements.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-033,GUIDE-5,Evidence to support that the organization has fully integrated (enterprise-wide) risk based SCRM program that can adjust to emerging (evolving) or near real-time threats;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-034,GUIDE-5,Evidence of trend analysis performed showing that SCRM related threats have reduced over time based on actions taken by the organization.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-035,GUIDE-7,"Directives, policies, procedures, standards, strategies, and/or standards associated with the system registration and inventory process;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-036,GUIDE-7,System interconnect inventory processes and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-037,GUIDE-7,"Information Security Program policies and procedures; FQDNs used to CISA and GSA (e.g., dashboard reports, email messages, etc.); accessible assets; performed by an independent third-party (e.g., OIGs, GSA, etc.) to assess the completeness of the approved system inventory; inventories;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-038,GUIDE-7,Asset database reports;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-039,GUIDE-7,Evidence the reports and alerts which indicate changes to the inventory are updated in real-time.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-040,GUIDE-8,Enterprise Architecture documentation or reports;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-041,GUIDE-8,Examples of security alerts resulting from unauthorized hardware being placed on the network.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-042,GUIDE-9,Policies and procedures (and related guidance) for software/license/asset management;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-043,GUIDE-9,Software naming standards/standard taxonomy document;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-044,GUIDE-9,Standard software images for devices;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-045,GUIDE-9,"BYOD policies and procedures (e.g., mobile app rules);",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-046,GUIDE-9,Enterprise Architecture bricks;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-047,GUIDE-9,Scanning policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-048,GUIDE-9,"Information system component policies and procedures; - use of automation to maintain inventories - protecting against unauthorized software - ensuring licensing conformance, restrictions, expiration, etc. - managing licenses utilization. includes EO-critical software; Inventories (to validate the completeness of the software inventory by reconciling against the software inventory); Applocker) system configurations, etc.). update information on software assets/licenses (to validate completeness); reports/dashboards (e.g., vulnerability scanning reports, SOAR, SIEM logs/reports, SCCM/Puppet reports, etc.) which list the software assets (including EO-critical software and mobile applications); Applocker) system configurations; dashboards, etc.; blocked.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-049,GUIDE-9,"Scanning and alert results, which provides updates for the solution used to track software throughout its lifecycle on a near-real time basis, or other examples of security alerts resulting from unauthorized hardware/software being placed on the network;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-050,GUIDE-9,Network scanning reports;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-051,GUIDE-9,"MaaS configurations, reports, dashboards, etc.;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-052,GUIDE-9,EA documentation;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-053,GUIDE-9,Software inventory.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-054,GUIDE-10,"Data classification policy, including the identification of agency specific data that could include PII, PHI, financial account numbers, intellectual property, operational technology data, etc.;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-055,GUIDE-10,Data Dictionary/Metadata Repository;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-056,GUIDE-10,Data Lifecycle Management Policy.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-057,GUIDE-10,"Data inventory including data type, data classification, location, owner, retention requirements;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-058,GUIDE-10,Metadata inventory;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-059,GUIDE-10,Data flow Diagrams;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-060,GUIDE-10,Data Optimization Reports;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-061,GUIDE-10,Technology Upgrade Plans;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-062,GUIDE-10,Evidence of regular reviews of data policies and procedures.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-063,GUIDE-11,"Enterprise Risk Management policies, procedures, and strategies;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-064,GUIDE-11,"Cybersecurity Risk Management policies, procedures, strategies;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-065,GUIDE-11,Risk Assessment Policies and Procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-066,GUIDE-11,Insider Threat policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-067,GUIDE-11,Data Breaches and Incident Response Polices and Procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-068,GUIDE-11,Cybersecurity training and awareness policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-069,GUIDE-11,Ongoing Authorization policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-070,GUIDE-11,System Categorization policies and procedures and SSPs;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-071,GUIDE-11,SDLC policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-072,GUIDE-11,EA policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-073,GUIDE-11,Risk Executive Council Charters/delegations of authority;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-074,GUIDE-11,POA&M policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-075,GUIDE-11,Organizational risk profiles.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-076,GUIDE-11,Risk Executive Council Charters;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-077,GUIDE-11,Risk Council meeting minutes;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-078,GUIDE-11,"Organizational, Mission, and Systemlevel Risk Assessments;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-079,GUIDE-11,System Security Plans;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-080,GUIDE-11,Security Assessment Reports;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-081,GUIDE-11,System Risk Assessments;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-082,GUIDE-11,System Categorization documents/worksheets;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-083,GUIDE-11,Cybersecurity Framework profiles;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-084,GUIDE-11,Risk registers/Cybersecurity risk registers (CSRRs);,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-085,GUIDE-11,Risk Detail Records (RDRs);,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-086,GUIDE-11,Risk heat maps;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-087,GUIDE-11,POA&Ms;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-088,GUIDE-11,Project plans/taskers;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-089,GUIDE-11,Risk Council/steering committee meeting minutes;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-090,GUIDE-11,Organization-wide risk assessment(s);,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-091,GUIDE-11,CSRR(s)s,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-092,GUIDE-11,Risk Executive Council Charters;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-093,GUIDE-11,Risk Council meeting minutes;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-094,GUIDE-11,System-level risk assessments;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-095,GUIDE-11,Privacy risk assessments;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-096,GUIDE-11,Supply chain risk assessment results;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-097,GUIDE-11,Information sharing agreements and/or MOUs;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-098,GUIDE-11,Information system authorization procedures,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-099,GUIDE-11,"Risk management policies, procedures, and strategies, lessons learned;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-100,GUIDE-11,"Cybersecurity Framework profiles, periodic reviews of risk tolerance levels, etc.;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-101,GUIDE-11,Business Impact Assessments.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-102,GUIDE-11,Meeting minutes;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-103,GUIDE-11,"Email communications; updates; updates; documentation - such as - updates to ISCM documentation, system security plans, system risk assessments; Assessment/COOP documents; exercises current/future",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-104,GUIDE-12,"Organizational risk management policies, procedures, and strategies; a Governance Risk and Compliance solution, spreadsheets, dashboards, shared information in automated workflow solutions, but should include cyber risk registers and allow stakeholders to access the risk information based on their need-toknow.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-105,GUIDE-12,"Risk Management documentation (ex. SSP/RAs, SARs, etc.); stakeholders about risk (ex. emails, meeting minutes, etc.);",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-106,GUIDE-12,"Enterprise wide POA&Ms; dashboards/reports (e.g., CDM and SIEM outputs/alerts/reports, vulnerability management dashboards, etc.). risk management dashboards; documentation; documentation, polices, procedures, and strategies;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-107,GUIDE-12,"Target-state enterprise architecture documentation updates (e.g., desired state EA and a roadmap to address any gaps with near real-time updates), etc.;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-108,GUIDE-12,Integrating SOAR to support GRC processes and functionality for real-time trend and analysis;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-109,GUIDE-12,GRC dashboards/reports.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-110,GUIDE-14,"Policies and procedures for system baselining/hardening/configuration setting management, including processes for managing deviations;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-111,GUIDE-14,Organization's tailored hardening guides.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-112,GUIDE-14,Evidence of vulnerability scanning conducted for the last four quarters;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-113,GUIDE-14,Acceptable deviation/exception lists/justifications for organizationally tailored hardening guides;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-114,GUIDE-14,Observation and analysis of Security Content Automation Protocol (SCAP) tools to determine coverage and use of rulesets and frequencies;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-115,GUIDE-14,Lessons learned incorporated into the secure configuration policies and procedures.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-116,GUIDE-14,Dashboards that highlight in real-time the devices on the network and their compliance with the agency's baselines.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-117,GUIDE-14,"Evidence of frequent, enforced system configurations;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-118,GUIDE-14,"Evidence of event-triggered configuration, Automated configuration from Continuous Diagnostics and Mitigation (CDM) events.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-119,GUIDE-14,Automated routing/approval process and queues to enforce process and prevent out-of-sequence events.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-120,GUIDE-15,Patch management/flaw remediation policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-121,GUIDE-15,Configuration management policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-122,GUIDE-15,"BYOD policies and procedures. network accessible IP assets; system showing configurations; tools and processes; prioritization, and testing of a patch, hotfix, service pack, and/or AV/Malware update; (to prove timeliness); that were obtained from all levels of the organization and were used to update/enhance policies and procedures. Could be a statement in the policies and procedures change log. using trusted, verified repositories for operating systems; performance and make continuous improvements are reported to appropriate stakeholders; patch management based on risk assessment. and software updates using trusted, verified repositories for all applications and network devices; account for and utilize all flaw discovery sources.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-123,GUIDE-17,Project plan or policies and procedures for implementation of strong authentication;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-124,GUIDE-17,E-authentication risk assessment policy and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-125,GUIDE-17,Site security plans identifying defined entry/exit points that must be protected.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-126,GUIDE-17,Physical access control system configurations identifying strong authentication mechanisms on all defined protected entry/exit points in accordance with federal and agency-specific requirements;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-127,GUIDE-17,Agency documentation of systems that are integrated and support AD/PIV-based login;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-128,GUIDE-17,Screenshots of automated tools that manages user accounts and privileges and its reporting feature or request a walkthrough and observe the process to manage accounts.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-129,GUIDE-19,ICAM policies and procedures to include privileged accounts; Audit logging policies and procedures to include privileged accounts;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-130,GUIDE-19,Access control policies and procedures addressing separation of duties and least privilege requirements.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-131,GUIDE-19,Evidence of EL3 requirements for user behavior monitoring;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-132,GUIDE-19,Examples of alerts of privileged user compromises;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-133,GUIDE-21,"Information security, data life cycle, and/or protection policies and procedures;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-134,GUIDE-21,Data classification/handling policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-135,GUIDE-21,Destruction/sanitization policies and procedures.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-136,GUIDE-21,"Evidence of database, file share, server, full disk encryption, and/or end point encryption where PII or sensitive information is stored;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-137,GUIDE-21,Evidence of use of SSL/TLS across external communication boundaries;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-138,GUIDE-21,"Evidence of capability to communicate PII or sensitive information internally (e.g., email encryption);",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-139,GUIDE-21,Evidence/testing of network access controls or other methods used to prevent and detect untrusted removable media;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-140,GUIDE-21,"Evidence of destruction/sanitization; perform blocking of personal emails, external file storage sites, and personal communication applications. of review of applicable privacy controls. wiping for agency devices; sanitization of devices that contain sensitive information; highlighting the fields used to record PII collection; accordance with the data retention schedule; in near real-time.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-141,GUIDE-22,"Data exfiltration/network defense policies and procedures. monitor inbound and outbound traffic for phishing, malware, and domain filtering; outbound traffic to detect encrypted exfiltration of information, anomalous traffic patterns, and elements of PII; Evidence that suspected malicious traffic is quarantined/blocked. utilization; certificates; level visibility, attribution, and response for its information systems. performance measure reports/dashboards; exfiltration exercises;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-142,GUIDE-22,Evidence that DNS infrastructure is monitored in accordance with ISCM strategy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-143,GUIDE-22,"Evidence of qualitative and quantitative measures on the performance of capabilities or tools used to support hostlevel visibility, attribution, and response for its information systems. security domains, including configuration management, ISCM, and incident response,",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-144,GUIDE-22,Evidence of continuous device posture assessments.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-145,GUIDE-24,Workforce assessment policies and procedures (or related documentation);,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-146,GUIDE-24,Security training policies and procedures.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-147,GUIDE-24,Cybersecurity Workforce assessment considers the agency’s risk profile and includes any relevant skill gaps;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-148,GUIDE-24,Content of awareness and role-based training programs;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-149,GUIDE-24,Action plan to close gaps identified through its workforce assessment;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-150,GUIDE-26,"ISCM strategy, including evidence that the strategy was developed for selected systems;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-151,GUIDE-26,ISCM policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-152,GUIDE-26,Agency-wide information security policy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-153,GUIDE-26,"List of approved continuous monitoring tools and technologies. assessment products, for selected systems; functional with visibility of all organizational assets; process. schedules, POA&Ms, SSPs, SARs, and ATO letters).",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-154,GUIDE-26,"Evidence supporting continuous monitoring tools and technologies are used in other security domains, including risk management, configuration management, incident response, and business continuity.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-155,GUIDE-27,Information security program policy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-156,GUIDE-27,"ISCM strategy, policies, and procedures;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-157,GUIDE-27,Organizational charts;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-158,GUIDE-27,Delegations of authority;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-159,GUIDE-27,Defined roles and responsibilities.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-160,GUIDE-27,"Evidence that individuals that are assigned the ISCM defined roles are carrying out their responsibilities at all levels (organization, business process, and information system);",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-161,GUIDE-27,Agency's IT security budget;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-162,GUIDE-27,Interviews with system security staff.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-163,GUIDE-27,"Evidence that input/knowledge/guidance/lessons learned from oversight agencies (DHS, OMB, CISA, etc.) are being incorporated into decision making for ISCM resource allocation.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-164,GUIDE-28,ISCM strategy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-165,GUIDE-28,Assessment schedules;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-166,GUIDE-28,ISCM policies and procedures;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-167,GUIDE-28,Agency-wide information security policy.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-168,GUIDE-28,Evidence of ongoing security control assessments for a sample of systems at the appropriate level of rigor and frequency;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-169,GUIDE-28,"Evidence of system authorizations for select systems (including OSA schedules, POA&Ms, SSPs, SARs, and ATO letters);",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-170,GUIDE-28,"Organization-wide risk management strategy, appetite, and tolerance.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-171,GUIDE-28,"Evidence of the generation and collection of security-related information for all implemented security controls, including inherited common controls, at the frequencies specified in the ISCM strategy.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-172,GUIDE-28,See assessor best practices below.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-173,GUIDE-30,"Incident detection and analysis strategies, policies, procedures, and standards, including a common threat vector taxonomy;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-174,GUIDE-30,Enterprise-level incident response plan;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-175,GUIDE-30,Network architecture diagram highlighting the layers of protection/technologies in place to detect and analyze incidents;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-176,GUIDE-30,SOPs for supporting technologies used to detect/analyze potential incidents.,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-177,GUIDE-30,"Sample of incident tickets, including those submitted to US-CERT; precursors and indicators captured for the tools listed in Question #58 and for the following tools:",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-178,GUIDE-30,"Web application protections, such as web application firewalls.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-179,GUIDE-30,"Event and incident management, such as intrusion detection and prevention tools, and incident tracking and reporting tools.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-180,GUIDE-30,"Aggregation and analysis, such as security information and event management (SIEM) products.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-181,GUIDE-30,"Malware detection, such as antivirus and antispam software technologies.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-182,GUIDE-30,"Information management, such as data loss prevention",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-183,GUIDE-30,"File integrity and endpoint and server security tools. the effectiveness of the incident detection and analysis policies and procedures; (EDR); implementation gaps, coordinate deployment of EDR tools;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-184,GUIDE-31,Containment strategies for each major incident type;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-185,GUIDE-31,"Incident response policies, procedures, and plans.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-186,GUIDE-31,"Sample of incident tickets to obtain evidence that incident handling policies and procedures, containment strategies, and incident eradication processes were",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-187,GUIDE-33,"Information security strategy and policy; planning strategy, policies, and procedures, including the requirements to use Business Impact. procedures, and processes. ensure it includes system-level components, missions, and recovery critically/priorities into strategy and plan development; information system contingency plans to ensure that BIAs are used to determine contingency planning requirements and priorities, including mission essential functions/high value assets; ensure organizational systems are covered by business impact analysis. with organizational ERM processes; that the enterprise risk management processes include BIAs as part of the evaluating and monitoring of the criticality and sensitivity of enterprise assets; with the organization’s risk register to calculate potential losses and inform decision making.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-188,GUIDE-34,Information security strategy and policy;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-189,GUIDE-34,"Information system contingency planning strategy, policies, and procedures, including the requirements to perform tests or exercises.",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-190,GUIDE-34,Sample information system contingency planning testing results;,USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-191,GUIDE-34,"Results of testing of continuity of operations, business continuity, or disaster recovery plans;",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt
+EVID-192,GUIDE-34,"Review the independent assessment of CP-4 security control across the organization. Assessment determines whether contingency plans are tested,",USA_FISMA_Final_FY_2025_IG_FISMA_Metrics_Evaluation_Guide_05_May_2025_508.txt

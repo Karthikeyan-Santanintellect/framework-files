@@ -1,0 +1,16 @@
+source_id,target_id,rel_type
+cap_II,sec_II_I,HAS_SECAO
+cap_II,sec_II_II,HAS_SECAO
+cap_II,sec_II_III,HAS_SECAO
+cap_II,sec_II_III-A,HAS_SECAO
+cap_II,sec_II_IV,HAS_SECAO
+cap_IV,sec_IV_I,HAS_SECAO
+cap_IV,sec_IV_II,HAS_SECAO
+cap_VI,sec_VI_I,HAS_SECAO
+cap_VI,sec_VI_II,HAS_SECAO
+cap_VI,sec_VI_III,HAS_SECAO
+cap_VII,sec_VII_I,HAS_SECAO
+cap_VII,sec_VII_II,HAS_SECAO
+cap_VIII,sec_VIII_I,HAS_SECAO
+cap_IX,sec_IX_I,HAS_SECAO
+cap_IX,sec_IX_II,HAS_SECAO

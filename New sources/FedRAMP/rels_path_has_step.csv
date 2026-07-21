@@ -1,0 +1,6 @@
+source_id,target_id,rel_type,order
+path_jab_pato,step_jab_01,HAS_STEP,1
+path_jab_pato,step_jab_02,HAS_STEP,2
+path_jab_pato,step_jab_03,HAS_STEP,3
+path_agency_ato,step_agency_01,HAS_STEP,1
+path_agency_ato,step_agency_02,HAS_STEP,2

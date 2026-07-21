@@ -1,0 +1,10 @@
+source_id,target_id,rel_type,reference_text
+ART-7,ART-5,CROSS_REFERENCES,rights provided for in the two preceding Articles
+ART-7,ART-6,CROSS_REFERENCES,rights provided for in the two preceding Articles
+ART-14,ART-13,CROSS_REFERENCES,the precautions provided for in the preceding Article
+ART-20,ART-18,CROSS_REFERENCES,the purposes stipulated in Article (18) hereof
+ART-21,ART-19,CROSS_REFERENCES,Taking into consideration the provisions of the preceding two Article
+ART-21,ART-20,CROSS_REFERENCES,Taking into consideration the provisions of the preceding two Article
+ART-5-3,ART-5-1,CROSS_REFERENCES,in any of the cases referred to in the preceding two items
+ART-5-3,ART-5-2,CROSS_REFERENCES,in any of the cases referred to in the preceding two items
+ART-15,DEF-CROSS_BORDER_DATA_FLOWS,CROSS_REFERENCES,any decision or measure that may limit the Cross-Border Data Flow

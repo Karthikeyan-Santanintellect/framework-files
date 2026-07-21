@@ -1,0 +1,4 @@
+cyberdevicecriterion_id,number,criterion,statutory_provision,stated_in,document_id,source_document
+CDC-01,(1),"includes software validated, installed, or authorized by the sponsor as a device or in a device",Section 524B(c) of the FD&C Act,VII.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CDC-02,(2),has the ability to connect to the internet,Section 524B(c) of the FD&C Act,VII.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CDC-03,(3),"contains any such technological characteristics validated, installed, or authorized by the sponsor that could be vulnerable to cybersecurity threats",Section 524B(c) of the FD&C Act,VII.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

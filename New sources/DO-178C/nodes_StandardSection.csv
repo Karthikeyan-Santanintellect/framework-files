@@ -1,0 +1,13 @@
+standardsection_id,section_number,title,description_in_ebook,source_document
+SS1,1,,"Section 1, not shown expresses the purpose, scope, and how to use the document.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS2,2,System Aspects Relating to Software Development,"Section 2 discusses the system life cycle processes, the artifacts produced, how they flow down into the software life cycle and the information flow between these processes.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS3,3,Software Life Cycle,Section 3 discusses the aspects of the software life cycle process.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS4,4,Software Planning Process,Section 4 discusses the objectives and activities of the software planning process.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS5,5,Software Development Process,The software development process is applied as defined by the software planning process and the software development plan.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS6,6,Software Verification Process,"The purpose of the software verification process is to detect, report, and remove the errors that may have been introduced during the software development process.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS7,7,Software Configuration Management Process,Section 7 discusses the objectives and activities of the software configuration management process.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS8,8,Software Quality Assurance Process,"The SQA process is captured in the Software Quality Assurance Plan, which is built during the software planning process.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS9,9,Certification Liaison Process,Section 9 discusses the certification liaison process and its objectives.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS10,10,Overview of Certification Process,Section 10 is for informational purposes only regarding the certification process. It mentions the types of systems and equipment to which certification applies.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS11,11,Software Life Cycle Data,Section 11 discusses artifacts like the data and documentation produced during the software life cycle.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SS12,12,Additional Considerations,Section 12 provides additional guidance and consideration on topics that can have an impact on objectives and activities in the software life cycle.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

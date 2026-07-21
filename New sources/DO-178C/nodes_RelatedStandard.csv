@@ -1,0 +1,20 @@
+relatedstandard_id,designation,title_or_description,category,source_document
+RS_DO278A,DO-278A,"Software Integrity Assurance Considerations for Communication, Navigation, Surveillance and Air Traffic Management (CNS/ATM) Systems",RTCA supplemental guidance,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO248C,DO-248C,Supporting Information for DO-178C and DO-278A,RTCA supplemental guidance,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO333,DO-333,Formal Methods Supplement to DO-178C and DO-278A,RTCA supplement,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO326A,DO-326A,Airworthiness Security Process Specification,RTCA supplemental guidance,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO355A,DO-355A,Information Security Guidance for Continuing Airworthiness,RTCA supplemental guidance,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO330,DO-330,Software Tool Qualification Considerations,RTCA supplement,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO331,DO-331,Model Based Development and Verification,RTCA supplement,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO332,DO-332,Object Oriented Technology and Related Techniques,RTCA supplement,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO254,DO-254,Design Assurance Guidance for Airborne Electronic Hardware,RTCA guidance,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_AS9100D,SAE AS9100D,"Quality Management Systems - Requirements for Aviation, Space, and Defense Organizations",Quality management standard,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_ARP4754A,SAE ARP4754A,Guidelines for Development of Civil Aircraft and Systems,System development guideline,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_ED12C,EUROCAE ED-12C,"DO-178C, which is also published in Europe as EUROCAE ED-12C",European publication of DO-178C,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_MISRAC,MISRA C:2023,"MISRA C is a set of coding guidelines for the C programming language, versions C89/C90, C99, C11, and C18.",Coding standard,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_MISRACOMP,MISRA Compliance: 2020,The MISRA Compliance: 2020 document is also helping organizations to use a common language articulating the compliance requirements.,Compliance specification,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_CERT,SEI CERT,"The Software Engineering Institute (SEI) Computer Emergency Response Team (CERT) has a set of guidelines to help developers create safer, more secure, and more reliable software.",Secure coding standard,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_CWE,CWE (Common Weakness Enumeration),CWE (Common Weakness Enumeration) is a list of discovered software weaknesses based on the analysis of reported vulnerabilities (CVEs).,Weakness enumeration,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO178,DO-178,The original DO-178 standard was released back in 1982.,Predecessor revision,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO178A,DO-178A,"This revision focused more on modern software engineering principles and verification practices. It introduced a correlation between critical failure conditions with level numbers 1, 2, and 3.",Predecessor revision,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+RS_DO178B,DO-178B,"In December 1992, revision DO-178B was released, which shifted from a “how to” type of document to a “what to do” type of document.",Predecessor revision,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

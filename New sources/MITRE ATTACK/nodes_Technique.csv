@@ -1,0 +1,207 @@
+technique_id,name_as_ocr,tactic_id,column_sequence,ocr_confidence,ocr_source_lines,ocr_note,source_document
+TA01-T01,Active Scanning,TA01,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA01-T02,Gather Victim Host Information,TA01,2,medium,5-6,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA01-T03,Gather Victim Identity Information,TA01,3,medium,7-8,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA01-T04,Gather Victim Network Information,TA01,4,medium,9-10,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA01-T05,Gather Victim Org Information,TA01,5,medium,11-12,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA01-T06,Phishing for Information,TA01,6,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA01-T07,Search Closed Sources,TA01,7,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA01-T08,Search Open Technical Databases,TA01,8,medium,15-16,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA01-T09,Search Open Websites/Domains,TA01,9,medium,17-18,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA01-T10,Search Victim-Owned Websites,TA01,10,medium,19-20,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA02-T01,Acquire Infrastructure,TA02,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA02-T02,Compromise Accounts,TA02,2,high,5,,KB 2/USA/Mitre Att&ck.pdf
+TA02-T03,Compromise Infrastructure,TA02,3,high,6,,KB 2/USA/Mitre Att&ck.pdf
+TA02-T04,Develop Capabilities,TA02,4,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA02-T05,Establish Accounts,TA02,5,high,8,,KB 2/USA/Mitre Att&ck.pdf
+TA02-T06,Obtain Capabilities,TA02,6,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA02-T07,Stage Capabilities,TA02,7,high,10,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T01,Valid Accounts,TA03,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T02,Replication Through Removable Media,TA03,2,medium,5-6,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA03-T03,Trusted Relationship,TA03,3,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T04,Supply Chain Compromise,TA03,4,high,8,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T05,Hardware Additions,TA03,5,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T06,Exploit Public-Facing Application,TA03,6,medium,10-11,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA03-T07,Phishing,TA03,7,high,12,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T08,External Remote Services,TA03,8,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T09,Drive-by Compromise,TA03,9,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA03-T10,Content Injection,TA03,10,high,15,,KB 2/USA/Mitre Att&ck.pdf
+TA04-T01,Scheduled Task/Job,TA04,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA04-T02,Windows Management Instrumentation,TA04,2,medium,5-6,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA04-T03,Software Deployment Tools,TA04,3,medium,7-8,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA04-T04,Shared Modules,TA04,4,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA04-T05,Exploitation for Client Execution,TA04,5,medium,11-12,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA04-T06,System Services,TA04,6,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA04-T07,Command and Scripting Interpreter,TA04,7,medium,14-15,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA04-T08,Native API,TA04,8,high,16,,KB 2/USA/Mitre Att&ck.pdf
+TA04-T09,Inter-Process Communication,TA04,9,medium,17-18,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA04-T10,Container Administration Command,TA04,10,medium,19-20,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA04-T11,Deploy Container,TA04,11,high,21,,KB 2/USA/Mitre Att&ck.pdf
+TA04-T12,Serverless Execution,TA04,12,low,22,OCR line also carries poster legend text; column attribution uncertain,KB 2/USA/Mitre Att&ck.pdf
+TA04-T13,Cloud Administration Command,TA04,13,low,23-24,wrapped; column attribution uncertain,KB 2/USA/Mitre Att&ck.pdf
+TA05-T01,Modify Authentication Process,TA05,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T02,Valid Accounts,TA05,2,high,5,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T03,Hijack Execution Flow,TA05,3,high,6,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T04,Boot or Logon Initialization Scripts,TA05,4,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T05,Create or Modify System Process,TA05,5,high,8,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T06,Event Triggered Execution,TA05,6,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T07,Boot or Logon Autostart Execution,TA05,7,high,10,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T08,Account Manipulation,TA05,8,high,11,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T09,External Remote Services,TA05,9,high,12,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T10,Office Application Startup,TA05,10,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T11,Create Account,TA05,11,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T12,Domain or Tenant Policy Modification,TA05,12,high,15,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T13,Traffic Signaling,TA05,13,high,16,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T14,BITS Jobs,TA05,14,high,17,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T15,Server Software Component,TA05,15,medium,18-19,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA05-T16,Pre-OS Boot,TA05,16,high,20,,KB 2/USA/Mitre Att&ck.pdf
+TA05-T17,Compromise Client Software Binary,TA05,17,medium,21-22,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA05-T18,Implant Internal Image,TA05,18,low,23,column attribution uncertain in OCR tail block,KB 2/USA/Mitre Att&ck.pdf
+TA05-T19,Power Settings,TA05,19,low,27,column attribution uncertain in OCR tail block,KB 2/USA/Mitre Att&ck.pdf
+TA06-T01,Process Injection,TA06,1,low,12,column attribution inferred from left-to-right token order,KB 2/USA/Mitre Att&ck.pdf
+TA06-T02,Access Token Manipulation,TA06,2,low,13,column attribution inferred from left-to-right token order,KB 2/USA/Mitre Att&ck.pdf
+TA06-T03,Abuse Elevation Control Mechanism,TA06,3,low,14,column attribution inferred from left-to-right token order,KB 2/USA/Mitre Att&ck.pdf
+TA06-T04,Escape to Host,TA06,4,low,16,column attribution inferred from left-to-right token order,KB 2/USA/Mitre Att&ck.pdf
+TA06-T05,Exploitation for Privilege Escalation,TA06,5,low,17-18,wrapped; column attribution inferred,KB 2/USA/Mitre Att&ck.pdf
+TA06-T06,Traffic Signaling,TA06,6,low,19,column attribution inferred from left-to-right token order,KB 2/USA/Mitre Att&ck.pdf
+TA07-T01,Direct Volume Access,TA07,1,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T02,Rootkit,TA07,2,high,8,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T03,Obfuscated Files or Information,TA07,3,medium,9-10,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T04,Indicator Removal,TA07,4,high,11,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T05,Modify Registry,TA07,5,high,16,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T06,Trusted Developer Utilities Proxy Execution,TA07,6,medium,17-18,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T07,Signed Script Proxy Execution,TA07,7,medium,20-21,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T08,Rogue Domain Controller,TA07,8,low,22,OCR line also carries poster legend text,KB 2/USA/Mitre Att&ck.pdf
+TA07-T09,Indirect Command Execution,TA07,9,medium,23-24,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T10,Virtualization/Sandbox Evasion,TA07,10,medium,25-26,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T11,XSL Script Processing,TA07,11,high,27,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T12,Template Injection,TA07,12,high,28,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T13,File and Directory Permissions Modification,TA07,13,medium,29-30,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T14,Virtualization/Sandbox evasion,TA07,14,low,31-32,"second, differently-cased OCR occurrence; probable duplicate read of the same cell",KB 2/USA/Mitre Att&ck.pdf
+TA07-T15,Unused/Unsupported Cloud Regions,TA07,15,medium,33-34,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T16,Use Alternate Authentication Material,TA07,16,medium,35-36,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T17,impair Defenses,TA07,17,low,37,OCR lower-cased leading character; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA07-T18,Hide Artifacts,TA07,18,high,38,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T19,Masquerading,TA07,19,high,39,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T20,Deobfuscate/Decode Files or Information,TA07,20,low,40-41,wrapped; OCR inserted stray glyph on second line,KB 2/USA/Mitre Att&ck.pdf
+TA07-T21,Signed Binary Proxy Execution,TA07,21,medium,42-43,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T22,Exploitation for Defense,TA07,22,low,44,name truncated by OCR; continuation line replaced by poster text,KB 2/USA/Mitre Att&ck.pdf
+TA07-T23,Execution Guardrails,TA07,23,high,46,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T24,Modify Cloud Compute Infrastructure,TA07,24,low,47-48,wrapped; continuation line polluted by poster URL text,KB 2/USA/Mitre Att&ck.pdf
+TA07-T25,Pre-OS Boot,TA07,25,high,50,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T26,subvert Trust Controls,TA07,26,low,51,OCR lower-cased leading character; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA07-T27,Build Image on Host,TA07,27,high,52,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T28,Deploy Container,TA07,28,high,53,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T29,Modify System Image,TA07,29,high,54,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T30,Network Boundary Bridging,TA07,30,medium,55-56,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA07-T31,Weaken Encryption,TA07,31,high,57,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T32,Reflective Code Loading,TA07,32,high,58,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T33,Debugger Evasion,TA07,33,high,59,,KB 2/USA/Mitre Att&ck.pdf
+TA07-T34,Plist File Modification,TA07,34,high,60,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T01,Network Sniffing,TA08,1,high,5,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T02,0S Credential Dumping,TA08,2,low,6,OCR read 'OS' as '0S'; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA08-T03,Inout Capture,TA08,3,low,7,OCR misread; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA08-T04,Two-Factor Authentication Interception,TA08,4,medium,9-10,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA08-T05,Exploitation for Credential Access,TA08,5,medium,11-12,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA08-T06,Steal Web Session Cookie,TA08,6,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T07,Unsecured Credentials,TA08,7,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T08,Credentials from Password Stores,TA08,8,medium,15-16,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA08-T09,Steal or Forge Kerberos Tickets,TA08,9,medium,17-18,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA08-T10,Forced Authentication,TA08,10,high,19,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T11,Steal Application Access Token,TA08,11,medium,20-21,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA08-T12,Adversary-in-the-Middle,TA08,12,high,22,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T13,Forge Web Credentials,TA08,13,high,23,,KB 2/USA/Mitre Att&ck.pdf
+TA08-T14,Multi-Factor Authentication Request Generation,TA08,14,medium,25-26,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA08-T15,Steal or Forge Authentication Certificates,TA08,15,medium,27-28,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T01,System Service Discovery,TA09,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T02,Application Window Discovery,TA09,2,medium,6-7,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T03,System Network Configuration Discovery,TA09,3,medium,8-9,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T04,System Owner/User Discovery,TA09,4,medium,10-11,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T05,System Network Connections Discovery,TA09,5,medium,12-13,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T06,Permission Groups Discovery,TA09,6,medium,14-15,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T07,File and Directory D'SCovery,TA09,7,low,16-17,wrapped; OCR mangled the word 'Discovery'; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA09-T08,Peripheral Device Discovery,TA09,8,medium,18-19,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T09,Network Share Discovery,TA09,9,high,20,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T10,Password Policy Discovery,TA09,10,high,21,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T11,Browser Information Discovery,TA09,11,medium,22-23,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T12,Cloud Service Dashboard,TA09,12,high,27,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T13,Software Discovery,TA09,13,high,28,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T14,Query Registry,TA09,14,high,29,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T15,Remote System Discovery,TA09,15,high,30,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T16,Network Service Scanning,TA09,16,high,31,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T17,System Information Discovery,TA09,17,medium,33-34,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T18,Account Discovery,TA09,18,high,35,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T19,System Time Discovery,TA09,19,high,36,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T20,Domain Trust Discovery,TA09,20,high,37,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T21,Cloud Service Discovery,TA09,21,high,38,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T22,Container and Resource Discovery,TA09,22,medium,39-40,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T23,Cloud Infrastructure Discovery,TA09,23,medium,41-42,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA09-T24,System Location Discovery,TA09,24,high,43,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T25,Cloud Storage Object,TA09,25,low,44-45,continuation line rendered by OCR as 'as oe'; name truncated,KB 2/USA/Mitre Att&ck.pdf
+TA09-T26,Sehecer esr,TA09,26,low,46,OCR output unreadable; retained verbatim as an unrecovered Discovery cell,KB 2/USA/Mitre Att&ck.pdf
+TA09-T27,Dear DN;,TA09,27,low,47,OCR output unreadable; retained verbatim as an unrecovered Discovery cell,KB 2/USA/Mitre Att&ck.pdf
+TA09-T28,Device Driver Discovery,TA09,28,high,48,,KB 2/USA/Mitre Att&ck.pdf
+TA09-T29,Log Enumeration,TA09,29,high,49,,KB 2/USA/Mitre Att&ck.pdf
+TA10-T01,Remote Services,TA10,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA10-T02,Software Deployment Tools,TA10,2,medium,5-6,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA10-T03,Replication Through Removable Media,TA10,3,medium,7-8,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA10-T04,Internal Spearphishing,TA10,4,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA10-T05,Lateral Tool Transfer,TA10,5,high,12,,KB 2/USA/Mitre Att&ck.pdf
+TA10-T06,Taint Shared Content,TA10,6,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA10-T07,Exploitation of Remote Services,TA10,7,medium,14-15,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA10-T08,Remote Service Session nyacking,TA10,8,low,16-17,wrapped; OCR mangled 'Hijacking'; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA11-T01,Data from Local System,TA11,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T02,Data from Removable Media,TA11,2,medium,5-6,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA11-T03,Input Capture,TA11,3,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T04,Data Staged,TA11,4,high,8,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T05,Screen Capture,TA11,5,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T06,Email Collection,TA11,6,high,10,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T07,Clipboard Data,TA11,7,high,11,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T08,Automated Collection,TA11,8,high,12,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T09,Audio Capture,TA11,9,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T10,Video Capture,TA11,10,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T11,Browser Session Hijacking,TA11,11,high,15,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T12,Data from Information Repositories,TA11,12,medium,16-17,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA11-T13,Adversary-in-the-Middle,TA11,13,high,18,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T14,Archive Collected Data,TA11,14,high,19,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T15,Data from Network Shared Drive,TA11,15,medium,20-21,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA11-T16,Data from Cloud Storage,TA11,16,high,22,,KB 2/USA/Mitre Att&ck.pdf
+TA11-T17,Data from Configuration Repository,TA11,17,medium,24-25,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA12-T01,Data Obfuscation,TA12,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T02,Fallback Channels,TA12,2,high,5,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T03,Application Layer Protocol,TA12,3,high,6,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T04,Communication Through Removable Media,TA12,4,medium,8-9,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA12-T05,Multi-Stage Channels,TA12,5,high,11,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T06,Ingress Tool Transfer,TA12,6,high,12,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T07,Data Encoding,TA12,7,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T08,Traffic Signaling,TA12,8,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T09,Remote Access Software,TA12,9,high,15,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T10,Dynamic Resolution,TA12,10,high,16,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T11,Non-standard Port,TA12,11,high,17,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T12,Protocol Tunneling,TA12,12,high,18,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T13,Encrypted Channel,TA12,13,high,19,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T14,Non-Application Layer Protocol,TA12,14,medium,20-21,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA12-T15,Hide Infrastructure,TA12,15,high,22,,KB 2/USA/Mitre Att&ck.pdf
+TA12-T16,Content Injection,TA12,16,high,24,,KB 2/USA/Mitre Att&ck.pdf
+TA13-T01,Exfiltration Over Other Network Medium,TA13,1,medium,4-5,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA13-T02,Scheduled Transfer,TA13,2,high,6,,KB 2/USA/Mitre Att&ck.pdf
+TA13-T03,Data Transfer Size Limits,TA13,3,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA13-T04,Exfiltration Over C2 Channel,TA13,4,medium,8-9,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA13-T05,Exfiltration Over Physical Medium,TA13,5,medium,10-11,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA13-T06,Exfittration Over Web Service,TA13,6,low,12-13,wrapped; OCR misspelled 'Exfiltration'; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA13-T07,Automated Exfiltration,TA13,7,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA13-T08,Fyfittration Over Alternative Protocol,TA13,8,low,15-16,wrapped; OCR mangled 'Exfiltration'; kept verbatim,KB 2/USA/Mitre Att&ck.pdf
+TA13-T09,Transfer Data to Cloud Account,TA13,9,medium,17-18,wrapped across two OCR lines,KB 2/USA/Mitre Att&ck.pdf
+TA14-T01,Data Destruction,TA14,1,high,4,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T02,Data Encrypted for Impact,TA14,2,high,5,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T03,Service Stop,TA14,3,high,6,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T04,Inhibit System Recovery,TA14,4,high,7,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T05,Firmware Corruption,TA14,5,high,9,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T06,Resource Hijacking,TA14,6,high,10,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T07,Network Denial of Service,TA14,7,high,11,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T08,Endpoint Denial of Service,TA14,8,high,12,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T09,System Shutdown/Reboot,TA14,9,high,13,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T10,Account Access Removal,TA14,10,high,14,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T11,Disk Wipe,TA14,11,high,15,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T12,Data Manipulation,TA14,12,high,16,,KB 2/USA/Mitre Att&ck.pdf
+TA14-T13,Financial Thett,TA14,13,low,17,OCR misread of the final Impact cell; kept verbatim,KB 2/USA/Mitre Att&ck.pdf

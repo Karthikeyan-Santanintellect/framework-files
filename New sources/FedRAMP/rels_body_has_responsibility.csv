@@ -1,0 +1,8 @@
+source_id,target_id,rel_type
+body_dhs,resp_01,HAS_RESPONSIBILITY
+body_dhs,resp_02,HAS_RESPONSIBILITY
+body_dhs,resp_03,HAS_RESPONSIBILITY
+body_cio_council,resp_04,HAS_RESPONSIBILITY
+body_nist,resp_05,HAS_RESPONSIBILITY
+body_nist,resp_06,HAS_RESPONSIBILITY
+body_nist,resp_07,HAS_RESPONSIBILITY

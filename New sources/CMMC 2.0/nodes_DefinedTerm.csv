@@ -1,0 +1,8 @@
+definedterm_id,term,definition,source_document
+TERM-FCI-V213,Federal Contract Information (FCI),Federal Contract Information (FCI): is defined in 32 CFR 170.4 and 48 CFR 4.1901 [3].,CMMC-MODEL-OVERVIEW-V2.13
+TERM-CUI-V213,Controlled Unclassified Information (CUI),Controlled Unclassified Information (CUI): is defined in 32 CFR 2002.4 (h) [4].,CMMC-MODEL-OVERVIEW-V2.13
+TERM-FCI-V20,Federal Contract Information (FCI),FCI is information provided by or generated for the Government under contract not intended for public release [3].,CMMC-MODEL-OVERVIEW-V2.0
+TERM-CUI-V20,Controlled Unclassified Information (CUI),"CUI is information that requires safeguarding or dissemination controls pursuant to and consistent with laws, regulations, and government-wide policies, excluding information that is classified under Executive Order 13526, Classified National Security Information, December 29, 2009, or any predecessor or successor order, or Atomic Energy Act of 1954, as amended [4].",CMMC-MODEL-OVERVIEW-V2.0
+TERM-PRACTICE,Practice,“Practice” refers to a specific technical activity or control needed to achieve a level of cybersecurity.,COGR-CMMC-2.0-OVERVIEW-2025
+TERM-PROCESS,Process,“Process” describes the procedure or methodology used to execute a practice.,COGR-CMMC-2.0-OVERVIEW-2025
+TERM-SPECIALIZED-ASSETS,Specialized Assets,"Assets that may or may not process, store, or transmit CUI such as government property, Internet of Things devices, and test equipment.",COGR-CMMC-2.0-OVERVIEW-2025

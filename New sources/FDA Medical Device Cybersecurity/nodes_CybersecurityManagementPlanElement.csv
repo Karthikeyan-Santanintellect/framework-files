@@ -1,0 +1,10 @@
+cybersecuritymanagementplanelement_id,element,stated_in,document_id,source_document
+CMP-01,Personnel responsible;,VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-02,"Sources, methods, and frequency for monitoring and identifying vulnerabilities (e.g., researchers, NIST national vulnerability database (NIST NVD), third-party software manufacturers);",VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-03,Identify and address vulnerabilities identified in CISA’s Known Exploited Vulnerabilities Catalog;,VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-04,Periodic security testing;,VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-05,Timeline to develop and release patches;,VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-06,Update processes;,VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-07,"Patching capability (i.e., rate at which update can be delivered to devices);",VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-08,Description of their coordinated vulnerability disclosure process; and,VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+CMP-09,"Description of how the manufacturer intends to communicate forthcoming remediations, patches, and updates to customers.",VI.B,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

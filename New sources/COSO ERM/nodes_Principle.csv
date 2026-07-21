@@ -1,0 +1,21 @@
+principle_id,number,name,statement,component_id,key_characteristics_table,source_document
+principle_1,1,Exercises Board Risk Oversight,Exercises board risk oversight,comp_1,Table 2.1 Exercises board risk oversight,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_2,2,Establishes Operating Structures,Establishes operating structures,comp_1,Table 2.2 Establishes operating structures,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_3,3,Defines Desired Culture,Defines desired culture,comp_1,Table 2.3 Defines desired culture,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_4,4,Demonstrates Commitment to Core Values,Demonstrates commitment to core values,comp_1,Table 2.4 Demonstrates a commitment to core values,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_5,5,"Attracts, Develops, and Retains Capable Individuals","Attracts, develops, and retains capable individuals",comp_1,"Table 2.5 Attracts, develops, and retains capable individuals",Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_6,6,Analyzes Business Context,Analyzes business context,comp_2,Table 3.1 Analyzes business context,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_7,7,Defines Risk Appetite,Defines risk appetite,comp_2,Table 3.2 Defines risk appetite,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_8,8,Evaluates Alternative Strategies,Evaluates alternative strategies,comp_2,Table 3.3 Evaluates alternative strategies,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_9,9,Formulates Business Objectives,Formulates business objectives,comp_2,Table 3.4 Formulates business objectives,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_10,10,Identifies Risk,Identifies risk,comp_3,Table 4.1 Identifies risk,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_11,11,Assesses Severity of Risk,Assesses severity of risk,comp_3,Table 4.2 Assesses severity of risk,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_12,12,Prioritizes Risks,Prioritizes risk,comp_3,Table 4.3 Prioritizes risks,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_13,13,Implements Risk Responses,Implements risk responses,comp_3,Table 4.4 Implements risk responses,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_14,14,Develops Portfolio View,Develops portfolio view,comp_3,Table 4.5 Develops portfolio view,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_15,15,Assesses Substantial Change,Assesses substantial change,comp_4,Table 5.1 Assesses substantial change,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_16,16,Reviews Risk and Performance,Reviews risk and performance,comp_4,Table 5.2 Reviews risk and performance,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_17,17,Pursues improvement in Enterprise Risk Management,Pursues improvement in enterprise risk management,comp_4,Table 5.3 Pursues improvement in enterprise risk management,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_18,18,Leverages Information and Technology,Leverages information and technology,comp_5,Table 6.1 Leverages information and technology,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_19,19,Communicates Risk Information,Communicates risk information,comp_5,Table 6.2 Communicates risk information,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+principle_20,20,"Reports on Risk, Culture, and Performance","Reports on risk, culture, and performance",comp_5,"Table 6.3 Reports on risk, culture, and performance",Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf

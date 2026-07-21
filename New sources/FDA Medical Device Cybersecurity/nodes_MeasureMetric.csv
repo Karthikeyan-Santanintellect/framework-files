@@ -1,0 +1,4 @@
+measuremetric_id,measure,stated_in,document_id,source_document
+MM-01,Percentage of identified vulnerabilities that are updated or patched (defect density);,V.A.6,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+MM-02,Duration from vulnerability identification to when it is updated or patched; and,V.A.6,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf
+MM-03,"Duration from when an update or patch is available to complete implementation in devices deployed in the field, to the extent known.",V.A.6,FDA-CYBER-PREMARKET-2026,KB 2/USA/FDA Cybersecurity for Medical Devices.pdf

@@ -1,0 +1,12 @@
+source_id,target_id,rel_type,as_stated
+CL-1-R3a,CL-4-PW-1,CROSS_REFERENCES,see password-based authentication
+CL-1-R3b-i,CL-4-MFA-1,CROSS_REFERENCES,see MFA details below
+CL-2-R1b,CL-4-PW-1,CROSS_REFERENCES,see password-based authentication
+CL-2-R1f,CL-2-R2,CROSS_REFERENCES,"see ‘device unlocking’, below"
+CL-2-R5,CT-4,CROSS_REFERENCES,the full password requirements to the credentials described in User Access Controls
+CL-3-R4,CL-3-R1d-ii,CROSS_REFERENCES,see the precise definition in the Common Vulnerability Scoring System (CVSS)
+CL-4-PW-2a-i,CL-4-MFA-1,CROSS_REFERENCES,multi-factor authentication (see above)
+CL-4-PW-2b-i,CL-4-MFA-1,CROSS_REFERENCES,Using multi-factor authentication (see above)
+CL-D-i-1,DEF-ORG-DATA,CROSS_REFERENCES,organisational data or services (as defined above)
+CL-D-i-1,DEF-ORG-SERVICE,CROSS_REFERENCES,organisational data or services (as defined above)
+CL-D-iv-3,CL-D-iv-4,CROSS_REFERENCES,The table below explains who might typically be expected to implement each control

@@ -1,0 +1,9 @@
+source_id,target_id,rel_type,quote
+prov_3_4,prov_3_2,CROSS_REFERENCES,as referred to in sub regulation 3.2
+prov_3_4,prov_3_3,CROSS_REFERENCES,as referred to sub regulation 3.3
+prov_3_6,prov_3_2,CROSS_REFERENCES,the request referred to in sub regulation 3.2 or 3.3
+prov_3_6,prov_3_3,CROSS_REFERENCES,the request referred to in sub regulation 3.2 or 3.3
+prov_6_2,prov_6_1,CROSS_REFERENCES,as referred to in sub-regulation 6.1 above
+prov_6_3,prov_6_1,CROSS_REFERENCES,as referred to in sub regulation 6.1
+prov_7_2,prov_7_10,CROSS_REFERENCES,Subject to Regulation 7.10
+prov_7_4,prov_7_3_1,CROSS_REFERENCES,The office designated by the Regulator in terms of sub-regulation 7.3.1.1.3

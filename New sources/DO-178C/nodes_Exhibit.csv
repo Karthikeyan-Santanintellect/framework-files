@@ -1,0 +1,56 @@
+exhibit_id,kind,label,caption,source_line,source_document
+Figure_2_1,Figure,Figure 2-1,"The the purpose, scope, and how to use the document. sections that make up the DO-178C standard RTCA was founded back in 1935. They are an independent standards development",370,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_2_2,Figure,Figure 2-2,"customer requirements, and how these artifacts flow into the software life cycle. Information flow between system In the software life cycle, requirements decomposition continues, software verification",450,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_1,Table,Table 2-1,DO-178C Development Assurance Levels (DAL),506,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_2_3,Figure,Figure 2-3,ARP4754A V-model development process,546,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_2_4,Figure,Figure 2-4,DO-178C example of a software project using development sequences.,584,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_2,Table,Table 2-2,Table A-1 Software planning process,639,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_3,Table,Table 2-3,DO-178C Table A-2 Software development process,713,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_2_5,Figure,Figure 2-5,Requirements traceability through DO-178C software levels (D-A),759,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_2_6,Figure,Figure 2-6,Software testing activities,822,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_4,Table,Table 2-4,DO-178C Table A-3 Verification of outputs of software requirements process,857,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_5,Table,Table 2-5,DO-178C Table A-4 Verification of outputs of software design process,865,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_6,Table,Table 2-6,DO-178C Table A-5 Verification of outputs of software coding and integration processes,879,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_7,Table,Table 2-7,DO-178C Table A-6 Testing of outputs of integration process,888,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_8,Table,Table 2-8,DO-178C Table A-7 Verification of process results,902,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_9,Table,Table 2-9,DO-178C Table A-8 Software configuration management process,948,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_10,Table,Table 2-10,DO-178C SCM process activities associated with CC1 and CC2 data,973,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_11,Table,Table 2-11,DO-178C Table A-9 Software Quality Assurance Process,1001,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_12,Table,Table 2-12,DO-178C Table A-10 Certification liaison process,1039,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Table_2_13,Table,Table 2-13,DO-178C Tool qualification level determination,1160,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_7,Figure,Figure 3-7,Parasoft C/C++test and DTP dashboardParasoft,1334,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_8,Figure,Figure 3-8,The Guidelines Compliance Summary is the primary record of overall project compliance.,1480,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_9,Figure,Figure 3-9,The Guideline Enforcement Plan demonstrates how each MISRA guideline is verified.,1496,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_10,Figure,Figure 3-10,The Deviations Report documents all of the approved deviation permits.,1501,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_11,Figure,Figure 3-11,The Guideline Re-categorization Plan communicates how the guidelines are to be applied as part of the stakeholder/supplier relationship.,1512,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_12,Figure,Figure 3-12,SEI CERT vulnerability priority and cost diagram,1562,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_13,Figure,Figure 3-13,Parasoft DTP SEI CERT C Compliance dashboard,1608,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_14,Figure,Figure 3-14,Parasoft's CERT Guidelines Compliance Report summary,1616,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_15,Figure,Figure 3-15,The 2023 CWE Top 25,1713,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_16,Figure,Figure 3-16,Parasoft DTP CWE Compliance dashboard,1767,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_3_17,Figure,Figure 3-17,Parasoft's CWE Guidelines Compliance Report summary,1789,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_4_1,Figure,Figure 4-1,The V-model development process Veriﬁes showing the relationship between each phase Module Unit and the verification and Design Testing,1827,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_4_2,Figure,Figure 4-2,"A high-level view of deploying, executing, and observing tests from host to target in Parasoft C/C++ testing solutions.",2032,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_5_1,Figure,Figure 5-1,An example change-based testing report from Parasoft DTP showing areas of the code that are and are not tested.,2243,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_6_1,Figure,Figure 6-1,The V-model Veriﬁes Architecture Integration development process Design Testing showing the relationship between each phase Veriﬁes,2345,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_6_2,Figure,Figure 6-2,A continuous testing cycle,2417,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_6_3,Figure,Figure 6-3,An example of a DO-178C reporting dashboard that Parasoft DTP correlates the unique identifiers from the management system with: captures the project's testing status and » Static analysis findings,2501,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_6_4,Figure,Figure 6-4,"» Results from unit, integration, and functional tests Codebeamer Results are displayed within Parasoft DTP's traceability reports and sent back to the traceability matrix, which lists system requirements management system. They provide full bidirectional traceability and",2510,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_6_5,Figure,Figure 6-5,Requirements traceability matrix template from Parasoft DTP integrated with Siemens Polarion.,2538,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_6_6,Figure,Figure 6-6,they've interpreted the data correctly. Aggregated code coverage from various Understanding the potential risks in the application requires advanced analytics testing methods processes that merge and correlate the data. This provides greater visibility into the,2599,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_8_1,Figure,Figure 8-1,Unreachable return 0; Statement,2952,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_8_2,Figure,Figure 8-2,Invoking The figure below shows an analysis report providing the user with a solution. The Coverage Advisor by Preconditions field expresses: right-clicking on the line of code. » The range and input values for mainSensorSignal and coSensorSignal,3037,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_8_3,Figure,Figure 8-3,Two test case solutions provided by Coverage Advisor.,3057,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_8_4,Figure,Figure 8-4,Parasoft ASMTool for Assembly/Object Code Coverage,3074,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_9_1,Figure,Figure 9-1,"The classic V-model diagram shows how traceability Each phase drives the subsequent phase. In turn, the work items in these phases goes forward and must satisfy the requirements from the previous phase. System design is driven from",3152,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_9_2,Figure,Figure 9-2,The Design Testing other important Veriﬁes part of requirements traceability is Module Unit,3185,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_9_3,Figure,Figure 9-3,Requirements traceability matrix example in Intland Codebeamer,3234,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_9_4,Figure,Figure 9-4,"Parasoft Parasoft DTP correlates the unique identifiers from the management system with provides bidirectional the following: traceability from work items to test cases and test results, displaying",3276,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_9_5,Figure,Figure 9-5,"Jama Requirements matrix, and integration with Parasoft DTP",3308,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_10_1,Figure,Figure 10-1,outlined in DO-330 is complex and time consuming. Parasoft's Qualification Kits for Parasoft CIC++test and C/C++test CT C/C++test includes a convenient tool wizard that brings automation into the picture,3410,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_10_2,Figure,Figure 10-2,"Parasoft Qualification Kits allow users to select the options required for their project. Upon selection, only tests and documentation are used and provided from this point forward.",3493,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_10_3,Figure,Figure 10-3,Leveraging centralized data collection and automating the qualification process greatly reduces manual tracking of the compliance progress.,3531,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_10_4,Figure,Figure 10-4,Known defects are managed directly in Parasoft C/C++test.,3571,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_11_1,Figure,Figure 11-1,"Parasoft C/C++test IDE unified code coverage and Team Web-Based Reporting unit testing view For team collaboration, Parasoft C/C++test and C/C++test CT publishes analysis results to DTP, a centralized server. Developers can access test results from automated runs",3669,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_11_2,Figure,Figure 11-2,Centralized web based dashboard for test impact analysis and more,3707,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+Figure_11_3,Figure,Figure 11-3,Individual code coverage metrics available within the reporting dashboard,3772,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

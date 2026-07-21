@@ -1,0 +1,6 @@
+pathstep_id,authorizationpath_id,order,text,slide_id,source_document
+step_jab_01,path_jab_pato,1,The primary governance and decision making body for the FedRAMP program,slide_06,KB 2/USA/FedRAMP.pdf
+step_jab_02,path_jab_pato,2,"CIOs of DoD, DHS, and GSA strictly review CSP packages for an acceptable risk posture using a standard baseline approach",slide_06,KB 2/USA/FedRAMP.pdf
+step_jab_03,path_jab_pato,3,"The JAB issues provisional authorizations (P-ATO); this is not a risk acceptance, but an assurance to Agencies that the risk posture of the system has been reviewed by DoD, DHS, and GSA, and approved. Each Agency must review and issue their own ATO that covers their Agency's use of the cloud service.",slide_06,KB 2/USA/FedRAMP.pdf
+step_agency_01,path_agency_ato,1,Agency Initial ATO: Initial Agency reviews CSP FedRAMP security package; Agency/CSP submits the security package and Agency ATO to the FedRAMP PMO. FedRAMP confirms package meets FedRAMP requirements and makes security package available for Agencies to reuse.,slide_06,KB 2/USA/FedRAMP.pdf
+step_agency_02,path_agency_ato,2,Agency Leveraged ATO: Agency reviews JAB or Initial Agency FedRAMP ATO security packages and issues Agency ATO. Agency sends a copy of ATO letter to FedRAMP PMO for record keeping.,slide_06,KB 2/USA/FedRAMP.pdf

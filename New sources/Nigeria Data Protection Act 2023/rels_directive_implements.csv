@@ -1,0 +1,54 @@
+source_id,target_id,rel_type,quoted_text
+A1-2,S2-2-c,IMPLEMENTS,Section 2(c) of the NDP Act applies to a data controller or data processor not domiciled in Nigeria but processes the personal data of a data subject in Nigeria or targets the personal data of data subjects in Nigeria.
+A2-a,S1,IMPLEMENTS,the objectives set forth in section 1 of the NDP Act
+A3-1,S63,IMPLEMENTS,it is imperative to uphold the provision of section 63 of the NDP Act in all proceedings and transactions pertaining to the processing of personal data
+A4-1,S5-h,IMPLEMENTS,Section 5(h) of the NDP Act mandates the Commission to collaborate with public authorities among others in order to achieve the objectives set forth in the NDP Act.
+A4-2,S63,IMPLEMENTS,Without prejudice to the provisions of Section 63 of the NDP Act
+A5-1,S3,IMPLEMENTS,any exemption pursuant to Section 3 of the NDP Act
+A5-2-a,S24,IMPLEMENTS,S. 24 – Principles of personal data processing
+A5-2-b,S25,IMPLEMENTS,S. 25 – Lawful basis of personal data processing
+A5-2-c,S32,IMPLEMENTS,S. 32 - Designation of Data Protection Officers
+A5-2-d,S40,IMPLEMENTS,S. 40 – Personal data breaches
+A5-4,S3,IMPLEMENTS,in carrying out an assessment of data processing activities exempted under Section 3 of the NDP Act
+A6-1,S3-1,IMPLEMENTS,In line with the provision of Section 3(1) of the NDP Act
+A8-1,S65,IMPLEMENTS,"Section 65 of the NDP Act provides, a ""data controller or data processor of major importance"" means ..."
+A8-2,S2,IMPLEMENTS,"In line with Section 2 of the NDP Act ""domiciled, resident in, or operating in Nigeria"" means"
+A11-1,S32,IMPLEMENTS,Section 32 of the NDP Act mandates the designation of a DPO
+A14-1,S32,IMPLEMENTS,in furtherance of Section 32 of the NDP Act
+A15-1,S24,IMPLEMENTS,The principles under section 24 of the NDP Act are
+A16-1,S25,IMPLEMENTS,"In line with Section 25 of the NDP Act, it is important for a data controller to carefully assess the lawful basis of data processing before embarking on same."
+A21-3,S27,IMPLEMENTS,in addition to the requirement in Section 27 of the NDP Act
+A21-4,S34-1-a-vi,IMPLEMENTS,Pursuant to Section 46 of the 1999 Constitution and Section 34(1)(a)(vi) of the NDP Act
+A23-6-b,S24,IMPLEMENTS,the principles of data protection set forth in Section 24 of the NDP Act
+A23-6-d,P6,IMPLEMENTS,Access of the data subject to applicable data subjects' rights in accordance with Part VI of the NDP Act
+A23-7,S3-4,IMPLEMENTS,he or she may seek guidance from the Commission in line with Section 3(4) of the NDP Act
+A24-1-c,P10,IMPLEMENTS,in accordance with Part 10 of the NDP Act and the Fundamental Rights Enforcement Procedure Rules for the time being in force
+A27-2,S25-2,IMPLEMENTS,"Section 25 (2) of the NDP Act makes compatibility with contract, vital interest, legal obligation or public interest, a basis for reliance on legitimate interest."
+A27-2-f,S27,IMPLEMENTS,Provide transparent information to data subjects in accordance with Section 27 of the NDP Act
+A28-1,S27,IMPLEMENTS,Provision of information to a data subject shall be in accordance with Section 27 of the NDP Act.
+A29-1,S28,IMPLEMENTS,A Data Privacy Impact Assessment (DPIA) is mandated under Section 28 of the NDP Act
+A29-11,S28-4,IMPLEMENTS,in addition to the contents prescribed under Section 28(4) of the NDP Act
+A34-1,S40-2,IMPLEMENTS,The NDP Act under Section 40(2) provides that ...
+A34-3,S40-2,IMPLEMENTS,In line with Section 40(2) of the NDP Act
+A35-1,S29,IMPLEMENTS,"In line with Section 29 of the NDP Act, a data processor is expected to rely on a Data Processing Agreement (DPA) with the data controller"
+A35-2-a,S29,IMPLEMENTS,Obligations of the data controller and data processor under Section 29 of the NDP Act
+A36-5,S5-i,IMPLEMENTS,In furtherance of Sections 5(i) and 62(a)(ii) of the NDP Act
+A36-5,S62-a-ii,IMPLEMENTS,In furtherance of Sections 5(i) and 62(a)(ii) of the NDP Act
+A36-6,S24,IMPLEMENTS,the globally interoperable principles of data protection as stipulated in Section 24 of the NDP Act
+A40-1,S46,IMPLEMENTS,in furtherance of the right to privacy under Section 37 of the 1999 Constitution and Section 46 of the NDP Act
+A40-5,S46,IMPLEMENTS,Upon the receipt of a complaint in line with Section 46 of the NDP Act
+A40-11,S46-3,IMPLEMENTS,an investigation carried out by the Commission pursuant to Section 46(3) of the NDP Act
+A40-12,S6-e,IMPLEMENTS,In line with the power vested in the Commission under Section 6(e) of the NDP Act
+A41-1,S61-1,IMPLEMENTS,make regulations for the protection of personal data and data subjects under section 61(1)-(2)(b) of the NDP Act
+A41-1,S61-2-b,IMPLEMENTS,make regulations for the protection of personal data and data subjects under section 61(1)-(2)(b) of the NDP Act
+A45-1,S5-b,IMPLEMENTS,"In line with Section 5(b) of the NDP Act, the Commission shall foster the development of personal data protection technologies"
+A45-2,S1-1-h,IMPLEMENTS,In furtherance of Section 1(h) of the NDP Act
+A46-1,P8,IMPLEMENTS,Part VIII of the NDP Act provides for cross-border data transfer.
+A46-1,S63,IMPLEMENTS,"By virtue of Section 63 of the NDP Act, the provisions of Part VIII of the NDP Act shall be the overarching, governing provision"
+A47-2,S5-e,IMPLEMENTS,In furtherance of Section 5(e)-(f) of the NDP Act
+A47-2,S5-f,IMPLEMENTS,In furtherance of Section 5(e)-(f) of the NDP Act
+A49-3,S48-6-f,IMPLEMENTS,"The Commission, in furtherance of Section 48(6)(f) of the NDP Act"
+A46-2,GAID-SCH3,REFERS_TO_SCHEDULE,the explanatory note in Schedule 3 of this NDP Act-GAID shall be used for the evaluation of countries
+A15-2,GAID-SCH1,REFERS_TO_SCHEDULE,The scope of the foregoing principles is more particularly described in Schedule 1 of this NDP Act-GAID.
+A8-5,GAID-SCH4,REFERS_TO_SCHEDULE,the Guidance Notice with reference number NDPC/HQ/GN/VOL.02/24 ... reproduced in this NDP Act-GAID as Schedule 4
+A9-1,GAID-SCH4,REFERS_TO_SCHEDULE,shall register with the Commission in accordance with the Guidance Notice ... reproduced in this NDP Act-GAID as Schedule 4

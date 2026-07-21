@@ -1,0 +1,8 @@
+scmactivity_id,sequence,name,source_document
+SCM1,1,Configuration identification,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SCM2,2,Baselines and traceability,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SCM3,3,"Problem reporting, tracking, and corrective action",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SCM4,4,Change control,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SCM5,5,Change review,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SCM6,6,Configuration status accounting,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+SCM7,7,"Archive, retrieval, and release",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

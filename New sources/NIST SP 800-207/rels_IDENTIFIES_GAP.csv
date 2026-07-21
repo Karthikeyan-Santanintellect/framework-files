@@ -1,0 +1,12 @@
+source_id,target_id,rel_type,note
+APP-B,GAP-B.1,IDENTIFIES_GAP,survey
+APP-B,GAP-B.2,IDENTIFIES_GAP,category
+APP-B,GAP-B.2.1,IDENTIFIES_GAP,immediate deployment
+APP-B,GAP-B.2.2,IDENTIFIES_GAP,immediate deployment
+APP-B,GAP-B.3,IDENTIFIES_GAP,category
+APP-B,GAP-B.3.3,IDENTIFIES_GAP,systemic
+APP-B,GAP-B.3.4,IDENTIFIES_GAP,systemic
+APP-B,GAP-B.4,IDENTIFIES_GAP,category
+APP-B,GAP-B.4.5,IDENTIFIES_GAP,areas needing more research
+APP-B,GAP-B.4.6,IDENTIFIES_GAP,areas needing more research
+APP-B,GAP-B.4.7,IDENTIFIES_GAP,areas needing more research

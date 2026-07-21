@@ -1,0 +1,17 @@
+source_id,target_id,rel_type,reference_text
+s3(b),s25,CROSS_REFERENCES,the principles set out in section 25
+s12(1),s11,CROSS_REFERENCES,any ground specified under section 11(d)
+s12(2),s11,CROSS_REFERENCES,a ground under section 11(d)
+s15,SCH_1,CROSS_REFERENCES,the oath set out in the First Schedule
+s19(1),s18,CROSS_REFERENCES,required to register under section 18
+s20,s19,CROSS_REFERENCES,A registration certificate issued under section 19
+s29(a),s26,CROSS_REFERENCES,the rights of data subject specified under section 26
+s42(1),s41,CROSS_REFERENCES,the appropriate measures referred to in section 41
+s42(2)(a),s41,CROSS_REFERENCES,for the purpose of complying with section 41(1)
+s44,s25,CROSS_REFERENCES,unless section 25 applies to that processing
+s45,s44,CROSS_REFERENCES,Without prejudice to section 44
+s61,s9,CROSS_REFERENCES,in relation to the exercise of a power conferred by section 9
+s62(1),s58,CROSS_REFERENCES,has failed or is failing as described in section 58
+s75,SCH_2,CROSS_REFERENCES,The laws specified under the Second Schedule are amended in the manner specified.
+def_data_commissioner,s6,CROSS_REFERENCES,the person appointed under section 6
+def_register,s21,CROSS_REFERENCES,the register kept and maintained by the Data Commissioner under section 21

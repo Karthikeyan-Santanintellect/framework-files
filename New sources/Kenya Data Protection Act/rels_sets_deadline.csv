@@ -1,0 +1,13 @@
+source_id,target_id,rel_type,period
+s6(2),DL_s6(2),SETS_DEADLINE,seven days
+s6(3),DL_s6(3),SETS_DEADLINE,twenty-one days
+s7(2),DL_s7(2),SETS_DEADLINE,six years
+s31(5),DL_s31(5),SETS_DEADLINE,sixty days
+s38(6),DL_s38(6),SETS_DEADLINE,thirty days
+s43(1)(a),DL_s43(1)(a),SETS_DEADLINE,seventy-two hours
+s43(3),DL_s43(3),SETS_DEADLINE,forty-eight hours
+s56(5),DL_s56(5),SETS_DEADLINE,ninety days
+s58(2)(c),DL_s58(2)(c),SETS_DEADLINE,not less than twenty-one days
+s68(1),DL_s68(1),SETS_DEADLINE,three months
+s70(1),DL_s70(1),SETS_DEADLINE,three months
+s70(2),DL_s70(2),SETS_DEADLINE,three months

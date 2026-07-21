@@ -1,0 +1,18 @@
+source_id,target_id,rel_type,term
+PARA-12(a),DEF-a,DEFINES,availability
+PARA-12(b),DEF-b,DEFINES,confidentiality
+PARA-12(c),DEF-c,DEFINES,criticality
+PARA-12(d),DEF-d,DEFINES,information asset
+PARA-12(e),DEF-e,DEFINES,information security
+PARA-12(f),DEF-f,DEFINES,information security capability
+PARA-12(g),DEF-g,DEFINES,information security control
+PARA-12(h),DEF-h,DEFINES,information security incident
+PARA-12(i),DEF-i,DEFINES,information security policy framework
+PARA-12(j),DEF-j,DEFINES,information security threat (threat)
+PARA-12(k),DEF-k,DEFINES,information security vulnerability (vulnerability)
+PARA-12(l),DEF-l,DEFINES,integrity
+PARA-12(m),DEF-m,DEFINES,sensitivity
+PARA-10,DEF-GROUP,DEFINES,group
+PARA-10,DEF-HEAD,DEFINES,Head of a group
+PARA-10,DEF-L2GROUP,DEFINES,Level 2 group
+PARA-10,DEF-L2HEAD,DEFINES,Level 2 Head

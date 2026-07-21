@@ -1,0 +1,8 @@
+source_id,target_id,rel_type
+prov_312.11(a),dl_01,HAS_DEADLINE
+prov_312.11(b)(2),dl_02,HAS_DEADLINE
+prov_312.11(d)(1),dl_03,HAS_DEADLINE
+prov_312.11(d)(3),dl_04,HAS_DEADLINE
+prov_312.11(f),dl_05,HAS_DEADLINE
+prov_312.12(a),dl_06,HAS_DEADLINE
+prov_312.12(b),dl_07,HAS_DEADLINE

@@ -1,0 +1,16 @@
+source_id,target_id,rel_type,description
+AEX-T3-1,STEP-1,APPLIES_STEP,Analyse the current cybersecurity-related state of the organisation.
+AEX-T3-1,STEP-2,APPLIES_STEP,Identify the lack of personnel to handle the increase in cybersecurity issues.
+AEX-T3-1,STEP-3,APPLIES_STEP,Select the appropriate task from an ECSF profile that articulates an identified shortage of or gap in specific skills.
+AEX-T3-1,STEP-4,APPLIES_STEP,"Combine the ECSF profiles with tasks of interest to the organisation and structure new roles with the updated tasks, skills and knowledge to meet the changing organisational needs and create amended cybersecurity roles."
+AEX-T3-1,STEP-5,APPLIES_STEP,Use the newly-generated profile to create job vacancies targeted on the specific needs of the organisation.
+AEX-T3-2,STEP-1,APPLIES_STEP,Understand the business objectives and strategy of the organisation.
+AEX-T3-2,STEP-2,APPLIES_STEP,Identify any lack of expertise and personnel in cybersecurity related areas.
+AEX-T3-2,STEP-3,APPLIES_STEP,Use the ECSF profile(s) to identify the associated skills and knowledge that the organisation lacks.
+AEX-T3-2,STEP-4,APPLIES_STEP,Analyse selected skills and knowledge from the ECSF to identify the training needs of a cybersecurity professional to meet the organisation's needs.
+AEX-T3-2,STEP-5,APPLIES_STEP,Identify training interventions to enhance the competence of the organisation's workforce.
+AEX-T3-3,STEP-1,APPLIES_STEP,Choose a career path you are interested.
+AEX-T3-3,STEP-2,APPLIES_STEP,Identify your lack of skills and the knowledge required to move into the cybersecurity sector.
+AEX-T3-3,STEP-3,APPLIES_STEP,"Identify the ECSF profile(s) that you find useful from the perspective of career development, and use the connected skills, knowledge and competences as guidelines for reskilling and upskilling."
+AEX-T3-3,STEP-4,APPLIES_STEP,Enhance the selected ECSF profiles by including additional skills and knowledge based on individual needs.
+AEX-T3-3,STEP-5,APPLIES_STEP,Identify a training programme incorporating the majority of the skills and knowledge development required to reskill or upskill for the profile.

@@ -1,0 +1,6 @@
+softwarelevel_id,level,description_in_ebook,source_document
+LVL_A,A,Catastrophic results equate to failure of flight control software where an aircraft would go down and many lives would be lost. This would be classified as software level A.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+LVL_B,B,"Hazardous is a step down, so serious or fatal injury to a relatively small number of the occupants other than the flight crew would be software level B.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+LVL_C,C,,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+LVL_D,D,,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+LVL_E,E,The classification continues to go down to software level E where there's no safety concern if failure were to occur.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf

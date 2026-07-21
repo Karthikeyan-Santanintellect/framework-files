@@ -1,0 +1,75 @@
+statement_id,slide_id,heading,text,source_document
+stmt_001,slide_01,Presenter,"Brian Conrad, Acting Director",KB 2/USA/FedRAMP.pdf
+stmt_002,slide_01,Date,"August 29, 2023",KB 2/USA/FedRAMP.pdf
+stmt_003,slide_01,Contact,info@fedramp.gov,KB 2/USA/FedRAMP.pdf
+stmt_004,slide_01,Website,fedramp.gov,KB 2/USA/FedRAMP.pdf
+stmt_005,slide_02,Mission,The Federal Risk and Authorization Management Program (FedRAMP) promotes the adoption of secure cloud services across the US Government by providing a standardized approach to security and risk assessment.,KB 2/USA/FedRAMP.pdf
+stmt_006,slide_02,Vision,Accelerating the expansion of a marketplace of secure cloud services for the Federal Government,KB 2/USA/FedRAMP.pdf
+stmt_007,slide_03,Framing,Federal Security policy requires all systems to be authorized based on risk.,KB 2/USA/FedRAMP.pdf
+stmt_008,slide_03,Framing,"FedRAMP standardizes the process for cloud, providing:",KB 2/USA/FedRAMP.pdf
+stmt_009,slide_03,"DO ONCE, USE MANY TIMES",Doing security authorizations right the first time allows agencies to re-use work and eliminate duplicative efforts,KB 2/USA/FedRAMP.pdf
+stmt_010,slide_03,TRANSPARENCY,"Increased collaboration and creation of a community among the US Government and vendors that did not exist before, establishing the first government-wide FISMA program",KB 2/USA/FedRAMP.pdf
+stmt_011,slide_03,VALIDATED WORK,FedRAMP validates security authorizations to ensure that there is uniformity among security packages,KB 2/USA/FedRAMP.pdf
+stmt_012,slide_03,CENTRAL SHARING,Centralized repository where agencies can request access to security packages for expedient authorizations,KB 2/USA/FedRAMP.pdf
+stmt_013,slide_04,FISMA,Federal Information Security Modernization Act requires agencies to protect Federal Information. FISMA requires NIST to develop standards and guidelines,KB 2/USA/FedRAMP.pdf
+stmt_014,slide_04,OMB A-130,"OMB states that when agencies implement FISMA, they must use NIST standards and guidelines",KB 2/USA/FedRAMP.pdf
+stmt_015,slide_04,FedRAMP Policy,FedRAMP leverages NIST standards and guidelines to provide standardized security requirements for cloud services; a conformity assessment program; standardized authorization packages and contract language; a repository for authorization packages,KB 2/USA/FedRAMP.pdf
+stmt_016,slide_04,FedRAMP Authorization Act,"FedRAMP Authorization Act establishes a Government-wide program that provides a standardized, reusable approach to security assessment and authorization for cloud computing products and services that process unclassified information used by agencies.",KB 2/USA/FedRAMP.pdf
+stmt_017,slide_05,Department of Homeland Security,US-CERT Incident Coordination,KB 2/USA/FedRAMP.pdf
+stmt_018,slide_05,Department of Homeland Security,Continuous Monitoring Data Analysis,KB 2/USA/FedRAMP.pdf
+stmt_019,slide_05,Department of Homeland Security,Issuance of Binding Operational Directives,KB 2/USA/FedRAMP.pdf
+stmt_020,slide_05,CIO Council,Cross Agency Coordination,KB 2/USA/FedRAMP.pdf
+stmt_021,slide_05,National Institute of Standards and Technology,FISMA Standards,KB 2/USA/FedRAMP.pdf
+stmt_022,slide_05,National Institute of Standards and Technology,Technical Advisors,KB 2/USA/FedRAMP.pdf
+stmt_023,slide_05,National Institute of Standards and Technology,Technical Specifications,KB 2/USA/FedRAMP.pdf
+stmt_024,slide_05,Composition,Up to 4 additional agencies,KB 2/USA/FedRAMP.pdf
+stmt_025,slide_06,Framing,"There are two paths to an authorization, through the JAB or Agency",KB 2/USA/FedRAMP.pdf
+stmt_026,slide_06,Joint Authorization Board Provisional Authority to Operate (P-ATO),The primary governance and decision making body for the FedRAMP program,KB 2/USA/FedRAMP.pdf
+stmt_027,slide_06,Joint Authorization Board Provisional Authority to Operate (P-ATO),"CIOs of DoD, DHS, and GSA strictly review CSP packages for an acceptable risk posture using a standard baseline approach",KB 2/USA/FedRAMP.pdf
+stmt_028,slide_06,Joint Authorization Board Provisional Authority to Operate (P-ATO),"The JAB issues provisional authorizations (P-ATO); this is not a risk acceptance, but an assurance to Agencies that the risk posture of the system has been reviewed by DoD, DHS, and GSA, and approved. Each Agency must review and issue their own ATO that covers their Agency's use of the cloud service.",KB 2/USA/FedRAMP.pdf
+stmt_029,slide_06,Agency Authority to Operate (ATO),Agency Initial ATO: Initial Agency reviews CSP FedRAMP security package; Agency/CSP submits the security package and Agency ATO to the FedRAMP PMO. FedRAMP confirms package meets FedRAMP requirements and makes security package available for Agencies to reuse.,KB 2/USA/FedRAMP.pdf
+stmt_030,slide_06,Agency Authority to Operate (ATO),Agency Leveraged ATO: Agency reviews JAB or Initial Agency FedRAMP ATO security packages and issues Agency ATO. Agency sends a copy of ATO letter to FedRAMP PMO for record keeping.,KB 2/USA/FedRAMP.pdf
+stmt_031,slide_06,Marketplace designation,FedRAMP Authorized,KB 2/USA/FedRAMP.pdf
+stmt_032,slide_07,Federal Agencies,221,KB 2/USA/FedRAMP.pdf
+stmt_033,slide_07,Cloud Service Providers (CSPs),300+,KB 2/USA/FedRAMP.pdf
+stmt_034,slide_07,Cloud Service Providers (CSPs),* Including 61 small businesses,KB 2/USA/FedRAMP.pdf
+stmt_035,slide_07,Third Party Assessment Organizations (3PAOs),40,KB 2/USA/FedRAMP.pdf
+stmt_036,slide_08,PMO Operations,Develops customized baselines for Cloud Services,KB 2/USA/FedRAMP.pdf
+stmt_037,slide_08,PMO Operations,Measures FedRAMP's performance through metrics collection/analysis,KB 2/USA/FedRAMP.pdf
+stmt_038,slide_08,PMO Operations,Develops and enhances documentation and templates,KB 2/USA/FedRAMP.pdf
+stmt_039,slide_08,PMO Operations,Executes the PMO's Incident Response Plan and ensures all incidents are resolved promptly,KB 2/USA/FedRAMP.pdf
+stmt_040,slide_08,PMO Operations,Oversees and manages website,KB 2/USA/FedRAMP.pdf
+stmt_041,slide_08,Agency Engagement,Develops guidance for agency authorization process,KB 2/USA/FedRAMP.pdf
+stmt_042,slide_08,Agency Engagement,Reviews agency authorization packages and provides risk assessment,KB 2/USA/FedRAMP.pdf
+stmt_043,slide_08,Agency Engagement,"Guides and supports agencies through the FedRAMP process including ongoing communication, Kick-off meetings, and agency/CSP partnership development",KB 2/USA/FedRAMP.pdf
+stmt_044,slide_08,3PAO Performance,Oversees 3PAO Program and vendors,KB 2/USA/FedRAMP.pdf
+stmt_045,slide_08,3PAO Performance,Develops 3PAO Requirements,KB 2/USA/FedRAMP.pdf
+stmt_046,slide_08,3PAO Performance,Partners with accrediting body,KB 2/USA/FedRAMP.pdf
+stmt_047,slide_08,JAB Authorizations,Facilitates JAB authorization of cloud service providers,KB 2/USA/FedRAMP.pdf
+stmt_048,slide_08,JAB Authorizations,Sets guidance and procedures,KB 2/USA/FedRAMP.pdf
+stmt_049,slide_08,JAB Authorizations,Manages repository and tracking of authorizations,KB 2/USA/FedRAMP.pdf
+stmt_050,slide_08,JAB Authorizations,Manages governance process,KB 2/USA/FedRAMP.pdf
+stmt_051,slide_08,JAB Authorizations,Ensures vendors holding JAB P-ATOs maintain their authorizations through Continuous Monitoring,KB 2/USA/FedRAMP.pdf
+stmt_052,slide_08,Priority Projects,* Threat-based authorizations,KB 2/USA/FedRAMP.pdf
+stmt_053,slide_08,Priority Projects,* Digitizing FedRAMP security packages using Open Security Control Automation Language (OSCAL) to automate the authorization process,KB 2/USA/FedRAMP.pdf
+stmt_054,slide_08,Priority Projects,Agency Liaison Program,KB 2/USA/FedRAMP.pdf
+stmt_055,slide_08,Training & Outreach,"Oversees all FedRAMP training, including required 3PAO training, ISSO trainings, and other training offered by the PMO",KB 2/USA/FedRAMP.pdf
+stmt_056,slide_08,Training & Outreach,Develops and implements a training strategy to establish a cohesive training approach,KB 2/USA/FedRAMP.pdf
+stmt_057,slide_08,Training & Outreach,Creates and delivers customized agency training,KB 2/USA/FedRAMP.pdf
+stmt_058,slide_08,Training & Outreach,Creates and reviews blogs and monthly Newsletters,KB 2/USA/FedRAMP.pdf
+stmt_059,slide_08,Training & Outreach,Manages stakeholder feedback through Annual Survey,KB 2/USA/FedRAMP.pdf
+stmt_060,slide_08,Footnote,*Threat-based authorization approach and future OSCAL phases are/will primarily funded through external funding sources.,KB 2/USA/FedRAMP.pdf
+stmt_061,slide_11,Operationalizing Legislation,Facilitate the ease of reuse and increase volume of ATOs,KB 2/USA/FedRAMP.pdf
+stmt_062,slide_11,Operationalizing Legislation,Establish FACA Advisory Board,KB 2/USA/FedRAMP.pdf
+stmt_063,slide_11,Operationalizing Legislation,Plan for changes to the Joint Authorization Board,KB 2/USA/FedRAMP.pdf
+stmt_064,slide_11,Operationalizing Legislation,Work with OMB to update FedRAMP memo,KB 2/USA/FedRAMP.pdf
+stmt_065,slide_11,Increase in Funding,Allow PMO to grow to address increased demand and modernization efforts,KB 2/USA/FedRAMP.pdf
+stmt_066,slide_11,Rev 5 Transition,Modernize baselines,KB 2/USA/FedRAMP.pdf
+stmt_067,slide_11,Modernize baselines External/3rd Party Services,(Authorization Boundary Guidance),KB 2/USA/FedRAMP.pdf
+stmt_068,slide_11,Modernize baselines External/3rd Party Services,Enable a risk management approach for protecting federal data,KB 2/USA/FedRAMP.pdf
+stmt_069,slide_12,Framing,GOALS,KB 2/USA/FedRAMP.pdf
+stmt_070,slide_12,Grow the FedRAMP Marketplace,Continue to partner with government and industry to promote the adoption of secure cloud services across the federal government,KB 2/USA/FedRAMP.pdf
+stmt_071,slide_12,Transform Processes,Incorporate automation and process improvements to improve the efficiency and stakeholder experience of the end-to-end FedRAMP process with the ability to accommodate future growth,KB 2/USA/FedRAMP.pdf
+stmt_072,slide_12,Promote Knowledge Sharing,"Provide more opportunities for dialogue and feedback by hosting additional events for collaboration, feedback, training and exchange of ideas and practices",KB 2/USA/FedRAMP.pdf
+stmt_073,slide_13,Closing,Learn more at fedramp.gov,KB 2/USA/FedRAMP.pdf
+stmt_074,slide_13,Social,@FEDRAMP,KB 2/USA/FedRAMP.pdf

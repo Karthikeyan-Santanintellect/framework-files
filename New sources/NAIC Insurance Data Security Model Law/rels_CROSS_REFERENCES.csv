@@ -1,0 +1,24 @@
+source_id,target_id,rel_type,quoted_reference
+SUB-2A,SEC-3,CROSS_REFERENCES,as defined in Section 3
+DEF-3N,SUB-4C,CROSS_REFERENCES,required to conduct under Section 4C of this Act
+SUB-4I,SEC-4,CROSS_REFERENCES,the requirements set forth in Section 4 of this Act
+CL-4E-3,SEC-4,CROSS_REFERENCES,its responsibilities under Section 4 of this Act
+SUB-5C,SUB-5B,CROSS_REFERENCES,the steps listed in Section 5B above
+SUB-6C,SUB-6A,CROSS_REFERENCES,required to notify the Commissioner under Section 6A
+CL-6D-1,SUB-6A,CROSS_REFERENCES,treat such event as it would under Section 6A
+CL-6D-3,SEC-5,CROSS_REFERENCES,the investigation requirements imposed under Section 5
+CL-6D-3,SEC-6,CROSS_REFERENCES,notice requirements imposed under Section 6
+CL-6E-1-b,SEC-6,CROSS_REFERENCES,notification requirements relating to a Cybersecurity Event imposed under Section 6
+CL-6E-2-b,SEC-6,CROSS_REFERENCES,notification requirements relating to a Cybersecurity Event imposed under Section 6
+SUB-8A,SUB-4I,CROSS_REFERENCES,furnished by a Licensee ... pursuant to Section 4I
+SUB-8A,SUB-6B,CROSS_REFERENCES,"Section 6B(2), (3), (4), (5), (8), (10), and (11)"
+SUB-8A,SEC-7,CROSS_REFERENCES,obtained by the Commissioner in an investigation or examination pursuant to Section 7 of this Act
+SUB-8B,SUB-8A,CROSS_REFERENCES,information subject to Section 8A
+CL-8C-1,SUB-8A,CROSS_REFERENCES,"documents, materials or information subject to Section 8A"
+CL-8C-3,SUB-8A,CROSS_REFERENCES,"documents, materials or other information subject to Section 8A"
+SUB-8D,SUB-8C,CROSS_REFERENCES,as a result of sharing as authorized in Section 8C
+CL-9A-1,SEC-4,CROSS_REFERENCES,is exempt from Section 4 of this Act
+CL-9A-2,SEC-4,CROSS_REFERENCES,will be considered to meet the requirements of Section 4
+CL-9A-3,SEC-4,CROSS_REFERENCES,is exempt from Section 4
+SEC-13,SEC-4,CROSS_REFERENCES,one year from the effective date of this Act to implement Section 4 of this Act
+SEC-13,SUB-4F,CROSS_REFERENCES,two years from the effective date of this Act to implement Section 4F of this Act

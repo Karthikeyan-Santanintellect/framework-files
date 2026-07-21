@@ -1,0 +1,21 @@
+source_id,target_id,rel_type,term
+art_1,def_state,DEFINES,State
+art_1,def_office,DEFINES,Office
+art_1,def_data,DEFINES,Data
+art_1,def_personal_data,DEFINES,Personal Data
+art_1,def_sensitive_personal_data,DEFINES,Sensitive Personal Data
+art_1,def_biometric_data,DEFINES,Biometric Data
+art_1,def_data_subject,DEFINES,Data Subject
+art_1,def_establishment,DEFINES,Establishment
+art_1,def_controller,DEFINES,Controller
+art_1,def_processor,DEFINES,Processor
+art_1,def_dpo,DEFINES,Data Protection Officer
+art_1,def_processing,DEFINES,Processing
+art_1,def_automated_processing,DEFINES,Automated Processing
+art_1,def_personal_data_security,DEFINES,Personal Data Security
+art_1,def_pseudonymisation,DEFINES,Pseudonymisation
+art_1,def_anonymization,DEFINES,Anonymization
+art_1,def_data_breach,DEFINES,Data Breach
+art_1,def_profiling,DEFINES,Profiling
+art_1,def_cross_border_processing,DEFINES,Cross-Border Processing
+art_1,def_consent,DEFINES,Consent

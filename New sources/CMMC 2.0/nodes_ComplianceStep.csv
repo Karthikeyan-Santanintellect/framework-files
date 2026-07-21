@@ -1,0 +1,5 @@
+compliancestep_id,step_number,text,source_document
+STEP-1,1,"Identify CUI or FCI: Determine whether your institution will create or handle CUI or FCI under the contract (or subcontract). If so, assess what data and systems are involved.",COGR-CMMC-2.0-OVERVIEW-2025
+STEP-2,2,Assess Current Practices: Review existing cybersecurity measures and identify gaps in compliance with NIST SP 800-171 and NIST SP 800-172 (as applicable).,COGR-CMMC-2.0-OVERVIEW-2025
+STEP-3,3,Implement Changes: Implement technical and administrative safeguards to comply with the appropriate CMMC level.,COGR-CMMC-2.0-OVERVIEW-2025
+STEP-4,4,"Prepare for Certification: As applicable, conduct internal self-assessments or arrange for third-party assessments.",COGR-CMMC-2.0-OVERVIEW-2025

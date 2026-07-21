@@ -1,0 +1,9 @@
+mitigationstrategy_id,name,source_document
+STRAT-01,Patch applications,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-02,Patch operating systems,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-03,Multi-factor authentication,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-04,Restrict administrative privileges,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-05,Application control,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-06,Restrict Microsoft Office macros,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-07,User application hardening,KB 2/Australia/ASD Essential Eight Maturity Model.pdf
+STRAT-08,Regular backups,KB 2/Australia/ASD Essential Eight Maturity Model.pdf

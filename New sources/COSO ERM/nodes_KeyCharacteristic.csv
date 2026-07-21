@@ -1,0 +1,121 @@
+kc_id,principle_id,sequence,text,table,source_document
+kc_1_1,principle_1,1,"Require the board to oversee compliance risk management and the C&E program, including the approval of its charter",Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_2,principle_1,2,"Ensure that the board is knowledgeable of and demonstrates oversight of the C&E program (regular part of agendas, monitors compliance metrics, holds regular executive sessions with CCO and others)",Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_3,principle_1,3,Require that the board includes a member who possesses compliance expertise,Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_4,principle_1,4,Document evidence of board oversight of the C&E program in minutes,Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_5,principle_1,5,Provide input or approve appointment/dismissal/reassignment of CCO and ensure independence,Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_6,principle_1,6,Ensure that sufficient resources are provided for the C&E program,Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_7,principle_1,7,Receive regular reports from the CCO,Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_1_8,principle_1,8,Ensure that the board is informed about material investigations and remediation efforts and provides input,Table 2.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_1,principle_2,1,Maintain independence of the CCO and the compliance and ethics function,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_2,principle_2,2,Ensure that the CCO directly reports to and regularly communicates with the board,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_3,principle_2,3,Ensure that the CCO and C&E program have high stature relative to other functional leaders,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_4,principle_2,4,Grant sufficient authority to the CCO to manage the program effectively,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_5,principle_2,5,Provide sufficient resources for the C&E program to be effective,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_6,principle_2,6,"Address C&E program oversight in the charter (including delegation to a designated committee, if applicable)",Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_7,principle_2,7,Document policies and procedures specific to the operation of the C&E program,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_2_8,principle_2,8,Establish protocol/procedures for escalation of significant compliance risk events,Table 2.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_1,principle_3,1,Ensure that the board is knowledgeable of and approves a code of conduct/ethics and other key compliance policies,Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_2,principle_3,2,Explain expectations relating to ethics and compliance in a code of conduct/ethics,Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_3,principle_3,3,Provide and require training on the code of conduct and on ethical decision-making for all staff (including board members),Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_4,principle_3,4,Perform ongoing monitoring or assessment of organizational culture,Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_5,principle_3,5,"Develop objectively measurable compliance metrics tied to performance evaluations and compensation, where appropriate",Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_6,principle_3,6,Adopt meaningful incentives to promote consistent execution of the C&E program,Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_3_7,principle_3,7,"Include references to organizational values, expectations, and importance of ethics in communications from leadership",Table 2.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_1,principle_4,1,"Actively promote a culture of compliance risk awareness, including setting an ethical and compliant tone by leadership",Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_2,principle_4,2,Balance business incentives with material compliance incentives,Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_3,principle_4,3,"Incorporate accountability for the management of (1) compliance risks and (2) compliance program implementation into employee performance measurement, promotions, and incentive programs, particularly at senior levels",Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_4,principle_4,4,"Protect those who report suspected wrongdoing, with zero tolerance for retaliation",Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_5,principle_4,5,Take allegations of wrongdoing seriously and investigate in a timely manner,Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_6,principle_4,6,"Promote organizational justice, including accountability for wrongdoing, fairness and consistency in discipline, and fairness in promotions",Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_4_7,principle_4,7,Communicate lessons learned from compliance and ethics failures across the organization in appropriate detail,Table 2.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_5_1,principle_5,1,Hire and retain a CCO with appropriate experience/expertise to lead the C&E program,Table 2.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_5_2,principle_5,2,Staff the compliance team with individuals that possess relevant expertise,Table 2.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_5_3,principle_5,3,"Perform background checks aimed at screening for compliance risk, tailored to the level of risk associated with each position",Table 2.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_5_4,principle_5,4,Consider employee execution of and adherence to the requirements and expectations of the C&E program in the preparation of performance evaluations,Table 2.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_5_5,principle_5,5,Appropriately tailor compliance training based on the compliance risks encountered for specific roles in the organization,Table 2.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_5_6,principle_5,6,Perform risk-based due diligence on third parties,Table 2.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_6_1,principle_6,1,Consider and reflect organizational strategy in performing compliance risk assessments and managing compliance risk,Table 3.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_6_2,principle_6,2,"Consider how compliance risks are affected by internal changes, such as changes in people, structures, processes, technology, etc.",Table 3.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_6_3,principle_6,3,"Evaluate effects of external factors (e.g., competitive, economic, enforcement trends, environmental, political, social forces) on compliance risks",Table 3.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_6_4,principle_6,4,Identify and consider risk interdependencies in the development of strategy,Table 3.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_6_5,principle_6,5,Give consideration to cultural and regional differences in legal frameworks based on locations where the organization operates,Table 3.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_7_1,principle_7,1,Consider compliance risk as part of the organization’s risk profile in determining risk appetite,Table 3.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_7_2,principle_7,2,"Consider compliance risk by (1) type of risk (e.g., anti-bribery), (2) business unit or organizational function (e.g., human resources), and (3) location or region",Table 3.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_7_3,principle_7,3,Determine and evaluate the relationships between compliance risks and the achievement of business objectives,Table 3.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_7_4,principle_7,4,Discuss risk appetite on a regular basis and update as necessary based on changes in compliance risk,Table 3.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_7_5,principle_7,5,Consider developing specific risk-centric appetite statements associated with compliance risks in support of organizational risk appetite and tolerance,Table 3.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_8_1,principle_8,1,Ensure that the CCO has a seat at the table in discussions of strategies,Table 3.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_8_2,principle_8,2,Solicit input and insight from the CCO regarding how strategy affects compliance risk,Table 3.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_8_3,principle_8,3,Perform risk-based due diligence on merger and acquisition targets prior to execution of the transaction,Table 3.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_8_4,principle_8,4,Consider implications of strategic decisions (including subsequent changes in strategy) in the design of the C&E program,Table 3.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_9_1,principle_9,1,Identify and evaluate compliance risks associated with planned business objectives,Table 3.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_9_2,principle_9,2,Consider establishing compliance as a separate business objective,Table 3.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_9_3,principle_9,3,Incorporate compliance risk management and accountability into performance measures and related evaluations,Table 3.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_9_4,principle_9,4,Consider interactions between compliance and other risks based on changes in business objectives,Table 3.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_9_5,principle_9,5,"Include objectively measured compliance metrics within business objectives, reflecting the management of compliance risk and the effectiveness of C&E program implementation, and carrying appropriate weight in incentive and other compensation decisions",Table 3.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_10_1,principle_10,1,Describe the compliance risk identification and assessment process in documented policies and procedures,Table 4.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_10_2,principle_10,2,Identify compliance risks associated with planned strategy and business objectives,Table 4.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_10_3,principle_10,3,Assess internal and external environments to identify risks,Table 4.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_10_4,principle_10,4,Create process for identifying new and emerging risks,Table 4.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_10_5,principle_10,5,Consider risks associated with use of third parties,Table 4.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_10_6,principle_10,6,"Consider information gathered through hotlines, other reporting channels, and results of investigations",Table 4.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_11_1,principle_11,1,Adopt a uniform scale/scoring system for measuring severity of compliance risks,Table 4.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_11_2,principle_11,2,Consider qualitative and quantitative measures,Table 4.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_11_3,principle_11,3,Establish criteria to assess impact and likelihood of compliance risk event occurrence,Table 4.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_11_4,principle_11,4,"Assess severity of risk at different levels (organizational, regional, affiliate, etc.)",Table 4.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_11_5,principle_11,5,Consider design and operation of internal controls intended to prevent or detect compliance risk events,Table 4.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_11_6,principle_11,6,"Minimize bias and inadequate knowledge in assessing severity (e.g., minimize self-assessments, use multidisciplinary teams)",Table 4.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_12_1,principle_12,1,Prioritize compliance risks based on assessed level of risk relative to meeting of business objectives,Table 4.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_12_2,principle_12,2,Use objective scoring based on assessment,Table 4.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_12_3,principle_12,3,"Consider use of other assessment criteria (trend, velocity, etc.) in prioritizing compliance risks",Table 4.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_12_4,principle_12,4,Consider possible effects of planned changes in strategy and operations,Table 4.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_12_5,principle_12,5,"Develop risk-based action plans for mitigation (risk responses, implemented in next step)",Table 4.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_13_1,principle_13,1,Consider potential need for modifications in each element of the C&E program when designing risk responses,Table 4.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_13_2,principle_13,2,Design compliance risk responses that consider the impact on other (non-compliance) risks and risk responses,Table 4.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_13_3,principle_13,3,"Assign accountability for each compliance risk response (including timeline, etc.)",Table 4.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_13_4,principle_13,4,Follow up to determine whether compliance risk responses have been properly implemented as designed,Table 4.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_13_5,principle_13,5,Consider compliance risk responses when developing monitoring and auditing plans,Table 4.4,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_14_1,principle_14,1,"Consider risk interactions (i.e., how mitigating a compliance risk can affect other risks)",Table 4.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_14_2,principle_14,2,Consider interactions of compliance risk responses with other risk responses,Table 4.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_14_3,principle_14,3,Integrate compliance risk management with ERM,Table 4.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_14_4,principle_14,4,Have regular meetings/communications between compliance and business units,Table 4.5,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_15_1,principle_15,1,Identify drivers of change in compliance risk — internal and external,Table 5.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_15_2,principle_15,2,Consider how implementation of new strategic initiatives affects compliance risk,Table 5.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_15_3,principle_15,3,Consider how changes in senior personnel affect compliance risk and/or risk tolerance,Table 5.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_15_4,principle_15,4,Evaluate changes in laws and regulations,Table 5.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_15_5,principle_15,5,"Consider developments in enforcement, guidance from regulators, and other trends",Table 5.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_15_6,principle_15,6,Assess changes in local/regional environments,Table 5.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_1,principle_16,1,Monitor performance against compliance and ethics metrics and report at the management and board levels,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_2,principle_16,2,Update compliance risk assessments on a periodic basis,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_3,principle_16,3,"Develop monitoring plans for high-priority risks, assign assurance responsibilities clearly across the three lines, and set clear performance expectations",Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_4,principle_16,4,Ensure that internal audit considers compliance risk in connection with its review of entity risk and performance,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_5,principle_16,5,Periodically assess the organization’s culture of compliance,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_6,principle_16,6,Ensure that annual C&E program work plans reflect risk assessment (cross-referenced),Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_7,principle_16,7,Include appropriate audit rights clauses in third-party contracts to facilitate monitoring and auditing,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_8,principle_16,8,"Obtain feedback from participants in compliance training, hotline reports, employee surveys, and exit interviews",Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_9,principle_16,9,Require that implementation of corrective action plans is an important metric monitored by management and the board,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_16_10,principle_16,10,Perform root cause analyses for compliance risk events experienced,Table 5.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_1,principle_17,1,"Maintain awareness of current trends in compliance risk management (through training, review of regulatory guidance, etc.)",Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_2,principle_17,2,Ensure that compliance periodically self-assesses the C&E program’s performance,Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_3,principle_17,3,Obtain feedback from the board on the quality and usefulness of compliance risk information shared,Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_4,principle_17,4,Consider obtaining periodic independent evaluation of the C&E program,Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_5,principle_17,5,Consider benchmarking the C&E program against similar organizations,Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_6,principle_17,6,Review efficacy of the compliance risk assessment process on a periodic basis,Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_17_7,principle_17,7,Ensure that internal audit plays an active role in periodically evaluating the effectiveness of the C&E program,Table 5.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_18_1,principle_18,1,Ensure that compliance has access to all information relevant to effectively manage compliance risk,Table 6.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_18_2,principle_18,2,Provide compliance with relevant information technology/data analytics skills or access to such skills,Table 6.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_18_3,principle_18,3,Utilize data analytics in monitoring/auditing (monitor compliance and performance of internal controls),Table 6.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_18_4,principle_18,4,Create automated dashboards/reports for monitoring compliance,Table 6.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_18_5,principle_18,5,Leverage technology to provide for the delivery of effective compliance and ethics training,Table 6.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_18_6,principle_18,6,"Utilize technology to facilitate risk assessment process (scoring, reporting, etc.)",Table 6.1,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_19_1,principle_19,1,Ensure that employees receive clear and regular communications on their roles regarding C&E,Table 6.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_19_2,principle_19,2,Require periodic reporting to the board by the CCO,Table 6.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_19_3,principle_19,3,Establish protocols and ensure a clear understanding of an escalation policy,Table 6.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_19_4,principle_19,4,Provide compliance risk communications that support and relate to training and job responsibilities,Table 6.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_19_5,principle_19,5,Engage in effective two-way communication between operations management and compliance,Table 6.2,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_20_1,principle_20,1,Provide periodic reports on compliance and ethics risk assessments and related remediation efforts tailored to key stakeholder needs,Table 6.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_20_2,principle_20,2,Develop and report on meaningful operational and substantive metrics associated with the effectiveness of the C&E program,Table 6.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_20_3,principle_20,3,Provide managers with reports on completion and results of training of their direct reports,Table 6.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_20_4,principle_20,4,Use a case management and reporting system for investigations and outcomes,Table 6.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf
+kc_20_5,principle_20,5,Establish and follow a policy that clearly articulates the nature of reporting on all significant remediation efforts,Table 6.3,Compliance-Risk-Management-Applying-the-COSO-ERM-Framework.pdf

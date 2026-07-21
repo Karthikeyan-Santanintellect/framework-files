@@ -1,0 +1,6 @@
+toolqualificationlevel_id,name,description_in_ebook,source_document
+TQL1,TQL-1,TQL-1 is the most rigorous level. TQL 1 represents the highest impact.,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TQL2,TQL-2,,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TQL3,TQL-3,,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TQL4,TQL-4,,KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
+TQL5,TQL-5,"There are different levels of tool qualification from 1 to 5, with 5 being the least rigorous. TQL 5 the lowest.",KB 2/USA/DO-178C Software Considerations in Airborne Systems.pdf
