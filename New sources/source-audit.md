@@ -3,10 +3,10 @@
 What exists in the knowledge base (`source-verifier/KB 2/` and `source-verifier/KB 3/`) against
 what has actually been extracted into this repository, so the remaining work is explicit.
 
-*This folder is the staging area for sources not yet in the graph — drop new instruments here,
-then update the tables below as they are extracted.*
+*This folder holds the extracted CSVs for every instrument listed below as ❌ in the original
+audit. Drop new source documents here and update the tables as they are extracted.*
 
-**Audit date:** 2026-07-21
+**Audit date:** 2026-07-21 · **Extraction pass completed:** 2026-07-21
 **Knowledge base:** 128 files — 126 PDFs (KB 2: 117 across 25 jurisdiction folders, 150 MB · KB 3: 9, 20 MB)
 plus one `.zip` and one `.xlsx`
 **Rows are instruments, not files.** Where one instrument ships as several PDFs (Mexico's law
@@ -26,15 +26,19 @@ LFPDPPP comes as 4, FISMA as 6, CMMC as 4) they are grouped into a single row an
 | Status | Count | Meaning |
 |---|---:|---|
 | ✅ **Done** | **26** | Extracted, verified against its source in `verdict.md`, and loaded into Neo4j |
-| ⚠️ **Built, not verified** | **4** | CSVs exist in the repo, but never verified in `verdict.md` and **not in the graph** |
-| ❌ **Missing** | **64** | A source sits in the KB and nothing has been extracted from it |
+| 🟦 **Extracted, not loaded** | **64** | Built in this pass into `New sources/` — clause-level CSVs, integrity-checked, but **no loader and not in the graph** |
+| ⚠️ **Built, not verified** | **4** | CSVs exist elsewhere in the repo, never verified in `verdict.md` and **not in the graph** |
 | 📎 **Supporting material** | **13** | Secondary/duplicate documents that do not warrant their own framework |
+
+**Nothing in the knowledge base is now unextracted.** The 64 formerly-missing instruments produced
+**59,203 nodes / 75,675 relationships** across 64 folders — see [README.md](README.md).
 
 **KB 3 is fully consumed** — all 9 files map to a completed framework. Every gap below is in KB 2.
 
 Coverage by document count: of the 128 files, 25 back a completed framework, 2 back an unverified
-one, 16 are supporting material, and **85 have never been extracted** — two thirds of the
-knowledge base is untouched.
+one, 16 are supporting material, and the remaining **85 were extracted in this pass** into the 64
+instrument folders here. Every file in the knowledge base is now either extracted or explicitly
+classified as supporting material.
 
 ---
 
@@ -93,101 +97,104 @@ and loaded immediately. ISO 42001 and ISO 27701 would need their standards obtai
 
 ---
 
-## ❌ Missing (64)
+## 🟦 Extracted in this pass (64) — formerly ❌ Missing
 
-A source exists in KB 2 and nothing has been extracted. Rows marked **✔ content-verified** were
-confirmed by opening the PDF, because filenames in this KB have proven unreliable — `NERC CIP.pdf`
-turned out to be a roadmap and `NIST Privacy Framework.pdf` was the 1.1 draft. Unmarked rows are
-identified from the filename plus its jurisdiction folder.
+**Every row below has been built** into a folder in this directory. They are listed here in their
+original audit grouping; the status of the whole section changed from ❌ Missing to 🟦 Extracted,
+not loaded on 2026-07-21.
+
+All 64 were opened and read in full during extraction, so **every row is now content-verified** —
+the `✔ content-verified` marks below record which ones had *already* been verified at audit time.
+Rows marked **[CORRECTED]** are those where reading the file proved the original audit entry wrong.
 
 ### Americas — USA (23)
 
 | Instrument | Files | Notes |
 |---|---:|---|
-| NIST SP 800-53r5 — Security and Privacy Controls | 1 | The control catalog behind NIST RMF; the RMF graph currently carries only 20 sample controls |
-| NIST SP 800-171r3 — Protecting CUI | 1 | Prerequisite for CMMC Level 2 |
-| NIST SP 800-207 — Zero Trust Architecture | 1 | |
-| CMMC 2.0 | 4 | ✔ content-verified — DoD Model Overview v2.13 (Sept 2024), v2.0 (2021), a CMMC 2.0 brief and a COGR October 2025 update |
-| FISMA | 6 | ✔ content-verified — the enacted Public Law 113-283 (2014) plus S.2902 (117th Congress) and four FY25 CIO/IG/SAOP metrics documents |
-| FedRAMP | 1 | **[CORRECTED]** ✔ content-verified — **not a standard, baseline, playbook or CONOPS**. A 13-slide program-overview briefing deck (Aug 2023). No control baselines exist in it |
-| SOC 2 | 1 | ✔ content-verified — AICPA TSP Section 100, *2017 Trust Services Criteria* |
-| Sarbanes-Oxley Act | 1 | |
-| COSO ERM | 2 | **[CORRECTED]** ✔ content-verified — the first file is **Appendices Volume II only**: no components, no principles, no glossary. The 5 components and 20 principles exist only in the second file (the Compliance Risk Management application paper) |
-| SOX/COSO adjacent: FFIEC Cybersecurity Assessment Tool | 1 | |
-| NAIC Insurance Data Security Model Law | 1 | |
-| COPPA — Children's Online Privacy Protection Act | 1 | |
-| FERPA | 2 | ✔ content-verified — **both files are ED guidance** (a Parent Guide and an Eligible Student Guide), **not the statute**; the statutory text is absent |
-| 21 CFR Part 11 — Electronic Records / Signatures | 2 | ✔ content-verified — eCFR authoritative text + FDA *Scope and Application* guidance |
-| FDA Cybersecurity for Medical Devices | 1 | |
-| CPNI Rules | 1 | ✔ content-verified — FCC 01-247 order, not the codified 47 CFR 64.2001–2011 rules |
-| DFARS | 1 | ✔ content-verified — Volume III, Parts 201–253 |
-| ITAR | 1 | ✔ content-verified — amended through 2 Oct 2025 |
-| DO-178C — Airborne Systems Software | 1 | **[CORRECTED]** ✔ content-verified — **not the standard**. A Parasoft marketing ebook; the Annex A objectives tables are page images with no text layer. The DO-178C standard is absent from the KB |
-| MITRE ATT&CK | 1 | ⛔ image-only PDF. **[EXTRACTED via OCR]** — 206 of the source's own stated 235 techniques recovered, each with an OCR confidence flag |
-| Massachusetts Boards of Health — Manual of Laws | 1 | ✔ content-verified — MAHB 2016 manual; a public-health law compendium, not a cyber/privacy framework |
-| Massachusetts fraud & abuse compliance manual | 1 | ✔ content-verified — Massachusetts Medical Society (2003); healthcare billing compliance, not cyber/privacy |
-| CCPA | 1 | ✔ content-verified — CCPA of 2018 as amended effective 01/01/2025. **Largely covered already**: the `CPRA` folder models Civil Code 1798.100–.199.40. Worth diffing for the 2025 SB 1223 / AB 1008 / AB 1824 amendments the 2020 text lacks |
+| NIST SP 800-53r5 — Security and Privacy Controls | 1 | The control catalog behind NIST RMF; the RMF graph currently carries only 20 sample controls · **→ `NIST SP 800-53r5/` (3,512 nodes)** |
+| NIST SP 800-171r3 — Protecting CUI | 1 | Prerequisite for CMMC Level 2 · **→ `NIST SP 800-171r3/` (1,406 nodes)** |
+| NIST SP 800-207 — Zero Trust Architecture | 1 | · **→ `NIST SP 800-207/` (184 nodes)** |
+| CMMC 2.0 | 4 | ✔ content-verified — DoD Model Overview v2.13 (Sept 2024), v2.0 (2021), a CMMC 2.0 brief and a COGR October 2025 update · **→ `CMMC 2.0/` (516 nodes)** |
+| FISMA | 6 | ✔ content-verified — the enacted Public Law 113-283 (2014) plus S.2902 (117th Congress) and four FY25 CIO/IG/SAOP metrics documents · **→ `FISMA/` (2,139 nodes)** |
+| FedRAMP | 1 | **[CORRECTED]** ✔ content-verified — **not a standard, baseline, playbook or CONOPS**. A 13-slide program-overview briefing deck (Aug 2023). No control baselines exist in it · **→ `FedRAMP/` (141 nodes)** |
+| SOC 2 | 1 | ✔ content-verified — AICPA TSP Section 100, *2017 Trust Services Criteria* · **→ `SOC 2 Trust Services Criteria/` (474 nodes)** |
+| Sarbanes-Oxley Act | 1 | · **→ `Sarbanes-Oxley Act/` (672 nodes)** |
+| COSO ERM | 2 | **[CORRECTED]** ✔ content-verified — the first file is **Appendices Volume II only**: no components, no principles, no glossary. The 5 components and 20 principles exist only in the second file (the Compliance Risk Management application paper) · **→ `COSO ERM/` (890 nodes)** |
+| FFIEC Cybersecurity Assessment Tool | 1 | · **→ `FFIEC Cybersecurity Assessment Tool/` (873 nodes)** |
+| NAIC Insurance Data Security Model Law | 1 | · **→ `NAIC Insurance Data Security Model Law/` (174 nodes)** |
+| COPPA — Children's Online Privacy Protection Act | 1 | · **→ `COPPA/` (182 nodes)** |
+| FERPA | 2 | ✔ content-verified — **both files are ED guidance** (a Parent Guide and an Eligible Student Guide), **not the statute**; the statutory text is absent · **→ `FERPA (guidance)/` (151 nodes)** |
+| 21 CFR Part 11 — Electronic Records / Signatures | 2 | ✔ content-verified — eCFR authoritative text + FDA *Scope and Application* guidance · **→ `21 CFR Part 11/` (152 nodes)** |
+| FDA Cybersecurity for Medical Devices | 1 | · **→ `FDA Medical Device Cybersecurity/` (419 nodes)** |
+| CPNI Rules | 1 | ✔ content-verified — FCC 01-247 order, not the codified 47 CFR 64.2001–2011 rules · **→ `CPNI Rules/` (279 nodes)** |
+| DFARS | 1 | ✔ content-verified — Volume III, Parts 201–253 · **→ `DFARS/` (16,535 nodes)** |
+| ITAR | 1 | ✔ content-verified — amended through 2 Oct 2025 · **→ `ITAR/` (3,353 nodes)** |
+| DO-178C — Airborne Systems Software | 1 | **[CORRECTED]** ✔ content-verified — **not the standard**. A Parasoft marketing ebook; the Annex A objectives tables are page images with no text layer. The DO-178C standard is absent from the KB · **→ `DO-178C/` (416 nodes)** |
+| MITRE ATT&CK | 1 | ⛔ image-only PDF. **[EXTRACTED via OCR]** — 206 of the source's own stated 235 techniques recovered, each with an OCR confidence flag · **→ `MITRE ATTACK/` (221 nodes)** |
+| Massachusetts Boards of Health — Manual of Laws | 1 | ✔ content-verified — MAHB 2016 manual; a public-health law compendium, not a cyber/privacy framework · **→ `Massachusetts Boards of Health Manual/` (372 nodes)** |
+| Massachusetts fraud & abuse compliance manual | 1 | ✔ content-verified — Massachusetts Medical Society (2003); healthcare billing compliance, not cyber/privacy · **→ `Massachusetts Fraud and Abuse Compliance/` (312 nodes)** |
+| CCPA | 1 | ✔ content-verified — CCPA of 2018 as amended effective 01/01/2025. **Largely covered already**: the `CPRA` folder models Civil Code 1798.100–.199.40. Worth diffing for the 2025 SB 1223 / AB 1008 / AB 1824 amendments the 2020 text lacks · **→ `CCPA 2025/` (716 nodes)** |
 
 ### Americas — Latin America & Canada (6)
 
 | Instrument | Jurisdiction | Files | Notes |
 |---|---|---:|---|
-| PIPEDA | Canada | 1 | |
-| Mexico LFPDPPP (private parties) | Mexico | 4 | ✔ content-verified — **new law, DOF 20-03-2025** plus the 2011 Regulations, an evolution note and an EU-Mexico comparison |
-| Mexico LGPDPPSO (obligated subjects) | Mexico | 1 | ✔ content-verified — General Law, DOF 20-03-2025; a separate instrument from the above |
-| Brazil LGPD (Lei 13.709/2018) | Brazil | 2 | ✔ content-verified — Portuguese consolidated text + a second copy |
-| Colombia Ley 1581 de 2012 | Colombia | 1 | ✔ content-verified — Spanish statutory text |
-| Argentina Personal Data Protection Act 2000 | Argentina | 1 | |
+| PIPEDA | Canada | 1 | · **→ `Canada PIPEDA/` (640 nodes)** |
+| Mexico LFPDPPP (private parties) | Mexico | 4 | ✔ content-verified — **new law, DOF 20-03-2025** plus the 2011 Regulations, an evolution note and an EU-Mexico comparison · **→ `Mexico LFPDPPP/` (1,075 nodes)** |
+| Mexico LGPDPPSO (obligated subjects) | Mexico | 1 | ✔ content-verified — General Law, DOF 20-03-2025; a separate instrument from the above · **→ `Mexico LGPDPPSO/` (700 nodes)** |
+| Brazil LGPD (Lei 13.709/2018) | Brazil | 2 | ✔ content-verified — Portuguese consolidated text + a second copy · **→ `Brazil LGPD/` (516 nodes)** |
+| Colombia Ley 1581 de 2012 | Colombia | 1 | ✔ content-verified — Spanish statutory text · **→ `Colombia Ley 1581/` (284 nodes)** |
+| Argentina Personal Data Protection Act 2000 | Argentina | 1 | · **→ `Argentina PDPA/` (265 nodes)** |
 
 ### Europe, UK & Germany (7)
 
 | Instrument | Files | Notes |
 |---|---:|---|
-| EU Artificial Intelligence Act | 1 | Largest remaining EU gap; pairs with the existing NIST AI RMF graph |
-| EU Cyber Resilience Act | 1 | |
-| eIDAS Regulation | 1 | |
-| ENISA European Cybersecurity Skills Framework | 1 | User manual |
-| UK NIS Regulations 2018 | 1 | UK counterpart to the completed NIS 2 graph |
-| UK Cyber Essentials | 1 | ✔ content-verified — NCSC *Requirements for IT Infrastructure v3.3* |
-| BSI C5 — Cloud Computing Compliance Controls Catalogue | 1 | Germany; the only KB 2/Germany source besides the completed TISAX handbook |
+| EU Artificial Intelligence Act | 1 | Largest remaining EU gap; pairs with the existing NIST AI RMF graph · **→ `EU AI Act/` (1,774 nodes)** |
+| EU Cyber Resilience Act | 1 | · **→ `EU Cyber Resilience Act/` (978 nodes)** |
+| eIDAS Regulation | 1 | · **→ `eIDAS Regulation/` (598 nodes)** |
+| ENISA European Cybersecurity Skills Framework | 1 | User manual · **→ `ENISA ECSF/` (246 nodes)** |
+| UK NIS Regulations 2018 | 1 | UK counterpart to the completed NIS 2 graph · **→ `UK NIS Regulations 2018/` (1,031 nodes)** |
+| UK Cyber Essentials | 1 | ✔ content-verified — NCSC *Requirements for IT Infrastructure v3.3* · **→ `UK Cyber Essentials/` (241 nodes)** |
+| BSI C5 — Cloud Computing Compliance Controls Catalogue | 1 | Germany; the only KB 2/Germany source besides the completed TISAX handbook · **→ `BSI C5/` (1,305 nodes)** |
 
 ### Asia-Pacific (15)
 
 | Instrument | Jurisdiction | Files | Notes |
 |---|---|---:|---|
-| Information Technology Act 2000 | India | 1 | **[CORRECTED]** ✔ content-verified — **not the Act**. Four Gazette notifications of 17 Oct 2000 (commencement, Certifying Authorities Rules + Schedules I–V, Advisory Committee, Appellate Tribunal Procedure Rules). No sections, no s.2 definitions, no offence provisions. The IT Act is absent from the KB |
-| RBI Cybersecurity Framework for Banks | India | 1 | |
-| SEBI Cybersecurity & Cyber Resilience Framework | India | 1 | |
-| PIPL — Personal Information Protection Law | China | 1 | |
-| Data Security Law | China | 1 | |
-| APPI | Japan | 1 | |
-| PIPA | South Korea | 1 | |
-| PDPA | Singapore | 1 | |
-| MAS Technology Risk Management Guidelines | Singapore | 1 | |
-| PDP Law | Indonesia | 1 | |
-| PDPA | Thailand | 1 | |
-| Australian Privacy Act 1988 + NDB scheme | Australia | 4 | **[CORRECTED]** ✔ content-verified — **none of the four files contain the Act**. The main file is the OAIC *APP Guidelines* (expressly non-binding); the others are an AMSRO factsheet, a **Fortinet vendor white paper** and the OAIC statistics report. The Privacy Act 1988 is absent from the KB |
-| APRA Prudential Standard CPS 234 | Australia | 1 | |
-| ASD Essential Eight Maturity Model | Australia | 1 | |
-| Philippines Data Privacy Act 2012 — IRR | Philippines | 1 | ✔ content-verified — the final IRR only (a July 2016 draft is listed under supporting material). **The Act itself (RA 10173) is not in the KB** |
+| Information Technology Act 2000 | India | 1 | **[CORRECTED]** ✔ content-verified — **not the Act**. Four Gazette notifications of 17 Oct 2000 (commencement, Certifying Authorities Rules + Schedules I–V, Advisory Committee, Appellate Tribunal Procedure Rules). No sections, no s.2 definitions, no offence provisions. The IT Act is absent from the KB · **→ `India IT Act 2000/` (1,255 nodes)** |
+| RBI Cybersecurity Framework for Banks | India | 1 | · **→ `RBI Cybersecurity Framework/` (214 nodes)** |
+| SEBI Cybersecurity & Cyber Resilience Framework | India | 1 | · **→ `SEBI Cybersecurity Framework/` (887 nodes)** |
+| PIPL — Personal Information Protection Law | China | 1 | · **→ `China PIPL/` (282 nodes)** |
+| Data Security Law | China | 1 | · **→ `China Data Security Law/` (192 nodes)** |
+| APPI | Japan | 1 | · **→ `Japan APPI/` (245 nodes)** |
+| PIPA | South Korea | 1 | · **→ `South Korea PIPA/` (915 nodes)** |
+| PDPA | Singapore | 1 | · **→ `Singapore PDPA/` (1,392 nodes)** |
+| MAS Technology Risk Management Guidelines | Singapore | 1 | · **→ `MAS TRM Guidelines/` (433 nodes)** |
+| PDP Law | Indonesia | 1 | · **→ `Indonesia PDP Law/` (512 nodes)** |
+| PDPA | Thailand | 1 | · **→ `Thailand PDPA/` (569 nodes)** |
+| Australian Privacy Act 1988 + NDB scheme | Australia | 4 | **[CORRECTED]** ✔ content-verified — **none of the four files contain the Act**. The main file is the OAIC *APP Guidelines* (expressly non-binding); the others are an AMSRO factsheet, a **Fortinet vendor white paper** and the OAIC statistics report. The Privacy Act 1988 is absent from the KB · **→ `Australia Privacy Act 1988/` (1,135 nodes)** |
+| APRA Prudential Standard CPS 234 | Australia | 1 | · **→ `APRA CPS 234/` (144 nodes)** |
+| ASD Essential Eight Maturity Model | Australia | 1 | · **→ `ASD Essential Eight/` (338 nodes)** |
+| Philippines Data Privacy Act 2012 — IRR | Philippines | 1 | ✔ content-verified — the final IRR only (a July 2016 draft is listed under supporting material). **The Act itself (RA 10173) is not in the KB** · **→ `Philippines DPA IRR/` (452 nodes)** |
 
 ### Middle East, Africa & International (13)
 
 | Instrument | Jurisdiction | Files | Notes |
 |---|---|---:|---|
-| UAE Federal Decree-Law 45/2021 (PDPL) | UAE | 1 | |
-| DIFC Data Protection Law | UAE | 1 | Separate free-zone regime |
-| ADGM Data Protection Regulations | UAE | 1 | Separate free-zone regime |
-| Qatar Personal Data Privacy Protection Law | Qatar | 1 | |
-| Bahrain Personal Data Protection Law | Bahrain | 1 | |
-| NCA Essential Cybersecurity Controls (ECC-2:2024) | Saudi Arabia | 1 | ✔ content-verified — the current ECC-2:2024 controls |
-| Turkey KVKK | Turkey | 1 | **[CORRECTED]** ✔ content-verified — **not the statute**. A 26-page journal article (Evren 2023, *Kişisel Verileri Koruma Dergisi* 5(2)) comparing GDPR and KVKK; it never reproduces a Madde's operative text. Law 6698 is absent from the KB |
-| Switzerland revised FADP | Switzerland | 1 | |
-| Russia Federal Law 152-FZ | Russia | 2 | ✔ content-verified — one is an unofficial English translation |
-| Kenya Data Protection Act | Kenya | 1 | |
-| Nigeria Data Protection Act 2023 | Nigeria | 3 | ✔ content-verified — the 2023 Gazette text and the 2024 GAID implementation directive. **`Nigeria_DPA.pdf` is image-only with zero extractable text** |
-| South Africa POPIA | South Africa | 1 | **[CORRECTED]** ✔ content-verified — **not the Act**. The 2025 *Amendment of the Regulations* under s 113(3): no chapters, no s 1 definitions, no eight conditions, no offences. The POPIA Act is absent from the KB |
-| UNECE WP.29 — UN Regulation 155 | International | 1 | **[CORRECTED]** ✔ content-verified — Add.154 contains **R155 only**. R156 (Software Update Management) is a separate addendum (Add.155) and is **absent from the KB**, despite the filename naming both |
+| UAE Federal Decree-Law 45/2021 (PDPL) | UAE | 1 | · **→ `UAE PDPL/` (229 nodes)** |
+| DIFC Data Protection Law | UAE | 1 | Separate free-zone regime · **→ `DIFC Data Protection Law/` (847 nodes)** |
+| ADGM Data Protection Regulations | UAE | 1 | Separate free-zone regime · **→ `ADGM Data Protection Regulations/` (748 nodes)** |
+| Qatar Personal Data Privacy Protection Law | Qatar | 1 | · **→ `Qatar PDPPL/` (150 nodes)** |
+| Bahrain Personal Data Protection Law | Bahrain | 1 | · **→ `Bahrain PDPL/` (479 nodes)** |
+| NCA Essential Cybersecurity Controls (ECC-2:2024) | Saudi Arabia | 1 | ✔ content-verified — the current ECC-2:2024 controls · **→ `Saudi NCA ECC-2 2024/` (364 nodes)** |
+| Turkey KVKK | Turkey | 1 | **[CORRECTED]** ✔ content-verified — **not the statute**. A 26-page journal article (Evren 2023, *Kişisel Verileri Koruma Dergisi* 5(2)) comparing GDPR and KVKK; it never reproduces a Madde's operative text. Law 6698 is absent from the KB · **→ `Turkey KVKK/` (286 nodes)** |
+| Switzerland revised FADP | Switzerland | 1 | · **→ `Switzerland revFADP/` (572 nodes)** |
+| Russia Federal Law 152-FZ | Russia | 2 | ✔ content-verified — one is an unofficial English translation · **→ `Russia 152-FZ/` (331 nodes)** |
+| Kenya Data Protection Act | Kenya | 1 | · **→ `Kenya Data Protection Act/` (586 nodes)** |
+| Nigeria Data Protection Act 2023 | Nigeria | 3 | ✔ content-verified — the 2023 Gazette text and the 2024 GAID implementation directive. **`Nigeria_DPA.pdf` is image-only with zero extractable text** · **→ `Nigeria Data Protection Act 2023/` (1,405 nodes)** |
+| South Africa POPIA | South Africa | 1 | **[CORRECTED]** ✔ content-verified — **not the Act**. The 2025 *Amendment of the Regulations* under s 113(3): no chapters, no s 1 definitions, no eight conditions, no offences. The POPIA Act is absent from the KB · **→ `South Africa POPIA/` (159 nodes)** |
+| UNECE WP.29 — UN Regulation 155 | International | 1 | **[CORRECTED]** ✔ content-verified — Add.154 contains **R155 only**. R156 (Software Update Management) is a separate addendum (Add.155) and is **absent from the KB**, despite the filename naming both · **→ `UNECE UN R155/` (340 nodes)** |
 
 ---
 
@@ -229,14 +236,20 @@ Issues that will block or distort extraction and are worth resolving before the 
 
 ## Suggested order of work
 
-1. **Finish what is already built** — verify and load `201 CMR 17` and `42 CFR Part 2`; their
-   sources are in the KB and the loaders exist. This moves 30 frameworks to a consistent state.
-2. **Obtain the two missing standards** — ISO 42001 and ISO 27701, so the existing CSVs stop
-   being unverifiable.
-3. **High-leverage US catalogs** — NIST SP 800-53r5 and SP 800-171r3. 800-53r5 would also fix
-   the known weakness in the NIST RMF graph, which today carries 20 sample controls.
-4. **Large regulatory gaps with existing neighbours** — EU AI Act (pairs with NIST AI RMF),
-   UK NIS Regulations (pairs with NIS 2), India IT Act (pairs with DPDPA).
-5. **The privacy-law long tail** — roughly 25 national data-protection laws across APAC, LATAM,
-   the Middle East and Africa. These share a common shape and would extract well as a batch
-   against a single schema.
+Items 3–5 of the original plan (the US catalogs, the large regulatory gaps and the privacy-law
+long tail) are **done** — all 64 are extracted. What remains:
+
+1. **Write loaders for the 64 new folders.** They are CSVs only; nothing is in Neo4j. Each folder
+   has a bespoke schema documented in its README, so each needs its own `App_new/*.py` equivalent.
+2. **Finish what was already built** — verify and load `201 CMR 17` and `42 CFR Part 2`; their
+   sources are in the KB and their loaders exist. This is still the cheapest win in the repo.
+3. **Obtain the standards the KB does not contain.** The extraction pass proved seven instruments
+   are absent despite files bearing their names: the **KVKK statute, POPIA Act, India IT Act,
+   Australian Privacy Act, DO-178C, the COSO framework body and UN R156** — plus **ISO 42001** and
+   **ISO 27701**, which have CSVs in the repo but no source at all, and the **ENISA ECSF Role
+   Profiles** and **Philippines RA 10173**. Sourcing these is now the main blocker to completeness.
+4. **Consider replacing the NIST RMF sample controls** with the real `NIST SP 800-53r5` catalog
+   extracted here (322 controls, 867 enhancements) — `verdict.md` flags the 20-sample-control
+   weakness.
+5. **Consider reconciling `CPRA` against `CCPA 2025`**, which carries the SB 1223 / AB 1008 /
+   AB 1824 amendments the 2020 Prop 24 text lacks.
