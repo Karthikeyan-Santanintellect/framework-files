@@ -1,0 +1,6 @@
+source_id,target_id,rel_type,quoted_reference
+4-2-3,1,CROSS_REFERENCES,"the applicable controls in the Main Domains (1), (2), and (3)"
+4-2-3,2,CROSS_REFERENCES,"the applicable controls in the Main Domains (1), (2), and (3)"
+4-2-3,3,CROSS_REFERENCES,"the applicable controls in the Main Domains (1), (2), and (3)"
+4-2-3,4-1,CROSS_REFERENCES,Subdomain (4.1)
+SEC-statement-of-applicability,4-2,CROSS_REFERENCES,Controls under the Subdomain (4-2) relating to Cloud Computing and Hosting Cybersecurity

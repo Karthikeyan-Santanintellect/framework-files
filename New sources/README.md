@@ -5,7 +5,8 @@ already been built into this repository. One folder per instrument, each with it
 schema modelled on that document's own structure, and its own `README.md` documenting the schema,
 row counts and caveats.
 
-**Built:** 2026-07-21 · see [source-audit.md](source-audit.md) for the audit these folders answer.
+**Built:** 2026-07-21 · **64 folders · 59,203 nodes · 75,675 relationships**
+See [source-audit.md](source-audit.md) for the audit these folders answer.
 
 ## What these are
 

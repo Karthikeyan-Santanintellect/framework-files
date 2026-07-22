@@ -1,0 +1,13 @@
+source_id,target_id,rel_type
+ECC-2:2024,SEC-disclaimer-version,HAS_SECTION
+ECC-2:2024,SEC-legal-disclaimer,HAS_SECTION
+ECC-2:2024,SEC-tlp,HAS_SECTION
+ECC-2:2024,SEC-update-and-review,HAS_SECTION
+ECC-2:2024,SEC-executive-summary,HAS_SECTION
+ECC-2:2024,SEC-introduction,HAS_SECTION
+ECC-2:2024,SEC-objectives,HAS_SECTION
+ECC-2:2024,SEC-scope-of-work,HAS_SECTION
+ECC-2:2024,SEC-statement-of-applicability,HAS_SECTION
+ECC-2:2024,SEC-implementation-and-compliance,HAS_SECTION
+ECC-2:2024,SEC-assessment-tool,HAS_SECTION
+ECC-2:2024,SEC-domains-and-structure,HAS_SECTION
