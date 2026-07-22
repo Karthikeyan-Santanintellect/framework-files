@@ -6,7 +6,7 @@ what has actually been extracted into this repository, so the remaining work is 
 *This folder holds the extracted CSVs for every instrument listed below as ❌ in the original
 audit. Drop new source documents here and update the tables as they are extracted.*
 
-**Audit date:** 2026-07-21 · **Extraction pass completed:** 2026-07-21
+**Audit date:** 2026-07-21 · **Extraction pass completed:** 2026-07-21 · **Loaded into Neo4j:** 2026-07-21
 **Knowledge base:** 128 files — 126 PDFs (KB 2: 117 across 25 jurisdiction folders, 150 MB · KB 3: 9, 20 MB)
 plus one `.zip` and one `.xlsx`
 **Rows are instruments, not files.** Where one instrument ships as several PDFs (Mexico's law
@@ -26,12 +26,16 @@ LFPDPPP comes as 4, FISMA as 6, CMMC as 4) they are grouped into a single row an
 | Status | Count | Meaning |
 |---|---:|---|
 | ✅ **Done** | **26** | Extracted, verified against its source in `verdict.md`, and loaded into Neo4j |
-| 🟦 **Extracted, not loaded** | **64** | Built in this pass into `New sources/` — clause-level CSVs, integrity-checked, but **no loader and not in the graph** |
+| ✅ **Extracted and loaded** | **64** | Built in this pass into `New sources/`, given a loader in `App_new/`, and **loaded into Neo4j on 2026-07-21** — not yet verified in `verdict.md` |
 | ⚠️ **Built, not verified** | **4** | CSVs exist elsewhere in the repo, never verified in `verdict.md` and **not in the graph** |
 | 📎 **Supporting material** | **13** | Secondary/duplicate documents that do not warrant their own framework |
 
 **Nothing in the knowledge base is now unextracted.** The 64 formerly-missing instruments produced
-**59,203 nodes / 75,675 relationships** across 64 folders — see [README.md](README.md).
+**59,203 CSV node rows / 75,675 CSV relationship rows** across 64 folders — see [README.md](README.md).
+Loaded, they are **59,194 nodes / 74,977 relationships**; the difference is explained under
+[Loading into Neo4j](#loading-into-neo4j) and is a property of the source data, not of the load.
+
+**The graph now holds 90 frameworks** — the 26 verified ones plus these 64.
 
 **KB 3 is fully consumed** — all 9 files map to a completed framework. Every gap below is in KB 2.
 
@@ -83,7 +87,8 @@ to KB 3 on 2026-07-21.
 ## ⚠️ Built, not verified (4)
 
 CSVs exist in the repo but these never went through `verdict.md` verification and **none of them
-are in the Neo4j instance** — the graph holds 26 frameworks, not 30.
+are in the Neo4j instance**. They are the only remaining framework folders in the repo that are
+not in the graph.
 
 | Framework | Repo folder | CSVs | Loader | Source in KB | Gap |
 |---|---|---:|---|---|---|
@@ -97,11 +102,14 @@ and loaded immediately. ISO 42001 and ISO 27701 would need their standards obtai
 
 ---
 
-## 🟦 Extracted in this pass (64) — formerly ❌ Missing
+## ✅ Extracted and loaded in this pass (64) — formerly ❌ Missing
 
-**Every row below has been built** into a folder in this directory. They are listed here in their
-original audit grouping; the status of the whole section changed from ❌ Missing to 🟦 Extracted,
-not loaded on 2026-07-21.
+**Every row below has been built** into a folder in this directory **and loaded into Neo4j**. They
+are listed here in their original audit grouping; the status of the whole section changed from
+❌ Missing to 🟦 Extracted (2026-07-21) and then to ✅ Loaded the same day.
+
+The node counts quoted per row are **CSV rows**. Nine of them do not become separate nodes — see
+[Loading into Neo4j](#loading-into-neo4j).
 
 All 64 were opened and read in full during extraction, so **every row is now content-verified** —
 the `✔ content-verified` marks below record which ones had *already* been verified at audit time.
@@ -221,6 +229,57 @@ superseded versions or documents attached to an already-completed framework.
 
 ---
 
+## Loading into Neo4j
+
+All 64 were loaded on 2026-07-21. Each folder has its own loader at `App_new/<slug>.py`
+(e.g. `App_new/coppa.py`, `App_new/eu_ai_act.py`), spelling out that framework's own Cypher: one
+`MERGE` per `nodes_<Label>.csv` and one per distinct `rel_type`. Run any of them with `--dry-run`
+to validate without writing.
+
+| Tool | Purpose |
+|---|---|
+| `App_new/tools/gen_new_source_loaders.py` | Authors the 64 loaders from the CSV headers on disk. Re-run after any re-extraction; edit the generator, never a generated file |
+| `App_new/tools/validate_new_sources.py` | Offline dry-run — coverage, row counts, dangling endpoints, reconciliation against this file, `--check-urls` |
+| `App_new/tools/load_new_sources.py` | Runs all 64 smallest-first; `--only`, `--skip-loaded` |
+| `App_new/tools/verify_new_sources_graph.py` | Read-only reconciliation of the graph against the loaders |
+| `App_new/tools/repair_stranded_nodes.py` | Deletes nodes whose `framework_id` is not one of the 64 |
+
+**Graph conventions.** Every node carries `framework_id` and an anchor label `:NewSourceNode`,
+merged on `(framework_id, node_id)`. The anchor is what makes relationship endpoints resolvable:
+the `rels_*.csv` files record no endpoint labels, and 153 relationship types legitimately span
+several labels. Each folder also gets one `:NewSourceFramework` root node linked by `HAS_ROOT` to
+every node nothing else points at, so any of the 64 can be traversed or deleted on its own. The
+root deliberately does **not** use the bare `:Framework` label — four folders ship a node of their
+own under that label. Loads are idempotent; re-running repairs a partial load rather than
+duplicating it.
+
+### Why the graph holds fewer rows than the CSVs
+
+**59,194 nodes / 74,977 relationships** loaded, against 59,203 / 75,675 CSV rows. Every difference
+is a property of the source data, and `MERGE` handling it this way is correct.
+
+| Framework | CSV rows | In graph | Cause |
+|---|---:|---:|---|
+| DFARS | 18,208 rels | 17,558 | 650 citations with a blank `target_id` (e.g. `PGI 201.106`) — nothing in-corpus to attach to |
+| CMMC 2.0 | 1,518 rels | 1,484 | 34 repeated `(source, target, rel_type)` triples |
+| FISMA | 2,360 rels | 2,350 | 10 repeated triples |
+| UNECE UN R155 | 455 rels | 452 | 3 repeated triples |
+| DO-178C | 370 rels | 369 | 1 triple appearing in two different `rels_*.csv` files |
+| EU AI Act | 1,774 nodes | 1,766 | `annexIII_1..8` appear in both `nodes_Point.csv` and `nodes_HighRiskArea.csv` — one entity, two labels, identical text and `source_line` |
+| UK NIS Regulations 2018 | 1,031 nodes | 1,030 | `sch2p9` appears in both `nodes_Provision.csv` and `nodes_SchedulePara.csv` — same paragraph, same citation |
+
+### Data hazards the load exposed
+
+Worth knowing before extracting anything new:
+
+- **`rel_type` is authoritative, the filename is not.** 397 of the 481 `rels_*.csv` files carry a
+  type that differs from their name, and many carry several types in one file.
+- **A column named `framework_id` collides with the graph key.** Four folders
+  (`MITRE ATTACK`, `ASD Essential Eight`, `Saudi NCA ECC-2 2024`, `SEBI Cybersecurity Framework`)
+  have a `nodes_Framework.csv` whose id column is literally `framework_id`. Written through, it
+  overwrites the merge key and strands the node outside its own framework. The generator now emits
+  it as `csv_framework_id` and the validator fails if this regresses.
+
 ## Data-quality flags
 
 Issues that will block or distort extraction and are worth resolving before the work starts.
@@ -237,10 +296,13 @@ Issues that will block or distort extraction and are worth resolving before the 
 ## Suggested order of work
 
 Items 3–5 of the original plan (the US catalogs, the large regulatory gaps and the privacy-law
-long tail) are **done** — all 64 are extracted. What remains:
+long tail) are **done** — all 64 are extracted. So is the former item 1: **loaders for the 64 new
+folders are written and all 64 are in the graph** (see [Loading into Neo4j](#loading-into-neo4j)).
+What remains:
 
-1. **Write loaders for the 64 new folders.** They are CSVs only; nothing is in Neo4j. Each folder
-   has a bespoke schema documented in its README, so each needs its own `App_new/*.py` equivalent.
+1. **Verify the 64 in `verdict.md`.** They are extracted and loaded but none has been checked
+   against its source the way the original 26 were. This is now the largest quality gap: the graph
+   holds 90 frameworks but only 26 are verified.
 2. **Finish what was already built** — verify and load `201 CMR 17` and `42 CFR Part 2`; their
    sources are in the KB and their loaders exist. This is still the cheapest win in the repo.
 3. **Obtain the standards the KB does not contain.** The extraction pass proved seven instruments

@@ -379,8 +379,9 @@ async function run(cypher, params = {}) {
   finally { await session.close(); }
 }
 
-/* framework id = whichever of the three identifier properties a node carries */
-const FW = v => `toUpper(coalesce(${v}.IS_frameworks_standard_id,${v}.industry_standard_regulation_id,${v}.regional_standard_regulation_id))`;
+/* framework id = whichever of the four identifier properties a node carries.
+   framework_id is used by the 64 frameworks loaded from New sources/. */
+const FW = v => `toUpper(coalesce(${v}.IS_frameworks_standard_id,${v}.industry_standard_regulation_id,${v}.regional_standard_regulation_id,${v}.framework_id))`;
 
 /* ===================== state ===================== */
 const S = {
@@ -641,7 +642,7 @@ function fit() {
 
 function nodeFrom(rec) {
   const props = rec.props || {};
-  const fw = (props.IS_frameworks_standard_id || props.industry_standard_regulation_id || props.regional_standard_regulation_id || "").toUpperCase();
+  const fw = (props.IS_frameworks_standard_id || props.industry_standard_regulation_id || props.regional_standard_regulation_id || props.framework_id || "").toUpperCase();
   return {
     id: rec.id, kind: "node", labels: rec.labels, props, fw,
     color: colorOf(fw), caption: caption(props, rec.labels), deg: 0
@@ -804,15 +805,15 @@ async function expandNode(n) {
 /* ===================== query runner ===================== */
 const SAVED = [
   ["— Saved queries —", ""],
-  ["Nodes per framework", `MATCH (n)\nWITH toUpper(coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id)) AS framework\nWHERE framework IS NOT NULL\nRETURN framework, count(*) AS nodes ORDER BY nodes DESC`],
-  ["Cross-framework mappings", `MATCH (a)-[r]->(b)\nWITH toUpper(coalesce(a.IS_frameworks_standard_id,a.industry_standard_regulation_id,a.regional_standard_regulation_id)) AS from,\n     toUpper(coalesce(b.IS_frameworks_standard_id,b.industry_standard_regulation_id,b.regional_standard_regulation_id)) AS to, r\nWHERE from <> to\nRETURN from, to, count(r) AS edges ORDER BY edges DESC`],
-  ["Orphan nodes (no relationships)", `MATCH (n) WHERE NOT (n)--()\nRETURN toUpper(coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id)) AS framework,\n       labels(n)[0] AS label, count(*) AS orphans ORDER BY orphans DESC`],
+  ["Nodes per framework", `MATCH (n)\nWITH toUpper(coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id,n.framework_id)) AS framework\nWHERE framework IS NOT NULL\nRETURN framework, count(*) AS nodes ORDER BY nodes DESC`],
+  ["Cross-framework mappings", `MATCH (a)-[r]->(b)\nWITH toUpper(coalesce(a.IS_frameworks_standard_id,a.industry_standard_regulation_id,a.regional_standard_regulation_id,a.framework_id)) AS from,\n     toUpper(coalesce(b.IS_frameworks_standard_id,b.industry_standard_regulation_id,b.regional_standard_regulation_id,b.framework_id)) AS to, r\nWHERE from <> to\nRETURN from, to, count(r) AS edges ORDER BY edges DESC`],
+  ["Orphan nodes (no relationships)", `MATCH (n) WHERE NOT (n)--()\nRETURN toUpper(coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id,n.framework_id)) AS framework,\n       labels(n)[0] AS label, count(*) AS orphans ORDER BY orphans DESC`],
   ["Node counts by label", `MATCH (n) UNWIND labels(n) AS label\nRETURN label, count(*) AS nodes ORDER BY nodes DESC LIMIT 50`],
   ["Relationship counts by type", `MATCH ()-[r]->() RETURN type(r) AS type, count(*) AS rels ORDER BY rels DESC LIMIT 50`],
   ["NERC — standards graph", `MATCH (s:Standard {industry_standard_regulation_id:'NERC_CIP'})-[a]->(r:Requirement)-[b]->(p:RequirementPart)\nRETURN s, a, r, b, p`],
   ["NERC — requirements with VRF and VSLs", `MATCH (r:Requirement {industry_standard_regulation_id:'NERC_CIP'})\nRETURN r.requirement_id AS id, r.title AS title, r.violation_risk_factor AS vrf,\n       r.time_horizon AS time_horizon, r.parts_count AS parts, r.vsl_severe AS vsl_severe\nORDER BY id`],
   ["SCF → other frameworks (subgraph)", `MATCH (a {IS_frameworks_standard_id:'SCF-2025.4'})-[r]->(b)\nWHERE b.IS_frameworks_standard_id <> 'SCF-2025.4'\nRETURN a, r, b LIMIT 300`],
-  ["Dangling identifier audit", `MATCH (n) WHERE coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id) IS NULL\nRETURN labels(n) AS labels, count(*) AS nodes ORDER BY nodes DESC`]
+  ["Dangling identifier audit", `MATCH (n) WHERE coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id,n.framework_id) IS NULL\nRETURN labels(n) AS labels, count(*) AS nodes ORDER BY nodes DESC`]
 ];
 
 async function runQuery() {
