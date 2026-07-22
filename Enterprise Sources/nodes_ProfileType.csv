@@ -1,0 +1,4 @@
+profiletype_id,name,enterprisesource_count,source_document
+pt_business,Business,38,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/enterpriseSources.json
+pt_security,Security,40,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/enterpriseSources.json
+pt_technology,Technology,36,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/enterpriseSources.json
