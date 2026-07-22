@@ -813,6 +813,14 @@ const SAVED = [
   ["NERC — standards graph", `MATCH (s:Standard {industry_standard_regulation_id:'NERC_CIP'})-[a]->(r:Requirement)-[b]->(p:RequirementPart)\nRETURN s, a, r, b, p`],
   ["NERC — requirements with VRF and VSLs", `MATCH (r:Requirement {industry_standard_regulation_id:'NERC_CIP'})\nRETURN r.requirement_id AS id, r.title AS title, r.violation_risk_factor AS vrf,\n       r.time_horizon AS time_horizon, r.parts_count AS parts, r.vsl_severe AS vsl_severe\nORDER BY id`],
   ["SCF → other frameworks (subgraph)", `MATCH (a {IS_frameworks_standard_id:'SCF-2025.4'})-[r]->(b)\nWHERE b.IS_frameworks_standard_id <> 'SCF-2025.4'\nRETURN a, r, b LIMIT 300`],
+  ["New sources — the 64 frameworks by size", `MATCH (n:NewSourceNode)\nWITH n.framework_id AS framework, count(*) AS nodes\nRETURN framework, nodes ORDER BY nodes DESC`],
+  ["New sources — one framework's subgraph", `MATCH (n:NewSourceNode {framework_id:'EU_AI_ACT'})\nOPTIONAL MATCH (n)-[r]->(:NewSourceNode {framework_id:'EU_AI_ACT'})\nRETURN n, r LIMIT 400`],
+  ["DTOP — source dependency graph", `MATCH (a:DTOSource)-[r:DERIVED_FROM]->(b)\nRETURN a, r, b`],
+  ["DTOP — rebuild a Sources list in order", `MATCH (a:DTOSource {source_name:'Risk Register'})-[r:DERIVED_FROM]->()\nRETURN r.ordinal AS ordinal, r.stated_source_name AS source, r.target_kind AS kind\nORDER BY ordinal`],
+  ["Enterprise — pages catalogued more than once", `MATCH (w:WebResource)<-[:AVAILABLE_AT]-(s:EnterpriseSource)\nWITH w, collect(s.source_name) AS sources, count(*) AS n WHERE n > 1\nRETURN w.url AS url, n AS times, sources ORDER BY times DESC, url`],
+  ["Enterprise — sources by reputation score", `MATCH (s:EnterpriseSource)\nRETURN s.reputation_score AS score, s.profile_type AS profile, count(*) AS sources\nORDER BY score DESC, profile`],
+  ["Enterprise — SourceName used by more than one entry", `MATCH (s:EnterpriseSource) WHERE s.name_is_duplicated\nRETURN s.source_name AS name, s.node_id AS id, s.profile_type AS profile, s.url AS url ORDER BY id`],
+  ["Catalogues — DTOP and Enterprise side by side", `MATCH (n) WHERE n:DTOPNode OR n:EnterpriseNode\nRETURN n.framework_id AS catalogue, labels(n)[1] AS label, count(*) AS nodes\nORDER BY catalogue, nodes DESC`],
   ["Dangling identifier audit", `MATCH (n) WHERE coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id,n.framework_id) IS NULL\nRETURN labels(n) AS labels, count(*) AS nodes ORDER BY nodes DESC`]
 ];
 
