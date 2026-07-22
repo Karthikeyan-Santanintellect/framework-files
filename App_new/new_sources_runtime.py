@@ -32,10 +32,11 @@ logger = logging.getLogger("new_sources")
 
 # The `New sources/` tree lives on branch `gautham`; it is not on `main`.
 # Update this one constant after the branch merges.
-RAW_BASE = (
+REPO_RAW_BASE = (
     "https://github.com/Karthikeyan-Santanintellect/framework-files"
-    "/raw/refs/heads/gautham/New%20sources"
+    "/raw/refs/heads/gautham"
 )
+RAW_BASE = f"{REPO_RAW_BASE}/New%20sources"
 
 #: Every node loaded from `New sources/` carries this label in addition to its
 #: own, keyed by (framework_id, node_id). The `rels_*.csv` files record only
@@ -105,6 +106,13 @@ class Loader:
     #: AI Act has 8 and UK NIS 1, each one entity deliberately modelled under
     #: two labels — so the folder-level total is computed once at generation.
     expected_nodes_total: int = -1
+    #: Anchor label these nodes are merged under, and the raw base their CSVs
+    #: sit below. The defaults are what the 64 `New sources/` loaders use;
+    #: a folder outside that tree overrides both. Keeping a separate anchor
+    #: matters — `tools/repair_stranded_nodes.py` deletes any `:NewSourceNode`
+    #: whose framework_id is not one of the 64 folders.
+    anchor: str = ANCHOR
+    base_url: str = RAW_BASE
     #: Distinct (source, target, type) triples across the whole folder. Summing
     #: the per-step figures would double-count a triple that appears in two
     #: different rels files — DO-178C has one such pair — so the framework-level
@@ -115,7 +123,7 @@ class Loader:
     def url(self, csv_name: str) -> str:
         from urllib.parse import quote
 
-        return f"{RAW_BASE}/{quote(self.folder)}/{quote(csv_name)}"
+        return f"{self.base_url}/{quote(self.folder)}/{quote(csv_name)}"
 
     @property
     def csv_node_rows(self) -> int:
@@ -168,7 +176,10 @@ class Loader:
         """Report the plan without writing to Neo4j. Returns an exit code."""
         logger.info("=" * 78)
         logger.info("%s  (framework_id=%s)", self.name, self.framework_id)
-        logger.info("folder      New sources/%s", self.folder)
+        from urllib.parse import unquote
+
+        tree = unquote(self.base_url[len(REPO_RAW_BASE):].lstrip("/"))
+        logger.info("folder      %s%s", f"{tree}/" if tree else "", self.folder)
         logger.info("source      %s", self.source_document)
         logger.info("expects     %s nodes / %s relationships across %s node files "
                     "and %s relationship types",
@@ -230,8 +241,8 @@ class Loader:
                 time.sleep(pause)
 
             counts = client.query(
-                f"MATCH (n:{ANCHOR} {{framework_id: $fid}}) "
-                f"OPTIONAL MATCH (n)-[r]->(:{ANCHOR} {{framework_id: $fid}}) "
+                f"MATCH (n:{self.anchor} {{framework_id: $fid}}) "
+                f"OPTIONAL MATCH (n)-[r]->(:{self.anchor} {{framework_id: $fid}}) "
                 f"RETURN count(DISTINCT n) AS nodes, count(DISTINCT r) AS rels",
                 others={"fid": self.framework_id},
             )
