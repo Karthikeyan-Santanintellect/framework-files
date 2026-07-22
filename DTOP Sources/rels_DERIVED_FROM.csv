@@ -1,0 +1,21 @@
+source_id,target_id,rel_type,target_kind,ordinal,stated_source_name,source_document
+dto_hi_def_operating_model,in_business_profile,DERIVED_FROM,InputSource,1,Business Profile,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_hi_def_operating_model,in_google_search_industry_research,DERIVED_FROM,InputSource,2,Google Search (Industry Research),DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_cprm_process_model,in_business_profile,DERIVED_FROM,InputSource,1,Business Profile,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_cprm_process_model,in_google_search_industry_research,DERIVED_FROM,InputSource,2,Google Search (Industry Research),DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_cprm_process_model,in_standard_cprm_framework,DERIVED_FROM,InputSource,3,Standard CPRM Framework,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risky_business_process,dto_hi_def_operating_model,DERIVED_FROM,DTOSource,1,Hi-Def Operating Model,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risky_business_process,dto_cprm_process_model,DERIVED_FROM,DTOSource,2,CPRM Process Model,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risky_business_process,in_master_risk_catalog,DERIVED_FROM,InputSource,3,Master Risk Catalog,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risk_register,in_business_profile,DERIVED_FROM,InputSource,1,Business Profile,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risk_register,in_operational_risk_heatmap,DERIVED_FROM,InputSource,2,Operational Risk Heatmap,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risk_register,in_cprm_process_model_heatmap,DERIVED_FROM,InputSource,3,CPRM Process Model Heatmap,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risk_register,in_master_risk_catalog,DERIVED_FROM,InputSource,4,Master Risk Catalog,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_controls_register,in_business_profile,DERIVED_FROM,InputSource,1,Business Profile,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_controls_register,in_security_profile,DERIVED_FROM,InputSource,2,Security Profile,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_controls_register,dto_risk_register,DERIVED_FROM,DTOSource,3,Risk Register,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_controls_register,in_controls_catalog,DERIVED_FROM,InputSource,4,Controls Catalog,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_control_specifications,in_prescriptive_controls_specification,DERIVED_FROM,InputSource,1,Prescriptive Controls Specification,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_control_specifications,in_iso_iec_27002_2022,DERIVED_FROM,InputSource,2,ISO/IEC 27002:2022,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_service_catalog,in_hi_def_operating_model_heatmap,DERIVED_FROM,InputSource,1,Hi-Def Operating Model Heatmap,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_service_catalog,in_business_profile,DERIVED_FROM,InputSource,2,Business Profile,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json

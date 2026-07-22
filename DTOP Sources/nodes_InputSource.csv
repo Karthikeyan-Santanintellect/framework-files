@@ -1,0 +1,12 @@
+inputsource_id,name,referenced_by_count,possibly_same_as,possibly_same_as_basis,source_document
+in_business_profile,Business Profile,5,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_cprm_process_model_heatmap,CPRM Process Model Heatmap,1,CPRM Process Model,one name contains the other,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_controls_catalog,Controls Catalog,1,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_google_search_industry_research,Google Search (Industry Research),2,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_hi_def_operating_model_heatmap,Hi-Def Operating Model Heatmap,1,Hi-Def Operating Model,one name contains the other,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_iso_iec_27002_2022,ISO/IEC 27002:2022,1,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_master_risk_catalog,Master Risk Catalog,2,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_operational_risk_heatmap,Operational Risk Heatmap,1,Risky Business Process,"the Risky Business Process description opens ""An Operational Risk Heatmap …""",DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_prescriptive_controls_specification,Prescriptive Controls Specification,1,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_security_profile,Security Profile,1,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+in_standard_cprm_framework,Standard CPRM Framework,1,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json

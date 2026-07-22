@@ -1,0 +1,8 @@
+source_id,target_id,rel_type,source_document
+dto_hi_def_operating_model,pt_business,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_cprm_process_model,pt_business,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risky_business_process,pt_technology,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_risk_register,pt_technology,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_controls_register,pt_technology,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_control_specifications,pt_technology,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+dto_service_catalog,pt_business,HAS_PROFILE_TYPE,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json

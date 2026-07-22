@@ -1,0 +1,3 @@
+profiletype_id,name,dtosource_count,source_document
+pt_business,Business,3,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
+pt_technology,Technology,4,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
