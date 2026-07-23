@@ -165,6 +165,26 @@ under two labels) and 48 repeated relationship triples, and because 650 DFARS ci
 blank target with nothing in-corpus to attach to. Every case is itemised in
 [source-audit.md](New sources/source-audit.md#loading-into-neo4j).
 
+### Source catalogues (not frameworks)
+
+Three further datasets are loaded into the same graph but are **not compliance
+frameworks** — they are the source catalogues and assessment banks extracted
+from the DTOP-OLD project. Each uses its own anchor label and carries no
+cross-framework mappings. See the folder READMEs for their internal schema:
+[DTOP Sources](DTOP%20Sources/), [Enterprise Sources](Enterprise%20Sources/),
+[Assessments and Questionnaires](Assessments%20and%20Questionnaires/).
+
+| Catalogue | `framework_id` | Anchor label | Nodes | Relationships | Labels | Rel types |
+|-----------|----------------|--------------|------:|--------------:|-------:|----------:|
+| DTOP Sources | `DTOP_SOURCES` | `:DTOPNode` | 20 | 27 | 3 | 2 |
+| Enterprise Sources | `ENTERPRISE_SOURCES` | `:EnterpriseNode` | 172 | 181 | 3 | 2 |
+| Assessments and Questionnaires | `ASSESSMENTS_QUESTIONNAIRES` | `:AssessmentNode` | 1,841 | 8,484 | 13 | 16 |
+| | **Total** | | **2,033** | **8,692** | | |
+
+Node counts exclude each catalogue's single `:…Catalog` root node. The
+relationship counts are internal to each catalogue; none of the three links to
+any other catalogue or framework.
+
 ## Framework sources
 
 | Framework | Source document |
@@ -275,6 +295,19 @@ regulations only; RA 10173 itself is likewise absent.
 | UK NIS Regulations 2018 | United Kingdom | UK Network and Information Systems Regulations 2018 |
 | ⚠️ UNECE UN R155 | International | UN Regulation No. 155 (Add.154). **R156 (Software Update Management) is absent** despite the source filename naming both |
 | eIDAS Regulation | European Union | eIDAS Regulation on electronic identification and trust services |
+
+### Sources for the source catalogues
+
+The three DTOP-OLD source catalogues (see the table above) are extracted from
+files inside the DTOP-OLD project rather than from an external standard.
+
+| Catalogue | Source document(s) |
+|-----------|--------------------|
+| DTOP Sources | `client/src/assets/docs/knowledgeRepository/info/dtopSources.json` |
+| Enterprise Sources | `client/src/assets/docs/knowledgeRepository/info/enterpriseSources.json` |
+| Assessments and Questionnaires | `client/src/data/sraFullData.json` (canonical HIPAA SRA, with the older `sraQuestionsData.json` and the `sraVulnerabilitiesData.json` stub) · `client/src/data/cri_statements.json` (CRI Profile v2.1 Expert Questionnaire) · `server/services/agentsV5/llmAssessment/statments/{IdP,XDR,SIEM,HRIS,CSP,DGP}.md` with the `server/services/agentsV5/catalog/*.csv` copies (6-domain Maturity Assessment) |
+
+All paths are relative to the DTOP-OLD project root.
 
 ## Loading
 
