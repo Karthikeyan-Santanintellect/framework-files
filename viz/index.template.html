@@ -119,7 +119,8 @@ select.sel:focus,input.txt:focus{border-color:var(--accent-2)}
 
 .xf-list{display:flex;flex-direction:column;gap:2px;max-height:280px;overflow-y:auto}
 .xf{
-  display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:6px 8px;
+  display:grid;grid-template-columns:1fr auto;grid-auto-rows:auto;gap:8px;align-items:center;
+  min-height:30px;padding:6px 8px;
   border-radius:7px;cursor:pointer;transition:background .15s;position:relative;overflow:hidden;
 }
 .xf:hover{background:#182437}
@@ -405,6 +406,26 @@ const PALETTE = ["#4dd4c0","#7aa2ff","#ffb454","#ff6b7a","#a78bfa","#4ade80","#f
   "#d8b4fe","#86efac","#f0abfc"];
 const colorOf = id => (S.frameworks.find(f => f.id === id) || {}).color || "#64748b";
 
+/* Colour a node by its structural label so that, inside a framework, each
+   level/type of node (Section, Question, AnswerOption, …) draws in its own
+   colour instead of every node sharing the framework colour. Anchor and
+   catalogue labels are skipped so the real label wins. Assignment is by
+   first appearance and stable for the session, so the same label keeps its
+   colour as you expand deeper. */
+const ANCHOR_LABELS = new Set(["NewSourceNode", "NewSourceFramework", "DTOPNode",
+  "DTOPCatalog", "EnterpriseNode", "EnterpriseCatalog", "AssessmentNode",
+  "AssessmentCatalog", "Framework"]);
+const displayLabel = labels =>
+  (labels || []).find(l => !ANCHOR_LABELS.has(l)) || (labels && labels[0]) || "node";
+const labelColorMap = new Map();
+function labelColor(label) {
+  if (!labelColorMap.has(label))
+    labelColorMap.set(label, PALETTE[labelColorMap.size % PALETTE.length]);
+  return labelColorMap.get(label);
+}
+/* views where nodes are coloured by label rather than by framework */
+const COLOR_BY_LABEL = new Set(["framework", "query", "all"]);
+
 /* short display name per framework id */
 function pretty(id) {
   return id.replace(/_/g, " ").replace(/\s+/g, " ")
@@ -588,6 +609,26 @@ d3.select(cv).call(d3.drag()
   .on("end", ev => { if (!ev.active) sim.alphaTarget(0); const n = ev.subject._n; n.fx = null; n.fy = null; cv.classList.remove("dragging"); })
 );
 
+/* Legend: frameworks in overview/cross, node labels (with counts) in the
+   drill-down views where nodes are coloured by label. */
+function renderLegend() {
+  const leg = document.getElementById("legend-items");
+  if (!leg) return;
+  if (COLOR_BY_LABEL.has(S.mode) && S.nodes.some(n => n.kind !== "fw")) {
+    const counts = new Map();
+    for (const n of S.nodes) if (n.kind !== "fw" && !n.hidden) {
+      const l = n.dispLabel || displayLabel(n.labels);
+      counts.set(l, (counts.get(l) || 0) + 1);
+    }
+    leg.innerHTML = [...counts.entries()].sort((a, b) => b[1] - a[1])
+      .map(([l, c]) => `<div class="it"><i style="background:${labelColor(l)}"></i>${esc(l)} <span style="color:var(--fg-faint);margin-left:auto">${c}</span></div>`)
+      .join("");
+  } else {
+    leg.innerHTML = S.frameworks.map(f =>
+      `<div class="it"><i style="background:${f.color}"></i>${esc(f.label)}</div>`).join("");
+  }
+}
+
 /* ===================== graph plumbing ===================== */
 function setGraph(nodes, links, mode, crumbs, opts = {}) {
   const keep = new Map(S.nodes.map(n => [n.id, n]));       // preserve positions across transitions
@@ -596,6 +637,12 @@ function setGraph(nodes, links, mode, crumbs, opts = {}) {
     return Object.assign(n, old ? { x: old.x, y: old.y, vx: old.vx, vy: old.vy } : {});
   });
   S.byId = new Map(S.nodes.map(n => [n.id, n]));
+  // Colour every non-framework node by its label in drill-down views, so each
+  // level/type is a distinct colour; keep the framework colour in overview and
+  // cross-framework views where the framework identity is the point.
+  const byLabel = COLOR_BY_LABEL.has(mode);
+  for (const n of S.nodes) if (n.kind !== "fw")
+    n.color = byLabel ? labelColor(n.dispLabel || displayLabel(n.labels)) : (n.fwColor || n.color);
   S.links = links.filter(l => S.byId.has(l.source.id || l.source) && S.byId.has(l.target.id || l.target));
   if (S.links.length > S.edgeCap) {
     toast(`Showing ${S.edgeCap.toLocaleString()} of ${S.links.length.toLocaleString()} relationships (raise the cap in Settings).`, "warn");
@@ -611,6 +658,7 @@ function setGraph(nodes, links, mode, crumbs, opts = {}) {
   document.getElementById("stat-n").textContent = S.nodes.length.toLocaleString();
   document.getElementById("stat-e").textContent = S.links.length.toLocaleString();
   setCrumbs(crumbs);
+  renderLegend();
   if (!opts.noFit) setTimeout(fit, 620);
 }
 
@@ -645,6 +693,7 @@ function nodeFrom(rec) {
   const fw = (props.IS_frameworks_standard_id || props.industry_standard_regulation_id || props.regional_standard_regulation_id || props.framework_id || "").toUpperCase();
   return {
     id: rec.id, kind: "node", labels: rec.labels, props, fw,
+    fwColor: colorOf(fw), dispLabel: displayLabel(rec.labels),
     color: colorOf(fw), caption: caption(props, rec.labels), deg: 0
   };
 }
@@ -925,8 +974,7 @@ function buildSidebar() {
   };
 
   /* legend */
-  const leg = document.getElementById("legend-items");
-  leg.innerHTML = S.frameworks.map(f => `<div class="it"><i style="background:${f.color}"></i>${esc(f.label)}</div>`).join("");
+  renderLegend();
 
   /* cross-framework */
   const xl = document.getElementById("xf-list");
