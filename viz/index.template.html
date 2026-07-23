@@ -821,6 +821,12 @@ const SAVED = [
   ["Enterprise — sources by reputation score", `MATCH (s:EnterpriseSource)\nRETURN s.reputation_score AS score, s.profile_type AS profile, count(*) AS sources\nORDER BY score DESC, profile`],
   ["Enterprise — SourceName used by more than one entry", `MATCH (s:EnterpriseSource) WHERE s.name_is_duplicated\nRETURN s.source_name AS name, s.node_id AS id, s.profile_type AS profile, s.url AS url ORDER BY id`],
   ["Catalogues — DTOP and Enterprise side by side", `MATCH (n) WHERE n:DTOPNode OR n:EnterpriseNode\nRETURN n.framework_id AS catalogue, labels(n)[1] AS label, count(*) AS nodes\nORDER BY catalogue, nodes DESC`],
+  ["Assessments — the three banks", `MATCH (a:Assessment)\nRETURN a.name AS assessment, a.framework AS framework, a.item_count AS items, a.kind AS kind\nORDER BY items DESC`],
+  ["Assessments — SRA question flow (one section)", `MATCH (:Section {section_id:'sra_s1'})-[:HAS_QUESTION]->(q:Question)-[:HAS_OPTION]->(o:AnswerOption)\nOPTIONAL MATCH (o)-[l:LEADS_TO]->(nq:Question)\nRETURN q, o, l, nq`],
+  ["Assessments — a vulnerability and its threats", `MATCH (v:Vulnerability {section_id:'sra_s1'})-[:HAS_THREAT]->(t:Threat)\nRETURN v, t LIMIT 200`],
+  ["Assessments — where maturity .md and .csv disagree", `MATCH (s:Statement {assessment:'maturity'})\nWHERE s.in_md = false OR s.in_csv = false\nRETURN s.domain AS domain, s.statement_id AS id, s.in_md AS in_md, s.in_csv AS in_csv\nORDER BY domain`],
+  ["Assessments — Expert Questionnaire is a subset of maturity", `MATCH (e:Statement {assessment:'expert'})-[:ALSO_IN]->(m:Statement)\nRETURN e.statement_id AS cri_id, count(m) AS maturity_matches ORDER BY maturity_matches DESC LIMIT 20`],
+  ["Assessments — subcategories shared by both statement sets", `MATCH (sub:Subcategory)<-[:IN_SUBCATEGORY]-(s:Statement)\nWITH sub, collect(DISTINCT s.assessment) AS a, count(*) AS n\nWHERE size(a) > 1\nRETURN sub.path AS subcategory, n AS statements ORDER BY n DESC LIMIT 20`],
   ["Dangling identifier audit", `MATCH (n) WHERE coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id,n.framework_id) IS NULL\nRETURN labels(n) AS labels, count(*) AS nodes ORDER BY nodes DESC`]
 ];
 
