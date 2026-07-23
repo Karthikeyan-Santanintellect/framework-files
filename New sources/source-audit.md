@@ -27,7 +27,8 @@ LFPDPPP comes as 4, FISMA as 6, CMMC as 4) they are grouped into a single row an
 |---|---:|---|
 | ✅ **Done** | **26** | Extracted, verified against its source in `verdict.md`, and loaded into Neo4j |
 | ✅ **Extracted and loaded** | **64** | Built in this pass into `New sources/`, given a loader in `App_new/`, and **loaded into Neo4j on 2026-07-21** — not yet verified in `verdict.md` |
-| ⚠️ **Built, not verified** | **4** | CSVs exist elsewhere in the repo, never verified in `verdict.md` and **not in the graph** |
+| ✅ **Verified and loaded** | **2** | `201 CMR 17` and `42 CFR Part 2` — verified against their source regulation and **loaded into Neo4j on 2026-07-23** |
+| ⚠️ **Built, not verified** | **2** | CSVs exist elsewhere in the repo, never verified in `verdict.md` and **not in the graph** |
 | 📎 **Supporting material** | **13** | Secondary/duplicate documents that do not warrant their own framework |
 
 **Nothing in the knowledge base is now unextracted.** The 64 formerly-missing instruments produced
@@ -35,7 +36,10 @@ LFPDPPP comes as 4, FISMA as 6, CMMC as 4) they are grouped into a single row an
 Loaded, they are **59,194 nodes / 74,977 relationships**; the difference is explained under
 [Loading into Neo4j](#loading-into-neo4j) and is a property of the source data, not of the load.
 
-**The graph now holds 90 frameworks** — the 26 verified ones plus these 64.
+**The graph now holds 92 frameworks** — the 26 originally verified, the 64 from this pass, and
+`201 CMR 17` and `42 CFR Part 2` (verified and loaded 2026-07-23). Three further **source
+catalogues** (DTOP Sources, Enterprise Sources, Assessments and Questionnaires) are also in the
+graph but are not compliance frameworks — see [README.md](../README.md).
 
 **KB 3 is fully consumed** — all 9 files map to a completed framework. Every gap below is in KB 2.
 
@@ -84,16 +88,27 @@ actually the 1.1 draft) and **SCF** (the control catalog ships only as a workboo
 retrieved externally. **NERC** was unresolvable until the CIP Reliability Standards were added
 to KB 3 on 2026-07-21.
 
-## ⚠️ Built, not verified (4)
+## ✅ Verified and loaded 2026-07-23 (2)
 
-CSVs exist in the repo but these never went through `verdict.md` verification and **none of them
-are in the Neo4j instance**. They are the only remaining framework folders in the repo that are
-not in the graph.
+Both had their extraction sitting in the repo unverified and unloaded. On 2026-07-23 each was
+checked against the structure of its source regulation, its loader was rewritten (the earlier
+drafts were broken — `201_cmr.py` loaded from empty file paths and created a `Resident` in place
+of the Service Provider; `42cfr.py` matched a `Regulation` label it never created and joined every
+subpart to every section with a cartesian MERGE), and loaded into Neo4j.
+
+| Framework | Repo folder | Loader | `regional_standard_regulation_id` | In graph | Verification |
+|---|---|---|---|---|---|
+| 201 CMR 17 | `201 CMR 17` | `App_new/201_cmr.py` | `201 CMR 17.00` | 18 nodes / 19 rels | 17 concept nodes match the 17.02 definitions and 17.03–17.04 requirements; no orphans |
+| 42 CFR Part 2 | `42 CFR Part 2` | `App_new/42cfr.py` | `42_CFR_PART_2` | 70 nodes / 69 rels | Subparts A–E and sections 2.1–2.68 match the real Part 2 structure; section→subpart inferred from the section number and confirmed exact |
+
+## ⚠️ Built, not verified (2)
+
+CSVs exist in the repo but these never went through `verdict.md` verification and **neither is in
+the Neo4j instance**. They are the only remaining framework folders in the repo that are not in the
+graph — both because their standard is absent from the knowledge base.
 
 | Framework | Repo folder | CSVs | Loader | Source in KB | Gap |
 |---|---|---:|---|---|---|
-| 201 CMR 17 | `201 CMR 17` | 17 | `App_new/201_cmr.py` | KB 2/USA/201cmr17.pdf | Never verified; never loaded |
-| 42 CFR Part 2 | `42 CFR Part 2` | 5 | `App_new/42cfr.py` | KB 2/USA/42 CFR Part 2.pdf | Never verified; never loaded |
 | ISO 42001 | `ISO 42001` | 5 | `App_new/iso42001.py` | **none — no ISO 42001 PDF in the KB** | Unverifiable without a source |
 | ISO 27701 | `ISO 27701` | 8 | **none** | **none — no ISO 27701 PDF in the KB** | No loader *and* no source |
 
@@ -302,9 +317,10 @@ What remains:
 
 1. **Verify the 64 in `verdict.md`.** They are extracted and loaded but none has been checked
    against its source the way the original 26 were. This is now the largest quality gap: the graph
-   holds 90 frameworks but only 26 are verified.
-2. **Finish what was already built** — verify and load `201 CMR 17` and `42 CFR Part 2`; their
-   sources are in the KB and their loaders exist. This is still the cheapest win in the repo.
+   holds 92 frameworks but only 28 are verified.
+2. ~~**Finish what was already built** — verify and load `201 CMR 17` and `42 CFR Part 2`.~~
+   **Done 2026-07-23** — both verified against their source regulation, their loaders rewritten,
+   and loaded into Neo4j (see [Verified and loaded 2026-07-23](#-verified-and-loaded-2026-07-23-2)).
 3. **Obtain the standards the KB does not contain.** The extraction pass proved seven instruments
    are absent despite files bearing their names: the **KVKK statute, POPIA Act, India IT Act,
    Australian Privacy Act, DO-178C, the COSO framework body and UN R156** — plus **ISO 42001** and

@@ -15,7 +15,11 @@ verified**. See [New sources/source-audit.md](New sources/source-audit.md).
 
 ## Graph contents
 
-**90 frameworks · 66,657 nodes · 143,915 relationships · 644 node labels · 967 relationship types**
+**92 frameworks + 3 source catalogues · 68,781 nodes · 152,816 relationships · 677 node labels · 1,002 relationship types**
+
+The 92 frameworks are the 26 originally verified, the 64 from `New sources/`, and `201 CMR 17` and
+`42 CFR Part 2` (verified and loaded 2026-07-23). Three further **source catalogues** are in the
+same graph but are not frameworks — see [Source catalogues](#source-catalogues-not-frameworks).
 
 Every node carries a framework identifier, so any framework can be selected in isolation. The
 property name depends on the framework's classification:
@@ -23,7 +27,7 @@ property name depends on the framework's classification:
 | Classification | Identifier property | Frameworks |
 |---|---|---:|
 | IS frameworks & standards | `IS_frameworks_standard_id` | |
-| Industry standards & regulations | `industry_standard_regulation_id` | 26 |
+| Industry standards & regulations | `industry_standard_regulation_id` | 28 |
 | Regional standards & regulations | `regional_standard_regulation_id` | |
 | Extracted from `New sources/` | `framework_id` | 64 |
 
@@ -165,6 +169,19 @@ under two labels) and 48 repeated relationship triples, and because 650 DFARS ci
 blank target with nothing in-corpus to attach to. Every case is itemised in
 [source-audit.md](New sources/source-audit.md#loading-into-neo4j).
 
+### 201 CMR 17 and 42 CFR Part 2 (verified and loaded 2026-07-23)
+
+Two US regional regulations whose extractions had been sitting in the repo
+unverified and unloaded. Each was verified against the structure of its source
+regulation, its loader rewritten (the earlier drafts were broken), and loaded
+into Neo4j. They use `regional_standard_regulation_id`, like the regional
+frameworks above, so they appear in the explorer alongside them.
+
+| Framework | `regional_standard_regulation_id` | Nodes | Relationships | Structure |
+|-----------|-----------------------------------|------:|--------------:|-----------|
+| 201 CMR 17 | `201 CMR 17.00` | 18 | 19 | 1 regulation + 17 concept nodes (the 17.02 definitions and 17.03–17.04 requirements), wired by the relationships the regulation implies |
+| 42 CFR Part 2 | `42_CFR_PART_2` | 70 | 69 | 1 regulation + 5 subparts (A–E) + 38 sections (2.1–2.68) + 13 entities + 4 assets + 9 controls; sections attached to their subpart by section number |
+
 ### Source catalogues (not frameworks)
 
 Three further datasets are loaded into the same graph but are **not compliance
@@ -214,6 +231,8 @@ any other catalogue or framework.
 | TDPSA | Texas HB4, Business & Commerce Code Ch. 541 |
 | TISAX | ENX TISAX Participant Handbook v2.8 (ISA 5) |
 | VCDPA | Va. Code §§ 59.1-575 through 59.1-585 |
+| 201 CMR 17 | 201 CMR 17.00 — Massachusetts Standards for the Protection of Personal Information |
+| 42 CFR Part 2 | 42 CFR Part 2 — Confidentiality of Substance Use Disorder Patient Records |
 
 ### Sources for the 64 frameworks from `New sources/`
 
@@ -375,12 +394,12 @@ works offline and cannot break because of a CDN change.
 
 | Area | What it does |
 |---|---|
-| Overview | 90 framework bubbles sized by node count, joined by cross-framework edges weighted by mapping volume. Click one to open it. The 64 from `New sources/` appear as unconnected bubbles — those sources contain no cross-framework mappings. |
+| Overview | 95 bubbles (92 frameworks + 3 source catalogues) sized by node count, joined by cross-framework edges weighted by mapping volume. Click one to open it. The 64 from `New sources/`, the two 2026-07-23 regulations and the three catalogues appear as unconnected bubbles — those sources contain no cross-framework mappings. |
 | Framework view | Loads that framework's nodes and relationships. Double-click any node to pull in its neighbours. |
 | Cross-framework links | Every framework pair that shares edges, ranked by weight; click to see only those two and the edges bridging them. |
 | Node inspector | Full property list for the selected node — long fields (verbatim requirement text, VSL tiers) render in full, not truncated. |
 | Cypher console | Free-text queries plus a saved-query library. Returning nodes/relationships draws them; any other shape opens the results table. |
-| Filters | Live show/hide by any of the 644 node labels and 967 relationship types, with counts. |
+| Filters | Live show/hide by any of the 677 node labels and 1,002 relationship types, with counts. |
 
 Canvas rendering with collision-aware labelling, so a dense framework stays readable; `Fit`,
 `Pause`, and `PNG` export sit top-right, and <kbd>⌘↵</kbd> runs the query box.

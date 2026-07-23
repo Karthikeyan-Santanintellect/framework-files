@@ -1,228 +1,119 @@
-regulation = """
-MERGE (r:RegionalStandardAndRegulation {regional_standard_regulation_id: '42_CFR_PART_2'})
-ON CREATE SET
-    r.name = '42 CFR Part 2',
-    r.version = '2026 Edition',
-    r.jurisdiction = 'US Federal',
-    r.authority = 'Secretary of HHS',
-    r.description = 'Confidentiality of Substance Use Disorder Patient Records';
+"""Loader — 42 CFR Part 2 (Confidentiality of SUD Patient Records).
+
+Verified and loaded 2026-07-23. Replaces an earlier draft that created a
+`Regulation` node the relationships never matched and joined every subpart to
+every section (and every entity to every entity) with cartesian MERGEs.
+
+This loader reads the folder's CSVs locally and loads them with parameterised
+UNWIND — no LOAD CSV, so it does not depend on a branch or raw-URL being
+reachable. Nodes carry `regional_standard_regulation_id = '42_CFR_PART_2'`, the
+same identifier property the other regional regulations use, so the framework
+appears in the graph explorer alongside them.
+
+Graph: 1 regulation + 5 subparts + 38 sections + 13 entities + 4 assets +
+9 controls, wired as Regulation→Subpart→Section (section-to-subpart inferred
+from the section number, which is exact for Part 2) plus the regulation to its
+defined entities, assets and controls.
+
+    python App_new/42cfr.py
 """
 
-# UPDATED: Added framework_id and switched to MERGE. 
-# Replaces 'control_categories' from ISO27001.
-subparts = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sub:Subpart {regional_standard_regulation_id: '42_CFR_PART_2', subpart_id: row.id})
-ON CREATE SET
-    sub.name = row.name,
-    sub.description = row.description;
-"""
-
-# UPDATED: Added framework_id and switched to MERGE. 
-# Replaces 'clauses' from ISO27001.
-sections = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (sec:Section {regional_standard_regulation_id: '42_CFR_PART_2', section_id: row.id})
-ON CREATE SET
-    sec.name = row.name,
-    sec.description = row.description,
-    sec.subpart_id = row.subpart_id; 
-"""
-
-# Handing the Actors/Entities from the 42 CFR Graph.
-entities = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2', entity_id: row.id})
-ON CREATE SET
-    e.label = row.label,
-    e.name = row.name,
-    e.description = row.description;
-"""
-# Handling the Data/Records from the 42 CFR Graph.
-assets = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2', asset_id: row.id})
-ON CREATE SET
-    a.label = row.label,
-    a.name = row.name,
-    a.description = row.description;
-"""
-
-# UPDATED: Added framework_id and switched to MERGE. 
-controls = """
-LOAD CSV WITH HEADERS FROM '$file_path' AS row
-MERGE (c:Control {regional_standard_regulation_id: '42_CFR_PART_2', control_id: row.id})
-ON CREATE SET
-    c.label = row.label,
-    c.name = row.name,
-    c.description = row.description;
-"""
-# Relationships 
-regulation_has_subparts = """
-MATCH (reg:Regulation {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (sub:Subpart {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (reg)-[:REGULATION_HAS_SUBPART]->(sub);
-"""
-subpart_contains_sections = """
-MATCH (sub:Subpart {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (sec:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (sub)-[:SUBPART_CONTAINS_SECTION]->(sec);
-"""
-entity_entity = """
-MATCH (p2p:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (pat:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (p2p)-[:ENTITY_DIAGNOSES_PATIENT]->(pat);
-"""
-entity_control = """
-MATCH (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (c:Control {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (e)-[:ENTITY_PROVIDES_CONTROL]->(c);
-"""
-entity_asset = """
-MATCH (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (e)-[:ENTITY_HAS_ASSET]->(a); 
-"""
-asset_asset = """
-MATCH (a1:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (a2:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (a1)-[:ASSET_RELATES_TO_ASSET]->(a2);
-"""
-control_asset = """
-MATCH (c:Control {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (c)-[:CONTROL_MITIGATES_ASSET]->(a);
-"""
-section_control = """
-MATCH (s:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (c:Control {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (s)-[:SECTION_REQUIRES_CONTROL]->(c);
-"""
-section_entity = """
-MATCH (s:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (e:Entity {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (s)-[:SECTION_APPLIES_TO_ENTITY]->(e);
-"""
-
-section_asset = """
-MATCH (s:Section {regional_standard_regulation_id: '42_CFR_PART_2'})
-MATCH (a:Asset {regional_standard_regulation_id: '42_CFR_PART_2'})
-MERGE (s)-[:SECTION_APPLIES_TO_ASSET]->(a); 
-"""
-
-import sys
-import os
-import time
+import csv
 import logging
-import json
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from app import Neo4jConnect
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+log = logging.getLogger("42cfr")
 
-client = Neo4jConnect()
+RID = "42_CFR_PART_2"
+FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "42 CFR Part 2")
 
-health = client.check_health()
-if health is not True:
-    print("Neo4j connection error:", health)
-    client.close()
-    sys.exit(1)
-
-logger.info("Loading graph structure...")
-
-client.query(regulation)
-time.sleep(2)
-
-client.query(subparts.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Subpart.csv"))
-time.sleep(2)
-
-client.query(sections.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Sections.csv"))
-time.sleep(2)
-
-client.query(entities.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Entity.csv"))
-time.sleep(2)
-
-client.query(assets.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Asset%20.csv"))
-time.sleep(2)
-
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/42%20CFR%20Part%202/42%20CFR%20-%20Control.csv"))
-time.sleep(2)
-
-                                 
-#Relationships
-client.query(regulation_has_subparts)
-time.sleep(2)
-
-client.query(subpart_contains_sections)
-time.sleep(2)
-
-client.query(entity_entity)
-time.sleep(2)
-
-client.query(entity_control)
-time.sleep(2)
-
-client.query(entity_asset)
-time.sleep(2)
-
-client.query(asset_asset)
-time.sleep(2)
-
-client.query(control_asset)
-time.sleep(2)
-
-client.query(section_control)
-time.sleep(2)
-
-client.query(section_entity)
-time.sleep(2)
-
-client.query(section_asset)
-time.sleep(2)
+# file -> (Neo4j label, id column)
+NODE_FILES = {
+    "42 CFR - Subpart.csv": ("Subpart", "id"),
+    "42 CFR - Sections.csv": ("Section", "id"),
+    "42 CFR - Entity.csv": ("Entity", "id"),
+    "42 CFR - Asset .csv": ("Asset", "id"),
+    "42 CFR - Control.csv": ("Control", "id"),
+}
 
 
+def rows(name):
+    with open(os.path.join(FOLDER, name), encoding="utf-8-sig", newline="") as fh:
+        return [dict(r) for r in csv.DictReader(fh)]
 
 
+def subpart_of(section_id):
+    """Section number -> subpart id. Exact for Part 2's numbering scheme.
+
+    The number after the dot is a section index, not a decimal — '2.1' is
+    section 1 (Subpart A), '2.11' is section 11 (Subpart B) — so it must be
+    parsed as an integer string, never as a float.
+    """
+    d = int(section_id.replace("SEC-", "").split(".")[1])   # '2.11' -> 11
+    if d < 10:  return "SUB-A"
+    if d < 30:  return "SUB-B"
+    if d < 50:  return "SUB-C"
+    if d < 60:  return "SUB-D"
+    return "SUB-E"
 
 
-logger.info("Graph structure loaded successfully.")
+def main():
+    c = Neo4jConnect()
+    if c.check_health() is not True:
+        log.error("Neo4j unreachable"); return 1
 
-query = """
-MATCH (n)
-OPTIONAL MATCH (n)-[r]-()
-WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-RETURN {
-  nodes: [n IN uniqueNodes | n {
-    .*,
-    id: elementId(n),
-    labels: labels(n),
-    mainLabel: head(labels(n))
-  }],
-  rels: [r IN uniqueRels | r {
-    .*,
-    id: elementId(r),
-    type: type(r),
-    from: elementId(startNode(r)),
-    to: elementId(endNode(r))
-  }]
-} AS graph_data
-"""
+    c.query(
+        "MERGE (r:RegionalStandardAndRegulation {regional_standard_regulation_id:$rid}) "
+        "SET r.name='42 CFR Part 2', r.citation='42 CFR Part 2', "
+        "r.jurisdiction='US Federal', r.authority='Secretary of HHS', "
+        "r.description='Confidentiality of Substance Use Disorder Patient Records'",
+        others={"rid": RID})
 
-results = client.query(query)
+    total_nodes = 0
+    for fname, (label, idc) in NODE_FILES.items():
+        data = rows(fname)
+        for d in data:
+            d["node_id"] = d[idc]
+        c.query(
+            f"UNWIND $rows AS row "
+            f"MERGE (n:{label} {{regional_standard_regulation_id:$rid, node_id:row.node_id}}) "
+            f"SET n += row",
+            others={"rows": data, "rid": RID})
+        total_nodes += len(data)
+        log.info("  %-10s %3d nodes", label, len(data))
 
-# if results and len(results) > 0:
-#     graph_data = results[0]['graph_data']
-    
-#     import json
-#     with open('42cfr.json', 'w', encoding='utf-8') as f:
-#         f.write(json.dumps(graph_data, default=str, indent=2))
-#     logger.info(f"✓ Exported {len(graph_data['nodes'])} nodes and {len(graph_data['rels'])} relationships to 42cfr.json")
-# else:
-#     logger.error("No data returned from the query.")
+    # Regulation -> Subpart
+    c.query("MATCH (r:RegionalStandardAndRegulation {regional_standard_regulation_id:$rid}) "
+            "MATCH (s:Subpart {regional_standard_regulation_id:$rid}) "
+            "MERGE (r)-[:REGULATION_HAS_SUBPART]->(s)", others={"rid": RID})
+    # Subpart -> Section (inferred, exact)
+    sec_map = [{"sec": s["id"], "sub": subpart_of(s["id"])} for s in rows("42 CFR - Sections.csv")]
+    c.query("UNWIND $m AS m "
+            "MATCH (sub:Subpart {regional_standard_regulation_id:$rid, node_id:m.sub}) "
+            "MATCH (sec:Section {regional_standard_regulation_id:$rid, node_id:m.sec}) "
+            "MERGE (sub)-[:SUBPART_HAS_SECTION]->(sec)", others={"m": sec_map, "rid": RID})
+    # Regulation -> Entity / Asset / Control
+    for label, rel in [("Entity", "REGULATION_DEFINES_ENTITY"),
+                       ("Asset", "REGULATION_DEFINES_ASSET"),
+                       ("Control", "REGULATION_DEFINES_CONTROL")]:
+        c.query(f"MATCH (r:RegionalStandardAndRegulation {{regional_standard_regulation_id:$rid}}) "
+                f"MATCH (n:{label} {{regional_standard_regulation_id:$rid}}) "
+                f"MERGE (r)-[:{rel}]->(n)", others={"rid": RID})
 
-client.close()
+    got = c.query("MATCH (n {regional_standard_regulation_id:$rid}) "
+                  "OPTIONAL MATCH (n)-[r]->({regional_standard_regulation_id:$rid}) "
+                  "RETURN count(DISTINCT n) AS n, count(DISTINCT r) AS r", others={"rid": RID})[0]
+    log.info("in graph: %d nodes / %d relationships (%d node rows loaded + 1 regulation)",
+             got["n"], got["r"], total_nodes)
+    c.close()
+    return 0
 
 
-
-
-
+if __name__ == "__main__":
+    sys.exit(main())

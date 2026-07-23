@@ -933,6 +933,9 @@ const SAVED = [
   ["Assessments — where maturity .md and .csv disagree", `MATCH (s:Statement {assessment:'maturity'})\nWHERE s.in_md = false OR s.in_csv = false\nRETURN s.domain AS domain, s.statement_id AS id, s.in_md AS in_md, s.in_csv AS in_csv\nORDER BY domain`],
   ["Assessments — Expert Questionnaire is a subset of maturity", `MATCH (e:Statement {assessment:'expert'})-[:ALSO_IN]->(m:Statement)\nRETURN e.statement_id AS cri_id, count(m) AS maturity_matches ORDER BY maturity_matches DESC LIMIT 20`],
   ["Assessments — subcategories shared by both statement sets", `MATCH (sub:Subcategory)<-[:IN_SUBCATEGORY]-(s:Statement)\nWITH sub, collect(DISTINCT s.assessment) AS a, count(*) AS n\nWHERE size(a) > 1\nRETURN sub.path AS subcategory, n AS statements ORDER BY n DESC LIMIT 20`],
+  ["42 CFR Part 2 — subpart / section structure", `MATCH (r:RegionalStandardAndRegulation {regional_standard_regulation_id:'42_CFR_PART_2'})-[:REGULATION_HAS_SUBPART]->(sub)-[:SUBPART_HAS_SECTION]->(sec)\nRETURN r, sub, sec`],
+  ["42 CFR Part 2 — entities, assets and controls", `MATCH (r:RegionalStandardAndRegulation {regional_standard_regulation_id:'42_CFR_PART_2'})-[rel]->(n)\nWHERE n:Entity OR n:Asset OR n:Control\nRETURN r, rel, n`],
+  ["201 CMR 17 — concept map", `MATCH (a {regional_standard_regulation_id:'201 CMR 17.00'})-[r]->(b {regional_standard_regulation_id:'201 CMR 17.00'})\nRETURN a, r, b`],
   ["Dangling identifier audit", `MATCH (n) WHERE coalesce(n.IS_frameworks_standard_id,n.industry_standard_regulation_id,n.regional_standard_regulation_id,n.framework_id) IS NULL\nRETURN labels(n) AS labels, count(*) AS nodes ORDER BY nodes DESC`]
 ];
 
