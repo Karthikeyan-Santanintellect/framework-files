@@ -1,0 +1,126 @@
+question_id,label,section_id,text,option_count,source_document
+sra_s1_q1,Q1,sra_s1,Has your practice completed a security risk assessment (SRA) before?,3,DTOP-OLD
+sra_s1_q2,Q2,sra_s1,Do you review and update your SRA?,3,DTOP-OLD
+sra_s1_q3,Q3,sra_s1,How often do you review and update your SRA?,5,DTOP-OLD
+sra_s1_q4,Q4,sra_s1,"Do you include all information systems containing, processing, and/or transmitting ePHI in your SRA?",4,DTOP-OLD
+sra_s1_q5,Q5,sra_s1,How do you verify that that your security measures comply with current HIPAA requirements?,5,DTOP-OLD
+sra_s1_q6,Q6,sra_s1,What do you include in your SRA documentation?,5,DTOP-OLD
+sra_s1_q7,Q7,sra_s1,Do you respond to the threats and vulnerabilities identified in your SRA?,4,DTOP-OLD
+sra_s1_q8,Q8,sra_s1,Do you identify specific personnel to respond to and mitigate the threats and vulnerabilities found in your SRA?,3,DTOP-OLD
+sra_s1_q9,Q9,sra_s1,Do you communicate SRA results to personnel involved in responding to threats or vulnerabilities?,3,DTOP-OLD
+sra_s1_q10,Q10,sra_s1,How do you communicate SRA results to personnel involved in responding to identified threats or vulnerabilities?,4,DTOP-OLD
+sra_s2_q1,Q1,sra_s2,"Do you maintain documentation of policies and procedures regarding risk assessment, risk management and information security activities?",3,DTOP-OLD
+sra_s2_q2,Q2,sra_s2,"Do you review and update your security documentation, including policies and procedures?",5,DTOP-OLD
+sra_s2_q3,Q3,sra_s2,"How do you update your security program documentation, including policies and procedures?",3,DTOP-OLD
+sra_s2_q4,Q4,sra_s2,Is the security officer involved in all security policy and procedure updates?,4,DTOP-OLD
+sra_s2_q5,Q5,sra_s2,How does documentation for your risk management and security procedures compare to your actual business practices?,4,DTOP-OLD
+sra_s2_q6,Q6,sra_s2,How long are information security management and risk management documents kept?,4,DTOP-OLD
+sra_s2_q7,Q7,sra_s2,Do you make sure that information security and risk management documentation is available to those who need it?,4,DTOP-OLD
+sra_s2_q8,Q8,sra_s2,How do you ensure that security and risk management documentation is available to those who need it?,4,DTOP-OLD
+sra_s3_q1,Q1,sra_s3,Who within your practice is responsible for developing and implementing information security policies and procedures?,5,DTOP-OLD
+sra_s3_q2,Q2,sra_s3,Do you identify and document the role and responsibilities of the security officer?,3,DTOP-OLD
+sra_s3_q3,Q3,sra_s3,Is your security officer qualified for the position?,3,DTOP-OLD
+sra_s3_q4,Q4,sra_s3,Do workforce members know who the security officer is?,3,DTOP-OLD
+sra_s3_q5,Q5,sra_s3,Do workforce members know how and when to contact the security officer?,3,DTOP-OLD
+sra_s3_q6,Q6,sra_s3,Who do people contact for security considerations if there is no security officer available or identified within the organization?,7,DTOP-OLD
+sra_s3_q7,Q7,sra_s3,How are staff roles and job duties defined with respect to ePHI access?,3,DTOP-OLD
+sra_s3_q8,Q8,sra_s3,"Do you screen your workforce members (e.g., staff, volunteers, interns) with tools like credential verification or background checks to verify trustworthiness?",3,DTOP-OLD
+sra_s3_q9,Q9,sra_s3,How are your workforce members screened to verify trustworthiness?,5,DTOP-OLD
+sra_s3_q10,Q10,sra_s3,Do you ensure that all workforce members (including management) are given security training?,4,DTOP-OLD
+sra_s3_q11,Q11,sra_s3,How do you ensure that all workforce members are given security training?,4,DTOP-OLD
+sra_s3_q12,Q12,sra_s3,How long are records of workforce member security training kept? ,3,DTOP-OLD
+sra_s3_q13,Q13,sra_s3,Are procedures in place for monitoring log-in attempts and reporting discrepancies?,4,DTOP-OLD
+sra_s3_q14,Q14,sra_s3,Is up-to-date malware protection included in your policies and procedures?,4,DTOP-OLD
+sra_s3_q15,Q15,sra_s3,What password security elements are covered in your security training?,5,DTOP-OLD
+sra_s3_q16,Q16,sra_s3,Do you ensure workforce members maintain ongoing awareness of security requirements? ,3,DTOP-OLD
+sra_s3_q17,Q17,sra_s3,How does your practice ensure workforce members maintain ongoing awareness of security requirements? ,3,DTOP-OLD
+sra_s3_q18,Q18,sra_s3,Do you have a sanction policy to enforce security procedures?,3,DTOP-OLD
+sra_s3_q19,Q19,sra_s3,What is included in your sanction policy to hold personnel accountable if they do not follow your security policies and procedures?,9,DTOP-OLD
+sra_s4_q1,Q1,sra_s4,"Do you manage and control personnel access to ePHI, systems, and facilities?",4,DTOP-OLD
+sra_s4_q2,Q2,sra_s4,"How do you manage and control personnel access to ePHI, systems, and facilities?",7,DTOP-OLD
+sra_s4_q3,Q3,sra_s4,"What is your process for authorizing, establishing, and modifying access to ePHI?",5,DTOP-OLD
+sra_s4_q4,Q4,sra_s4,How much access to ePHI is granted to users or other entities?,4,DTOP-OLD
+sra_s4_q5,Q5,sra_s4,How are individual users identified when accessing ePHI?,4,DTOP-OLD
+sra_s4_q6,Q6,sra_s4,Do you ensure all of your workforce members have appropriate access to ePHI?,4,DTOP-OLD
+sra_s4_q7,Q7,sra_s4,"How do you make sure that your workforce's designated access to ePHI is logical, consistent, and appropriate?",4,DTOP-OLD
+sra_s4_q8,Q8,sra_s4,Do you use encryption everywhere ePHI is stored throughout your organization?,4,DTOP-OLD
+sra_s4_q9,Q9,sra_s4,What procedures do you have in place to encrypt ePHI when deemed reasonable and appropriate?,5,DTOP-OLD
+sra_s4_q10,Q10,sra_s4,Do you use alternative safeguards in place of encryption?,4,DTOP-OLD
+sra_s4_q11,Q11,sra_s4,"When encryption is deemed unreasonable or inappropriate to implement, do you document the use of an alternative safeguard?",3,DTOP-OLD
+sra_s4_q12,Q12,sra_s4,"Have you evaluated implementing any of the following encryption solutions in your local environment to protect ePHI: full disk encryption, file/folder/volume encryption, database encryption, encryption of thumb drives or other external media (including backup media)?",4,DTOP-OLD
+sra_s4_q13,Q13,sra_s4,"Have you evaluated implementing encryption solutions for any of the following cloud services to protect ePHI: email service, file storage, web applications, databases, remote system backups?",5,DTOP-OLD
+sra_s4_q14,Q14,sra_s4,"Have you evaluated implementing any of the following encryption solutions for ePHI in transit: encryption of internet traffic by means of a VPN, web traffic over HTTP encrypted using Transport Layer Security (TLS), or secure file transfer?",4,DTOP-OLD
+sra_s4_q15,Q15,sra_s4,Do you periodically review your information systems for how security settings can be implemented to safeguard ePHI?,3,DTOP-OLD
+sra_s4_q16,Q16,sra_s4,"How are you aware of the security settings for information systems which process, store, or transmit ePHI?",4,DTOP-OLD
+sra_s4_q17,Q17,sra_s4,Do you use security settings and mechanisms to record and examine information system activity?,3,DTOP-OLD
+sra_s4_q18,Q18,sra_s4,What mechanisms are in place to monitor or log system activity?,7,DTOP-OLD
+sra_s4_q19,Q19,sra_s4,How do you monitor or track ePHI system activity?,4,DTOP-OLD
+sra_s4_q20,Q20,sra_s4,Do you have automatic logoff enabled on devices and platforms accessing ePHI?,4,DTOP-OLD
+sra_s4_q21,Q21,sra_s4,Do you ensure users accessing ePHI are who they claim to be?,3,DTOP-OLD
+sra_s4_q22,Q22,sra_s4,How do you ensure users accessing ePHI are who they claim to be?,4,DTOP-OLD
+sra_s4_q23,Q23,sra_s4,How do you determine the means by which ePHI is accessed?,4,DTOP-OLD
+sra_s4_q24,Q24,sra_s4,Do you protect ePHI from unauthorized modification or destruction?,3,DTOP-OLD
+sra_s4_q25,Q25,sra_s4,How do you confirm that ePHI has not been modified or destroyed without authorization?,3,DTOP-OLD
+sra_s4_q26,Q26,sra_s4,Do you protect against unauthorized access to or modification of ePHI when it is being transmitted electronically?,4,DTOP-OLD
+sra_s4_q27,Q27,sra_s4,Have you implemented mechanisms to record activity on information systems that create or use ePHI?,4,DTOP-OLD
+sra_s4_q28,Q28,sra_s4,"Does the organization stay up to date or informed (e.g., cybersecurity listserv monitoring) on emerging threats and vulnerabilities that may affect information systems? ",3,DTOP-OLD
+sra_s4_q29,Q29,sra_s4,Is there a process in place to identify and evaluate information systems for potential emerging technical vulnerabilities and how the exposure could affect systems that contain ePHI?,3,DTOP-OLD
+sra_s4_q30,Q30,sra_s4,"If new threats or vulnerabilities are identified through regular scanning, what is done to mitigate and respond to them?",3,DTOP-OLD
+sra_s5_q1,Q1,sra_s5,"Do you manage access to and use of your facility or facilities (i.e., that house information systems and ePHI)?",3,DTOP-OLD
+sra_s5_q2,Q2,sra_s5,What physical protections do you have in place to manage facility security risks?,8,DTOP-OLD
+sra_s5_q3,Q3,sra_s5,"Do you restrict physical access to and use of your equipment (i.e., equipment that house ePHI)?",3,DTOP-OLD
+sra_s5_q4,Q4,sra_s5,"Do you manage workforce member, visitor, and third-party access to electronic devices?",4,DTOP-OLD
+sra_s5_q5,Q5,sra_s5,"Do you have physical protections in place, such as cable locks for portable laptops, screen filters for screens visible in high traffic areas, to manage electronic device security risks?",4,DTOP-OLD
+sra_s5_q6,Q6,sra_s5,What physical protections do you have in place for electronic devices with access to ePHI?,5,DTOP-OLD
+sra_s5_q7,Q7,sra_s5,Do you keep an inventory and a location record of all electronic devices?,3,DTOP-OLD
+sra_s5_q8,Q8,sra_s5,Do you have an authorized user who approves access levels within information systems and locations that use ePHI?,4,DTOP-OLD
+sra_s5_q9,Q9,sra_s5,Do you validate a person's access to facilities (including workforce members and visitors) based on their role or function?,5,DTOP-OLD
+sra_s5_q10,Q10,sra_s5,How do you validate a person's access to your facility?,6,DTOP-OLD
+sra_s5_q11,Q11,sra_s5,"Do you have access validation requirements for personnel and visitors seeking access to your critical systems (such as IT/OT, software developers, or network admins)? ",3,DTOP-OLD
+sra_s5_q12,Q12,sra_s5,Does this include controlling access to your software programs for testing and revisions?,3,DTOP-OLD
+sra_s5_q13,Q13,sra_s5,Do you have procedures for validating a third-party person's access to the facility based on their role or function?,3,DTOP-OLD
+sra_s5_q14,Q14,sra_s5,"Do you have hardware, software, or other mechanisms that record and examine activity on information systems with access to ePHI?",3,DTOP-OLD
+sra_s5_q15,Q15,sra_s5,"What requirements, mechanisms, or controls are in place for retention of audit reports?",3,DTOP-OLD
+sra_s5_q16,Q16,sra_s5,"Do you maintain records of physical changes upgrades, and modifications to your facility?",5,DTOP-OLD
+sra_s5_q17,Q17,sra_s5,How do you maintain awareness of the movement of electronic devices and media?,3,DTOP-OLD
+sra_s5_q18,Q18,sra_s5,Do you back up ePHI to ensure availability when devices are moved? ,3,DTOP-OLD
+sra_s5_q19,Q19,sra_s5,"Do you ensure devices which created, maintained, received, or transmitted ePHI are effectively sanitized when they are disposed of?",6,DTOP-OLD
+sra_s5_q20,Q20,sra_s5,How do you determine what is considered appropriate use of electronic devices and connected network devices?,3,DTOP-OLD
+sra_s5_q21,Q21,sra_s5,Do you ensure access to ePHI is terminated when employment or other arrangements with the workforce member ends?,4,DTOP-OLD
+sra_s5_q22,Q22,sra_s5,"Do you have procedures for terminating or changing third-party access across your organization when the contract, business associate agreement, or other arrangement with the third party ends or is changed?",2,DTOP-OLD
+sra_s5_q23,Q23,sra_s5,How do you ensure media is sanitized prior to re-use?,6,DTOP-OLD
+sra_s6_q1,Q1,sra_s6,Do you contract with business associates or other third-party vendors?,3,DTOP-OLD
+sra_s6_q2,Q2,sra_s6,Do you allow third-party vendors to access your information systems and/or ePHI?,3,DTOP-OLD
+sra_s6_q3,Q3,sra_s6,"How do you identify which third-party vendors are business associates and need to create, receive, maintain, or transmit ePHI?",4,DTOP-OLD
+sra_s6_q4,Q4,sra_s6,How does your practice enforce or monitor access for each of these business associates?,3,DTOP-OLD
+sra_s6_q5,Q5,sra_s6,"How do business associates communicate important changes in security practices, personnel, etc. to you?",3,DTOP-OLD
+sra_s6_q6,Q6,sra_s6,"Have you executed business associate agreements with all business associates who create, receive, maintain, or transmit ePHI on your behalf?",3,DTOP-OLD
+sra_s6_q7,Q7,sra_s6,"How do you maintain awareness of business associate security practices (i.e., in addition to Business Associate Agreements)?",3,DTOP-OLD
+sra_s6_q8,Q8,sra_s6,Do you include satisfactory assurances within your Business Associate Agreements pertaining to how your business associates safeguard ePHI?,3,DTOP-OLD
+sra_s6_q9,Q9,sra_s6,What terms are in your BAAs to outline how your business associates ensure subcontractors access ePHI securely?,3,DTOP-OLD
+sra_s6_q10,Q10,sra_s6,Do your BAAs require your third-party vendors to report security incidents to your practice in a timely manner?,2,DTOP-OLD
+sra_s6_q11,Q11,sra_s6,Have you updated all your BAAs to reflect the requirements in the 2013 Omnibus Rule updates to HIPAA?,4,DTOP-OLD
+sra_s6_q12,Q12,sra_s6,How does your practice document all of its business associates requiring access to ePHI?,3,DTOP-OLD
+sra_s6_q13,Q13,sra_s6,Do you obtain Business Associate Agreements (BAAs) from business associates who access another covered entity's ePHI on your behalf?,3,DTOP-OLD
+sra_s6_q14,Q14,sra_s6,Does the organization require business associates and third-party vendors to implement security requirements more stringent than required in the HIPAA Rules?,2,DTOP-OLD
+sra_s6_q15,Q15,sra_s6,How do you track and verify business associate and third-party vendor compliance to security policies and where are these policies documented?,2,DTOP-OLD
+sra_s7_q1,Q1,sra_s7,Does your practice have a contingency plan in the event of an emergency? ,3,DTOP-OLD
+sra_s7_q2,Q2,sra_s7,Is your contingency plan documented?,3,DTOP-OLD
+sra_s7_q3,Q3,sra_s7,Do you periodically update your contingency plan? ,4,DTOP-OLD
+sra_s7_q4,Q4,sra_s7,How do you ensure that your contingency plan is effective and updated appropriately? ,6,DTOP-OLD
+sra_s7_q5,Q5,sra_s7,Have you considered what kind of emergencies could damage critical information systems or prevent access to ePHI within your practice?,3,DTOP-OLD
+sra_s7_q6,Q6,sra_s7,What types of emergencies have you considered?,5,DTOP-OLD
+sra_s7_q7,Q7,sra_s7,Have you documented in your policies and procedures various emergency types and how you would respond to them?,3,DTOP-OLD
+sra_s7_q8,Q8,sra_s7,"Does your practice have policies and procedures in place to prevent, detect, and respond to security incidents?",3,DTOP-OLD
+sra_s7_q9,Q9,sra_s7,"How does your practice prevent, detect, and respond to security incidents? ",9,DTOP-OLD
+sra_s7_q10,Q10,sra_s7,Has your practice identified specific personnel as your incident response team?,3,DTOP-OLD
+sra_s7_q11,Q11,sra_s7,How are members of your incident response team identified and trained?,6,DTOP-OLD
+sra_s7_q12,Q12,sra_s7,Has your practice evaluated and determined which systems and ePHI are necessary for maintaining business-as-usual in the event of an emergency?,5,DTOP-OLD
+sra_s7_q13,Q13,sra_s7,"How would your practice maintain access to ePHI in the event of an emergency, system failure, or physical disaster?",4,DTOP-OLD
+sra_s7_q14,Q14,sra_s7,"How would your practice maintain security of ePHI and crucial business processes before, during, and after an emergency?",5,DTOP-OLD
+sra_s7_q15,Q15,sra_s7,Do you have a plan for backing up and restoring critical data?,4,DTOP-OLD
+sra_s7_q16,Q16,sra_s7,How is your practice's emergency procedure activated?,3,DTOP-OLD
+sra_s7_q17,Q17,sra_s7,How is access to your facility coordinated in the event of disasters or emergency situations?,3,DTOP-OLD
+sra_s7_q18,Q18,sra_s7,How is your emergency procedure terminated after the emergency circumstance is over?,3,DTOP-OLD
+sra_s7_q19,Q19,sra_s7,"Do you formally evaluate the effectiveness of your security safeguards, including physical safeguards?",3,DTOP-OLD
+sra_s7_q20,Q20,sra_s7,"How do you evaluate the effectiveness of your security safeguards, including physical safeguards?",3,DTOP-OLD

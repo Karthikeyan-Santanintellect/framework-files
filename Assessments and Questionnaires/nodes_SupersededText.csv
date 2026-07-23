@@ -1,0 +1,12 @@
+supersededtext_id,label,section_id,text,source_document
+sup_sra_s3_q12,Q12,sra_s3,How long are records of workforce member security training kept?,DTOP-OLD
+sup_sra_s3_q16,Q16,sra_s3,Do you ensure workforce members maintain ongoing awareness of security requirements?,DTOP-OLD
+sup_sra_s3_q17,Q17,sra_s3,How does your practice ensure workforce members maintain ongoing awareness of security requirements?,DTOP-OLD
+sup_sra_s4_q28,Q28,sra_s4,"Does the organization stay up to date or informed (e.g., cybersecurity listserv monitoring) on emerging threats and vulnerabilities that may affect information systems?",DTOP-OLD
+sup_sra_s5_q6,Q6,sra_s5,Q6. What physical protections do you have in place for electronic devices with access to ePHI?,DTOP-OLD
+sup_sra_s5_q11,Q11,sra_s5,"Do you have access validation requirements for personnel and visitors seeking access to your critical systems (such as IT/OT, software developers, or network admins)?",DTOP-OLD
+sup_sra_s5_q18,Q18,sra_s5,Do you back up ePHI to ensure availability when devices are moved?,DTOP-OLD
+sup_sra_s7_q1,Q1,sra_s7,Does your practice have a contingency plan in the event of an emergency?,DTOP-OLD
+sup_sra_s7_q3,Q3,sra_s7,Do you periodically update your contingency plan?,DTOP-OLD
+sup_sra_s7_q4,Q4,sra_s7,How do you ensure that your contingency plan is effective and updated appropriately?,DTOP-OLD
+sup_sra_s7_q9,Q9,sra_s7,"How does your practice prevent, detect, and respond to security incidents?",DTOP-OLD

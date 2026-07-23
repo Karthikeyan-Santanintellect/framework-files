@@ -1,0 +1,4 @@
+assessment_id,name,framework,kind,item_count,vulnerability_count,ui,routes,notes,source_document
+asmt_sra,HIPAA Security Risk Assessment (SRA),HIPAA Security Rule,branching,125,40,"SraQuestionsPage.tsx, SraPage.tsx","/sra, /sra/questions",,DTOP-OLD
+asmt_expert,Expert Questionnaire (CRI Profile v2.1),CRI Profile v2.1,diagnostic,85,0,"ExpertQuestionnaireTab.tsx, MaturityAssessmentPage.tsx",,,DTOP-OLD
+asmt_maturity,Maturity Assessment,CRI Profile v2.1,diagnostic,688,0,maturityAssessment agents (one per domain),/dtop/api/v3/maturity-assessment/{type}/,,DTOP-OLD

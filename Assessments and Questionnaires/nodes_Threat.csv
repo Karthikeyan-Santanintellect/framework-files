@@ -1,0 +1,149 @@
+threat_id,text,source_document
+thr_8e38ca4f59,"Non-physical threat(s) such as data corruption or information disclosure, interruption of system function and business processes, and/or legislation or security breaches",DTOP-OLD
+thr_b8132ee8ec,"Physical threats such as unauthorized facility access, hardware or equipment malfunction, collisions, trip/fire hazards, and/or hazardous materials (chemicals, magnets, etc.)",DTOP-OLD
+thr_31ea173e84,"Natural threat(s) such as damage from dust/particulates, extreme temperatures, severe weather events, and/or destruction from animals/insects",DTOP-OLD
+thr_1e6a8928d6,"Man-made threat(s) such as insider carelessness, theft/vandalism, terrorism/civil unrest, toxic emissions, or hackers/computer criminals",DTOP-OLD
+thr_d8aa7940a5,"Infrastructure threat(s) such as building/road hazards, power/telephone outages, water leakage (pipes, roof, sprinkler activation), unstable building conditions",DTOP-OLD
+thr_2e21d9afd7,"Information disclosure (ePHI, proprietary, intellectual, or confidential)",DTOP-OLD
+thr_ec075a4a11,Penalties from contractual non-compliance with third-party vendors,DTOP-OLD
+thr_6f26600878,"Disruption of business processes, information system function, and/or prolonged adversarial presence within information systems",DTOP-OLD
+thr_1a49ae52f8,Data deletion or corruption of records,DTOP-OLD
+thr_dccaa33f3d,"Prolonged exposure to hacker, computer criminal, malicious code, or careless insider",DTOP-OLD
+thr_5149cc53e6,"Corrective enforcement from regulatory agencies (e.g., HHS, OCR, FTC, CMS, State or Local jurisdictions)",DTOP-OLD
+thr_a8b908d96f,Hardware/equipment malfunction,DTOP-OLD
+thr_11d726641e,Damage to public reputation due to breach,DTOP-OLD
+thr_5d11437c4f,Failure to attain incentives or optimize value-based reimbursement,DTOP-OLD
+thr_e6b4bc79d5,Litigation from breach victims due to lack of reasonable and appropriate safeguards,DTOP-OLD
+thr_9758bd6f00,Unauthorized use of assets or changes to data within information systems,DTOP-OLD
+thr_3dab9dc987,Unauthorized installation of software or applications,DTOP-OLD
+thr_ed35e7990e,"Loss, theft, or disruption of assets",DTOP-OLD
+thr_014da02ae4,Improper operation/configuration of assets,DTOP-OLD
+thr_73511a85ad,Non-remediated weaknesses,DTOP-OLD
+thr_a224af276c,Prolonged duration of addressing non-remediated weaknesses,DTOP-OLD
+thr_643125ef24,Insider carelessness exposing ePHI or causing disruption to information systems and business processes,DTOP-OLD
+thr_e4f3d5b1b2,Fines/penalties from mandated regulatory requirements,DTOP-OLD
+thr_0955220687,Unstructured guidance for daily tasks and duties within workforce,DTOP-OLD
+thr_5980683982,Unauthorized access to ePHI or sensitive information permitted,DTOP-OLD
+thr_e1f7c855dd,Disruption of information system function,DTOP-OLD
+thr_dd0464d1e6,ePHI accessed by unauthorized entities,DTOP-OLD
+thr_00263ff016,Insider carelessness causing disruption,DTOP-OLD
+thr_2542c1d8d4,Insider carelessness exposing ePHI,DTOP-OLD
+thr_4411b31a10,Unclear security coordination across workforce,DTOP-OLD
+thr_dceceb0046,Unstructured guidance for daily tasks and duties,DTOP-OLD
+thr_14a0f53881,Fines/penalties from regulatory enforcement,DTOP-OLD
+thr_06625591cc,Inability of workforce to perform proper security and privacy-related tasks or access procedural documents,DTOP-OLD
+thr_f434fe5f5b,Unstructured workforce coordination of risk management procedures,DTOP-OLD
+thr_886172f427,Unqualified workforce or untrained personnel on security standards and procedures,DTOP-OLD
+thr_652318d8ff,Security policies not followed when not enforced,DTOP-OLD
+thr_000adfe5a9,"Misuse of audit tools, information systems, and/or hardware",DTOP-OLD
+thr_00909e5917,Increased chance or spread of unknown threats,DTOP-OLD
+thr_609628aff0,"Unauthorized information disclosure (ePHI, proprietary, intellectual, or confidential)",DTOP-OLD
+thr_b52d3c1a1d,Disruption of business processes or information system function,DTOP-OLD
+thr_5c34490daf,Sensitive data exposed or tampered with by insider,DTOP-OLD
+thr_3cc1bb2e10,Misuse of information systems and/or hardware,DTOP-OLD
+thr_97f6a8d79f,Falsification or destruction of records and/or data corruption,DTOP-OLD
+thr_c661d81313,Unauthorized access granted to outsiders,DTOP-OLD
+thr_9ffc00b88c,Social engineering attack or email phishing attack,DTOP-OLD
+thr_8594b55b75,Information system or facility access granted to unauthorized personnel,DTOP-OLD
+thr_578d16ad1f,Installation of unauthorized software or applications,DTOP-OLD
+thr_086fa0c650,Insider carelessness causing disruption to computer systems,DTOP-OLD
+thr_14b5af2a3f,Insider carelessness exposing ePHI to unauthorized persons or entities,DTOP-OLD
+thr_65f2ccd09d,Lack of interest for protecting sensitive information,DTOP-OLD
+thr_83d400a669,"Information disclosure, loss, or theft (ePHI, proprietary, intellectual, or confidential)",DTOP-OLD
+thr_461a893df7,Disruption of information system function or adversarial access to unauthorized network segments,DTOP-OLD
+thr_65019b9b33,Malware installation on information systems or devices,DTOP-OLD
+thr_9b761daaad,Unauthorized modification of sensitive information,DTOP-OLD
+thr_c019419651,Information system access granted to unauthorized persons or entities,DTOP-OLD
+thr_448639f4bf,Improper or overly broad assignment of access permissions for users,DTOP-OLD
+thr_d10a24a0ca,Procedures lack sufficient detail for determining user access,DTOP-OLD
+thr_e1ef6299bf,"Information disclosure or theft (ePHI, proprietary, intellectual, or confidential)",DTOP-OLD
+thr_4bd5ff6330,Unknown source of a security/privacy related incident,DTOP-OLD
+thr_4478474277,Information system access granted to unauthorized personnel,DTOP-OLD
+thr_8e4ee3e1aa,Unauthorized access to or modification of ePHI/sensitive information,DTOP-OLD
+thr_7bf077bcaf,Unauthorized access to ePHI/sensitive information,DTOP-OLD
+thr_328b52d1f5,Unauthorized modification of critical network systems and data,DTOP-OLD
+thr_465f7b88c4,Users violate security rules on information systems,DTOP-OLD
+thr_2a1a9bb74a,Unknown or unidentified security incidents or breaches occur,DTOP-OLD
+thr_2b0cf87175,Unauthorized user impersonating an authorized user,DTOP-OLD
+thr_4f5dd81523,Disclosure of passwords or login information,DTOP-OLD
+thr_8e7e9005de,Fines from regulatory enforcement (due to lack of encryption safe harbor),DTOP-OLD
+thr_a930493b04,Accidental modification to ePHI/sensitive information,DTOP-OLD
+thr_37531fdbf8,Denial of service (DoS) to critical systems,DTOP-OLD
+thr_4f7f39ec80,Disclosure of passwords and/or login information,DTOP-OLD
+thr_73dd166be6,Exploitation of unpatched systems and software,DTOP-OLD
+thr_c46640f73a,Unauthorized access to information systems or devices,DTOP-OLD
+thr_4928f9f937,Disclosure of passwords and or login information,DTOP-OLD
+thr_6127056b33,Accidental modification to ePHI,DTOP-OLD
+thr_a36aab569b,Adversary access to unauthorized network segments,DTOP-OLD
+thr_be6fcecae8,Damage to public reputation via misuse of patient chart data,DTOP-OLD
+thr_8edfc7606f,Inaccurate information given to patients or providers,DTOP-OLD
+thr_6f20796cec,Unauthorized modification to ePHI,DTOP-OLD
+thr_21f3104161,Unauthorized access to facility occurs undetected,DTOP-OLD
+thr_7838658173,Workforce and visitors access critical or sensitive business areas without authorization,DTOP-OLD
+thr_bf98438ad6,Increased response time to respond to facility security incidents,DTOP-OLD
+thr_6782d08605,Inconsistency in granting access to facilities,DTOP-OLD
+thr_cb82f71608,Access allowed by unauthorized personnel,DTOP-OLD
+thr_15ad7f99de,Adversary access to unauthorized network segments (via wireless penetration or USB/removable media),DTOP-OLD
+thr_fcb0333e76,Insider tampering of sensitive network equipment,DTOP-OLD
+thr_d0132b2a39,Adversarial sniffing/wiretapping/eavesdropping on network traffic,DTOP-OLD
+thr_7fb174926a,Unconfirmed identity of connected physical devices/equipment,DTOP-OLD
+thr_cb556789cb,Unauthorized devices gaining access to the network,DTOP-OLD
+thr_3b1c28d79a,Unconfirmed identity of connected devices/equipment,DTOP-OLD
+thr_3e86951797,Exploitation of unsecured computer systems,DTOP-OLD
+thr_a33c3f6a3b,Adversary leverages third-party access to gain access to facility and devices,DTOP-OLD
+thr_7e5e6b8513,Adversary leverages third-party permissions or credentials to access data or assets,DTOP-OLD
+thr_834c3bddd3,Uncontrolled access used to disrupt or steal equipment or data,DTOP-OLD
+thr_4acfa0cf2d,Inability to confirm identity of visitor throughout the facility,DTOP-OLD
+thr_677b68301a,Inability to monitor physical location of business associates and vendors within the facility,DTOP-OLD
+thr_541bdbe5e4,Tampering of sensitive network equipment,DTOP-OLD
+thr_414a1bac0c,Unknown disposition of unused devices and data,DTOP-OLD
+thr_4416006326,Unauthorized modification of user accounts and/or permissions,DTOP-OLD
+thr_b9c669eb81,Appropriate security settings may not be applied to all devices/equipment,DTOP-OLD
+thr_331c6820a7,Unauthorized connected devices/equipment on the network,DTOP-OLD
+thr_060716334c,"Workstations or devices tampered with, lost, or destroyed",DTOP-OLD
+thr_d9d11f75e2,Access granted to and maintained by unauthorized persons,DTOP-OLD
+thr_23ebfae78d,Adversary gaining access to unauthorized areas of the facility,DTOP-OLD
+thr_8cecb30945,Adversary retains presence within or access to information systems,DTOP-OLD
+thr_f80b1942c7,ePHI shared with business associates/vendors improperly,DTOP-OLD
+thr_e585990430,Exploiting unpatched systems and software,DTOP-OLD
+thr_c8f4e83c5f,Unauthorized access to ePHI,DTOP-OLD
+thr_39f3cd47ce,Unauthorized access to sensitive information,DTOP-OLD
+thr_29e7bf494b,Access to unauthorized segments of the network,DTOP-OLD
+thr_bcc3b44c3d,Carelessness causing disruption to computer systems,DTOP-OLD
+thr_e9ee94225b,Carelessness exposing ePHI,DTOP-OLD
+thr_f6fd39b62d,Inability to hold third parties accountable to securing your ePHI,DTOP-OLD
+thr_7c67e24dd7,Breach goes unreported due to lack of established communication requirements with third-party,DTOP-OLD
+thr_e086196f08,Provide sensitive information and ePHI without authorization,DTOP-OLD
+thr_4178f7a69e,Loss of support services or contracts,DTOP-OLD
+thr_404fcf57db,Damage to public reputation or litigation,DTOP-OLD
+thr_e3bd07797d,Adversarial access to unauthorized network segments,DTOP-OLD
+thr_4f7a045bec,Corrective enforcement outcomes from regulatory agencies,DTOP-OLD
+thr_59c6e8d519,Social engineering or hacking attack affecting third-party impacts your practice's data,DTOP-OLD
+thr_00815c731d,Disruption of access to data due to inadequate contractor security controls,DTOP-OLD
+thr_9ff1826025,Exploitation of unsecured third-party systems and software,DTOP-OLD
+thr_20af66a637,Contract termination due to expiration,DTOP-OLD
+thr_8487eee1d3,Disruption of access to data due to contract dispute or lapse,DTOP-OLD
+thr_05c21a73c4,Inability to determine the criticality of access granted to third parties,DTOP-OLD
+thr_4708a140c9,"Fines, litigation, and financial penalties from non-compliance",DTOP-OLD
+thr_6a824dda57,"Failure to define purpose, scope, roles/responsibilities, and/or management commitment",DTOP-OLD
+thr_8cead21f89,Inability to demonstrate recovery objectives and restoration priorities,DTOP-OLD
+thr_677069e969,Litigation due to not meeting minimum security requirements,DTOP-OLD
+thr_eec1593b30,Unguided procedures during downtime or unexpected event,DTOP-OLD
+thr_4e40f11c71,Out-of-date documentation not reflecting the most recent expected procedures,DTOP-OLD
+thr_00d3cb90bb,Inconsistent or inadequate contingency response due to uncertainty,DTOP-OLD
+thr_06b00b0270,Damage to public reputation due to information breach/loss,DTOP-OLD
+thr_d92e906f21,Physical damage to facility,DTOP-OLD
+thr_d94d07e6ac,Financial loss from increased downtime of information systems,DTOP-OLD
+thr_df4c947ba5,Inability to recovery from system failure,DTOP-OLD
+thr_296ffc4a49,Increased recovery time during unexpected downtime of information systems,DTOP-OLD
+thr_4b0d4bce56,"Injury or death of personnel (employee, patient, guest)",DTOP-OLD
+thr_f03a33d700,Loss of productivity,DTOP-OLD
+thr_d475dc660c,Overheating of network devices due to increased ambient temperature,DTOP-OLD
+thr_e608e66020,Physical access granted to unauthorized persons or entities,DTOP-OLD
+thr_d751506149,Power outage affecting the availability of critical security and information systems,DTOP-OLD
+thr_95d8c674ae,Inability to recover from system failure,DTOP-OLD
+thr_5460f22f41,Adversaries maintain exploitation capability due to security incidents being undetected or undocumented,DTOP-OLD
+thr_2213f9b48d,Failure to adopt remediation plan based on identified security incidents,DTOP-OLD
+thr_eeb6414ace,"Failure to define purpose, scope, roles, responsibilities, and or management commitment pertaining to the tracking of security incidents",DTOP-OLD
+thr_83171e143a,Damage to public reputation,DTOP-OLD
+thr_e9545c0f38,Lost revenue from canceled appointments,DTOP-OLD

@@ -1,0 +1,8 @@
+section_id,label,title,question_count,vulnerability_count,source_document
+sra_s1,Section 1,Section 1 - SRA Basics,10,5,DTOP-OLD
+sra_s2,Section 2,Section 2 - Security Policies,8,4,DTOP-OLD
+sra_s3,Section 3,Section 3 - Security & Workforce,19,4,DTOP-OLD
+sra_s4,Section 4,Section 4 - Security & Data,30,10,DTOP-OLD
+sra_s5,Section 5,Section 5 - Security and the Practice,23,7,DTOP-OLD
+sra_s6,Section 6,Section 6 - Security and Business Associates,15,4,DTOP-OLD
+sra_s7,Section 7,Section 7 - Contingency Planning,20,6,DTOP-OLD

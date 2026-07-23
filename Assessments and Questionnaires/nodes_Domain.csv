@@ -1,0 +1,15 @@
+domain_id,name,domain_kind,statement_count,source_document
+dom_cri_iam,IAM,cri_dtom,10,DTOP-OLD
+dom_cri_tpr,TPR,cri_dtom,4,DTOP-OLD
+dom_cri_cps,CPS,cri_dtom,20,DTOP-OLD
+dom_cri_aps,APS,cri_dtom,10,DTOP-OLD
+dom_cri_ins,INS,cri_dtom,10,DTOP-OLD
+dom_cri_cdr,CDR,cri_dtom,11,DTOP-OLD
+dom_cri_pps,PPS,cri_dtom,14,DTOP-OLD
+dom_cri_dpp,DPP,cri_dtom,6,DTOP-OLD
+dom_mat_idp,IdP,maturity,76,DTOP-OLD
+dom_mat_xdr,XDR,maturity,144,DTOP-OLD
+dom_mat_siem,SIEM,maturity,41,DTOP-OLD
+dom_mat_hris,HRIS,maturity,174,DTOP-OLD
+dom_mat_csp,CSP,maturity,87,DTOP-OLD
+dom_mat_dgp,DGP,maturity,166,DTOP-OLD

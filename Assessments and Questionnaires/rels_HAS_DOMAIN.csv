@@ -1,0 +1,15 @@
+source_id,target_id,rel_type,source_document
+asmt_expert,dom_cri_iam,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_tpr,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_cps,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_aps,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_ins,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_cdr,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_pps,HAS_DOMAIN,DTOP-OLD
+asmt_expert,dom_cri_dpp,HAS_DOMAIN,DTOP-OLD
+asmt_maturity,dom_mat_idp,HAS_DOMAIN,DTOP-OLD
+asmt_maturity,dom_mat_xdr,HAS_DOMAIN,DTOP-OLD
+asmt_maturity,dom_mat_siem,HAS_DOMAIN,DTOP-OLD
+asmt_maturity,dom_mat_hris,HAS_DOMAIN,DTOP-OLD
+asmt_maturity,dom_mat_csp,HAS_DOMAIN,DTOP-OLD
+asmt_maturity,dom_mat_dgp,HAS_DOMAIN,DTOP-OLD

@@ -1,0 +1,3 @@
+source_id,target_id,rel_type,source_document
+src_srafulldata,src_sraquestionsdata,SUPERSEDES,DTOP-OLD
+src_srafulldata,src_sravulnerabilitiesdata,SUPERSEDES,DTOP-OLD

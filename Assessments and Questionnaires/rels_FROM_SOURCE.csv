@@ -1,0 +1,12 @@
+source_id,target_id,rel_type,source_document
+sup_sra_s3_q12,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s3_q16,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s3_q17,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s4_q28,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s5_q6,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s5_q11,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s5_q18,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s7_q1,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s7_q3,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s7_q4,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD
+sup_sra_s7_q9,src_sraquestionsdata,FROM_SOURCE,DTOP-OLD

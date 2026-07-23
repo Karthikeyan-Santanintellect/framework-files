@@ -1,0 +1,17 @@
+datasource_id,path,format,note,source_document
+src_srafulldata,client/src/data/sraFullData.json,json,Canonical HIPAA SRA question and vulnerability bank,client/src/data/sraFullData.json
+src_sraquestionsdata,client/src/data/sraQuestionsData.json,json,"Older SRA question set (124q, no education/reference); superseded",client/src/data/sraQuestionsData.json
+src_sravulnerabilitiesdata,client/src/data/sraVulnerabilitiesData.json,json,3-group vulnerability stub; superseded by sraFullData,client/src/data/sraVulnerabilitiesData.json
+src_cri_statements,client/src/data/cri_statements.json,json,"CRI Profile v2.1 expert questionnaire, 85 statements",client/src/data/cri_statements.json
+src_md_idp,server/services/agentsV5/llmAssessment/statments/IdP.md,md,Canonical IdP maturity statement bank,server/services/agentsV5/llmAssessment/statments/IdP.md
+src_csv_idp,server/services/agentsV5/catalog/IdP.csv,csv,CSV copy of the IdP bank (may diverge from the .md),server/services/agentsV5/catalog/IdP.csv
+src_md_xdr,server/services/agentsV5/llmAssessment/statments/XDR.md,md,Canonical XDR maturity statement bank,server/services/agentsV5/llmAssessment/statments/XDR.md
+src_csv_xdr,server/services/agentsV5/catalog/XDR.csv,csv,CSV copy of the XDR bank (may diverge from the .md),server/services/agentsV5/catalog/XDR.csv
+src_md_siem,server/services/agentsV5/llmAssessment/statments/SIEM.md,md,Canonical SIEM maturity statement bank,server/services/agentsV5/llmAssessment/statments/SIEM.md
+src_csv_siem,server/services/agentsV5/catalog/SIEM.csv,csv,CSV copy of the SIEM bank (may diverge from the .md),server/services/agentsV5/catalog/SIEM.csv
+src_md_hris,server/services/agentsV5/llmAssessment/statments/HRIS.md,md,Canonical HRIS maturity statement bank,server/services/agentsV5/llmAssessment/statments/HRIS.md
+src_csv_hris,server/services/agentsV5/catalog/HRIS.csv,csv,CSV copy of the HRIS bank (may diverge from the .md),server/services/agentsV5/catalog/HRIS.csv
+src_md_csp,server/services/agentsV5/llmAssessment/statments/CSP.md,md,Canonical CSP maturity statement bank,server/services/agentsV5/llmAssessment/statments/CSP.md
+src_csv_csp,server/services/agentsV5/catalog/CS.csv,csv,CSV copy of the CSP bank (may diverge from the .md),server/services/agentsV5/catalog/CS.csv
+src_md_dgp,server/services/agentsV5/llmAssessment/statments/DGP.md,md,Canonical DGP maturity statement bank,server/services/agentsV5/llmAssessment/statments/DGP.md
+src_csv_dgp,server/services/agentsV5/catalog/DGP.csv,csv,CSV copy of the DGP bank (may diverge from the .md),server/services/agentsV5/catalog/DGP.csv

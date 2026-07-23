@@ -1,0 +1,111 @@
+subcategory_id,path,source_document
+sub_dab22fa42a,"PROTECT / Identity Management, Authentication, and Access Control / Access Authorizations",DTOP-OLD
+sub_831f74b0aa,PROTECT / Platform Security / Configuration Management,DTOP-OLD
+sub_8dd02410a5,PROTECT / Platform Security / Software Maintenance & Replacement,DTOP-OLD
+sub_c8339ce76b,PROTECT / Platform Security / Secure Systems Development Practices,DTOP-OLD
+sub_e8f6721576,PROTECT / Technology Infrastructure Resilience / Logical Access Protections,DTOP-OLD
+sub_83b5330459,PROTECT / Technology Infrastructure Resilience / Resilience Measures,DTOP-OLD
+sub_55846b2287,PROTECT / Technology Infrastructure Resilience / Capacity Management,DTOP-OLD
+sub_7fd7c5f485,RECOVER / Incident Recovery Plan Execution / Recovery Action Performance,DTOP-OLD
+sub_130f9035fa,"PROTECT / Identity Management, Authentication, and Access Control / Physical Access",DTOP-OLD
+sub_4ecd718c07,PROTECT / Data Security / Data Backup,DTOP-OLD
+sub_a026c99689,RECOVER / Incident Recovery Plan Execution / Asset Integrity Restoration,DTOP-OLD
+sub_33667b16c7,"PROTECT / Identity Management, Authentication, and Access Control / Identity & Credential Management",DTOP-OLD
+sub_e84155d045,"PROTECT / Identity Management, Authentication, and Access Control / Identity Binding to Credentials",DTOP-OLD
+sub_03f0aa18a4,"PROTECT / Identity Management, Authentication, and Access Control / Authentication",DTOP-OLD
+sub_aebe267edd,"PROTECT / Identity Management, Authentication, and Access Control / Identity Assertions",DTOP-OLD
+sub_35c6f1bb22,PROTECT / Data Security / Protection of Data at Rest,DTOP-OLD
+sub_a26ceebacd,PROTECT / Data Security / Protection of Data in Transit,DTOP-OLD
+sub_515f6d9faf,PROTECT / Data Security / Protection of Data in Use,DTOP-OLD
+sub_14a9fa097d,PROTECT / Platform Security / Hardware Maintenance,DTOP-OLD
+sub_c736e5c670,RECOVER / Incident Recovery Communication / Recovery Activity Communication,DTOP-OLD
+sub_5375281f17,PROTECT / Awareness and Training / User Awareness & Training,DTOP-OLD
+sub_b45fe795c7,PROTECT / Technology Infrastructure Resilience / Environmental Threat Protections,DTOP-OLD
+sub_666ea05c8c,RECOVER / Incident Recovery Plan Execution / Recovery Plan Execution,DTOP-OLD
+sub_d4715a473a,RECOVER / Incident Recovery Plan Execution / Backup & Restoration Asset Integrity,DTOP-OLD
+sub_8b8e411bf4,RECOVER / Incident Recovery Plan Execution / Post-Incident Operational Norms,DTOP-OLD
+sub_058601ecc5,PROTECT / Platform Security / Log Record Generation,DTOP-OLD
+sub_5b9cb656a5,PROTECT / Awareness and Training / Specialized Role Awareness & Training,DTOP-OLD
+sub_402553ffdd,RECOVER / Incident Recovery Communication / Public Information Sharing,DTOP-OLD
+sub_166ea82a42,PROTECT / Platform Security / Unauthorized Software Installation & Execution,DTOP-OLD
+sub_6f2b7b0b7d,RECOVER / Incident Recovery Plan Execution / End-of-Incident Determination,DTOP-OLD
+sub_d25048e4a9,"PROTECT / Platform Security / Technology Operations, Service, & Support",DTOP-OLD
+sub_836dcca166,IDENTIFY / Risk Assessment / Risk Response Determination,DTOP-OLD
+sub_1c1763a191,IDENTIFY / Risk Assessment / Change & Exception Management,DTOP-OLD
+sub_ea0688ee5b,IDENTIFY / Improvement / Plans Affecting Operatons,DTOP-OLD
+sub_522171d0e9,IDENTIFY / Asset Management / Hardware Inventory,DTOP-OLD
+sub_0e57bf11a9,"IDENTIFY / Asset Management / Software, Services, & Systems Inventory",DTOP-OLD
+sub_3cd77600b8,IDENTIFY / Asset Management / Supplier Services Inventory,DTOP-OLD
+sub_daa6162440,IDENTIFY / Asset Management / Asset Protection Prioritization,DTOP-OLD
+sub_150973e769,IDENTIFY / Asset Management / Network Communications & Data Flows,DTOP-OLD
+sub_663f847c0f,IDENTIFY / Asset Management / Data & Metadata Inventory,DTOP-OLD
+sub_a0f434f8c1,IDENTIFY / Asset Management / Asset Life Cycle Management,DTOP-OLD
+sub_8e50432f0b,IDENTIFY / Risk Assessment / Asset Vulnerability Identification,DTOP-OLD
+sub_a4963395ab,IDENTIFY / Risk Assessment / Impact & Likelihood Analysis,DTOP-OLD
+sub_09ea68b1f0,IDENTIFY / Risk Assessment / Risk Exposure Determination & Prioritization,DTOP-OLD
+sub_de777d8c35,IDENTIFY / Improvement / Tests & Exercises,DTOP-OLD
+sub_fe694ac1e3,IDENTIFY / Risk Assessment / Information Sharing Forums,DTOP-OLD
+sub_d44f86dac9,IDENTIFY / Improvement / Plans Affecting Operations,DTOP-OLD
+sub_dc6244c9ba,IDENTIFY / Improvement / Continuous Improvements Evaluation,DTOP-OLD
+sub_4bef7787cf,IDENTIFY / Improvement / Improvements from Lessons Learned,DTOP-OLD
+sub_7812869657,IDENTIFY / Risk Assessment / Vulnerability Disclosure Response,DTOP-OLD
+sub_518536a195,IDENTIFY / Risk Assessment / Threat Identification,DTOP-OLD
+sub_79f5227d88,DETECT / Continuous Monitoring / Service Provider Monitoring,DTOP-OLD
+sub_c4eb43c9d5,"DETECT / Continuous Monitoring / Hardware, Software, & Data Monitoring",DTOP-OLD
+sub_d695c9d08f,DETECT / Adverse Event Analysis / Event Information Correlation,DTOP-OLD
+sub_d30a268ef9,DETECT / Continuous Monitoring / Personnel Activity Monitoring,DTOP-OLD
+sub_2f3c919a0f,DETECT / Continuous Monitoring / Network Monitoring,DTOP-OLD
+sub_dcefb4131d,DETECT / Continuous Monitoring / Physical Environment Monitoring,DTOP-OLD
+sub_ff70d30006,DETECT / Adverse Event Analysis / Potentially Adverse Event Analysis,DTOP-OLD
+sub_720b76aadc,RESPOND / Incident Management / Incident Categorization & Prioritization,DTOP-OLD
+sub_f90ec92c11,RESPOND / Incident Response Reporting and Communication / Stakeholder Incident Information Sharing,DTOP-OLD
+sub_54040abaee,RESPOND / Incident Mitigation / Incident Eradication,DTOP-OLD
+sub_78fe6bf457,DETECT / Adverse Event Analysis / Impact & Scope Determination,DTOP-OLD
+sub_b76b401dd6,DETECT / Adverse Event Analysis / Contextual Analysis,DTOP-OLD
+sub_fb0f305875,RESPOND / Incident Management / Response Plan Execution,DTOP-OLD
+sub_91a0817574,RESPOND / Incident Analysis / Incident Analysis & Root Cause Determination,DTOP-OLD
+sub_97744543de,RESPOND / Incident Analysis / Investigation Documentation,DTOP-OLD
+sub_2f2c96a220,RESPOND / Incident Analysis / Incident Data Collection & Preservation,DTOP-OLD
+sub_048c167e14,DETECT / Adverse Event Analysis / Event Information Sharing,DTOP-OLD
+sub_393bfc5f8d,DETECT / Adverse Event Analysis / Incident Declaration,DTOP-OLD
+sub_0e5c67e000,RESPOND / Incident Management / Incident Triage & Validation,DTOP-OLD
+sub_f7358164aa,RESPOND / Incident Management / Incident Escalation,DTOP-OLD
+sub_b47445f942,RESPOND / Incident Management / Recovery Initiation,DTOP-OLD
+sub_3a390c8b5c,RESPOND / Incident Analysis / Incident Magnitude Determination,DTOP-OLD
+sub_1b3985c020,RESPOND / Incident Response Reporting and Communication / Stakeholder Incident Notification,DTOP-OLD
+sub_19b40dcdf8,RESPOND / Incident Mitigation / Incident Containment,DTOP-OLD
+sub_e974df7fcd,"GOVERN / Roles, Responsibilities, and Authorities / Human Resource Practices",DTOP-OLD
+sub_124d504d9c,GOVERN / Organizational Context / Organizational Mission,DTOP-OLD
+sub_eeb7db8d6b,GOVERN / Organizational Context / Stakeholder Service Expectations,DTOP-OLD
+sub_e4951aa7fa,GOVERN / Organizational Context / Organizational Service Dependencies,DTOP-OLD
+sub_5c8860694e,GOVERN / Risk Management Strategy  / Technology Assimilation & Implementations,DTOP-OLD
+sub_806cdbee90,GOVERN / Risk Management Strategy  / Business Continuity & Resilience Risk Management,DTOP-OLD
+sub_4ea306fb5b,"GOVERN / Roles, Responsibilities, and Authorities / Risk Management Roles & Responsibilities",DTOP-OLD
+sub_267748d877,GOVERN / Independent Audit Function / Independent Audit Compliance Assessment,DTOP-OLD
+sub_07088fece7,GOVERN / Independent Audit Function / Independent Audit Procedures,DTOP-OLD
+sub_04969277fb,GOVERN / Independent Audit Function / Independent Audit Reporting,DTOP-OLD
+sub_e9cbbdc0e1,"GOVERN / Organizational Context / Legal, Regulatory, & Contractual Requirements",DTOP-OLD
+sub_1bbf8e7526,GOVERN / Risk Management Strategy / Risk Management Objectives Agreement,DTOP-OLD
+sub_99b7def2fb,GOVERN / Risk Management Strategy / Risk Appetite & Risk Tolerance Statements,DTOP-OLD
+sub_17e5c7340a,GOVERN / Risk Management Strategy / Risk Response Strategic Direction,DTOP-OLD
+sub_00f82e92f6,"GOVERN / Roles, Responsibilities, and Authorities / Organizational Leadership Responsibility",DTOP-OLD
+sub_603dab7350,"GOVERN / Policies, Processes, and Procedures / Establishment of Policies & Procedures",DTOP-OLD
+sub_7728f297b4,GOVERN / Oversight / Risk Management Strategy Outcomes Review,DTOP-OLD
+sub_e198d54900,GOVERN / Oversight / Risk Management Performance Measurement,DTOP-OLD
+sub_a07818d703,GOVERN / Independent Risk Management Function / Independent Risk Management Function,DTOP-OLD
+sub_279d59976e,GOVERN / Independent Risk Management Function / Independent Risk Management Reporting,DTOP-OLD
+sub_adff4816ea,GOVERN / Organizational Context / Stakeholder Risk Management Expectations,DTOP-OLD
+sub_8cd58b6604,GOVERN / Supply Chain Risk Management / Supply Chain Risk Management Program,DTOP-OLD
+sub_82be534ddd,GOVERN / Supply Chain Risk Management / Third Party Incident Management Integration,DTOP-OLD
+sub_867e916580,"GOVERN / Roles, Responsibilities, and Authorities / Resource Adequacy",DTOP-OLD
+sub_d92af53917,GOVERN / Risk Management Strategy / Lines of Communication,DTOP-OLD
+sub_50d657c596,GOVERN / Supply Chain Risk Management / Third Party Roles & Responsibilities,DTOP-OLD
+sub_40b41a2499,GOVERN / Supply Chain Risk Management / Supply Chain Security Practice Integration,DTOP-OLD
+sub_875424eb59,GOVERN / Supply Chain Risk Management / Supplier Identification & Prioritization,DTOP-OLD
+sub_b31e118be9,GOVERN / Risk Management Strategy / Strategic Opportunities,DTOP-OLD
+sub_f5fd26e0bf,GOVERN / Risk Management Strategy / Enterprise Risk Integration,DTOP-OLD
+sub_b646375156,GOVERN / Risk Management Strategy / Standardized Risk Management Method,DTOP-OLD
+sub_3cff63c563,GOVERN / Oversight / Risk Management Strategy Review & Adjustment,DTOP-OLD
+sub_cd9c669381,GOVERN / Independent Risk Management Function / Independent Risk Management Evaluation,DTOP-OLD
+sub_32ddb1de58,GOVERN / Supply Chain Risk Management / Supply Chain Risk Management Integration,DTOP-OLD
+sub_62824a4eb0,"GOVERN / Policies, Processes, and Procedures / Policy & Procedure Review & Update",DTOP-OLD

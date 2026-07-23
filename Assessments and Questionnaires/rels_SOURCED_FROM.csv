@@ -1,0 +1,15 @@
+source_id,target_id,rel_type,source_document
+asmt_sra,src_srafulldata,SOURCED_FROM,DTOP-OLD
+asmt_expert,src_cri_statements,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_md_idp,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_csv_idp,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_md_xdr,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_csv_xdr,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_md_siem,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_csv_siem,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_md_hris,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_csv_hris,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_md_csp,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_csv_csp,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_md_dgp,SOURCED_FROM,DTOP-OLD
+asmt_maturity,src_csv_dgp,SOURCED_FROM,DTOP-OLD
