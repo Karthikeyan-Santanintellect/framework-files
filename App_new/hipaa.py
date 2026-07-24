@@ -151,7 +151,7 @@ MERGE (s)-[:STANDARD_INCLUDES_SPECIFICATION]->(spec);
 rules_to_requirements = """
 MATCH (r:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026'})
 MATCH (q:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026'})
-WHERE (r.rule_id = 'R01' AND (q.rule_type IN ['PrivacyProvision', 'IndividualRight'] OR q.rule_id = 'PD00'))
+WHERE (r.rule_id = 'R01' AND q.rule_id <> 'STATE01' AND (q.rule_type IN ['PrivacyProvision', 'IndividualRight'] OR q.rule_id = 'PD00'))
    OR (r.rule_id = 'R02' AND q.rule_id STARTS WITH 'SECGEN')
    OR (r.rule_id = 'R03' AND q.rule_id STARTS WITH 'BN')
    OR (r.rule_id = 'R04' AND q.rule_id STARTS WITH 'ENFRULE')
@@ -166,12 +166,46 @@ WHERE c.rule_id <> 'PD00'
 MERGE (p)-[:RULE_HAS_REQUIREMENT]->(c);
 """
 
-# The framework root node holds the four top-level Rules
+# The framework root node holds the eight HIPAA Administrative Simplification Rules:
+# Privacy, Security, Breach Notification and Enforcement (45 CFR Parts 160/164),
+# plus the Transactions, Code Sets, Employer Identifier and National Provider
+# Identifier rules of 45 CFR Part 162.
 framework_root_to_rules = """
 MATCH (f:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: 'FRAME-00'})
 MATCH (r:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026'})
-WHERE r.rule_id IN ['R01', 'R02', 'R03', 'R04']
+WHERE r.rule_id IN ['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08']
 MERGE (f)-[:RULE_HAS_REQUIREMENT]->(r);
+"""
+
+# The Part 162 rules to the standards they adopt: the Transactions and Code Sets
+# Rule (R05) covers the ten transaction standards and the two code-set standards;
+# the Unique Identifiers Rule (R06) covers NPI, EIN and HPID.
+part162_rule_standards = """
+UNWIND [
+    ['R05', ['TXN-K','TXN-L','TXN-M','TXN-N','TXN-O','TXN-P','TXN-Q','TXN-R','TXN-S','TXN-T','CS-MED','CS-ADMIN']],
+    ['R06', ['NPI-01','EIN-01','HPID-01']]
+] AS pair
+MATCH (rule:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: pair[0]})
+UNWIND pair[1] AS sid
+MATCH (std:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: sid})
+MERGE (rule)-[:RULE_HAS_STANDARD]->(std);
+"""
+
+# The Omnibus Rule (2013, R07) modified the Privacy, Security, Breach Notification
+# and Enforcement Rules rather than adding a separate body of requirements.
+omnibus_amends = """
+MATCH (o:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: 'R07'})
+MATCH (r:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026'})
+WHERE r.rule_id IN ['R01', 'R02', 'R03', 'R04']
+MERGE (o)-[:RULE_AMENDS]->(r);
+"""
+
+# The Preemption Rule (R08, 45 CFR 160 Subpart B) holds the state-law-preemption
+# provision (previously attached to the Privacy Rule).
+preemption_rule = """
+MATCH (p:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: 'R08'})
+MATCH (st:HIPAARule {industry_standard_regulation_id: 'HIPAA 2026', rule_id: 'STATE01'})
+MERGE (p)-[:RULE_HAS_REQUIREMENT]->(st);
 """
 
 # Covered Entity to Business Associate
@@ -525,6 +559,15 @@ client.query(framework_root_to_rules)
 time.sleep(2)
 
 client.query(rules_to_standards)
+time.sleep(2)
+
+client.query(part162_rule_standards)
+time.sleep(2)
+
+client.query(omnibus_amends)
+time.sleep(2)
+
+client.query(preemption_rule)
 time.sleep(2)
 
 client.query(standards_to_specifications)
