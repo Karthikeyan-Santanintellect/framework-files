@@ -101,17 +101,29 @@ MATCH (cat:ControlCategory {IS_frameworks_standard_id: 'ISO27001_2022'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_CONTROL_CATEGORY]->(cat);
 """
 
-# UPDATED: Scoped MATCH to framework_id. Note the spelling fix for 'control'.
-control_categories_clauses = """
-MATCH (cat:ControlCategory {IS_frameworks_standard_id: 'ISO27001_2022'})
-MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
-MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CLAUSES]->(c);
+# Clear this framework's relationships before rebuilding so a re-run replaces the
+# edge set instead of leaving the old (cartesian) edges in place.
+clear_relationships = """
+MATCH (a {IS_frameworks_standard_id: 'ISO27001_2022'})-[r]-(b {IS_frameworks_standard_id: 'ISO27001_2022'})
+DELETE r;
 """
 
-# UPDATED: Scoped MATCH to framework_id.
+# Clause hierarchy: a sub-clause (e.g. 4.1) carries category_id = its parent
+# clause number (4). Previously every ControlCategory was joined to every Clause
+# (a cartesian product across two unrelated numbering schemes).
+clause_hierarchy = """
+MATCH (parent:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
+MATCH (child:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
+WHERE child.category_id = parent.clause_id AND child.clause_id <> parent.clause_id
+MERGE (parent)-[:CLAUSE_HAS_SUBCLAUSE]->(child);
+"""
+
+# Each requirement carries the clause_id it belongs to; join on it rather than
+# linking every clause to every requirement.
 clause_requirements = """
 MATCH (c:Clause {IS_frameworks_standard_id: 'ISO27001_2022'})
 MATCH (r:Requirement {IS_frameworks_standard_id: 'ISO27001_2022'})
+WHERE r.clause_id = c.clause_id
 MERGE (c)-[:CLAUSE_REQUIRES_REQUIREMENT]->(r);
 """
 # UPDATED: Scoped MATCH to framework_id. Links Annex A controls to their Control Category.
@@ -171,6 +183,9 @@ client.query(annex_a_controls.replace('$file_path', "https://github.com/Karthike
 time.sleep(2)
 
 
+client.query(clear_relationships)
+time.sleep(2)
+
 client.query(framework_standard_clauses)
 time.sleep(2)
 
@@ -178,7 +193,7 @@ time.sleep(2)
 client.query(framework_standard_control_category)
 time.sleep(2)
 
-client.query(control_categories_clauses)
+client.query(clause_hierarchy)
 time.sleep(2)
 
 client.query(clause_requirements)
@@ -193,12 +208,9 @@ time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+res = client.query("""MATCH (n {IS_frameworks_standard_id: 'ISO27001_2022'})
+OPTIONAL MATCH (n)-[r]-(m {IS_frameworks_standard_id: 'ISO27001_2022'})
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -206,7 +218,7 @@ RETURN {
     labels: labels(n),
     mainLabel: head(labels(n))
   }],
-  rels: [r IN uniqueRels | r {
+  rels: [r IN uniqueRels WHERE r IS NOT NULL | r {
     .*,
     id: elementId(r),
     type: type(r),

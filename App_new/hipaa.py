@@ -457,10 +457,12 @@ MATCH (b:SecurityRisk {industry_standard_regulation_id: 'HIPAA 2026', security_i
 MERGE (a)-[:SECURITY_RISK_LEADS_TO]->(b);
 """
 
-# Drop every HIPAA relationship before rebuilding, so a re-run replaces the edge
-# set instead of merging new edges alongside stale ones
+# Drop this framework's own relationships before rebuilding, so a re-run replaces
+# the edge set instead of merging new edges alongside stale ones. Both endpoints
+# must be HIPAA nodes, so incoming cross-framework crosswalk edges (e.g. a NIST
+# CSF subcategory mapped to a HIPAA safeguard) created by other loaders survive.
 clear_relationships = """
-MATCH (n {industry_standard_regulation_id: 'HIPAA 2026'})-[r]-()
+MATCH (a {industry_standard_regulation_id: 'HIPAA 2026'})-[r]-(b {industry_standard_regulation_id: 'HIPAA 2026'})
 DELETE r;
 """
 

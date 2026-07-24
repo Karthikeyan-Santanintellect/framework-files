@@ -13,6 +13,28 @@ relationships are correctly and completely mapped from that source.
 **Final status:** ✅ Verified **26 / 26** (2026-07-21). The last open case, **NERC**, was closed
 in pass 4 after the authoritative CIP Reliability Standards were added to KB 3.
 
+## Relationship-layer rebuild — HIPAA + ISO 27001/27002/42001/27701 (2026-07-23)
+
+Separate from source-text verification, the **relationship layer** of these frameworks was
+rebuilt so edges join on the keys the source CSVs actually carry, replacing unfiltered joins that
+had produced cartesian products (every clause linked to every requirement, every control to every
+attribute, and similar):
+
+| Framework | Neo4j ID | Before | After | What changed |
+|-----------|----------|-------:|------:|--------------|
+| HIPAA | `HIPAA 2026` | 3,875 | 536 | Rule → Standard → Specification hierarchy rebuilt by CFR citation; five cartesian joins (enforcement tiers, safeguard/data/risk) replaced with the mappings the CSVs describe; breach-notification workflow materialised. |
+| ISO 27001 | `ISO27001_2022` | 2,207 | 391 | Requirements joined to their clause via `clause_id`; a clause self-hierarchy replaces the ControlCategory × Clause cross join. |
+| ISO 27002 | `ISO27002_2022` | 11,815 | 220 | Controls joined to their category via `category_code`; guidelines to their control via `control_id`; the attribute taxonomy attached to the framework instead of every control × every attribute. |
+| ISO 42001 | `ISO42001_2023` | *(not loaded)* | 229 | **Newly built and loaded.** Requirements joined by `clause_id`; controls by `category`; clause sub-tree resolves the `X.0` parent-id form; the clause × control and control × attribute cross joins were dropped. |
+| ISO 27701 | `ISO27701_2025` | *(not loaded)* | 351 | **Newly built from scratch** (no prior loader). PIMS graph: Annex → objective → control → implementation guidance, plus clauses, actors, assets and enforcement-logic nodes. |
+
+Each loader now (a) clears **only its own in-framework edges** before rebuilding — both endpoints
+in the same framework — so incoming cross-framework crosswalk edges (e.g. SCF → ISO 27002, NIST
+CSF → HIPAA) created by other loaders are preserved, and (b) exports a framework-scoped
+node/relationship JSON instead of an unbounded `[*]` path walk. Every one of the five frameworks
+has **0 orphan nodes** and no cartesian edge type. These are relationship-structure fixes; the
+underlying node text was not re-verified against source in this pass.
+
 ## Remediation Pass 4 — NERC Closed (2026-07-21)
 
 The user supplied the missing instrument:

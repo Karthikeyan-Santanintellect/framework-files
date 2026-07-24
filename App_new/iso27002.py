@@ -44,9 +44,10 @@ ON CREATE SET
 controls = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (c:Control {control_id: row.control_id, IS_frameworks_standard_id: 'ISO27002_2022'})
-ON CREATE SET
+SET
     c.name = row.control_name,
     c.purpose = row.purpose,
+    c.category_code = row.category_code,
     c.legacy_mapping = row.legacy_mapping,
     c.is_new = row.is_new;
 """
@@ -68,7 +69,8 @@ ON CREATE SET
 guidelines = """
 LOAD CSV WITH HEADERS FROM '$file_path' AS row
 MERGE (g:Guideline {guideline_id: row.guideline_id, IS_frameworks_standard_id: 'ISO27002_2022'})
-ON CREATE SET
+SET
+    g.control_id = row.control_id,
     g.text = row.guideline_text,
     g.type = row.guideline_type;
 """
@@ -80,25 +82,38 @@ MATCH (cc:ControlCategory {IS_frameworks_standard_id: 'ISO27002_2022'})
 MERGE (f)-[:FRAMEWORK_CONTAINS_CONTROL_CATEGORY]->(cc);
 """
 
-# UPDATED: Scoped MATCH to framework_id.
+# Clear this framework's relationships before rebuilding so a re-run replaces the
+# edge set instead of leaving the old (cartesian) edges in place.
+clear_relationships = """
+MATCH (a {IS_frameworks_standard_id: 'ISO27002_2022'})-[r]-(b {IS_frameworks_standard_id: 'ISO27002_2022'})
+DELETE r;
+"""
+
+# Each control carries its category_code (e.g. control 5.1 -> category 5); join on
+# it rather than linking every category to every control.
 category_control_rel = """
 MATCH (cc:ControlCategory {IS_frameworks_standard_id: 'ISO27002_2022'})
 MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
+WHERE ctrl.category_code = cc.category_id
 MERGE (cc)-[:CONTROL_CATEGORY_CONTAINS_CONTROL]->(ctrl);
 """
 
-# UPDATED: Scoped MATCH to framework_id.
+# Each guideline carries the control_id it elaborates; join on it rather than
+# linking every control to every guideline.
 control_guideline_rel = """
 MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
 MATCH (guide:Guideline {IS_frameworks_standard_id: 'ISO27002_2022'})
+WHERE guide.control_id = ctrl.control_id
 MERGE (ctrl)-[:CONTROL_HAS_GUIDELINE]->(guide);
 """
 
-# UPDATED: Scoped MATCH to framework_id.
-control_attribute_rel = """
-MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO27002_2022'})
+# The attribute CSV is the ISO 27002 attribute taxonomy with no per-control
+# mapping, so attach the taxonomy to the framework (as ISO 27001 does) rather
+# than joining every control to every attribute.
+framework_attribute_rel = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO27002_2022'})
 MATCH (a:Attribute {IS_frameworks_standard_id: 'ISO27002_2022'})
-MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE]->(a);
+MERGE (f)-[:FRAMEWORK_CONTAINS_ATTRIBUTES]->(a);
 """
 
 # ... (rest of the python script remains the same)
@@ -138,6 +153,9 @@ time.sleep(2)
 client.query(guidelines.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2027002/ISO%2027002%20-%20Guidelines.csv"))
 time.sleep(2)
 
+client.query(clear_relationships)
+time.sleep(2)
+
 client.query(framework_standard_category_rel)
 time.sleep(2)
 
@@ -147,17 +165,14 @@ time.sleep(2)
 client.query(control_guideline_rel)
 time.sleep(2)
 
-client.query(control_attribute_rel)
+client.query(framework_attribute_rel)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+res = client.query("""MATCH (n {IS_frameworks_standard_id: 'ISO27002_2022'})
+OPTIONAL MATCH (n)-[r]-(m {IS_frameworks_standard_id: 'ISO27002_2022'})
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -165,7 +180,7 @@ RETURN {
     labels: labels(n),
     mainLabel: head(labels(n))
   }],
-  rels: [r IN uniqueRels | r {
+  rels: [r IN uniqueRels WHERE r IS NOT NULL | r {
     .*,
     id: elementId(r),
     type: type(r),

@@ -70,12 +70,22 @@ MATCH (c:Clause {IS_frameworks_standard_id: 'ISO42001_2023', category: 'main_cla
 MERGE (f)-[:FRAMEWORK_CONTAINS_CLAUSES]->(c);
 """
 
-# 8. CONNECT MAIN CLAUSES TO SUBCLAUSES
+# Clear this framework's relationships before rebuilding (idempotent re-runs).
+clear_relationships = """
+MATCH (a {IS_frameworks_standard_id: 'ISO42001_2023'})-[r]-(b {IS_frameworks_standard_id: 'ISO42001_2023'})
+DELETE r;
+"""
+
+# 8. CONNECT EACH CLAUSE TO ITS SUB-CLAUSES
+# A main clause has id "4" but its sub-clauses record the parent as "4.0"; deeper
+# sub-clauses (6.1.1) record the exact parent id (6.1). Match both forms, across
+# any depth, rather than only main_clause -> subclause.
 clause_subclauses = """
-MATCH (main:Clause {IS_frameworks_standard_id: 'ISO42001_2023', category: 'main_clause'})
-MATCH (sub:Clause {IS_frameworks_standard_id: 'ISO42001_2023', category: 'subclause'})
-WHERE sub.parent_clause = main.clause_id
-MERGE (main)-[:CLAUSE_CONTAINS_SUBCLAUSES]->(sub);
+MATCH (parent:Clause {IS_frameworks_standard_id: 'ISO42001_2023'})
+MATCH (child:Clause {IS_frameworks_standard_id: 'ISO42001_2023'})
+WHERE child.parent_clause = parent.clause_id
+   OR child.parent_clause = parent.clause_id + '.0'
+MERGE (parent)-[:CLAUSE_CONTAINS_SUBCLAUSES]->(child);
 """
 
 # 9. CONNECT FRAMEWORK TO CONTROL CATEGORIES (Annex A mapping)
@@ -94,21 +104,34 @@ MERGE (cat)-[:CONTROL_CATEGORIES_CONTAINS_CONTROL]->(ctrl);
 """
 
 # 11. CONNECT CLAUSES TO THEIR MANDATORY REQUIREMENTS ("Shall" statements)
+# Each requirement carries the clause_id it belongs to (e.g. REQ-4.1-01 -> 4.1);
+# join on it rather than linking every clause to every requirement.
 clause_requirements = """
 MATCH (c:Clause {IS_frameworks_standard_id: 'ISO42001_2023'})
 MATCH (r:Requirement {IS_frameworks_standard_id: 'ISO42001_2023'})
+WHERE r.clause_id = c.clause_id
 MERGE (c)-[:CLAUSE_REQUIRES_REQUIREMENT]->(r);
 """
-clause_controls = """
+
+# A clause whose parent_clause points at a clause absent from the source data
+# (e.g. 3.0 "AI System", parent "3") would otherwise be an orphan; attach it to
+# the framework so every clause is reachable.
+framework_orphan_clauses = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO42001_2023'})
 MATCH (c:Clause {IS_frameworks_standard_id: 'ISO42001_2023'})
-MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO42001_2023'})
-MERGE (c)-[:CLAUSE_REQUIRES_CONTROL]->(ctrl);
+WHERE NOT (c)--()
+MERGE (f)-[:FRAMEWORK_CONTAINS_CLAUSES]->(c);
 """
 
-control_attributes = """
-MATCH (ctrl:Control {IS_frameworks_standard_id: 'ISO42001_2023'})
+# The Annex A attribute CSV is a taxonomy (Role/Resource/Asset/Impact) with no
+# per-control mapping, so attach it to the framework rather than joining every
+# control to every attribute. (The previous clause->control link was a cartesian
+# product with no basis in the data — Annex A controls are reached via their
+# control category, not the management clauses — so it is dropped.)
+framework_attributes = """
+MATCH (f:ISFrameworksAndStandard {IS_frameworks_standard_id: 'ISO42001_2023'})
 MATCH (a:Attribute {IS_frameworks_standard_id: 'ISO42001_2023'})
-MERGE (ctrl)-[:CONTROL_HAS_ATTRIBUTE]->(a);
+MERGE (f)-[:FRAMEWORK_CONTAINS_ATTRIBUTES]->(a);
 """
 
 
@@ -134,23 +157,26 @@ logger.info("Loading graph structure...")
 client.query(framework_standard)
 time.sleep(2)
 
-client.query(control_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/control_categories.csv"))
+client.query(control_categories.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2042001/control_categories.csv"))
 time.sleep(2)
 
-client.query(clauses.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/clauses.csv"))
+client.query(clauses.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2042001/clauses.csv"))
 time.sleep(2)
 
-client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/controls.csv"))
+client.query(controls.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2042001/controls.csv"))
 time.sleep(2)
 
-client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/attributes.csv"))
+client.query(attributes.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2042001/attributes.csv"))
 time.sleep(2)
 
-client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/main/ISO%2042001/requirements.csv"))
+client.query(requirements.replace('$file_path',"https://github.com/Karthikeyan-Santanintellect/framework-files/raw/refs/heads/gautham/ISO%2042001/requirements.csv"))
 time.sleep(2)
 
 
 logger.info("Creating relationships...")
+
+client.query(clear_relationships)
+time.sleep(2)
 
 client.query(framework_standard_clauses)
 time.sleep(2)
@@ -167,20 +193,17 @@ time.sleep(2)
 client.query(clause_requirements)
 time.sleep(2)
 
-client.query(clause_controls)
+client.query(framework_orphan_clauses)
 time.sleep(2)
 
-client.query(control_attributes)
+client.query(framework_attributes)
 time.sleep(2)
 
 logger.info("Graph structure loaded successfully.")
 
-res = client.query("""MATCH path = (:ISFrameworksAndStandard)-[*]->()
-WITH path
-UNWIND nodes(path) AS n
-UNWIND relationships(path) AS r
+res = client.query("""MATCH (n {IS_frameworks_standard_id: 'ISO42001_2023'})
+OPTIONAL MATCH (n)-[r]-(m {IS_frameworks_standard_id: 'ISO42001_2023'})
 WITH collect(DISTINCT n) AS uniqueNodes, collect(DISTINCT r) AS uniqueRels
-
 RETURN {
   nodes: [n IN uniqueNodes | n {
     .*,
@@ -188,7 +211,7 @@ RETURN {
     labels: labels(n),
     mainLabel: head(labels(n))
   }],
-  rels: [r IN uniqueRels | r {
+  rels: [r IN uniqueRels WHERE r IS NOT NULL | r {
     .*,
     id: elementId(r),
     type: type(r),

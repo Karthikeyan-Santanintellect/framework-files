@@ -1,6 +1,6 @@
 # Compliance Framework Knowledge Graph
 
-This repository holds the node and relationship CSVs for 90 compliance, security and privacy
+This repository holds the node and relationship CSVs for 94 compliance, security and privacy
 frameworks, together with the loader scripts in [App_new/](App_new/) that build them into a
 Neo4j graph.
 
@@ -15,11 +15,16 @@ verified**. See [New sources/source-audit.md](New sources/source-audit.md).
 
 ## Graph contents
 
-**92 frameworks + 3 source catalogues · 68,781 nodes · 152,816 relationships · 677 node labels · 1,002 relationship types**
+**94 frameworks + 3 source catalogues · 69,261 nodes · 136,679 relationships · 678 node labels · 1,021 relationship types**
 
-The 92 frameworks are the 26 originally verified, the 64 from `New sources/`, and `201 CMR 17` and
-`42 CFR Part 2` (verified and loaded 2026-07-23). Three further **source catalogues** are in the
-same graph but are not frameworks — see [Source catalogues](#source-catalogues-not-frameworks).
+The 94 frameworks are the 26 originally verified, the 64 from `New sources/`, `201 CMR 17` and
+`42 CFR Part 2` (verified and loaded 2026-07-23), and `ISO/IEC 42001:2023` and `ISO/IEC 27701:2025`
+(built and loaded 2026-07-23). Three further **source catalogues** are in the same graph but are
+not frameworks — see [Source catalogues](#source-catalogues-not-frameworks).
+
+The overall relationship count is lower than earlier revisions because the HIPAA and the four ISO
+relationship layers (27001, 27002, 42001, 27701) were rebuilt to join on the keys the source CSVs
+actually carry, replacing several unfiltered joins that had produced cartesian-product edges.
 
 Every node carries a framework identifier, so any framework can be selected in isolation. The
 property name depends on the framework's classification:
@@ -53,18 +58,18 @@ Each such edge is counted once for each of the two frameworks it connects.
 | 2 | CPA | `CPA 1.0` | 201 | 342 | 25 |
 | 3 | CPRA | `CPRA 2.0` | 182 | 855 | 8 |
 | 4 | DORA | `DORA 2022/2554` | 222 | 1,781 | 70 |
-| 5 | DPDPA | `DPDPA 1.0` | 296 | 4,303 | 106 |
+| 5 | DPDPA | `DPDPA 1.0` | 296 | 4,312 | 88 |
 | 6 | GDPR | `GDPR 2016/679` | 596 | 14,109 | 85 |
 | 7 | GLBA | `GLBA 1999` | 69 | 342 | 74 |
-| 8 | HIPAA | `HIPAA 2026` | 244 | 3,875 | 0 |
+| 8 | HIPAA | `HIPAA 2026` | 244 | 536 | 33 |
 | 9 | HITECH | `HITECH_ACT_2009` | 200 | 5,591 | 40 |
 | 10 | HITRUST | `HITRUST 11.6.0` | 1,197 | 1,862 | 60 |
-| 11 | ISO 27001 | `ISO27001_2022` | 269 | 2,207 | 323 |
-| 12 | ISO 27002 | `ISO27002_2022` | 221 | 11,815 | 503 |
+| 11 | ISO 27001 | `ISO27001_2022` | 269 | 391 | 323 |
+| 12 | ISO 27002 | `ISO27002_2022` | 221 | 220 | 503 |
 | 13 | NERC CIP | `NERC_CIP` | 246 | 484 | 0 |
 | 14 | NIS 2 | `NIS2-EU-2022-2555` | 228 | 2,998 | 266 |
 | 15 | NIST AI RMF | `NIST_AI_RMF_1.0` | 96 | 1,448 | 247 |
-| 16 | NIST CSF 2.0 | `NIST_CSF_2.0` | 135 | 134 | 1,213 |
+| 16 | NIST CSF 2.0 | `NIST_CSF_2.0` | 135 | 134 | 1,246 |
 | 17 | NIST PMF 1.0 | `NIST_PMF_1.0` | 169 | 168 | 361 |
 | 18 | NIST PMF 1.1 | `NIST_PMF_1.1` | 137 | 144 | 0 |
 | 19 | NIST RMF | `NIST_RMF_5.2` | 114 | 137 | 38 |
@@ -75,11 +80,11 @@ Each such edge is counted once for each of the two frameworks it connects.
 | 24 | TDPSA | `TDPSA 2023` | 160 | 175 | 26 |
 | 25 | TISAX | `TISAX 2.8` | 60 | 39 | 9 |
 | 26 | VCDPA | `VCDPA 2023` | 294 | 1,505 | 54 |
-| | **Total** | | **7,399** | **61,982** | **7,498** |
+| | **Total** | | **7,399** | **45,241** | **7,546** |
 
-The cross-framework column sums to 7,498 because each mapping edge is counted once for each of
-the two frameworks it connects; there are **3,749 distinct** such edges. The relationship total
-in the graph is therefore **65,247** = 61,498 within-framework + 3,749 cross-framework.
+The cross-framework column sums to 7,546 because each mapping edge is counted once for each of
+the two frameworks it connects; there are **3,773 distinct** such edges. The relationship total
+across these 26 frameworks is therefore **49,014** = 45,241 within-framework + 3,773 cross-framework.
 
 ### The 64 frameworks from `New sources/`
 
@@ -218,6 +223,8 @@ any other catalogue or framework.
 | HITRUST | HITRUST CSF v11.6.0 |
 | ISO 27001 | ISO/IEC 27001:2022 |
 | ISO 27002 | ISO/IEC 27002:2022 |
+| ISO 42001 | ISO/IEC 42001:2023 |
+| ISO 27701 | ISO/IEC 27701:2025 |
 | NIS 2 | Directive (EU) 2022/2555 |
 | NIST AI RMF | NIST AI 100-1, AI RMF 1.0 |
 | NIST CSF 2.0 | NIST Cybersecurity Framework 2.0 |
