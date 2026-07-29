@@ -11,7 +11,9 @@ DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/dtopSources.json
 The CSVs follow the same convention as the framework folders in this repository:
 the first column of a `nodes_<Label>.csv` is `<label>_id`, and every
 `rels_<TYPE>.csv` is `source_id,target_id,rel_type` plus any edge properties.
-**Nothing here is loaded into Neo4j** — there is no loader for this folder.
+
+Loaded into Neo4j by [App_new/dtop_sources.py](../App_new/dtop_sources.py)
+under `framework_id = 'DTOP_SOURCES'` and the anchor label `:DTOPNode`.
 
 Regenerate with:
 

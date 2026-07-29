@@ -1,0 +1,11 @@
+domaincode_id,code,template_count,possibly_maps_to,possibly_maps_to_basis,source_document
+domaincode_ais,AIS,1,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_aps,APS,1,Application & Product Security,the code is the initials of the first three significant words of the DTOP Catalogs domain “Application & Product Security”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_cdr,CDR,1,Cyber Defense & Resilience,the code is the initials of the first three significant words of the DTOP Catalogs domain “Cyber Defense & Resilience”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_cps,CPS,1,Cloud & Platform Security,the code is the initials of the first three significant words of the DTOP Catalogs domain “Cloud & Platform Security”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_dpp,DPP,1,Data Privacy & Protection,the code is the initials of the first three significant words of the DTOP Catalogs domain “Data Privacy & Protection”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_ent,ENT,22,,,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_iam,IAM,1,Identity and Access Management,the code is the initials of the first three significant words of the DTOP Catalogs domain “Identity and Access Management”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_ins,INS,1,Infrastructure & Network Security,the code is the initials of the first three significant words of the DTOP Catalogs domain “Infrastructure & Network Security”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_pps,PPS,1,Personnel & Physical Security,the code is the initials of the first three significant words of the DTOP Catalogs domain “Personnel & Physical Security”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
+domaincode_tpr,TPR,1,Third-Party Risk Management,the code is the initials of the first three significant words of the DTOP Catalogs domain “Third-Party Risk Management”,DTOP-OLD/client/src/assets/docs/knowledgeRepository/info/templateSources.json
