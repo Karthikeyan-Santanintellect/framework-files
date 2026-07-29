@@ -1,0 +1,7 @@
+csffunction_id,name,source_label,control_count,catalogs,source_document
+csf_detect,Detect,CSF Function,161,control,DTOP-OLD/client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json
+csf_govern,Govern,CSF Function,92,control,DTOP-OLD/client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json
+csf_identify,Identify,CSF Function,232,control,DTOP-OLD/client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json
+csf_protect,Protect,CSF Function,774,control,DTOP-OLD/client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json
+csf_recover,Recover,CSF Function,30,control,DTOP-OLD/client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json
+csf_respond,Respond,CSF Function,52,control,DTOP-OLD/client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json
