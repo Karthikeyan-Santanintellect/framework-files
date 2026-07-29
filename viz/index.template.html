@@ -441,8 +441,9 @@ const colorOf = id => (S.frameworks.find(f => f.id === id) || {}).color || "#647
    first appearance and stable for the session, so the same label keeps its
    colour as you expand deeper. */
 const ANCHOR_LABELS = new Set(["NewSourceNode", "NewSourceFramework", "DTOPNode",
-  "DTOPCatalog", "DTOPCatalogNode", "DTOPCatalogRoot", "EnterpriseNode",
-  "EnterpriseCatalog", "AssessmentNode", "AssessmentCatalog", "Framework"]);
+  "DTOPCatalog", "DTOPCatalogNode", "DTOPCatalogRoot", "GoldenTemplateNode",
+  "GoldenTemplateCatalog", "EnterpriseNode", "EnterpriseCatalog",
+  "AssessmentNode", "AssessmentCatalog", "Framework"]);
 const displayLabel = labels =>
   (labels || []).find(l => !ANCHOR_LABELS.has(l)) || (labels && labels[0]) || "node";
 const labelColorMap = new Map();
@@ -932,7 +933,14 @@ const SAVED = [
   ["DTOP Catalogs — most reused solutions", `MATCH (s:Solution {framework_id:'DTOP_CATALOGS'})<-[:HAS_POSSIBLE_SOLUTION]-(c:Control)\nWITH s, count(c) AS controls WHERE controls > 20\nRETURN s.size AS size, controls, s.description AS solution ORDER BY controls DESC LIMIT 25`],
   ["DTOP Catalogs — gaps the catalogue leaves", `MATCH (c:Control {framework_id:'DTOP_CATALOGS'})\nRETURN count(*) AS controls,\n       count(*) - count(c.description) AS no_description,\n       count(*) - count(c.weighting) AS no_weighting,\n       count(*) - count(c.csf_function) AS no_csf_function,\n       sum(CASE WHEN c.solution_count = 0 THEN 1 ELSE 0 END) AS no_solutions`],
   ["DTOP Catalogs — where the two source files disagree", `MATCH (n:DTOPCatalogNode {framework_id:'DTOP_CATALOGS'})\nWHERE n.catalogs <> 'risk;control' AND (n:Domain OR n:FunctionalDomain)\nRETURN [l IN labels(n) WHERE l <> 'DTOPCatalogNode'][0] AS label, n.name AS name, n.catalogs AS stated_in ORDER BY label, name`],
-  ["Catalogues — the four side by side", `MATCH (n) WHERE n:DTOPNode OR n:DTOPCatalogNode OR n:EnterpriseNode OR n:AssessmentNode\nWITH n, [l IN labels(n) WHERE NOT l IN ['DTOPNode','DTOPCatalogNode','EnterpriseNode','AssessmentNode']][0] AS label\nRETURN n.framework_id AS catalogue, label, count(*) AS nodes\nORDER BY catalogue, nodes DESC`],
+  ["Golden Templates — one template and its sources", `MATCH (t:Template {framework_id:'GOLDEN_TEMPLATES', template_id:'DTOM-L1-ENT-POL-001'})-[r:CITES]->(n)\nRETURN t, r, n`],
+  ["Golden Templates — sources shared by the most templates", `MATCH (s:Source {framework_id:'GOLDEN_TEMPLATES'})<-[:CITES]-(t:Template)\nWITH s, count(t) AS templates WHERE templates > 8\nRETURN templates, s.title AS source, s.url AS url ORDER BY templates DESC, source`],
+  ["Golden Templates — publishers the corpus leans on", `MATCH (s:Source {framework_id:'GOLDEN_TEMPLATES'})\nRETURN s.host AS host, count(*) AS sources, sum(s.template_count) AS citations\nORDER BY sources DESC LIMIT 25`],
+  ["Golden Templates — the level / type taxonomy", `MATCH (t:Template {framework_id:'GOLDEN_TEMPLATES'})\nOPTIONAL MATCH (t)-[a:HAS_LEVEL]->(l)\nOPTIONAL MATCH (t)-[b:HAS_ARTIFACT_TYPE]->(at)\nOPTIONAL MATCH (t)-[c:IN_DOMAIN]->(d)\nRETURN t, a, l, b, at, c, d`],
+  ["Golden Templates — rebuild a Sources list in order", `MATCH (t:Template {framework_id:'GOLDEN_TEMPLATES', template_id:'DTOM-L2C-ENT-PLB-002'})-[r:CITES]->()\nRETURN r.ordinal AS ordinal, r.target_kind AS kind, r.accessed_date AS accessed, r.stated_source_text AS source\nORDER BY ordinal`],
+  ["Golden Templates — domain-code hints (not relationships)", `MATCH (d:DomainCode {framework_id:'GOLDEN_TEMPLATES'})\nRETURN d.code AS code, d.template_count AS templates, coalesce(d.possibly_maps_to,'(deliberately blank)') AS possibly_maps_to, d.possibly_maps_to_basis AS basis\nORDER BY code`],
+  ["Golden Templates — the malformed citation", `MATCH (n:InternalDocument {framework_id:'GOLDEN_TEMPLATES'})<-[r:CITES]-(t:Template)\nWHERE n.is_malformed\nRETURN n.text AS text, n.note AS note, collect(t.template_id) AS cited_by`],
+  ["Catalogues — the five side by side", `MATCH (n) WHERE n:DTOPNode OR n:DTOPCatalogNode OR n:GoldenTemplateNode OR n:EnterpriseNode OR n:AssessmentNode\nWITH n, [l IN labels(n) WHERE NOT l IN ['DTOPNode','DTOPCatalogNode','GoldenTemplateNode','EnterpriseNode','AssessmentNode']][0] AS label\nRETURN n.framework_id AS catalogue, label, count(*) AS nodes\nORDER BY catalogue, nodes DESC`],
   ["Assessments — the three banks", `MATCH (a:Assessment)\nRETURN a.name AS assessment, a.framework AS framework, a.item_count AS items, a.kind AS kind\nORDER BY items DESC`],
   ["Assessments — SRA question flow (one section)", `MATCH (:Section {section_id:'sra_s1'})-[:HAS_QUESTION]->(q:Question)-[:HAS_OPTION]->(o:AnswerOption)\nOPTIONAL MATCH (o)-[l:LEADS_TO]->(nq:Question)\nRETURN q, o, l, nq`],
   ["Assessments — a vulnerability and its threats", `MATCH (v:Vulnerability {section_id:'sra_s1'})-[:HAS_THREAT]->(t:Threat)\nRETURN v, t LIMIT 200`],

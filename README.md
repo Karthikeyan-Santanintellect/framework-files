@@ -15,17 +15,17 @@ verified**. See [New sources/source-audit.md](New sources/source-audit.md).
 
 ## Graph contents
 
-**94 frameworks + 4 source catalogues · 72,176 nodes · 143,787 relationships · 685 node labels · 1,028 relationship types**
+**94 frameworks + 5 source catalogues · 72,731 nodes · 144,893 relationships · 692 node labels · 1,030 relationship types**
 
 The 94 frameworks are the 26 originally verified, the 64 from `New sources/`, `201 CMR 17` and
 `42 CFR Part 2` (verified and loaded 2026-07-23), and `ISO/IEC 42001:2023` and `ISO/IEC 27701:2025`
-(built and loaded 2026-07-23). Four further **source catalogues** are in the same graph but are
+(built and loaded 2026-07-23). Five further **source catalogues** are in the same graph but are
 not frameworks — see [Source catalogues](#source-catalogues-not-frameworks).
 
 These totals were re-measured against the live database on 2026-07-28, after `DTOP Catalogs`
-was loaded. That load accounts for 2,894 of the nodes and 7,064 of the relationships; the
-remaining difference from the previously published figures is earlier drift that had not been
-written back here.
+and `GOLDEN TEMPLATES` were loaded. Those two loads account for 3,449 of the nodes and 8,170
+of the relationships; the remaining difference from the previously published figures is earlier
+drift that had not been written back here.
 
 The overall relationship count is lower than earlier revisions because the HIPAA and the four ISO
 relationship layers (27001, 27002, 42001, 27701) were rebuilt to join on the keys the source CSVs
@@ -194,11 +194,12 @@ frameworks above, so they appear in the explorer alongside them.
 
 ### Source catalogues (not frameworks)
 
-Four further datasets are loaded into the same graph but are **not compliance
-frameworks** — they are the source catalogues and assessment banks extracted
-from the DTOP-OLD project. Each uses its own anchor label and carries no
-cross-framework mappings. See the folder READMEs for their internal schema:
-[DTOP Sources](DTOP%20Sources/), [DTOP Catalogs](DTOP%20Catalogs/),
+Five further datasets are loaded into the same graph but are **not compliance
+frameworks** — they are the source catalogues, template catalogues and
+assessment banks extracted from the DTOP-OLD project. Each uses its own anchor
+label and carries no cross-framework mappings. See the folder READMEs for their
+internal schema: [DTOP Sources](DTOP%20Sources/),
+[DTOP Catalogs](DTOP%20Catalogs/), [GOLDEN TEMPLATES](GOLDEN%20TEMPLATES/),
 [Enterprise Sources](Enterprise%20Sources/),
 [Assessments and Questionnaires](Assessments%20and%20Questionnaires/).
 
@@ -206,15 +207,16 @@ cross-framework mappings. See the folder READMEs for their internal schema:
 |-----------|----------------|--------------|------:|--------------:|-------:|----------:|
 | DTOP Sources | `DTOP_SOURCES` | `:DTOPNode` | 20 | 27 | 3 | 2 |
 | DTOP Catalogs | `DTOP_CATALOGS` | `:DTOPCatalogNode` | 2,893 | 7,053 | 7 | 6 |
+| GOLDEN TEMPLATES | `GOLDEN_TEMPLATES` | `:GoldenTemplateNode` | 554 | 1,075 | 6 | 4 |
 | Enterprise Sources | `ENTERPRISE_SOURCES` | `:EnterpriseNode` | 172 | 181 | 3 | 2 |
 | Assessments and Questionnaires | `ASSESSMENTS_QUESTIONNAIRES` | `:AssessmentNode` | 1,841 | 8,484 | 13 | 16 |
-| | **Total** | | **4,926** | **15,745** | | |
+| | **Total** | | **5,480** | **16,820** | | |
 
 Node counts exclude each catalogue's single root node. The relationship counts
-are internal to each catalogue; none of the four links to any other catalogue or
+are internal to each catalogue; none of the five links to any other catalogue or
 framework.
 
-**DTOP Catalogs** is the largest of the four and the only one whose labels
+**DTOP Catalogs** is the largest of the five and the only one whose labels
 (`Domain`, `Control`, `Risk`, `Solution`, `FunctionalDomain`, `Weighting`,
 `CSFFunction`) deliberately reuse names that other frameworks also use — a
 graph-wide `MATCH (c:Control)` mixes it with NIST SP 800-53r5, CMMC 2.0 and
@@ -223,6 +225,17 @@ two source files, `risk-catalog.json` and `control-catalog.json`, which state
 the same 11-domain taxonomy; those shared domain nodes are deduplicated so risks
 and controls hang off one tree, and a `catalogs` property on every node and edge
 records which file(s) it came from.
+
+**GOLDEN TEMPLATES** is the 31 DTOM golden policy templates and the 982 sources
+they cite. Citations are parsed rather than stored whole: 485 `Source` nodes
+keyed on (title, URL), and 18 `InternalDocument` nodes for the entries with no
+URL. Each template's `TemplateId` also decomposes into a level, a domain code
+and an artifact type, modelled both as properties and as their own small nodes.
+
+Eight of its ten domain codes look like `DTOP Catalogs` domains, but that is
+recorded only as a `possibly_maps_to` **property**, never an edge — the same
+convention `DTOP Sources` uses for `possibly_same_as`. That is what keeps the
+"no catalogue links to another" invariant above true.
 
 Note that `DTOP Sources` and `DTOP Catalogs` are separate catalogues with
 separate anchors — `:DTOPNode`/`:DTOPCatalog` belong to the former,
@@ -345,13 +358,14 @@ regulations only; RA 10173 itself is likewise absent.
 
 ### Sources for the source catalogues
 
-The four DTOP-OLD source catalogues (see the table above) are extracted from
+The five DTOP-OLD source catalogues (see the table above) are extracted from
 files inside the DTOP-OLD project rather than from an external standard.
 
 | Catalogue | Source document(s) |
 |-----------|--------------------|
 | DTOP Sources | `client/src/assets/docs/knowledgeRepository/info/dtopSources.json` |
 | DTOP Catalogs | `client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/risk-catalog.json` · `client/src/assets/docs/knowledgeRepository/graph/DtopCatalogs/control-catalog.json` |
+| GOLDEN TEMPLATES | `client/src/assets/docs/knowledgeRepository/info/templateSources.json` (the 31 templates it indexes live under `server/services/policyPersonalizer/templates/`) |
 | Enterprise Sources | `client/src/assets/docs/knowledgeRepository/info/enterpriseSources.json` |
 | Assessments and Questionnaires | `client/src/data/sraFullData.json` (canonical HIPAA SRA, with the older `sraQuestionsData.json` and the `sraVulnerabilitiesData.json` stub) · `client/src/data/cri_statements.json` (CRI Profile v2.1 Expert Questionnaire) · `server/services/agentsV5/llmAssessment/statments/{IdP,XDR,SIEM,HRIS,CSP,DGP}.md` with the `server/services/agentsV5/catalog/*.csv` copies (6-domain Maturity Assessment) |
 
@@ -374,13 +388,14 @@ The loaders use Cypher `LOAD CSV`, which executes **server-side on the Neo4j ins
 CSVs are therefore fetched over HTTPS from this repository's raw GitHub URLs, which means CSV
 changes must be committed and pushed before a loader will pick them up.
 
-The four source catalogues have hand-written loaders of their own, each merging under its own
-anchor label. All four take `--dry-run` to report the plan and check every CSV URL without
+The five source catalogues have hand-written loaders of their own, each merging under its own
+anchor label. All five take `--dry-run` to report the plan and check every CSV URL without
 writing anything.
 
 ```bash
 python App_new/dtop_sources.py --dry-run
 python App_new/dtop_catalogs.py              # 2,893 nodes / 7,053 relationships
+python App_new/golden_templates.py           #   554 nodes / 1,075 relationships
 python App_new/enterprise_sources.py
 python App_new/assessments_questionnaires.py
 ```
@@ -434,12 +449,12 @@ works offline and cannot break because of a CDN change.
 
 | Area | What it does |
 |---|---|
-| Overview | 96 bubbles (92 frameworks + 4 source catalogues) sized by node count, joined by cross-framework edges weighted by mapping volume. Click one to open it. The 64 from `New sources/`, the two 2026-07-23 regulations and the four catalogues appear as unconnected bubbles — those sources contain no cross-framework mappings. |
+| Overview | 97 bubbles (92 frameworks + 5 source catalogues) sized by node count, joined by cross-framework edges weighted by mapping volume. Click one to open it. The 64 from `New sources/`, the two 2026-07-23 regulations and the five catalogues appear as unconnected bubbles — those sources contain no cross-framework mappings. |
 | Framework view | Loads that framework's nodes and relationships. Double-click any node to pull in its neighbours. |
 | Cross-framework links | Every framework pair that shares edges, ranked by weight; click to see only those two and the edges bridging them. |
 | Node inspector | Full property list for the selected node — long fields (verbatim requirement text, VSL tiers) render in full, not truncated. |
 | Cypher console | Free-text queries plus a saved-query library. Returning nodes/relationships draws them; any other shape opens the results table. |
-| Filters | Live show/hide by any of the 685 node labels and 1,028 relationship types, with counts. |
+| Filters | Live show/hide by any of the 692 node labels and 1,030 relationship types, with counts. |
 
 Canvas rendering with collision-aware labelling, so a dense framework stays readable; `Fit`,
 `Pause`, and `PNG` export sit top-right, and <kbd>⌘↵</kbd> runs the query box.
